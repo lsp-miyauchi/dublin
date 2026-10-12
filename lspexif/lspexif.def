@@ -1,0 +1,21 @@
+; lspexif.def : モジュール パラメータを宣言します。
+
+LIBRARY      "lspexif.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall			PRIVATE
+	ExifGetThumbsnail			@10
+	ExifGetInfoTip				@11
+	ExifDrawDigiText			@12
+	ExifEnumInfo				@13
+	ExifIsExifFile				@14
+	ExifGetDateTimeString		@15
+	ExifGetPrimaryImage			@16
+	ExifGetExifInfo				@17
+	ExifGetPrimaryImageEx		@18
+	ExifGetThumbnailImage		@19
+	ExifGetExifInfoEx			@20

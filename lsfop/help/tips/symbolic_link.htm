@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>シンボリック リンク</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+<style>
+.dpad {
+	background-color: #eeeeff;
+	border: #ccccff solid 1px;
+	padding: 4px;
+}
+</style>
+</head>
+<body>
+<!-- 本体 -->
+<h2>シンボリック リンク</h2>
+<h4>シンボリック リンクとは</h4>
+<p>シンボリック リンクとは、特定のファイルやフォルダを他のNTFS上のファイルやフォルダとしてリンクする機能です。</p>
+
+<p>例えば
+<blockquote>
+	D:\TopLebelFolder\SecondFolder\ApplicationProgram\DataFolder\TodaysData.doc
+</blockquote>
+というファイルがあったとします。このファイルのフォルダ位置は階層が深い場所にあるので、
+ドライブルートからフォルダを辿って開くには少々面倒です。</p>
+<p>この深い階層にあるファイルを、
+C:ドライブ(NTFS)のルート位置に “TodaysData.doc” という名前で
+シンボリック リンクとして作成することで、
+C:\TodaysData.doc をアクセスすることで、D:\TopLevelFolder...\TodaysData.doc ファイルに
+アクセスしたと同じ働きを実現します。</p>
+
+<h4>シンボリック リンクを作成するには</h4>
+<ol>
+	<li>FileVisorのシェル拡張機能の設定で、「ここにシンボリック リンクを作成」にチェックを入れます。</li>
+	<li>作成したいファイルやフォルダを選択し、
+		マウスの右ボタンをクリックしたままドラッグして、
+		作成したいNTFSフォルダへドロップします。</li>
+	<li>ドロップハンドラメニューの「ここにシンボリック リンクを作成」を選択します。</li>
+	<li>シンボリック リンクの名前を指定します。</li>
+</ol>
+
+<div class="attn1">
+	作成したシンボリック リンクが指しているフォルダが、
+	シンボリック リンクを作成したフォルダの祖先（親）フォルダを指している場合には、
+	フォルダツリーを展開すると無限にツリーがループしてしまいます。
+	ツリーを再帰的に検索するアプリケーションでは、無限ループに陥ってしまい、
+	正常に動作しなくなる場合もあります。
+</div>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2011 <a href="http://www.lightship.co.jp/">LightShip Software</a> All rights reserved.</div>
+</body>
+</html>

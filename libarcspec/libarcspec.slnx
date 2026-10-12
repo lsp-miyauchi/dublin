@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="libarcspec.vcxproj" Id="d2753557-886f-4ef0-aeed-1e021e97ab4f" />
+</Solution>

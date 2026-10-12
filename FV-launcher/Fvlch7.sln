@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Fvlch7", "Fvlch7.vcxproj", "{F5F63EA3-6BD1-45E8-9CCF-28BC8808A724}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5F63EA3-6BD1-45E8-9CCF-28BC8808A724}.Release|x64.ActiveCfg = Release|x64
+		{F5F63EA3-6BD1-45E8-9CCF-28BC8808A724}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18B4FBA2-B974-4D7D-A6B8-5D8A1F8BDF43}
+	EndGlobalSection
+EndGlobal

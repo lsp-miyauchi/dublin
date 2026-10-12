@@ -1,0 +1,4 @@
+LIBRARY         LSPCRYPT
+EXPORTS
+				lspCrypt				@100
+				lspCodeCRC				@101

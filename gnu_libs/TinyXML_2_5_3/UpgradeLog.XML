@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="tinyxml_lib">
+</Property><Property Name="ソリューション ファイル" Value="E:\VIENA7\gnu_libs\TinyXML_2_5_3\tinyxml_lib.sln">
+</Property><Property Name="Date" Value="2008年6月10日">
+</Property><Property Name="Time" Value="19:09:49">
+</Property></Properties><Event ErrorLevel="1" Project="tinyxml_lib" Source="tinyxml_lib.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="tinyxml_lib" Source="tinyxml_lib.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="tinyxml_lib" Source="tinyxml_lib.vcproj" Description="Converted">
+</Event></UpgradeLog>

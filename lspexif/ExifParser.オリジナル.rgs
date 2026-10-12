@@ -1,0 +1,27 @@
+HKCR
+{
+	lsexif.ExifParser.1 = s 'ExifParser Class'
+	{
+		CLSID = s '{E5B0C991-E0F9-4CC2-812A-BDE422935E0F}'
+	}
+	lsexif.ExifParser = s 'ExifParser Class'
+	{
+		CLSID = s '{E5B0C991-E0F9-4CC2-812A-BDE422935E0F}'
+		CurVer = s 'lsexif.ExifParser.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E5B0C991-E0F9-4CC2-812A-BDE422935E0F} = s 'ExifParser Class'
+		{
+			ProgID = s 'lsexif.ExifParser.1'
+			VersionIndependentProgID = s 'lsexif.ExifParser'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{D7FC57C2-DC5B-4249-9F98-63D286F8709D}'
+		}
+	}
+}

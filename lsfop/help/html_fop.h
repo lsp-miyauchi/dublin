@@ -1,0 +1,81 @@
+// htmlheader.cmd が生成したヘッダファイル 
+ 
+// コマンド (ID_* and IDM_*) 
+#define IDH_M_FILE_MERGE                        0x1138C
+#define IDH_M_FILE_DIVIDE                       0x1138D
+#define IDH_M_FILE_RENAME                       0x1138E
+#define IDH_M_FILE_ATTRIB                       0x1138F
+#define IDH_M_FILE_REPNAMES                     0x11391
+#define IDH_M_FILE_MKDIR                        0x11395
+#define IDH_M_FILE_REPLACE                      0x113A9
+#define IDH_M_FILE_SERIESNAME                   0x113AC
+#define IDH_M_DIR_SELECT                        0x114B7
+#define IDH_M_DIR_SYNC                          0x114C5
+#define IDH_M_DIR_MULTISYNC                     0x114C6
+#define IDH_M_FILE_FILTERDEL                    0x114D5
+#define IDH_M_VIEW_FILESIZE                     0x11520
+#define IDH_M_VIEW_DRIVEINFO                    0x1152C
+#define IDH_M_TOOL_FINDURL                      0x11586
+ 
+// プロンプト (IDP_*) 
+ 
+// リソース (IDR_*) 
+#define IDH_R_LSFOP                             0x2000B
+#define IDH_R_FOPSERV                           0x2000C
+#define IDH_R_LSFILEOPERATION                   0x2000D
+ 
+// ダイアログ (IDD_*) 
+#define IDH_D_RENAME                            0x207D4
+#define IDH_D_RELAY                             0x207D5
+#define IDH_D_ATTRIB                            0x207D7
+#define IDH_D_DIRINFO                           0x207E9
+#define IDH_D_DRIVEINFO                         0x207F8
+#define IDH_D_QUERYDELETE                       0x207FA
+#define IDH_D_QUERYDELAGAIN                     0x207FC
+#define IDH_D_FORMATFD                          0x20809
+#define IDH_D_SYNCDIR                           0x2080B
+#define IDH_D_DOSYNC                            0x2080C
+#define IDH_D_DELATTN                           0x2080E
+#define IDH_D_PATEDIT                           0x20811
+#define IDH_D_DIVIDE                            0x20814
+#define IDH_D_MAKEDIR                           0x20815
+#define IDH_D_REPLACE                           0x20816
+#define IDH_D_SCRIPTSYNC                        0x20817
+#define IDH_D_RENEXT                            0x2081A
+#define IDH_D_MKBRIEF                           0x2081B
+#define IDH_D_MERGENEXT                         0x2081C
+#define IDH_D_SHELLNEW                          0x2081D
+#define IDH_D_ICONPATH                          0x2081E
+#define IDH_D_REPNAME                           0x2081F
+#define IDH_D_ENCRYPT                           0x20820
+#define IDH_D_DECRYPT                           0x20821
+#define IDH_D_DELPROG                           0x20822
+#define IDH_D_CPERELAY                          0x20823
+#define IDH_D_MULTISYNC                         0x20828
+#define IDH_D_MERGE                             0x2082A
+#define IDH_D_FILTERDEL                         0x2082B
+#define IDH_D_SERIESNAME                        0x2082C
+#define IDH_D_CHGCAPS                           0x2082E
+#define IDH_D_SYNCRESULT                        0x2082F
+#define IDH_D_FINFO_MAIN                        0x20831
+#define IDH_D_FINFO_START                       0x20832
+#define IDH_D_FINFO_GENERIC                     0x20833
+#define IDH_D_FINFO_VERSION                     0x20834
+#define IDH_D_FINFO_ICON                        0x20835
+#define IDH_D_FINFO_ASSOC                       0x20837
+#define IDH_D_FINFO_LINK                        0x20839
+#define IDH_D_FINFO_END                         0x20839
+#define IDH_D_REPLACESIMPLE                     0x2083E
+#define IDH_D_CALCCRC                           0x20840
+#define IDH_D_ASSOCIATE                         0x20841
+#define IDH_D_NEWNAME                           0x20842
+#define IDH_D_ICONDETAIL                        0x20843
+#define IDH_D_TASKJOB                           0x20844
+#define IDH_D_MAKEJUNCTION                      0x20845
+#define IDH_D_DISCARDSTREAM                     0x20846
+#define IDH_D_ERRORREPORT                       0x20847
+#define IDH_D_MEDIAINFO                         0x20848
+#define IDH_D_SYNCCONTINUE                      0x20849
+#define IDH_D_MAKESYMLINK                       0x2084A
+ 
+// フレーム コントロール (IDW_*) 

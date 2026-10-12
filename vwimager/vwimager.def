@@ -1,0 +1,31 @@
+; vwimager.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "vwimager"
+
+EXPORTS
+	pxfRun								@101
+	pxfRunW								@102
+	imgRun								@103
+	imgRunW								@104
+	RunPickoutThumbnail					@105
+	RunPickoutThumbnailW				@106
+	RunRenameToExifDate					@107
+	RunRenameToExifDateW				@108
+	RunWebAlbum							@109
+	RunWebAlbumW						@110
+	RunConvertImage						@111
+	RunConvertImageW					@112
+	slideRun							@113
+	slideRunW							@114
+	RunJpeg2Pdf							@115
+	RunJpeg2PdfW						@116
+	RunSplitImage						@117
+	RunSplitImageW						@118
+	vwiConvertImage						@120
+	vmiRenameToExifDate					@123
+	vmiPickoutThumbnail					@124
+	vmiPickoutThumbnail2				@125
+	RunContrastResize					@150
+	RunContrastResizeW					@151
+	RunCropImage						@152
+	RunCropImageW						@153

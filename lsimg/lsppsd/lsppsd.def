@@ -1,0 +1,9 @@
+LIBRARY         LSPPSD
+
+DESCRIPTION     'AdobePhotoshopImage Loader'
+
+EXPORTS
+				psd_save				@10
+				psd_load				@11
+				psd_saveW				@12
+				psd_loadW				@13

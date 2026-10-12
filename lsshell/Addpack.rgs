@@ -1,0 +1,32 @@
+HKCR
+{
+	ForceRemove lsshell.Addpack.1 = s 'lsshell Addpack'
+	{
+		CLSID = s '{64ED5462-E22D-4571-A9CD-32106B3DDB0B}'
+	}
+	ForceRemove lsshell.Addpack = s 'lsshell Addpack'
+	{
+		CLSID = s '{64ED5462-E22D-4571-A9CD-32106B3DDB0B}'
+		CurVer = s 'lsshell.Addpack.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {64ED5462-E22D-4571-A9CD-32106B3DDB0B} = s 'lsshell AddPack'
+		{
+			ProgID = s 'lsshell.Addpack.1'
+			VersionIndependentProgID = s 'lsshell.Addpack'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove vwarc.document
+	{
+		ForceRemove Shellex
+		{
+			DropHandler = s '{64ED5462-E22D-4571-A9CD-32106B3DDB0B}'
+		}
+	}
+}

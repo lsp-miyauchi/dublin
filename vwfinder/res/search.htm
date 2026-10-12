@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-932">
+<TITLE>ファイルを検索する</TITLE>
+<style type="text/css">
+<!--
+body {
+	font: MS Pゴシック, osaka, MS Gothic; font-size: 10pt;
+	margin-left: 10px; margin-top: 10px; margin-width: 10px; margin-height: 10px; margin-right: 10px;
+}
+p { margin-top: 8px; margin-bottom: 8px; }
+li { margin-left: 10px; }
+ol { margin-left: 18px; margin-top: 8px; }
+ul { margin-left: 10px; margin-top: 8px; margin-bottom: 8px; }
+tr { font: MS Pゴシック, osaka, MS Gothic; font-size: 10pt; }
+td { font: MS Pゴシック, osaka, MS Gothic; font-size: 10pt; }
+blockquote { margin-left: 10px; margin-top: 8px; margin-bottom: 12px; margin-right: 12px}
+table.dtTABLE
+	{
+	width: 100%; /* Forces tables to have correct right margin */
+	margin-top: .6em;
+	margin-bottom: .3em;
+	border-width: 1px 1px 0px 0px;
+	border-style: solid;
+	border-color: #999999;
+	background-color: #999999; 
+	font-size: 100%; /* Text in Table is same size as text outside table */
+	}
+table.dtTABLE th, table.dtTABLE td
+	{ 
+	border-style: solid; /* Creates the cell border and color */
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding: 4px 6px;
+	text-align: left;
+	}
+table.dtTABLE th	
+	{ 
+	background: #cccccc; /* Creates the shaded table header row */
+	vertical-align: bottom;
+	}
+table.dtTABLE td	
+	{
+	background: #ffffff;
+	vertical-align: top;
+	}
+//-->
+</style>
+</head>
+<body>
+<p><b>ファイルを検索する</b></p>
+<p>ドライブやフォルダからファイルを検索します。</p>
+<p>探す場所の指定は次の２通りがあります。</p>
+<ul>
+	<li>フォルダツリーから検索開始フォルダを指定して、その開始フォルダ配下を検索する<br>
+		→検索開始のルートは１つのみ指定できます。</li>
+	<li>ドライブリストの中から、１つ以上のドライブを指定して検索する<br>
+		→検索開始のルートは複数ドライブ指定可能です。</li>
+</ul>
+
+<p><b>検索の対象とするフィルタを指定する</b></p>
+<ul>
+	<p>検索時に指定する<a href="./122">フィルタ</a>は複数指定が可能です。</p>
+	<p>複数のフィルタを指定する場合には、各フィルタを “；”（セミコロン）で区切ってください。
+	例えば、“*.txt；*.doc” と指定した場合には、“*.txt” に一致するファイルおよび “*.doc” に一致するファイルが検索できます。</p>
+	<p>またフィルタの指定に<a href="./121">正規表現</a>が利用できますので、
+	より複雑な検索も可能です。</p>
+</ul>
+
+<p><b>全てのファイルを検索する</b></p>
+<ul>
+	<p>検索フィルタで指定されたフィルタに一致するファイルを検索します。</p>
+</ul>
+
+<p><b>条件を満たすファイルを検索する</b></p>
+<ul>
+	<p>以下の条件を指定できます。</p>
+	<li>作成または更新日時のどちらを対象として検索するかの指定</li>
+	<li>検索対象となる期間（何月何日~何月何日・過去何ヶ月間・過去何日間）の指定</li>
+	<li>検索するファイルの大きさの範囲指定（無指定・最大サイズ・最小サイズ）</li>
+	<li>指定された属性を持つファイル（指定がない場合は属性によるチェックをしない）</li>
+</ul>
+
+<p><b>フィルタおよび検索条件に一致しないものを検索</b></p>
+<ul>
+	<p>指定したファイルフィルタや検索条件に「<b>一致しない</b>」ファイルを検索対象とします。</p>
+</ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+//
+// lsfop.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+IDB_SYNCRESULT          RCDATA                  "res\\syncres20_32bpp.png"
+IDB_PRGSTAT             RCDATA                  "res\\prgstat_32bpp.png"
+IDB_ARUP                RCDATA                  "res\\ar_up_32bpp.png"
+IDB_ARDOWN              RCDATA                  "res\\ar_down_32bpp.png"
+IDB_ARLEFT              RCDATA                  "res\\ar_left_32bpp.png"
+IDB_ARRIGHT             RCDATA                  "res\\ar_right_32bpp.png"
+IDB_ARUPDOWN            RCDATA                  "res\\ar_updown_32bpp.png"
+IDB_SAVE                RCDATA                  "res\\save_32bpp.png"
+IDB_DELETE              RCDATA                  "res\\delete_32bpp.png"
+IDB_MSYNC               RCDATA                  "res\\msync_32bpp.png"
+IDB_EDIT                RCDATA                  "res\\edit_32bpp.png"
+IDB_NEW                 RCDATA                  "res\\new_32bpp.png"
+IDB_TASK                RCDATA                  "res\\task_32bpp.png"
+IDB_ADD                 RCDATA                  "res\\add_32bpp.png"
+IDB_STATE               RCDATA                  "res\\state_32bpp.png"
+IDB_PREVSETTING         RCDATA                  "res\\prevsetting_32bpp.png"
+IDB_SPINUP              RCDATA                  "res\\spinup_32bpp.png"
+IDB_SPINDOWN            RCDATA                  "res\\spindown_32bpp.png"
+
+
+/////////////////////////////////////////////////////////////////////////////

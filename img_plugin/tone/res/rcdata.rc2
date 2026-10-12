@@ -1,0 +1,24 @@
+//
+// rcdata.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDB_GRAYSCALE           RCDATA                  "res\\grayscale20x20.png"
+IDB_COLORBALANCE        RCDATA                  "res\\color-balance20x20.png"
+IDB_MODULATE            RCDATA                  "res\\modulate20x20.png"
+IDB_TONECURVE           RCDATA                  "res\\tone-curve20x20.png"
+IDB_GAMMA               RCDATA                  "res\\gamma20x20.png"
+IDB_NEGATIVE            RCDATA                  "res\\negative20x20.png"
+
+/////////////////////////////////////////////////////////////////////////////

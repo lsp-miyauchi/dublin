@@ -1,0 +1,4 @@
+LIBRARY         LSPTWAIN
+
+EXPORTS
+				TwainGetImage			@10

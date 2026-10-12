@@ -1,0 +1,55 @@
+HKCR
+{
+	ForceRemove lsshell.PackTo.1 = s 'lsshell PackTo'
+	{
+		CLSID = s '{40B0C175-0067-483d-9CC4-84E6F0A1CBE5}'
+	}
+	ForceRemove lsshell.PackTo = s 'lsshell PackTo'
+	{
+		CLSID = s '{40B0C175-0067-483d-9CC4-84E6F0A1CBE5}'
+		CurVer = s 'lsshell.PackTo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {40B0C175-0067-483d-9CC4-84E6F0A1CBE5} = s 'lsshell PackTo'
+		{
+			ProgID = s 'lsshell.PackTo.1'
+			VersionIndependentProgID = s 'lsshell.PackTo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssPackTo = s '{40B0C175-0067-483d-9CC4-84E6F0A1CBE5}'
+			}
+		}
+	}
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssPackTo = s '{40B0C175-0067-483d-9CC4-84E6F0A1CBE5}'
+			}
+		}
+	}
+	NoRemove Folder
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssPackTo = s '{40B0C175-0067-483d-9CC4-84E6F0A1CBE5}'
+			}
+		}
+	}
+}

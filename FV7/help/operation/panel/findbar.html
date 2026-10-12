@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<meta name="keywords" content="サーチファインダー;ファイル名検索;">
+<TITLE>サーチファインダー</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../../index.html">TOP</a> &rsaquo;
+<a href="../../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="../index.html">操作別解説</a> &rsaquo;
+<a href="index.html">各種パネル・バーでの操作</a> &rsaquo;
+サーチファインダーでの操作
+</div>
+<!-- 本体 -->
+<h2>サーチファインダーでの操作</h2>
+
+<h4>サーチファインダーの表示切り替え</h4>
+<p>サーチファインダーでは、入力された条件文字列に従って、
+ファイル一覧にリストされている条件に一致するファイル名をインタラクティブに抽出し、
+それを可視化します。</p>
+<p>入力された条件は、<a href="../../setting/index.html">オプション設定</a>の
+「<a href="../../setting/op_file.html">ファイル操作</a>」のタブにある「フィルタや一括選択では正規表現を利用する」
+で取り扱い方法が決まります。</p>
+<div class="info1">
+	<p>正規表現でないワイルドカードの場合、入力した文字列は内部的に次の例のように置き換えられてマッチングをおこないます。</br>
+	<b>abc　→　*abc*</b><br>
+	したがって常に先頭文字から一致するファイル名とマッチングされるわけではないところにご注意ください。</p>
+</div>
+
+<img src="../../images/part_findbar.jpg">
+
+<h4 class="btm1">キーボードで操作する</h4>
+<table border=0 cellpadding=0 cellspacing=3>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td><kbd>Esc</kbd></td><td>サーチファインダーのオンオフを切り替えます。</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td><kbd>Shift</kbd>+アルファベットキー</td><td>サーチファインダーを自動オンします。<br>
+			このキー操作を有効にするには、<a href="../../setting/index.html">オプション設定</a>の
+			「<a href="../../setting/op_file.html">ファイル操作</a>」のタブにある
+			「Shift+アルファベットキーでサーチファインダーを開く」にチェックを入れてください。
+		</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td nowrap><kbd>Enter</kbd></td>
+		<td>現在のキャレット位置にあるファイル・フォルダを開き（実行し）ます。</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td nowrap><kbd>Shift</kbd>+<kbd>Enter</kbd></td>
+		<td>抽出されたファイルリストを選択して、それらのファイルを開き（実行し）ます。</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td nowrap><kbd>Alt</kbd>+<kbd>P</kbd>または<kbd>Shift</kbd>+<kbd>Space</kbd></td>
+		<td>抽出されたファイルリストの中の前のファイルを選択します。</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td nowrap><kbd>Alt</kbd>+<kbd>N</kbd>または<kbd>Space</kbd></td>
+		<td>抽出されたファイルリストの中の次のファイルを選択します。</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td nowrap><kbd>Alt</kbd>+<kbd>A</kbd>または<kbd>Alt</kbd>+<kbd>Enter</kbd></td>
+		<td>抽出しているファイルをすべて選択し、サーチファインダーを閉じます。</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td nowrap><kbd>Ctrl</kbd>+<kbd>Enter</kbd></td>
+		<td>入力済みの条件文字列を表示フィルタとしてフォルダを再表示します。</td></tr>
+</table>
+
+
+<h3>関連項目:<a href="../../setting/op_file.html">ファイル操作の設定</a></h3>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

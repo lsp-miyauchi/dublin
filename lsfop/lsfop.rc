@@ -1,0 +1,2141 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\lsfop.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DSYNC               ICON                    "res\\syncdir.ico"
+
+IDI_SCRSYNC             ICON                    "res\\syncscrypt.ico"
+
+IDI_SYNC                ICON                    "res\\sync.ico"
+
+IDI_SYNCLOG             ICON                    "res\\synclog.ico"
+
+IDI_ENCRYPT             ICON                    "res\\encrypt.ico"
+
+IDI_DECRYPT             ICON                    "res\\decrypt.ico"
+
+IDI_PASSWORD            ICON                    "res\\password.ico"
+
+IDI_DELFILE             ICON                    "res\\delfile.ico"
+
+IDI_MERGE               ICON                    "res\\merge.ico"
+
+IDI_DIVIDE              ICON                    "res\\divide.ico"
+
+IDI_CHANGECAPS          ICON                    "res\\changecaps.ico"
+
+IDI_MAKEDIR             ICON                    "res\\makedir.ico"
+
+IDI_FILTERDEL           ICON                    "res\\fltdel.ico"
+
+IDI_REPLACE             ICON                    "res\\replace.ico"
+
+IDI_DIRINFO             ICON                    "res\\dirinfo.ico"
+
+IDI_ITSNEW              ICON                    "res\\star.ico"
+
+IDI_SERIESNAME          ICON                    "res\\series.ico"
+
+IDI_RENEXT              ICON                    "res\\renext.ico"
+
+IDI_SHELLNEW            ICON                    "res\\shellnew.ico"
+
+IDI_REPNAME             ICON                    "res\\repname.ico"
+
+IDI_STREAM              ICON                    "res\\stream.ico"
+
+IDI_FILEOPERATION       ICON                    "res\\fileoperation.ico"
+
+IDI_DUMMY               ICON                    "res\\dummy.ico"
+
+IDI_MBX_QUESTION        ICON                    "res\\mbx_question.ico"
+
+IDI_MBX_STOP            ICON                    "res\\mbx_stop.ico"
+
+IDI_MBX_WARNING         ICON                    "res\\mbx_warning.ico"
+
+IDI_WSPINNER01          ICON                    "res\\whitespinner01.ico"
+
+IDI_WSPINNER02          ICON                    "res\\whitespinner02.ico"
+
+IDI_WSPINNER03          ICON                    "res\\whitespinner03.ico"
+
+IDI_WSPINNER04          ICON                    "res\\whitespinner04.ico"
+
+IDI_WSPINNER05          ICON                    "res\\whitespinner05.ico"
+
+IDI_WSPINNER06          ICON                    "res\\whitespinner06.ico"
+
+IDI_WSPINNER07          ICON                    "res\\whitespinner07.ico"
+
+IDI_WSPINNER08          ICON                    "res\\whitespinner08.ico"
+
+IDI_WSPINNER09          ICON                    "res\\whitespinner09.ico"
+
+IDI_WSPINNER10          ICON                    "res\\whitespinner10.ico"
+
+IDI_WSPINNER11          ICON                    "res\\whitespinner11.ico"
+
+IDI_WSPINNER12          ICON                    "res\\whitespinner12.ico"
+
+IDI_BSPINNER01          ICON                    "res\\blackspinner01.ico"
+
+IDI_BSPINNER02          ICON                    "res\\blackspinner02.ico"
+
+IDI_BSPINNER03          ICON                    "res\\blackspinner03.ico"
+
+IDI_BSPINNER04          ICON                    "res\\blackspinner04.ico"
+
+IDI_BSPINNER05          ICON                    "res\\blackspinner05.ico"
+
+IDI_BSPINNER06          ICON                    "res\\blackspinner06.ico"
+
+IDI_BSPINNER07          ICON                    "res\\blackspinner07.ico"
+
+IDI_BSPINNER08          ICON                    "res\\blackspinner08.ico"
+
+IDI_BSPINNER09          ICON                    "res\\blackspinner09.ico"
+
+IDI_BSPINNER10          ICON                    "res\\blackspinner10.ico"
+
+IDI_BSPINNER11          ICON                    "res\\blackspinner11.ico"
+
+IDI_BSPINNER12          ICON                    "res\\blackspinner12.ico"
+
+IDD_FINFO_GENERIC       ICON                    "res\\finfo_generic.ico"
+
+IDD_FINFO_ICON          ICON                    "res\\finfo_icon.ico"
+
+IDD_FINFO_ASSOC         ICON                    "res\\finfo_assoc.ico"
+
+IDD_FINFO_LINK          ICON                    "res\\finfo_link.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+IDA_SEARCH              AVI                     "res\\xp_search.avi"
+
+IDA_SHELL_150           AVI                     "res\\shell32_150.avi"
+
+IDA_SHELL_160           AVI                     "res\\sh160.avi"
+
+IDA_SHELL_161           AVI                     "res\\sh161.avi"
+
+IDA_SHELL_164           AVI                     "res\\sh164.avi"
+
+IDA_SHELL_165           AVI                     "res\\sh165.avi"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,1,111
+ PRODUCTVERSION 7,4,1,111
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "File Operation Server Library for Windows"
+            VALUE "FileVersion", "7.4.1.111"
+            VALUE "InternalName", "LSFOP"
+            VALUE "LegalCopyright", "(C)K.Miyauchi 1996-2024 All rights reserved."
+            VALUE "OriginalFilename", "lsfop.dll"
+            VALUE "ProductName", "File Operation Server Library for Windows"
+            VALUE "ProductVersion", "7.4.1.111"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SYNCDIR DIALOGEX 0, 0, 469, 319
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "フォルダ内容の同期"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SYNC_SRC,"LSCSearchPath",WS_BORDER | WS_TABSTOP | 0x2,187,6,274,14
+    CONTROL         "保存(&B)",IDC_SYNC_BACKUP,"LSCFlatButton",WS_TABSTOP | 0x8000,187,25,72,14
+    CONTROL         "復元(&E)",IDC_SYNC_RESTORE,"LSCFlatButton",WS_TABSTOP | 0x8000,267,25,72,14
+    CONTROL         "ミラー(&M)",IDC_SYNC_MIRROR,"LSCFlatButton",WS_TABSTOP | 0x8000,347,25,72,14
+    CONTROL         "",IDC_SYNC_PREVSETTING,"LSCFlatButton",WS_TABSTOP | 0x8000,443,25,18,14
+    CONTROL         "",IDC_SYNC_DST,"LSCSearchPath",WS_BORDER | WS_TABSTOP | 0x2,187,44,274,14
+    GROUPBOX        "処理方法",IDC_STATIC,187,64,275,119,WS_GROUP
+    CONTROL         "階層下のフォルダも含める(&T)",IDC_SYNC_SUBDIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,79,175,10
+    CONTROL         "以前のファイルを名前を変えて残す(&S)",IDC_SYNC_SAVEOLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,91,175,10
+    CONTROL         "存在しないフォルダ・ファイルは削除する(&R)",IDC_SYNC_NOMATCHDEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,103,175,10
+    CONTROL         "ファイルはごみ箱へ捨てる(&D)",IDC_SYNC_RECYCLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,211,115,155,10
+    CONTROL         "相手先に存在するファイルのみを対象とする(&O)",IDC_SYNC_ONLYEXIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,127,175,10
+    CONTROL         "ACL属性もコピーする(&A)",IDC_SYNC_COPYSID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,139,175,10
+    CONTROL         "結果を表示する(&U)",IDC_SYNC_REPORT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,152,175,10
+    CONTROL         "結果をログファイルに残す(&Q)",IDC_SYNC_SAVELOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,164,132,10
+    PUSHBUTTON      "保存する場所(&A)",IDC_SYNC_LOGFOLDER,377,162,70,14
+    COMBOBOX        IDC_FILTERING_TYPE,198,204,190,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "フィルタ(&F):",IDC_STATIC,198,223,36,8
+    EDITTEXT        IDC_FILTER,236,221,211,14,ES_AUTOHSCROLL
+    CONTROL         "正規表現(&G)",IDC_USEREGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,237,239,61,10
+    CONTROL         "大文字/小文字を区別する(&C)",IDC_CASESENSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,301,239,114,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,197,254,249,1
+    LTEXT           "以下のフォルダは同期しない(&X):",IDC_STATIC,198,261,121,8
+    EDITTEXT        IDC_SYNC_EXTFOLDER,198,271,250,14,ES_AUTOHSCROLL
+    LTEXT           "既存の設定(&I)",IDC_STATIC,6,6,100,8
+    CONTROL         "",IDC_SYNC_PATLIST,"ComboBoxEx32",CBS_SIMPLE | CBS_SORT | WS_VSCROLL | WS_TABSTOP,6,18,159,240
+    CONTROL         "保存(&P)",IDC_SYNC_PATSAVE,"LSCFlatButton",WS_TABSTOP | 0x8000,6,262,76,14
+    CONTROL         "削除(&L)",IDC_SYNC_PATDEL,"LSCFlatButton",WS_TABSTOP | 0x8000,89,262,76,14
+    CONTROL         "バッチ同期(&N)",IDC_SYNC_DOMULTI,"LSCFlatButton",WS_TABSTOP | 0x8000,6,280,159,14
+    CONTROL         "タスクジョブを作成(&J)",IDC_SYNC_TASKJOB,"LSCFlatButton",WS_TABSTOP | 0x8000,6,298,159,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,176,6,1,306
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,329,298,60,14
+    PUSHBUTTON      "閉じる",IDCANCEL,403,298,60,14
+    GROUPBOX        "フィルタリング",IDC_STATIC,187,189,275,103,WS_GROUP
+END
+
+IDD_DOSYNC DIALOGEX 0, 0, 333, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "フォルダ内容の同期をとっています..."
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_AVI,"SysAnimate32",ACS_TRANSPARENT | ACS_AUTOPLAY | ACS_TIMER | WS_TABSTOP,7,4,319,40
+    LTEXT           "",IDC_TEXT,7,46,319,8
+    LTEXT           "",IDC_SRCNAME,7,60,297,8
+    LTEXT           "から",IDC_STATIC,312,60,14,8
+    LTEXT           "",IDC_DSTNAME,7,72,297,8
+    LTEXT           "へ",IDC_STATIC,312,72,14,8
+    CONTROL         "",IDC_METER,"LSCProgress",0x0,7,90,319,12
+    PUSHBUTTON      "キャンセル",IDCANCEL,268,172,58,14
+    LTEXT           "経過時間:",IDC_STATIC,7,174,41,8
+    CONTROL         "",IDC_CLOCK,"LSCLedClock",WS_TABSTOP | 0x1,52,173,44,10
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,105,319,57
+    CONTROL         "",IDC_CLOCKTOTAL,"LSCLedClock",WS_TABSTOP | 0x1,107,173,44,10
+    CTEXT           "/",IDC_STATIC,97,174,8,8
+END
+
+IDD_DIRINFO DIALOGEX 0, 0, 359, 258
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル容量の詳細"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_DIRINFO,IDC_STATIC,6,6,21,20
+    LTEXT           "フォルダやファイルの容量を詳しく調べます。",IDC_STATIC,34,12,155,8
+    LTEXT           "容量を調べるフォルダ・ファイル",IDC_STATIC,6,32,153,8
+    CONTROL         "",IDC_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP | 0x1,6,44,179,14
+    GROUPBOX        "検索フィルタ",IDC_STATIC,6,62,186,80,WS_GROUP
+    COMBOBOX        IDC_FILTERING_TYPE,15,78,170,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "フィルタ(&F):",IDC_STATIC,15,101,35,8
+    EDITTEXT        IDC_FILTER,55,99,129,14,ES_AUTOHSCROLL
+    CONTROL         "フィルタを正規表現として利用する(&R)",IDC_USEREGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,122,135,10
+    GROUPBOX        "検索状況",IDC_STATIC,197,41,155,101
+    RTEXT           "フォルダ数:",IDC_DIT_NUMFOLDERS,208,55,52,8
+    RTEXT           "",IDC_NUMDIR,263,55,78,8
+    RTEXT           "一致ファイル数:",IDC_DIT_NUMFILES,208,67,52,8
+    RTEXT           "",IDC_NUMFILES,263,67,78,8
+    RTEXT           "ファイル総容量:",IDC_DIT_ALLSIZE,208,79,52,8
+    RTEXT           "",IDC_ALLSIZE,263,79,78,8
+    RTEXT           "総占有容量:",IDC_DIT_ALLCLUSTERS,208,91,52,8
+    RTEXT           "",IDC_ALLCLUSTERS,263,91,78,8
+    RTEXT           "セクタサイズ:",IDC_DIT_BYTESPERSECTOR,208,103,52,8
+    RTEXT           "",IDC_BYTESPERSECTOR,263,103,78,8
+    RTEXT           "クラスタサイズ:",IDC_DIT_BYTESPERCLUSTER,208,115,52,8
+    RTEXT           "",IDC_BYTESPERCLUSTER,263,115,78,8
+    RTEXT           "ギャップサイズ:",IDC_DIT_CLUSTERGAP,208,127,52,8
+    RTEXT           "",IDC_CLUSTERGAP,263,127,78,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,6,151,346,79
+    DEFPUSHBUTTON   "検索開始",IDOK,182,238,50,14
+    PUSHBUTTON      "",IDCANCEL,239,238,50,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,302,238,50,14
+END
+
+IDD_DELATTN DIALOGEX 0, 0, 275, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "削除の再確認"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_DELFILE,IDC_TITLE,6,6,21,20
+    LTEXT           "",IDC_TEXT,37,8,204,21
+    LTEXT           "名前:",IDC_STATIC,13,36,41,8
+    LTEXT           "",IDC_NAME,60,36,196,8
+    LTEXT           "更新日時:",IDC_STATIC,13,49,41,8
+    LTEXT           "",IDC_DATE,60,49,196,8
+    GROUPBOX        "現在の属性",IDC_STATIC,6,67,263,37
+    CONTROL         "システム",IDC_FSYSTEM,"LSCCheck",0x200,20,84,66,10
+    CONTROL         "隠しファイル",IDC_FHIDDEN,"LSCCheck",0x200,94,84,66,10
+    CONTROL         "読み取り専用",IDC_FRDONLY,"LSCCheck",0x200,168,84,66,10
+    DEFPUSHBUTTON   "削除",IDYES,6,125,50,14
+    PUSHBUTTON      "全て削除(&A)",IDOK,60,125,63,14
+    PUSHBUTTON      "いいえ",IDNO,164,125,50,14
+    PUSHBUTTON      "中断",IDCANCEL,219,125,50,14
+END
+
+IDD_QUERYDELAGAIN DIALOGEX 36, 36, 277, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "削除確認"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            "",IDC_APPICON,10,10,21,20
+    LTEXT           "",IDC_TEXT,36,14,231,13
+    DEFPUSHBUTTON   "削除",IDOK,10,55,60,14
+    PUSHBUTTON      "全て削除(&A)",IDYES,75,55,60,14
+    PUSHBUTTON      "スキップ",IDCANCEL,140,55,60,14
+    PUSHBUTTON      "中止",IDABORT,207,55,60,14
+END
+
+IDD_QUERYDELETE DIALOGEX 0, 0, 291, 115
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの削除"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_DELFILE,IDC_STATIC,10,10,21,20
+    DEFPUSHBUTTON   "削除",IDOK,43,91,60,14
+    PUSHBUTTON      "全て削除(&A)",IDC_DELALL,113,91,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,183,91,60,14
+    LTEXT           "現在のフォルダ:",IDC_STATIC,40,13,76,8
+    LTEXT           "",IDC_PATH,40,24,231,8
+    LTEXT           "削除するフォルダやファイル:",IDC_STATIC,40,41,114,8
+    EDITTEXT        IDC_EDIT,38,52,233,14,ES_AUTOHSCROLL
+END
+
+IDD_FORMATFD DIALOGEX 0, 0, 272, 106
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "フロッピーディスクのフォーマット"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "ドライブの選択(&V):",IDC_STATIC,6,6,67,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,6,17,189,82
+    DEFPUSHBUTTON   "OK",IDOK,206,6,59,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,206,24,59,14
+END
+
+IDD_MULTISYNC DIALOGEX 0, 0, 423, 183
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "フォルダ同期のバッチ実行"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,18,346,137
+    CONTROL         "保存(&B)",IDC_SYNC_BACKUP,"LSCFlatButton",WS_TABSTOP | 0x8000,7,162,58,14
+    CONTROL         "復元(&E)",IDC_SYNC_RESTORE,"LSCFlatButton",WS_TABSTOP | 0x8000,69,162,58,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,358,36,58,14
+    PUSHBUTTON      "全て選択(&A)",IDC_SELALL,358,58,58,14
+    PUSHBUTTON      "閉じる",IDCANCEL,358,18,58,14
+    LTEXT           "選択された同期を連続して実行します。",IDC_STATIC,7,7,160,8
+    PUSHBUTTON      "リストを作成(&S)",IDC_MAKESCRIPT,276,161,77,14
+END
+
+IDD_PATEDIT DIALOGEX 0, 0, 351, 308
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "同期定義セットの編集"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "タイトル(&I):",IDC_STATIC,6,7,52,8
+    EDITTEXT        IDC_TITLE,59,6,217,14,ES_AUTOHSCROLL
+    LTEXT           "フォルダ１(&S):",IDC_STATIC,6,26,52,8
+    CONTROL         "",IDC_SYNC_SRC,"LSCSearchPath",WS_BORDER | WS_TABSTOP,59,24,217,14
+    LTEXT           "フォルダ２(&D):",IDC_STATIC,6,44,52,8
+    CONTROL         "",IDC_SYNC_DST,"LSCSearchPath",WS_BORDER | WS_TABSTOP,59,42,217,14
+    GROUPBOX        "処理方法",IDC_STATIC,17,62,259,124,WS_GROUP
+    CONTROL         "階層下のフォルダも含める(&T)",IDC_SYNC_SUBDIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,76,175,10
+    CONTROL         "以前のファイルを名前を変えて残す(&S)",IDC_SYNC_SAVEOLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,89,175,10
+    CONTROL         "存在しないフォルダ・ファイルは削除する(&R)",IDC_SYNC_NOMATCHDEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,102,175,10
+    CONTROL         "ファイルはごみ箱へ捨てる(&D)",IDC_SYNC_RECYCLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,43,115,155,10
+    CONTROL         "相手先に存在するファイルのみを対象とする(&O)",IDC_SYNC_ONLYEXIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,128,175,10
+    CONTROL         "ACL属性もコピーする(&A)",IDC_SYNC_COPYSID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,141,175,10
+    CONTROL         "結果を表示する(&U)",IDC_SYNC_REPORT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,154,175,10
+    CONTROL         "結果をログファイルに残す(&Q)",IDC_SYNC_SAVELOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,31,167,175,10
+    GROUPBOX        "フィルタリング",IDC_STATIC,17,197,260,104,WS_GROUP
+    COMBOBOX        IDC_FILTERING_TYPE,26,211,243,75,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "フィルタ(&F):",IDC_STATIC,26,231,36,8
+    EDITTEXT        IDC_FILTER,64,228,205,14,ES_AUTOHSCROLL
+    CONTROL         "正規表現(&G)",IDC_USEREGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,64,247,66,10
+    CONTROL         "大文字/小文字を区別する(&C)",IDC_CASESENSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,247,119,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,28,261,238,1
+    LTEXT           "以下のフォルダは同期しない(&X):",IDC_STATIC,26,268,121,8
+    EDITTEXT        IDC_SYNC_EXTFOLDER,26,278,242,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,284,6,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,284,23,60,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,284,47,60,14
+END
+
+IDD_SYNCRESULT DIALOGEX 0, 0, 295, 295
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "フォルダ同期の結果"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,295,276
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,242,278,50,14
+    CONTROL         "エラーのみ表示(&E)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,281,92,10
+END
+
+IDD_DIVIDE DIALOGEX 0, 0, 309, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの分割"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_DIVIDE,IDC_STATIC,7,7,20,20
+    LTEXT           "サイズの大きなファイルを、指定のサイズに分割します。",IDC_STATIC,35,13,192,8
+    LTEXT           "分割したファイルを格納するフォルダ(&P):",IDC_STATIC,7,70,160,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,7,81,228,14
+    GROUPBOX        "ファイルの最大分割サイズ (2GB = 2097152KB 未満) (&D):",IDC_STATIC,7,103,228,82,WS_GROUP
+    EDITTEXT        IDC_DIVSIZE,15,118,58,14
+    LTEXT           "KB",IDC_STATIC,77,121,15,8
+    COMBOBOX        IDC_DRIVE,98,118,128,104,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ARCPACK,15,138,211,104,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "分割後ファイル:",IDC_STATIC,14,168,56,8
+    RTEXT           "",IDC_TEXT,73,168,153,8
+    DEFPUSHBUTTON   "実行",IDOK,244,7,58,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,244,24,58,14
+    LTEXT           "分割するファイル(&S):",IDC_STATIC,7,39,60,8
+    EDITTEXT        IDC_SRC,7,50,228,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_STATIC,13,159,214,1,SS_SUNKEN | NOT WS_GROUP
+    CONTROL         "結合用バッチファイルを作成する(&M)",IDC_MKBAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,191,167,10
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,244,49,58,14
+END
+
+IDD_RELAY DIALOGEX 32, 32, 267, 116
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_PATH,11,55,224,8,SS_NOPREFIX
+    LTEXT           "",IDC_TEXT,11,66,240,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "キャンセル",IDCANCEL,208,92,49,14
+    CONTROL         "",IDC_AVI,"SysAnimate32",ACS_TRANSPARENT | ACS_AUTOPLAY | ACS_TIMER | WS_TABSTOP,10,10,247,42
+    CONTROL         "",IDC_METER,"LSCProgress",0x0,10,92,195,12
+    RTEXT           "から",IDC_STATIC,239,55,14,8
+    LTEXT           "",IDC_INFO,11,76,240,8,SS_NOPREFIX
+    LTEXT           "",IDC_BPS,186,41,66,8,0,WS_EX_RIGHT
+END
+
+IDD_PROGRESS_RELAY DIALOGEX 32, 32, 267, 142
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_TEXT,11,60,240,8,SS_NOPREFIX
+    LTEXT           "",IDC_LINE1,11,73,240,8,SS_NOPREFIX
+    LTEXT           "",IDC_LINE2,11,86,240,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "キャンセル",IDCANCEL,208,118,49,14
+    CONTROL         "",IDC_AVI,"SysAnimate32",ACS_TRANSPARENT | ACS_AUTOPLAY | ACS_TIMER | WS_TABSTOP,10,10,247,42
+    CONTROL         "",IDC_METER,"LSCProgress",0x0,10,119,195,12
+END
+
+IDD_MERGE DIALOGEX 0, 0, 310, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの連結"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_MERGE,IDC_STATIC,7,7,20,20
+    LTEXT           "選択されたファイルを連結して、複数のファイルを１つにまとめます。",IDC_STATIC,32,10,204,20
+    LTEXT           "連結して作成するファイル名(&N):",IDC_STATIC,7,35,150,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,7,46,227,14
+    CONTROL         "EOF（テキストファイルの終端マーク） を取り除いて連結する",IDC_CUTEOF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,64,208,10
+    CONTROL         "連結して追加するファイルを、その都度その場で指定する(&T)",IDC_QUERYNEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,76,208,10
+    LTEXT           "連結されるファイルの一覧(&L):",IDC_STATIC,7,95,131,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,106,227,107
+    LTEXT           "(Ctrl+↑/↓キーで入れ替え、Delキーで削除ができます)",IDC_STATIC,7,216,184,8
+    DEFPUSHBUTTON   "OK",IDOK,245,7,58,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,245,24,58,14
+    PUSHBUTTON      "追加(&A)",IDC_ADD,245,116,58,14
+    PUSHBUTTON      "削除(&E)",IDC_DELETE,245,133,58,14
+    PUSHBUTTON      "上へ(&U)",IDC_UP,245,171,58,14
+    PUSHBUTTON      "下へ(&D)",IDC_DOWN,245,188,58,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,245,46,58,14
+END
+
+IDD_MERGENEXT DIALOGEX 0, 0, 255, 101
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "連結するファイル名の指定"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_MERGE,IDC_STATIC,6,6,20,20
+    LTEXT           "次に連結して追加するファイル名を指定してください。\nキャンセルすれば、連結操作は終了します。",IDC_TITLE,33,9,209,24
+    LTEXT           "ファイル名(&F):",IDC_STATIC,6,39,48,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,6,50,243,14
+    DEFPUSHBUTTON   "OK",IDOK,66,81,56,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,133,81,56,14
+END
+
+IDD_ATTRIB DIALOGEX 6, 15, 281, 305
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル属性の変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "基本のファイル情報(&B):",IDC_STATIC,12,12,78,8
+    COMBOBOX        IDC_COMBO,91,10,181,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "　　　　　　　　　　　　　",IDC_STATIC,10,34,262,53,WS_CLIPSIBLINGS
+    CONTROL         "更新日時を変更する(&L)",IDC_LTIME_CHECK,"LSCCheck",WS_GROUP | WS_TABSTOP | 0x103,17,34,100,10
+    CONTROL         "",IDC_LTIME_PICKER,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP,111,49,98,15
+    PUSHBUTTON      "秒クリア",IDC_CLEAR_LTIME,216,49,44,14
+    LTEXT           "1995/10/30 23:59:59",IDC_LTIME_CURRENT,111,67,77,8
+    CONTROL         "指定の時刻(&F)",IDC_LTIME_SET,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,25,51,62,10
+    CONTROL         "現在の時刻(&D)",IDC_LTIME_TOUCH,"Button",BS_AUTORADIOBUTTON,25,66,62,10
+    GROUPBOX        "　　　　　　　　　　　　　",IDC_STATIC,10,98,262,68,WS_CLIPSIBLINGS
+    CONTROL         "作成日時を変更する(&T)",IDC_CTIME_CHECK,"LSCCheck",WS_GROUP | WS_TABSTOP | 0x103,17,98,100,10
+    CONTROL         "",IDC_CTIME_PICKER,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP,111,113,98,15
+    PUSHBUTTON      "秒クリア",IDC_CLEAR_CTIME,216,113,44,14
+    LTEXT           "1995/10/30 23:59:59",IDC_CTIME_CURRENT,111,132,77,8
+    CONTROL         "指定の時刻(&P)",IDC_CTIME_SET,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,25,116,62,10
+    CONTROL         "現在の時刻(&C)",IDC_CTIME_TOUCH,"Button",BS_AUTORADIOBUTTON,25,131,62,10
+    CONTROL         "更新日付と同一にする(&W)",IDC_CTIME_SAMELTIME,"Button",BS_AUTORADIOBUTTON,25,146,100,10
+    GROUPBOX        "　　　　　　　　　　",IDC_STATIC,10,195,262,55,WS_CLIPSIBLINGS
+    CONTROL         "ファイル属性を変更する(&A)",IDC_ATTR_CHANGE,"LSCCheck",WS_TABSTOP | 0x103,17,195,100,10
+    CONTROL         "システム(&S)",IDC_FSYSTEM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,213,78,10
+    CONTROL         "隠しファイル(&H)",IDC_FHIDDEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,213,78,10
+    CONTROL         "読み取り専用(&R)",IDC_FRDONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,228,78,10
+    CONTROL         "アーカイブ(&I)",IDC_FARCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,124,228,78,10
+    CONTROL         "フォルダ階層下のファイルにも適用する(&E)",IDC_DOSUBDIR,"LSCCheck",WS_TABSTOP | 0x103,10,256,262,10
+    DEFPUSHBUTTON   "OK",IDOK,105,281,50,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",IDCANCEL,163,281,50,14
+    PUSHBUTTON      "ヘルプ...",IDC_HELPCALL,221,281,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,10,187,262,1
+    CONTROL         "FAT/FAT32上では、奇数秒を設定しても偶数秒に丸められます。",IDC_HINT,"LSCRect",0x48,10,172,262,8
+END
+
+IDD_DRIVEINFO DIALOGEX 0, 0, 327, 176
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "ドライブ情報"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOLABELWRAP | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,327,142
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,275,152,52,14
+END
+
+IDD_RENAME DIALOGEX 0, 0, 281, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル名の変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "新しい名前を指定してください(&N):",IDC_STATIC,12,134,136,8
+    EDITTEXT        IDC_EDIT,12,146,204,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "自動(&A)",IDC_AUTORENAME,220,146,50,14
+    CONTROL         "元のファイル拡張子を保持する(&S)",IDC_SAVEEXTENSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,164,153,10
+    DEFPUSHBUTTON   "OK",IDOK,34,190,60,14
+    PUSHBUTTON      "スキップ(&K)",IDIGNORE,111,190,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,188,190,60,14
+    ICON            "",IDC_FILEICON,7,6,21,20
+    LTEXT           "",IDC_TITLE,33,14,223,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,31,269,1
+    LTEXT           "種別:",IDC_STATIC,17,41,37,8
+    LTEXT           "",IDC_FILETYPE,58,41,199,8
+    LTEXT           "更新日時:",IDC_STATIC,17,52,37,8
+    LTEXT           "",IDC_MODIFIED,58,52,199,8
+    LTEXT           "サイズ:",IDC_STATIC,17,65,37,8
+    LTEXT           "",IDC_FILESIZE,58,65,199,8
+    LTEXT           "DOS名:",IDC_STATIC,17,76,37,8
+    LTEXT           "",IDC_DOSNAME,58,76,199,8
+    LTEXT           "所有者:",IDC_STATIC,17,89,37,8
+    LTEXT           "",IDC_FILEOWNER,58,89,199,8
+    LTEXT           "場所:",IDC_STATIC,17,100,22,8
+    LTEXT           "",IDC_PATH,58,100,199,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,6,118,268,1
+    CONTROL         "自動(&A)",IDC_AUTORENAME_SPLIT,"Button",BS_SPLITBUTTON | WS_TABSTOP,220,145,50,14
+END
+
+IDD_SHELLRENAME DIALOGEX 0, 0, 280, 168
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "名前の変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "プロパティ",IDC_STATIC,6,6,268,93
+    ICON            "",IDC_FILEICON,16,19,21,20
+    LTEXT           "",IDC_TITLE,42,26,223,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,15,44,251,1
+    LTEXT           "種別:",IDC_STATIC,18,51,37,8
+    LTEXT           "",IDC_FILETYPE,59,51,199,8
+    LTEXT           "更新日時:",IDC_STATIC,18,62,37,8
+    LTEXT           "",IDC_MODIFIED,59,62,199,8
+    LTEXT           "サイズ:",IDC_STATIC,18,72,37,8
+    LTEXT           "",IDC_FILESIZE,59,72,199,8
+    LTEXT           "場所:",IDC_STATIC,18,82,22,8
+    LTEXT           "",IDC_PATH,59,82,199,8
+    LTEXT           "新しい名前を指定してください(&N):",IDC_STATIC,12,107,136,8
+    EDITTEXT        IDC_EDIT,12,118,250,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,34,148,60,14
+    PUSHBUTTON      "スキップ(&K)",IDIGNORE,111,148,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,188,148,60,14
+END
+
+IDD_MAKEDIR DIALOGEX 0, 0, 305, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "フォルダの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_MAKEDIR,IDC_STATIC,10,10,21,20
+    LTEXT           "新しく作成するフォルダの名前を入力してください。",IDC_STATIC,40,17,189,8
+    LTEXT           "現在のフォルダ:",IDC_STATIC,41,40,53,8
+    LTEXT           "",IDC_TITLE,97,40,197,8,SS_PATHELLIPSIS
+    EDITTEXT        IDC_EDIT,41,66,253,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,91,152,58,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,159,152,58,14
+    GROUPBOX        "【 ヒント 】",IDC_STATIC,10,91,284,48
+    LTEXT           "深い階層のフォルダや、現在のフォルダからの相対指定でも作成可能です。 フルパス名を指定することにより、現在のフォルダと関係のない場所にもフォルダを作成できます。",IDC_STATIC,21,105,266,27
+    LTEXT           "新しいフォルダ:",IDC_STATIC,41,52,48,8
+    LTEXT           "",IDC_PATH,97,52,197,8,SS_PATHELLIPSIS
+END
+
+IDD_FILTERDEL DIALOGEX 0, 0, 320, 206
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの一括削除"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_FILTERDEL,IDC_STATIC,6,6,20,20
+    LTEXT           "フォルダから指定のファイルを一括して削除します。",IDC_STATIC,32,12,215,8
+    LTEXT           "対象のフォルダ(&F):",IDC_STATIC,6,36,70,8
+    CONTROL         "",IDC_SRC,"LSCSearchPath",WS_BORDER | WS_TABSTOP | 0x1,6,47,307,14
+    GROUPBOX        "処理方法",IDC_STATIC,6,69,307,105,WS_GROUP
+    LTEXT           "対象(&G):",IDC_STATIC,20,86,38,8
+    COMBOBOX        IDC_FILTERING_TYPE,58,84,186,64,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "履歴(&R)",IDC_HISTORY,"LSCFlatButton",WS_TABSTOP | 0x110,249,83,52,14
+    LTEXT           "フィルタ(&T):",IDC_STATIC,20,104,38,8
+    EDITTEXT        IDC_FILTER,58,102,186,14,ES_AUTOHSCROLL
+    CONTROL         "正規表現(&R)",IDC_USEREGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,249,104,58,10
+    CONTROL         "階層下のフォルダも対象とする(&D)",IDC_SUBDIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,58,126,129,10
+    CONTROL         "空のフォルダは削除する(&M)",IDC_FILTERDEL_EMPTYDIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,58,140,129,10
+    CONTROL         "システム・隠しファイルも削除する(&S)",IDC_FILTERDEL_SYSHIDDEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,58,154,140,10
+    PUSHBUTTON      "確認してから削除",IDC_CHECK,46,185,77,14
+    DEFPUSHBUTTON   "削除",IDOK,130,185,57,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,193,185,57,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,256,185,57,14
+END
+
+IDD_REPLACE DIALOGEX 38, 17, 331, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの置き換え"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_REPLACE,IDC_STATIC,6,6,20,20
+    LTEXT           "同名のファイルが存在しています。",IDC_TITLE,34,12,224,8
+    LTEXT           "",IDC_SRCNAME,6,32,213,8,SS_NOPREFIX
+    LTEXT           "から",IDC_STATIC,225,32,18,8
+    ICON            "",IDC_FROMNEW,10,42,20,20,SS_REALSIZEIMAGE
+    ICON            "",IDC_FROMICON,26,42,21,20,SS_REALSIZEIMAGE
+    LTEXT           "",IDC_SRCPROP,58,44,190,18,SS_NOPREFIX
+    LTEXT           "",IDC_DSTNAME,6,76,213,8,SS_NOPREFIX
+    ICON            "",IDC_TONEW,10,86,20,20,SS_REALSIZEIMAGE
+    ICON            "",IDC_TOICON,26,86,21,20,SS_REALSIZEIMAGE
+    LTEXT           "",IDC_DSTPROP,58,88,190,18,SS_NOPREFIX
+    LTEXT           "へ",IDC_STATIC,225,76,18,8
+    GROUPBOX        "対処方法",IDC_STATIC,6,124,230,92
+    CONTROL         "新しい時刻のみ(&T)",IDC_NEWONLY,"Button",BS_AUTORADIOBUTTON,18,138,91,10
+    CONTROL         "上書き(&O)",IDC_OVERWRITE,"Button",BS_AUTORADIOBUTTON,134,138,91,10
+    CONTROL         "新しい名前で(&N)",IDC_RENAME,"Button",BS_AUTORADIOBUTTON,18,150,91,10
+    CONTROL         "連結(&M)",IDC_MERGE,"Button",BS_AUTORADIOBUTTON,134,150,91,10
+    CONTROL         "相手の名前を変更(&D)",IDC_RENAMESRC,"Button",BS_AUTORADIOBUTTON,18,162,91,10
+    CONTROL         "無視(&I)",IDC_IGNORE,"Button",BS_AUTORADIOBUTTON,134,162,91,10
+    CONTROL         "名前の変更は自動でおこなう(&U)",IDC_AUTORENAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,177,192,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,14,193,212,1
+    CONTROL         "元ファイルをごみ箱へ移動する(&R)",IDC_RECYCLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,199,155,10
+    DEFPUSHBUTTON   "OK",IDOK,264,5,60,14
+    PUSHBUTTON      "以降全て(&A)",IDC_YESTOALL,264,23,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,264,41,60,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,264,83,60,14
+END
+
+IDD_SCRIPTSYNC DIALOGEX 0, 0, 381, 194
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "フォルダ同期リスト"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_SCRSYNC,IDC_STATIC,7,7,21,20
+    LTEXT           "複数の同期定義セットをグループ化してリストを作成します。\nまたは、リストの編集・実行をおこないます。",IDC_STATIC,33,11,262,22
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,33,367,106,WS_EX_CLIENTEDGE
+    CONTROL         "新規(&N)",IDC_NEW,"LSCFlatButton",WS_TABSTOP | 0x8000,7,143,62,14
+    CONTROL         "追加(&A)",IDC_ADD,"LSCFlatButton",WS_TABSTOP | 0x8000,73,143,62,14
+    CONTROL         "編集(&E)",IDC_EDIT,"LSCFlatButton",WS_TABSTOP | 0x8000,139,143,62,14
+    CONTROL         "削除(&D)",IDC_DELETE,"LSCFlatButton",WS_TABSTOP | 0x8000,205,143,62,14
+    CONTROL         "上へ(&U)",IDC_UP,"LSCFlatButton",WS_TABSTOP | 0x8000,277,143,46,14
+    CONTROL         "下へ(&O)",IDC_DOWN,"LSCFlatButton",WS_TABSTOP | 0x8000,328,143,46,14
+    CONTROL         "",IDC_HORZ_SEPARATOR,"Static",SS_ETCHEDHORZ,7,165,367,1
+    CONTROL         "バックアップ(&B)",IDC_SYNC_BACKUP,"LSCFlatButton",WS_TABSTOP | 0x8000,7,173,88,14
+    CONTROL         "リストア(&R)",IDC_SYNC_RESTORE,"LSCFlatButton",WS_TABSTOP | 0x8000,99,173,88,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,266,173,52,14
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,322,173,52,14
+END
+
+IDD_RENEXT DIALOGEX 0, 0, 273, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "拡張子の一括変換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_RENEXT,IDC_STATIC,7,7,20,20
+    LTEXT           "指定された拡張子に一致するファイルを、新しい拡張子で置き換えます。",IDC_STATIC,34,13,230,8
+    LTEXT           "対象のフォルダ:",IDC_STATIC,7,36,53,8
+    CONTROL         "",IDC_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP,62,33,204,14
+    LTEXT           "対象とする拡張子(&S):",IDC_STATIC,22,54,68,8
+    EDITTEXT        IDC_SRCEXT,93,52,63,14,ES_AUTOHSCROLL
+    LTEXT           "新しい拡張子(&D):",IDC_STATIC,22,72,50,8
+    EDITTEXT        IDC_DSTEXT,93,70,63,14,ES_AUTOHSCROLL
+    CONTROL         "階層下のフォルダに含まれるファイルも対象とする(&R)",IDC_INCSUBFOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,90,199,10
+    DEFPUSHBUTTON   "OK",IDOK,37,118,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,107,118,60,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,177,118,60,14
+END
+
+IDD_SERIESNAME DIALOGEX 0, 0, 240, 124
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "連番で名前変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_SERIESNAME,IDC_STATIC,7,7,21,20
+    LTEXT           "ファイル名に連番をふって名前を変更します。",IDC_STATIC,33,13,160,8
+    LTEXT           "連番の命名形式(&F):",IDC_STATIC,7,32,70,8
+    COMBOBOX        IDC_FORM,79,30,154,96,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "開始番号初期値(&I):",IDC_STATIC,79,51,70,8
+    EDITTEXT        IDC_FIRSTVALUE,79,61,77,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,145,61,11,14
+    LTEXT           "増分値(&S):",IDC_STATIC,168,51,54,8
+    EDITTEXT        IDC_STEP,168,61,65,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,18,103,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,70,103,50,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,174,103,50,14
+    PUSHBUTTON      "履歴消(&X)",IDC_CLEAR,123,103,50,14
+END
+
+IDD_MKBRIEF DIALOGEX 0, 0, 258, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ブリーフケースの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "指定の場所にブリーフケースを新しく作成します。",IDC_STATIC,37,13,161,8
+    LTEXT           "作成場所(&F):",IDC_STATIC,6,36,107,8
+    CONTROL         "",IDC_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP,6,47,246,14
+    LTEXT           "ブリーフケースの名前(&N):",IDC_STATIC,7,66,107,8
+    EDITTEXT        IDC_NAME,6,77,246,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,67,113,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,139,113,50,14
+    ICON            "",IDC_LABEL,6,6,20,20
+END
+
+IDD_SHELLNEW DIALOGEX 0, 0, 274, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新しいドキュメントの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_SHELLNEW,IDC_STATIC,7,7,21,20
+    LTEXT           "新しいドキュメントを作成します。\n作成するドキュメント名を指定してください。",IDC_STATIC,30,10,162,23
+    LTEXT           "作成するドキュメント名(&N):",IDC_STATIC,7,77,122,8
+    EDITTEXT        IDC_EDIT,31,89,204,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,207,7,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,207,24,60,14
+    LTEXT           "作成する場所:",IDC_STATIC,7,42,100,8
+    EDITTEXT        IDC_PATH,31,53,204,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_ICONPATH DIALOGEX 0, 0, 365, 244
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "アイコンの設定"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "ファイル名(&F):",IDC_STATIC,6,11,47,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,54,8,305,14
+    LTEXT           "アイコンの選択(&L):",IDC_STATIC,6,33,73,8
+    CONTROL         "小さいアイコン(&S)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,213,33,66,10
+    CONTROL         "",IDC_LIST,"LSCListView",WS_TABSTOP | 0x4,6,45,353,171,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,256,223,48,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,311,223,48,14
+END
+
+IDD_REPNAME DIALOGEX 0, 0, 349, 229
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル名文字列の一括置換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_REPNAME,IDC_STATIC,7,7,21,20
+    LTEXT           "ファイルの名前に含まれる文字列を、他の文字列に一括して置換します。",IDC_STATIC,33,13,243,8
+    LTEXT           "検索文字列(&S):",IDC_STATIC,7,35,60,8
+    EDITTEXT        IDC_SRC,69,33,249,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PREVSETTING,"LSCFlatButton",WS_TABSTOP | 0x300,320,33,22,14
+    LTEXT           "置換文字列(&T):",IDC_STATIC,7,52,60,8
+    EDITTEXT        IDC_DST,69,51,249,14,ES_AUTOHSCROLL
+    CONTROL         "正規表現で対象を指定(&G)",IDC_USEREGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,75,116,10
+    CONTROL         "大文字小文字を区別しない(&F)",IDC_CASESENSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,89,116,10
+    CONTROL         "一致する全てを置換する(&R)",IDC_REPLACEALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,75,116,10
+    CONTROL         "拡張子は除外する(&E)",IDC_SAVEEXTENSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,160,89,116,10
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,107,335,90
+    DEFPUSHBUTTON   "OK",IDOK,73,208,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,144,208,60,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,215,208,60,14
+END
+
+IDD_ENCRYPT DIALOGEX 0, 0, 290, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの暗号化"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_ENCRYPT,IDC_STATIC,7,7,21,20
+    LTEXT           "選択されたファイルをパスワードにより暗号化します。",IDC_STATIC,29,12,239,8
+    LTEXT           "パスワード(&P):",IDC_STATIC,7,37,46,8
+    EDITTEXT        IDC_PASSWORD,84,34,185,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD_RETYPE,84,50,185,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "（使用可能な文字は半角英字のみです）",IDC_STATIC,84,67,143,8
+    LTEXT           "コメント(&C):",IDC_STATIC,7,83,56,8
+    EDITTEXT        IDC_EDIT,7,94,276,39,ES_MULTILINE | ES_AUTOVSCROLL | ES_WANTRETURN | WS_VSCROLL
+    CONTROL         "元ファイル削除する(&D)",IDC_REPLACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,139,125,10
+    DEFPUSHBUTTON   "OK",IDOK,82,159,58,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,150,159,58,14
+    LTEXT           "パスワードの確認(&R):",IDC_STATIC,7,52,73,8
+END
+
+IDD_DECRYPT DIALOGEX 0, 0, 270, 115
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの復号化"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_DECRYPT,IDC_STATIC,7,7,20,20
+    LTEXT           "暗号化されたファイルを復号化します。",IDC_STATIC,29,13,141,8
+    LTEXT           "パスワード(&P):",IDC_STATIC,7,38,46,8
+    EDITTEXT        IDC_PASSWORD,54,36,200,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "（使用可能な文字は半角英字のみです）",IDC_STATIC,54,54,133,8
+    CONTROL         "元の暗号化ファイルを削除する(&D)",IDC_REPLACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,55,69,147,10
+    DEFPUSHBUTTON   "OK",IDOK,76,94,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,143,94,50,14
+END
+
+IDD_CPERELAY DIALOGEX 0, 0, 215, 59
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "キャンセル",IDCANCEL,164,36,44,14
+    CONTROL         "",IDC_METER,"LSCProgress",0x0,7,37,154,12
+    LTEXT           "ファイル名:",IDC_STATIC,7,7,36,8
+    LTEXT           "",IDC_TITLE,45,7,161,8
+    LTEXT           "",IDC_TEXT,45,18,161,8
+    LTEXT           "",IDC_MESSAGE,7,18,36,8
+END
+
+IDD_CHGCAPS DIALOGEX 0, 0, 305, 205
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル名の大文字小文字変換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_CHANGECAPS,IDC_STATIC,10,10,21,20
+    LTEXT           "ファイル名の文字変換をおこないます。",IDC_STATIC,36,15,175,8
+    CONTROL         "全て大文字に変換する(&U)",IDC_TOUPPER,"Button",BS_AUTORADIOBUTTON,35,39,133,10
+    CONTROL         "全て小文字に変換する(&L)",IDC_TOLOWER,"Button",BS_AUTORADIOBUTTON,35,54,133,10
+    CONTROL         "先頭文字のみ大文字に変換する(&C)",IDC_CAPSUPPER,"Button",BS_AUTORADIOBUTTON,35,70,133,10
+    CONTROL         "拡張子のみに適用する(&E)",IDC_EXTONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,110,168,10
+    LTEXT           "例） file.ext から FILE.EXT",IDC_STATIC,173,39,105,8
+    LTEXT           "例） FILE.EXT から file.ext へ",IDC_STATIC,173,54,105,8
+    LTEXT           "例） FILE.EXT から File.ext へ",IDC_STATIC,173,70,105,8
+    DEFPUSHBUTTON   "OK",IDOK,69,181,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,129,181,50,14
+    CONTROL         "サブフォルダ内のファイルも対象にする(&F)",IDC_SUBFOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,125,168,10
+    CONTROL         "フォルダ名には適用しない(&G)",IDC_EXCFOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,54,140,168,10
+    GROUPBOX        "オプション",IDC_STATIC,36,94,223,68
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,189,181,50,14
+END
+
+IDD_FINFO_GENERIC DIALOGEX 0, 0, 266, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_F1_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,265,226
+END
+
+IDD_FINFO_ICON DIALOGEX 0, 0, 266, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_F3_LIST,"SysListView32",LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,0,0,265,208
+    RTEXT           "小",IDC_STATIC,7,215,8,8
+    CONTROL         "",IDC_F3_SIZE,"LSCSlider",WS_TABSTOP,19,215,75,10
+    LTEXT           "大",IDC_STATIC,99,215,8,8
+    PUSHBUTTON      "エクスポート(&E)",IDC_F3_WRITE,203,212,62,14
+    PUSHBUTTON      "詳細(&D)",IDC_F3_DETAIL,154,212,44,14
+END
+
+IDD_FINFO_ASSOC DIALOGEX 0, 0, 266, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_F4_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,265,226
+END
+
+IDD_FINFO_LINK DIALOGEX 0, 0, 266, 226
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_F5_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,0,265,226
+END
+
+IDD_CALCHASH DIALOGEX 0, 0, 455, 150
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "ハッシュ計算"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,441,117
+    DEFPUSHBUTTON   "計算開始",IDOK,217,129,77,14
+    PUSHBUTTON      "クリップボードへコピー(&C)",IDC_COPY,300,129,92,14
+    PUSHBUTTON      "閉じる",IDCANCEL,398,129,50,14
+END
+
+IDD_ASSOCIATE DIALOGEX 37, 19, 360, 238
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "関連付けの設定"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "対象の拡張子(&E):",IDC_STATIC,6,8,64,8
+    EDITTEXT        IDC_EXT,73,6,65,14,ES_AUTOHSCROLL
+    LTEXT           "関連付けするProgId またはプログラム(&P):",IDC_STATIC,6,26,132,8
+    CONTROL         "",IDC_APP,"LSCSearchPath",WS_BORDER | WS_TABSTOP,142,24,212,14
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,43,348,170
+    DEFPUSHBUTTON   "OK",IDOK,6,218,59,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,70,218,58,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,296,218,58,14
+    EDITTEXT        IDC_TITLE,142,6,212,14,ES_AUTOHSCROLL
+END
+
+IDD_DELPROG DIALOGEX 0, 0, 270, 93
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "削除してます..."
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_AVI,"SysAnimate32",ACS_TRANSPARENT | ACS_AUTOPLAY | ACS_TIMER | WS_TABSTOP,0,2,269,39
+    LTEXT           "",IDC_PATH,6,48,230,8
+    LTEXT           "から",IDC_STATIC,242,48,18,8
+    LTEXT           "",IDC_NAME,5,59,201,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "キャンセル",IDCANCEL,201,74,56,14
+END
+
+IDD_DISCARDSTREAM DIALOGEX 0, 0, 311, 120
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "ストリーム損失の警告"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "続行",IDOK,7,99,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,244,99,60,14
+    ICON            IDI_STREAM,IDC_STATIC,7,7,20,20
+    LTEXT           "このファイルには、いくつかのデータストリームが含まれますが、対象のボリュームはこの機能をサポートしません。\n\nそのため、データによっては保存されないものがあります。",IDC_TEXT,38,8,228,38
+    PUSHBUTTON      "全て続行",IDC_YESTOALL,71,99,60,14
+    PUSHBUTTON      "スキップ",IDC_SKIP,175,99,60,14
+    LTEXT           "名前:",IDC_STATIC,38,56,22,8
+    LTEXT           "場所:",IDC_STATIC,38,69,22,8
+    LTEXT           "",IDC_NAME,64,56,231,8
+    LTEXT           "",IDC_PATH,64,69,231,8
+END
+
+IDD_NEWNAME DIALOGEX 0, 0, 255, 96
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新しい名前"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "",IDC_TITLE,52,10,193,8
+    EDITTEXT        IDC_EDIT,10,38,235,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,60,72,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,134,72,60,14
+    LTEXT           "新しい名前を指定してください(&S)",IDC_STATIC,10,27,214,8
+    LTEXT           "元の名前:",IDC_STATIC,10,10,34,8
+END
+
+IDD_FINFO_MAIN DIALOGEX 0, 0, 320, 325
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル情報"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,265,304,50,14
+    PUSHBUTTON      "前へ(&P)",IDC_PREVPAGE,7,304,50,14
+    PUSHBUTTON      "次へ(&N)",IDC_NEXTPAGE,64,304,50,14
+    CONTROL         "",IDC_BARAREA,"Static",SS_OWNERDRAW,0,60,40,238
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,40,60,1,240
+    CONTROL         "",IDC_TAB,"ToolbarWindow32",WS_GROUP | WS_TABSTOP | 0xab4d,2,65,36,230,WS_EX_NOPARENTNOTIFY
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,59,320,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,298,320,1
+    CONTROL         "",IDC_AREA,"Static",SS_LEFTNOWORDWRAP | NOT WS_VISIBLE,47,66,266,226
+    CONTROL         "",IDC_TITLE,"Static",SS_OWNERDRAW,0,0,319,59
+END
+
+IDD_ICONDETAIL DIALOGEX 0, 0, 355, 203
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "アイコンの詳細"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,6,142,171
+    CONTROL         "",IDC_ICONFACTORY,"Static",SS_OWNERDRAW | SS_SUNKEN,154,6,195,171
+    PUSHBUTTON      "エクスポート(&E)",IDC_SAVE,6,183,66,14
+    PUSHBUTTON      "コピー(&C)",IDC_COPY,76,183,65,14
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,293,183,56,14
+END
+
+IDD_TASKJOB DIALOGEX 36, 36, 259, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "タスクジョブの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "同期定義セット名:",IDC_STATIC,7,7,46,8
+    LTEXT           "",IDC_PATH,67,7,185,8,SS_PATHELLIPSIS
+    LTEXT           "タスクジョブの名前(&N):",IDC_STATIC,7,28,70,8
+    EDITTEXT        IDC_TASKJOB_TITLE,90,27,162,14,ES_AUTOHSCROLL
+    LTEXT           "同期の種類(&T):",IDC_STATIC,7,45,52,8
+    COMBOBOX        IDC_TASKJOB_TYPES,90,44,162,45,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "実行するアカウント名(&A):",IDC_STATIC,7,66,80,8
+    EDITTEXT        IDC_TASKJOB_ACCOUNT,90,64,162,14,ES_AUTOHSCROLL
+    LTEXT           "アカウントパスワード(&P):",IDC_STATIC,7,84,80,8
+    EDITTEXT        IDC_TASKJOB_PASSWORD,90,82,162,14,ES_PASSWORD | ES_AUTOHSCROLL
+    GROUPBOX        "オプション",IDC_STATIC,7,104,245,93
+    CONTROL         "実行中の進捗表示はしない(&I)",IDC_TASKJOB_MINIMIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,118,113,10
+    CONTROL         "実行後、処理結果を表示する(&R)",IDC_TASKJOB_REPORT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,129,122,10
+    CONTROL         "実行結果をログファイルに保存する(S)",IDC_TASKJOB_SAVELOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,141,174,10
+    LTEXT           "プロセスの実行優先度(&O):",IDC_STATIC,17,159,92,8
+    COMBOBOX        IDC_TASKJOB_PRIOLITY,113,158,113,67,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "タスクのトリガ(&M):",IDC_STATIC,17,176,92,8
+    COMBOBOX        IDC_TASKJOB_TRIGGER,113,174,113,67,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,58,210,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,140,210,60,14
+END
+
+IDD_MAKEJUNCTION DIALOGEX 0, 0, 266, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "リパース ポイントの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_MAKEDIR,IDC_STATIC,6,6,20,20
+    LTEXT           "作成するリパース ポイントの名前を入力してください。",IDC_STATIC,32,13,189,8
+    LTEXT           "参照元のフォルダ:",IDC_STATIC,6,34,70,8
+    LTEXT           "",IDC_TITLE,20,44,240,8,SS_PATHELLIPSIS
+    EDITTEXT        IDC_EDIT,6,79,253,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,45,127,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,109,127,50,14
+    LTEXT           "作成するリパース ポイント:",IDC_STATIC,6,54,102,8
+    LTEXT           "",IDC_PATH,20,64,240,8,SS_PATHELLIPSIS
+    CONTROL         "リパース ポイントの重複を確認する(&C)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,100,131,10
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,173,127,50,14
+END
+
+IDD_MAKESYMLINK DIALOGEX 0, 0, 266, 133
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "シンボリック リンクの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_MAKEDIR,IDC_STATIC,6,6,21,20
+    LTEXT           "作成するシンボリック リンクの名前を入力してください。",IDC_STATIC,32,13,189,8
+    LTEXT           "参照元のファイル・フォルダ:",IDC_STATIC,6,34,124,8
+    LTEXT           "",IDC_TITLE,20,44,240,8,SS_PATHELLIPSIS
+    EDITTEXT        IDC_EDIT,6,79,253,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,45,112,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,109,112,50,14
+    LTEXT           "作成するシンボリック リンク:",IDC_STATIC,6,54,124,8
+    LTEXT           "",IDC_PATH,20,64,240,8,SS_PATHELLIPSIS
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,173,112,50,14
+END
+
+IDD_MAKESYSLINK DIALOGEX 0, 0, 303, 256
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "システム リンクの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDD_FINFO_LINK,IDC_STATIC,6,7,21,20
+    LTEXT           "作成するリンクの名前を入力してください。",IDC_STATIC,38,13,189,8
+    LTEXT           "リンク名(&E):",IDC_STATIC,6,42,37,8
+    EDITTEXT        IDC_EDIT,62,40,224,14,ES_AUTOHSCROLL
+    LTEXT           "リンク元のフルパス名:",IDC_STATIC,6,69,124,8
+    LTEXT           "",IDC_TITLE,20,80,276,8,SS_PATHELLIPSIS
+    LTEXT           "作成されるリンクのフルパス名:",IDC_STATIC,6,95,124,8
+    LTEXT           "",IDC_PATH,20,107,276,8,SS_PATHELLIPSIS
+    GROUPBOX        "作成するリンクのタイプ",IDC_STATIC,27,127,233,84,WS_GROUP | WS_TABSTOP
+    CONTROL         "シンボリック リンク(&S) （管理者権限が必要）",IDC_LINK_SYMBOLIC,"Button",BS_AUTORADIOBUTTON,44,143,169,10
+    CONTROL         "リパース ポイント(&J)",IDC_LINK_JUNCTION,"Button",BS_AUTORADIOBUTTON,44,158,169,10
+    CONTROL         "ハード リンク(&H)",IDC_LINK_HARD,"Button",BS_AUTORADIOBUTTON,44,173,169,10
+    CONTROL         "ショートカット(&C)",IDC_LINK_SHORTCUT,"Button",BS_AUTORADIOBUTTON,44,188,169,10
+    DEFPUSHBUTTON   "OK",IDOK,61,235,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,125,235,50,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,189,235,50,14
+END
+
+IDD_ERRORREPORT DIALOGEX 0, 0, 339, 104
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "エラーレポート"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,0,0,339,86
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,0,90,50,14
+END
+
+IDD_MEDIAINFO DIALOGEX 0, 0, 206, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "メディア情報"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "ドライブ %c: の詳細",IDC_DRIVEGROUP,6,6,194,104
+    LTEXT           "タイプ:",IDC_STATIC,12,20,70,8
+    RTEXT           "",IDC_MEDIATYPE,58,20,81,8
+    LTEXT           "シリンダ数:",IDC_STATIC,12,30,70,8
+    RTEXT           "",IDC_CYLINDER,88,30,70,8
+    LTEXT           "シリンダ",IDC_STATIC,163,30,30,8
+    LTEXT           "トラック数／シリンダ:",IDC_STATIC,12,40,70,8
+    RTEXT           "",IDC_TRACK,88,40,70,8
+    LTEXT           "トラック",IDC_STATIC,163,40,30,8
+    LTEXT           "セクタ数／トラック:",IDC_STATIC,12,50,70,8
+    RTEXT           "",IDC_SECTOR,88,50,70,8
+    LTEXT           "セクタ",IDC_STATIC,163,50,30,8
+    LTEXT           "バイト数／セクタ:",IDC_STATIC,12,60,70,8
+    RTEXT           "",IDC_BYTE,88,60,70,8
+    LTEXT           "バイト",IDC_STATIC,163,60,30,8
+    LTEXT           "サポート・ジオメトリ:",IDC_STATIC,12,76,66,8
+    LISTBOX         IDC_GEOMETRY,81,76,109,32,WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,150,119,50,14
+END
+
+IDD_SYNCCONTINUE DIALOGEX 36, 36, 293, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "同期の中止"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            "",IDC_INFO,7,7,20,20
+    LTEXT           "同期を中止しますか？",IDC_STATIC,33,14,72,8
+    CONTROL         "処理を継続します。",IDC_IGNORE,"Button",BS_AUTORADIOBUTTON,22,38,78,10
+    CONTROL         "現在処理中のファイルのコピー操作完了を待って、以降の処理を中止します。",IDC_STOPAFTER,
+                    "Button",BS_AUTORADIOBUTTON,22,52,257,10
+    CONTROL         "コピー操作を中止し、コピー先ファイルを削除します。",IDC_STOP,"Button",BS_AUTORADIOBUTTON,22,66,178,10
+    DEFPUSHBUTTON   "OK",IDOK,122,93,50,14
+END
+
+IDD_SELMAP DIALOGEX 0, 0, 335, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "地図の選択"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "キャンセル",IDCANCEL,278,97,50,14
+    EDITTEXT        IDC_EDIT,7,7,320,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "",IDC_BUTTON1,24,30,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON2,119,30,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON3,214,30,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON4,24,50,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON5,119,50,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON6,214,50,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON7,24,70,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON8,119,70,90,14,WS_DISABLED
+    PUSHBUTTON      "",IDC_BUTTON9,214,70,90,14,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SYNCDIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 463
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 312
+    END
+
+    IDD_DOSYNC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_DIRINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 352
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 252
+    END
+
+    IDD_DELATTN, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 269
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_QUERYDELAGAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 267
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_QUERYDELETE, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 281
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_FORMATFD, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 265
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 99
+    END
+
+    IDD_MULTISYNC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 416
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_PATEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 345
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 301
+    END
+
+    IDD_SYNCRESULT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 233
+        BOTTOMMARGIN, 200
+    END
+
+    IDD_DIVIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_RELAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 257
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 106
+    END
+
+    IDD_PROGRESS_RELAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 257
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_MERGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_MERGENEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 249
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_ATTRIB, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 271
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_DRIVEINFO, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_RENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 275
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 204
+    END
+
+    IDD_SHELLRENAME, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_MAKEDIR, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 295
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_FILTERDEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 313
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_REPLACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 324
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_SCRIPTSYNC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 374
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_RENEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 132
+    END
+
+    IDD_SERIESNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_MKBRIEF, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 252
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_SHELLNEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_ICONPATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 359
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 237
+    END
+
+    IDD_REPNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 342
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_ENCRYPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_DECRYPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 263
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_CPERELAY, DIALOG
+    BEGIN
+    END
+
+    IDD_CHGCAPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 295
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_FINFO_GENERIC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 240
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_FINFO_ICON, DIALOG
+    BEGIN
+        RIGHTMARGIN, 240
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_FINFO_ASSOC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 240
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_FINFO_LINK, DIALOG
+    BEGIN
+        RIGHTMARGIN, 240
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_CALCHASH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 448
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_ASSOCIATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 354
+        BOTTOMMARGIN, 232
+    END
+
+    IDD_DELPROG, DIALOG
+    BEGIN
+    END
+
+    IDD_DISCARDSTREAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_NEWNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 245
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_FINFO_MAIN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 318
+    END
+
+    IDD_ICONDETAIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 349
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_TASKJOB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_MAKEJUNCTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 260
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_MAKESYMLINK, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 260
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_MAKESYSLINK, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 296
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_SYNCCONTINUE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_SELMAP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 328
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_LSFOP               REGISTRY                "lsfop.rgs"
+
+IDR_LSFILEOPERATION     REGISTRY                "LSFileOperation.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SYNCDIR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PATEDIT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MAKESYSLINK AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_RELAY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_RENAME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_NEWNAME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MAKEDIR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CHGCAPS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DELATTN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIRINFO AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DOSYNC AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_QUERYDELETE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SELMAP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ATTRIB AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DISCARDSTREAM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DRIVEINFO AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_QUERYDELAGAIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PROGRESS_RELAY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "lsfop"
+    IDR_FOPSERV             "ファイルの操作"
+    IDR_LSFILEOPERATION     "ファイルの操作（LightShip）"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CPEE_PASSCHARSET    "パスワードに利用できない文字が含まれています。"
+    IDS_CPEE_USERCANCEL     "ユーザにより中断されました。"
+    IDS_CPEE_PATHNOTFOUND   "フォルダパスが見つかりません。"
+    IDS_SYNC_FORMATDATE     "yyyy'年'MM'月'dd'日 '"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TITLE_ICONPICKER    "アイコンの抽出"
+    IDS_NUM_OF_ICON_PICKOUT "%s個のアイコンを抽出しました。"
+    IDS_QUERY_ICON_PICKOUT  "ここへファイル %s からアイコンを抽出しますか？"
+    IDS_TITLE_CRYPT         "暗号化・復号化"
+    IDS_TITLE_ENCRYPT       "暗号化しています..."
+    IDS_TITLE_DECRYPT       "復号化しています..."
+    IDS_ERROR_ENCRYPT       "%s\n\n暗号化に失敗しました。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_DECRYPT       "%s\n\n復号化に失敗しました。"
+    IDS_TITLE_RENAME        "名前の変更"
+    IDS_RENAMING            "名前を変更しています..."
+    IDS_TITLE_CALCHASH      "ハッシュの計算"
+    IDS_HASH_CALCULATING    "ハッシュを計算しています..."
+    IDS_CPEE_GENERAL        "一般的なエラーです。"
+    IDS_CPEE_FILENOTFOUND   "ファイルが見つからないか、またはアクセスできません。"
+    IDS_CPEE_OPEN           "ファイルをオープンできません。"
+    IDS_CPEE_READ           "ファイルから読み込めません。"
+    IDS_CPEE_WRITE          "ファイルに書き込みできません。"
+    IDS_CPEE_NOMEMORY       "処理に必要なメモリが確保できません。"
+    IDS_CPEE_PASSINCORRECT  "パスワードが間違っています。"
+    IDS_CPEE_CRC            "ハッシュエラーです。"
+    IDS_CPEE_NOTCPE         "CPE暗号化ファイルではありません。"
+    IDS_CPEE_NOPASS         "パスワードが指定されていません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SYNC_FORMATTIME     "hh'時'mm'分'"
+    IDS_SYNC_STARTFINISH    "開始:%s → 終了:%s (%d分%02d秒)"
+    IDS_QUERY_MKDIR         "フォルダ '%s' は存在しません。\n作成しますか?"
+    IDS_SAMEPATH            "双方のフォルダ名が同じです。"
+    IDS_SYNC_BACKUP         "%s から %s へフォルダ内容を複写します.\n後者の同じ名前のファイルは、前者の新しいファイルで置き換えられます."
+    IDS_SYNC_MIRROR         "%s から %s へフォルダ内容を複写します.\n後者のフォルダ内容で、前者と同期のとれないファイルやフォルダは削除されます."
+    IDS_SYNC_EQUALIZE       "%s と %s のフォルダ内容をミラーリングします.\n同じ名前のファイルはいずれか常に新しいファイルで置換され、双方で不足しているファイルはお互いに補完されます。"
+    IDS_PATH_INCLUDE        "フォルダを自分自身の配下へ転送することはできません。"
+    IDS_DISKFULL            "ディスクがいっぱいです。"
+    IDS_SYNC_PATFILEERROR   "%s\n\n同期定義セットファイルが存在しないか、または読み込みに失敗しました。"
+    IDS_TITLE_FOLDERSYNC    "フォルダの同期"
+    IDS_TITLE_BROWSEFOLDER  "フォルダを選択してください。"
+    IDS_TEXT_ABORT          "中止"
+    IDS_TEXT_CLOSE          "閉じる"
+    IDS_DELETE_DIR          "フォルダ '%s' を削除しますか?"
+    IDS_FILE_DELSINGLE      "ファイル '%s' を削除しますか?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CHGATTR_TITLE       "属性の変更"
+    IDS_DO_CHGATTR          "属性を適用しています..."
+    IDS_ERASE_TITLE         "ファイルを完全削除しています..."
+    IDS_FILTER_ICON         "アイコン(.ico)|*.ico|全てのファイル|*.*||"
+    IDS_TITLE_FILEMOVE      "ファイルの移動"
+    IDS_ASSOC_EXT           "拡張子"
+    IDS_ASSOC_TYPENAME      "タイプ名"
+    IDS_ASSOC_PROGID        "ProgID"
+    IDS_ASSOC_COMMAND       "コマンド"
+    IDS_DELTYPE_FOLDER      "フォルダ"
+    IDS_DELTYPE_FILE        "ファイル"
+    IDS_DIVIDE_DRIVETYPE    "ドライブ %s の容量を取得"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SYNC_DST            "同期先"
+    IDS_FROMTO              "%s → %s"
+    IDS_GATHER_INFORMATION  "情報を収集しています..."
+    IDS_NEWSYNCSCRIPT       "新しい同期リスト"
+    IDS_EXPORT_FUNCTION     "エクスポートされた関数"
+    IDS_EXPORT_NUMBER       "序数:%d"
+    IDS_DIVIDE_TYPES        "そのまま分割;CAB書庫形式で分割;7Zip書庫形式で分割"
+    IDS_UAC_CONTINUED       "OKボタンを選択すると、引き続いてユーザーアカウント制御の問い合わせ画面が表示されます。"
+    IDS_ASSOCSTR_COMMAND    "コマンド"
+    IDS_ASSOCSTR_EXECUTABLE "実行プログラム"
+    IDS_ASSOCSTR_FRIENDLYDOCNAME "文書名"
+    IDS_ASSOCSTR_FRIENDLYAPPNAME "アプリケーション名"
+    IDS_ASSOCSTR_SHELLNEWVALUE "新規作成"
+    IDS_ASSOCSTR_DDECOMMAND "DDEコマンド"
+    IDS_ASSOCSTR_DDEIFEXEC  "DDEIFEXEC"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SELECT_MULTI_SYNCDATA "リストを作成するには、複数の同期定義セットを選択してください。"
+    IDS_DUPLICATE_CONFIRMING "重複を確認しています..."
+    IDS_LINK_FROMTO         "%s → %s"
+    IDS_TITLE_NAME          "名前"
+    IDS_TITLE_SYMLINK       "シンボリック リンク"
+    IDS_TITLE_SYSLINK       "システム リンク"
+    IDS_CAPTION_DECRYPTCOPY "暗号化されたファイル"
+    IDS_QUERY_DECRYPTCOPY   "このファイルは暗号化されていますが、対象のボリュームはこの機能をサポートしません。\n\n続行するとコピー・移動したファイルは暗号化が解除されます。"
+    IDS_SYNCPAT_FILEEXIST   "%s\nこの同期定義セットの内容を更新しますか？"
+    IDS_SYNCPAT_NOTSELECTED "同期定義セットが選択されていません。"
+    IDS_TITLE_TASKJOB       "タスクジョブ"
+    IDS_TASKJOB_EXIST       "%s\n同じ名前のタスクジョブが存在します。上書きしますか？"
+    IDS_TASKJOB_NOFRONTEND  "ジョブ プロセッサが見つかりません。"
+    IDS_TASKJOB_NOSCHEDULER "タスク スケジューラ サービスが起動していません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TASKJOB_NOACCOUNT   "アカウントが指定されていませんが、よろしいですか？"
+    IDS_TASKJOB_NOPASSWORD  "パスワードが指定されていませんが、よろしいですか？"
+    IDS_SYNCFOLDER_INFOTIP  "フォルダ同期の定義セットファイル等が含まれます。"
+    IDS_TITLE_SERIESNAME    "連番で名前変更"
+    IDS_NOORDERPATTERN      "連番形式##が指定されていません。\nこのまま実行しますか？"
+    IDS_TITLE_REPARSE       "リパース ポイント"
+    IDS_REMOVE_JUNCTION     "このリパース ポイントを削除しますか？\n（参照元は削除されません）"
+    IDS_REMOVE_SYMLINK      "このシンボリック リンクを削除しますか？\n（参照元は削除されません）"
+    IDS_FOUND_JUNCTION      "以下のリパース ポイントが見つかりました。\nリパース ポイント間の無限ループの危険性が考えられますが続行しますか？\n\n%s"
+    IDS_LIST_ICONSIZE       "小さいアイコン;大きいアイコン;さらに大きいアイコン;"
+    IDS_LIST_CMDSHOW        "なし;通常のウィンドウ;最小化;最大化;"
+    IDS_TASKJOB_TYPE        "バックアップ;リストア;ミラーリング;"
+    IDS_TASKJOB_PRIOLITY    "通常;通常より下;低;"
+    IDS_TASKJOB_TRIGGER     "（未定義）;毎日;毎週;"
+    IDS_TASKJOB_NEED_UAC    "タスクジョブを登録するには管理者権限が必要です。"
+    IDS_TITLE_SEARCHING     "検索しています..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILE_READERRNONAME  "ファイルから読み込めません。"
+    IDS_FILE_WRITEERRNONAME "ファイルへ書き込めません。"
+    IDS_DO_DIVIDE           "分割しています..."
+    IDS_TITLE_MERGE         "ファイルの連結"
+    IDS_DO_MERGE            "連結しています..."
+    IDS_FILTER_ALL          "全てのファイル(*.*)|*.*||"
+    IDS_LINKSTRING          "へのショートカット"
+    IDS_INVALIDFILENAME     "'%s'\nファイル名に使用できない文字列です。"
+    IDS_QUERY_REPARSEPOINT  "%s\n\nこのフォルダは他のドライブやフォルダにリンクされています。\nリンク先のフォルダやファイルの属性も処理しますか？"
+    IDS_SSYNC_SAVEERROR     "%s\n\nリスト ファイルを保存・更新できませんでした(code=%d)。ファイルを確認してください。"
+    IDS_UNDEFINED           "(なし)"
+    IDS_TITLE_SHREDDER      "指定されたファイルを後から復活できないように完全に削除しますか？"
+    IDS_REGEXP              "正規表現"
+    IDS_HISTORY             "履歴"
+    IDS_INVALIDFILECHAR     "ファイルやフォルダには以下の文字を使用できません。\n        \\/: , *?\\""<>|"
+    IDS_TITLE_FILECOPY      "ファイルのコピー"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILTERDEL_RESULT    "削除されたファイル：    %d個\n削除されたフォルダ：    %d個\nサイズ総計：    %s\n\n以上のファイルが削除されました。"
+    IDS_FOLDER_NOTREADY     "%s\n\nフォルダの準備ができていません。"
+    IDS_TITLE_ICONPATH      "アイコン ファイル"
+    IDS_FILTER_ICONPATH     "アイコン(*.exe; *.dll; *.ico)|*.exe;*.dll;*.ico|全てのファイル(*.*)|*.*||"
+    IDS_ATTRIB_BASETYPE     "新しい更新日時  ( %s );古い更新日時  ( %s );新しい作成日時  ( %s );古い作成日時  ( %s );最初のエントリー  ( %s );最後のエントリー  ( %s );"
+    IDS_FILTERDEL_NOTARGET  "削除されるファイルはありません。"
+    IDS_CLEAR_HISTORY       "履歴をクリア"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DELETE_ROOT         "ルートは削除できません。"
+    IDS_DELETE_WINDIR       "このフォルダはWindowsが使っているため削除できません。"
+    IDS_TITLE_DIRINFO       "フォルダ容量の詳細"
+    IDS_TITLE_DELETE        "ファイルの削除"
+    IDS_TITLE_DDLIST        "フォルダの参照"
+    IDS_TITLE_MKDIR         "フォルダの作成"
+    IDS_MULTISYNC_BACKUP    "同期元のフォルダ内容が同期先へバックアップされます。"
+    IDS_MULTISYNC_RESTORE   "同期先のフォルダ内容が同期元へリストアされます。"
+    IDS_MULTISYNC_NOPAT     "実行する処理が選択されていません."
+    IDS_TITLE_MULTISYNC     "フォルダ同期のバッチ実行"
+    IDS_SAMEFILENAME_RENAME "'%s' は双方のファイル名が同じです。\n\n名前を変えて再試行しますか?"
+    IDS_TITLE_DIVIDE        "ファイルの分割"
+    IDS_SAMEFILENAME        "双方のファイル名が同じです。"
+    IDS_CHANGEFD            "受け側のディスクがいっぱいです。\nディスクを交換して継続しますか?\n\n\nディスクの交換はアクセスランプが消えてからおこなってください。"
+    IDS_FILE_CREATEERROR    "ファイル '%s' を作成できません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_DELFOLDER     "フォルダ '%s' は削除できません。"
+    IDS_DO_COPY             "コピーしています..."
+    IDS_DO_MOVE             "移動しています..."
+    IDS_FILEPROP            "サイズ:  %s バイト\n日時:  %s"
+    IDS_CAPTION_BROWSEFSD   "フォルダ同期定義セットの参照"
+    IDS_FILTER_FSD          "フォルダ同期定義セット(*.fsd)|*.fsd||"
+    IDS_CAPTION_DELSOL      "フォルダ同期定義セットの削除"
+    IDS_QUERY_DELSOL        "%s\n\nこの同期定義セットを削除しますか?"
+    IDS_CAPTION_SCRIPTSYNC  "フォルダ同期リスト"
+    IDS_SAMENAME            "%s\n同名のファイルまたはフォルダが既に存在します。"
+    IDS_QUERY_REMOVESOL     "%s\n\nこの同期定義セットをエントリからはずしますか?"
+    IDS_DELETE_ATTEN        "この%sは特別な属性が設定されています。削除しますか？"
+    IDS_TITLE_FOPSERVER     "ファイル操作"
+    IDS_DIV_INSERTFD        "ディスクがいっぱいです。\n次の分割ファイルを保存するためのディスクを挿入してください。"
+    IDS_FILTERDEL_NOFILES   "削除されたファイルやフォルダはありませんでした。"
+    IDS_FILTERDEL_CHECK     "削除されるファイル：    %d個\nサイズ総計：    %s\n\n以上のファイルが削除されます。\t削除を実行しますか?"
+END
+
+STRINGTABLE
+BEGIN
+    IDD_FINFO_GENERIC       "全般"
+    IDD_FINFO_ICON          "アイコン"
+    IDD_FINFO_ASSOC         "起動"
+    IDD_FINFO_LINK          "リンク"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUERY_OVERWRITE     "%s\n\nこのファイルは既に存在します。上書きしますか？"
+    IDS_HEADER_OLDNAME      "変更前の名前"
+    IDS_HEADER_NEWNAME      "変更後の名前"
+    IDS_HEADER_COMMENT      "備考"
+    IDS_NOCHANGE            "（変更なし）"
+    IDS_FILTER_TYPES        "全てのファイルを対象とする;指定のフィルタに一致するファイルを対象とする;指定のフィルタに一致するファイルを除外する"
+    IDS_FILTER_ICON_PNG     "アイコン(*.ico)|*.ico|PNG(*.png)|*.png|全てのファイル(*.*)|*.*||"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_VERSION_NOTFOUND    "バージョン情報はありません。"
+    IDS_ASSOC_NOTFOUND      "起動情報はありません。"
+    IDS_TITLE_SYNCSCRIPT    "フォルダ同期リスト"
+    IDS_FILTER_SYNCSCRIPT   "リストファイル(*.fss)|*.fss||"
+    IDS_MERGE_FILEEXIST     "%s\nこのファイルは既に存在します。このファイルの後ろに連結しますか？\n\n連結するには「はい」を、削除して新しく作成するには「いいえ」を選択してください。"
+    IDS_DSYNC_NOTITLE       "同期定義セットのタイトルを入力してください。"
+    IDS_FILTER_EXECUTE      "プログラムファイル(*.exe)|*.exe|全てのファイル|*.*||"
+    IDS_CAPTION_BROWSE      "ファイルの参照"
+    IDS_EXEASSOC_ERROR      "実行プログラムの関連付けは変更はできません。"
+    IDS_QUERY_ASSOC         "拡張子 %s は既存のファイルタイプを持っています。\n\nこれを変更すると、コンテキスト メニューなどでサポートされていた機能が利用できなくなります。\nよろしいですか?"
+    IDS_TITLE_ASSOCIATE     "ファイルの関連付け"
+    IDS_DO_DELETE           "削除しています..."
+    IDS_NOSELICONS          "アイコンが選択されていません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CHANGEEXT_WARNING   "拡張子を変更するとこのファイルが使えなくなる可能性があります。\n変更しますか?"
+    IDS_VER_OVERVIEW        "バージョン情報"
+    IDS_VER_DETAIL          "詳細"
+    IDS_VER_FILEVERSION     "ファイル バージョン"
+    IDS_VER_DESCRIPTION     "説明"
+    IDS_VER_COPYRIGHT       "著作権"
+    IDS_VER_COMMENT         "コメント"
+    IDS_VER_COMPANY         "会社名"
+    IDS_VER_TRADEMARK       "商標"
+    IDS_VER_PRODUCTVERSION  "製品バージョン"
+    IDS_VER_PRODUCTNAME     "製品名"
+    IDS_VER_REGALNAME       "正式ファイル名"
+    IDS_VER_INTERNALNAME    "内部名"
+    IDS_VER_FILEOS          "ファイルOS"
+    IDS_SYNC_SRC            "同期元"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_FILTERDEL_EMPTYDIR  "そのフォルダ配下にファイルやフォルダが何もないフォルダや、\n削除を実行した後に空になったフォルダを削除する場合にはチェックしてください。"
+    IDC_FILTERDEL_SYSHIDDEN "ファイルの属性にシステム属性・隠し属性が設定されているファイルも\n削除して構わない場合にはチェックしてください。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_FILTER              "複数のフィルタが指定できます。\n複数のフィルタを指定する場合には、各フィルタを“；”（セミコロン）\nで区切ってください。\n\n例）“*.INI；*.PIF；*.DLL”"
+    IDC_FILTERING_TYPE      "・全てのファイルを対象とする\n全てのファイルを対象のファイルとします。\n\n・指定のフィルタに一致するファイルを対象とする\n指定されたフィルタで検索一致したファイルのみを対象とし、\n一致しないファイルは無視します。\n\n・指定のフィルタに一致するファイルを除外する\n指定されたフィルタに検索一致したファイルを対象からはずし、\n一致しないファイルを対象とします。"
+    IDC_CASESENSE           "指定したフィルタの大文字・小文字（例えば 'A' と 'a'）を\n同一視せずに区別して検索します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SYNC_SRC            "同期元となるフォルダを指定します。"
+    IDC_SYNC_DST            "同期先のフォルダを指定します。"
+    IDC_SYNC_BACKUP         "同期元から同期先へフォルダ内容をバックアップします。\n同期先のファイルが同期元のファイルにより更新されます。"
+    IDC_SYNC_RESTORE        "同期先から同期元へフォルダ内容がリストアされます。\n同期元のファイルが同期先のファイルにより更新されます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SYNC_MIRROR         "同期元から同期先へフォルダ内容をバックアップし、\nその後同期先から同期元へのバックアップをおこないます。\nこの操作により、双方のフォルダは最新のファイルで\nミラーリングされます。"
+    IDC_SYNC_NOMATCHDEL     "同期をとる相手側にあるファイルやフォルダが、基準となる側に存在\nしない場合には、それらのファイルやフォルダは相手側のフォルダから\n削除されます。\nなお、フィルタに一致しないファイルは削除されませんが、同期のとれ\nないフォルダの場合には、フィルタ指定に関係なく、その配下にある\nファイル全てが削除されます。"
+    IDC_SYNC_SUBDIR         "フォルダの階層構造を保持して、各階層下のファイルの同期をとります。"
+    IDC_SYNC_SAVEOLD        "同期をとる際に、更新される側の古いファイルを名前を変えて保持します。\n変更後の名前は、名前の後ろに３桁のバックアップ番号（000 - 999）\nが自動的に付与されます。"
+    IDC_SYNC_PATSAVE        "現在設定されている内容を処理定義セットとして保存します。\n \n既存の設定のリストで、タイトルが表示されている場合には、\nそのタイトルの名前で処理定義セットが登録されます。\n新しい名前で登録する場合には名前を指定してください。"
+    IDC_SYNC_REPORT         "処理結果を後でレポート表示します。"
+    IDC_SYNC_PATDEL         "現在選択されている処理定義セットを削除します。"
+    IDC_SYNC_DOMULTI        "既に登録されている同期処理定義セットの中から、一部\nまたは全部を指定して、同期を一括して実行します。"
+    IDC_SYNC_RECYCLE        "ファイルを削除する際に、ごみ箱へ捨てるか直接削除するかを指定します。\n削除されるファイルが存在するドライブが、取り替え可能メディアやネット\nワークドライブ上にある場合には、ごみ箱へ捨てることができずに直接削除\nされますので注意が必要です。"
+    IDC_SYNC_ONLYEXIST      "同期元のファイルやフォルダで、同期先にも同じファイルや\nフォルダがある場合のみ、それらを更新します。\n同期元にはあっても、同期先には存在しない場合には、処理\nの対象からはずれます。"
+    IDC_SYNC_PATLIST        "既に作成されている同期定義セットの一覧です。"
+    IDC_SYNC_EXTFOLDER      "同期を行わないフォルダを指定します。\n複数のフォルダを指定する場合には、“；”（セミコロン）で区切ってください。\n\n例）“temp；tmp；work”"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SYNC_SAVELOG        "処理結果をログファイルに書き出して保存します。"
+    IDC_SYNC_LOGFOLDER      "ログファイルを出力するフォルダを指定します。"
+    IDC_SYNC_COPYSID        "NTFS上のファイルのアクセス制御リスト属性をコピーします。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_USEREGEXP           "指定したフィルタをワイルドカードではなく正規表現として利用します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_URLACCESS           "検索結果のリスト中で現在選択されている項目のURLを\nWEBブラウザで開きます。"
+    IDC_URLKEYWORD          "検索キーは’；’で区切って複数指定することができます。\nここで指定された検索キーはURLアドレスやWEBページのタイトルと照合されます。"
+    IDC_URLDAYLIMIT         "WEB履歴の検索対象となる期間を限定するにはここをチェックします。"
+    IDC_URLCOPY             "検索結果のリスト中で現在選択されている項目のURLを\nクリップボードにコピーします。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_TASKJOB_ACCOUNT     "タスクを実行するユーザアカウント名をコンピュータ名とともに記入します。"
+    IDC_TASKJOB_PASSWORD    "ユーザアカウントのログインパスワードを記入します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_TASKJOB_MINIMIZE    "実行中の進捗表示ウィンドウを最小（アイコン）化します。"
+    IDC_TASKJOB_REPORT      "実行した処理結果をレポート表示します。"
+    IDC_TASKJOB_SAVELOG     "実行した処理結果をログファイルに保存します。"
+    IDC_TASKJOB_PRIOLITY    "フォルダ同期を実行する際の実行プロセス優先度を指定します。"
+    IDC_TASKJOB_TITLE       "タスクジョブに登録するジョブのタイトル名を指定します。"
+    IDC_TASKJOB_TYPES       "フォルダ同期の実行種類を指定します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EXEC_OR_PROGID      "%s\n入力された文字列はプログラム名でもProgIdでもありません。"
+    IDS_MEDIA_UNKNOWNMEDIA  "不明"
+    IDS_MEDIA_F5_1PT2_512   "5.25"" 1.2MB"
+    IDS_MEDIA_F3_1PT44_512  "3.5"" 1.44MB"
+    IDS_MEDIA_F3_2PT88_512  "3.5"" 2.88MB"
+    IDS_MEDIA_F3_20PT8_512  "3.5"" 20.8MB"
+    IDS_MEDIA_F3_720_512    "3.5"" 720KB"
+    IDS_MEDIA_F5_360_512    "5.25"" 360KB"
+    IDS_MEDIA_F5_320_512    "5.25"" 320KB"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ASSOCSTR_DDEAPPLICATION "DDEアプリケーション"
+    IDS_ASSOCSTR_DDETOPIC   "DDEトピック"
+    IDS_ASSOCSTR_INFOTIP    "INFOTIP"
+    IDS_ASSOCSTR_QUICKTIP   "QUICKTIP"
+    IDS_ASSOCSTR_FILEINFO   "FILEINFO"
+    IDS_ASSOCSTR_CONTENTTYPE "CONTENTTYPE"
+    IDS_ASSOCSTR_DEFAULTICON "標準のアイコン"
+    IDS_ASSOCSTR_SHELLEXTENSION "シェル拡張"
+    IDS_NUMOF_FILES         "%s や %s など %d個のオブジェクト"
+    IDS_PREVSETTING         "前回実行した設定"
+    IDS_ERROROCCURRED       " - %d個の問題が起きています"
+    IDS_UNKNOWNERROR        "*** 不明なエラーです。コード=%d"
+    IDS_CLEAR_SEC           "秒クリア"
+    IDS_CLEAR_MIN           "分クリア"
+    IDS_CLEAR_HOUR          "時クリア"
+    IDS_CLEAR_UNDO          "元に戻す"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUERYCOPY_SAMENAME  "同じ名前の%sファイルが存在しています。"
+    IDS_QUERYCOPY_OLD       "【古い】"
+    IDS_QUERYCOPY_NEW       "【新しい】"
+    IDS_QUERYCOPY_SMALL     "【小さい】"
+    IDS_QUERYCOPY_LARGE     "【大きい】"
+    IDS_QUERYCOPY_OLDSMALL  "【古くて小さい】"
+    IDS_QUERYCOPY_OLDLARGE  "【古くて大きい】"
+    IDS_QUERYCOPY_NEWSMALL  "【新しくて小さい】"
+    IDS_QUERYCOPY_NEWLARGE  "【新しくて大きい】"
+    IDS_F1_GENERIC          "全般情報"
+    IDS_F1_PATH             "場所"
+    IDS_F1_TYPENAME         "種別"
+    IDS_F1_DOSNAME          "DOS名"
+    IDS_F1_CREATIONTIME     "作成日付"
+    IDS_F1_UPDATETIME       "更新日付"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_F1_SIZE             "サイズ"
+    IDS_F1_DISKSIZE         "占有サイズ"
+    IDS_F1_OWNER            "所有者"
+    IDS_F1_ATTRIBUTES       "属性"
+    IDS_F4_EXECUTABLE       "このファイルを実行するプログラム"
+    IDS_F4_ASSOCIATE        "関連付け情報"
+    IDS_F4_PATH             "場所"
+    IDS_HASH_FILENAME       "ファイル名"
+    IDS_HASH_FILESIZE       "サイズ"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MEDIA_F5_320_1024   "5.25"" 320KB"
+    IDS_MEDIA_F5_180_512    "5.25"" 180KB"
+    IDS_MEDIA_F5_160_512    "5.25"" 160KB"
+    IDS_MEDIA_REMOVABLEMEDIA "取外し可能メディア"
+    IDS_MEDIA_FIXEDMEDIA    "ハードディスク"
+    IDS_GPS_NODATA          "GPS緯度経度情報がありません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_HISTORY         "History"
+    IDS_SEC_FOLDER          "Folder"
+    IDS_SEC_OPERATION       "Operation"
+    IDS_SEC_DIVIDE          "Divide"
+    IDS_SEC_DRIVEINFO       "DriveInfo"
+    IDS_SEC_SYNCREPORT      "SyncReport"
+    IDS_SEC_WNDPLACE        "WndPlace"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_FINDURL         "FindUrl"
+    IDS_KEY_SERIESNAME      "Seriesname"
+    IDS_KEY_ATTRPROP        "AttrProp"
+    IDS_KEY_SAVEEXTENSION   "RenameSaveExtension"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_SYNCDATA        "SyncData"
+    IDS_KEY_SYNCBASE        "SyncBase"
+    IDS_KEY_DIVPIECESIZE    "PieceSize"
+    IDS_KEY_DIVUSECABINET   "UseCabinet"
+    IDS_KEY_DIVMAKEBATCH    "MakeBatch"
+    IDS_KEY_SYNCPATH        "SyncPath"
+    IDS_KEY_LOGFOLDER       "LogFolder"
+    IDS_KEY_WP_DRIVEINFO    "DriveInfo"
+    IDS_KEY_WP_SYNCREPORT   "SyncResult"
+    IDS_KEY_WP_CALCHASH     "CalcHash"
+    IDS_KEY_WP_MULTISYNC    "MultiSync"
+    IDS_KEY_FILTERDEL       "FilterDelete"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\lsfop.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

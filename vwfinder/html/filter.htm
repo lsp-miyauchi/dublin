@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-932">
+<TITLE>フィルタ</TITLE>
+<link rel=stylesheet type="text/css" href="help.css" title="style">
+</head>
+<body>
+<h2><font color="#FF9966">■</font>フィルタ</h2>
+<p>フィルタは、ファイルやフォルダを検索するときに、
+1つまたは複数の実際の文字を表わすために使用できるアスタリスク‘*’ や
+疑問符 ‘?’ などの文字です。
+通常、フィルタは、実際の文字がわからない場合や名前全体を入力しない場合に、
+1つまたは複数の文字の代わりに使用されます。
+<ul>
+	<li><b>アスタリスク ‘*’</b>
+		<p>アスタリスクは、0個以上の文字の代用として使用できます。
+		ファイルを検索する際に、名前の先頭が “sample” で始まることがわかっていて、
+		その残りを覚えていない場合には、次のように入力します。</p>
+		<blockquote><b>sample*</b></blockquote>
+		<p>例えば、ファイルの検索でこのフィルタを指定すると、検索結果画面には、
+		ファイルの種類に関係なく、Sample.doc、Sample.txt、SampleData.doc など
+		“sample” で始まるすべてのファイルが表示されます。
+		特定のファイルの種類で検索を絞り込むためには、次のように入力します。</p>
+		<blockquote><b>sample*.doc</b></blockquote>
+		<p>この場合、検索結果画面には、
+		Sample.doc や SampleData.doc など “sample” で始まり、
+		ファイル拡張子が “.doc” のすべてのファイルが表示されます。</p></li>
+	<li><b>疑問符 ‘?’</b>
+		<p>疑問符は、名前の中の 1文字の代用として使用できます。
+		たとえば、“sampl?.doc” と入力すると、検索結果画面では、
+		Sample.doc は検索されますが、SampleData.doc は検索されません。</p></li>
+</ul>
+<!-- copyright -->
+<p>　</p>
+<h3><font style="font-size: 8pt;">Copyright &copy; 1994-2006 <a href="http://www.lightship.co.jp/">LightShip Software</a> All rights reserved.</font></h3>
+</body> 
+</html> 

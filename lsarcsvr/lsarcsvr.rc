@@ -1,0 +1,590 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\lsarcsvr.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,95
+ PRODUCTVERSION 7,4,0,95
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "Common Archiver Wrapper"
+            VALUE "FileVersion", "7.4.0.95"
+            VALUE "InternalName", "lsarcsvr.dll"
+            VALUE "LegalCopyright", "(C)LightShip Software Inc. 2003-2022 All rights reserved."
+            VALUE "OriginalFilename", "lsarcsvr.dll"
+            VALUE "ProductName", "Archive Manager"
+            VALUE "ProductVersion", "7.4.0.95"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_LSARCSVR            REGISTRY                "lsarcsvr.rgs"
+
+IDR_COMMARCHIVER        REGISTRY                "CommArchiver.rgs"
+
+IDR_ARCMANAGER          REGISTRY                "ArcManager.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ARCRESULT DIALOGEX 0, 0, 304, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "処理結果"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,0,105,50,14
+    LISTBOX         IDC_LIST,0,0,303,102,NOT LBS_NOTIFY | LBS_NOINTEGRALHEIGHT | LBS_DISABLENOSCROLL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_PACKDLG DIALOGEX 0, 0, 259, 290
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "書庫ファイルの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_PACK_BARAREA,"Static",SS_OWNERDRAW,0,0,259,32
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,33,259,1
+    CONTROL         "",IDC_TAB,"ToolbarWindow32",WS_GROUP | WS_TABSTOP | 0xa94d,0,0,257,32,WS_EX_NOPARENTNOTIFY
+    LTEXT           "格納先の書庫ファイル名(&T):",IDC_PACK_TITLE,7,41,97,8
+    CONTROL         "",IDC_PACK_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP,7,53,243,14
+    LTEXT           "",IDC_AREA,0,76,258,184,NOT WS_VISIBLE | NOT WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,131,269,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,199,269,50,14
+END
+
+IDD_PACK_BGA DIALOGEX 0, 0, 240, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "パスの取り扱い",IDC_STATIC,0,0,239,33,WS_GROUP
+    COMBOBOX        IDC_BGA_PATHTREAT,14,13,146,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "ファイルの操作",IDC_STATIC,0,38,239,42
+    CONTROL         "書庫を更新の際には、新しいファイルのみ格納する(&N)",IDC_BGA_NEWONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,50,201,10
+    CONTROL         "格納したファイルは元ファイルを削除する(&D)",IDC_BGA_MOVEFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,62,208,10
+    GROUPBOX        "圧縮方式",IDC_STATIC,0,84,239,58
+    CONTROL         "BZ&A - BZip2形式",IDC_BGA_BZA,"Button",BS_AUTORADIOBUTTON | WS_GROUP,14,98,68,10
+    CONTROL         "&GZA - GZip形式",IDC_BGA_GZA,"Button",BS_AUTORADIOBUTTON,92,98,65,10
+    LTEXT           "圧縮率(&L):",IDC_STATIC,14,119,45,8
+    RTEXT           "低",IDC_STATIC,64,119,8,8
+    CONTROL         "",IDC_BGA_SLIDE,"LSCSlider",WS_TABSTOP,75,118,111,10
+    LTEXT           "高",IDC_STATIC,189,119,8,8
+    CONTROL         "自己自動解凍形式の書庫を作成する(&X)",IDC_BGA_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,150,148,10
+END
+
+IDD_PACK_CAB DIALOGEX 0, 0, 240, 184
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "パス名(&P):",IDC_STATIC,10,4,34,8
+    COMBOBOX        IDC_CAB_PATHTREAT,51,2,125,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "方式(&M):",IDC_STATIC,10,23,34,8
+    COMBOBOX        IDC_CAB_METHOD,51,21,125,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "圧縮率(&L):",IDC_7Z_STATIC_COMPRESS,52,41,40,8
+    RTEXT           "低",IDC_7Z_STATIC_LOW,98,41,8,8
+    CONTROL         "",IDC_CAB_SLIDE,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,110,39,108,15
+    LTEXT           "高",IDC_7Z_STATIC_HIGH,222,41,8,8
+    LTEXT           "マルチボリューム・サイズ(&Z):",IDC_STATIC,10,67,85,8
+    EDITTEXT        IDC_CAB_VOLUME_VALUE,108,64,78,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CAB_VOLUME_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,176,64,11,14
+    PUSHBUTTON      "MB",IDC_CAB_VOLUME_UNIT,190,62,24,16
+    LTEXT           "除外フィルタ(&F):",IDC_STATIC,11,85,51,8
+    EDITTEXT        IDC_CAB_EXCLUDE,67,83,161,14,ES_AUTOHSCROLL
+    CONTROL         "自己解凍書庫を作成する(&X)",IDC_CAB_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,115,180,10
+END
+
+IDD_PACK_ISH DIALOGEX 0, 0, 220, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "作成モード(&M):",IDC_STATIC,0,0,50,8
+    COMBOBOX        IDC_ISH_MODE,0,10,157,76,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "対象&OS:",IDC_STATIC,0,30,50,8
+    COMBOBOX        IDC_ISH_OS,0,40,157,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_PACK_UPX DIALOGEX 0, 0, 240, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "ターゲット(&T):",IDC_STATIC,0,4,42,8
+    EDITTEXT        IDC_UPX_TARGET,46,3,169,14,ES_AUTOHSCROLL
+    LTEXT           "圧縮率(&C):",IDC_STATIC,0,24,44,8
+    RTEXT           "低",IDC_STATIC,64,24,8,8
+    CONTROL         "",IDC_UPX_SLIDE,"LSCSlider",WS_TABSTOP,75,23,83,10
+    LTEXT           "高",IDC_STATIC,161,24,8,8
+    CONTROL         "バックアップを作成する(&K)",IDC_UPX_KEEPBACKUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,40,148,10
+    LTEXT           "アイコンの圧縮(&I):",IDC_STATIC,0,55,58,8
+    COMBOBOX        IDC_UPX_ICON,69,54,135,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "アイコン以外のリソースを圧縮する(&R)",IDC_UPX_RESOURCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,71,130,10
+    CONTROL         "RELOCATION RECORD を取り除く(&L)",IDC_UPX_RELOCATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,83,131,10
+    CONTROL         "EXPORT SECTION を圧縮する(&L)",IDC_UPX_EXPORT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,95,142,10
+    CONTROL         "EXTRA DATA を取り除く(&E)",IDC_UPX_EXTRADATA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,107,100,10
+    CONTROL         "強制圧縮する(&F)",IDC_UPX_FORCE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,0,119,100,10
+    PUSHBUTTON      "リセット",IDC_UPX_RESET,174,116,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,138,240,1
+    LTEXT           "Upx.exe の場所を指定(&U):",IDC_STATIC,0,144,88,8
+    EDITTEXT        IDC_UPX_PATH,0,155,198,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_UPX_BROWSE,"LSCFlatButton",WS_TABSTOP | 0x1,200,155,14,14
+    CONTROL         "http://upx.sourceforge.net/",IDC_UPX_URL,"LSCUrl",WS_TABSTOP | 0x1,59,176,155,10
+    LTEXT           "UPXのウェブサイト:",IDC_STATIC,0,176,58,8
+END
+
+IDD_PACK_LZH DIALOGEX 0, 0, 240, 184
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "パス名(&P):",IDC_STATIC,10,4,34,8
+    COMBOBOX        IDC_LZH_PATHTREAT,51,2,125,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "方式(&M):",IDC_STATIC,10,23,34,8
+    COMBOBOX        IDC_LZH_METHOD,51,21,125,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "書庫を更新の際には、新しいファイルのみ格納する(&N)",IDC_LZH_NEWONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,46,207,10
+    CONTROL         "格納したファイルは元ファイルを削除する(&D)",IDC_LZH_MOVEFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,61,193,10
+    CONTROL         "対象ファイルの日時範囲(&D)",IDC_LZH_DATERANGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,82,103,10
+    CONTROL         "",IDC_LZH_DTSTART,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_SHOWNONE | WS_TABSTOP,11,98,81,15
+    LTEXT           "～",IDC_LZH_DATESEPARATOR,104,101,9,8
+    CONTROL         "",IDC_LZH_DTEND,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_SHOWNONE | WS_TABSTOP,126,98,81,15
+    CONTROL         "自己解凍書庫を作成する(&X)",IDC_LZH_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,128,180,10
+END
+
+IDD_PACK_TAR DIALOGEX 0, 0, 240, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "パス名(&P):",IDC_STATIC,10,4,34,8
+    COMBOBOX        IDC_TAR_PATHTREAT,51,2,125,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "方式(&M):",IDC_STATIC,10,23,30,8
+    COMBOBOX        IDC_TAR_METHOD,51,21,125,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "圧縮率(&L):",IDC_7Z_STATIC_COMPRESS,52,41,40,8
+    CONTROL         "",IDC_TAR_SLIDE,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,110,39,108,15
+    LTEXT           "高",IDC_STATIC,222,41,8,8
+    RTEXT           "低",IDC_STATIC,98,41,8,8
+END
+
+IDD_PACK_ZIP DIALOGEX 0, 0, 240, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "パス名(&P):",IDC_STATIC,10,4,34,8
+    COMBOBOX        IDC_ZIP_PATHTREAT,51,2,125,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "書庫更新時には、新しいファイルのみ格納する(&N)",IDC_ZIP_NEWONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,29,194,10
+    CONTROL         "格納したファイルは元ファイルを削除する(&D)",IDC_ZIP_MOVEFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,45,196,10
+    LTEXT           "圧縮率(&L):",IDC_STATIC,10,87,43,8
+    RTEXT           "低",IDC_STATIC,62,88,8,8
+    CONTROL         "",IDC_ZIP_SLIDE,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,75,86,119,15
+    LTEXT           "高",IDC_STATIC,199,88,8,8
+    CONTROL         "パスワードで暗号化する(&W)",IDC_ZIP_PASSWORD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,61,153,10
+END
+
+IDD_PACK_7ZIP DIALOGEX 0, 0, 240, 184
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_7Z_PATHTREAT,51,2,125,87,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "圧縮率(&L):",IDC_7Z_STATIC_COMPRESS,52,41,40,8
+    RTEXT           "低",IDC_7Z_STATIC_LOW,98,41,8,8
+    LTEXT           "高",IDC_7Z_STATIC_HIGH,222,41,8,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,3,63,227,1
+    CONTROL         "ヘッダも圧縮する(&H)",IDC_7Z_COMPRESSHEADER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,79,78,10
+    CONTROL         "ソリッド書庫(&S)",IDC_7Z_SOLIDARCHIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,79,63,10
+    CONTROL         "パスワードで暗号化する(&W)",IDC_7Z_PASSWORD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,94,106,10
+    CONTROL         "SFX書庫を作成する(&X)",IDC_7Z_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,125,94,106,10
+    LTEXT           "マルチボリューム・サイズ(&Z):",IDC_STATIC,10,131,85,8
+    EDITTEXT        IDC_7Z_VOLUME_VALUE,108,128,78,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_7Z_VOLUME_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,176,128,11,14
+    PUSHBUTTON      "MB",IDC_7Z_VOLUME_UNIT,190,126,24,16
+    LTEXT           "除外フィルタ(&F):",IDC_STATIC,11,149,51,8
+    EDITTEXT        IDC_7Z_EXCLUDE,67,147,161,14,ES_AUTOHSCROLL
+    LTEXT           "パス名(&P):",IDC_STATIC,10,4,34,8
+    LTEXT           "方式(&M):",IDC_STATIC,10,23,34,8
+    CONTROL         "",IDC_7Z_SLIDE,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,110,39,108,15
+    COMBOBOX        IDC_7Z_METHOD,51,21,125,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,3,117,227,1
+END
+
+IDD_UNPACKDLG DIALOGEX 0, 0, 407, 280
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "書庫ファイルの解凍"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "解凍先のフォルダ名(&F):",IDC_STATIC,7,7,87,8,NOT WS_GROUP
+    COMBOBOX        IDC_EDIT,7,17,320,131,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "履歴削除(&H)",IDC_CLEAR,331,16,58,14
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,207,41,193,208
+    GROUPBOX        "解凍時のオプション",IDC_STATIC,7,37,192,91
+    CONTROL         "書庫内のフォルダ名を有効にする(&E)",IDC_INCFOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,54,174,10
+    CONTROL         "より新しいか、存在しないファイルのみ解凍する(&N)",IDC_NEWORNOTEXIST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,69,174,10
+    CONTROL         "マルチボリュームであれば、連続して解凍する(&M)",IDC_VOLEXTRACT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,84,174,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,15,100,176,1
+    CONTROL         "書庫名と同じフォルダを作成して解凍する(&S)",IDC_MKFOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,108,174,10
+    GROUPBOX        "上書き",IDC_STATIC,7,135,192,68,WS_GROUP | WS_TABSTOP
+    CONTROL         "上書き時に確認する(&A)",IDC_OW_ASK,"Button",BS_AUTORADIOBUTTON,15,152,91,10
+    CONTROL         "確認なしで上書きする(&W)",IDC_OW_NOP,"Button",BS_AUTORADIOBUTTON,15,167,98,10
+    CONTROL         "存在しているファイルはスキップする(&K)",IDC_OW_SKIP,"Button",BS_AUTORADIOBUTTON,15,182,131,10
+    GROUPBOX        "パスワード(&P)",IDC_STATIC,7,210,190,40
+    EDITTEXT        IDC_PASSWORD,17,224,171,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,279,260,56,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,344,260,56,14
+END
+
+IDD_PACKADDDLG DIALOGEX 0, 0, 266, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "書庫へファイルを追加"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_PACKADD,IDC_STATIC,7,7,21,20
+    LTEXT           "書庫にファイルを追加します。",IDC_STATIC,36,13,163,8
+    LTEXT           "書庫名:",IDC_STATIC,7,35,32,8
+    LTEXT           "",IDC_ARCNAME,44,35,215,8
+    GROUPBOX        "パスの取り扱い",IDC_STATIC,7,55,252,82,WS_GROUP
+    COMBOBOX        IDC_PATHMODE_LIST,18,70,225,86,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "追加するファイルの基準パス(&B):",IDC_STATIC,18,90,100,8
+    EDITTEXT        IDC_PATH,18,100,225,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,67,157,54,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,144,157,54,14
+    LTEXT           "※初期表示されたフォルダか、またはその親フォルダのみ指定可能です。",IDC_STATIC,18,116,233,8
+END
+
+IDD_CHECKARCDLG DIALOGEX 0, 0, 295, 169
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "書庫の正当性検査"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "開始",IDC_START,94,150,50,14
+    PUSHBUTTON      "検査結果をコピー(&C)",IDC_COPY,148,150,83,14
+    PUSHBUTTON      "終了",IDCANCEL,236,150,50,14
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,0,295,146
+END
+
+IDD_MKDIR DIALOGEX 0, 0, 288, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "フォルダの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "はい",IDOK,54,60,55,14
+    PUSHBUTTON      "以降全て(&A)",IDC_ALL,116,60,55,14
+    PUSHBUTTON      "いいえ",IDCANCEL,178,60,55,14
+    ICON            IDI_MKDIR,IDC_STATIC,7,7,21,20
+    LTEXT           "このフォルダは存在しません。新しく作成しますか?",IDC_STATIC,40,14,181,8
+    LTEXT           "フォルダ:",IDC_STATIC,7,35,27,8
+    LTEXT           "",IDC_PATH,40,35,241,8,SS_PATHELLIPSIS
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CHECK               BITMAP                  "res\\arccheck20x20.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ARCHIVE             ICON                    "res\\archive.ico"
+
+IDI_PACKADD             ICON                    "res\\packadd.ico"
+
+IDI_MKDIR               ICON                    "res\\makedir.ico"
+
+IDI_EXTRACT             ICON                    "res\\extract.ico"
+
+IDI_COMPRESS            ICON                    "res\\compress.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ARCRESULT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 249
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_PACKDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 258
+        BOTTOMMARGIN, 283
+    END
+
+    IDD_PACK_BGA, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_CAB, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_ISH, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_UPX, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_LZH, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_TAR, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_ZIP, DIALOG
+    BEGIN
+    END
+
+    IDD_PACK_7ZIP, DIALOG
+    BEGIN
+    END
+
+    IDD_UNPACKDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 400
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 274
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_UNPACKDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PACK_ZIP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PACKDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PACK_7ZIP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PACK_TAR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PACK_CAB AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PACK_LZH AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "lsarcsvr"
+    IDS_PROJTITLE           "書庫の操作"
+    IDD_PACK_LZH            "LZH"
+    IDD_PACK_CAB            "CAB"
+    IDD_PACK_ZIP            "ZIP"
+    IDD_PACK_TAR            "TAR"
+    IDD_PACK_BGA            "BGA"
+    IDD_PACK_7ZIP           "7Zip"
+END
+
+STRINGTABLE
+BEGIN
+    IDD_PACK_ISH            "ISH"
+    IDD_PACK_UPX            "UPX"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_PACK_PATH           "LZH/ZIP/ARJ/CAB/TAR書庫の場合は作成する書庫ファイル名を、\nISHの場合は既存のフォルダ名を指定します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_ARCHIVES        "Archives"
+    IDS_SEC_OPERATION       "Operation"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_HISTORY         "History"
+    IDS_KEY_STATUS          "Status"
+    IDS_KEY_PLACEFOLDER     "PlaceFolder"
+    IDS_KEY_LZHPACKMODE     "LzhPackMode"
+    IDS_KEY_LZHDTSTART      "LzhDtStart"
+    IDS_KEY_LZHDTEND        "LzhDtEnd"
+    IDS_KEY_CABPACKMODE     "CabPackMode"
+    IDS_KEY_CABVOLSIZE      "CabVolSize"
+    IDS_KEY_CABDTSTART      "CabDtStart"
+    IDS_KEY_CABDTEND        "CabDtEnd"
+    IDS_KEY_ZIPLEVEL        "ZipLevel"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_TARGZIP         "TarGZip"
+    IDS_KEY_TARDTSTART      "TarDtStart"
+    IDS_KEY_PREVPACK        "LastPack"
+    IDS_KEY_BGALEVEL        "BgaLevel"
+    IDS_KEY_BGAPACKMODE     "BgaPackMode"
+    IDS_KEY_TARLEVEL        "TarLevel"
+    IDS_KEY_CABLEVEL        "CabLevel"
+    IDS_KEY_LASTSFXTYPE     "LastSFXType"
+    IDS_KEY_UPXINFO         "UpxInfo"
+    IDS_KEY_UPXPATH         "UpxPath"
+    IDS_KEY_7ZIP            "7zip"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MAKEDIR             "%1\n\nこのフォルダは存在しません。新しく作成しますか?"
+    IDS_ISH_DIRECTORYSPECIFIED "ISHの場合は、書庫ファイル指定欄に既存のフォルダ名を指定してください。"
+    IDS_CAPTION_CREATEARCHIVE "書庫ファイルの作成"
+    IDS_FILTER_ARCHIVE      "書庫ファイル(lzh,cab,zip...) |*.lzh;*.zip;*.arj;*.cab;*.ish;*.tar;*.tgz;*.gz;*.gca|全ファイル(*.*)|*.*||"
+    IDS_FILE_ALREADYEXIST   "%1 は既に存在します。\n置き換えてもいいですか?"
+    IDS_UNSUPPORTED_TYPE    "サポートされない種類の書庫です。"
+    IDS_ARC_NOTACCESS       "%1にアクセスできません。"
+    IDS_FILTER_EXEMODULE    "実行ファイル(exe) |*.exe||"
+    IDS_CAPTION_EXEMODULE   "実行ファイルの指定"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_UPX_NOTEXECUTABLE   "%1\nこのファイルはWin32のEXE/DLLではありません。"
+    IDS_PACK_UPX_ICON       "圧縮しない;最初のアイコンのみ;最初のアイコンディレクトリのみ;"
+    IDS_CANCEL_LEFTFILES    "以降のファイルもすべてキャンセルしますか?"
+    IDS_LIBRARY_NOT_FOUND   "対応する書庫ライブラリが見つかりません。\n( %1 )"
+    IDS_CHECKARC_HEADER     "名前|サイズ|日時|場所"
+    IDS_PATHMODE_LIST       "パス名は付加しない;相対パス名を付加する;絶対パス名を付加する"
+    IDS_NOFILES             "ファイルが指定されていません。"
+    IDS_NOARCHIVES          "書庫ファイルではありません。"
+    IDS_PATHTREAT           "パス名は付加しない;相対パス名を付加する;絶対パス名を付加する;"
+    IDS_EXCLUDE_FILTER      "例）*.bak;*.tmp"
+    IDS_INCLUDE_FILTER      "例）*.jpg;*.pdf"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\lsarcsvr.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

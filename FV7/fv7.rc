@@ -1,0 +1,2589 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\fv7.rc2""\r\n"
+    "// アイコン（.ico）は rc2 で定義 --- VISTA(256x256)形式を含むため\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,3,162
+ PRODUCTVERSION 7,4,3,162
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "Comments", "for Windows 10 or later"
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "FileVisor"
+            VALUE "FileVersion", "7.4.3.162"
+            VALUE "InternalName", "FV7"
+            VALUE "LegalCopyright", "(C)LightShip Inc. 1994-2026 All rights reserved."
+            VALUE "OriginalFilename", "fv7.exe"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.3.162"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_PROPBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_VIEW_DESKTOPTREE
+    SEPARATOR
+    BUTTON      IDM_VIEW_SIZE
+    BUTTON      IDM_VIEW_DATE
+    BUTTON      IDM_VIEW_ATTRIB
+    SEPARATOR
+    BUTTON      IDM_SORT
+    BUTTON      IDM_ICON_IMAGE
+    BUTTON      IDM_ICON_ICON
+    BUTTON      IDM_ICON_OUTLINE
+    BUTTON      IDM_ICON_NORMAL
+    BUTTON      IDM_ICON_REPORT
+    SEPARATOR
+    BUTTON      IDM_ICON_RELAX
+    BUTTON      IDM_ICON_ENLARGE
+    SEPARATOR
+    BUTTON      IDM_VIEW_NAMEELLIPSIS
+END
+
+IDB_M_PROPBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_VIEW_DESKTOPTREE
+    SEPARATOR
+    BUTTON      IDM_VIEW_SIZE
+    BUTTON      IDM_VIEW_DATE
+    BUTTON      IDM_VIEW_ATTRIB
+    SEPARATOR
+    BUTTON      IDM_SORT
+    BUTTON      IDM_ICON_IMAGE
+    BUTTON      IDM_ICON_ICON
+    BUTTON      IDM_ICON_OUTLINE
+    BUTTON      IDM_ICON_NORMAL
+    BUTTON      IDM_ICON_REPORT
+    SEPARATOR
+    BUTTON      IDM_ICON_RELAX
+    BUTTON      IDM_ICON_ENLARGE
+    SEPARATOR
+    BUTTON      IDM_VIEW_NAMEELLIPSIS
+END
+
+IDB_SORTBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_SORT_UP
+    BUTTON      IDM_SORT_DOWN
+    SEPARATOR
+    BUTTON      IDM_SORT_NAME
+    BUTTON      IDM_SORT_TYPE
+    BUTTON      IDM_SORT_SIZE
+    BUTTON      IDM_SORT_TIME
+    BUTTON      IDM_SORT_ATTR
+END
+
+IDB_M_SORTBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_SORT_UP
+    BUTTON      IDM_SORT_DOWN
+    SEPARATOR
+    BUTTON      IDM_SORT_NAME
+    BUTTON      IDM_SORT_TYPE
+    BUTTON      IDM_SORT_SIZE
+    BUTTON      IDM_SORT_TIME
+    BUTTON      IDM_SORT_ATTR
+END
+
+IDB_NAVIBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_DIR_PREV
+    BUTTON      IDM_DIR_NEXT
+    BUTTON      IDM_DIR_TRACE
+    BUTTON      IDM_WINDOW_REFLESH
+    BUTTON      IDM_DIR_HOME
+    BUTTON      IDM_DIR_QUICKACCESS
+END
+
+IDB_M_NAVIBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_DIR_PREV
+    BUTTON      IDM_DIR_NEXT
+    BUTTON      IDM_DIR_TRACE
+    BUTTON      IDM_WINDOW_REFLESH
+    BUTTON      IDM_DIR_HOME
+    BUTTON      IDM_DIR_QUICKACCESS
+END
+
+IDB_TOOLBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_DIR_PREV
+    BUTTON      IDM_DIR_NEXT
+    BUTTON      IDM_DIR_UPDIR
+    BUTTON      IDM_WINDOW_REFLESH
+    BUTTON      IDM_FILE_MKDIR
+    BUTTON      IDM_FILE_COPY
+    BUTTON      IDM_FILE_MOVE
+    BUTTON      IDM_FILE_DELETE
+    BUTTON      IDM_FILE_MERGE
+    BUTTON      IDM_FILE_DIVIDE
+    BUTTON      IDM_TOOL_EDITOR
+    BUTTON      IDM_TOOL_VIEWER
+    BUTTON      IDM_TOOL_BDUMP
+    BUTTON      IDM_VIEW_FILEINFO
+    BUTTON      IDM_FILE_PROPERTY
+    BUTTON      IDM_VIEW_HOTKEYMENU
+    BUTTON      IDM_FILE_EXECUTE
+    BUTTON      IDM_DIR_SEARCH
+    BUTTON      IDM_FILE_PACK
+    BUTTON      IDM_FILE_UNPACK
+    BUTTON      IDM_FILE_CHECKARC
+    BUTTON      IDM_FILE_RENAME
+    BUTTON      IDM_FILE_ATTRIB
+    BUTTON      IDM_FILE_ASSOCIATE
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_FILE_SHRED
+    BUTTON      IDM_VIEW_WILDCARD
+    BUTTON      IDM_VIEW_DRIVEINFO
+    BUTTON      IDM_FILE_SELALL
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_VIEW_FILESIZE
+    BUTTON      IDM_WINDOW_COMBINELOAD
+    BUTTON      IDM_FILE_SHORTCUT
+    BUTTON      IDM_DIR_SYNC
+    BUTTON      IDM_DIR_SCRIPTSYNC
+    BUTTON      IDM_FILE_FILTERDEL
+    BUTTON      IDM_NET_CONNECT
+    BUTTON      IDM_NET_DISCONNECT
+    BUTTON      IDM_EDIT_CUT
+    BUTTON      IDM_EDIT_PASTE
+    BUTTON      IDM_EDIT_COPY
+    BUTTON      IDM_EDIT_PASTESHORTCUT
+    BUTTON      IDM_EDIT_LISTOUTPUT
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_WINDOW_TILE_VERT
+    BUTTON      IDM_TOOL_MSDOS
+    BUTTON      IDM_DIR_HOME
+    BUTTON      IDM_DIR_MAKEBRIEFCASE
+    BUTTON      IDM_FILE_RENEXT
+    BUTTON      IDM_FILE_SERIESNAME
+    BUTTON      IDM_FILE_SHELLNEW
+    BUTTON      IDM_FILE_NEWFILE
+    BUTTON      ID_HELP_FINDER
+    BUTTON      IDM_FILE_REPNAMES
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_FILE_CHGCAPS
+    BUTTON      IDM_TOOL_GREP
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_DIR_QUICKACCESS
+    BUTTON      IDM_DIR_ADDFAVORITE
+    BUTTON      IDM_TAB_SAVEALL
+    BUTTON      IDM_TAB_NEW
+    BUTTON      IDM_TAB_CLOSE
+    BUTTON      IDM_TAB_REOPEN_RECENT
+    BUTTON      IDM_TAB_LOCK
+    BUTTON      IDM_EXEC_OWN
+    BUTTON      IDM_DIR_HISTORY
+    BUTTON      IDM_FILE_MASKSELECT
+    BUTTON      IDM_NET_ADDPLACE
+    BUTTON      IDM_TOOL_CALCHASH
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_TOOL_SHELL
+END
+
+IDB_M_TOOLBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_DIR_PREV
+    BUTTON      IDM_DIR_NEXT
+    BUTTON      IDM_DIR_UPDIR
+    BUTTON      IDM_WINDOW_REFLESH
+    BUTTON      IDM_FILE_MKDIR
+    BUTTON      IDM_FILE_COPY
+    BUTTON      IDM_FILE_MOVE
+    BUTTON      IDM_FILE_DELETE
+    BUTTON      IDM_FILE_MERGE
+    BUTTON      IDM_FILE_DIVIDE
+    BUTTON      IDM_TOOL_EDITOR
+    BUTTON      IDM_TOOL_VIEWER
+    BUTTON      IDM_TOOL_BDUMP
+    BUTTON      IDM_VIEW_FILEINFO
+    BUTTON      IDM_FILE_PROPERTY
+    BUTTON      IDM_VIEW_HOTKEYMENU
+    BUTTON      IDM_FILE_EXECUTE
+    BUTTON      IDM_DIR_SEARCH
+    BUTTON      IDM_FILE_PACK
+    BUTTON      IDM_FILE_UNPACK
+    BUTTON      IDM_FILE_CHECKARC
+    BUTTON      IDM_FILE_RENAME
+    BUTTON      IDM_FILE_ATTRIB
+    BUTTON      IDM_FILE_ASSOCIATE
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_FILE_SHRED
+    BUTTON      IDM_VIEW_WILDCARD
+    BUTTON      IDM_VIEW_DRIVEINFO
+    BUTTON      IDM_FILE_SELALL
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_VIEW_FILESIZE
+    BUTTON      IDM_WINDOW_COMBINELOAD
+    BUTTON      IDM_FILE_SHORTCUT
+    BUTTON      IDM_DIR_SYNC
+    BUTTON      IDM_DIR_SCRIPTSYNC
+    BUTTON      IDM_FILE_FILTERDEL
+    BUTTON      IDM_NET_CONNECT
+    BUTTON      IDM_NET_DISCONNECT
+    BUTTON      IDM_EDIT_CUT
+    BUTTON      IDM_EDIT_PASTE
+    BUTTON      IDM_EDIT_COPY
+    BUTTON      IDM_EDIT_PASTESHORTCUT
+    BUTTON      IDM_EDIT_LISTOUTPUT
+    BUTTON      ID_WINDOW_CASCADE
+    BUTTON      ID_WINDOW_TILE_HORZ
+    BUTTON      ID_WINDOW_TILE_VERT
+    BUTTON      IDM_TOOL_MSDOS
+    BUTTON      IDM_DIR_HOME
+    BUTTON      IDM_DIR_MAKEBRIEFCASE
+    BUTTON      IDM_FILE_RENEXT
+    BUTTON      IDM_FILE_SERIESNAME
+    BUTTON      IDM_FILE_SHELLNEW
+    BUTTON      IDM_FILE_NEWFILE
+    BUTTON      ID_HELP_FINDER
+    BUTTON      IDM_FILE_REPNAMES
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_FILE_CHGCAPS
+    BUTTON      IDM_TOOL_GREP
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_DIR_QUICKACCESS
+    BUTTON      IDM_DIR_ADDFAVORITE
+    BUTTON      IDM_TAB_SAVEALL
+    BUTTON      IDM_TAB_NEW
+    BUTTON      IDM_TAB_CLOSE
+    BUTTON      IDM_TAB_REOPEN_RECENT
+    BUTTON      IDM_TAB_LOCK
+    BUTTON      IDM_EXEC_OWN
+    BUTTON      IDM_DIR_HISTORY
+    BUTTON      IDM_FILE_MASKSELECT
+    BUTTON      IDM_NET_ADDPLACE
+    BUTTON      IDM_TOOL_CALCHASH
+    BUTTON      IDM_INVALID
+    BUTTON      IDM_TOOL_SHELL
+END
+
+IDB_FINDBAR TOOLBAR 21, 21
+BEGIN
+    BUTTON      IDM_FINDER_NEXT
+    BUTTON      IDM_FINDER_PREV
+    BUTTON      IDM_FINDER_SELECT
+    BUTTON      IDM_FINDER_REGEXP
+END
+
+IDB_APPICON TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_M_APPICON TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\fv7.ico"
+
+IDI_TABGROUP            ICON                    "res\\tabgroup.ico"
+
+IDI_UPDIR               ICON                    "res\\updir.ico"
+
+IDI_DRIVEUNKNOWN        ICON                    "res\\drive_unknown.ico"
+
+IDI_EMPTY               ICON                    "res\\empty.ico"
+
+IDI_COPY                ICON                    "res\\copy.ico"
+
+IDI_MOVE                ICON                    "res\\move.ico"
+
+IDI_RUNAPP              ICON                    "res\\runapp.ico"
+
+IDI_CUSTOMBAR           ICON                    "res\\custbar.ico"
+
+IDI_ADDINVIEWER         ICON                    "res\\tag.ico"
+
+IDI_STAR                ICON                    "res\\star.ico"
+
+IDI_MBX_QUESTION        ICON                    "res\\mbx_question.ico"
+
+IDI_MBX_WARNING         ICON                    "res\\mbx_warning.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "開く(&O)",                      IDM_FILE_OPEN
+        MENUITEM "コピー(&C)",                     IDM_FILE_COPY
+        MENUITEM "移動(&M)",                      IDM_FILE_MOVE
+        POPUP "新規作成(&N)"
+        BEGIN
+            MENUITEM "フォルダの新規作成(&M)...",            IDM_FILE_MKDIR
+            MENUITEM "ショートカットの作成(&U)...",           IDM_FILE_SHORTCUT
+            MENUITEM "空ファイルの作成(&E)...",             IDM_FILE_NEWFILE
+            MENUITEM "新しいブリーフ ケースの作成(&R)...",       IDM_DIR_MAKEBRIEFCASE
+            MENUITEM "(なし)",                        IDM_SHLNEW_EMPTY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "属性の変更(&I)...",                IDM_FILE_ATTRIB
+        MENUITEM "名前の変更(&R)",                   IDM_FILE_RENAME
+        POPUP "名前の置換(&L)"
+        BEGIN
+            MENUITEM "拡張子の一括変更(&T)...",             IDM_FILE_RENEXT
+            MENUITEM "連番で名前変更(&S)...",              IDM_FILE_SERIESNAME
+            MENUITEM "名前の一括置換(&L)...",              IDM_FILE_REPNAMES
+            MENUITEM "大文字小文字の一括変換(&C)...",          IDM_FILE_CHGCAPS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)",                      IDM_FILE_DELETE
+        MENUITEM "一括削除(&F)...",                 IDM_FILE_FILTERDEL
+        MENUITEM "シュレッダ(&Z)...",                IDM_FILE_SHRED
+        MENUITEM SEPARATOR
+        MENUITEM "送る(&S)...\tCtrl+Shift+Enter", IDM_FILE_SENDTO
+        MENUITEM "プロパティ(&P)\tAlt+Enter",        IDM_FILE_PROPERTY
+        MENUITEM SEPARATOR
+        MENUITEM "Windows ターミナル(&P)",           IDM_TOOL_SHELL
+        MENUITEM "コマンド プロンプトを開く(&M)",           IDM_TOOL_MSDOS
+        MENUITEM "名前を指定して実行(&E)...",            IDM_FILE_EXECUTE
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)\tAlt+F4",              ID_APP_EXIT
+        MENUITEM "すべて終了(&Q)",                   ID_APP_EXITALL
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "オブジェクトの切り取り(&X)\tCtrl+Del",   IDM_EDIT_CUT
+        MENUITEM "オブジェクトのコピー(&C)\tCtrl+Ins",    IDM_EDIT_COPY
+        MENUITEM "オブジェクトの貼付け(&P)\tShift+Ins",   IDM_EDIT_PASTE
+        MENUITEM "ショートカットの貼付け(&S)\tCtrl+Shift+Ins", IDM_EDIT_PASTESHORTCUT
+        MENUITEM SEPARATOR
+        POPUP "パス名をコピー(&O)"
+        BEGIN
+            MENUITEM "名前のみコピー(&N)",                 IDM_COPY_NAMEONLY
+            MENUITEM "詳細情報とともにコピー(&D)",             IDM_COPY_DETAIL
+            MENUITEM "フルパス名をコピー(&T)",               IDM_COPY_FULLNAME
+            MENUITEM "フルパス名を短い名前でコピー(&S)",          IDM_COPY_SHORTNAME
+            MENUITEM "フルパス名でUNC名をコピー(&U)",          IDM_COPY_UNCNAME
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "すべて選択(&U)",                   IDM_FILE_SELALL
+        MENUITEM "選択の反転(&R)",                   IDM_FILE_SELINVERT
+        MENUITEM "フィルタ(&F)...\t*",              IDM_VIEW_WILDCARD
+        MENUITEM "フィルタを解除(&L)",                 IDM_VIEW_RELEASEFILTER
+        MENUITEM "一括選択(&A)...\tCtrl+*",         IDM_FILE_MASKSELECT
+        MENUITEM SEPARATOR
+        MENUITEM "関連付け(&A)...",                 IDM_FILE_ASSOCIATE
+    END
+    POPUP "フォルダ(&D)"
+    BEGIN
+        MENUITEM "ホーム(&H)\tAlt+Home",           IDM_DIR_HOME
+        MENUITEM "指定のフォルダを開く(&V)...",           IDM_DIR_SELECT
+        MENUITEM "このフォルダをしおりへ登録(&F)",           IDM_DIR_ADDFAVORITE
+        MENUITEM SEPARATOR
+        MENUITEM "検索(&S)...",                   IDM_DIR_SEARCH
+        POPUP "システム フォルダ(&I)"
+        BEGIN
+            MENUITEM "(なし)",                        IDM_SPFL_EMPTY
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "ごみ箱を空にする(&B)",                IDM_DIR_EMPTYRECYCLEBIN
+        MENUITEM SEPARATOR
+        MENUITEM "フォルダの同期(&Y)...",              IDM_DIR_SYNC
+        POPUP "フォルダ同期リスト(&T)"
+        BEGIN
+            MENUITEM "同期リスト フォルダを開く(&F)",           IDM_DIR_OPENSYNCFOLDER
+            MENUITEM "フォルダ同期リストの作成(&P)...",         IDM_DIR_SCRIPTSYNC
+            MENUITEM SEPARATOR
+            MENUITEM "（なし）",                        IDM_SSYNC_START
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "ひとつ上の階層へ(&U)\tBS",            IDM_DIR_UPDIR
+        MENUITEM "履歴(&H)\tAlt+↑",               IDM_DIR_HISTORY
+        MENUITEM "ひとつ前のフォルダ(&P)\tAlt+←",        IDM_DIR_PREV
+        MENUITEM "次のフォルダ(&N)\tAlt+→",           IDM_DIR_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "デスクトップ以下をツリー表示(&D)",          IDM_VIEW_DESKTOPTREE
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "ファイル情報(&I)...",               IDM_VIEW_FILEINFO
+        MENUITEM "ファイル容量の詳細(&E)...",            IDM_VIEW_FILESIZE
+        MENUITEM "ドライブ情報(&R)...",               IDM_VIEW_DRIVEINFO
+        MENUITEM SEPARATOR
+        POPUP "ツールバー(&B)"
+        BEGIN
+            MENUITEM "(なし)",                        IDW_TBFIRST
+            MENUITEM SEPARATOR
+            MENUITEM "メニュー バー(&M)",                 IDM_BAR_MENU
+            MENUITEM "プロパティ バー(&P)",                IDM_BAR_PROP
+            MENUITEM "ソート バー(&O)",                  IDM_BAR_SORT
+            MENUITEM "ドライブ バー(&D)",                 IDM_BAR_DRIVE
+            MENUITEM "ナビゲーション バー(&N)",              IDM_BAR_NAVI
+            MENUITEM "スマート バー(&A)",                 IDM_BAR_SMART
+            MENUITEM "ステータス バー(&S)",                IDM_BAR_STAT
+            MENUITEM "App スタック(&B)",                IDM_BAR_APPBAR
+            MENUITEM "しおり(&F)",                     IDM_BAR_FAVO
+            MENUITEM "機能キー(&K)",                    IDM_BAR_FUNCTION
+            MENUITEM SEPARATOR
+            POPUP "バーの配置など(&G)"
+            BEGIN
+                MENUITEM "ドライブ バーを横置き(&H)",             IDM_BAR_DRIVE_HORZ
+                MENUITEM "ドライブ バーを左側面に縦置き(&V)",         IDM_BAR_DRIVE_VERTLEFT
+                MENUITEM "ドライブ バーを右側面に縦置き(&R)",         IDM_BAR_DRIVE_VERTRIGHT
+                MENUITEM SEPARATOR
+                MENUITEM "ツール バーは大きなアイコンで表示(&E)",       IDM_BAR_LARGEICON
+                MENUITEM SEPARATOR
+                MENUITEM "ツール バーの整列(&U)...",            IDM_BAR_REPOSITION
+                MENUITEM "ツール バーを固定する(&L)...",          IDM_BAR_LOCKREBAR
+            END
+        END
+        MENUITEM SEPARATOR
+        POPUP "表示する種類やプロパティ(&P)"
+        BEGIN
+            MENUITEM "サイズを表示(&I)",                  IDM_VIEW_SIZE
+            MENUITEM "更新日付を表示(&E)",                 IDM_VIEW_DATE
+            MENUITEM "属性を表示(&A)",                   IDM_VIEW_ATTRIB
+            MENUITEM SEPARATOR
+            MENUITEM "隠しシステム ファイル・フォルダを表示しない(&S)",  IDM_TYPE_FILESUPERHIDDEN
+            MENUITEM "すべての隠しファイル・フォルダを表示しない(&F)",   IDM_TYPE_FILEHIDDEN
+            MENUITEM SEPARATOR
+            MENUITEM "フォルダを表示しない(&D)",              IDM_TYPE_EXCFOLDER
+        END
+        POPUP "ソート(&S)"
+        BEGIN
+            MENUITEM "(なし)",                        IDM_SORT_COL0
+            MENUITEM SEPARATOR
+            MENUITEM "昇順(&U)",                      IDM_SORT_UP
+            MENUITEM "降順(&D)",                      IDM_SORT_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "ソートしない(&X)",                  IDM_SORT_NONE
+        END
+        POPUP "ファイルの表示方法(&M)"
+        BEGIN
+            MENUITEM "イメージ(&M)",                    IDM_ICON_IMAGE
+            MENUITEM "アイコン(&I)",                    IDM_ICON_ICON
+            MENUITEM "概要(&O)",                      IDM_ICON_OUTLINE
+            MENUITEM "一覧(&N)",                      IDM_ICON_NORMAL
+            MENUITEM "詳細(&D)",                      IDM_ICON_REPORT
+            MENUITEM SEPARATOR
+            MENUITEM "アイコンを大きく表示(&L)",              IDM_ICON_ENLARGE
+            MENUITEM "長い名前は短縮する(&L)",               IDM_VIEW_NAMEELLIPSIS
+            MENUITEM SEPARATOR
+            MENUITEM "ゆとりビュー(&R)",                  IDM_ICON_RELAX
+        END
+        POPUP "サムネイル サイズ(&H)"
+        BEGIN
+            MENUITEM "72 x 72",                     IDM_IMAGE_072
+            MENUITEM "96 x 96",                     IDM_IMAGE_096
+            MENUITEM "128 x 128",                   IDM_IMAGE_128
+            MENUITEM "160 x 160",                   IDM_IMAGE_160
+            MENUITEM "192 x 192",                   IDM_IMAGE_192
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "基本の表示スタイルを更新(&T)",            IDM_VIEW_SAETDEFAULT
+        MENUITEM SEPARATOR
+        MENUITEM "ショートカット キー 一覧(&Y)",           IDM_VIEW_KEYMAP
+        MENUITEM SEPARATOR
+        POPUP "ネットワーク(&N)"
+        BEGIN
+            MENUITEM "ネットワーク ドライブの割り当て(&N)...",     IDM_NET_CONNECT
+            MENUITEM "ネットワーク ドライブの切断(&S)...",       IDM_NET_DISCONNECT
+            MENUITEM "ネットワークの場所を追加(&P)...",         IDM_NET_ADDPLACE
+        END
+    END
+    POPUP "ツール(&T)"
+    BEGIN
+        MENUITEM "ファイル内容を閲覧(&V)...",            IDM_TOOL_VIEWER
+        MENUITEM "バイナリ編集(&D)...",               IDM_TOOL_BDUMP
+        MENUITEM SEPARATOR
+        MENUITEM "エディタで編集(&E)...",              IDM_TOOL_EDITOR
+        MENUITEM "ファイルから文字列を検索(&G)",            IDM_TOOL_GREP
+        MENUITEM SEPARATOR
+        MENUITEM "形式を指定してファイル リストを出力(&L)...",   IDM_EDIT_LISTOUTPUT
+        MENUITEM "ハッシュを計算(&H)...",              IDM_TOOL_CALCHASH
+        MENUITEM SEPARATOR
+        MENUITEM "ファイルを連結(&G)",                 IDM_FILE_MERGE
+        MENUITEM "ファイルを分割(&V)",                 IDM_FILE_DIVIDE
+        POPUP "書庫ファイルの操作(&H)"
+        BEGIN
+            MENUITEM "書庫ファイルの作成(&S)...",            IDM_FILE_PACK
+            MENUITEM "書庫ファイルの解凍(&T)...",            IDM_FILE_UNPACK
+            MENUITEM SEPARATOR
+            MENUITEM "書庫の正当性検査(&C)...",             IDM_FILE_CHECKARC
+        END
+        MENUITEM SEPARATOR
+        POPUP "設定(&S)"
+        BEGIN
+            MENUITEM "ホットキー メニュー(&K)",              IDM_VIEW_HOTKEYMENU
+            MENUITEM SEPARATOR
+            MENUITEM "ショートカット キー(&Y)...",           IDM_OPTION_KEYMAP
+            MENUITEM "ショートカット メニュー(&S)...",         IDM_OPTION_SHORTCUT
+            MENUITEM SEPARATOR
+            MENUITEM "オプション(&O)...\tAlt+F7",        IDM_OPTION_MISC
+            MENUITEM "シェル拡張機能(&X)...",              IDM_OPTION_SHELLEXT
+        END
+    END
+    POPUP "タブ(&B)"
+    BEGIN
+        MENUITEM "新しいタブ(&T)",                   IDM_TAB_NEW
+        MENUITEM SEPARATOR
+        POPUP "最近閉じたタブ(&I)"
+        BEGIN
+            MENUITEM "(なし)",                        IDM_TAB_REOPEN_FIRST
+        END
+        POPUP "タブ グループ(&G)"
+        BEGIN
+            MENUITEM "タブ グループを保存(&Q)",              IDM_TAB_SAVEALL
+            MENUITEM "保存したタブ グループを開く(&F)",          IDM_TAB_RESTOREALL
+            MENUITEM SEPARATOR
+            MENUITEM "(なし)",                        IDM_TAB_GROUP_FIRST
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "タブをロック(&L)",                  IDM_TAB_LOCK
+        MENUITEM "タブを分離(&E)",                   IDM_TAB_EXPORT
+        POPUP "タブをソート(&S)"
+        BEGIN
+            MENUITEM "作成順(&C)",                     IDM_TAB_SORTDEFAULT
+            MENUITEM "参照順(&R)",                     IDM_TAB_SORTREFERENCE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "前のタブ(&A)\tCtrl+Shift+Tab",    IDM_TAB_PREV
+        MENUITEM "次のタブ(&D)\tCtrl+Tab",          IDM_TAB_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "他のタブをすべて閉じる(&O)",             IDM_TAB_CLOSE_ANYOTHER
+        MENUITEM "左のタブをすべて閉じる(&T)",             IDM_TAB_CLOSE_LEFTSIDE
+        MENUITEM "右のタブをすべて閉じる(&G)",             IDM_TAB_CLOSE_RIGHTSIDE
+        MENUITEM SEPARATOR
+        MENUITEM "タブを閉じる(&T)",                  IDM_TAB_CLOSE
+    END
+    POPUP "ウィンドウ(&W)"
+    BEGIN
+        MENUITEM "最新の情報に更新(&R)",                IDM_WINDOW_REFLESH
+        MENUITEM SEPARATOR
+        MENUITEM "新しいウィンドウ(&W)",                IDM_EXEC_OWN
+        MENUITEM SEPARATOR
+        MENUITEM "重ねて表示(&C)",                   ID_WINDOW_CASCADE
+        MENUITEM "横に並べて表示(&H)",                 ID_WINDOW_TILE_HORZ
+        MENUITEM "縦に積んで表示(&V)",                 ID_WINDOW_TILE_VERT
+        MENUITEM SEPARATOR
+        MENUITEM "すべてのウィンドウ位置を保存(&O)",          IDM_WINDOW_COMBINESAVE
+        MENUITEM "保存したウィンドウ位置を復帰(&L)",          IDM_WINDOW_COMBINELOAD
+        MENUITEM SEPARATOR
+        MENUITEM "前のウィンドウ(&P)\tAlt+Ctrl+Shift+Tab", IDM_WINDOW_PREV
+        MENUITEM "次のウィンドウ(&N)\tAlt+Ctrl+Tab",   IDM_WINDOW_NEXT
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "目次(&T)",                      ID_HELP_FINDER
+        MENUITEM "ユーザ登録について(&U)",               IDM_HELP_SHAREWARE
+        POPUP "WEBドキュメント(&W)"
+        BEGIN
+            MENUITEM "LightShip ホームページ(&H)",        IDM_WEB_HOMEPAGE
+            MENUITEM "フィードバックの送信(&F)",              IDM_WEB_FEEDBACK
+            MENUITEM "最新バージョンの取得(&N)",              IDM_WEB_DOWNLOAD
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "FileVisorについて...",            ID_APP_ABOUT
+    END
+END
+
+ID_MENU_PROPERTY MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "サイズを表示(&I)",                  IDM_VIEW_SIZE
+        MENUITEM "更新日付を表示(&E)",                 IDM_VIEW_DATE
+        MENUITEM "属性を表示(&A)",                   IDM_VIEW_ATTRIB
+        MENUITEM SEPARATOR
+        MENUITEM "隠しシステム ファイル・フォルダを表示しない(&S)",  IDM_TYPE_FILESUPERHIDDEN
+        MENUITEM "すべての隠しファイル・フォルダを表示しない(&F)",   IDM_TYPE_FILEHIDDEN
+        MENUITEM SEPARATOR
+        MENUITEM "ファイル ペインではフォルダを表示しない(&D)",    IDM_TYPE_EXCFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "長い名前は省略して表示する(&L)",           IDM_VIEW_NAMEELLIPSIS
+    END
+END
+
+ID_MENU_SORT MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "(なし)",                        IDM_SORT_COL0
+        MENUITEM SEPARATOR
+        MENUITEM "昇順(&U)",                      IDM_SORT_UP
+        MENUITEM "降順(&D)",                      IDM_SORT_DOWN
+        MENUITEM SEPARATOR
+        MENUITEM "ソートしない(&X)",                  IDM_SORT_NONE
+    END
+END
+
+ID_MENU_FILEICON MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "サムネイル(&M)",                   IDM_ICON_IMAGE
+        MENUITEM "アイコン(&I)",                    IDM_ICON_ICON
+        MENUITEM "概要(&O)",                      IDM_ICON_OUTLINE
+        MENUITEM "一覧(&N)",                      IDM_ICON_NORMAL
+        MENUITEM "詳細(&D)",                      IDM_ICON_REPORT
+        MENUITEM SEPARATOR
+        MENUITEM "アイコンを大きく表示(&L)",              IDM_ICON_ENLARGE
+        MENUITEM SEPARATOR
+        MENUITEM "ゆとりビュー(&R)",                  IDM_ICON_RELAX
+    END
+END
+
+ID_MENU_APPPAGE MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "新規作成(&N)"
+        BEGIN
+            MENUITEM "新しいグループ(&N)",                 IDM_APPPAGE_NEWGROUP
+            MENUITEM "フォルダ内容をインポート(&I)",            IDM_APPPAGE_IMPORT
+        END
+        POPUP "表示(&V)"
+        BEGIN
+            MENUITEM "大アイコン(&E)",                   IDM_APPPAGE_EXTRAICON
+            MENUITEM "中アイコン(&M)",                   IDM_APPPAGE_LARGEICON
+            MENUITEM "一覧（中）(&L)",                   IDM_APPPAGE_LARGEICONLIST
+            MENUITEM "一覧（小）(&S)",                   IDM_APPPAGE_SMALLICON
+            MENUITEM SEPARATOR
+            MENUITEM "名前順にソート(&N)",                 IDM_APPPAGE_SORT
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "グループ名の変更(&R)",                IDM_APPPAGE_RENAME
+        MENUITEM "グループの削除(&D)",                 IDM_APPPAGE_DELGROUP
+        MENUITEM "グループをひとつ上へ(&U)",              IDM_APPPAGE_PAGEUP
+        MENUITEM "グループをひとつ下へ(&W)",              IDM_APPPAGE_PAGEDOWN
+        MENUITEM "グループのプロパティ(&P)...",           IDM_APPPAGE_BKGND
+        MENUITEM SEPARATOR
+        POPUP "配置(&P)"
+        BEGIN
+            MENUITEM "パネルを左に配置(&T)",                IDM_APPPAGE_LEFT
+            MENUITEM "パネルを右に配置(&I)",                IDM_APPPAGE_RIGHT
+            MENUITEM "パネルを非表示(&X)",                 IDM_APPPAGE_HIDEBAR
+        END
+    END
+END
+
+ID_MENU_PAGEITEM MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "開く(&O)\tEnter",               IDM_PAGEITEM_OPEN
+        MENUITEM "新しいTABで開く(&T)",               IDM_PAGEITEM_OPENNEWTAB
+        MENUITEM "新しいウィンドウで開く(&W)",             IDM_PAGEITEM_OPENNEWWINDOW
+        MENUITEM "項目の場所へ移動(&J)...",             IDM_PAGEITEM_OPENSRCDIR
+        MENUITEM SEPARATOR
+        MENUITEM "項目をひとつ上へ(&U)\tCtrl+↑",        IDM_PAGEITEM_MOVEUP
+        MENUITEM "項目をひとつ下へ(&W)\tCtrl+↓",        IDM_PAGEITEM_MOVEDOWN
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)\tDel",                 IDM_PAGEITEM_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "名前の変更(&R)",                   IDM_PAGEITEM_RENAME
+        MENUITEM "アイコンを変更(&I)...",              IDM_PAGEITEM_ICON
+        MENUITEM "プロパティ(&P)...",                IDM_PAGEITEM_PROPERTY
+    END
+END
+
+ID_MENU_FAVORITE MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "開く(&O)\tEnter",               IDM_FAVO_OPEN
+        MENUITEM "新しいタブ(&T)\tCtrl+Enter",       IDM_FAVO_TABNEW
+        MENUITEM "新しいウィンドウ(&N)\tAlt+Enter",     IDM_FAVO_OPENNEW
+        MENUITEM "名前の変更(&R)",                   IDM_FAVO_RENAME
+        MENUITEM "しおりから削除(&D)\tDel",            IDM_FAVO_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "アイコンをひとつ上へ(&U)\tCtrl+↑",      IDM_FAVO_ITEMUP
+        MENUITEM "アイコンをひとつ下へ(&W)\tCtrl+↓",      IDM_FAVO_ITEMDOWN
+        MENUITEM SEPARATOR
+        MENUITEM "プロパティ(&P)...",                IDM_FAVO_PROPERTY
+    END
+END
+
+ID_MENU_TABBAR MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "新しいタブ(&N)",                   IDM_TAB_NEW
+        MENUITEM SEPARATOR
+        MENUITEM "最新の情報に更新(&R)",                IDM_TAB_REFRESH
+        MENUITEM "他のタブをすべて閉じる(&O)",             IDM_TAB_CLOSE_ANYOTHER
+        MENUITEM "左のタブをすべて閉じる(&T)",             IDM_TAB_CLOSE_LEFTSIDE
+        MENUITEM "右のタブをすべて閉じる(&G)",             IDM_TAB_CLOSE_RIGHTSIDE
+        POPUP "タブをソート(&S)"
+        BEGIN
+            MENUITEM "作成順にソート(&C)",                 IDM_TAB_SORTDEFAULT
+            MENUITEM "参照順にソート(&R)",                 IDM_TAB_SORTREFERENCE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "閉じたタブを元に戻す(&R)",              IDM_TAB_REOPEN_RECENT
+        MENUITEM SEPARATOR
+        MENUITEM "タブをロック(&L)",                  IDM_TAB_LOCK
+        MENUITEM "このタブをしおりへ登録(&F)",             IDM_DIR_ADDFAVORITE
+        MENUITEM "タブ グループを保存(&Q)",              IDM_TAB_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "このタブを分離(&E)",                 IDM_TAB_EXPORT
+        MENUITEM "タブを閉じる(&C)",                  IDM_TAB_CLOSE
+    END
+END
+
+ID_MENU_SMARTBAR MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        POPUP "クリックしたとき"
+        BEGIN
+            MENUITEM "開く(&O)",                      IDM_SMART_OPEN
+            MENUITEM "フォルダに移動(&F)",                 IDM_SMART_OPENBYFV
+            MENUITEM "新しいタブで開く(&T)",                IDM_SMART_OPENTAB
+            MENUITEM "新しいウィンドウで開く(&W)",             IDM_SMART_OPENNEWFRAME
+            MENUITEM SEPARATOR
+            MENUITEM "フォルダ内容をメニュー表示(&M)",           IDM_SMART_MENU
+            MENUITEM "フォルダ ツリーをメニュー表示(&R)",         IDM_SMART_TREEMENU
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "アイコンの変更(&I)...",              IDM_SMART_CHANGEICON
+        MENUITEM "プロパティ(&P)...",                IDM_SMART_PROPERTY
+        MENUITEM SEPARATOR
+        MENUITEM "ボタンを編集(&C)...",               IDM_SMART_EDIT
+        MENUITEM "削除(&D)",                      IDM_SMART_DELETE
+    END
+END
+
+ID_MENU_SHELLNEW MENU
+BEGIN
+    MENUITEM "フォルダの新規作成(&M)...",            IDM_FILE_MKDIR
+    MENUITEM "ショートカットの作成(&U)...",           IDM_FILE_SHORTCUT
+    MENUITEM "空ファイルの作成(&E)...",             IDM_FILE_NEWFILE
+    MENUITEM "新しいブリーフ ケースの作成(&R)...",       IDM_DIR_MAKEBRIEFCASE
+    MENUITEM "(なし)",                        IDM_SHLNEW_EMPTY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    VK_UP,          IDM_DIR_HISTORY,        VIRTKEY, ALT, NOINVERT
+    VK_HOME,        IDM_DIR_HOME,           VIRTKEY, ALT, NOINVERT
+    VK_RIGHT,       IDM_DIR_NEXT,           VIRTKEY, ALT, NOINVERT
+    VK_LEFT,        IDM_DIR_PREV,           VIRTKEY, ALT, NOINVERT
+    "\\",           IDM_DIR_ROOT,           ASCII,  NOINVERT
+    VK_BACK,        IDM_DIR_UPDIR,          VIRTKEY, NOINVERT
+    VK_INSERT,      IDM_EDIT_COPY,          VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      IDM_EDIT_CUT,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      IDM_EDIT_PASTE,         VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      IDM_EDIT_PASTESHORTCUT, VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_APPS,        IDM_FILE_CONTEXTMENU,   VIRTKEY, NOINVERT
+    VK_MULTIPLY,    IDM_FILE_MASKSELECT,    VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      IDM_FILE_PROPERTY,      VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDM_FILE_SENDTO,        VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_F7,          IDM_OPTION_MISC,        VIRTKEY, ALT, NOINVERT
+    "*",            IDM_VIEW_WILDCARD,      ASCII,  NOINVERT
+    VK_TAB,         IDM_TAB_NEXT,           VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         IDM_TAB_PREV,           VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_TAB,         IDM_WINDOW_NEXT,        VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_TAB,         IDM_WINDOW_PREV,        VIRTKEY, SHIFT, CONTROL, ALT, NOINVERT
+    "A",            IDM_HOT_NAVIBAR,        VIRTKEY, ALT, NOINVERT
+    "+",            IDM_IMAGE_ZOOMIN,       ASCII,  NOINVERT
+    "-",            IDM_IMAGE_ZOOMOUT,      ASCII,  NOINVERT
+END
+
+IDW_FINDBAR ACCELERATORS
+BEGIN
+    VK_RETURN,      IDM_FINDER_ENTER,       VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_FINDER_SELECT_ENTER, VIRTKEY, SHIFT, NOINVERT
+    "N",            IDM_FINDER_NEXT,        VIRTKEY, ALT, NOINVERT
+    VK_DOWN,        IDM_FINDER_NEXT,        VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       IDM_FINDER_NEXT,        VIRTKEY, CONTROL, NOINVERT
+    VK_SPACE,       IDM_FINDER_NEXT,        VIRTKEY, NOINVERT
+    "P",            IDM_FINDER_PREV,        VIRTKEY, ALT, NOINVERT
+    VK_UP,          IDM_FINDER_PREV,        VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        IDM_FINDER_PREV,        VIRTKEY, CONTROL, NOINVERT
+    VK_SPACE,       IDM_FINDER_PREV,        VIRTKEY, SHIFT, NOINVERT
+    "A",            IDM_FINDER_SELECT,      VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDM_FINDER_SELECT,      VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDM_FINDER_FILTER,      VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      IDM_FINDER_SHOW,        VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SORT DIALOGEX 0, 0, 309, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "オブジェクトのソート"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "ソートの種別",IDC_STATIC,7,7,168,134,WS_GROUP
+    CONTROL         "",IDC_SORT1,"Button",BS_AUTORADIOBUTTON,19,22,145,10
+    CONTROL         "",IDC_SORT2,"Button",BS_AUTORADIOBUTTON,19,36,145,10
+    CONTROL         "",IDC_SORT3,"Button",BS_AUTORADIOBUTTON,19,50,145,10
+    CONTROL         "",IDC_SORT4,"Button",BS_AUTORADIOBUTTON,19,64,145,10
+    CONTROL         "",IDC_SORT5,"Button",BS_AUTORADIOBUTTON,19,78,145,10
+    CONTROL         "",IDC_SORT6,"Button",BS_AUTORADIOBUTTON,19,92,145,10
+    CONTROL         "ソートはしない(&Q)",IDC_SORT_NONE,"Button",BS_AUTORADIOBUTTON,19,118,145,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,13,110,153,1
+    GROUPBOX        "ソートの順序",IDC_STATIC,185,7,117,51,WS_GROUP
+    CONTROL         "昇順(&U)",IDC_SORT_UP,"Button",BS_AUTORADIOBUTTON,196,22,47,10
+    CONTROL         "降順(&D)",IDC_SORT_DOWN,"Button",BS_AUTORADIOBUTTON,196,36,47,10
+    DEFPUSHBUTTON   "OK",IDOK,248,104,54,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,248,127,54,14
+END
+
+IDD_WILDCARD DIALOGEX 0, 0, 277, 148
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "新しいフィルタ(&F):",IDC_STATIC,10,23,58,8
+    RTEXT           "（例： *.dat;*.txt;*.exe）",IDC_STATIC,76,23,140,8
+    COMBOBOX        IDC_WILDCARD,10,34,206,90,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "リスト(&L)",IDC_LIST,"LSCFlatButton",WS_TABSTOP | 0x110,217,34,47,13
+    CONTROL         "フィルタを正規表現として利用する(&E)",IDC_USEREGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,56,136,10
+    CONTROL         "フォルダも対象とする(&D)",IDC_FOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,70,130,10
+    CONTROL         "大文字/小文字を区別する(&C)",IDC_CASESENSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,84,136,10
+    CONTROL         "フィルタに一致しないものを適用する(&N)",IDC_UNMATCHFILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,98,136,10
+    DEFPUSHBUTTON   "OK",IDOK,10,124,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,63,124,50,14
+    PUSHBUTTON      "解除(&R)",IDC_RELEASE,117,124,50,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,217,124,50,14
+    LTEXT           "現在のフィルタ:",IDC_STATIC,10,10,50,8
+    LTEXT           "",IDC_TITLE,76,10,191,8
+END
+
+IDD_EXECUTE DIALOGEX 6, 18, 308, 209
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "新しいアプリケーションの実行"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            IDI_RUNAPP,IDC_STATIC,6,6,21,20
+    LTEXT           "実行するプログラム名、開くフォルダや文書名、またはWEBリソース名を指定して実行します。",IDC_STATIC,32,8,243,19
+    LTEXT           "実行時のコマンドライン(&C):",IDC_STATIC,6,32,96,8
+    CONTROL         "",IDC_COMBO,"LSCSearchPath",WS_BORDER | WS_TABSTOP | 0x2,6,42,243,14
+    CONTROL         "管理者として実行(&A)",IDC_ASADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,61,130,10
+    LTEXT           "既定のプログラム(&D):",IDC_STATIC,6,79,73,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_SMALLICON | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,91,296,105
+    DEFPUSHBUTTON   "実行",IDOK,252,41,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,252,59,50,14
+END
+
+IDD_OPTION DIALOGEX 0, 0, 414, 285
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "オプション"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,17,99,235
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,114,254,300,1
+    CONTROL         "",IDC_PANE,"Static",SS_BLACKRECT,112,0,300,250
+    PUSHBUTTON      "OK",IDOK,239,264,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,297,264,50,14
+    PUSHBUTTON      "ヘルプ",IDC_HELPCALL,354,264,50,14
+    LTEXT           "設定項目:",IDC_STATIC,7,7,36,8
+END
+
+IDD_OP_START DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "起動と終了"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "ホーム フォルダ",IDC_STATIC,8,11,282,55,WS_GROUP
+    CONTROL         "",IDC_BROWSE,"LSCIDListPick",WS_TABSTOP | 0x1,21,25,257,14,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "現在のフォルダを使用(&F)",IDC_OPCURFOLDER,21,43,92,14
+    GROUPBOX        "起動時",IDC_STATIC,8,74,282,126
+    LTEXT           "開くフォルダ(&S):",IDC_STATIC,21,90,48,8
+    COMBOBOX        IDC_OPSTARTMODE,87,88,192,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "タブ グループ(&T):",IDC_STATIC,21,109,52,8
+    CONTROL         "",IDC_OPTABGROUP,"LSCSearchPath",WS_BORDER | WS_TABSTOP,87,107,192,14
+    CONTROL         "複数のウィンドウを開かない(&M)",IDC_OPSWITCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,139,160,10
+    CONTROL         "ウィンドウを最大化して表示する(&X)",IDC_OPMAX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,153,160,10
+    CONTROL         "最初のみアイコン状態で表示する(&I)",IDC_OPMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,167,160,10
+    CONTROL         "スプラッシュロゴは表示しない(&L)",IDC_OPNOSPLASH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,30,181,160,10
+END
+
+IDD_OP_RESIDENT DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "常駐"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "常駐させる(&J)",IDC_OPTSR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,11,160,10
+    CONTROL         "常駐時、ウィンドウを最小化したときはタスクバーにアイコンを入れない(&N)",IDC_OPTSRMINHIDE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,25,238,10
+    LTEXT           "ウィンドウを開くホットキー(&H):",IDC_STATIC,8,50,125,8
+    CONTROL         "",IDC_ACTIVEKEY,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,138,47,126,14
+    LTEXT           "ポップアップ メニュー ホットキー(&P):",IDC_STATIC,8,69,125,8
+    CONTROL         "",IDC_POPUPKEY,"msctls_hotkey32",WS_BORDER | WS_TABSTOP,138,66,126,14
+    LTEXT           "メニューからフォルダを選択したら(&M):",IDC_STATIC,8,87,122,8
+    COMBOBOX        IDC_COMBO,138,85,126,44,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OP_DISPLAY DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "表示"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_OPCHECKTREE,"LSCCheckTreeView",WS_TABSTOP,7,16,286,172
+    LTEXT           "設定(&S):",IDC_STATIC,7,7,70,8
+    GROUPBOX        "長いファイル名の省略表示",IDC_STATIC,7,195,286,50
+    LTEXT           "ボディの長さの目安(&B):",IDC_STATIC,26,209,85,8
+    EDITTEXT        IDC_OPELLP_NAME,120,207,52,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "拡張子の長さの目安(&E):",IDC_STATIC,25,225,86,8
+    EDITTEXT        IDC_OPELLP_EXT,120,223,52,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "文字程度（16 - 80文字）",IDC_STATIC,177,209,95,8
+    LTEXT           "文字程度（6 - 18文字）",IDC_STATIC,177,225,85,8
+END
+
+IDD_OP_FILE DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "ファイル操作"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "ごみ箱",IDC_STATIC,10,12,22,8
+    CONTROL         "ごみ箱を利用してファイルを削除(&T)",IDC_OPRECYCLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,11,216,10
+    CONTROL         "ごみ箱表示中はごみ箱内のファイル更新を監視しない(&D)",IDC_OPNOWATCHRECYCLEFOLDER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,25,216,10
+    LTEXT           "コピー・移動",IDC_STATIC,10,49,39,8
+    CONTROL         "コピーなどはバック グラウンドで実行する（標準の動作の指定）(&B)",IDC_OPRUNCOPY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,48,216,10
+    CONTROL         "ファイルがドロップされたとき、操作の確認を問い合わせない(&N)",IDC_OPDDNOCONFIRM,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,62,216,10
+    LTEXT           "（※注意： コピー・移動などが無条件に実行されます。）",IDC_STATIC,80,74,173,8
+    LTEXT           "フィルタ",IDC_STATIC,10,98,23,8
+    CONTROL         "フィルタ・一括選択では正規表現を利用する(&R)",IDC_OPREXFINDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,98,216,10
+    LTEXT           "検索文字列がワイルドカードを含まないときは(&W)",IDC_STATIC,70,112,154,8
+    COMBOBOX        IDC_OPMATCHTYPE,89,123,183,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "フォルダを変更したら適用中のフィルタをリセットする(&M)",IDC_OPRESETFILTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,142,216,10
+    LTEXT           "サーチ",IDC_STATIC,10,170,20,8
+    CONTROL         "Shift+アルファベットキーでサーチファインダーを開く(&S)",IDC_OPSHIFTSEARCH,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,169,216,10
+    LTEXT           "開く",IDC_STATIC,10,194,13,8
+    LTEXT           "選択したオブジェクトを Shift + Enterキー 押下して(&A)",IDC_STATIC,70,194,172,8
+    COMBOBOX        IDC_OPSENTER,89,205,183,78,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "→",IDC_STATIC,74,126,9,8
+    LTEXT           "→",IDC_STATIC,74,207,9,8
+END
+
+IDD_OP_MOUSE DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "マウス操作"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "ポイントした項目を区別して表示する（ホット トラック）(&H)",IDC_OPHOTTRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,11,248,10
+    LTEXT           "マウス 左ボタンの取り扱い",IDC_STATIC,8,30,82,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,98,33,183,1
+    LTEXT           "オブジェクトを",IDC_STATIC,19,44,41,8
+    COMBOBOX        IDC_OPCLICK,72,42,183,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "空きペインをダブル クリックしたらひとつ上のフォルダへ移動する(&U)",IDC_OPDBLCLKUPDIR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,58,218,10
+    LTEXT           "右ボタンの取り扱い",IDC_STATIC,8,80,62,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,77,83,204,1
+    LTEXT           "クリックして",IDC_STATIC,19,94,33,8
+    COMBOBOX        IDC_OPRCLICK,72,91,183,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "空きペインではフォルダのコンテキスト メニューを表示する(&X)",IDC_OPSPACECTX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,107,198,10
+    LTEXT           "中央ボタンの取り扱い",IDC_STATIC,9,132,70,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,86,135,195,1
+    LTEXT           "クリックして",IDC_STATIC,19,147,33,8
+    COMBOBOX        IDC_OPCCLICK,72,144,183,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "しおりでの取り扱い",IDC_STATIC,9,171,60,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,79,174,202,1
+    LTEXT           "オブジェクトを",IDC_STATIC,21,185,41,8
+    COMBOBOX        IDC_OPFAVOCLICK,72,183,183,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OP_FONTS DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "フォントと色"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "設定場所(&F):",IDC_STATIC,7,7,45,8
+    CONTROL         "",IDC_FONT_LIST,"SysTreeView32",TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,17,114,66
+    LTEXT           "フォント名(&N):",IDC_STATIC,129,7,44,8
+    COMBOBOX        IDC_FONT_NAME,129,17,120,128,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "サイズ(&S):",IDC_STATIC,253,7,32,8
+    COMBOBOX        IDC_FONT_SIZE,253,17,37,128,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "太字(&B)",IDC_FONT_BOLD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,130,35,43,10
+    PUSHBUTTON      "すべての項目のフォントに適用(&P)",IDC_OPFONT_SAMEALL,129,55,133,14
+    LTEXT           "配色項目(&A):",IDC_STATIC,7,101,46,8
+    CONTROL         "",IDC_COLOR_LIST,"SysTreeView32",TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,112,114,122
+    LTEXT           "テキストの配色(&T):",IDC_STATIC,131,112,59,9
+    CONTROL         "",IDC_COLOR_FORE,"LSCColorPick",WS_TABSTOP | 0x1,131,123,72,14,WS_EX_CLIENTEDGE
+    LTEXT           "背景の配色(&B):",IDC_STATIC,132,148,59,9
+    CONTROL         "",IDC_COLOR_BACK,"LSCColorPick",WS_TABSTOP | 0x1,132,159,72,14,WS_EX_CLIENTEDGE
+    CONTROL         "ツリー線はシステム標準の色を使う(&D)",IDC_TREE_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,240,149,11
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,91,278,1
+END
+
+IDD_OP_CUSTOMBAR DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "ツール バー"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "カスタマイズ可能なツール バーを作成、または編集します。",IDC_STATIC,8,11,208,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,8,24,213,218
+    PUSHBUTTON      "追加(&A)",IDC_NEW,229,23,63,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,229,41,63,14
+    PUSHBUTTON      "編集(&C)...",IDC_CUSTOMIZE,229,59,63,14
+    PUSHBUTTON      "名前の変更(&B)",IDC_RENAME,229,77,63,14
+END
+
+IDD_OP_DRIVE DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "ドライブ バー"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "ドライブ バーに表示するドライブ(&L):",IDC_STATIC,7,7,126,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,18,219,72
+    LTEXT           "ドライブ バーに追加するネットワーク パス(&R):　（Ctrl+↑↓で入れ替え）",IDC_STATIC,7,94,247,8
+    CONTROL         "",IDC_NETCOM,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_EDITLABELS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,105,220,49
+    PUSHBUTTON      "追加(&A)",IDC_ADD,233,104,60,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,233,121,60,14
+    PUSHBUTTON      "アイコン変更(&I)",IDC_CUSTICON,233,140,60,14
+    CONTROL         "ネットワーク デバイスもドライブ バーに表示する(&N)",IDC_OPNETDEVICE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,161,233,10
+    CONTROL         "モバイル デバイスもドライブ バーに表示する(&M)",IDC_OPMOBILEDEVICE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,174,233,10
+    GROUPBOX        "ドライブ ボタンのダブル クリック",IDC_STATIC,7,192,286,52
+    LTEXT           "左ボタンをダブル クリック(&B):",IDC_STATIC,23,208,110,8
+    COMBOBOX        IDC_DRIVE_LBTNDBLCLK,138,206,104,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "中央ボタンをダブル クリック(&E):",IDC_STATIC,23,225,110,8
+    COMBOBOX        IDC_DRIVE_MBTNDBLCLK,138,223,104,58,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_OP_PROGRAM DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "よく使うプログラム"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "コマンド プロンプト(&C):",IDC_STATIC,7,9,98,8
+    CONTROL         "",IDC_MSDOS,"LSCSearchPath",WS_BORDER | WS_TABSTOP,16,19,274,14
+    LTEXT           "標準のテキスト エディタ(&E):",IDC_STATIC,7,41,98,8
+    CONTROL         "",IDC_EDITOR,"LSCSearchPath",WS_BORDER | WS_TABSTOP,16,51,274,14
+    LTEXT           "標準のテキスト ビュア(&V):",IDC_STATIC,7,73,98,8
+    CONTROL         "",IDC_VIEWER,"LSCSearchPath",WS_BORDER | WS_TABSTOP,16,83,274,14
+    LTEXT           "標準のフォト ビュア(&B):",IDC_STATIC,7,105,98,8
+    CONTROL         "",IDC_PHOTOVIEWER,"LSCSearchPath",WS_BORDER | WS_TABSTOP,16,115,274,14
+    LTEXT           "バイナリ エディタ(&H):",IDC_STATIC,7,137,98,8
+    CONTROL         "",IDC_HEXEDITOR,"LSCSearchPath",WS_BORDER | WS_TABSTOP,16,147,274,14
+    LTEXT           "※空白を含むファイル・パス名を指定する場合には、” ” で括ってください。",IDC_STATIC,7,173,246,10
+END
+
+IDD_OP_ADDINTOOLS DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "アドイン ツール"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",WS_TABSTOP,8,11,284,234
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,20,33,259,184
+    PUSHBUTTON      "追加(&A)",IDC_ADD,20,222,60,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,86,222,60,14
+    PUSHBUTTON      "編集(&E)",IDC_EDIT,152,222,60,14
+    PUSHBUTTON      "複写(&C)",IDC_DUPLICATE,219,222,60,14
+END
+
+IDD_OP_PRIVACY DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "プライバシー"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "参照履歴の消去",IDC_STATIC,8,11,282,199
+    CONTROL         "アクセスしたフォルダ・閉じたタブの履歴(&F)",IDC_HISTORY_FOLDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,27,233,10
+    CONTROL         "コピー・移動先のフォルダの履歴(&C)",IDC_HISTORY_COPY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,41,233,10
+    CONTROL         "ドライブごとの最終アクセス フォルダの履歴(&D)",IDC_HISTORY_DRIVEREMIND,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,55,233,10
+    CONTROL         "フィルタ・一括選択の履歴と保存したリスト(&W)",IDC_HISTORY_WILDCARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,69,233,10
+    CONTROL         "最近使ったファイルの一覧(&R)",IDC_HISTORY_RECENTFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,83,233,10
+    CONTROL         "フォルダごとに記録しているアイコンやソート順の履歴(&I)",IDC_HISTORY_ICONLISTSTYLE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,97,233,10
+    PUSHBUTTON      "今すぐ消去(&X)",IDC_CLEAR,203,184,74,14
+END
+
+IDD_OP_HOTKEY DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "ホットキー"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "ホットキー（Ctrl+Alt+アルファベット）のリスト(&K):",IDC_STATIC,7,7,159,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,18,286,205
+    PUSHBUTTON      "編集(&E)...",IDC_CONFIRM,7,229,60,14
+    PUSHBUTTON      "コピー(&C)",IDC_COPY,73,229,60,14
+    PUSHBUTTON      "貼り付け(&P)",IDC_PASTE,140,229,60,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,233,229,60,14
+END
+
+IDD_OP_TAB DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "タブ"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "表示・確認",IDC_STATIC,10,12,47,8
+    CONTROL         "タブが単独でもタブ バーを常に表示する(&W)",IDC_OPTABBARSHOWANY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,11,214,10
+    CONTROL         "終了時、複数タブを閉じる確認をおこなわない(&C)",IDC_OPTABCLOSEALL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,25,214,10
+    CONTROL         "タブのパス名はフル パスで表示する(&T)",IDC_OPTABFULLPATH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,40,214,10
+    LTEXT           "マウス",IDC_STATIC,10,63,19,8
+    CONTROL         "マウスでポイントしたら選択する（ホバー セレクト）(&H)",IDC_OPTABHOVERSELECT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,62,214,10
+    CONTROL         "タブのダブル クリックでロックまたはアンロックする(&B)",IDC_OPTABDBLCLK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,76,214,10
+    LTEXT           "新しいタブ",IDC_STATIC,10,100,33,8
+    CONTROL         "フォルダを作成したら新しいタブで開く(&N)",IDC_OPTABMKDIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,99,214,10
+    CONTROL         "ドライブが追加されたら新しいタブで開く(&D)",IDC_OPTABDRIVEADD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,113,214,10
+    CONTROL         "メディアが挿入されたら新しいタブで開く(&M)",IDC_OPTABMEDIAINSERTED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,127,214,10
+    CONTROL         "既に開いているフォルダは新しいタブで開かないく(&P)",IDC_OPTABNODUPLICATE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,141,214,10
+    LTEXT           "保存",IDC_STATIC,10,164,22,8
+    CONTROL         "タブ グループを保存するときは、グループをしおりにも登録する(&F)",IDC_OPTABGROUPTOBOOKMARK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,163,214,10
+    LTEXT           "その他",IDC_STATIC,10,186,22,8
+    CONTROL         "タブを閉じたときは、最後に参照したタブを選択する(&L)",IDC_OPTABSELLASTACTIVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,185,214,10
+    CONTROL         "タブにオブジェクトをドロップしたらそのタブを開く(&R)",IDC_OPTABDROPOPEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,70,199,214,10
+END
+
+IDD_OP_MAPICON DIALOGEX 0, 0, 300, 250
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CAPTION
+CAPTION "アイコンの変更"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "登録されているアイコンの一覧(&L):",IDC_STATIC,7,7,112,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,18,284,184
+    PUSHBUTTON      "追加(&A)...",IDC_ADD,7,208,60,14
+    PUSHBUTTON      "編集(&E)...",IDC_EDIT,72,208,60,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,231,208,60,14
+    LTEXT           "ファイルの拡張子に応じて表示するアイコンを独自にカスタマイズできます。\nこの設定は、Windowsシステムの設定には影響しません。",IDC_STATIC,7,229,279,18
+END
+
+IDD_ADDINVIEWER DIALOGEX 20, 20, 258, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "アドイン ツールの登録"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            58,IDC_STATIC,7,7,20,20
+    LTEXT           "対象となる拡張子をもつファイルの内容を表示するためのプログラムを登録します。",IDC_STATIC,34,10,217,23
+    LTEXT           "対象拡張子(&E):",IDC_STATIC,7,36,54,8
+    EDITTEXT        IDC_EXT,23,46,65,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "（例: .TXT）",IDC_STATIC,91,48,59,8
+    LTEXT           "プログラム名(&P):",IDC_STATIC,7,64,54,8
+    CONTROL         "",IDC_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP,23,74,226,14
+    LTEXT           "（空白を含むパスの場合には ""  "" で括ります）",IDC_STATIC,23,92,163,8
+    DEFPUSHBUTTON   "OK",IDOK,46,113,50,14
+    PUSHBUTTON      "確認(&F)",IDC_CONFIRM,104,113,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,161,113,50,14
+END
+
+IDD_QUERYCOPY DIALOGEX 0, 0, 247, 225
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "現在の位置:",IDC_STATIC,7,7,44,8
+    CONTROL         "",IDC_PATH,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,55,7,185,8
+    EDITTEXT        IDC_SOURCE_PATH,7,18,220,14,ES_AUTOHSCROLL
+    RTEXT           "を",IDC_STATIC_FROM,231,21,10,8
+    COMBOBOX        IDC_TARGET_PATH,7,35,194,123,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "しおり(&F)",IDC_QUICK,"LSCFlatButton",WS_TABSTOP | 0x300,204,35,22,14
+    RTEXT           "へ",IDC_STATIC_TO,231,37,10,8
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,7,52,233,115
+    CONTROL         "管理者として実行する(&A)",IDC_ASADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,175,136,10
+    CONTROL         "処理完了後に相手先フォルダをタブで開く(&J)",IDC_JUMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,187,154,10
+    DEFPUSHBUTTON   "実行",IDOK,7,204,68,14
+    PUSHBUTTON      "バックグラウンドで実行(&B)",IDC_THREADED,79,204,96,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,190,204,50,14
+END
+
+IDD_QUERYDROP DIALOGEX 0, 0, 284, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            "",IDC_APPICON,7,7,20,20
+    LTEXT           "",IDC_TITLE,33,7,244,19
+    CONTROL         "",IDC_TEXT,"LSCRect",0x42,33,33,244,8
+    CONTROL         "管理者として実行する(&A)",IDC_ASADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,52,136,10
+    DEFPUSHBUTTON   "実行(&X)",IDOK,40,70,52,14
+    PUSHBUTTON      "バックグラウンドで実行(&B)",IDC_THREADED,97,70,95,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,198,70,50,14
+END
+
+IDD_OBJBAR DIALOGEX 0, 0, 263, 124
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "グループのプロパティ"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "グループ名(&G):",IDC_STATIC_TO,95,10,47,8
+    EDITTEXT        IDC_TEXT,95,21,158,14,ES_AUTOHSCROLL
+    LTEXT           "テキスト(&F):",IDC_STATIC,95,45,42,8
+    CONTROL         "",IDC_FGCOLOR,"LSCColorPick",WS_TABSTOP | 0x1,94,54,73,14,WS_EX_CLIENTEDGE
+    LTEXT           "背景色(&B):",IDC_TITLE_BKCOLOR,180,45,42,8
+    CONTROL         "",IDC_BKCOLOR,"LSCColorPick",WS_TABSTOP | 0x1,180,54,73,14,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,142,100,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,203,100,50,14
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOSCROLL | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,10,10,76,104
+END
+
+IDD_EDITHOTKEY_EXEC DIALOGEX 0, 0, 290, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "アプリケーションの起動"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "タイトル(&T):",IDC_STATIC,7,8,56,8
+    EDITTEXT        IDC_KEYNAME,68,7,214,14,ES_AUTOHSCROLL
+    LTEXT           "プログラム名(&N):",IDC_STATIC,7,28,56,8
+    CONTROL         "",IDC_PROGRAM,"LSCSearchPath",WS_BORDER | WS_TABSTOP,68,26,213,14
+    LTEXT           "引数(&C):",IDC_STATIC,7,47,56,8
+    EDITTEXT        IDC_COMMAND,68,45,214,14,ES_AUTOHSCROLL
+    LTEXT           "作業フォルダ(&D):",IDC_STATIC,7,66,56,8
+    CONTROL         "",IDC_DEFDIR,"LSCSearchPath",WS_BORDER | WS_TABSTOP,68,64,214,14
+    CONTROL         "管理者として実行(&A)",IDC_ASADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,87,83,10
+    CONTROL         "実行時にコマンドラインを編集する(&E)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,100,158,10
+END
+
+IDD_EDITHOTKEY_FOLDER DIALOGEX 0, 0, 290, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "タブ・ウィンドウを開く"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "タイトル(&T):",IDC_STATIC,7,8,56,8
+    EDITTEXT        IDC_KEYNAME,68,7,214,14,ES_AUTOHSCROLL
+    LTEXT           "開くフォルダ(&F):",IDC_STATIC,7,28,56,8
+    CONTROL         "",IDC_FOLDER,"LSCSearchPath",WS_BORDER | WS_TABSTOP,68,26,214,14
+    CONTROL         "新しいタブで開く(&T)",IDC_NEWTAB,"Button",BS_AUTORADIOBUTTON,69,49,111,10
+    CONTROL         "新しいウィンドウで開く(&W)",IDC_NEWWINDOW,"Button",BS_AUTORADIOBUTTON,69,61,111,10
+    CONTROL         "そのまま開く(&J)",IDC_JUMP,"Button",BS_AUTORADIOBUTTON,69,73,111,10
+    CONTROL         "管理者として実行(&A)",IDC_ASADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,87,83,10
+END
+
+IDD_EDITHOTKEY_SORT DIALOGEX 0, 0, 290, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "オブジェクトのソート"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "タイトル(&T):",IDC_STATIC,7,8,56,8
+    EDITTEXT        IDC_KEYNAME,68,7,214,14,ES_AUTOHSCROLL
+    LTEXT           "ソートの種別(&K):",IDC_STATIC,68,29,56,8
+    COMBOBOX        IDC_SORT_TYPE,68,38,135,123,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "ソートの向き(&D):",IDC_STATIC,211,29,56,8
+    COMBOBOX        IDC_SORT_DIRECTION,211,38,70,123,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_EDITHOTKEY_FILTER DIALOGEX 0, 0, 290, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "フィルタで選択"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "タイトル(&T):",IDC_STATIC,7,8,56,8
+    EDITTEXT        IDC_KEYNAME,68,7,214,14,ES_AUTOHSCROLL
+    LTEXT           "フィルタ(&F):",IDC_STATIC,7,28,56,8
+    EDITTEXT        IDC_WILDCARD,68,26,214,14,ES_AUTOHSCROLL
+    CONTROL         "正規表現として利用する(&R)",IDC_REGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,69,45,119,10
+    CONTROL         "フィルタとして実行(&I)",IDC_FILTER,"Button",BS_AUTORADIOBUTTON,69,69,111,10
+    CONTROL         "一括選択として実行(&S)",IDC_SELECT,"Button",BS_AUTORADIOBUTTON,69,81,111,10
+END
+
+IDD_QUERYFOLDER DIALOGEX 0, 0, 243, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "ファイルの操作"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    COMBOBOX        IDC_PATH,10,10,221,145,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,10,25,221,172
+    CONTROL         "管理者として実行する(&A)",IDC_ASADMIN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,207,112,10
+    PUSHBUTTON      "バックグラウンドで実行(&B)",IDC_THREADED,76,223,101,14
+    DEFPUSHBUTTON   "実行",IDOK,10,223,62,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,182,223,50,14
+END
+
+IDD_LISTOUTPUT DIALOGEX 0, 0, 323, 170
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "リスト一覧の書き出し"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "ファイル リストを指定した形式でファイルに書き出します。",IDC_STATIC,7,7,309,8
+    LTEXT           "出力ファイル(&F):",IDC_STATIC,7,25,56,8
+    CONTROL         "",IDC_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP,69,24,247,14
+    GROUPBOX        "設定内容",IDC_STATIC,7,50,309,90
+    LTEXT           "ファイル形式(&T):",IDC_STATIC,17,65,58,8
+    CONTROL         "",IDC_COMBO,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,77,63,205,83
+    CONTROL         "選択されているオブジェクトのみを出力する(&S)",IDC_SELITEM,"Button",BS_AUTORADIOBUTTON,20,86,175,10
+    CONTROL         "リストされているすべてのオブジェクトを出力する(&A)",IDC_ALLITEM,"Button",BS_AUTORADIOBUTTON,20,99,175,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,19,115,288,1
+    CONTROL         "出力後に対応するアプリケーションで開く(&B)",IDC_RUN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,121,162,10
+    DEFPUSHBUTTON   "OK",IDOK,71,149,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,136,149,50,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,201,149,50,14
+END
+
+IDD_SELECTICON DIALOGEX 0, 0, 327, 255
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "アイコンの選択"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "拡張子(&E):",IDC_STATIC,6,9,42,8
+    EDITTEXT        IDC_EXT,54,6,40,14,ES_AUTOHSCROLL
+    LTEXT           "ファイル名(&F):",IDC_STATIC,6,24,47,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,54,21,264,14
+    LTEXT           "アイコンの選択(&L):",IDC_STATIC,6,45,73,8
+    CONTROL         "小さいアイコン(&S)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,45,66,10
+    CONTROL         "",IDC_LIST,"LSCListView",WS_TABSTOP | 0x4,6,58,315,169,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,211,234,48,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,263,234,48,14
+    LTEXT           "（ “.” を含めずに指定します ）",IDC_STATIC,97,9,107,8
+END
+
+IDD_REGIST DIALOGEX 0, 0, 236, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "FileVisor7のユーザ登録"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,6,6,21,20
+    LTEXT           "FileVisor7のユーザ登録をおこないます。",IDC_FVUR_TITLE,32,13,178,8
+    LTEXT           "登録番号(&F):",IDC_STATIC,6,46,49,8
+    EDITTEXT        IDC_FVUR_REG1,66,44,32,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    CTEXT           "-",IDC_STATIC,100,46,8,8
+    EDITTEXT        IDC_FVUR_REG2,109,44,32,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    CTEXT           "-",IDC_STATIC,143,46,8,8
+    EDITTEXT        IDC_FVUR_REG3,152,44,32,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    CTEXT           "-",IDC_STATIC,187,46,8,8
+    EDITTEXT        IDC_FVUR_REG4,196,44,32,14,ES_UPPERCASE | ES_AUTOHSCROLL
+    LTEXT           "ご利用者名(&N):",IDC_STATIC,6,66,53,8
+    EDITTEXT        IDC_FVUR_NAME,66,64,163,14,ES_AUTOHSCROLL
+    LTEXT           "会社名(&C):",IDC_STATIC,6,85,49,8
+    EDITTEXT        IDC_FVUR_COMPANY,66,83,163,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "登録",IDOK,50,130,62,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,126,130,62,14
+END
+
+IDD_TRIAL DIALOGEX 0, 0, 302, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Unregistered Copy"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "FileVisor へようこそ。 \n\nこの製品は、最初にインストールしてから30日までは試用が可能です。\nそれ以降のご利用には、使用ライセンスの購入が必要となっています。",IDC_STATIC,36,6,254,35
+    EDITTEXT        IDC_TRIAL_KEY,216,80,80,14,ES_AUTOHSCROLL
+    ICON            IDR_MAINFRAME,IDC_STATIC,6,6,20,20
+    DEFPUSHBUTTON   "試用開始",IDOK,233,101,63,14
+    PUSHBUTTON      "いますぐユーザ登録",IDC_TRIAL_DOREGIST,6,101,90,14
+    PUSHBUTTON      "ユーザ登録について",IDC_TRIAL_HELP,101,101,90,14
+    LTEXT           "",IDC_TRIAL_TEXT,9,82,206,8
+    LTEXT           "",IDC_TRIAL_LIMIT,36,45,163,8
+END
+
+IDD_SHORTCUTMENU DIALOGEX 0, 0, 322, 176
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+FONT 9, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "ショートカット メニュー(&M):",IDC_STATIC,8,6,70,8
+    CONTROL         "",IDC_MENULIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,17,121,152
+    PUSHBUTTON      "← 追加(&A)",IDC_ADD,138,17,47,14
+    PUSHBUTTON      "削除(&R) →",IDC_REMOVE,138,35,47,14
+    PUSHBUTTON      "← 区切(&S)",IDC_SPACE,138,53,47,14
+    PUSHBUTTON      " ↑",IDC_MOVEUP,138,137,20,14
+    PUSHBUTTON      " ↓",IDC_MOVEDOWN,138,155,20,14
+    LTEXT           "利用できるコマンド(&C):",IDC_STATIC,194,6,63,8
+    CONTROL         "",IDC_CMDLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,194,17,121,152
+END
+
+IDD_KEYMAP DIALOGEX 0, 0, 452, 239
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LISTBOX         IDC_KEYLIST,6,17,203,188,LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "選択可能なコマンドの一覧(&C):",IDC_STATIC,268,6,119,8
+    LISTBOX         IDC_CMDLIST,268,17,176,188,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Shiftキーを組み合わせる(&S)",IDC_USESHIFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,224,110,10
+    CONTROL         "Ctrlキーを組み合わせる(&T)",IDC_USECTRL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,212,110,10
+    LTEXT           "設定されているキーの一覧(&K):",IDC_STATIC,6,6,119,8
+    PUSHBUTTON      "← セット(&E)",IDC_APPLY,216,76,46,16
+    PUSHBUTTON      "解除(&R)",IDC_RELEASE,216,100,46,16
+END
+
+IDD_LOGDISK DIALOGEX 0, 0, 249, 215
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "指定フォルダを開く"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "開くフォルダを選択してください(&D)",IDC_STATIC,6,6,200,8
+    COMBOBOX        IDC_PATH,6,18,214,123,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "しおり(&F)",IDC_QUICK,"LSCFlatButton",WS_TABSTOP | 0x300,221,17,22,14
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,6,35,237,156
+    DEFPUSHBUTTON   "開く(&O)",IDOK,6,195,58,14
+    PUSHBUTTON      "新しいタブで開く(&T)",IDC_NEWTAB,69,195,78,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,193,195,50,14
+END
+
+IDD_TABCLOSEALL DIALOGEX 0, 0, 277, 65
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "タブを閉じる確認"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            "",IDC_APPICON,7,7,21,20
+    LTEXT           "複数のタブを閉じようとしています。すべてのタブを閉じてよろしいですか？",IDC_STATIC,35,11,235,8
+    CONTROL         "同時に複数のタブを閉じるときは確認する(&Q)",IDC_CONFIRM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,45,24,155,10
+    DEFPUSHBUTTON   "すべて閉じる",IDOK,77,44,61,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,150,44,50,14
+END
+
+IDD_UPDIRCONFIRM DIALOGEX 0, 0, 277, 65
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "ひとつ上への確認"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            "",IDC_APPICON,7,7,21,20
+    LTEXT           "フォルダツリーのルートにいます。さらにひとつ上のフォルダへ移動しますか？",IDC_STATIC,35,11,235,8
+    CONTROL         "ルートより上へ上がるときは確認する(&Q)",IDC_CONFIRM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,45,24,155,10
+    DEFPUSHBUTTON   "上がる",IDOK,77,44,61,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,150,44,50,14
+END
+
+IDD_FILTERNAME DIALOGEX 0, 0, 241, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "フィルタ名"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "登録するフィルタ名を指定してください。\n（既存名で保存すると、古い内容は新しい内容で上書きされます）",IDC_STATIC,10,10,221,25
+    LTEXT           "フィルタ名(&F):",IDC_STATIC,10,39,47,8
+    COMBOBOX        IDC_COMBO,57,38,173,123,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,64,70,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,132,70,50,14
+END
+
+IDD_MANAGE_FILTERSETTING DIALOGEX 0, 0, 332, 177
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "フィルタの管理"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "フィルタ一覧(&L):",IDC_STATIC,6,6,81,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,16,259,154
+    PUSHBUTTON      "↑(&U)",IDC_UP,271,16,54,14
+    PUSHBUTTON      "↓(&D)",IDC_DOWN,271,32,54,14
+    PUSHBUTTON      "削除(&X)",IDC_DELETE,271,60,54,14
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,271,156,54,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_WILDCARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 267
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_OPTION, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_OP_START, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_RESIDENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 292
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_DISPLAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+    END
+
+    IDD_OP_FILE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_MOUSE, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_FONTS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 249
+    END
+
+    IDD_OP_CUSTOMBAR, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_DRIVE, DIALOG
+    BEGIN
+    END
+
+    IDD_OP_PROGRAM, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_ADDINTOOLS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_PRIVACY, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_HOTKEY, DIALOG
+    BEGIN
+        RIGHTMARGIN, 293
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_TAB, DIALOG
+    BEGIN
+        RIGHTMARGIN, 293
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_OP_MAPICON, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 230
+    END
+
+    IDD_QUERYCOPY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_QUERYDROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_OBJBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 253
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_EDITHOTKEY_EXEC, DIALOG
+    BEGIN
+        RIGHTMARGIN, 289
+    END
+
+    IDD_QUERYFOLDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 233
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 237
+    END
+
+    IDD_LISTOUTPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 316
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_SELECTICON, DIALOG
+    BEGIN
+        RIGHTMARGIN, 320
+        RIGHTMARGIN, 320
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_TRIAL, DIALOG
+    BEGIN
+    END
+
+    IDD_SHORTCUTMENU, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_KEYMAP, DIALOG
+    BEGIN
+        RIGHTMARGIN, 416
+    END
+
+    IDD_LOGDISK, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 243
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 209
+    END
+
+    IDD_TABCLOSEALL, DIALOG
+    BEGIN
+    END
+
+    IDD_FILTERNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 10
+        RIGHTMARGIN, 231
+        TOPMARGIN, 10
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_MANAGE_FILTERSETTING, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_KEYMAP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_QUERYDROP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OP_FONTS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_QUERYFOLDER AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_WILDCARD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FILTERNAME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OBJBAR AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "FileVisor7"
+END
+
+STRINGTABLE
+BEGIN
+    IDW_STATBAR             "ステータス バー"
+    IDW_APPBAR              "App スタック"
+    IDW_FAVORITE            "しおり"
+    IDW_FUNCTIONBAR         "機能キー"
+    IDW_DRIVEBAR            "ドライブ バー"
+    IDW_PROPBAR             "プロパティ バー"
+    IDW_SORTBAR             "ソート バー"
+END
+
+STRINGTABLE
+BEGIN
+    IDW_NAVIGATIONBAR       "ナビゲーション"
+    IDW_OPERATIONBAR        "ファイル操作"
+    IDW_TOOLBAR             "ツール"
+END
+
+STRINGTABLE
+BEGIN
+    IDW_SMARTBAR            "スマート バー"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_IMAGESIZE  "999 x 999"
+    ID_INDICATOR_FILTER     "wwww.wwww"
+    ID_INDICATOR_TOTAL      "9999個の項目(999.99MB)"
+    ID_INDICATOR_LABEL      "空9999.99 MB/9999 GB"
+END
+
+STRINGTABLE
+BEGIN
+    IDD_WILDCARD            "フィルタの指定"
+END
+
+STRINGTABLE
+BEGIN
+    IDD_FILTERSELECT        "ファイルの一括選択"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_TARGET_PATH         "コピーまたは移動先のフォルダを指定します。\n名前を変えてコピーする場合には、新しい名前をここへ指定してください。\nまた、ここの指定には環境変数（%userprofile% 等）を併せて利用することができます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_QUICK               "しおりに登録されているフォルダの一覧が表示されます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_ASADMIN             "コピーまたは移動の処理を管理者権限で実行します。\nこの項目をチェックすると通常はアクセスできないシステム域のファイルを操作できます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_THREADED            "コピーまたは移動の処理を別プロセスで実行します。\nこの項目をチェックすると並行して他の処理をすぐ始められます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CSIDL_SENDTO        "送る"
+    IDS_CSIDL_FONTS         "フォント"
+    IDS_CSIDL_TEMPLATES     "テンプレート"
+    IDS_CSIDL_APPDATA       "アプリケーションデータ"
+    IDS_CSIDL_LOCAL_APPDATA "ローカルアプリケーションデータ"
+    IDS_CSIDL_RESOURCES     "リソース"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SPFL_ALLUSER        "すべてのユーザ"
+    IDS_SPFL_INTERNET       "インターネット関連"
+    IDS_SPFL_SHORTCUTS      "ショートカットなど"
+    IDS_SPFL_MENUS          "メニュー"
+    IDS_SPFL_USERSFILES     "自分のフォルダ"
+    IDS_SPFL_SYSTEM         "システム フォルダ"
+    IDS_INDICATOR_SELECT    "%d個を選択"
+    IDS_INDICATOR_TOTAL     "%d個の項目"
+    IDS_INDICATOR_LABEL     "空%s/%s"
+    IDS_INDICATOR_MATCH     "%d個が該当"
+    IDS_INDICATOR_SPACE     "空き %s/%s"
+    IDS_DROPTYPE_NONE       "%1 に置くことができません"
+    IDS_DROPTYPE_COPY       "%1 へコピー"
+    IDS_DROPTYPE_MOVE       "%1 へ移動"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DROPTYPE_LINK       "%1 にリンクを作成"
+    IDS_DROPTYPE_OPEN       "%1 で開く"
+    IDS_OPSTARTMODE         "ホーム フォルダを表示する;前回終了時のフォルダを表示する;前回終了時のタブ グループを表示する;指定のタブ グループを表示する;"
+    IDS_OPCLICK             "クリックして選択し、ダブルクリックで開く;ポイントして選択し、クリックして開く"
+    IDS_OPSENTER            "ファイルを（内蔵・外部・アドイン）ビュアで開く;ファイルを（内蔵・外部・アドイン）エディタで開く;ファイルをそのまま開く;"
+    IDS_OPRCLICK            "コンテキスト メニューを表示;ショートカット メニューを表示;ファイルを個別に選択;"
+    IDS_LISTOUTPUT_TYPES    "HTML形式で出力.html;XML形式で出力.xml;CSV形式で出力.csv;"
+    IDS_ASK_EXEC_EDITOR     "編集するファイルがありませんでした。対象ファイル無しでエディタを起動しますか？"
+    IDS_ADD_FAVORITE        "しおりへ登録(&K)"
+    IDS_OPEN_BY_NEWTAB      "新しいタブで開く(&T)"
+    IDS_SORTTYPE_FORMAT     "%s でソート(&%C)"
+    IDS_ASK_ITEM_OVERWRITE  "%s\n\nこのオブジェクトは存在しています。上書きしますか？"
+    IDS_ASK_ITEM_DELETE     "選択された項目 %s を削除しますか？"
+    IDS_TILEWINDOW_WITH_NEWFRAME "新しいウィンドウを開いて並べ直しますか？"
+    IDS_TABCLOSE_INSTRUCTION "複数のタブを閉じようとしています。"
+    IDS_TABCLOSE_QUESTION   "すべてのタブを閉じてよろしいですか？"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TABCLOSE_VERIFICATION "複数のタブを閉じるときは確認する"
+    IDS_EXEC_SYNC           "実行する(&X)"
+    IDS_EXEC_ASYNC          "バックグラウンドで実行する(&B)"
+    IDS_TREATDIR_TITLE      "ファイル名の取り扱い"
+    IDS_TREATDIR_LABEL      "指定された名前をどのように扱いますか?"
+    IDS_TREATDIR_COPY       "この名前で複製する(&N)"
+    IDS_TREATDIR_MKDIR      "この名前のフォルダを作成して複製する(&D)"
+    IDS_UPDIR_INSTRUCTION   "フォルダツリーのルートにいます。"
+    IDS_UPDIR_QUESTION      "さらにひとつ上のフォルダへ移動しますか？"
+    IDS_UPDIR_VERIFICATION  "上へ上がるときは確認する"
+    IDS_ADD_DRIVEBAR        "ドライブ バーへ登録(&V)"
+    IDS_OPMATCHTYPES        "指定文字列を含む名前を検索（部分一致）;指定文字列で始まる名前を検索（先頭一致）;"
+    IDS_FORCEOVERWRITE      "※元のオブジェクトは新しいオブジェクトで無条件に上書きされます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_OPCCLICK            "何もしない;個別にオブジェクトを選択;ショートカット メニューを表示"
+    IDS_OPFONT_FOLDERTREE   "フォルダ ツリー"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_OPFONT_FILEPANE     "ファイル ペイン"
+    IDS_OPFONT_PANEL        "しおり・App スタック"
+    IDS_OPFONT_FUNCTION     "機能キー"
+    IDS_OPFAVOCLICK         "ダブルクリックで開く;シングルクリックして開く"
+    IDS_OPCOLOR_NORMAL      "通常のファイル"
+    IDS_OPCOLOR_SELECTED    "選択中のファイル"
+    IDS_OPCOLOR_MARKED      "マークされたファイル"
+    IDS_OPCOLOR_SYSTEM      "システム ファイル"
+    IDS_OPCOLOR_HIDDEN      "隠しファイル"
+    IDS_OPCOLOR_READONLY    "読み取り専用ファイル"
+    IDS_OPCOLOR_COMPRESSED  "NTFS圧縮ファイル"
+    IDS_OPCOLOR_CRYPTED     "NTFS暗号化ファイル"
+    IDS_OPCOLOR_REPARSEPOINT "リパース ポイント フォルダ"
+    IDS_OPCOLOR_TREELINE    "ツリー線"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_INVALID             " \n "
+    IDM_FILE_OPEN           "ファイルの実行または内容を表示します。\n開く"
+    IDM_FILE_COPY           "ファイルやフォルダをコピーします。\nコピー"
+    IDM_FILE_MOVE           "ファイルやフォルダを移動します。\n移動"
+    IDM_FILE_DELETE         "ファイルやフォルダを削除します。\n削除"
+    IDM_FILE_MERGE          "複数ファイルを１つに連結します。\n連結"
+    IDM_FILE_DIVIDE         "ファイルを複数に分割します。\n分割"
+    IDM_FILE_RENAME         "ファイルの名前を変更します。\n名前変更"
+    IDM_FILE_ATTRIB         "ファイルの属性を変更します。\n属性変更"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_EXECUTE        "ファイルを実行します。\n実行"
+    IDM_FILE_REPNAMES       "複数のファイル名を一括して置換します。\n名前の一括置換"
+    IDM_FILE_SENDTO         "ファイルやフォルダを送ります。\n送る"
+    IDM_FILE_SELINVERT      "選択されているファイルは解除し、非選択のファイルは選択します。\n選択の反転"
+    IDM_FILE_SELALL         "ファイルを全て選択または解除します。\n全選択・解除"
+    IDM_FILE_MKDIR          "フォルダを新規に作成します。\nフォルダの作成"
+    IDM_FILE_PACK           "選択されたファイルから圧縮書庫ファイルを作成します。\n圧縮書庫の作成"
+    IDM_FILE_UNPACK         "選択した圧縮書庫ファイルを解凍します。\n圧縮書庫の解凍"
+    IDM_FILE_CHECKARC       "書庫の正当性を検査します。\n書庫の検査"
+    IDM_FILE_SENDSENDTO     "「送る」フォルダへオブジェクトを登録します。\n「送る」へ登録"
+    ID_APP_EXITALL          "すべてのFileVisorを終了します。\nすべて終了"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_VIEW_WILDCARD       "フィルタを指定して表示ファイルを絞ります。\nフィルタ"
+    IDM_VIEW_FILETYPE       "表示するファイルタイプを設定"
+    IDM_VIEW_FILEINFO       "選択中のファイル情報を表示します。\nファイル情報"
+    IDM_VIEW_FILESIZE       "選択されたフォルダ・ファイルの容量を厳密に計算\nファイル容量の詳細"
+    IDM_VIEW_SIZE           "ファイルサイズを表示します。\nサイズ"
+    IDM_VIEW_DATE           "ファイルの更新日付を表示します。\n日付"
+    IDM_VIEW_ATTRIB         "ファイルの属性を表示します。\n属性"
+    IDM_VIEW_KEYMAP         "ショートカット キー定義の一覧を表示します。\nショートカット キー一覧"
+    IDM_VIEW_SORT           "ソート条件の変更をおこないます。\nソート条件の変更"
+    IDM_VIEW_ICON           "アイコンの表示切替をおこないます。\nアイコンの表示切替"
+    IDM_VIEW_DRIVEINFO      "ドライブ情報を表示します。\nドライブ情報"
+    IDM_VIEW_HOTKEYMENU     "ホットキーの一覧メニューを表示します。\nホットキー"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_VIEW_WILDCARD_LIST  "登録されたフィルタ リスト メニューを表示します。\nフィルタ リスト"
+    IDM_VIEW_NAMEELLIPSIS   "長い名前を省略して表示します。\n省略して表示"
+    IDM_VIEW_RELEASEFILTER  "フィルタでの絞り込みを解除します。\nフィルタを解除"
+    IDM_SORT                "ソート方法を指定します。\nソート"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_SORT_UP             "昇順でファイルをソートします。\n昇順"
+    IDM_SORT_DOWN           "降順でファイルをソートします。\n降順"
+    IDM_SORT_NONE           "ソートせずに表示します。\nソートなし"
+    IDM_SORT_NAME           "名前順で表示します。\n名前順"
+    IDM_SORT_SIZE           "ファイルサイズ順で表示します。\nサイズ順"
+    IDM_SORT_TIME           "更新日付順で表示します。\n日付順"
+    IDM_SORT_TYPE           "種類順で表示します。\n種類順"
+    IDM_SORT_ATTR           "属性順で表示します。\n属性順"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_SORT_DOS            "DOS名順で表示します。\nDOS名順"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_SHRED          "修復できないようにファイルを削除します。\nシュレッダ"
+    IDM_FILE_MASKSELECT     "フィルタに一致するファイルを一括して選択します。\n一括選択"
+    IDM_FILE_ASSOCIATE      "拡張子とアプリケーションを関連付けます。\n関連付け"
+    IDM_FILE_MASKSELECT_LIST "登録された一括選択リストメニューを表示します。\n一括選択リスト"
+    IDM_FILE_SHORTCUT       "ファイルやフォルダのショートカットを作成します。\nショートカット作成"
+    IDM_FILE_PROPERTY       "選択されたファイルのプロパティを表示します。\nプロパティ"
+    IDM_FILE_JUMP           "指定ファイルのフォルダを開いてファイル位置へ移動します。\nファイル位置へ移動"
+    IDM_FILE_CLEAR          "選択されたファイルをクリアします。\nクリア"
+    IDM_FILE_RENEXT         "ファイルの拡張子を一括して変更します。\n拡張子一括変更"
+    IDM_FILE_CONTEXTMENU    "コンテキスト メニューを開きます。\nコンテキスト メニュー"
+    IDM_FILE_SERIESNAME     "連番を付与して名前を変更します。\n連番で名前変更"
+    IDM_FILE_SHELLNEW       "ドキュメントを新規作成します。\n新規作成"
+    IDM_FILE_NEWFILE        "新しい空のファイルの作成します。\n空ファイルの作成"
+    IDM_FILE_CHGCAPS        "ファイル名文字列の大文字小文字を一括変換します。\n大文字小文字変換"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "プログラム・バージョン情報を表示します。\nバージョン情報"
+    ID_APP_EXIT             "FileVisorを終了します。\n終了"
+    ID_HELP_INDEX           "ヘルプ項目を表示"
+    ID_HELP_FINDER          "ヘルプの目次を表示します。\nヘルプ目次"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_CASCADE       "複数のウィンドウを重ねて表示します。\n重ねて表示"
+    ID_WINDOW_TILE_HORZ     "複数のウィンドウを水平に並べて表示します。\n水平に並べて表示"
+    ID_WINDOW_TILE_VERT     "複数のウィンドウを垂直に並べて表示します。\n垂直に並べて表示"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_OPTION_MISC         "オプション"
+    IDM_OPTION_KEYMAP       "ショートカット キーの設定をおこないます。\nショートカット キー"
+    IDM_OPTION_SHORTCUT     "ショートカット メニューをカスタマイズします。\nショートカット メニューをカスタマイズ"
+    IDM_OPTION_SHELLEXT     "シェル拡張機能の設定をおこないます。\nシェル拡張機能"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_DISK_COPY           "フロッピー ディスクをコピーします。\nディスク コピー"
+    IDM_DISK_FORMAT         "フロッピー ディスクのフォーマットします。\nディスク フォーマット"
+    IDM_DISK_LABEL          "ディスクのボリューム ラベルを変更します。\nボリューム ラベル"
+    IDM_DISK_MAKEIMAGE      "フロッピー ディスクイメージをファイル化します。\nディスク イメージ作成"
+    IDM_DISK_RESTOREIMAGE   "イメージ ファイルからフロッピー ディスクを復元します。\nディスク イメージ復元"
+    IDM_DISK_CHKDSK         "ディスク ボリュームを検査します。\nチェック ディスク"
+    IDM_NET_CONNECT         "ネットワーク パスをローカル ドライブへ接続します。\nネットワークの接続"
+    IDM_NET_DISCONNECT      "接続中のネットワーク パスをローカル ドライブから切り離します。\nネットワークの切断"
+    IDM_NET_ADDPLACE        "ネットワークの場所を追加します。\nネットワークの場所を追加"
+    IDM_NET_ADDDRIVEBAR     "ドライブ バーにネットワーク フォルダを登録します。\nドライブ バーに追加"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_DIR_SEARCH          "ドライブやフォルダを指定してファイルを検索します。\n検索"
+    IDM_DIR_SELECT          "フォルダツリーから開くフォルダを選択します。\nフォルダを開く"
+    IDM_DIR_UPDIR           "ひとつ上のフォルダへ移動します。\nひとつ上の階層へ"
+    IDM_DIR_SYNC            "２つのフォルダの内容を同期させます。\nフォルダの同期"
+    IDM_DIR_HISTORY         "以前アクセスしたフォルダの履歴をメニュー表示します。\n履歴"
+    IDM_DIR_SCRIPTSYNC      "フォルダ同期を連続しておこなうリストを作成します。\nフォルダ同期リスト"
+    IDM_DIR_QUICKACCESS     "しおりのフォルダ リストをメニュー表示してアクセスします。\nしおりメニュー"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_DIR_HOME            "ホーム フォルダを開きます。\nホーム"
+    IDM_DIR_EMPTYRECYCLEBIN "すべてのごみ箱を空にします。\nごみ箱を空にする"
+    IDM_DIR_TRACE           "アクセス済みのフォルダ履歴を表示します。\n履歴"
+    IDM_DIR_MAKEBRIEFCASE   "新しいブリーフ ケースを作成します。\nブリーフ ケースの作成"
+    IDM_DIR_SYSTEMFOLDER    "システム フォルダ\nシステム"
+    IDM_DIR_ADDFAVORITE     "このフォルダをしおりへ登録します。\nしおりへ登録"
+    IDM_DIR_PREV            "ひとつ前のフォルダに戻ります。\n戻る"
+    IDM_DIR_NEXT            "次のフォルダに進みます。\n進む"
+    IDM_DIR_GOTO            "指定のフォルダへ移動\nフォルダへ移動"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_BAR_MENU            "メニュー バーの表示を切り替えます。\nメニュー バーの表示切替"
+    IDM_BAR_SETTINGS        "パネル・バーの表示設定をおこないます。\nパネル・バーの表示設定"
+    IDM_BAR_LARGEICON       "ツール バーのアイコンを大きなアイコンで表示します。\nツール バーでは大アイコン"
+    IDM_TOOL_EDITOR         "エディタでテキストを編集します。\nエディタで編集"
+    IDM_TOOL_SHELL          "Windows ターミナルを開きます。\nWindows ターミナル"
+    IDM_TOOL_MSDOS          "コマンド プロンプトを開きます。\nコマンド プロンプト"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TOOL_BDUMP          "ファイルをバイナリ編集します。\nバイナリ編集"
+    IDM_TOOL_VIEWER         "ファイル内容を閲覧します。\nファイル閲覧"
+    IDM_TOOL_GREP           "複数ファイルから指定文字列を検索します。\n文字列検索"
+    IDM_TOOL_SLIDESHOW      "このフォルダにある画像をスライド ショウで表示します。\nスライド ショウ"
+    IDM_TOOL_CALCHASH       "ファイルのハッシュ値を計算します。\nハッシュを計算"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TYPE_FILEHIDDEN     "すべての隠しファイルを表示しない"
+    IDM_TYPE_EXCFOLDER      "フォルダを表示しない"
+    IDM_TYPE_FILESUPERHIDDEN "隠しシステムファイルを表示しない"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_ICON_ENLARGE        "アイコンを大きなサイズで表示します。\n大きいアイコン"
+    IDM_ICON_NORMAL         "ファイルを一覧表示します。\n一覧"
+    IDM_ICON_OUTLINE        "ファイルの概要を表示します。\n概要"
+    IDM_ICON_REPORT         "ファイルの詳細情報を表示します。\n詳細"
+    IDM_ICON_IMAGE          "サムネイルイメージで表示します。\nサムネイル"
+    IDM_ICON_ICON           "大きいアイコンで表示します。\nアイコン"
+    IDM_ICON_RELAX          "項目間のスペースをゆとりを持って表示します。\nゆとりビュー"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_VIEW_DESKTOPTREE    "デスクトップまたはドライブのツリー表示を切替えます。\nデスクトップ以下をツリー表示"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FINDER_FILTER       "フィルタ(&F)"
+    IDM_FINDER_REGEXP       "正規表現(&R)"
+    IDM_HOT_ICON_NORMAL     "アイコン（一覧）"
+    IDM_HOT_ICON_OUTLINE    "アイコン（概要）"
+    IDM_HOT_ICON_REPORT     "アイコン（詳細）"
+    IDM_HOT_ICON_IMAGE      "アイコン（サムネイル）"
+    IDM_HOT_ICON_ICON       "アイコン（アイコン）"
+    IDM_HOT_ICON_SWITCH     "アイコン（順次切替）"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EXEC_OWN            "新しいウィンドウを開く\n新規ウィンドウ"
+    IDM_TRAY_EXITTSR        "常駐も含めてすべて終了(&X)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_UPDIR               "ひとつ上へ"
+    IDS_TITLE_CREATELINK    "'%s' へのショートカットを作成する場所を選択してください。"
+    IDS_ASADMIN             "管理者として実行する(&A)"
+    IDS_IAMADMIN            "管理者"
+    IDS_COPY_QUERYDIR       "選択されたオブジェクトを '%s' へコピーします。"
+    IDS_MOVE_QUERYDIR       "選択されたオブジェクトを '%s' へ移動します。"
+    IDS_TITLE_FILECOPY      "ファイルのコピー"
+    IDS_TITLE_FILEMOVE      "ファイルの移動"
+    IDS_CHANGE_DEFAULTICONLISTSTYLE "現在の表示スタイルを基本の表示スタイルとして登録します。\n\n%s"
+    IDS_OLDNEW_ICONLISTSTYLE "現在のスタイル:　%s\n新しいスタイル:　%s"
+    IDS_SELECTSINGLEFILE    "ファイルを1つだけ選択してから実行してください。"
+    IDS_FILTER_EXECUTE      "プログラム|*.exe;*.com;*.lnk;*.bat|すべてのファイル(*.*)|*.*||"
+    IDS_FILTER_ALLFILES     "すべてのファイル(*.*)|*.*||"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUERY_RESETFOLDER   "すべてのフォルダーの表示設定情報を初期化しますか？"
+    IDS_OPEN_MULTIWINDOW    "5つ以上のファイルを一度に開こうとしています。\n\n継続しますか?"
+    IDS_MAXSHORTCUT         "ショートカット メニューは32項目までです。"
+    IDS_FILTER_ICON         "アイコン|*.exe;*.dll;*.ico|すべてのファイル(*.*)|*.*||"
+    IDS_QUERY_MKDIR         "フォルダ '%s' は存在しません。\n作成しますか?"
+    IDS_SELECT_DROPTARGET   "ドロップ先のフォルダを選択してください。"
+    IDS_UNDEFINED           "（なし）"
+    IDS_ERR_MAXNETCOM       "登録可能数は最大10箇所までです。"
+    IDS_CAPTION_SHORTCUTMENU "ショートカット メニュー"
+    IDS_GOTO_UPDIR          "フォルダツリーのルートにいます。\nさらにひとつ上のフォルダへ移動しますか?"
+    IDS_CAPTION_EDITHOTKEY  "ホットキー（Ctrl + Alt + %c）の編集"
+    IDS_HOME_FOLDER         "ホーム フォルダ"
+    IDS_LINK_QUERYDIR       "選択されたオブジェクトのショートカットを次の場所へ作成します。\n場所： %s"
+    IDS_TITLE_LINK          "ショートカットの作成"
+    IDS_OPVIEWER_EXT        "拡張子"
+    IDS_OPVIEWER_TOOLS      "アプリケーション"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ADDIN_VIEWER        "アドイン ビュア"
+    IDS_ADDIN_EDITOR        "アドイン エディタ"
+    IDS_QUERY_DELFAVOITEM   "しおりから '%s' を削除しますか?"
+    IDS_INVALID_TABGROUP    "タブグループ '%s' は有効な情報を含んでいません。\n削除しますか?"
+    IDS_DRIVES              "ドライブ(&D)"
+    IDS_JUNCTION_TIP        "参照元: %s"
+    IDS_QUERY_ADDFAVOITEM   "しおりへ '%s' を追加しますか?"
+    IDS_QUERY_DELPAGEITEM   "グループから '%s' を削除しますか?"
+    IDS_FILEOP_UNDERPROCESSING "ファイル操作を実行中です。処理終了までお待ちください。"
+    IDS_RECENT_COPYHISTORY  "最近利用したコピー先(&0)"
+    IDS_DRIVE_DBLCLICK      "何もしない;新しいタブを開く;新しいウィンドウを開く"
+    IDS_TRAY_MENUSELECT     "新しいタブで開く;新しいウィンドウで開く"
+    IDS_TRAY_HISTORY        "履歴(&H)"
+    IDS_TRAY_FAVORITE       "しおり(&Q)"
+    IDS_REGTHANKS_TITLE     "ユーザ登録"
+    IDS_REGTHANKS_CAPTION   "ライセンスのご購入ありがとうございました。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_REGTHANKS_TEXT      "FileVisorのユーザﾞ登録は完了しました。\nWindowsを再起動してご利用いただくことをお勧めします。"
+    IDS_COLUMN_NAME         "名前"
+    IDS_COLUMN_SIZE         "サイズ"
+    IDS_COLUMN_DATE         "更新日時"
+    IDS_COLUMN_TYPE         "種類"
+    IDS_COLUMN_ATTR         "属性"
+    IDS_COLUMN_DOS          "DOS名"
+    IDS_COLUMN_INFO         "説明"
+    IDS_FORMAT_ENUMFILES    "%d個のファイル, %d個のフォルダ"
+    IDS_CTLMENU_HEADER_TITLE "タイトル"
+    IDS_CTLMENU_HEADER_OPTION "オプション"
+    IDS_CTLMENU_HEADER_PROGRAM "プログラム"
+    IDS_CTLMENU_HEADER_ARGMENT "引数"
+    IDS_CTLMENU_HEADER_WORKDIR "作業フォルダ"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CUSTBAR_TITLE       "ツール バー"
+    IDS_TRIAL_LIMIT         "試用期限まで、あと %d 日です。"
+    IDS_TABGROUP            "タブ グループ"
+    IDS_FOLDER_KEYMAP       "文字キー;数字キー;機能キー"
+    IDS_HOTKEY_UNAVAILABLE  "ホットキー '%s' は利用できません。"
+    IDS_HOTKEY_ENTER_EDIT   "ホットキーは定義されていません。\n編集しますか?"
+    IDS_JUNCTION            "ジャンクション"
+    IDS_TAB_SHORTCUTMENU    "ツリー ウィンドウ|ファイル ウィンドウ"
+    IDS_TIP_PLACE           "場所: %s"
+    IDS_TAB_LOCK            "タブをロック(&L)"
+    IDS_TAB_UNLOCK          "タブをアンロック(&L)"
+    IDS_APPBARGROUP_SHELL   "シェル"
+    IDS_APPBARGROUP_MANAGE  "管理ツール"
+    IDS_APPBAR_DELGROUP     "パネル グループ '%s' とそれに所属する項目を削除しますか?"
+    IDS_APPBAR_NEWGROUP     "新しいパネル"
+    IDS_APPBAR_BROWSE       "インポートするオブジェクトを選択してください。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SORT                "ソート"
+    IDS_SORT_TYPE           "名前;種類;サイズ;時刻;属性;DOS名;ソートしない"
+    IDS_SORT_DIRECTION      "昇順;降順"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APPBARITEM_COMPMGMT "コンピュータの管理"
+    IDS_APPBARITEM_FSMMGMT  "共有フォルダー"
+    IDS_APPBARITEM_DEVMGMT  "デバイスマネジャー"
+    IDS_APPBARITEM_DISKMGMT "ディスクの管理"
+    IDS_APPBARITEM_GPEDIT   "ローカルグループポリシー"
+    IDS_APPBARITEM_SECPOL   "ローカルセキュリティポリシー"
+    IDS_APPBARITEM_WF       "Windowsファイアウォール"
+    IDS_APPBARITEM_PRINTMAN "印刷の管理"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_RECOVERY_REQUIREMENT 
+                            "初期化を実行するには、常駐するものも含めたすべてのFileVisorアプリケーションを終了させてください。"
+    IDS_TABRECENT           "最近閉じたタブ"
+    IDS_DLGTIT_COPY         "ファイルをコピー"
+    IDS_DLGTIT_MOVE         "ファイルを移動"
+    IDS_FILTER_TABGROUP     "タブ グループ(*.tabgroup)|*.tabgroup||"
+    IDS_RECOVERY_START      "ツール バーやApp スタック等ほぼすべての設定を初期化だけして終了します。\n（いいえを選択すると通常通り起動します）\n\nこれらの情報がリセットされますが宜しいですか？"
+    IDS_CLEARHISTORY        "履歴の消去(&C)"
+    IDS_NEWTOOLBAR          "新しいツール バー"
+    IDS_CLIPBOARD_PASTE     "クリップボードのファイル オブジェクトをここへ貼付けますか？"
+    IDS_CLIPBOARD_PASTESHORTCUT "クリップボードのファイル オブジェクトをショートカットとしてここへ貼付けますか？"
+    IDS_QUERY_BARDELETE     "選択されたツール バーを削除します。\nよろしいですか？"
+    IDS_TRIALKEYWORD        "試用キー ' %s ' を入力してください。"
+    IDS_ALREADY_FILE_EXISTS "%s\n\nこのファイルは既に存在します。上書きしますか？"
+    IDS_FILE_NOTFOUND       "%s\n\nこのファイルは存在しません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILE_IS_BINARY      "ファイル %s はバイナリファイルの可能性があります。\n\nこのファイルをテキストファイルとして開きますか？\n（「いいえ」でバイナリ表示します）"
+    IDS_ADDINTOOLS_EXIST    "拡張子 %s は既に登録されています。"
+    IDS_SELFILTER_MANAGE    "リストの管理(&O)"
+    IDS_SELFILTER_ADD       "この設定をリストに追加(&S)"
+    IDS_QUERY_OPENBY        "ファイル %s はバイナリファイルの可能性があります。\nどのように開きますか?"
+    IDS_OPEN_AS_TEXT        "テキストとして(&T)"
+    IDS_OPEN_AS_BINARY      "バイナリとして(&B)"
+    IDS_OPEN_WITH           "アプリを選択(&A)"
+    IDS_UNREGIST_START      "ツール バーやApp スタック等の設定情報を保持したまま\nライセンスのみを未登録の状態に戻します。宜しいですか？"
+    IDS_QUERY_DELSMARTITEM  "スマート バーから '%s' を削除しますか?"
+    IDS_NETNAME_FORMAT      "登録可能なネットワーク パス名は \\\\server\\share 形式です。"
+    IDS_WEB_HOMEPAGE        "http://lightship.co.jp/site/"
+    IDS_WEB_FEEDBACK        "http://lightship.co.jp/site/?page_id=190"
+    IDS_WEB_DOWNLOAD        "http://lightship.co.jp/site/?page_id=42"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_COMBINE         "Combine"
+    IDS_SEC_ADDIN_APPS      "AddinApps"
+    IDS_SEC_ADDIN_VIEWER    "AddinViewer"
+    IDS_SEC_ADDIN_EDITOR    "AddinEditor"
+    IDS_SEC_OPERATIONS      "Operations"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_HOTKEY          "HotKey"
+    IDS_SEC_BARSTAT         "TBs"
+    IDS_SEC_FOLDER          "Folder"
+    IDS_SEC_HISTORY         "History"
+    IDS_SEC_SETTINGS        "Settings"
+    IDS_SEC_DRIVE           "Drive"
+    IDS_SEC_USER            "UserInfo"
+    IDS_SEC_MAPICON         "MapIcon"
+    IDS_SEC_TOOLBAR         "ToolBar"
+    IDS_SEC_OBJECTBAR       "ObjectBar"
+    IDS_SEC_FAVORITE        "Favorite"
+    IDS_SEC_TABCOMBINE      "TabCombine"
+    IDS_SEC_FILTERSETTING   "FilterSetting"
+    IDS_SEC_RUNAS           "RunAs"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_LISTOUTPUT      "ListOutput"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_LASTOPTIONPAGE  "LastOptionPage"
+    IDS_KEY_COLORMAP        "ColorMap"
+    IDS_KEY_MSDOS           "MsDos"
+    IDS_KEY_EDITOR          "Editor"
+    IDS_KEY_VIEWER          "Viewer"
+    IDS_KEY_PHOTOVIEWER     "PhotoViewer"
+    IDS_KEY_HEXEDITOR       "HexEditor"
+    IDS_KEY_TREEFONT        "TreeFont"
+    IDS_KEY_DIRECTORY       "Directory"
+    IDS_KEY_SYSSTATUS       "SysStatus"
+    IDS_KEY_BARSTATUS       "BarStatus"
+    IDS_KEY_FILEFONT        "FileFont"
+    IDS_KEY_WNDPOS          "WndPos"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_DRVSTATUS       "DrvStatus"
+    IDS_KEY_FOPSTATUS       "FopStatus"
+    IDS_KEY_COPYTARGET      "CopyTarget"
+    IDS_KEY_MENUFILE        "ShortcutFile"
+    IDS_KEY_MENUTREE        "ShortcutTree"
+    IDS_KEY_LOGDISK         "Logdisk"
+    IDS_KEY_ENTRY           "Entry"
+    IDS_KEY_LISTCOLUMN      "ListColumn"
+    IDS_KEY_KEYMAP          "KeyMap"
+    IDS_KEY_FNKEYMAP        "FNKeyMap"
+    IDS_KEY_LISTSTATUS      "ListStatus"
+    IDS_KEY_FILESTATUS      "FileStatus"
+    IDS_KEY_LASTACCESS      "LastAccess%d"
+    IDS_KEY_NUMKEYMAP       "NumKeyMap"
+    IDS_KEY_LASTFOLDER      "LastFolder"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_DRIVEMASK       "DriveMask"
+    IDS_KEY_NETCOM          "NetCom%d"
+    IDS_KEY_AUTOCOLOR       "AutoColor"
+    IDS_KEY_OMITTIPS        "OmitTips"
+    IDS_KEY_STARTUP_TABGROUP "StartupTabGroup"
+    IDS_KEY_ICONLISTSTYLE   "IconListStyle"
+    IDS_KEY_FAVOHEIGHT      "FavoHeight"
+    IDS_KEY_DEFAULTICONLISTSTYLE "DefaultIconListStyle"
+    IDS_KEY_TREEWIDTH       "TreeWidth"
+    IDS_KEY_FUNCTIONFONT    "FunctionFont"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_FAVORITEAPP     "FavoriteApp"
+    IDS_KEY_LASTSELECTION   "LastSelection"
+    IDS_KEY_MOSSTATUS       "MosStatus"
+    IDS_KEY_PANELFONT       "PanelFont"
+    IDS_KEY_TSRACTIVEKEY    "TsrActiveKey"
+    IDS_KEY_TSRSTATUS       "TsrStatus"
+    IDS_KEY_TSRPOPUPKEY     "TsrPopupKey"
+    IDS_KEY_NAMEELLPSIS     "NameEllipsis"
+    IDS_KEY_CONFSTATUS      "ConfStatus"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_WILDCARD        "Wildcard"
+    IDS_KEY_HISTORY         "History"
+    IDS_KEY_FILTERSELECT    "FilterSelect"
+    IDS_KEY_FRAMEPOS        "WndPos%d"
+    IDS_KEY_WINDOWWIDTH     "WindowWidth"
+    IDS_KEY_SEQNUM          "%d"
+    IDS_KEY_REGIST          "Regist#"
+    IDS_KEY_USERNAME        "UserName"
+    IDS_KEY_COMPANY         "Organization"
+    IDS_KEY_PREVSETTING     "PrevSetting"
+    IDS_KEY_STATE           "State%d"
+    IDS_KEY_COUNT           "Count"
+    IDS_KEY_TITLE           "Title%d"
+    IDS_KEY_HOME            "Home"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_DLG_LOGDISK     "DlgLogdisk"
+    IDS_KEY_DLG_QUERYCOPY   "DlgQueryCopy"
+    IDS_KEY_DLG_QUERYFOLDER "DlgQueryFolder"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_WINDOW_MAXIMIZE     "ウィンドウを最大化／元に戻す\nウィンドウ最大化切り替え"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_WINDOW_MINIMIZE     "ウィンドウを最小化、または元に戻します。\nウィンドウ最小化切り替え"
+    IDM_WINDOW_PREV         "前のウィンドウへ切り替えます。\n前のウィンドウ"
+    IDM_WINDOW_NEXT         "次のウィンドウへ切り替えます。\n後ろのウィンドウ"
+    IDM_WINDOW_REFLESH      "表示内容を最新の情報に更新します。\n最新の情報に更新"
+    IDM_WINDOW_COMBINESAVE  "すべてのウィンドウ位置を保存します。\nウィンドウ位置保存"
+    IDM_WINDOW_COMBINELOAD  "保存したウィンドウ位置を復帰します。\nウィンドウ位置復帰"
+    IDM_TAB_NEW             "新しいタブを開きます。\n新しいタブ"
+    IDM_TAB_CLOSE           "タブを閉じます。\nタブを閉じる"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TAB_PREV            "前のタブへ切り替えます。\n前のタブ"
+    IDM_TAB_NEXT            "次のタブへ切り替えます。\n次のタブ"
+    IDM_TAB_REFRESH         "タブを最新の情報に更新します。\nタブを更新"
+    IDM_TAB_CLOSE_ANYOTHER  "他のタブをすべて閉じます。\n他のタブを閉じる"
+    IDM_TAB_REOPEN_RECENT   "最後に閉じたタブを元に戻します。\n閉じたタブを戻す"
+    IDM_TAB_SAVEALL         "現在開いているタブ グループをファイルに保存します。\nタブ グループを保存"
+    IDM_TAB_RESTOREALL      "保存してあるタブ グループを開きます。\nタブ グループを開く"
+    IDM_TAB_EXPORT          "タブを分離して別ウィンドウで開きます。\nタブを分離"
+    IDM_TAB_LOCK            "タブをロックまたはアンロックします。\nタブをロック"
+    IDM_TAB_CLOSE_LEFTSIDE  "左のタブをすべて閉じます。\n左のタブを閉じる"
+    IDM_TAB_CLOSE_RIGHTSIDE "右のタブをすべて閉じます。\n右のタブを閉じる"
+    IDM_FINDER_NEXT         "次を検索(&N)"
+    IDM_FINDER_PREV         "前を検索(&P)"
+    IDM_FINDER_SELECT       "すべて選択(&A)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TAB_SORTDEFAULT     "タブを作成した順番でソートします。\n作成順にソート"
+    IDM_TAB_SORTREFERENCE   "タブを参照した順番でソートします。\n参照順にソート"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_FILTERDEL      "フィルタを指定してファイルを一括削除します。\n一括削除"
+    IDM_FILE_ENCRYPT        "選択されたファイルをパスワードで暗号化します。\n暗号化"
+    IDM_FILE_DECRYPT        "暗号化されたファイルを復号化します。\n復号化"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_PAGEITEM_OPEN       "開く"
+    IDM_PAGEITEM_RENAME     "名前の変更(&R)"
+    IDM_PAGEITEM_DELETE     "削除"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_BAR_PROP            "プロパティ バーの表示を切り替えます。\nプロパティ バーの表示切替"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_BAR_TOOL            "ツール バーの表示を切り替えます。\nツール バーの表示切替"
+    IDM_BAR_APPBAR          "App スタックの表示を切り替えます。\nApp スタックの表示切替"
+    IDM_BAR_STAT            "ステータス バーの表示を切り替えます。\nステータス バーの表示切替"
+    IDM_BAR_DRIVE           "ドライブ バーの表示を切り替えます。\nドライブ バーの表示切替"
+    IDM_BAR_SORT            "ソート バーの表示を切り替えます。\nソート バーの表示切替"
+    IDM_BAR_FUNCTION        "機能キーの表示を切り替えます。\n機能キーの表示切替"
+    IDM_BAR_REPOSITION      "ツール バーを整列させます。\nツール バーの整列"
+    IDM_BAR_FAVO            "しおりの表示を切り替えます。\nしおりの表示切替"
+    IDM_BAR_LOCKREBAR       "ツール バーを固定します。\nツール バーを固定"
+    IDM_BAR_NAVI            "ナビゲーション バーの表示切替をおこないます。\nナビゲーション バーの表示切替"
+    IDM_BAR_DRIVE_HORZ      "ドライブ バーを横置きにします。"
+    IDM_BAR_DRIVE_VERTLEFT  "ドライブ バーを左側面に縦に置きます。"
+    IDM_BAR_DRIVE_VERTRIGHT "ドライブ バーを右側面に縦に置きます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_HELP_SHAREWARE      "ユーザ登録について表示します。"
+    IDM_WEB_FEEDBACK        "WEBページを経由してフィードバックを送信します。\nフィードバックの送信"
+    IDM_WEB_HOMEPAGE        "LightShipのホームページへアクセスします。\nLightShipホームページ"
+    IDM_WEB_DOWNLOAD        "ホームページから最新バージョンを取得します。\n最新版の取得"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EDIT_CUT            "削除するオブジェクトとして選択してクリップボードへコピーします。\nオブジェクトの切り取り"
+    IDM_COPY_NAMEONLY       "ファイル名のみをクリップボードへコピーします。\n名前のみコピー"
+    IDM_COPY_DETAIL         "ファイルの詳細をクリップボードへコピーします。\n詳細をコピー"
+    IDM_COPY_FULLNAME       "フルパス名をクリップボードへコピーします。\nフルパス名をコピー"
+    IDM_COPY_SHORTNAME      "フルパス名を短い名前でクリップボードへコピーします。\nフルパス名を短い名前でコピー"
+    IDM_COPY_UNCNAME        "フルパス名でUNC名をクリップボードへコピーします。\nフルパス名でUNC名をコピー"
+    IDM_EDIT_LISTOUTPUT     "フォルダの一覧を指定形式でファイルへ出力します。\n指定形式でファイル出力"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EDIT_COPY           "選択されたオブジェクトをクリップボードへコピー\nオブジェクトのコピー"
+    IDM_EDIT_PASTE          "この場所にオブジェクトを貼り付け\nオブジェクトの貼付け"
+    IDM_EDIT_PASTESHORTCUT  "この場所にオブジェクトへのショートカットを貼付け\nショートカットの貼付け"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_DRVACCESS_A         "ドライブ A: を開く"
+    IDM_DRVACCESS_B         "ドライブ B: を開く"
+    IDM_DRVACCESS_C         "ドライブ C: を開く"
+    IDM_DRVACCESS_D         "ドライブ D: を開く"
+    IDM_DRVACCESS_E         "ドライブ E: を開く"
+    IDM_DRVACCESS_F         "ドライブ F: を開く"
+    IDM_DRVACCESS_G         "ドライブ G: を開く"
+    IDM_DRVACCESS_H         "ドライブ H: を開く"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_DRVACCESS_I         "ドライブ I: を開く"
+    IDM_DRVACCESS_J         "ドライブ J: を開く"
+    IDM_DRVACCESS_K         "ドライブ K: を開く"
+    IDM_DRVACCESS_L         "ドライブ L: を開く"
+    IDM_DRVACCESS_M         "ドライブ M: を開く"
+    IDM_DRVACCESS_N         "ドライブ N: を開く"
+    IDM_DRVACCESS_O         "ドライブ O: を開く"
+    IDM_DRVACCESS_P         "ドライブ P: を開く"
+    IDM_DRVACCESS_Q         "ドライブ Q: を開く"
+    IDM_DRVACCESS_R         "ドライブ R: を開く"
+    IDM_DRVACCESS_S         "ドライブ S: を開く"
+    IDM_DRVACCESS_T         "ドライブ T: を開く"
+    IDM_DRVACCESS_U         "ドライブ U: を開く"
+    IDM_DRVACCESS_V         "ドライブ V: を開く"
+    IDM_DRVACCESS_W         "ドライブ W: を開く"
+    IDM_DRVACCESS_X         "ドライブ X: を開く"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_DRVACCESS_Y         "ドライブ Y: を開く"
+    IDM_DRVACCESS_Z         "ドライブ Z: を開く"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\fv7.rc2"
+// アイコン（.ico）は rc2 で定義 --- VISTA(256x256)形式を含むため
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,74 @@
+﻿C:\Program Files\Microsoft Visual Studio\18\Professional\MSBuild\Microsoft\VC\v180\Microsoft.CppBuild.targets(1155,5): warning MSB4211: プロパティ "GetTargetPathDependsOn" は初めて値に設定されますが、これは "C:\Program Files\Microsoft Visual Studio\18\Professional\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets (2259,5)" で既に使用されています。
+  crc32.c
+  crypt.c
+  envargs.c
+  explode.c
+  extract.c
+  fileio.c
+  globals.c
+  inflate.c
+  list.c
+  match.c
+  process.c
+  ttyio.c
+  ubz2err.c
+  unreduce.c
+  unshrink.c
+  unzip.c
+  zipinfo.c
+  crc_i386.c
+  nt.c
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21730,19): error C2143: 構文エラー: ':' が '定数' の前にありません。
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21730,22): error C2143: 構文エラー: ';' が ':' の前にありません。
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21730,22): error C2059: 構文エラー: ':'
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21731,29): error C2143: 構文エラー: '{' が ':' の前にありません。
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21731,29): error C2059: 構文エラー: ':'
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21732,9): error C2059: 構文エラー: '}'
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21733,5): error C2059: 構文エラー: '}'
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21734,1): error C2059: 構文エラー: '}'
+  (ソース ファイル '../nt.c' をコンパイルしています)
+  
+  win32.c
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21730,19): error C2143: 構文エラー: ':' が '定数' の前にありません。
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21730,22): error C2143: 構文エラー: ';' が ':' の前にありません。
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21730,22): error C2059: 構文エラー: ':'
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21731,29): error C2143: 構文エラー: '{' が ':' の前にありません。
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21731,29): error C2059: 構文エラー: ':'
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21732,9): error C2059: 構文エラー: '}'
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21733,5): error C2059: 構文エラー: '}'
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\winnt.h(21734,1): error C2059: 構文エラー: '}'
+  (ソース ファイル '../win32.c' をコンパイルしています)
+  
+E:\github\cairns\ArchiverProject\unzip60\win32\win32.c(497,13): warning C4996: 'GetVersion': が古い形式として宣言されました。
+  コードを生成中...
+  コンパイル中...
+  win32i64.c
+  コードを生成中...

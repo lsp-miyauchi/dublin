@@ -1,0 +1,31 @@
+//
+// frame.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+ID_TXR_01                   RCDATA              "res\\txr01.png"
+ID_TXR_02                   RCDATA              "res\\txr02.png"
+ID_TXR_03                   RCDATA              "res\\txr03.png"
+ID_TXR_04                   RCDATA              "res\\txr04.png"
+ID_TXR_05                   RCDATA              "res\\txr05.png"
+ID_TXR_06                   RCDATA              "res\\txr06.png"
+ID_TXR_07                   RCDATA              "res\\txr07.png"
+ID_TXR_08                   RCDATA              "res\\txr08.png"
+ID_TXR_09                   RCDATA              "res\\txr09.png"
+ID_TXR_10                   RCDATA              "res\\txr10.png"
+ID_TXR_11                   RCDATA              "res\\txr11.png"
+ID_TXR_12                   RCDATA              "res\\txr12.png"
+
+
+/////////////////////////////////////////////////////////////////////////////

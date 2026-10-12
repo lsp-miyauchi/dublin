@@ -1,0 +1,25 @@
+HKCR
+{
+	lsarcsvr.CommArchiver.1 = s 'CommArchiver Class'
+	{
+		CLSID = s '{26D6C970-A507-4943-B2D5-D0D1AC4EA7DF}'
+	}
+	lsarcsvr.CommArchiver = s 'CommArchiver Class'
+	{
+		CLSID = s '{26D6C970-A507-4943-B2D5-D0D1AC4EA7DF}'
+		CurVer = s 'lsarcsvr.CommArchiver.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {26D6C970-A507-4943-B2D5-D0D1AC4EA7DF} = s 'CommArchiver Class'
+		{
+			ProgID = s 'lsarcsvr.CommArchiver.1'
+			VersionIndependentProgID = s 'lsarcsvr.CommArchiver'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

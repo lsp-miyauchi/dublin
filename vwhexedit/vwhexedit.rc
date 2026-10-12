@@ -1,0 +1,587 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\vwhexedit.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,20
+ PRODUCTVERSION 7,4,0,20
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "Hex Editer for FileVisor"
+            VALUE "FileVersion", "7.4.0.20"
+            VALUE "InternalName", "vwhexedit"
+            VALUE "LegalCopyright", "(C)LightShip Inc. 1999-2022 All rights reserved."
+            VALUE "OriginalFilename", "vwhexedit.dll"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.0.20"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_BJAIL               ICON                    "res\\vwhex-binedit.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_TOOLBAR_M TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_JUMP_FILETOP
+    BUTTON      ID_JUMP_FILEEND
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_FIND_NEXT
+    BUTTON      ID_FIND_PREV
+    SEPARATOR
+    BUTTON      ID_MARK_ADDRESS
+    BUTTON      ID_MARK_NEXT
+    BUTTON      ID_MARK_PREV
+END
+
+IDB_TOOLBAR_S TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    SEPARATOR
+    BUTTON      ID_JUMP_FILETOP
+    BUTTON      ID_JUMP_FILEEND
+    BUTTON      ID_EDIT_FIND
+    BUTTON      ID_FIND_NEXT
+    BUTTON      ID_FIND_PREV
+    SEPARATOR
+    BUTTON      ID_MARK_ADDRESS
+    BUTTON      ID_MARK_NEXT
+    BUTTON      ID_MARK_PREV
+END
+
+IDB_APPICON_S TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_APPICON_M TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_BJAIL MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "新規作成(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "開く(&O)\tCtrl+O",              ID_FILE_OPEN
+        MENUITEM "上書き保存(&S)\tCtrl+S",           ID_FILE_SAVE
+        MENUITEM "名前を付けて保存(&A)...",             ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "最近使ったファイル(&F)"
+        BEGIN
+            MENUITEM "（なし）",                        ID_FILE_MRU_FILE1, GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)\tAlt+F4",              ID_APP_EXIT
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "元に戻す(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "切り取り(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "コピー(&C)\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "テキスト形式でコピー(T)\tShift+Ctrl+C", ID_EDIT_TEXTCOPY
+        MENUITEM "貼り付け(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "すべてを選択(&A)",                  ID_EDIT_SELECTALL
+        MENUITEM "範囲を指定して選択(&R)...\tCtrl+R",    ID_EDIT_RANGESEL
+        MENUITEM SEPARATOR
+        MENUITEM "選択範囲をファイルに保存...(&W)",         ID_EDIT_SELSAVENEW
+        MENUITEM "選択範囲を別のエディタで編集(&O)",          ID_EDIT_BYNEWEDITOR
+        MENUITEM SEPARATOR
+        MENUITEM "前のマークまで選択\tShift+Ctrl+F8",    ID_EDIT_SELTO_PREVMARK
+        MENUITEM "次のマークまで選択\tCtrl+F8",          ID_EDIT_SELTO_NEXTMARK
+    END
+    POPUP "検索(&M)"
+    BEGIN
+        MENUITEM "検索(&F)...\tCtrl+F",           ID_EDIT_FIND
+        MENUITEM "前方へ検索(&B)\tShift+F3",         ID_FIND_PREV
+        MENUITEM "後方へ検索(&N)\tF3",               ID_FIND_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "ファイルの先頭\tCtrl+Home",          ID_JUMP_FILETOP
+        MENUITEM "ファイルの最後\tCtrl+End",           ID_JUMP_FILEEND
+        MENUITEM "指定位置へ...\tCtrl+J",            ID_JUMP_OFFSET
+        MENUITEM "最後に編集した場所へ",                  ID_JUMP_LASTEDIT
+        MENUITEM SEPARATOR
+        MENUITEM "この位置をマーク/マーク解除\tCtrl+M",      ID_MARK_ADDRESS
+        MENUITEM "前のマークへ\tShift+F8",            ID_MARK_PREV
+        MENUITEM "次のマークへ\tF8",                  ID_MARK_NEXT
+        MENUITEM "すべてのマークをクリア\tF12",            ID_MARK_CLEARALL
+    END
+    POPUP "ツール(&T)"
+    BEGIN
+        MENUITEM "選択範囲のチェックサム(&C)...",          ID_TOOL_CHECKSUM
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        POPUP "文字セット(&F)"
+        BEGIN
+            MENUITEM "ASCII(&A)",                   ID_TEXT_ASCII
+            MENUITEM "SJIS(&S)",                    ID_TEXT_SJIS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "動作環境(&V)",                    ID_ENVIRON_SETUP
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "ヘルプ(&H)",                     ID_HELP
+        MENUITEM "バイナリエディタについて...(&A)",         ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_BJAIL ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "J",            ID_JUMP_OFFSET,         VIRTKEY, CONTROL, NOINVERT
+    "M",            ID_MARK_ADDRESS,        VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FIND_PREV,           VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_EDIT_RANGESEL,       VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      ID_APP_EXIT,            VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_F3,          ID_FIND_NEXT,           VIRTKEY, NOINVERT
+    VK_F3,          ID_FIND_PREV,           VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F8,          ID_MARK_NEXT,           VIRTKEY, NOINVERT
+    VK_F8,          ID_MARK_PREV,           VIRTKEY, SHIFT, NOINVERT
+    VK_F8,          ID_EDIT_SELTO_NEXTMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F8,          ID_EDIT_SELTO_PREVMARK, VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_F12,         ID_MARK_CLEARALL,       VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_STRFIND DIALOGEX 0, 0, 327, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "データの検索"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "検索データ列(&F):",IDC_STATIC,7,7,80,10
+    COMBOBOX        IDC_COMBO,7,17,205,88,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_HELPCALL,"LSCFlatButton",WS_TABSTOP | 0x2,216,17,16,14
+    GROUPBOX        "検索モード(&R)",IDC_STATIC,7,38,224,74
+    CONTROL         "バイナリデータで検索(&B)",IDC_BCHECK,"Button",BS_AUTORADIOBUTTON,20,56,105,10
+    CONTROL         "テキスト文字列で検索(&T)",IDC_TCHECK,"Button",BS_AUTORADIOBUTTON,20,72,109,10
+    CONTROL         "大文字と小文字を区別する(&M)",IDC_CAPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,32,89,125,10
+    PUSHBUTTON      "上検索(&U)",IDC_FINDUP,253,7,67,14
+    DEFPUSHBUTTON   "下検索(&D)",IDC_FINDDOWN,253,24,67,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,253,98,67,14
+END
+
+IDD_COLOR DIALOGEX 0, 0, 235, 179
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "動作環境"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "配色(&C)",IDC_STATIC,7,26,221,123
+    CONTROL         "文字(&T)",IDC_TEXT1,"LSCFlatButton",WS_TABSTOP | 0x110,37,96,72,13
+    CONTROL         "背景(&B)",IDC_BACK1,"LSCFlatButton",WS_TABSTOP | 0x110,123,96,72,13
+    CONTROL         "アドレス(&P)",IDC_POINT,"LSCFlatButton",WS_TABSTOP | 0x110,37,112,72,13
+    CONTROL         "カーソル行(&L)",IDC_LINE,"LSCFlatButton",WS_TABSTOP | 0x110,123,112,72,13
+    CONTROL         "マーク文字(&M)",IDC_MARKTEXT,"LSCFlatButton",WS_TABSTOP | 0x110,37,128,72,13
+    CONTROL         "マーク背景(&R)",IDC_MARKBACK,"LSCFlatButton",WS_TABSTOP | 0x110,123,128,72,13
+    DEFPUSHBUTTON   "OK",IDOK,58,158,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,126,158,50,14
+    CONTROL         "",IDC_SAMPLE1,"LSCRect",WS_TABSTOP | 0x100,13,38,208,51
+    CONTROL         "",IDC_FONT,"LSCFontPick",WS_TABSTOP | 0x4,7,6,221,14,WS_EX_CLIENTEDGE
+END
+
+IDD_JUMP DIALOGEX 0, 0, 235, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "指定位置へ移動"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "移動先のアドレス位置を16進数値で指定してください。",IDC_STATIC,7,7,188,8
+    LTEXT           "アドレス(&A):",IDC_STATIC,35,31,40,8
+    EDITTEXT        IDC_EDIT,79,29,79,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "BE/LE",IDC_ENDIAN,163,29,30,14
+    CONTROL         "アドレスは先頭からのオフセットとして扱う(&S)",IDC_JUMPSET,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,38,55,172,10
+    CONTROL         "アドレスは現在位置からのオフセットとして扱う(&C)",IDC_JUMPCUR,"Button",BS_AUTORADIOBUTTON,38,69,172,10
+    DEFPUSHBUTTON   "OK",IDOK,46,100,66,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,123,100,66,14
+END
+
+IDD_SELRANGE DIALOGEX 0, 0, 285, 151
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "範囲を選択"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "開始アドレス(&S):",IDC_STATIC,40,39,58,8
+    EDITTEXT        IDC_START,107,38,73,14,ES_AUTOHSCROLL
+    LTEXT           "終了アドレス(&E):",IDC_STATIC,40,61,58,8
+    EDITTEXT        IDC_END,107,59,73,14,ES_AUTOHSCROLL
+    CONTROL         "終了アドレスを選択サイズとして利用する(&R)",IDC_BYSIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,89,207,10
+    DEFPUSHBUTTON   "OK",IDOK,72,131,62,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,146,131,62,14
+    LTEXT           "選択する範囲を指定します。\n16進数値で指定する場合には数値の前に “0x” を付けてください。",IDC_STATIC,7,7,271,22
+    LTEXT           "開始位置からのサイズで選択する場合にチェックします。",IDC_STATIC,51,103,173,8
+END
+
+IDD_CHECKSUM DIALOGEX 0, 0, 347, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "チェックサム"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,333,99
+    PUSHBUTTON      "コピー(&C)",IDC_COPY,162,122,88,14
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,261,122,79,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_STRFIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_COLOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_JUMP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_SELRANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_CHECKSUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 340
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_LINESEL             CURSOR                  "res\\linesel.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_STRFIND AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SELRANGE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_JUMP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CHECKSUM AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_BJAIL               "vwbin\n\nvwbin\n\n\nvwbin.Document\nvwbin Document"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "バイナリエディタ"
+    IDS_SELECTLEN           "選択 %d(%XH)バイト"
+    IDS_NOTLOAD             "%sは読み込めませんでした。"
+    IDS_NOTUNDOSAVE         "アンドゥバッファに、動作を保存する事が出来ませんでした。"
+    IDS_NOTUNDO             "アンドゥ機能が使えませんでした。"
+    IDS_NOTUNDOSAVE2        "アンドゥバッファが一杯です。動作は保存されません。"
+    IDS_NOTUNDO2            "アンドゥ機能が正常に働きませんでした。\nデータ異常の可能性があります。"
+    IDS_SEC_STATUS          "Status"
+    IDS_KEY_WNDPOS          "WndPos"
+    IDS_KEY_FONT            "Font"
+    IDS_KEY_COLORS          "Colors"
+    IDS_KEY_TEXTTYPE        "TextType"
+    IDS_SEC_FIND            "Find"
+    IDS_KEY_HISTORY         "History"
+    IDS_KEY_BINSEARCH       "BinSearch"
+    IDS_KEY_CAPS            "Caps"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_WARNINGSIZE         "%s\nこのファイルは %d バイトです。\n\n編集をおこないますか？"
+    IDS_HELP_SEARCH         "バイナリデータ検索の場合には、バイト毎にスペースで区切って指定します。\n入力例） a0 0a bb ef 5f ee"
+    IDS_FILEISFOLDER        "%s\n同名のフォルダが存在します。"
+    IDS_FILEISEXISTS        "%s\n既にこのファイルは存在します。上書きしますか？"
+    IDS_QUERY_UPDATESAVE    "ファイルは修正されています。保存しますか？"
+    IDS_READONLYFILE        "%s\n\nこのファイルは書込み禁止です。"
+    IDS_KEY_SETTING         "Setting"
+    IDS_PASTE_BYSJIS        "テキストをShift-JISで貼り付けますか？\n（いいえを選択した場合にはUnicodeで貼り付けます）"
+    IDS_SAVEAS              "名前を付けて保存"
+    IDS_MARK_RANGELIMIT     "マークできる範囲は256バイトまでです。"
+    IDS_FILEOPEN            "ファイルを開く"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_INST       "挿入"
+    ID_INDICATOR_POS        "00000000:00000000"
+    ID_INDICATOR_LEN        "選択 0000000(00000H)バイト"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "新規にファイルを作成\n新規"
+    ID_FILE_OPEN            "既存のファイルを開く\n開く"
+    ID_FILE_CLOSE           "作業中のファイルを閉じる\n閉じる"
+    ID_FILE_SAVE            "作業中のファイルを保存\n保存"
+    ID_FILE_SAVE_AS         "作業中のファイルに名前を付けて保存\n名前をつけて保存"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_EXIT             "アプリケーションを終了し、ファイルの保存を指示\n終了"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "選択範囲を消去\n消去"
+    ID_EDIT_CLEAR_ALL       "すべて消去\nすべて消去"
+    ID_EDIT_COPY            "選択範囲をコピーしてクリップボードに保存\nコピー"
+    ID_EDIT_CUT             "選択範囲を切り取ってクリップボードに保存\n切取り"
+    ID_EDIT_FIND            "指定した文字列の検索\n検索"
+    ID_EDIT_PASTE           "クリップボードの内容を貼り付け\n貼付"
+    ID_EDIT_REPEAT          "直前に行った動作を繰り返す\n繰り返し"
+    ID_EDIT_REPLACE         "指定した文字列を他の文字列で置換\n置換"
+    ID_EDIT_SELECT_ALL      "ファイル全体を選択\nすべて選択"
+    ID_EDIT_UNDO            "直前に行った動作を元に戻す\n元に戻す"
+    ID_EDIT_REDO            "直前に行った動作を繰り返す\nやり直し"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "ウィンドウのサイズを変更"
+    ATL_IDS_SCMOVE          "ウィンドウの位置を変更"
+    ATL_IDS_SCMINIMIZE      "ウィンドウをアイコン化する"
+    ATL_IDS_SCMAXIMIZE      "ウィンドウを最大表示にする"
+    ATL_IDS_SCNEXTWINDOW    "次のウィンドウに切り替える"
+    ATL_IDS_SCPREVWINDOW    "前のウィンドウに切り替える"
+    ATL_IDS_SCCLOSE         "作業中のウィンドウを閉じ、変更したファイルの保存を指示"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "ウィンドウを通常のサイズに戻す"
+    ATL_IDS_SCTASKLIST      "アプリケーションの切り替え"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+    IDS_WEB_HOMEPAGE        "http://lightship.co.jp/site/"
+    IDS_WEB_HELP            "http://lightship.co.jp/FileVisor7/help/built-in/binedit.htm"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_BYNEWEDITOR     "選択範囲を別のエディタで編集します。\n選択範囲を別のエディタで編集"
+    ID_EDIT_SELECTALL       "すべてを選択\n全て選択"
+    ID_EDIT_TEXTCOPY        "テキスト形式でコピー\nテキスト形式でコピー"
+    ID_EDIT_RANGESEL        "アドレス範囲を指定して選択します。\n範囲選択"
+    ID_EDIT_SELSAVENEW      "選択範囲をファイルに保存します。\n選択範囲を保存"
+    ID_EDIT_SELTO_PREVMARK  "現在位置から前のマークまでを選択します。\n前のマークまで選択"
+    ID_EDIT_SELTO_NEXTMARK  "現在位置から次のマークまでを選択します。\n次のマークまで選択"
+    ID_JUMP_OFFSET          "指定位置へ移動\n指定位置へ移動"
+    ID_JUMP_FILETOP         "ファイルの先頭へ移動\nファイルの先頭"
+    ID_JUMP_FILEEND         "ファイルの最後へ移動\nファイルの最後"
+    ID_JUMP_LASTEDIT        "最後に編集した場所にカーソルを移動します。\n最後に編集した場所"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FIND_PREV            "前方へ検索\n前方へ検索"
+    ID_FIND_NEXT            "後方へ検索\n後方へ検索"
+    ID_MARK_ADDRESS         "現在のカーソル位置をマークまたはマーク解除します\nマーク/マーク解除"
+    ID_MARK_CLEARALL        "記録されているすべてのマークを解除します\nすべてのマークを解除"
+    ID_MARK_PREV            "現在位置より前のマークへ移動\n前のマーク"
+    ID_MARK_NEXT            "現在位置より後ろのマークへ移動\n次のマーク"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TEXT_ASCII           "ASCIIで表示します\nASCIIで表示"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\vwhexedit.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

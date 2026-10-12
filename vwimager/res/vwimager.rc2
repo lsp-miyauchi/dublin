@@ -1,0 +1,38 @@
+//
+// vwimg.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDT_GRADLIST                RCDATA              "res\\gradient.dat"
+IDB_LOADER_WHITE_48X48      RCDATA              "res\\loading_white_48x48.png"
+IDB_S_VIEWBAR               RCDATA              "res\\viewbar20_32bpp.png"
+IDB_M_VIEWBAR               RCDATA              "res\\viewbar24_32bpp.png"
+IDB_S_TOOLBAR               RCDATA              "res\\toolbar20_32bpp.png"
+IDB_M_TOOLBAR               RCDATA              "res\\toolbar24_32bpp.png"
+IDB_SLIDESHOW_START         RCDATA              "res\\slideshow_start.png"
+IDB_SLIDESHOW_PAUSE         RCDATA              "res\\slideshow_pause.png"
+IDB_SLIDESHOW_PREV          RCDATA              "res\\slideshow_prev.png"
+IDB_SLIDESHOW_NEXT          RCDATA              "res\\slideshow_next.png"
+IDB_SLIDESHOW_STOP          RCDATA              "res\\slideshow_stop.png"
+IDB_DRAGDROP_CURSOR         RCDATA              "res\\ddcursor_32bpp.png"
+IDB_LOCK                    RCDATA              "res\\lock_32bpp.png"
+IDB_ANCHOR                  RCDATA              "res\\anchor_32bpp.png"
+IDB_DROPSHADOW_PARTS        RCDATA              "res\\dropshadow_parts 5x5.png"
+IDB_PALETTE                 RCDATA              "res\\palette20_32bpp.png"
+IDB_S_VIEW_APPICON          RCDATA              "res\\vwimage-view20x20.png"
+IDB_M_VIEW_APPICON          RCDATA              "res\\vwimage-view24x24.png"
+IDB_S_EDIT_APPICON          RCDATA              "res\\vwimage-edit20x20.png"
+IDB_M_EDIT_APPICON          RCDATA              "res\\vwimage-edit24x24.png"
+
+/////////////////////////////////////////////////////////////////////////////

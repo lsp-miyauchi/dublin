@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{81FDFA3E-D3E7-4D0F-820B-C9FB9F4F6D03}</ProjectGuid>
+    <RootNamespace>lsfop</RootNamespace>
+    <Keyword>AtlProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfAtl>Static</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</IntDir>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\WTL\include;D:\HtmlHelp\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <TargetEnvironment>X64</TargetEnvironment>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)lsfop.tlb</TypeLibraryName>
+      <HeaderFileName>lsfop_i.h</HeaderFileName>
+      <DllDataFileName>
+      </DllDataFileName>
+      <InterfaceIdentifierFileName>lsfop_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>lsfop_p_x64.c</ProxyFileName>
+      <OutputDirectory>
+      </OutputDirectory>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>..\gnu_libs\json\include;..\lsarcsvr\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_SECURE_ATL;_USRDLL;_LSFOP;_MERGE_PROXYSTUB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0411</Culture>
+      <AdditionalIncludeDirectories>D:\WTL80\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <RegisterOutput>false</RegisterOutput>
+      <AdditionalDependencies>mpr.lib;urlmon.lib;propsys.lib;htmlhelp.lib;lscore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\$(Platform)\lib_$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>.\lsfop.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <DelayLoadDLLs>propsys.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y $(TargetDir)$(TargetName).lib ..\$(Platform)\lib_$(Platform)\
+copy /Y $(TargetPath) ..\$(Platform)\Redist_DLLs\
+</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>d:\wtl\buildversion.exe "$(ProjectDir)$(ProjectName).rc"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\FV7\qsort_ex.cpp" />
+    <ClCompile Include="assoc.cpp" />
+    <ClCompile Include="attrib.cpp" />
+    <ClCompile Include="brief.cpp" />
+    <ClCompile Include="calc_hash.cpp" />
+    <ClCompile Include="cfile.cpp" />
+    <ClCompile Include="chdir.cpp" />
+    <ClCompile Include="chgcaps.cpp" />
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="copy.cpp" />
+    <ClCompile Include="copysid.cpp" />
+    <ClCompile Include="cpenc.cpp" />
+    <ClCompile Include="cperelay.cpp" />
+    <ClCompile Include="data.cpp" />
+    <ClCompile Include="debug.cpp" />
+    <ClCompile Include="DELETE.CPP" />
+    <ClCompile Include="dirgrep.cpp" />
+    <ClCompile Include="dirinfo.cpp" />
+    <ClCompile Include="discstream.cpp" />
+    <ClCompile Include="Divide.cpp" />
+    <ClCompile Include="dlgtab.cpp" />
+    <ClCompile Include="dlldatax.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+    </ClCompile>
+    <ClCompile Include="dllexports.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+    </ClCompile>
+    <ClCompile Include="drgdrp.cpp" />
+    <ClCompile Include="dropdata.cpp" />
+    <ClCompile Include="drvinfo.cpp" />
+    <ClCompile Include="fileitem.cpp" />
+    <ClCompile Include="finfo.cpp" />
+    <ClCompile Include="fmtfd.cpp" />
+    <ClCompile Include="gps.cpp" />
+    <ClCompile Include="icondetail.cpp" />
+    <ClCompile Include="iconpath.cpp" />
+    <ClCompile Include="iconres.cpp" />
+    <ClCompile Include="linkinfo.cpp" />
+    <ClCompile Include="LSFileOperation.cpp" />
+    <ClCompile Include="lsfop.cpp" />
+    <ClCompile Include="match.cpp" />
+    <ClCompile Include="mediainfo.cpp" />
+    <ClCompile Include="Merge.cpp" />
+    <ClCompile Include="pidl.cpp" />
+    <ClCompile Include="propkeys.cpp" />
+    <ClCompile Include="recent.cpp" />
+    <ClCompile Include="reg.cpp" />
+    <ClCompile Include="Rename.cpp" />
+    <ClCompile Include="renext.cpp" />
+    <ClCompile Include="reparse.cpp" />
+    <ClCompile Include="replace_file.cpp" />
+    <ClCompile Include="repnames.cpp" />
+    <ClCompile Include="selfol.cpp" />
+    <ClCompile Include="SeriesNm.cpp" />
+    <ClCompile Include="shell_util.cpp" />
+    <ClCompile Include="shlnew.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="symboliclink.cpp" />
+    <ClCompile Include="Sync.cpp" />
+    <ClCompile Include="syncdata.cpp" />
+    <ClCompile Include="syncrely.cpp" />
+    <ClCompile Include="syncres.cpp" />
+    <ClCompile Include="syslink.cpp" />
+    <ClCompile Include="taskjob.cpp" />
+    <ClCompile Include="vw32.cpp" />
+    <ClCompile Include="lsfop_i.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lsfop.def" />
+    <None Include="res\2k_addbrowse.bmp" />
+    <None Include="res\2k_ar_down.bmp" />
+    <None Include="res\2k_ar_left.bmp" />
+    <None Include="res\2k_ar_right.bmp" />
+    <None Include="res\2k_ar_up.bmp" />
+    <None Include="res\2k_ar_updown.bmp" />
+    <None Include="res\2k_delete.bmp" />
+    <None Include="res\2k_edit.bmp" />
+    <None Include="res\2k_msync.bmp" />
+    <None Include="res\2k_new.bmp" />
+    <None Include="res\2k_prev.bmp" />
+    <None Include="res\2k_prgstat.bmp" />
+    <None Include="res\2k_save.bmp" />
+    <None Include="res\2k_state.bmp" />
+    <None Include="res\2k_syncres.bmp" />
+    <None Include="res\2k_task.bmp" />
+    <None Include="res\addbrowse256.bmp" />
+    <None Include="res\ani_rotate01.ico" />
+    <None Include="res\ani_rotate02.ico" />
+    <None Include="res\ani_rotate03.ico" />
+    <None Include="res\ani_rotate04.ico" />
+    <None Include="res\ani_rotate05.ico" />
+    <None Include="res\ani_rotate06.ico" />
+    <None Include="res\ani_rotate07.ico" />
+    <None Include="res\ani_rotate08.ico" />
+    <None Include="res\ani_s01.ico" />
+    <None Include="res\ani_s02.ico" />
+    <None Include="res\ani_s03.ico" />
+    <None Include="res\ani_s04.ico" />
+    <None Include="res\ani_s05.ico" />
+    <None Include="res\ani_s06.ico" />
+    <None Include="res\ani_sync01.ico" />
+    <None Include="res\ani_sync02.ico" />
+    <None Include="res\ani_sync03.ico" />
+    <None Include="res\ani_sync04.ico" />
+    <None Include="res\ani_sync05.ico" />
+    <None Include="res\ani_sync06.ico" />
+    <None Include="res\ar_down.bmp" />
+    <None Include="res\ar_left.bmp" />
+    <None Include="res\ar_right.bmp" />
+    <None Include="res\ar_up.bmp" />
+    <None Include="res\ar_updown.bmp" />
+    <None Include="res\attrib.ico" />
+    <None Include="res\blackspinner01.ico" />
+    <None Include="res\blackspinner02.ico" />
+    <None Include="res\blackspinner03.ico" />
+    <None Include="res\blackspinner04.ico" />
+    <None Include="res\blackspinner05.ico" />
+    <None Include="res\blackspinner06.ico" />
+    <None Include="res\blackspinner07.ico" />
+    <None Include="res\blackspinner08.ico" />
+    <None Include="res\blackspinner09.ico" />
+    <None Include="res\blackspinner10.ico" />
+    <None Include="res\blackspinner11.ico" />
+    <None Include="res\blackspinner12.ico" />
+    <None Include="res\changecaps.ico" />
+    <None Include="res\cpe.ico" />
+    <None Include="res\crypt.ico" />
+    <None Include="res\cryptdoc.ico" />
+    <None Include="res\delete256.bmp" />
+    <None Include="res\delfile.ico" />
+    <None Include="res\dirinfo.ico" />
+    <None Include="res\divide.ico" />
+    <None Include="res\dsync.ico" />
+    <None Include="res\dummy.ico" />
+    <None Include="res\edit256.bmp" />
+    <None Include="res\fileoperation.ico" />
+    <None Include="res\findurl.ico" />
+    <None Include="res\finfo_assoc.ico" />
+    <None Include="res\finfo_generic.ico" />
+    <None Include="res\finfo_icon.ico" />
+    <None Include="res\finfo_link.ico" />
+    <None Include="res\finfo_version.ico" />
+    <None Include="res\fltdel.ico" />
+    <None Include="res\itsnew.ico" />
+    <None Include="LSFileOperation.rgs" />
+    <None Include="lsfop.rgs" />
+    <None Include="res\makedir.ico" />
+    <None Include="res\mbx_question.ico" />
+    <None Include="res\mbx_stop.ico" />
+    <None Include="res\mbx_warning.ico" />
+    <None Include="res\merge.ico" />
+    <None Include="res\msync.bmp" />
+    <None Include="res\new256.bmp" />
+    <None Include="res\password.ico" />
+    <None Include="res\prgstat256.bmp" />
+    <None Include="res\rename.ico" />
+    <None Include="res\renext.ico" />
+    <None Include="res\replace.ico" />
+    <None Include="res\repname.ico" />
+    <None Include="res\save256.bmp" />
+    <None Include="res\scrsync.ico" />
+    <None Include="res\series.ico" />
+    <None Include="res\shellnew.ico" />
+    <None Include="res\star.ico" />
+    <None Include="res\state.bmp" />
+    <None Include="res\stream.ico" />
+    <None Include="res\sync.ico" />
+    <None Include="res\syncdir.ico" />
+    <None Include="res\synclog.ico" />
+    <None Include="res\syncres.bmp" />
+    <None Include="res\syncscrypt.ico" />
+    <None Include="res\task256.bmp" />
+    <None Include="res\viena_ar_down.bmp" />
+    <None Include="res\viena_ar_left.bmp" />
+    <None Include="res\viena_ar_right.bmp" />
+    <None Include="res\viena_ar_up.bmp" />
+    <None Include="res\viena_ar_updown.bmp" />
+    <None Include="res\viena_edit.bmp" />
+    <None Include="res\viena_msync.bmp" />
+    <None Include="res\viena_new.bmp" />
+    <None Include="res\viena_prev.bmp" />
+    <None Include="res\viena_prgstat.bmp" />
+    <None Include="res\viena_save.bmp" />
+    <None Include="res\viena_syncres.bmp" />
+    <None Include="res\viena_task.bmp" />
+    <None Include="res\whitespinner01.ico" />
+    <None Include="res\whitespinner02.ico" />
+    <None Include="res\whitespinner03.ico" />
+    <None Include="res\whitespinner04.ico" />
+    <None Include="res\whitespinner05.ico" />
+    <None Include="res\whitespinner06.ico" />
+    <None Include="res\whitespinner07.ico" />
+    <None Include="res\whitespinner08.ico" />
+    <None Include="res\whitespinner09.ico" />
+    <None Include="res\whitespinner10.ico" />
+    <None Include="res\whitespinner11.ico" />
+    <None Include="res\whitespinner12.ico" />
+    <None Include="res\xp_ar_down.bmp" />
+    <None Include="res\xp_ar_up.bmp" />
+    <None Include="res\xp_ar_updown.bmp" />
+    <None Include="res\xp_delete.bmp" />
+    <None Include="res\xp_edit.bmp" />
+    <None Include="res\xp_folderbrowse.bmp" />
+    <None Include="res\xp_msync.bmp" />
+    <None Include="res\xp_new.bmp" />
+    <None Include="res\xp_prgstat.bmp" />
+    <None Include="res\xp_save.bmp" />
+    <None Include="res\xp_state.bmp" />
+    <None Include="res\xp_syncres.bmp" />
+    <None Include="res\xp_task.bmp" />
+    <None Include="ReadMe.txt" />
+    <None Include="res\sh160.avi" />
+    <None Include="res\sh161.avi" />
+    <None Include="res\sh164.avi" />
+    <None Include="res\sh165.avi" />
+    <None Include="res\shell32_150.avi" />
+    <None Include="res\xp_search.avi" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="lsfop.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="copy.h" />
+    <ClInclude Include="cperelay.h" />
+    <ClInclude Include="data.h" />
+    <ClInclude Include="dlldatax.h" />
+    <ClInclude Include="dllmain.h" />
+    <ClInclude Include="drivemedia.h" />
+    <ClInclude Include="fastopt.h" />
+    <ClInclude Include="filehandle.h" />
+    <ClInclude Include="fileitem.h" />
+    <ClInclude Include="finfo.h" />
+    <ClInclude Include="fopstd.h" />
+    <ClInclude Include="func.h" />
+    <ClInclude Include="gdiplus_sup.h" />
+    <ClInclude Include="iconres.h" />
+    <ClInclude Include="itemnamelimits.h" />
+    <ClInclude Include="localdd.h" />
+    <ClInclude Include="LSFileOperation.h" />
+    <ClInclude Include="lsfop.h" />
+    <ClInclude Include="mapping_file.h" />
+    <ClInclude Include="match.h" />
+    <ClInclude Include="meter.h" />
+    <ClInclude Include="pidl.h" />
+    <ClInclude Include="progress_sup.h" />
+    <ClInclude Include="reg.h" />
+    <ClInclude Include="reparse.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="rexreplace.h" />
+    <ClInclude Include="shell_util.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="syncdata.h" />
+    <ClInclude Include="sync_refer.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="lsfop_i.h" />
+    <ClInclude Include="taskjob.h" />
+    <ClInclude Include="thread.h" />
+    <ClInclude Include="tiphelp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="lsfop.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\decrypt.ico" />
+    <Image Include="res\encrypt.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="lsfop.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ディスクイメージの作成と復元">
+		<param name="Local" value="./operation/disk/diskimage.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="関連付け">
+		<param name="Local" value="./operation/file/assoc.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ファイルの日時・属性の変更">
+		<param name="Local" value="./operation/file/attrib.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="大文字小文字を置換する">
+		<param name="Local" value="./operation/file/chgcase.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="拡張子の一括変更">
+		<param name="Local" value="./operation/file/chgext.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ファイルの分割">
+		<param name="Local" value="./operation/file/divide.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="一括削除">
+		<param name="Local" value="./operation/file/filterdel.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ファイルの連結">
+		<param name="Local" value="./operation/file/merge.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="連番で名前を変更する">
+		<param name="Local" value="./operation/file/renban.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ファイルの置き換え">
+		<param name="Local" value="./operation/file/replace.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="名前を一括して置換する">
+		<param name="Local" value="./operation/file/repname.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="フィルタ">
+		<param name="Local" value="./operation/filter.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="フォルダサイズ">
+		<param name="Local" value="./operation/folder/dirinfo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ファイル容量の詳細">
+		<param name="Local" value="./operation/folder/dirinfo.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="バックアップ">
+		<param name="Local" value="./operation/folder/syncdir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="リストア">
+		<param name="Local" value="./operation/folder/syncdir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="ミラーリング">
+		<param name="Local" value="./operation/folder/syncdir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="タスクジョブ">
+		<param name="Local" value="./operation/folder/syncdir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="フォルダの同期">
+		<param name="Local" value="./operation/folder/syncdir.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="フォルダの同期を連続して実行する">
+		<param name="Local" value="./operation/folder/syncdir_multi.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="フォルダ同期リストを作成する">
+		<param name="Local" value="./operation/folder/syncdir_script.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="正規表現">
+		<param name="Local" value="./operation/regexp.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="リパースポイント">
+		<param name="Local" value="./tips/reparse_point.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="シンボリック リンク">
+		<param name="Local" value="./tips/symbolic_link.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

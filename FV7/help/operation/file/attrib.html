@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Shift_jis">
+<TITLE>ファイルの日時・属性の変更</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../../index.html">TOP</a> &rsaquo;
+<a href="../../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="../index.html">操作別解説</a> &rsaquo;
+<a href="index.html">ファイル操作</a> &rsaquo;
+ファイルの日時・属性の変更
+</div>
+<!-- 本体 -->
+<h2>ファイルの日時・属性の変更</h2>
+<p>ファイルやフォルダの作成・更新日時、およびファイル属性の変更をおこないます。</p>
+
+<h4>基本のファイル情報</h4>
+<p>ファイルの属性を変更するファイルが複数ある場合、設定元となるファイルを選択します。</p>
+<ul>
+	<li>新しい更新日時<br>
+		更新日時がより新しいファイルを基本の情報として設定します。</li>
+	<li>古い更新日時<br>
+		更新日時がより古いファイルを基本の情報として設定します。</li>
+	<li>新しい作成日時<br>
+		作成日時がより新しいファイルを基本の情報として設定します。</li>
+	<li>古い作成日時<br>
+		作成日時がより古いファイルを基本の情報として設定します。</li>
+	<li>最初のエントリー<br>
+		選択したファイルの先頭のファイルを基本の情報として設定します。</li>
+	<li>最後のエントリー<br>
+		選択したファイルの最後のファイルを基本の情報として設定します。</li>
+</ul>
+
+<h4>更新（および／または作成）日時を変更する</h4>
+<p>ファイルには、</p>
+<ul>
+	<li>ファイルを作成した日時</li>
+	<li>ファイルを最後に更新した日時</li>
+	<li>ファイルを最後にアクセスした日時</li>
+</ul>
+<p>の3種類の日時情報が記録されています。
+FileVisorではこの情報の前者2種類の日時情報を変更することが可能です。<br>
+以下の項目をチェックして、選択されているファイルやフォルダすべてに対して、更新（または／および作成）日時のタイムスタンプを変更します。</p>
+<ul>
+	<li><b>指定の時刻</b><br>
+		ファイル日時を設定した日時に更新します。<br>
+		数値の直接入力の他に、秒・分・時をそれぞれ0リセットするボタンを用意しています。</li>
+	<li><b>現在の時刻</b><br>
+		一般にタッチ機能とよばれるもので、ファイル日時を現在の時刻に設定します。</li>
+</ul>
+
+<h4>FAT/FAT32における制限事項</h4>
+<p>FATおよびFAT32ファイルシステムでは、ファイルシステムの仕様のため、奇数秒の設定ができません。<br>
+例えば “12時50分35秒” と指定しても奇数秒は丸められ、“12時50分36秒”という日時に設定されます。</p>
+
+<h4>ファイル属性を変更する</h4>
+<p>この項目をチェックすると、選択されているファイルやフォルダすべてに対して、ファイルの属性を変更します。</p> 
+
+<h4>フォルダ階層下のファイルにも適用する</h4>
+<p>フォルダが選択されている場合には、そのフォルダ以下に配置されているファイルも日付・属性変更の対象にすることができます。</p>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

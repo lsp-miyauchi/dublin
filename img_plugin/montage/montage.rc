@@ -1,0 +1,159 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\rcdata.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ADDLEFT             ICON                    "res\\addleft.ico"
+IDI_ADDRIGHT            ICON                    "res\\addright.ico"
+IDI_ADDTOP              ICON                    "res\\addtop.ico"
+IDI_ADDBOTTOM           ICON                    "res\\addbottm.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,12
+ PRODUCTVERSION 7,4,0,12
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "montage plug-in"
+            VALUE "FileVersion", "7.4.0.12"
+            VALUE "InternalName", "montage"
+            VALUE "OriginalFilename", "montage.dll"
+            VALUE "ProductVersion", "7.4.0.12"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MERGE DIALOGEX 0, 0, 223, 246
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ブレンド連結"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "現在の画像に新しい画像をブレンド連結させます。",IDC_STATIC,7,7,167,8
+    LTEXT           "読み込む画像ファイル(&F):",IDC_STATIC,7,23,83,8
+    EDITTEXT        IDC_PATH,7,34,193,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_BROWSE,"LSCFlatButton",WS_TABSTOP | 0x1,202,34,14,14
+    CONTROL         "ファイルではなくクリップボードの画像から(&C)",IDC_CLIPBOARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,52,170,10
+    GROUPBOX        "設定",IDC_STATIC,7,74,209,136
+    CONTROL         "左側に連結(&L)",IDC_LEFT,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,25,117,62,10
+    CONTROL         "上側に連結(&T)",IDC_TOP,"Button",BS_AUTORADIOBUTTON,83,95,62,10
+    CONTROL         "右側に連結(&R)",IDC_RIGHT,"Button",BS_AUTORADIOBUTTON,136,117,62,10
+    CONTROL         "下側に連結(&B)",IDC_BOTTOM,"Button",BS_AUTORADIOBUTTON,83,143,62,10
+    ICON            "",IDC_TYPE,99,112,21,20
+    LTEXT           "画像間のスペース(&S):",IDC_STATIC,41,173,64,8
+    EDITTEXT        IDC_SPAN,107,171,30,14,ES_AUTOHSCROLL
+    LTEXT           "ピクセル",IDC_STATIC,140,173,26,8
+    DEFPUSHBUTTON   "OK",IDOK,55,225,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,117,225,50,14
+    LTEXT           "※ この値が負の場合には画像はブレンドされます。",IDC_STATIC,41,188,164,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MERGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\rcdata.rc2"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="arcitem.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="drgdrp.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="loadimage.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm_tree.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm_view.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="match.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="newarc.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="qsort_ex.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="runmanager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="setup.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="utfconvert.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="vwarchive.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="wrapper.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="animationimagelist.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="arcitem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="cdll.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="drgdrp.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfrm.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mousewheeler.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mypanecontainer_ex.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="newarc.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="reg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="waiting.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="wrapper.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="zip.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\archive.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\archive_view.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Arcmil.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Be.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Bmp00001.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Bmp00002.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Linesel.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\lock.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar16x16.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar24x24.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_toolbar16x16.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_toolbar24x24.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\vwarchive.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_iconbar.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_lock.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_m_toolbar.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_toolbar.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_toolbar_m.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_toolbar_s.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="res\crypted.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vwarchive.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

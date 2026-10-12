@@ -1,0 +1,67 @@
+HKCR
+{
+	LSDecrypt.document
+	{
+		Shellex
+		{
+			'{00021500-0000-0000-C000-000000000046}' = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+			ContextMenuHandlers
+			{
+				ForceRemove lssDecrypt = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+			}
+		}
+	}
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssDecryptTo = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+			}
+        }
+	}
+	NoRemove Folder
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssDecryptTo = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+			}
+        }
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssDecryptTo = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+			}
+        }
+	}
+	lsshell.Decrypt.1 = s 'lsshell Decrypt'
+	{
+		CLSID = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+	}
+	lsshell.Decrypt = s 'lsshell Decrypt'
+	{
+		CLSID = s '{E280CDF8-E836-45C2-9C54-0981E973B8DA}'
+		CurVer = s 'lsshell.Decrypt.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E280CDF8-E836-45C2-9C54-0981E973B8DA} = s 'lsshell Decrypt'
+		{
+			ProgID = s 'lsshell.Decrypt.1'
+			VersionIndependentProgID = s 'lsshell.Decrypt'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}
+

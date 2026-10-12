@@ -1,0 +1,171 @@
+LIBRARY         LSCORE
+
+EXPORTS
+				lccGetVersion					@2
+				lccSetVersion					@3
+;@	4
+				lccScreenToClientRect			@5
+				lccClientToScreenRect			@6
+				lccCenterWindow					@7
+				lccVerOpen						@8
+				lccVerClose						@9
+				lccVerGetVersion				@10
+				lccVerQueryValue				@11
+				lccVerGetVersionEx				@12
+				lccVerGetFileOS					@13
+				lccVerGetFileType				@14
+				lccVerGetFileOSFlags			@15
+				lccDllGetVersion				@16
+				lccVerQueryValueEx				@17
+				lccShowAppInfo					@18
+				lccShowAppAbout					@19
+;@	lccMemAlloc						@20
+;@	lccMemFree						@21
+;@	lccMemRealloc					@22
+				lccRegDeleteKeyAll				@23
+				lccRegDeleteValueAll			@24
+				lccRegDeleteValue				@25
+				lccRegGetStrJum					@26
+				lccRegSetStrJum					@27
+				lccRegGetEnumKey				@28
+				lccRegGetBinary					@29
+;@	lccRegGetBinaryEx				@30
+				lccRegSetBinary					@31
+				lccRegGetString					@32
+				lccRegSetString					@33
+				lccRegGetInt					@34
+				lccRegSetInt					@35
+				lccRegGetLibraryPath			@36
+				lccRegGetAppPath				@37
+;@	lccRegGetDefaultVerb			@38
+;@	lccRegGetEntryString			@39
+;@	lccRegGetExtensions				@40
+;@	lccRegGetDefaultIcon			@41
+;@	lccRegGetDefaultIconMode		@42
+				lccRegCheckShellVerb			@43
+				lccRegGetPerceivedType			@44
+;@	45 - 49
+				lccCalcCrc32					@50
+				lccCalcCrc16					@51
+				lccCalcMD5						@52
+				lccCalcSHA1						@53
+				lccCalcSHA256					@54
+;@	55 - 59
+				TileCascadeWindowsW				@60
+				TileCascadeWindows				@61
+;@	62 - 66
+				lccGetAccelString				@67
+				lccApplyAccelMenu				@68
+				lccDisableCharInput				@69
+				lccMemSaveToTempFile			@70
+				lccMemLoadFromTempFile			@71
+				lccLoadGrayedBitmap				@72
+				lccBeginTrack2					@73
+				lccBeginTrack					@74
+				lccInsertControls				@75
+				lccMRUCreateList				@76
+				lccMRUFreeList					@77
+				lccMRUAddString					@78
+				lccMRUDelString					@79
+				lccMRUEnumList					@80
+				lccMRUFindString				@81
+				lccMRUGetCount					@82
+				lccPopView						@83
+				lccDrawBitmap					@84
+;@	lccAssignDrive					@85
+;@	lccGetLocalDrive				@86
+				lccGetNetworkPath				@87
+				lccCommandPrompt				@88
+;@	lccLogonNetwork					@89
+;@	lccRestoreConnection			@90
+				lccRunDllEx						@91
+				lccDllExecute					@92
+				lccDuplicateMemoryHandle		@93
+				lccGetFileCreateOwner			@94
+				lccFormatByteSize64				@95
+				lccFormatFileSize				@96
+				lccDrawEmbossedImage			@97
+				lccColorPicker					@98
+				lccAddTextToListbox				@99
+				lccGetModuleFilePath			@100
+				lccRunDll						@101
+				lccSelectCustomColor			@102
+				lccDrawButtonMenu				@103
+				lccAddChar						@104
+				lccReplaceChar					@105
+				lccColorPickerEx				@106
+				lccGetValues					@107
+				lccIsDigitStr					@108
+				lccIsPathInclude				@109
+				lccNumForm						@110
+				lccSetFileDate					@111
+				lccComparePath					@112
+				lccFindWindowByClassName		@113
+				lccUniqueFilter					@114
+				lccFormatFileTime				@115
+				lccGetBinaryType				@116
+				lccFileAttrToStr				@117
+				lccPatB							@118
+				lccPresent						@119
+				lccSetStringToClipboard			@120
+				lccWriteTextToFile				@121
+				lccExecApp						@122
+				lccErrorBox						@123
+				lccGetErrorString				@124
+				lccDrawShadowText				@125
+				lccMakeTree						@126
+				lccCreateUpdirIcon				@127
+				lccGetShell32Version			@128
+				lccGetTempFileName				@129
+				lccPathBuild					@130
+				lccCompactPath					@131
+				lccCirRed_ul					@132
+				lccCirRed_us					@133
+				lccSetCoolStyle					@134
+				lccGetCoolStyle					@135
+;lccGetArchiveType		@136
+;lccGetArchiveTypeEx	@137
+				lccDrawButtonMenuEx				@138
+				lccUnmapRectFromProgmanPane		@139
+				lccLoadGIFImage					@140
+				lccLoadGIFImageList				@141
+				lccGetBitmapResourceInfo		@142
+				lccIsAlphaBitmapResource		@143
+				lccCreateImageList				@144
+				lccAddPathEnvironment			@145
+				lccTipEdit						@146
+				lccTrackContextMenu				@147
+				lccContextMenuByIDList			@148
+				lccContextMenuByFile			@149
+;lccStrCmpLogical @150
+				lccMapRectToProgmanPane			@151
+				lccPopViewEx					@152
+				lccDrawCustomMenu				@153
+				lccDrawSelectionFrame			@154
+				lccDrawSelectionFrameEx			@155
+				lccContextMenuByShellItem		@156
+;@
+				lccRexInit						@157
+				lccRexMatch						@158
+				lccRexExit						@159
+;@
+				lccThIsThemeActive				@160
+				lccThIsAppThemed				@161
+;@161-169
+				lccDrawSelectionRoundFrame		@170
+				lccDrawSelectionRoundFrameEx	@171
+;@172
+				lccLoadImage					@173
+				lccLoadImageList				@174
+				lccCreateToolBar				@175
+;@176
+				lccReplaceToolBarImageList		@177
+				lccAddToolBarDisabledImageList	@178
+				lccAddToolBarHotImageList		@179
+				lccGetToobarResourceData		@180
+				lccLoadAlphaImageList			@181
+
+;@ ---- とりあえずサポートしておかない
+;@				lccLIMRoundMarker				@200
+;@				lccLIMHorzMarker				@201
+;@				lccLIMSmallRoundMarker			@202

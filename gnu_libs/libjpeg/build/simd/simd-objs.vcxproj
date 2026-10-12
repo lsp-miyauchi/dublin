@@ -1,0 +1,1745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F703D22E-822E-36B5-AA77-9323EFABB187}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>simd-objs</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="E:\github\cairns\gnu_libs\libjpeg\build\simd\simd-objs.dir\nasm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\libjpeg\build;E:\github\cairns\gnu_libs\libjpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\libjpeg\build;E:\github\cairns\gnu_libs\libjpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\libjpeg\build;E:\github\cairns\gnu_libs\libjpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\libjpeg\build;E:\github\cairns\gnu_libs\libjpeg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jccolor-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jccolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jccolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jccolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jccolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jccolor-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jccolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jccolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jccolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jccolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jccolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jccolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jccolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcgray-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jcgray-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jcgray-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jcgray-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jcgray-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcgray-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jcgray-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jcgray-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jcgray-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jcgray-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcgray-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcgray-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgray-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcgryext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jchuff-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jchuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jchuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jchuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jchuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jchuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jchuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jchuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jchuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jchuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jchuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jchuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jchuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jchuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jchuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jchuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jchuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcphuff-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jcphuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcphuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcphuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcphuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jcphuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcphuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcphuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcphuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jcphuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcphuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcphuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcphuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jcphuff-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcphuff-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcphuff-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcphuff-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcsample-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jcsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jcsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jcsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jcsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcsample-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jcsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jcsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jcsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jcsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jcsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jcsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jcsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdcolor-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jdcolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jdcolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jdcolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jdcolor-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdcolor-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jdcolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jdcolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jdcolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jdcolor-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdcolor-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdcolor-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolor-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdcolext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdmerge-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jdmerge-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jdmerge-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jdmerge-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jdmerge-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdmerge-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jdmerge-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jdmerge-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jdmerge-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jdmerge-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdmerge-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdmerge-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmerge-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdmrgext-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdsample-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jdsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jdsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jdsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jdsample-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdsample-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jdsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jdsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jdsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jdsample-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jdsample-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jdsample-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jdsample-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctflt-sse.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jfdctflt-sse.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctflt-sse.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctflt-sse.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctflt-sse.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jfdctflt-sse.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctflt-sse.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctflt-sse.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctflt-sse.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jfdctflt-sse.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctflt-sse.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctflt-sse.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctflt-sse.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jfdctflt-sse.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctflt-sse.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctflt-sse.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctflt-sse.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctfst-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jfdctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jfdctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jfdctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jfdctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctint-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jfdctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jfdctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jfdctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jfdctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctint-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jfdctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jfdctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jfdctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jfdctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jfdctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jfdctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jfdctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctflt-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jidctflt-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctflt-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctflt-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctflt-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jidctflt-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctflt-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctflt-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctflt-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jidctflt-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctflt-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctflt-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctflt-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jidctflt-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctflt-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctflt-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctflt-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctfst-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jidctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jidctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jidctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jidctfst-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctfst-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctfst-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctfst-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctint-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jidctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jidctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jidctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jidctint-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctint-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jidctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jidctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jidctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jidctint-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctint-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctint-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctint-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctred-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jidctred-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctred-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctred-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctred-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jidctred-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctred-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctred-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctred-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jidctred-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctred-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctred-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctred-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jidctred-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jidctred-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jidctred-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jidctred-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jquantf-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jquantf-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquantf-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquantf-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquantf-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jquantf-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquantf-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquantf-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquantf-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jquantf-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquantf-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquantf-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquantf-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jquantf-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquantf-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquantf-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquantf-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jquanti-avx2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jquanti-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jquanti-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jquanti-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jquanti-avx2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-avx2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-avx2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-avx2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jquanti-sse2.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jquanti-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jquanti-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jquanti-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jquanti-sse2.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jquanti-sse2.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jquanti-sse2.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jquanti-sse2.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jsimdcpu.asm.obj.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating $(Configuration)/jsimdcpu.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jsimdcpu.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jsimdcpu.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jsimdcpu.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating $(Configuration)/jsimdcpu.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jsimdcpu.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jsimdcpu.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jsimdcpu.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating $(Configuration)/jsimdcpu.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jsimdcpu.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jsimdcpu.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jsimdcpu.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating $(Configuration)/jsimdcpu.asm.obj</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\Tools\nasm-2.15.05\nasm.exe -fwin64 -DWIN64 -D__x86_64__ -I"E:/github/cairns/gnu_libs/libjpeg/simd/nasm/" -I"E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/" E:/github/cairns/gnu_libs/libjpeg/simd/x86_64/jsimdcpu.asm -oE:/github/cairns/gnu_libs/libjpeg/build/simd/$(Configuration)/jsimdcpu.asm.obj
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jsimdcpu.asm;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jcolsamp.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jdct.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdcfg.inc;E:\github\cairns\gnu_libs\libjpeg\simd\nasm\jsimdext.inc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\73622af11ca9b75326a4fa062dfb2929\simd-objs.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\simd-objs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\simd-objs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\simd-objs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'"></Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj;E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\simd-objs</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\simd\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/github/cairns/gnu_libs/libjpeg/simd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/libjpeg -BE:/github/cairns/gnu_libs/libjpeg/build --check-stamp-file E:/github/cairns/gnu_libs/libjpeg/build/simd/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASM_NASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLanguage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Templates\MSBuild\nasm.props.in;E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\3.27.2-msvc1\CMakeASM_NASMCompiler.cmake;E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\CheckASM_NASM\result.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/github/cairns/gnu_libs/libjpeg/simd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/libjpeg -BE:/github/cairns/gnu_libs/libjpeg/build --check-stamp-file E:/github/cairns/gnu_libs/libjpeg/build/simd/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASM_NASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLanguage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Templates\MSBuild\nasm.props.in;E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\3.27.2-msvc1\CMakeASM_NASMCompiler.cmake;E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\CheckASM_NASM\result.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/github/cairns/gnu_libs/libjpeg/simd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/libjpeg -BE:/github/cairns/gnu_libs/libjpeg/build --check-stamp-file E:/github/cairns/gnu_libs/libjpeg/build/simd/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASM_NASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLanguage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Templates\MSBuild\nasm.props.in;E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\3.27.2-msvc1\CMakeASM_NASMCompiler.cmake;E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\CheckASM_NASM\result.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/github/cairns/gnu_libs/libjpeg/simd/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/libjpeg -BE:/github/cairns/gnu_libs/libjpeg/build --check-stamp-file E:/github/cairns/gnu_libs/libjpeg/build/simd/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMCompiler.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeASM_NASMInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeFindBinUtils.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeTestASM_NASMCompiler.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLanguage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Templates\MSBuild\nasm.props.in;E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\3.27.2-msvc1\CMakeASM_NASMCompiler.cmake;E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\CheckASM_NASM\result.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\simd-objs">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\github\cairns\gnu_libs\libjpeg\build\ZERO_CHECK.vcxproj">
+      <Project>{4D5E4B4A-2E2F-34AE-9AFA-31A2ADABCF2A}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Templates\MSBuild\nasm.targets" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,5 @@
+LIBRARY	vwhexedit
+
+EXPORTS
+		RunEdit				@10
+		RunEditW			@11

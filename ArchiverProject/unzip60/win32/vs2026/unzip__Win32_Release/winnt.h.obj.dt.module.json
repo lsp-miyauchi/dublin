@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": ".\\unzip__Win32_Release\\winnt.obj",
+            "outputs": [
+                ".\\unzip__Win32_Release\\winnt.h.obj.dt.module.json",
+                ".\\unzip__Win32_Release\\winnt.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

@@ -1,0 +1,141 @@
+#include <windows.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <limits.h>
+
+
+///////////////////////////////////////////////////////////////
+// DDDDDMMMMYYYxxxx
+// 1111111111111111
+// mask d=0xf800
+//      m=0x0780
+//      y=0x0070
+//
+#define K2E_DAY(d)		(((d) & 0xf800) >> 11)
+#define K2E_MON(d)		(((d) & 0x0780) >> 7)
+#define K2E_YEAR(d)		(((d) & 0x0070) >> 4)
+#define K2C_DAY(d)		(((d) << 11) & 0xf800)
+#define K2C_MON(d)		(((d) << 7) & 0x0780)
+#define K2C_YEAR(d)		(((d) << 4) & 0x0070)
+
+#define CRCPOLY16		0x1021
+#define CRCPOLY32		0x04C11DB7
+
+#define LODWORD(a)				(*((DWORD*)&(a)))
+#define HIDWORD(a)				(*(((DWORD*)&(a)) + 1))
+#define SETDWORDLONG(a,b,c)		(*((DWORD*)&(a))=(b),*(((DWORD*)&(a))+1)=(c))
+
+static char maptbl[] = "0123456789ABCDEF";
+
+
+
+_inline static void initcrc16tbl(WORD* ptbl)
+{
+	register WORD i, j , r;
+	for (i = 0; i <= UCHAR_MAX; i++)
+	{
+		r = i << (16 - CHAR_BIT);
+		for (j = 0; j < CHAR_BIT; j++)
+		{
+			if (r & 0x8000)
+				r = (r << 1) ^ CRCPOLY16;
+			else
+				r <<= 1;
+		}
+		ptbl[i] = r & 0xFFFF;
+	}
+}
+
+_inline WORD crc16(int n, BYTE* pcb, WORD* ptbl)
+{
+	register WORD r = 0xFFFF;
+	while (--n >= 0)
+		r = (r << CHAR_BIT) ^ ptbl[(BYTE)(r >> (16 - CHAR_BIT)) ^ *pcb++];
+	return ~r & 0xFFFF;
+}
+
+_inline DWORDLONG getmapvalue(LPCSTR pszString)
+{
+	register char* p;
+	DWORDLONG dl = 0;
+	while (*pszString)
+	{
+		p = maptbl;
+		while (*p)
+		{
+			if (*p == toupper(*pszString))
+			{
+				dl = Int64ShllMod32(dl, 4);
+				dl |= (DWORDLONG)(p - maptbl);
+				break;
+			}
+			p++;
+		}
+		pszString++;
+	}
+	return dl;
+}
+
+//////////////////////////////////////////////////////////
+// êVÇµÇ¢ÉpÉXÇÕ -s1- -s2- -s3- -s4-
+//              ----                     !CRC16
+//                   --                  HI-SEQ BYTE
+//                     -x                LO-DATE BYTE
+//                        --             HI-DATE BYTE
+//                          --           LO-SEQ BYTE
+//                             ----      CRC16
+
+void fv5_encnum(int year, int month, int day, int seq, LPSTR code)
+{
+	WORD crc16tbl[UCHAR_MAX + 1];
+	initcrc16tbl(crc16tbl);
+
+	char body[16];
+	WORD s1, s2, s3, s4, date;
+	date = K2C_YEAR(year - 2001) + K2C_MON(month) + K2C_DAY(day);
+	s2 = (HIBYTE(seq) << 8) | LOBYTE(date);
+	s3 = (HIBYTE(date) << 8) | LOBYTE(seq);
+	sprintf(body, "%04X%04X", s2, s3);
+	s4 = crc16(8, (BYTE*)body, crc16tbl);
+	s1 = 0xffff ^ s4;
+	sprintf(code, "%04X-%04X-%04X-%04X", s1, s2, s3, s4);
+}
+
+#define S1(a)		(HIWORD(HIDWORD((a))))
+#define S2(a)		(LOWORD(HIDWORD((a))))
+#define S3(a)		(HIWORD(LODWORD((a))))
+#define S4(a)		(LOWORD(LODWORD((a))))
+
+void fv5_decnum(LPSTR code)
+{
+	WORD crc16tbl[UCHAR_MAX + 1];
+	initcrc16tbl(crc16tbl);
+
+	WORD crc, date;
+	DWORDLONG dl = getmapvalue(code);
+	printf("%08X%08X\n", HIDWORD(dl), LODWORD(dl));
+
+	if ((0xffff ^ S1(dl)) != S4(dl))
+		printf("1st crc unmatched with 2nd crc\n");
+	char tmp[16];
+	int len = sprintf(tmp, "%04X%04X", S2(dl), S3(dl));
+	crc = crc16(len, (BYTE*)tmp, crc16tbl);
+	if (crc != S4(dl))
+		printf("crc error\n");
+	date = (S3(dl) & 0xff00) | LOBYTE(S2(dl));
+	printf("%d %d %d\n", K2E_YEAR(date) + 2001, K2E_MON(date), K2E_DAY(date));
+	printf("seq = %d\n", (S2(dl) & 0xff00) | LOBYTE(S3(dl)));
+}
+
+void main(int argc, char** argv)
+{
+	if (argc != 5)
+		return;
+
+	char code[256];
+	fv5_encnum(atoi(argv[1]), atoi(argv[2]), atoi(argv[3]), atoi(argv[4]), code);
+	printf("%s\n", code);
+
+	fv5_decnum(code);
+}

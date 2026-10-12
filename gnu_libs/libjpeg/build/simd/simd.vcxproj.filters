@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\simd\x86_64\jsimd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\simd\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CBFE0C7D-E0A2-3CAD-9304-0D62F9E0AE1E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

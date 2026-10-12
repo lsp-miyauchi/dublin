@@ -1,0 +1,172 @@
+LIBRARY         LSIMG
+
+EXPORTS
+        imgLoadImage			@7
+        imgEnableCallback		@8
+        imgSetCallback			@9
+        imgSetVersion			@10
+        imgLoadThumbnail		@16
+        imgCalculateHistogram	@20
+        imgRetrieveHistgram		@21
+        imgPaintDIB				@22
+        imgPaintBitmap			@23
+        imgDrawBitmap			@24
+        imgCreatePalette		@26
+        imgCreateBitmapFromDIB	@27
+        imgCreateDIBFromBitmap	@28
+        imgChangeDIBFormat		@29
+        imgChangeBitmapFormat	@30
+        imgGetSystemPalette		@31
+        imgCopyBitmap			@32
+        imgCopyPalette			@33
+        imgGetDIBInfo			@34
+        imgLagFill				@35
+        imgLagFillEx			@36
+        imgSavePalette			@37
+        imgLoadPalette			@38
+        imgReplacePalette		@39
+        imgGetReadableTypes		@40
+        imgTiledBitmap			@41
+        imgLoadBitmapFromResource	@42
+        imgLoadDIBFromResource	@43
+        imgCopyImageToClipboard	@44
+;@
+        imgScalePrint			@102
+        imgScaleFilter			@103
+        imgScaleLinear			@104
+        imgScaleNear			@107
+;@
+        imgScaleInFrame			@115
+;@
+        imgCreateSolid			@160
+        imgToneCurve			@171
+        imgToneCurveEx			@172
+;@
+        imgCheckImageType		@218
+        imgSpecifyImageType		@219
+        imgSetXparentColor		@221
+        imgMapIndexColor		@222
+        mifIncreaseColor		@244
+        mifDecreaseColorDirect	@245
+;@
+        imgPngSave				@270
+        imgPngLoad				@271
+        imgPngLoadMem			@272
+        imgPngSaveMem			@273
+        imgPngSaveParams		@274
+        imgPngSaveMemParams		@275
+        imgGifLoadMemEx			@276
+        imgMagLoad				@278
+        imgMkiLoad				@279
+        imgDibSaveMem			@280
+        imgDibSave				@281
+        imgDibLoadMem			@282
+        imgDibLoad				@283
+        imgGifLoadMem			@284
+        imgGifLoad				@285
+        imgGifSaveMemParams		@286
+        imgGifSaveParams		@287
+        imgGifSave				@289
+        imgTgaSaveMem			@290
+        imgTgaSave				@291
+        imgTgaLoadMem			@292
+        imgTgaLoad				@293
+        imgPcxLoad				@294
+        imgPcxLoadMem			@295
+        imgRasSave				@296
+        imgRasLoad				@297
+        imgRasLoadMem			@298
+        imgPsdSave				@299
+        imgPsdLoad				@300
+        imgPcdLoad				@301
+        imgPsdThumbLoad			@302
+        imgPcxSaveMem			@303
+        imgPcxSave				@304
+        imgPcdLoadEx			@305
+;@307
+        imgDibToClipboard		@308
+        imgDibFromClipboard		@309
+        imgXjgSave				@310
+;@		imgXjgLoadMem			@311
+        imgXjgLoad				@312
+        imgXjgEncryptFile		@313
+        imgXjgDecryptFile		@314
+        imgXjgGetImageInfo		@315
+;@316
+;@317
+;@318
+;@319
+        imgTifSave				@320
+        imgTifLoad				@321
+        imgTifSaveParams		@322
+;@323
+;@324
+;@325
+;@326
+;@327
+        imgJpgLoadStreamParams	@328
+        imgJpgLoadStream		@329
+        imgJpgLoadMemParams		@330
+        imgJpgLoadMem			@331
+        imgJpgLoadParams		@332
+        imgJpgGetImageSize		@333
+        imgJpgSaveMemParams		@334
+        imgJpgSaveParams		@335
+        imgJpgSaveMem			@336
+        imgJpgSave				@337
+        imgJpgLoadScaled		@338
+        imgCamLoad				@339
+        imgCamSave				@340
+        imgSgiLoad				@341
+        imgSgiSave				@342
+        imgSgiSaveMem			@343
+        imgWmfLoad				@344
+        imgWmfLoadMem			@345
+        imgPnmLoad				@346
+        imgIcoLoad				@347
+        imgTxrLoad				@348
+        imgJpgSaveMemParamsSt	@350
+;@              imgJpgSaveParamsSt		@351
+        imgGifSaveMemParamsSt	@352
+        imgGifSaveParamsSt		@353
+        imgXpmLoad				@354
+        imgXbmLoad				@355
+        imgFpxLoad				@357
+        imgFpxLoadEx			@358
+;@				imgFpxLoadExMem			@359
+        imgFpxSave				@360
+        imgFpxSaveEx			@361
+;@				imgFpxSaveExMem			@362
+        imgFpxLoadThumbnail		@363
+        imgGetTxrInfo			@364
+        imgPnmSave				@365
+        imgJp2Load				@366
+        imgJp2LoadMem			@367
+        imgJp2Save				@368
+        imgJp2SaveEx			@369
+        imgJp2SaveMemEx			@370
+        imgJpgSetOrientation	@371
+;@
+        imgTxrLoadFromResource	@377
+        imgGetResourceTxrInfo	@378
+;@
+        imgCrwLoad				@380
+        imgDCRawLoad			@381
+;@
+		imgWebpLoadMem			@402
+		imgWebpLoad				@404
+		imgWebpLoadScaled		@405
+		imgWebpGetImageSize		@406
+		imgWebpSaveMem			@409
+		imgWebpSave				@410
+		imgWebpSaveMemParams	@411
+		imgWebpSaveParams		@412
+;@
+		imgAvifLoadMem			@422
+		imgAvifLoad				@424
+		imgAvifLoadScaled		@425
+		imgAvifGetImageSize		@426
+		imgAvifSaveMem			@429
+		imgAvifSave				@430
+		imgAvifSaveMemParams	@431
+		imgAvifSaveParams		@432

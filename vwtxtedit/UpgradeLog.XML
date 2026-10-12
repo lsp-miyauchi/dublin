@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="vwtxtedit">
+</Property><Property Name="ソリューション ファイル" Value="E:\VIENA7\vwtxtedit\vwtxtedit.sln">
+</Property><Property Name="ユーザー オプション ファイル" Value="E:\VIENA7\vwtxtedit\vwtxtedit.suo">
+</Property><Property Name="Date" Value="2008年2月11日">
+</Property><Property Name="Time" Value="10:24">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="vwtxtedit.sln" Description="ファイルは正常に E:\VIENA7\vwtxtedit\vwtxtedit.sln.old としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="" Source="vwtxtedit.suo" Description="ファイルは正常に E:\VIENA7\vwtxtedit\vwtxtedit.suo.old としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="vwtxtedit" Source="vwtxtedit.vcproj" Description="ATL サーバーのサポートはこのバージョンの Visual Studio から削除されました。ATL プロジェクトで ATL サーバー機能を使用している場合、プロジェクトをビルドできません。代替方法の一覧については、MSDN のドキュメントを参照してください。">
+</Event><Event ErrorLevel="0" Project="vwtxtedit" Source="vwtxtedit.vcproj" Description="ローカルの IIS サーバーへの Web 配置はサポートされなくなりました。Web 配置ビルド ツールはプロジェクト設定から削除されました。">
+</Event><Event ErrorLevel="1" Project="vwtxtedit" Source="vwtxtedit.vcproj" Description="このアプリケーションは、Windows Vista のユーザー アカウント制御 (UAC) 機能に関連する設定を含むように更新されました。既定で、UAC を有効にして Windows Vista 上でアプリケーションを実行すると、起動したプロセスと同じ特権で実行するようにマークされます。このマークによって、アプリケーションの仮想化による実行も無効になります。プロジェクトのプロパティ ページから UAC 関連の設定を変更できます。">
+</Event><Event ErrorLevel="0" Project="vwtxtedit" Source="vwtxtedit.vcproj" Description="プロジェクト ファイルは正常に 'E:\VIENA7\vwtxtedit\vwtxtedit.vcproj.8.00.old' としてバックアップされました。">
+</Event><Event ErrorLevel="0" Project="vwtxtedit" Source="vwtxtedit.vcproj" Description="プロジェクトは正常にアップグレードされました。">
+</Event><Event ErrorLevel="3" Project="vwtxtedit" Source="vwtxtedit.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="vwtxtedit.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="vwtxtedit.sln" Description="Converted">
+</Event></UpgradeLog>

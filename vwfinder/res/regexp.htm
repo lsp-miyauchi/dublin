@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-932">
+<title>正規表現の構文</title>
+<style type="text/css">
+<!--
+body {
+	font: MS Pゴシック, osaka, MS Gothic; font-size: 10pt;
+	margin-left: 10px; margin-top: 10px; margin-width: 10px; margin-height: 10px; margin-right: 10px;
+}
+p { margin-top: 8px; margin-bottom: 8px; }
+li { margin-left: 10px; }
+ol { margin-left: 18px; margin-top: 8px; }
+ul { margin-left: 10px; margin-top: 8px; margin-bottom: 8px; }
+tr { font: MS Pゴシック, osaka, MS Gothic; font-size: 10pt; }
+td { font: MS Pゴシック, osaka, MS Gothic; font-size: 10pt; }
+blockquote { margin-left: 10px; margin-top: 8px; margin-bottom: 12px; margin-right: 12px}
+table.dtTABLE
+	{
+	width: 100%; /* Forces tables to have correct right margin */
+	margin-top: .6em;
+	margin-bottom: .3em;
+	border-width: 1px 1px 0px 0px;
+	border-style: solid;
+	border-color: #999999;
+	background-color: #999999; 
+	font-size: 100%; /* Text in Table is same size as text outside table */
+	}
+table.dtTABLE th, table.dtTABLE td
+	{ 
+	border-style: solid; /* Creates the cell border and color */
+	border-width: 0px 0px 1px 1px;
+	border-style: solid;
+	border-color: #999999;
+	padding: 4px 6px;
+	text-align: left;
+	}
+table.dtTABLE th	
+	{ 
+	background: #cccccc; /* Creates the shaded table header row */
+	vertical-align: bottom;
+	}
+table.dtTABLE td	
+	{
+	background: #ffffff;
+	vertical-align: top;
+	}
+//-->
+</style>
+</head>
+<body>
+<p><b>正規表現の構文</b></p>
+<p>正規表現で解釈するメタ文字を次の一覧表に示します。</p>
+<div align=center>
+<table class="dtTABLE" cellpadding = 0 cellspacing=0 width=90%>
+	<tr vAlign=top class="headbk">
+		<th width="19%">メタ文字</th>
+		<th width="81%">説明</th>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">.</td>
+		<td width="81%">任意の 1 文字に一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">[ ]</td>
+		<td width="81%">文字クラスを示します。角かっこ内のいずれかの文字に一致します。たとえば、<code class="ce">[abc]</code> 
+		と指定した場合、&quot;a&quot;、&quot;b&quot;、および &quot;c&quot; のいずれかに一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">^</td>
+		<td width="81%">
+		文字クラスの先頭にこのメタ文字がある場合は、後に続く文字クラスが否定されます。このように指定した文字クラスは、角かっこ内の文字以外の任意の文字に一致します。たとえば、<code class="ce">[^abc]</code> 
+		と指定した場合、&quot;a&quot;、&quot;b&quot;、および &quot;c&quot; 以外のすべての文字と一致します。 
+		<p>正規表現の先頭にある <code class="ce">^</code> は、入力文字列の先頭に一致します。たとえば、<code class="ce">^[abc]</code> 
+		と指定した場合、&quot;a&quot;、&quot;b&quot;、または &quot;c&quot; で始まる入力文字列だけに一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">-</td>
+		<td width="81%">文字クラスの中で使用され、文字の範囲を示します。たとえば、<code class="ce">[0-9]</code> 
+		と指定した場合、&quot;0&quot; から &quot;9&quot; までの任意の数字に一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">?</td>
+		<td width="81%">直前の正規表現に一致する文字があるかないかわからない場合に使用します。つまり、その正規表現が 0 
+		回または 1 回出現するものと一致します。たとえば、<code class="ce">[0-9][0-9]?</code> 
+		と指定した場合、&quot;2&quot; と &quot;12&quot; のいずれにも一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">+</td>
+		<td width="81%">直前の正規表現の 1 回以上の繰り返しに一致します。たとえば、<code class="ce">[0-9]+</code> 
+		と指定した場合、&quot;1&quot;、&quot;13&quot;、&quot;666&quot; のいずれにも一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">*</td>
+		<td width="81%">直前の正規表現の 0 回以上の繰り返しに一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">??, +?, *?</td>
+		<td width="81%"><code class="ce">?</code>、<code class="ce">+</code>、および 
+		<code class="ce">*</code> 
+		の最短一致。可能な限り広範囲に一致する最長一致とは異なり、最小範囲に一致します。たとえば、&quot;&lt;abc&gt;&lt;def&gt;&quot; 
+		という文字列がある場合、<code class="ce">&lt;.*?&gt;</code> と指定すると &quot;&lt;abc&gt;&quot; に一致し、<code class="ce">&lt;.*&gt;</code> 
+		と指定すると &quot;&lt;abc&gt;&lt;def&gt;&quot; に一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">( )</td>
+		<td width="81%">グループ化演算子。たとえば、<code class="ce">(\d+,)*\d+</code> 
+		と指定した場合、コンマで区切られた数字のリスト (&quot;1&quot;、&quot;1,23,456&quot; など) に一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">{ }</td>
+		<td width="81%">一致グループを示します。中かっこ内の正規表現に一致する実際のテキストを入力文字列から取得できます。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">\</td>
+		<td width="81%">エスケープ文字。次に続く文字が、特殊文字としてではなく通常の文字として解釈されます。たとえば、<code class="ce">[0-9]+</code> 
+		と指定した場合は 1 つ以上の数字に一致しますが、<code class="ce">[0-9]\+</code> 
+		と指定した場合は 1 つの数字にプラス記号が続いた文字列に一致します。この文字は省略形としても使用されます。たとえば、<code class="ce">\a</code> 
+		は任意の英数字を示します。次の表を参照してください。 
+		<p><code class="ce">\</code> の後ろに数字 <i>n</i> が続く場合は、<i>n</i> 
+		番目の一致グループに一致します。番号は 0 から始まります。たとえば、<code class="ce">&lt;{.*?}&gt;.*?&lt;/\0&gt;</code> 
+		は &quot;&lt;head&gt;Contents&lt;/head&gt;&quot; に一致します。</p></td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">$</td>
+		<td width="81%">正規表現の末尾にある <code class="ce">$</code> 
+		は、入力文字列の末尾に一致します。たとえば、<code class="ce">[0-9]$</code> 
+		と指定した場合、入力文字列の末尾にある数字に一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">|</td>
+		<td width="81%">選択演算子。この演算子で区切られた 2 つの正規表現のいずれかに一致します。たとえば、<code class="ce">T|the</code> 
+		と指定した場合、&quot;The&quot; または &quot;the&quot; に一致します。</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="19%">!</td>
+		<td width="81%">否定演算子。<code class="ce">!</code> 
+		に続く正規表現は否定されます。たとえば、<code class="ce">a!b</code> と指定した場合、後ろに &quot;b&quot; 
+		が続いていない &quot;a&quot; に一致します。</td>
+	</tr>
+</table>
+</div>
+
+<p class="label"><b>省略形</b></p>
+<p>正規表現では、<code class="ce">[0-9]</code> の代わりに <code class="ce">\d</code> 
+などの省略形を扱うことができます。</p>
+<div align=center>
+<table cellSpacing="0" class="dtTABLE" width=90%>
+	<tr vAlign=top class="headbk">
+		<th width="17%">省略形</th>
+		<th width="83%">対応する表現</th>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\a</td>
+		<td width="83%">任意の英数字 : ([a-zA-Z0-9])</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\b</td>
+		<td width="83%">空白 : ([ \\t])</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\c</td>
+		<td width="83%">任意の英字 : ([a-zA-Z])</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\d</td>
+		<td width="83%">任意の 10 進数字 : ([0-9])</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\h</td>
+		<td width="83%">任意の 16 進数字 : ([0-9a-fA-F])</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\n</td>
+		<td width="83%">改行文字 : (\r|(\r?\n))</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\q</td>
+		<td width="83%">引用符で囲まれた文字列 : (\&quot;[^\&quot;]*\&quot;)|(\'[^\']*\')</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\w</td>
+		<td width="83%">単語 : ([a-zA-Z]+)</td>
+	</tr>
+	<tr vAlign=top>
+		<td width="17%">\z</td>
+		<td width="83%">整数 : ([0-9]+)</td>
+	</tr>
+</table>
+</div>
+</body>
+</html>

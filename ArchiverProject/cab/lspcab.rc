@@ -1,0 +1,377 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""lspcab.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,98,5,0
+ PRODUCTVERSION 0,98,5,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104e4"
+        BEGIN
+            VALUE "Comments", "Common Archiver Project's LSPCAB.DLL using Microsoft's FDI/FCI Library."
+            VALUE "CompanyName", "LightShip Software"
+            VALUE "FileDescription", "LSPCAB"
+            VALUE "FileVersion", "0.98.5.0"
+            VALUE "InternalName", "LSPCAB"
+            VALUE "LegalCopyright", "Portion (C)1997-2011 LightShip Software. and Kuniaki Miyauchi."
+            VALUE "OriginalFilename", "lspcab.dll"
+            VALUE "ProductName", "Common Archiver Project"
+            VALUE "ProductVersion", "0.98.5.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_NEXTCAB DIALOGEX 0, 0, 316, 102
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "キャビネットファイルの解凍"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_NEXTCAB,IDC_STATIC,7,7,21,20
+    LTEXT           "解凍に必要なファイルが見つかりません。\n\nファイルの存在する場所を再度指定するか、メディアの入れ替えをおこなってください。",IDC_STATIC,32,7,277,34
+    LTEXT           "ファイル名:",IDC_STATIC,7,43,38,8
+    LTEXT           "",IDC_CABFILE,46,43,263,8
+    LTEXT           "場所:",IDC_STATIC,7,56,37,8
+    EDITTEXT        IDC_PATH,46,54,211,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "参照(&B)...",IDC_BROWSE,259,54,50,14
+    DEFPUSHBUTTON   "OK",IDOK,104,82,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,161,82,50,14
+END
+
+IDD_CABPACK DIALOGEX 0, 0, 317, 59
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "キャビネットファイルを操作しています..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "キャンセル",IDCANCEL,253,38,57,14
+    CONTROL         "Progress1",IDC_METER,"msctls_progress32",0x0,7,40,243,12
+    LTEXT           "ファイル名:",IDC_STATIC,7,7,36,8
+    LTEXT           "",IDC_TITLE,45,7,265,8
+    LTEXT           "",IDC_TEXT,45,18,265,8
+    LTEXT           "",IDC_MESSAGE,7,18,36,8
+END
+
+IDD_REPLACE DIALOGEX 38, 17, 338, 150
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの置き換え"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_REPLACE,IDC_STATIC,6,6,20,20
+    LTEXT           "同名のファイルが存在しています。",IDC_STATIC,34,12,122,8
+    LTEXT           "",IDC_SRCNAME,6,32,241,8,SS_NOPREFIX
+    LTEXT           "から",IDC_STATIC,257,32,18,8
+    LTEXT           "",IDC_SRCPROP,25,44,224,18,SS_NOPREFIX
+    LTEXT           "",IDC_DSTNAME,6,70,241,8,SS_NOPREFIX
+    LTEXT           "へ",IDC_STATIC,257,70,18,8
+    LTEXT           "",IDC_DSTPROP,25,82,224,18,SS_NOPREFIX
+    GROUPBOX        "対処方法",IDC_STATIC,6,110,268,32
+    CONTROL         "新しい時刻のみ(&T)",IDC_NEWONLY,"Button",BS_AUTORADIOBUTTON,15,124,72,10
+    CONTROL         "上書き(&O)",IDC_OVERWRITE,"Button",BS_AUTORADIOBUTTON,110,124,52,10
+    CONTROL         "無視(&I)",IDC_IGNORE,"Button",BS_AUTORADIOBUTTON,181,124,39,10
+    DEFPUSHBUTTON   "OK",IDOK,280,6,52,14
+    PUSHBUTTON      "以降全て(&A)",IDC_YESTOALL,280,24,52,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,280,42,52,14
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 231, 133
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Cabinet Libraryの設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_CAB,IDC_STATIC,7,7,21,20
+    LTEXT           "Pack/Unpack Cabinet Library",IDC_STATIC,36,13,181,8
+    GROUPBOX        "圧縮方式",IDC_STATIC,7,45,217,56
+    CONTROL         "MS&ZIP",IDC_PACK_MSZIP,"Button",BS_AUTORADIOBUTTON,23,61,41,10
+    CONTROL         "&LZX",IDC_PACK_LZX,"Button",BS_AUTORADIOBUTTON,23,76,41,10
+    LTEXT           "レベル(15-21):",IDC_STATIC,73,76,46,8
+    EDITTEXT        IDC_LZX_LEVEL,121,74,33,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_LZX_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,155,74,9,14
+    DEFPUSHBUTTON   "OK",IDOK,57,112,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,125,112,50,14
+END
+
+IDD_SFXCFG DIALOGEX 0, 0, 277, 292
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自己解凍形式書庫の作成"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_STUB,IDC_STATIC,12,8,21,20
+    LTEXT           "自己解凍形式の書庫を作成します。",IDC_STATIC,40,15,118,8
+    LTEXT           "タイトル(&T):",IDC_STATIC,8,39,100,8
+    EDITTEXT        IDC_TITLE,18,50,253,14,ES_AUTOHSCROLL
+    LTEXT           "メッセージ(&M):",IDC_STATIC,6,72,100,8
+    EDITTEXT        IDC_MESSAGE,18,83,253,14,ES_AUTOHSCROLL
+    LTEXT           "既定の解凍先(&P):",IDC_STATIC,6,103,100,8
+    EDITTEXT        IDC_PATH,18,114,253,14,ES_AUTOHSCROLL
+    GROUPBOX        "動作対象",IDC_STATIC,6,141,265,37,WS_TABSTOP
+    CONTROL         "x64 版",IDC_X64SFX,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,18,156,38,10
+    CONTROL         "i86 版",IDC_I86SFX,"Button",BS_AUTORADIOBUTTON,83,156,35,10
+    GROUPBOX        "解凍後の処理",IDC_STATIC,6,188,265,74
+    LTEXT           "解凍後、実行または開くファイル名(&C):",IDC_STATIC,17,207,162,8
+    EDITTEXT        IDC_COMMAND,16,218,246,14,ES_AUTOHSCROLL
+    CONTROL         "プログラム終了後、解凍されたファイルを削除する",IDC_CHASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,240,163,10
+    DEFPUSHBUTTON   "OK",IDOK,79,272,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,143,272,50,14
+END
+
+IDD_PATHTREAT DIALOGEX 38, 17, 251, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "パスの取り扱い"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "指定した場所以外へファイルが解凍される可能性があります。\n以下から処理を選択してください。",IDC_STATIC,35,8,207,16
+    CONTROL         "エラーとして終了(&E)",IDC_TREAT_ERROR,"Button",BS_AUTORADIOBUTTON,42,35,135,10
+    CONTROL         "そのまま解凍(&X)",IDC_TREAT_EXTRACT,"Button",BS_AUTORADIOBUTTON,42,50,135,10
+    CONTROL         "このファイルを無視(&I)",IDC_TREAT_IGNORE,"Button",BS_AUTORADIOBUTTON,42,65,135,10
+    CONTROL         "パス名を除外して解凍(&S)",IDC_TREAT_STRIPPATH,"Button",BS_AUTORADIOBUTTON,42,80,135,10
+    CONTROL         "相対パスに変換して解凍(&R)",IDC_TREAT_RELATIVE,"Button",BS_AUTORADIOBUTTON,42,95,135,10
+    DEFPUSHBUTTON   "OK",IDOK,193,39,52,14
+    PUSHBUTTON      "以降全て(&A)",IDC_YESTOALL,193,57,52,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,193,108,52,14
+    ICON            IDI_REPLACE,IDC_STATIC,7,6,21,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_NEXTCAB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_CABPACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_REPLACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 332
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_SFXCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 271
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 286
+    END
+
+    IDD_PATHTREAT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 122
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CAB                 ICON                    "res\\zip.ico"
+
+IDI_REPLACE             ICON                    "res\\warning.ico"
+
+IDI_NEXTCAB             ICON                    "res\\search.ico"
+
+IDI_STUB                ICON                    "res\\stub.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CABPACK AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CONFIG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PATHTREAT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SFXCFG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_CAB_APP             "キャビネット ファイルの操作"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CAPTION_CABBROWSE   "CABファイルの参照"
+    IDS_CAB_COMPRESSING     "圧縮中..."
+    IDS_CAB_COPYING         "書込み中..."
+    IDS_QUERY_MKDIR         "フォルダ '%s' は存在しません。\n作成しますか?"
+    IDS_CAB_PARTIALFILE     "解凍するには '%s' が必要です。"
+    IDS_CAB_EXTRACTING      "解凍中..."
+    IDS_CAB_MULTIVOLUME     "%s\nこの書庫はマルチボリューム形式です。\n全ての書庫を解凍しますか？"
+    IDS_NOFILES_TO_COMPRESS "書庫に追加するファイルがありません。"
+    IDS_CAB_NOEXEC          "解凍後に実行するファイルが指定されていません。"
+    IDS_QUERY_OVERWRITE     "%s\nこの書庫は存在します。上書きしますか？"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FDIERR_NONE         "  "
+    IDS_FDIERR_CABINET_NOT_FOUND "cannot find cabinet."
+    IDS_FDIERR_NOT_A_CABINET "invalid cabinet."
+    IDS_FDIERR_UNKNOWN_CABINET_VERSION "incorrect version."
+    IDS_FDIERR_CORRUPT_CABINET "corrupt cabinet."
+    IDS_FDIERR_ALLOC_FAIL   "insufficiat memory."
+    IDS_FDIERR_BAD_COMPR_TYPE "unknown compression type."
+    IDS_FDIERR_MDI_FAIL     "extract failed."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FDIERR_TARGET_FILE  "cannot read."
+    IDS_FDIERR_RESERVE_MISMATCH "reserved area mismatched."
+    IDS_FDIERR_WRONG_CABINET "wrong cabinet."
+    IDS_FDIERR_USER_ABORT   "user aborted."
+    IDS_FDIERR_UNKNOWN      "unknown error."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FCIERR_NONE         " "
+    IDS_FCIERR_OPEN_SRC     "cannot open file."
+    IDS_FCIERR_READ_SRC     "cannot read file."
+    IDS_FCIERR_ALLOC_FAIL   "insufficiant memory."
+    IDS_FCIERR_TEMP_FILE    "bad temporary file."
+    IDS_FCIERR_BAD_COMPR_TYPE "bad compression type."
+    IDS_FCIERR_CAB_FILE     "cannot create cabinet."
+    IDS_FCIERR_USER_ABORT   "user aborted."
+    IDS_FCIERR_MCI_FAIL     "MCI failed."
+    IDS_FCIERR_UNKNOWN      "unknown error occurred."
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "lspcab.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

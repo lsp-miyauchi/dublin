@@ -1,0 +1,14 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {49477A47-1CBD-40FC-B62A-AE8220F10B09} = s 'lsftc FileXferComponent'
+		{
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

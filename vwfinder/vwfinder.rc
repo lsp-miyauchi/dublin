@@ -1,0 +1,524 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\vwfinder.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,18
+ PRODUCTVERSION 7,4,0,18
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "FileFinder for FileVisor"
+            VALUE "FileVersion", "7.4.0.18"
+            VALUE "InternalName", "vwfinder"
+            VALUE "LegalCopyright", "(C)LightShip Inc. 2005-2022 All rights reserved."
+            VALUE "OriginalFilename", "vwfinder.dll"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.0.18"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_FRAME               ICON                    "res\\vwfinder.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IC_DDCOPY               CURSOR                  "RES\\ddcopy.cur"
+
+IC_DDMOVE               CURSOR                  "RES\\ddmove.cur"
+
+IC_DDLINK               CURSOR                  "RES\\ddlink.cur"
+
+IC_DDNONE               CURSOR                  "RES\\ddnone.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_FRAME MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "新しい検索(&F)\tCtrl+F",           IDM_EXEC_FIND
+        MENUITEM SEPARATOR
+        MENUITEM "オープン(&O)",                    IDM_FILE_OPEN
+        MENUITEM "コピー(&C)...",                  IDM_FILE_COPY
+        MENUITEM "移動(&M)...",                   IDM_FILE_MOVE
+        MENUITEM "名前の変更(&N)...",                IDM_FILE_RENAME
+        MENUITEM "削除(&D)\tDel",                 IDM_FILE_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "指定ファイルをFileVisorで選択(&J)\tCtrl+J", IDM_FILE_JUMP
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)\tEsc",                 ID_APP_EXIT
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "オブジェクトの切り取り(&T)\tCtrl+Del",   IDM_EDIT_CUT
+        MENUITEM "オブジェクトのコピー(&C)\tCtrl+Ins",    IDM_EDIT_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "名前のみコピー(&N)",                 IDM_COPY_NAMEONLY
+        MENUITEM "詳細情報とともにコピー(&D)",             IDM_COPY_DETAIL
+        MENUITEM "フルパス名をコピー(&T)",               IDM_COPY_FULLNAME
+        MENUITEM "フルパス名を短い名前でコピー(&S)",          IDM_COPY_SHORTNAME
+        MENUITEM SEPARATOR
+        MENUITEM "すべて選択・または解除(&U)\tCtrl+A",     IDM_FILE_SELALL
+        MENUITEM "選択の切り替え(&R)",                 IDM_FILE_SELREV
+        MENUITEM "クリア(&C)",                     IDM_FILE_CLEAR
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        POPUP "ソート方法"
+        BEGIN
+            MENUITEM "ソートしない(&U)",                  IDM_SORT_NONE
+            MENUITEM SEPARATOR
+            MENUITEM "名前順(&N)",                     IDM_SORT_NAME
+            MENUITEM "拡張子順(&E)",                    IDM_SORT_EXT
+            MENUITEM "サイズ順(&S)",                    IDM_SORT_SIZE
+            MENUITEM "更新日付順(&D)",                   IDM_SORT_TIME
+            MENUITEM "属性順(&A)",                     IDM_SORT_ATTR
+            MENUITEM "種類順(&T)",                     IDM_SORT_TYPE
+            MENUITEM "パス名順(&P)",                    IDM_SORT_PATH
+            MENUITEM SEPARATOR
+            MENUITEM "昇順でソート(&U)",                  IDM_SORT_UP
+            MENUITEM "降順でソート(&D)",                  IDM_SORT_DOWN
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "ファイル情報(&I)...",               IDM_VIEW_FILEINFO
+        MENUITEM "ファイル内容表示(&V)",                IDM_TOOL_VIEWER
+        MENUITEM "バイナリダンプ(&B)",                 IDM_TOOL_BDUMP
+        MENUITEM SEPARATOR
+        MENUITEM "ユーザ設定(&S)...",                IDM_TOOL_SETUP
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "ヘルプ(&H)",                  ID_HELP
+        MENUITEM "ファインダーについて...(&A)",   ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_S_TOOLBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_EXEC_FIND
+    SEPARATOR
+    BUTTON      IDM_FILE_COPY
+    BUTTON      IDM_FILE_MOVE
+    BUTTON      IDM_FILE_RENAME
+    SEPARATOR
+    BUTTON      IDM_FILE_DELETE
+    BUTTON      IDM_FILE_CLEAR
+    SEPARATOR
+    BUTTON      IDM_SORT_RANGE
+    SEPARATOR
+    BUTTON      IDM_COPY_FULLNAME
+    SEPARATOR
+    BUTTON      IDM_EDIT_COPY
+    BUTTON      IDM_EDIT_CUT
+    SEPARATOR
+    BUTTON      IDM_FILE_JUMP
+    SEPARATOR
+    BUTTON      IDM_TOOL_VIEWER
+    BUTTON      IDM_VIEW_FILEINFO
+    BUTTON      IDM_TOOL_BDUMP
+END
+
+IDB_M_TOOLBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_EXEC_FIND
+    SEPARATOR
+    BUTTON      IDM_FILE_COPY
+    BUTTON      IDM_FILE_MOVE
+    BUTTON      IDM_FILE_RENAME
+    SEPARATOR
+    BUTTON      IDM_FILE_DELETE
+    BUTTON      IDM_FILE_CLEAR
+    SEPARATOR
+    BUTTON      IDM_SORT_RANGE
+    SEPARATOR
+    BUTTON      IDM_COPY_FULLNAME
+    SEPARATOR
+    BUTTON      IDM_EDIT_COPY
+    BUTTON      IDM_EDIT_CUT
+    SEPARATOR
+    BUTTON      IDM_FILE_JUMP
+    SEPARATOR
+    BUTTON      IDM_TOOL_VIEWER
+    BUTTON      IDM_VIEW_FILEINFO
+    BUTTON      IDM_TOOL_BDUMP
+END
+
+IDB_S_APPICON TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_M_APPICON TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SEARCHSETTINGS DIALOGEX 0, 0, 423, 313
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの検索"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_FOLDER,"SysTabControl32",TCS_FOCUSONBUTTONDOWN | WS_CLIPSIBLINGS | WS_TABSTOP,1,2,173,311
+    EDITTEXT        IDC_PATH,4,17,166,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_TABSTOP,4,32,167,281
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | LVS_NOCOLUMNHEADER | WS_TABSTOP,4,16,167,297
+    GROUPBOX        "検索フィルタまたはファイル名の一部(&F)",IDC_STATIC,183,6,229,68
+    COMBOBOX        IDC_COMBO,196,21,208,107,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "大文字/小文字を区別する(&C)",IDC_CASESENSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,39,135,11
+    CONTROL         "正規表現(&R)",IDC_REGEXP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,53,72,10
+    PUSHBUTTON      "履歴をクリア",IDC_CLEAR,340,52,63,14
+    GROUPBOX        "ファイルの日時(&D)",IDC_STATIC,183,81,229,80
+    COMBOBOX        IDC_FILETYPE,196,95,208,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "過去(&P)",IDC_PAST_DATE,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,196,117,38,10
+    EDITTEXT        IDC_PAST_PERIOD,264,115,46,14,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "",IDC_PAST_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,299,115,11,14
+    COMBOBOX        IDC_PAST_COMBO,314,115,89,43,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "日付(&B)",IDC_DATERANGE,"Button",BS_AUTORADIOBUTTON,196,139,38,10
+    CONTROL         "",IDC_FROM,"SysDateTimePick32",DTS_APPCANPARSE | WS_TABSTOP,264,136,60,14,WS_EX_NOPARENTNOTIFY | WS_EX_CLIENTEDGE
+    CTEXT           "～",IDC_STATIC,329,139,10,8
+    CONTROL         "",IDC_TO,"SysDateTimePick32",DTS_APPCANPARSE | WS_TABSTOP,343,136,60,14,WS_EX_NOPARENTNOTIFY | WS_EX_CLIENTEDGE
+    GROUPBOX        "ファイルのサイズ(&S)",IDC_STATIC,183,169,229,37
+    COMBOBOX        IDC_SIZETYPE,196,183,125,55,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_SIZEVALUE,325,183,68,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,384,183,11,14
+    LTEXT           "KB",IDC_STATIC,397,185,10,8
+    GROUPBOX        "ファイルの属性(&A)",IDC_STATIC,183,212,229,49
+    CONTROL         "System",IDC_FA_SYSTEM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,227,38,10
+    CONTROL         "Archive",IDC_FA_ARCHIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,227,42,10
+    CONTROL         "ReadOnly",IDC_FA_RDONLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,227,54,10
+    CONTROL         "Hidden",IDC_FA_HIDDEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,355,227,47,10
+    CONTROL         "Sparse",IDC_FA_SPARSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,243,46,10
+    CONTROL         "NTFSCmpr",IDC_FA_COMPRESS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,246,243,46,10
+    CONTROL         "NTFSCryp",IDC_FA_CRYPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,297,243,48,10
+    CONTROL         "Offline",IDC_FA_OFFLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,356,243,46,10
+    CONTROL         "これらのフィルタ条件に一致しないものを検索(&N)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,270,172,10
+    DEFPUSHBUTTON   "検索開始",IDOK,183,290,104,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,305,290,52,14
+    PUSHBUTTON      "ヘルプ(&H)...",IDC_HELPCALL,360,290,52,14
+END
+
+IDD_QUERYFOLDER DIALOGEX 0, 0, 228, 232
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "ファイルの操作"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    COMBOBOX        IDC_PATH,6,19,215,145,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,6,35,215,171
+    DEFPUSHBUTTON   "OK",IDOK,115,212,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,171,212,50,14
+    LTEXT           "",IDC_TEXT,6,6,216,8
+END
+
+IDD_SETUP DIALOGEX 0, 0, 269, 175
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ユーザ設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "表示方法",IDC_STATIC,7,7,255,123
+    CONTROL         "ファイル名を小文字で表示する(&L)",IDC_LOWERCASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,23,171,10
+    CONTROL         "拡張子を揃える(&A)",IDC_ALIGNEXT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,36,171,10
+    CONTROL         "西暦を下2桁で表示する(&W)",IDC_FMTDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,49,171,10
+    CONTROL         "ファイルの日時を相対表示する（昨日・今日）(&J)",IDC_RELATIVEDATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,62,171,10
+    CONTROL         "ファイルサイズをキロバイト表示する(&K)",IDC_FMTSIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,75,171,10
+    CONTROL         "ファイル情報をチップ表示する(&I)",IDC_INFOTIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,88,171,10
+    CONTROL         "1行おきに背景色を変える(&L)",IDC_REPCHECKER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,26,101,171,10
+    DEFPUSHBUTTON   "OK",IDOK,76,154,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,143,154,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+IDA_SHELL_150           AVI                     "res\\shell32_150.avi"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SEARCHSETTINGS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 421
+        BOTTOMMARGIN, 303
+    END
+
+    IDD_QUERYFOLDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 222
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_SEARCH         HTML                    "res\\search.htm"
+
+IDR_HTML_REGEXP         HTML                    "res\\regexp.htm"
+
+IDR_HTML_FILTER         HTML                    "res\\filter.htm"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SEARCHSETTINGS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SETUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_SELECT     "選択 9999個 99999.99KB"
+    ID_INDICATOR_TOTAL      "全ファイル 9999個 99999.99KB"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "プログラム・バージョン情報の表示\nバージョン情報"
+    ID_APP_EXIT             "終了\n終了"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_OPEN           "ファイルの実行または内容表示\nオープン"
+    IDM_FILE_COPY           "ファイルのコピー\nコピー"
+    IDM_FILE_MOVE           "ファイルの移動\n移動"
+    IDM_FILE_DELETE         "ファイルの削除\n削除"
+    IDM_FILE_RENAME         "ファイルの名前を変更\n名前変更"
+    IDM_FILE_JUMP           "指定ファイルをFileVisorで選択\n指定ファイルをFileVisorで選択"
+    IDM_FILE_SELREV         "選択されたファイルと選択されていないファイルを逆にします。\n選択の切り替え"
+    IDM_FILE_SELALL         "ファイルの全選択・解除\n全選択・解除"
+    IDM_FILE_CLEAR          "選択されたファイルをクリアします。\nクリア"
+    IDM_EDIT_COPY           "選択された項目をクリップボードにコピーします。\nオブジェクトのコピー"
+    IDM_EDIT_CUT            "選択された項目を切り取ってクリップボードへコピーします。\nオブジェクトの切り取り"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_COPY_NAMEONLY       "ファイル名のみをクリップボードへコピー\n名前のみコピー"
+    IDM_COPY_DETAIL         "ファイルの詳細をクリップボードへコピー\n詳細をコピー"
+    IDM_COPY_FULLNAME       "テキスト形式でファイル名をクリップボードへコピー\nテキスト形式でコピー"
+    IDM_COPY_SHORTNAME      "フルパス名を短い名前でクリップボードへコピー\nフルパス名を短い名前でコピー"
+    IDM_SORT_RANGE          "ソート順序を設定\nソート"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_SORT_NONE           "ソートせずに表示"
+    IDM_SORT_NAME           "名前順で表示\n名前順"
+    IDM_SORT_EXT            "拡張子順で表示\n拡張子順"
+    IDM_SORT_SIZE           "ファイルサイズ順で表示\nサイズ順"
+    IDM_SORT_TIME           "更新日付順で表示\n日付順"
+    IDM_SORT_ATTR           "属性順で表示\n属性順"
+    IDM_SORT_TYPE           "種類順で表示\n種類順"
+    IDM_SORT_PATH           "パス名順で表示\nパス名順"
+    IDM_SORT_UP             "昇順でファイルをソート\n昇順"
+    IDM_SORT_DOWN           "降順でファイルをソート\n降順"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TOOL_VIEWER         "ファイル内容を閲覧\nファイル閲覧"
+    IDM_TOOL_BDUMP          "ファイルのバイナリ編集\nバイナリ編集"
+    IDM_VIEW_FILEINFO       "選択中のファイル情報を表示\nファイル情報"
+    IDM_EXEC_FIND           "新しい検索\n検索"
+    IDM_TOOL_SETUP          "ユーザ設定\nユーザ設定"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_SETTING         "Setting"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_WNDPOS          "WndPos"
+    IDS_KEY_FIND            "Find"
+    IDS_KEY_LASTFOLDER      "LastFolder"
+    IDS_KEY_PREVSETTING     "PrevSetting"
+    IDS_KEY_SORTTYPE        "SortType"
+    IDS_KEY_SORTSEQ         "SortSeq"
+    IDS_KEY_LISTSTAT        "ListStat"
+    IDS_KEY_COLORMAP        "ColorMap"
+    IDS_KEY_COPYHISTORY     "CopyHistory"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "ファイル検索"
+    IDS_COLUMN_NAME         "名前"
+    IDS_COLUMN_SIZE         "サイズ"
+    IDS_COLUMN_DATE         "更新日時"
+    IDS_COLUMN_TYPE         "種類"
+    IDS_COLUMN_ATTR         "属性"
+    IDS_COLUMN_DOS          "DOS"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COLUMN_PATH         "場所"
+    IDS_FOLDER_SELFF        "パス"
+    IDS_FILEFIND_NODATA     "一致するファイルはありませんでした。検索をやり直しますか?"
+    IDS_INDICATOR_SELECT    "選択 %d個"
+    IDS_INDICATOR_TOTAL     "全ファイル %d個"
+    IDS_FILE_DELSELECT      "選択されたファイルを削除します。"
+    IDS_QUERY_MKDIR         "フォルダ '%1' は存在しません。\n作成しますか?"
+    IDS_CAPTION_COPY        "コピー先を指定してください。"
+    IDS_CAPTION_MOVE        "移動先を指定してください。"
+    IDS_SELFF_FILETYPE      "（不問）;変更されたファイル;作成されたファイル"
+    IDS_SELFF_SIZETYPE      "（不問）;最低;最高"
+    IDS_CAPTION_SEARCHING   "ファイルを検索しています..."
+    IDS_FOUND_PROGRESS      "現在 %d 件見つかりました。"
+    IDS_SELFF_PERIOD        "日以内;週間以内;ヶ月以内;年以内"
+    IDS_DRIVE_SELFF         "ドライブ"
+    IDS_CLEAR_HISTORY       "履歴を消去します。よろしいですか?"
+    IDS_WEB_HELP            "http://lightship.co.jp/FileVisor7/help/operation/folder/search.htm"
+    IDS_WEB_HOMEPAGE        "http://lightship.co.jp/"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILTER_CUEBANNER    "検索の開始"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\vwfinder.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

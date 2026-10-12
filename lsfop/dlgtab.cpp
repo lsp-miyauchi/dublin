@@ -1,0 +1,12 @@
+// CDlgTab�N���X
+
+#include "stdafx.h"
+#include "fopstd.h"
+
+#ifndef __DLGTAB_H__
+	#include "dlgtab.h"
+#endif
+
+//////////////////////////////////////////////////////////////////////
+//
+

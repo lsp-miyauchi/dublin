@@ -1,0 +1,80 @@
+EXPORTS
+	TarGetVersion
+
+	TarGetRunning
+
+	TarGetBackGroundMode
+	TarSetBackGroundMode
+	TarGetCursorMode
+	TarSetCursorMode
+	TarGetCursorInterval
+	TarSetCursorInterval
+
+	Tar
+	TarExtractMem
+	TarCompressMem
+	TarCheckArchive
+	TarConfigDialog
+	TarGetFileCount
+
+	TarOpenArchive
+	TarOpenArchive2
+	TarCloseArchive
+	TarFindFirst
+	TarFindNext
+	TarGetArcFileName
+	TarGetArcFileSize
+	TarGetArcOriginalSize
+	TarGetArcCompressedSize
+	TarGetArcRatio
+	TarGetArcDate
+	TarGetArcTime
+	TarGetArcOSType
+	TarGetFileName
+	TarGetMethod
+	TarGetOriginalSizeEx
+	TarGetOriginalSize
+	TarGetCompressedSizeEx
+	TarGetCompressedSize
+	TarGetRatio
+	TarGetDate
+	TarGetTime
+	TarGetWriteTime
+	TarGetAccessTime
+	TarGetCreateTime
+	TarGetWriteTimeEx
+	TarGetAccessTimeEx
+	TarGetCreateTimeEx
+	TarGetCRC
+	TarGetAttribute
+	TarGetOSType
+
+	TarQueryFunctionList
+	
+	TarSetOwnerWindow
+	TarClearOwnerWindow	
+	TarSetOwnerWindowEx
+	TarKillOwnerWindowEx
+	
+	TarGetArchiveType
+
+	TarGetWriteTime64
+	TarGetAccessTime64
+	TarGetCreateTime64
+
+	TarSetDictionaryCallback
+
+;rundll32 interface
+;  command line: rundll32.exe tar32.dll,TarCommandLine -xvf foo.tar.gz
+	TarCommandLine
+
+;susie plugIn
+	GetPluginInfo
+	IsSupported
+	GetArchiveInfo
+	GetFileInfo
+	GetFile
+;
+;	GetPictureInfo
+;	GetPicture
+;	GetPreview

@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+  ],
+  "settings": {
+    "search.exclude": {
+      "**/.vs": true,
+      "**/debug": true,
+      "**/release": true
+    },
+    "files.exclude": {
+      "**/.vs": true,
+      "**/debug": true,
+      "**/release": true
+    },
+    "maven.excludedFolders": [
+    
+      "**/.*",
+      "**/node_modules",
+      "**/target",
+      "**/bin"
+    ]
+  }
+}

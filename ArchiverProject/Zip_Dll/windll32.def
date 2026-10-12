@@ -1,0 +1,8 @@
+;module-definition file for Windows Zip DLL -- used by link.exe
+LIBRARY LSPZIP ; Library module name
+DESCRIPTION 'Info-ZIP Zip DLL by Info-ZIP, Kuniaki Miyauchi 1999'
+
+EXPORTS
+		Zip								@1
+		ZipLocked						@100
+		DllGetFunctionPrefix			@101

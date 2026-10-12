@@ -1,0 +1,301 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,12
+ PRODUCTVERSION 7,4,0,12
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "transform plug-in"
+            VALUE "FileVersion", "7.4.0.12"
+            VALUE "InternalName", "transform"
+            VALUE "OriginalFilename", "transform.dll"
+            VALUE "ProductVersion", "7.4.0.12"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SINGLEWORKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_SHEAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_RIPPLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 330
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_PERSPECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 431
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 221
+    END
+
+    IDD_POLAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_RIPPLE DLGINIT
+BEGIN
+    IDC_ORIENTATION, 0x403, 9, 0
+0x8590, 0xbd95, 0xfb95, 0xfc8c, "\000" 
+    IDC_ORIENTATION, 0x403, 9, 0
+0x8290, 0xbc92, 0xfb95, 0xfc8c, "\000" 
+    IDC_EDGES, 0x403, 15, 0
+0xda96, 0xa797, 0xbd82, 0xc882, 0xad82, 0xb782, 0xe982, "\000" 
+    IDC_EDGES, 0x403, 11, 0
+0x8983, 0x6283, 0x7683, 0xb782, 0xe982, "\000" 
+    IDC_EDGES, 0x403, 11, 0
+0x958d, 0xc582, 0x8496, 0xdf82, 0xe982, "\000" 
+    IDC_WAVEFORM, 0x403, 9, 0
+0xac82, 0xb482, 0xac82, 0xb482, "\000" 
+    IDC_WAVEFORM, 0x403, 9, 0
+0xb390, 0xb78c, 0xc88b, 0xfc90, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SINGLEWORKS DIALOGEX 0, 0, 268, 243
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SINGLEWORKS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_ASLIDER,"LSCTrack",WS_TABSTOP,7,142,187,11
+    CONTROL         "",IDC_BSLIDER,"LSCTrack",WS_TABSTOP,7,154,187,11
+    CONTROL         "",IDC_CSLIDER,"LSCTrack",WS_TABSTOP,7,166,187,11
+    CONTROL         "",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,7,178,187,11
+    CONTROL         "",IDC_ESLIDER,"LSCTrack",WS_TABSTOP,7,190,187,11
+    CONTROL         "",IDC_FSLIDER,"LSCTrack",WS_TABSTOP,7,202,187,11
+    CONTROL         "",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,7,214,187,11
+    CONTROL         "",IDC_HSLIDER,"LSCTrack",WS_TABSTOP,7,226,187,11
+    DEFPUSHBUTTON   "OK",IDOK,205,7,56,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,205,27,56,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,187,129,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "リセット(&R)",IDC_RESET,205,60,56,14
+    CONTROL         "全体表示(&W)",IDC_WHOLEVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,127,60,10
+END
+
+IDD_SHEAR DIALOGEX 0, 0, 244, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "傾斜"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "横の傾斜(&X)",IDC_XSLIDER,"LSCTrack",WS_TABSTOP,7,127,169,11
+    CONTROL         "縦の傾斜(&Y)",IDC_YSLIDER,"LSCTrack",WS_TABSTOP,7,139,169,11
+    DEFPUSHBUTTON   "OK",IDOK,187,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,187,27,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,169,116,WS_EX_CLIENTEDGE
+END
+
+IDD_RIPPLE DIALOGEX 0, 0, 337, 143
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "さざ波"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "波長(&L)",IDC_PSLIDER,"LSCTrack",WS_TABSTOP,179,7,151,11
+    CONTROL         "振幅(&N)",IDC_ASLIDER,"LSCTrack",WS_TABSTOP,179,19,151,11
+    LTEXT           "波の向き(&O):",IDC_STATIC,197,41,52,8
+    COMBOBOX        IDC_ORIENTATION,251,38,59,53,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "端の処理(&E):",IDC_STATIC,197,60,52,8
+    COMBOBOX        IDC_EDGES,251,57,59,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "波の形状(&W):",IDC_STATIC,197,79,52,8
+    COMBOBOX        IDC_WAVEFORM,251,76,59,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "タイル形状を保持(&T)",IDC_TILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,97,111,10
+    DEFPUSHBUTTON   "OK",IDOK,217,122,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,280,122,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,166,130,WS_EX_CLIENTEDGE
+END
+
+IDD_WATER_RING DIALOGEX 0, 0, 183, 169
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "波紋"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "画像に波紋の効果を与えます。",IDC_STATIC,7,7,110,8
+    CONTROL         "振幅(&A)",IDC_AMPLITUDE,"LSCTrack",WS_TABSTOP,7,24,170,11
+    CONTROL         "角度(&P)",IDC_PHASE,"LSCTrack",WS_TABSTOP,7,36,170,11
+    CONTROL         "波長(&L)",IDC_WAVELENGTH,"LSCTrack",WS_TABSTOP,7,48,170,11
+    GROUPBOX        "未処理領域の補完",IDC_STATIC,7,69,169,46,WS_GROUP
+    CONTROL         "折り返して補完する(&S)",IDC_SMEARED,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,19,83,81,10
+    CONTROL         "黒色で埋める(&B)",IDC_BLACK,"Button",BS_AUTORADIOBUTTON,19,96,65,10
+    DEFPUSHBUTTON   "OK",IDOK,34,147,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,100,147,50,14
+END
+
+IDD_PERSPECT DIALOGEX 0, 0, 438, 227
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "透視変換"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "拡大率",IDC_STATIC,247,7,184,43
+    CONTROL         "横",IDC_ASLIDER,"LSCTrack",WS_TABSTOP,259,19,163,11
+    CONTROL         "縦",IDC_BSLIDER,"LSCTrack",WS_TABSTOP,259,31,163,11
+    GROUPBOX        "移動量",IDC_STATIC,247,55,184,55
+    CONTROL         "X軸",IDC_CSLIDER,"LSCTrack",WS_TABSTOP,259,67,163,11
+    CONTROL         "Y軸",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,259,79,163,11
+    CONTROL         "Z軸",IDC_ESLIDER,"LSCTrack",WS_TABSTOP,259,91,163,11
+    GROUPBOX        "回転角",IDC_STATIC,247,115,184,58
+    CONTROL         "X度",IDC_FSLIDER,"LSCTrack",WS_TABSTOP,259,128,163,11
+    CONTROL         "Y度",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,259,140,163,11
+    CONTROL         "Z度",IDC_HSLIDER,"LSCTrack",WS_TABSTOP,259,152,163,11
+    GROUPBOX        "位置",IDC_STATIC,247,178,184,43
+    CONTROL         "視点",IDC_ISLIDER,"LSCTrack",WS_TABSTOP,259,190,163,11
+    CONTROL         "画面",IDC_JSLIDER,"LSCTrack",WS_TABSTOP,259,202,163,11
+    DEFPUSHBUTTON   "OK",IDOK,7,207,48,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,59,207,48,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,231,194,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "リセット(&R)",IDC_RESET,113,207,48,14
+    CONTROL         "",IDC_COLOR,"LSCColorPick",WS_TABSTOP | 0x2,189,207,50,14,WS_EX_CLIENTEDGE
+END
+
+IDD_POLAR DIALOGEX 0, 0, 302, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "極座標"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "マッピングオプション",-1,195,7,100,63
+    CONTROL         "右から左へマップ(&B)",IDC_BACKWARDS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,203,23,80,10
+    CONTROL         "上から下へマップ(&T)",IDC_INVERT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,203,37,80,10
+    CONTROL         "全域へマップ(&R)",IDC_RECTANGLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,203,51,80,10
+    CONTROL         "円形度(&D)",IDC_CIRCLE,"LSCTrack",WS_TABSTOP,7,136,288,11
+    CONTROL         "アングル(&A)",IDC_ANGLE,"LSCTrack",WS_TABSTOP,7,148,288,11
+    DEFPUSHBUTTON   "OK",IDOK,245,98,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,245,116,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,179,125,WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_QUERYRESET          "設定値をすべてリセットしますか？\n\n「はい」を選択するとすべてのマジックをリセットします。\n「いいえ」を選択すると現在のマジックのみリセットします。\n「キャンセル」を選択するとリセットはおこなわれません。\n"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

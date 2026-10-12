@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Shift_jis">
+<TITLE>関連付け</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../../index.html">TOP</a> &rsaquo;
+<a href="../../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="../index.html">操作別解説</a> &rsaquo;
+<a href="index.html">ファイル操作</a> &rsaquo;
+関連づけ
+</div>
+<!-- 本体 -->
+<h2>関連づけとは</h2>
+<p>ファイルの拡張子に対して、同じ拡張子を持つファイルを、
+特定のアプリケーションで開くよう定義する機能のことを指します
+（厳密には、さらに多くの情報の定義が可能ですが、ここではその一部の説明のみです）。</p>
+
+<p>レジストリの中で、関連付けは概ね以下の仕組みとなっています。
+各拡張子には、その拡張子に対応したProgID（タイプ）があります。
+このProgIDの配下に登録されたコマンドにより、
+ファイルをダブルクリックした場合の動作が決定されます。</p>
+
+<table border=0 width=100% cellpadding=0>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+	<tr><td>拡張子</td>
+		<td class="ctr">──</td>
+		<td class="ctr">ProgID</td>
+		<td class="ctr">──</td>
+		<td class="ctr">実行コマンド</td></tr>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+	<tr><td colspan=5>
+			<p>異なる拡張子のファイルが同一のタイプを持つことも可能であり、
+			拡張子にタイプを割り当てることにより、
+			タイプで定義された動作を可能とすることもできます。</p></td></tr>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+	<tr><td>拡張子</td>
+		<td rowspan=3 class="ctr">┐<br>┼<br>┘</td>
+		<td rowspan=3 class="ctr">ProgID</td>
+		<td rowspan=3 class="ctr">──</td>
+		<td rowspan=3 class="ctr">実行コマンド</td></tr>
+	<tr><td>拡張子</td></tr>
+	<tr><td>拡張子</td></tr>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+	<tr><td colspan=5><p>例）</p></td></tr>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+	<tr><td>.txt</td>
+		<td rowspan=3 class="ctr">┐<br>┼<br>┘</td>
+		<td rowspan=3 class="ctr">"txtfile"</td>
+		<td rowspan=3 class="ctr">──</td>
+		<td rowspan=3 class="ctr">notepad.exe</td></tr>
+	<tr><td>.ini</td></tr>
+	<tr><td>.inf</td></tr>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+	<tr><td>.jpe</td>
+		<td rowspan=3 class="ctr">┐<br>┼<br>┘</td>
+		<td rowspan=3 class="ctr">"jpegfile"</td>
+		<td rowspan=3 class="ctr">──</td>
+		<td rowspan=3 class="ctr">iexplorer.exe</td></tr>
+	<tr><td>.jpeg</td></tr>
+	<tr><td>.jpg</td></tr>
+	<tr><td colspan=5><hr class="separator"></td></tr>
+</table>
+<p>関連付けの設定において、既存のリストを選択すると、
+その選択された拡張子のProgIDが、関連付けを定義しようとしている拡張子に対して設定されます。<br>
+例えば、拡張子 “.css” に “.ini” のProgIDを設定すると、“*.css” ファイルをダブルクリック
+した際に、notepad.exeが起動するようになります。</p>
+<p>既存のリストからではなく、関連付け先に直接アプリケーションを指定した場合には、
+ProgIDとして “&lt;拡張子&gt;file” という名称のProgIDを作成し、そのProgIDの配下にアプリケーションを
+実行するコマンドを記録します。</p>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

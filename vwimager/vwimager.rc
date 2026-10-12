@@ -1,0 +1,1524 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\vwimager.rc2""\r\n"
+    "//123                     RT_MANIFEST             ""res\\\\dll.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,1,151
+ PRODUCTVERSION 7,4,1,151
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104e4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "Image Viewer/Editor for FileVisor"
+            VALUE "FileVersion", "7.4.1.151"
+            VALUE "InternalName", "vwimager"
+            VALUE "LegalCopyright", "(C)LightShip Inc. 1998-2024 All rights reserved."
+            VALUE "OriginalFilename", "vwimager.dll"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.1.151"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_FRAME               ICON                    "res\\vwimage-editor.ico"
+
+IDR_VIEW                ICON                    "res\\vwimage-viewer.ico"
+
+IDR_SLIDESHOW           ICON                    "res\\slideshow.ico"
+
+IDI_SIZEGRIP            ICON                    "RES\\SIZEGRIP.ICO"
+
+IDI_SIZEPOINT           ICON                    "RES\\SIZEPNT.ICO"
+
+IDI_RGB                 ICON                    "RES\\RGB.ICO"
+
+IDI_RESIZE              ICON                    "RES\\RESIZE.ICO"
+
+IDI_SCALE               ICON                    "res\\scale.ico"
+
+IDI_PALETTE             ICON                    "res\\palette.ico"
+
+IDI_PICKOUT             ICON                    "res\\pickout.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IC_HAND_POINT           CURSOR                  "res\\hand_point.cur"
+
+IC_HAND_OPEN            CURSOR                  "res\\hand_open.cur"
+
+IC_HAND_CLOSE           CURSOR                  "res\\hand_close.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_S_TOOLBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_FILE_PRINT
+    SEPARATOR
+    BUTTON      IDM_FILE_OPEN
+    BUTTON      IDM_FILE_SAVE
+    SEPARATOR
+    BUTTON      IDM_EDIT_COPY
+    BUTTON      IDM_EDIT_PASTE
+    BUTTON      IDM_RESIZE_TRIM
+    SEPARATOR
+    BUTTON      IDM_EDIT_UNDO
+    SEPARATOR
+    BUTTON      IDM_ZOOM_IN
+    BUTTON      IDM_ZOOM_OUT
+    SEPARATOR
+    BUTTON      IDM_ZOOM_NONE
+    BUTTON      IDM_ZOOM_FIT
+    BUTTON      IDM_ZOOM_FITHORZ
+    BUTTON      IDM_ZOOM_FITVERT
+    SEPARATOR
+    BUTTON      IDM_ROTATE_LEFT
+    BUTTON      IDM_ROTATE_RIGHT
+    SEPARATOR
+    BUTTON      IDM_RESIZE_ZOOM
+END
+
+IDB_M_TOOLBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_FILE_PRINT
+    SEPARATOR
+    BUTTON      IDM_FILE_OPEN
+    BUTTON      IDM_FILE_SAVE
+    SEPARATOR
+    BUTTON      IDM_EDIT_COPY
+    BUTTON      IDM_EDIT_PASTE
+    BUTTON      IDM_RESIZE_TRIM
+    SEPARATOR
+    BUTTON      IDM_EDIT_UNDO
+    SEPARATOR
+    BUTTON      IDM_ZOOM_IN
+    BUTTON      IDM_ZOOM_OUT
+    SEPARATOR
+    BUTTON      IDM_ZOOM_NONE
+    BUTTON      IDM_ZOOM_FIT
+    BUTTON      IDM_ZOOM_FITHORZ
+    BUTTON      IDM_ZOOM_FITVERT
+    SEPARATOR
+    BUTTON      IDM_ROTATE_LEFT
+    BUTTON      IDM_ROTATE_RIGHT
+    SEPARATOR
+    BUTTON      IDM_RESIZE_ZOOM
+END
+
+IDB_S_VIEWBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_FILE_PREV
+    BUTTON      IDM_FILE_NEXT
+    SEPARATOR
+    BUTTON      IDM_FILE_PRINT
+    SEPARATOR
+    BUTTON      IDM_FILE_OPEN
+    BUTTON      IDM_EDIT_COPY
+    SEPARATOR
+    BUTTON      IDM_FILE_DELETE
+    SEPARATOR
+    BUTTON      IDM_ZOOM_IN
+    BUTTON      IDM_ZOOM_OUT
+    SEPARATOR
+    BUTTON      IDM_MODE_GRAB
+    BUTTON      IDM_MODE_SEL
+    SEPARATOR
+    BUTTON      IDM_ZOOM_NONE
+    BUTTON      IDM_ZOOM_FIT
+    BUTTON      IDM_ZOOM_FITHORZ
+    BUTTON      IDM_ZOOM_FITVERT
+    SEPARATOR
+    BUTTON      IDM_ROTATE_LEFT
+    BUTTON      IDM_ROTATE_RIGHT
+    SEPARATOR
+    BUTTON      IDM_TOOL_EXIFINFO
+    SEPARATOR
+    BUTTON      IDM_EXEC_SLIDESHOW
+    BUTTON      IDM_EXEC_EDITOR
+    SEPARATOR
+    BUTTON      IDM_TOOL_GPS
+END
+
+IDB_M_VIEWBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_FILE_PREV
+    BUTTON      IDM_FILE_NEXT
+    SEPARATOR
+    BUTTON      IDM_FILE_PRINT
+    SEPARATOR
+    BUTTON      IDM_FILE_OPEN
+    BUTTON      IDM_EDIT_COPY
+    SEPARATOR
+    BUTTON      IDM_FILE_DELETE
+    SEPARATOR
+    BUTTON      IDM_ZOOM_IN
+    BUTTON      IDM_ZOOM_OUT
+    SEPARATOR
+    BUTTON      IDM_MODE_GRAB
+    BUTTON      IDM_MODE_SEL
+    SEPARATOR
+    BUTTON      IDM_ZOOM_NONE
+    BUTTON      IDM_ZOOM_FIT
+    BUTTON      IDM_ZOOM_FITHORZ
+    BUTTON      IDM_ZOOM_FITVERT
+    SEPARATOR
+    BUTTON      IDM_ROTATE_LEFT
+    BUTTON      IDM_ROTATE_RIGHT
+    SEPARATOR
+    BUTTON      IDM_TOOL_EXIFINFO
+    SEPARATOR
+    BUTTON      IDM_EXEC_SLIDESHOW
+    BUTTON      IDM_EXEC_EDITOR
+    SEPARATOR
+    BUTTON      IDM_TOOL_GPS
+END
+
+IDB_S_VIEW_APPICON TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_M_VIEW_APPICON TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_S_EDIT_APPICON TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_M_EDIT_APPICON TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ZOOM DIALOGEX 0, 0, 232, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "イメージサイズの変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_RESIZE,IDC_STATIC,7,7,20,20
+    LTEXT           "現在のイメージサイズ:",IDC_STATIC,33,13,73,8
+    LTEXT           "",IDC_TITLE,107,13,82,8
+    GROUPBOX        "新しいイメージサイズ",IDC_STATIC,7,37,218,112
+    LTEXT           "幅(&W):",IDC_STATIC,20,53,32,8
+    EDITTEXT        IDC_XSIZE,20,64,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "ｘ",IDC_STATIC,59,66,8,8
+    LTEXT           "高さ(&H):",IDC_STATIC,70,53,36,8
+    EDITTEXT        IDC_YSIZE,70,64,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "必要メモリ:",IDC_STATIC,126,67,37,8
+    RTEXT           "99.99",IDC_VALUE,166,67,23,8
+    LTEXT           "Mバイト",IDC_STATIC,192,67,28,8
+    CONTROL         "縦横の比率を保持する(&F)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,85,107,10
+    CONTROL         "倍率でサイズ変更(&Z)",IDC_ZOOM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,99,83,10
+    COMBOBOX        IDC_ZVAL,118,97,56,174,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,164,97,9,14
+    LTEXT           "%",IDC_STATIC,175,100,12,8
+    LTEXT           "サンプリング(&S):",IDC_STATIC,20,123,49,8
+    COMBOBOX        IDC_SAMPLE,77,120,76,65,CBS_DROPDOWNLIST | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,57,161,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,123,161,50,14
+END
+
+IDD_PRINTDLG DIALOGEX 32, 32, 287, 277
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "印刷"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "プリンタ",1075,8,4,272,84,WS_GROUP
+    LTEXT           "名称(&N):",1093,16,20,36,8
+    COMBOBOX        1139,56,18,152,152,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "プロパティ(&P)",1025,212,17,60,14,WS_GROUP
+    LTEXT           "状態:",1095,16,36,36,10,SS_NOPREFIX
+    CONTROL         "",1099,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,56,36,220,10
+    LTEXT           "種類:",1094,16,48,36,10,SS_NOPREFIX
+    CONTROL         "",1098,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,56,48,220,10
+    LTEXT           "場所:",1097,16,60,36,10,SS_NOPREFIX
+    CONTROL         "",1101,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,56,60,220,10
+    LTEXT           "コメント:",1096,16,72,36,10,SS_NOPREFIX
+    CONTROL         "",1100,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_GROUP,56,72,152,10
+    CONTROL         "ファイル出力(&L)",1040,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,212,72,64,12
+    GROUPBOX        "印刷範囲",1072,8,92,155,77,WS_GROUP
+    RADIOBUTTON     "すべて(&A)",1056,16,104,64,12,WS_GROUP
+    RADIOBUTTON     "頁指定(&G)",1058,16,120,54,12
+    RADIOBUTTON     "選択した部分(&S)",1057,16,151,75,12
+    RTEXT           "頁から(&F)",1089,111,122,42,9
+    EDITTEXT        1152,76,120,32,12,ES_NUMBER | WS_GROUP
+    RTEXT           "頁まで(&T)",1090,111,137,42,9
+    EDITTEXT        1153,76,135,32,12,ES_NUMBER | WS_GROUP
+    GROUPBOX        "印刷部数",1073,169,92,111,77,WS_GROUP
+    LTEXT           "部数(&C):",1092,180,105,33,9
+    EDITTEXT        1154,218,103,36,12,ES_NUMBER | WS_GROUP
+    ICON            "",1086,181,137,20,20,SS_CENTERIMAGE | WS_GROUP
+    CONTROL         "部単位で印刷(&O)",1041,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,180,121,81,12
+    DEFPUSHBUTTON   "OK",1,180,257,48,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",2,232,257,48,14
+    PUSHBUTTON      "ヘルプ(&H)",1038,8,257,48,14
+    GROUPBOX        "オプション",IDC_STATIC,8,174,272,72
+    CONTROL         "高品位に印刷する （ラスタライズをアプリケーションでおこなう）(&R)",IDC_DRIVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,205,228,10
+    LTEXT           "印刷サイズ(&I):",IDC_STATIC,16,189,53,8
+    EDITTEXT        IDC_ZOOM,76,186,32,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,99,186,9,14
+    LTEXT           "%(10-100)    100%で用紙いっぱいに印刷されます。",IDC_STATIC,111,189,157,8
+    LTEXT           "※アプリケーションでラスタライズをおこなう場合には、消費メモリ及び印刷待ち時間が増大します。",IDC_STATIC,16,219,256,22
+END
+
+IDD_SETUP DIALOGEX 0, 0, 203, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "動作環境の設定"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "起動時の表示倍率",IDC_STATIC,7,7,189,57
+    CONTROL         "縮小表示するかどうか自動判別する(&S)",IDC_AUTOSCALE,"Button",BS_AUTORADIOBUTTON,19,20,144,10
+    CONTROL         "前回終了時の表示倍率を使う(&P)",IDC_PREVSCALE,"Button",BS_AUTORADIOBUTTON,19,34,142,10
+    CONTROL         "等倍で表示する(&R)",IDC_REALSCALE,"Button",BS_AUTORADIOBUTTON,19,47,134,10
+    GROUPBOX        "",IDC_STATIC,7,73,189,70
+    CONTROL         "グリッドを表示する(&G)",IDC_SHOWGRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,73,80,10
+    LTEXT           "幅(&W):",IDC_STATIC,23,87,32,8
+    EDITTEXT        IDC_XGRID,22,98,37,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,63,100,20,8
+    LTEXT           "高さ(&H):",IDC_STATIC,96,87,32,8
+    EDITTEXT        IDC_YGRID,96,98,37,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,137,100,20,8
+    LTEXT           "グリッド色(&C):",IDC_STATIC,22,124,41,8
+    CONTROL         "",IDC_GRIDCOLOR,"LSCColorPick",WS_TABSTOP | 0x2,67,122,83,14,WS_EX_CLIENTEDGE
+    LTEXT           "背景色(&B):",IDC_STATIC,22,156,41,8
+    CONTROL         "",IDC_BKCOLOR,"LSCColorPick",WS_TABSTOP | 0x2,67,153,83,14,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,45,178,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,108,178,50,14
+END
+
+IDD_QUANTIZE DIALOGEX 0, 0, 301, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "減色"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "減色方法(&A):",IDC_STATIC,175,7,68,8
+    COMBOBOX        IDC_METHOD,175,17,119,92,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "色数の指定(&S):",IDC_STATIC,175,38,57,8
+    COMBOBOX        IDC_COLCOMBO,235,35,59,95,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,283,35,11,14
+    CONTROL         "",IDC_SIGNAL,"LSCSignal",0x0,7,149,10,10
+    PUSHBUTTON      "+",IDC_ZOOMIN,106,149,10,10
+    CTEXT           "100%",IDC_POWER,119,150,33,8,NOT WS_GROUP
+    PUSHBUTTON      "-",IDC_ZOOMOUT,157,149,10,10
+    DEFPUSHBUTTON   "OK",IDOK,185,145,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,244,145,50,14
+    CONTROL         "",IDC_PREVIEW,"LSCZoomView",WS_VSCROLL | WS_HSCROLL | WS_TABSTOP | 0x2,7,7,160,141,WS_EX_CLIENTEDGE
+END
+
+IDD_PALEDIT DIALOGEX 0, 0, 238, 187
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "カラーテーブルの編集"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PALETTE,"LSCPal",WS_TABSTOP | 0x1,7,7,160,147,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_SAMPLE,"LSCRect",0x0,176,7,55,40
+    RTEXT           "色相:",IDC_STATIC,170,56,25,8
+    EDITTEXT        IDC_HUE,197,54,34,14,ES_READONLY | ES_NUMBER
+    CONTROL         "",IDC_HUE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,222,54,9,14
+    RTEXT           "彩度:",IDC_STATIC,170,72,25,8
+    EDITTEXT        IDC_SAT,197,70,34,14,ES_READONLY | ES_NUMBER
+    CONTROL         "",IDC_SAT_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,222,70,9,14
+    RTEXT           "明度:",IDC_STATIC,170,88,25,8
+    EDITTEXT        IDC_LUM,197,86,34,14,ES_READONLY | ES_NUMBER
+    CONTROL         "",IDC_LUM_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,222,86,9,14
+    RTEXT           "赤:",IDC_STATIC,170,112,25,8
+    EDITTEXT        IDC_RED,197,110,34,14,ES_READONLY | ES_NUMBER
+    CONTROL         "",IDC_RED_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,222,110,9,14
+    RTEXT           "緑:",IDC_STATIC,170,128,25,8
+    EDITTEXT        IDC_GREEN,197,126,34,14,ES_READONLY | ES_NUMBER
+    CONTROL         "",IDC_GREEN_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,222,126,9,14
+    RTEXT           "青:",IDC_STATIC,170,144,25,8
+    EDITTEXT        IDC_BLUE,197,142,34,14,ES_READONLY | ES_NUMBER
+    CONTROL         "",IDC_BLUE_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,222,142,9,14
+    DEFPUSHBUTTON   "OK",IDOK,58,165,53,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,125,165,53,14
+END
+
+IDD_RESIZE DIALOGEX 0, 0, 175, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "カンバスサイズの変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "現在のカンバスサイズ:",IDC_STATIC,7,7,73,8
+    LTEXT           "",IDC_TITLE,85,7,78,8
+    GROUPBOX        "新しいカンバスサイズ",IDC_STATIC,7,25,161,137
+    LTEXT           "幅(&W):",IDC_STATIC,20,41,18,8
+    EDITTEXT        IDC_XSIZE,20,52,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "ｘ",IDC_STATIC,59,54,8,8
+    LTEXT           "高さ(&H):",IDC_STATIC,70,41,23,8
+    EDITTEXT        IDC_YSIZE,70,52,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "必要メモリ:",IDC_STATIC,115,41,37,8
+    RTEXT           "99.99",IDC_VALUE,111,55,23,8
+    LTEXT           "Mバイト",IDC_STATIC,137,55,24,8
+    CONTROL         "縦横の比率を保持する(&F)",IDC_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,70,107,10
+    LTEXT           "アンカー:",IDC_STATIC,20,88,49,8
+    LTEXT           "",IDC_ANCHOR,20,98,66,53,SS_SUNKEN
+    LTEXT           "背景色(&C):",IDC_STATIC,96,88,32,8
+    CONTROL         "",IDC_COLOR,"LSCColorPick",WS_TABSTOP | 0x2,96,98,58,16,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,31,172,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,97,172,50,14
+END
+
+IDD_GRADLIST DIALOGEX 0, 0, 258, 249
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "グラデーション選択"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,176,193
+    CONTROL         "",IDC_GRADBAR,"LSCGradEdit",WS_TABSTOP,7,206,243,36
+    PUSHBUTTON      "追加(&A)",IDC_ADD,190,53,60,14
+    PUSHBUTTON      "コピー(&C)",IDC_COPY,190,70,60,14
+    PUSHBUTTON      "名前の変更(&R)",IDC_RENAME,190,87,60,14
+    PUSHBUTTON      "削除(&D)",IDC_DELETE,190,105,60,14
+    PUSHBUTTON      "保護(&L)",IDC_LOCK,190,133,60,14
+    PUSHBUTTON      "更新(&U)",IDC_UPDATE,190,151,60,14
+    DEFPUSHBUTTON   "OK",IDOK,190,7,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,190,25,60,14
+    PUSHBUTTON      "マップを反転(&M)",IDC_REVERSE,190,186,60,14
+END
+
+IDD_PASTE DIALOGEX 0, 0, 196, 236
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "貼付けオプション"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "描画モード:",IDC_STATIC,7,10,42,8
+    COMBOBOX        IDC_COMBO,51,8,138,182,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "不透明度(&O)",IDC_SLIDER,"LSCTrack",WS_TABSTOP,7,26,182,11
+    GROUPBOX        "",IDC_STATIC,7,44,182,67
+    CONTROL         "ドロップシャドウ(&D)",IDC_DROPSHADOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,44,72,10
+    CONTROL         "拡散(&G)",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,15,59,156,11
+    LTEXT           "px",IDC_STATIC,174,59,9,8
+    CONTROL         "距離(&D)",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,15,71,156,11
+    LTEXT           "px",IDC_STATIC,174,71,10,8
+    LTEXT           "影の色:",IDC_STATIC,47,90,38,8
+    CONTROL         "",IDC_SHADOWCOLOR,"LSCColorPick",WS_TABSTOP | 0x2,86,87,49,14,WS_EX_CLIENTEDGE
+    GROUPBOX        "位置合わせ",IDC_STATIC,7,118,182,87
+    CONTROL         "マウスで指定する(&M)",IDC_NOALIGN,"Button",BS_AUTORADIOBUTTON,15,132,89,10
+    CONTROL         "アンカーで指定する(&A)",IDC_ALIGN,"Button",BS_AUTORADIOBUTTON,15,144,89,10
+    LTEXT           "水平オフセット(&X):",IDC_STATIC,19,164,57,8
+    EDITTEXT        IDC_XOFFSET,77,163,27,14,ES_AUTOHSCROLL
+    LTEXT           "垂直オフセット(&Y):",IDC_STATIC,19,180,57,8
+    EDITTEXT        IDC_YOFFSET,77,179,27,14,ES_AUTOHSCROLL
+    LTEXT           "",IDC_ANCHOR,112,132,68,61,SS_SUNKEN
+    PUSHBUTTON      "OK",IDOK,43,215,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,101,215,50,14
+END
+
+IDD_NEWIMAGE DIALOGEX 0, 0, 243, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新規作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "RGBカラー画像の設定",IDC_STATIC,7,7,160,78
+    LTEXT           "幅(&W):",IDC_STATIC,20,26,18,8
+    EDITTEXT        IDC_XSIZE,20,37,42,14,ES_AUTOHSCROLL
+    CTEXT           "ｘ",IDC_STATIC,67,39,8,8
+    LTEXT           "高さ(&H):",IDC_STATIC,80,26,23,8
+    EDITTEXT        IDC_YSIZE,80,37,42,14,ES_AUTOHSCROLL
+    LTEXT           "ピクセル",IDC_STATIC,127,39,33,8
+    DEFPUSHBUTTON   "OK",IDOK,185,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,185,24,50,14
+    CONTROL         "",IDC_COLOR,"LSCColorPick",WS_TABSTOP | 0x2,52,60,70,14,WS_EX_CLIENTEDGE
+    LTEXT           "背景色(&B):",IDC_STATIC,20,63,32,8
+END
+
+IDD_HTMLSHEET DIALOGEX 0, 0, 308, 252
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WEBアルバムの作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "選択された画像からWEBアルバムを作成します。",IDC_STATIC,7,7,166,8
+    GROUPBOX        "サムネイル画像",IDC_STATIC,7,23,234,85
+    LTEXT           "画像形式(&I):",IDC_STATIC,15,37,48,8
+    COMBOBOX        IDC_IMAGETYPE,69,35,61,104,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "セル背景色(&C):",IDC_STATIC,15,54,52,8
+    CONTROL         "",IDC_CELLCOLOR,"LSCColorPick",WS_TABSTOP | 0x2,69,51,61,14,WS_EX_CLIENTEDGE
+    LTEXT           "縦 x 横(&I):",IDC_STATIC,15,71,41,8
+    EDITTEXT        IDC_WIDTH,69,69,31,14,ES_AUTOHSCROLL
+    CTEXT           "x",IDC_STATIC,106,71,8,8
+    EDITTEXT        IDC_HEIGHT,120,69,31,14,ES_AUTOHSCROLL
+    LTEXT           "pixel",IDC_STATIC,153,71,24,8
+    LTEXT           "元画像へ(&L):",IDC_STATIC,15,89,43,8
+    COMBOBOX        IDC_LINK,69,87,127,54,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "ページ設定",IDC_STATIC,7,113,234,64
+    LTEXT           "タイトル(&T):",IDC_STATIC,15,128,41,8
+    EDITTEXT        IDC_TITLE,59,126,174,14,ES_AUTOHSCROLL
+    LTEXT           "表組み(&D):",IDC_STATIC,15,145,41,8
+    EDITTEXT        IDC_COLUMN,59,143,31,14,ES_AUTOHSCROLL
+    LTEXT           "列",IDC_STATIC,94,145,13,8
+    EDITTEXT        IDC_ROW,116,143,31,14,ES_AUTOHSCROLL
+    LTEXT           "行",IDC_STATIC,149,145,24,8
+    CONTROL         "罫線で囲む(&K)",IDC_TABLEBORDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,160,77,10
+    GROUPBOX        "出力",IDC_STATIC,7,183,234,62
+    LTEXT           "フォルダ(&F):",IDC_STATIC,15,198,41,8
+    COMBOBOX        IDC_FOLDER,59,196,158,72,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_BROWSE,"LSCFlatButton",WS_TABSTOP | 0x1,219,196,14,14
+    CONTROL         "元画像を出力先フォルダへコピーする(&C)",IDC_COPY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,214,147,10
+    CONTROL         "作成後にブラウザを起動して確認する(&B)",IDC_RUNBROWSER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,59,226,145,10
+    DEFPUSHBUTTON   "OK",IDOK,247,7,54,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,247,25,54,14
+END
+
+IDD_CONVERT DIALOGEX 0, 0, 381, 315
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "イメージのフォーマット変換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "選択されたイメージのフォーマット変換をおこないます。\n※JpegやWebP、TiffファイルのExif情報は削除されます",IDC_STATIC,7,6,367,20
+    LTEXT           "出力するイメージの種別(&T):",IDC_STATIC,7,31,110,8
+    CONTROL         "",IDC_IMAGETYPE,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,7,42,153,146
+    PUSHBUTTON      "タイプ別出力オプション(&P)...",IDC_PARAM,7,192,154,14
+    GROUPBOX        "",IDC_STATIC,174,30,200,175,WS_GROUP
+    CONTROL         "イメージの拡大・縮小をおこなう(&H)",IDC_DORESIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,193,31,119,10
+    CONTROL         "長辺を揃える(&L)",IDC_BASE_LONG,"Button",BS_AUTORADIOBUTTON,185,52,92,10
+    CONTROL         "短辺を揃える(&S)",IDC_BASE_SHORT,"Button",BS_AUTORADIOBUTTON,185,69,92,10
+    CONTROL         "幅を揃える(&W)",IDC_BASE_WIDTH,"Button",BS_AUTORADIOBUTTON,185,85,92,10
+    CONTROL         "高さを揃える(&H)",IDC_BASE_HEIGHT,"Button",BS_AUTORADIOBUTTON,185,101,92,10
+    CONTROL         "縮尺率で変換(&Z)",IDC_BASE_ZOOM,"Button",BS_AUTORADIOBUTTON,185,117,92,10
+    EDITTEXT        IDC_LONG_VALUE,288,50,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,338,52,19,8
+    EDITTEXT        IDC_SHORT_VALUE,288,67,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,338,68,19,8
+    EDITTEXT        IDC_WIDTH_VALUE,288,83,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,338,84,19,8
+    EDITTEXT        IDC_HEIGHT_VALUE,288,99,45,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,338,100,19,8
+    COMBOBOX        IDC_ZOOM_VALUE,288,115,45,118,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "%",IDC_STATIC,338,117,19,8
+    CONTROL         "",IDC_ZSLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,188,134,165,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,184,156,176,1
+    CONTROL         "元データが指定サイズ未満であれば拡大しない(&U)",IDC_UNDERSIZE,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,185,168,181,9
+    CONTROL         "元データが指定サイズ以上であれば縮小しない(&W)",IDC_OVERSIZE,"Button",BS_AUTORADIOBUTTON,185,183,182,10
+    GROUPBOX        "出力先",IDC_STATIC,7,212,367,69
+    LTEXT           "フォルダ(&F):",IDC_STATIC,19,230,42,8
+    COMBOBOX        IDC_FOLDER,65,227,274,104,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_BROWSE,"LSCFlatButton",WS_TABSTOP | 0x1,343,227,14,13
+    CONTROL         "処理後に元ファイルを削除する(&D)",IDC_DELREPLACE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,66,260,132,10
+    DEFPUSHBUTTON   "OK",IDOK,119,294,57,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,202,294,57,14
+    LTEXT           "※出力先が元イメージと同一フォルダであれば、元ファイルは上書きされます",IDC_STATIC,65,244,259,8
+END
+
+IDD_JPEGOPT DIALOGEX 0, 0, 207, 193
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "JPEGフォーマット"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,31,172,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,114,172,60,14
+    LTEXT           "画質(&Q):",IDC_STATIC,17,16,45,8
+    CONTROL         "",IDC_QUALITY,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,16,28,148,14
+    LTEXT           "",IDC_QVALUE,167,29,22,8
+    LTEXT           "ぼかし(&S):",IDC_STATIC,17,51,45,8
+    CONTROL         "",IDC_SMOOTHING,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,17,63,148,14
+    LTEXT           "",IDC_SVALUE,167,64,22,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,90,194,1
+    LTEXT           "形式(&F):",IDC_STATIC,17,103,29,8
+    CONTROL         "標準(&N)",IDC_STANDARD,"Button",BS_AUTORADIOBUTTON,23,117,107,10
+    CONTROL         "最適化(&B)",IDC_BASELINE,"Button",BS_AUTORADIOBUTTON,23,131,107,10
+    CONTROL         "プログレッシブ(&P)",IDC_PROGRESSIVE,"Button",BS_AUTORADIOBUTTON,23,145,107,10
+END
+
+IDD_WEBPOPT DIALOGEX 0, 0, 285, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WebPフォーマット"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "設定(&C)",IDC_STATIC,7,7,271,102
+    LTEXT           "品質(&Q):",IDC_STATIC,18,26,38,8
+    CONTROL         "画質のクオリティ(&Q)",IDC_QUALITY,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,81,23,156,19
+    LTEXT           "",IDC_QVALUE,245,25,22,8
+    LTEXT           "エンコード速度(&S):",IDC_STATIC,18,55,63,8
+    CONTROL         "エンコード速度(&S)",IDC_METHOD,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,81,52,156,19
+    LTEXT           "",IDC_MVALUE,245,54,22,8
+    LTEXT           "最適化(&P):",IDC_STATIC,18,83,56,8
+    COMBOBOX        IDC_PRESETS,89,81,142,67,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,78,124,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,155,124,50,14
+END
+
+IDD_AVIFOPT DIALOGEX 0, 0, 285, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Avifフォーマット"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "設定(&C)",IDC_STATIC,7,7,271,78
+    LTEXT           "品質(&Q):",IDC_STATIC,18,26,38,8
+    CONTROL         "画質のクオリティ(&Q)",IDC_QUALITY,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,81,23,156,19
+    LTEXT           "",IDC_QVALUE,245,25,22,8
+    LTEXT           "エンコード速度(&S):",IDC_STATIC,18,55,63,8
+    CONTROL         "エンコード速度(&S)",IDC_SPEED,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,81,52,156,19
+    LTEXT           "",IDC_SVALUE,245,54,22,8
+    DEFPUSHBUTTON   "OK",IDOK,78,101,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,155,101,50,14
+END
+
+IDD_FPXOPT DIALOGEX 0, 0, 207, 100
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "FlushPixフォーマット"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "JPEG圧縮を利用する(&J)",IDC_USEJPEG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,7,89,10
+    LTEXT           "画質(&Q):",IDC_STATIC,17,31,98,8
+    CONTROL         "",IDC_QUALITY,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,15,43,148,14
+    LTEXT           "",IDC_QVALUE,165,44,22,8
+    DEFPUSHBUTTON   "OK",IDOK,37,79,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,108,79,60,14
+END
+
+IDD_JP2OPT DIALOGEX 0, 0, 187, 147
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Jpeg2000フォーマット"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "イメージサイズの圧縮率(&Q):",IDC_STATIC,15,11,106,8
+    CONTROL         "",IDC_QUALITY,"msctls_trackbar32",TBS_AUTOTICKS | TBS_ENABLESELRANGE | WS_TABSTOP,14,26,136,14
+    LTEXT           "1/100",IDC_QVALUE,152,26,28,8
+    LTEXT           "←低圧縮",IDC_STATIC,21,43,41,8
+    RTEXT           "高圧縮→",IDC_STATIC,103,43,41,8
+    DEFPUSHBUTTON   "OK",IDOK,31,126,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,105,126,50,14
+    GROUPBOX        "説明",IDC_STATIC,14,67,156,47
+    LTEXT           "圧縮率は元画像のファイルサイズではなく、表示上のイメージデータサイズに対する圧縮率となります。",IDC_STATIC,20,80,146,29
+END
+
+IDD_RENEXIFDATE DIALOGEX 0, 0, 338, 223
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "撮影日時で名前変更"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,224,202,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,281,202,50,14
+    LTEXT           "Exif情報を参照して撮影日時で名前を変更します。",IDC_STATIC,7,7,164,8
+    COMBOBOX        IDC_PART1,7,17,89,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "+",IDC_STATIC,98,19,8,8
+    COMBOBOX        IDC_PART2,108,17,89,82,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "+",IDC_STATIC,200,19,8,8
+    COMBOBOX        IDC_PART3,210,17,89,81,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           ".拡張子",IDC_STATIC,303,19,28,8
+    LTEXT           "連番のリセット(&R):",IDC_STATIC,7,37,58,8
+    COMBOBOX        IDC_RESET,70,34,127,107,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,52,324,144
+END
+
+IDD_PICKOUTTHUMB DIALOGEX 0, 0, 239, 156
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "サムネイルの抽出"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_PICKOUT,IDC_STATIC,7,7,20,20
+    LTEXT           "RAWデータファイルに含まれるサムネイルイメージを抽出して別ファイルに書き出します。",IDC_STATIC,35,9,187,20
+    LTEXT           "書き出す先のフォルダ(&F):",IDC_STATIC,7,39,80,8
+    CONTROL         "",IDC_PATH,"LSCSearchPath",WS_BORDER | WS_TABSTOP,7,50,224,14
+    GROUPBOX        "もしサムネイルが複数あれば",IDC_STATIC,7,70,225,48
+    CONTROL         "最小サイズのサムネイルを抽出する(&S)",IDC_MINSIZE,"Button",BS_AUTORADIOBUTTON,28,86,141,10
+    CONTROL         "最大のサイズのサムネイルを抽出する(&L)",IDC_MAXSIZE,"Button",BS_AUTORADIOBUTTON,28,99,141,10
+    DEFPUSHBUTTON   "OK",IDOK,63,134,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,127,134,50,14
+END
+
+IDD_SELECTFOLDER DIALOGEX 0, 0, 249, 215
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "指定フォルダを開く"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "開くフォルダを選択してください(&F)",IDC_STATIC,6,6,200,8
+    COMBOBOX        IDC_PATH,6,18,237,123,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,6,35,237,156
+    DEFPUSHBUTTON   "OK",IDOK,139,195,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,193,195,50,14
+END
+
+IDD_SIZECLIP DIALOGEX 0, 0, 373, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "指定サイズで選択"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "幅(&W):",IDC_STATIC,7,8,26,8
+    EDITTEXT        IDC_XSIZE,38,7,55,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel　x　高さ(&H):",IDC_STATIC,98,8,56,8
+    EDITTEXT        IDC_YSIZE,161,7,55,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "pixel",IDC_STATIC,221,8,16,8
+    LTEXT           "壁紙など規定のサイズ(&L)",IDC_STATIC,7,29,91,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,40,359,78
+    DEFPUSHBUTTON   "OK",IDOK,248,125,54,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,312,125,54,14
+END
+
+IDD_CROPIMAGE DIALOGEX 0, 0, 265, 242
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "イメージのクロップ"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "イメージファイルの四辺を、それぞれ指定されたサイズでクロップし、Jpeg形式で出力します。",IDC_STATIC,7,7,206,21
+    LTEXT           "左の除外(&L)",IDC_STATIC,23,84,40,8
+    EDITTEXT        IDC_LEFTCROP,22,95,40,14,ES_AUTOHSCROLL
+    LTEXT           "上の除外(&T)",IDC_STATIC,86,48,41,8
+    EDITTEXT        IDC_TOPCROP,134,46,40,14,ES_AUTOHSCROLL
+    LTEXT           "右の除外(&R)",IDC_STATIC,197,84,42,8
+    EDITTEXT        IDC_RIGHTCROP,196,95,40,14,ES_AUTOHSCROLL
+    LTEXT           "下の除外(&B)",IDC_STATIC,87,133,41,8
+    EDITTEXT        IDC_BOTTOMCROP,135,130,40,14,ES_AUTOHSCROLL
+    CONTROL         "元イメージを上書き（削除）する(&O)",IDC_OVERWRITEIMAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,34,158,124,10
+    LTEXT           "出力画質:",IDC_STATIC,34,179,36,8
+    CONTROL         "",IDC_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,73,177,129,15
+    CTEXT           "",IDC_QUALITY,207,178,26,11,0,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "OK",IDOK,152,221,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,208,221,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,82,66,96,56
+    CONTROL         "",IDC_STATIC,"Static",SS_WHITERECT,90,74,79,40
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_FRAME MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "開く(&O)...\tCtrl+O",           IDM_FILE_OPEN
+        MENUITEM "新規作成(&N)...\tCtrl+N",         IDM_FILE_NEW
+        MENUITEM "クリップボードを開く",                  IDM_FILE_OPENCLIPBOARD
+        MENUITEM "保存(&S)\tCtrl+S",              IDM_FILE_SAVE
+        MENUITEM "名前を付けて保存(&A)...",             IDM_FILE_SAVEAS
+        MENUITEM "壁紙として保存(&W)...",              IDM_FILE_WALLPAPER
+        POPUP "形式を指定して書き出し(&W)"
+        BEGIN
+            MENUITEM SEPARATOR
+        END
+        MENUITEM "スキャナまたはカメラから(&K)...",         IDM_FILE_TWAIN
+        MENUITEM SEPARATOR
+        MENUITEM "印刷(&P)\tCtrl+P",              IDM_FILE_PRINT
+        MENUITEM SEPARATOR
+        POPUP "最近開いたファイル(&F)"
+        BEGIN
+            MENUITEM "（なし）",                        ID_FILE_MRU_FILE1, GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "閉じる(&Q)",                     IDM_FILE_CLOSE
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "やり直し(&U)\tCtrl+Z",            IDM_EDIT_UNDO
+        MENUITEM "コピー(&C)\tCtrl+C",             IDM_EDIT_COPY
+        MENUITEM "貼付け(&P)\tCtrl+V",             IDM_EDIT_PASTE
+        MENUITEM "すべて選択(&A)\tCtrl+A",           IDM_EDIT_SELALL
+        MENUITEM "選択を解除(&D)\tCtrl+D",           IDM_EDIT_SELCANCEL
+        MENUITEM SEPARATOR
+        MENUITEM "指定サイズで選択(&S)...",             IDM_EDIT_SIZECLIP
+    END
+    POPUP "イメージ(&I)"
+    BEGIN
+        POPUP "色解像度の変更(&C)"
+        BEGIN
+            MENUITEM "RGBカラー(&C)",                  IDM_COLOR_FULLCOLOR
+            MENUITEM "減色(&Q)...\tF5",               IDM_COLOR_QUANTIZE
+            MENUITEM "使用色数の計算(N)...",               IDM_COLOR_COUNT
+            MENUITEM SEPARATOR
+            MENUITEM "カラーテーブルの編集(&P)...",           IDM_COLOR_PALETTE
+        END
+        POPUP "色調の変更(&V)"
+        BEGIN
+            MENUITEM SEPARATOR
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "イメージサイズ(&S)...\tF9",          IDM_RESIZE_ZOOM
+        MENUITEM "カンバスサイズ(&C)...",              IDM_RESIZE_CANVAS
+        MENUITEM "トリミング(&X)\tCtrl+X",           IDM_RESIZE_TRIM
+        POPUP "回転(&R)"
+        BEGIN
+            MENUITEM "左右反転(&M)",                    IDM_ROTATE_MIRROR
+            MENUITEM "上下反転(&F)",                    IDM_ROTATE_FLIP
+            MENUITEM "左へ90度回転(&L)\tCtrl+L",         IDM_ROTATE_LEFT
+            MENUITEM "右へ90度回転(&R)\tCtrl+R",         IDM_ROTATE_RIGHT
+        END
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "ナビゲ－タ(&V)\tF12",              IDM_TOOL_NAVIGATOR
+        MENUITEM SEPARATOR
+        MENUITEM "拡大(&I)\tCtrl+PgUp, +",        IDM_ZOOM_IN
+        MENUITEM "縮小(&O)\tCtrl+PgDn, -",        IDM_ZOOM_OUT
+        MENUITEM "原寸(&D)\tCtrl+Home, *",        IDM_ZOOM_NONE
+        MENUITEM "全体を表示(&F)\tCtrl+End, /",      IDM_ZOOM_FIT
+        MENUITEM "幅に合わせる(&H)",                  IDM_ZOOM_FITHORZ
+        MENUITEM "高さに合わせる(&V)",                 IDM_ZOOM_FITVERT
+        MENUITEM SEPARATOR
+        MENUITEM "グリッドを表示(&G)\tCtrl+Alt+G",     IDM_OPTION_GRID
+        MENUITEM "ツールバーを小さいボタンで(&T)",           IDM_TOOL_TBSMALL
+        MENUITEM SEPARATOR
+        MENUITEM "動作環境の設定(&S)...",              IDM_OPTION_SETUP
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "ヘルプ(&H)",                     ID_HELP
+        MENUITEM "イメージエディタについて...(&A)",         ID_APP_ABOUT
+    END
+END
+
+IDR_VIEW MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "開く(&O)...\tCtrl+O",           IDM_FILE_OPEN
+        MENUITEM "印刷(&P)\tCtrl+P",              IDM_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)...\tDel",              IDM_FILE_DELETE
+        MENUITEM SEPARATOR
+        POPUP "最近開いたファイル(&F)"
+        BEGIN
+            MENUITEM "（なし）",                        ID_FILE_MRU_FILE1, GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "閉じる(&Q)",                     IDM_FILE_CLOSE
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "コピー(&C)\tCtrl+C",             IDM_EDIT_COPY
+        MENUITEM "すべて選択(&A)\tCtrl+A",           IDM_EDIT_SELALL
+        MENUITEM "選択を解除(&D)\tCtrl+D",           IDM_EDIT_SELCANCEL
+        MENUITEM SEPARATOR
+        MENUITEM "指定サイズで選択(&S)...",             IDM_EDIT_SIZECLIP
+        MENUITEM SEPARATOR
+        MENUITEM "編集用に画像を開く(&O)\tCtrl+E",       IDM_EXEC_EDITOR
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "拡大(&S)\tCtrl+PgUp, +",        IDM_ZOOM_IN
+        MENUITEM "縮小(&O)\tCtrl+PgDn, -",        IDM_ZOOM_OUT
+        MENUITEM "原寸(&D)\tCtrl+Home, *",        IDM_ZOOM_NONE
+        MENUITEM "全体を表示(&F)\tCtrl+End, /",      IDM_ZOOM_FIT
+        MENUITEM "幅に合わせる(&H)\tCtrl+W",          IDM_ZOOM_FITHORZ
+        MENUITEM "高さに合わせる(&V)\tCtrl+H",         IDM_ZOOM_FITVERT
+        MENUITEM SEPARATOR
+        MENUITEM "手のひらツール(&G)",                 IDM_MODE_GRAB
+        MENUITEM "矩形選択ツール(&R)",                 IDM_MODE_SEL
+        MENUITEM SEPARATOR
+        MENUITEM "左へ90度回転(&L)\tCtrl+L",         IDM_ROTATE_LEFT
+        MENUITEM "右へ90度回転(&R)\tCtrl+R",         IDM_ROTATE_RIGHT
+        MENUITEM SEPARATOR
+        MENUITEM "前の画像(&P)\tAlt+←, Ctrl+Space", IDM_FILE_PREV
+        MENUITEM "次の画像(&N)\tAlt+→, Space",      IDM_FILE_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "ツールバーを小さいボタンで(&T)",           IDM_TOOL_TBSMALL
+    END
+    POPUP "ツール(&T)"
+    BEGIN
+        MENUITEM "この場所をマップで表示(&G)\tF10",        IDM_TOOL_GPS
+        MENUITEM SEPARATOR
+        MENUITEM "スライドショウ\tF5, Ctrl+G",         IDM_EXEC_SLIDESHOW
+    END
+    POPUP "ウィンドウ(&W)"
+    BEGIN
+        MENUITEM "サムネイルリストを表示(&T)\tF12, Ctrl+T", IDM_TOOL_THUMBLIST
+        MENUITEM "サムネイルリストの配置を変更(&L)",          IDM_TOOL_THUMBLIST_LAYOUT
+        MENUITEM SEPARATOR
+        MENUITEM "イメージ情報(&I)\tF11, Ctrl+I",     IDM_TOOL_EXIFINFO
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "ヘルプ(&H)",                     ID_HELP
+        MENUITEM "イメージビュアについて...(&A)",          ID_APP_ABOUT
+    END
+END
+
+IDR_SLIDESHOW MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "ひとつ戻る(&P)",                   IDM_SLIDESHOW_PREV
+        MENUITEM "ひとつ進む(&N)",                   IDM_SLIDESHOW_NEXT
+        MENUITEM SEPARATOR
+        MENUITEM "コピー(&C)",                     IDM_EDIT_COPY
+        MENUITEM "編集用に画像を開く(&E)",               IDM_EXEC_EDITOR
+        MENUITEM SEPARATOR
+        MENUITEM "概要情報を表示(&I)",                 IDM_SLIDESHOW_INFORMATION
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)",                      ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_FRAME ACCELERATORS
+BEGIN
+    VK_F5,          IDM_COLOR_QUANTIZE,     VIRTKEY, NOINVERT
+    "C",            IDM_EDIT_COPY,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      IDM_EDIT_COPY,          VIRTKEY, CONTROL, NOINVERT
+    "V",            IDM_EDIT_PASTE,         VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      IDM_EDIT_PASTE,         VIRTKEY, SHIFT, NOINVERT
+    "A",            IDM_EDIT_SELALL,        VIRTKEY, CONTROL, NOINVERT
+    "D",            IDM_EDIT_SELCANCEL,     VIRTKEY, CONTROL, NOINVERT
+    "Z",            IDM_EDIT_UNDO,          VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      IDM_FILE_CLOSE,         VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_FILE_CLOSE,         VIRTKEY, NOINVERT
+    VK_RIGHT,       IDM_FILE_NEXT,          VIRTKEY, ALT, NOINVERT
+    "O",            IDM_FILE_OPEN,          VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        IDM_FILE_PREV,          VIRTKEY, ALT, NOINVERT
+    "P",            IDM_FILE_PRINT,         VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_FILE_SAVE,          VIRTKEY, CONTROL, NOINVERT
+    "G",            IDM_OPTION_GRID,        VIRTKEY, CONTROL, ALT, NOINVERT
+    "X",            IDM_RESIZE_TRIM,        VIRTKEY, CONTROL, NOINVERT
+    VK_F9,          IDM_RESIZE_ZOOM,        VIRTKEY, NOINVERT
+    "N",            IDM_FILE_NEW,           VIRTKEY, CONTROL, NOINVERT
+    "L",            IDM_ROTATE_LEFT,        VIRTKEY, CONTROL, NOINVERT
+    "R",            IDM_ROTATE_RIGHT,       VIRTKEY, CONTROL, NOINVERT
+    VK_DIVIDE,      IDM_ZOOM_FIT,           VIRTKEY, NOINVERT
+    VK_END,         IDM_ZOOM_FIT,           VIRTKEY, CONTROL, NOINVERT
+    "/",            IDM_ZOOM_FIT,           ASCII,  NOINVERT
+    VK_ADD,         IDM_ZOOM_IN,            VIRTKEY, NOINVERT
+    VK_PRIOR,       IDM_ZOOM_IN,            VIRTKEY, CONTROL, NOINVERT
+    "+",            IDM_ZOOM_IN,            ASCII,  NOINVERT
+    VK_HOME,        IDM_ZOOM_NONE,          VIRTKEY, CONTROL, NOINVERT
+    VK_MULTIPLY,    IDM_ZOOM_NONE,          VIRTKEY, NOINVERT
+    VK_NEXT,        IDM_ZOOM_OUT,           VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    IDM_ZOOM_OUT,           VIRTKEY, NOINVERT
+    "-",            IDM_ZOOM_OUT,           ASCII,  NOINVERT
+END
+
+IDR_VIEW ACCELERATORS
+BEGIN
+    "C",            IDM_EDIT_COPY,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      IDM_EDIT_COPY,          VIRTKEY, CONTROL, NOINVERT
+    "A",            IDM_EDIT_SELALL,        VIRTKEY, CONTROL, NOINVERT
+    "D",            IDM_EDIT_SELCANCEL,     VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_EXEC_EDITOR,        VIRTKEY, CONTROL, NOINVERT
+    VK_ESCAPE,      IDM_FILE_CLOSE,         VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_FILE_CLOSE,         VIRTKEY, NOINVERT
+    VK_RIGHT,       IDM_FILE_NEXT,          VIRTKEY, ALT, NOINVERT
+    VK_SPACE,       IDM_FILE_NEXT,          VIRTKEY, NOINVERT
+    "O",            IDM_FILE_OPEN,          VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        IDM_FILE_PREV,          VIRTKEY, ALT, NOINVERT
+    VK_SPACE,       IDM_FILE_PREV,          VIRTKEY, CONTROL, NOINVERT
+    "P",            IDM_FILE_PRINT,         VIRTKEY, CONTROL, NOINVERT
+    "L",            IDM_ROTATE_LEFT,        VIRTKEY, CONTROL, NOINVERT
+    "R",            IDM_ROTATE_RIGHT,       VIRTKEY, CONTROL, NOINVERT
+    "I",            IDM_TOOL_EXIFINFO,      VIRTKEY, CONTROL, NOINVERT
+    VK_DIVIDE,      IDM_ZOOM_FIT,           VIRTKEY, NOINVERT
+    VK_END,         IDM_ZOOM_FIT,           VIRTKEY, CONTROL, NOINVERT
+    "/",            IDM_ZOOM_FIT,           ASCII,  NOINVERT
+    VK_ADD,         IDM_ZOOM_IN,            VIRTKEY, NOINVERT
+    VK_PRIOR,       IDM_ZOOM_IN,            VIRTKEY, CONTROL, NOINVERT
+    "+",            IDM_ZOOM_IN,            ASCII,  NOINVERT
+    VK_HOME,        IDM_ZOOM_NONE,          VIRTKEY, CONTROL, NOINVERT
+    VK_MULTIPLY,    IDM_ZOOM_NONE,          VIRTKEY, NOINVERT
+    "*",            IDM_ZOOM_NONE,          ASCII,  NOINVERT
+    VK_NEXT,        IDM_ZOOM_OUT,           VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    IDM_ZOOM_OUT,           VIRTKEY, NOINVERT
+    "-",            IDM_ZOOM_OUT,           ASCII,  NOINVERT
+    VK_DELETE,      IDM_FILE_DELETE,        VIRTKEY, NOINVERT
+    VK_APPS,        IDM_FILE_CONTEXTMENU,   VIRTKEY, NOINVERT
+    VK_F10,         IDM_TOOL_GPS,           VIRTKEY, NOINVERT
+    VK_F11,         IDM_TOOL_EXIFINFO,      VIRTKEY, NOINVERT
+    VK_F12,         IDM_TOOL_THUMBLIST,     VIRTKEY, NOINVERT
+    "W",            IDM_ZOOM_FITHORZ,       VIRTKEY, CONTROL, NOINVERT
+    "H",            IDM_ZOOM_FITVERT,       VIRTKEY, CONTROL, NOINVERT
+    "G",            IDM_EXEC_SLIDESHOW,     VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          IDM_EXEC_SLIDESHOW,     VIRTKEY, NOINVERT
+END
+
+IDR_SLIDESHOW ACCELERATORS
+BEGIN
+    VK_ESCAPE,      ID_APP_EXIT,            VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ZOOM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_PRINTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 280
+        BOTTOMMARGIN, 270
+    END
+
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_QUANTIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_PALEDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_RESIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 168
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_GRADLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 250
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_PASTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 189
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_NEWIMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_HTMLSHEET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+
+    IDD_CONVERT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 374
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 308
+    END
+
+    IDD_JPEGOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_WEBPOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_AVIFOPT, DIALOG
+    BEGIN
+    END
+
+    IDD_FPXOPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_JP2OPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_RENEXIFDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 331
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_PICKOUTTHUMB, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_SELECTFOLDER, DIALOG
+    BEGIN
+    END
+
+    IDD_SIZECLIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 366
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_CROPIMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_CROPIMAGE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_WEBPOPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_CONVERT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_AVIFOPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_JPEGOPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_JP2OPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_FPXOPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "PhotoImager"
+    IDS_ALREADYEXIST        "'%1'\n\nこのファイルは既に存在します。上書きしますか?"
+    IDS_SLIDE_NOENTRY       "閲覧可能な画像ファイルがありません。"
+    IDS_FILEISPSD           "'%1'\n\nこのファイルを上書きするとレイヤ情報その他が消失します。\n上書きしますか？"
+    IDS_CAPTION_SAVEBMP     "画像の保存"
+    IDS_FILTER_BMP          "ビットマップ(*.bmp)|*.bmp||"
+    IDS_FILTER_PICTURE      "全てのイメージ|*.jpg;*.jpeg;*.webp;*.avif;*.png;*.gif;*.bmp;*.tif;*.dib;*.rle;*.tga|JPEG(.jpg;.jpeg)|*.jpg;*.jpeg|Png(*.png)|*.png|GIF(*.gif)|*.gif|WebP(*.webp)|*.webp|Avif(*.avif)|*.avif|ビットマップ(.bmp;.dib;.rle)|*.bmp;*.dib;*.rle|TIFF(.tif)|*.tif|全ファイル(*.*)|*.*||"
+    IDS_CAPTION_LOADBMP     "イメージファイルの読み込み"
+    IDS_FILTER_SAVE         "Jpeg(*.jpg;*.jpeg;*.jpe)|*.jpg;*.jpeg;*.jpe|Png(*.png)|*.png|GIF(*.gif)|*.gif|WebP(*.webp)|*.webp|Avif(*.avif)|*.avif|Bitmap(*.bmp;*.dib)|*.bmp;*.dib|Tiff(*.tif;*.tiff)|*.tif;*.tiff|FlashPix(.fpx)|*.fpx|Targa(*.tga)|*.tga|SunRaster(*.ras)|*.ras|Pcx(*.pcx)|*.pcx|Pnm(*.ppm)|*.ppm|Jpeg2000(*.jp2)|*.jp2|Sgi(*.sgi)|*.sgi||"
+    IDS_FILTER_WALLPAPER    "Jpeg(.jpg)|*.jpg|ビットマップ(.bmp)|*.bmp|GIF(.gif)|*.gif||"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUERY_UPDATESAVE    "画像は修正されています。保存しますか？"
+    IDS_FILEISDIRECTORY     "'%1' は フォルダです。"
+    IDS_FILEISREADONLY      "'%1' は読み取り専用です。\n上書きしますか？"
+    IDS_PRINT_NEEDMEM       "印刷ではおよそ%1のメモリが消費されます。\nメモリ不足の場合には、ディスクスワップによる待ち時間が増大します。\n\n継続しますか？"
+    IDS_NUMOFCOLORS         "この画像で使用している色数は %1 色です。"
+    IDS_USER_RISTRICTION    "試用期間終了のため、機能が制限されています。"
+    IDS_SIZE_WARNING        "新しい画像サイズが現在の画像サイズよりも小さくなるため、\n画像の一部が切り取られますがよろしいですか？"
+    IDS_FILEISJPEGEXIF      "'%1'\n\nこのファイルには各種撮影情報が含まれています。\n上書きするとそれらの情報が消失しますがよろしいですか？"
+    IDS_GRADATION_DELETE    "グラデーション '%1' を削除しますか?"
+    IDS_GRADATION_LOCKED    "グラデーション '%1' は保護されています。"
+    IDS_GRADATION_INVALIDNAME "グラデーション名に '[' および ']' は使用できません。"
+    IDS_ERR_CANNOTSAVE      "'%1'\n\nファイルを保存できません。"
+    IDS_NOEXIFDATE          "撮影日時情報を持つExifファイルがありません。"
+    IDS_TITLE_EXIF          "Exif変換"
+    IDS_PROGRESS_EXIFDATE   "撮影日時に変換しています..."
+    IDS_QUERY_EXIFDATE      "選択されたファイルの名前をExif情報の撮影日時を用いて名前変更します。\n実行しますか？"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DATE_NONE           "（なし）"
+    IDS_DATE_YYYYMMDD       "yyyymmdd（西暦年4桁）"
+    IDS_DATE_YYMMDD         "yymmdd（西暦年2桁）"
+    IDS_DATE_NNNMMDD        "Nnnmmdd（和暦）"
+    IDS_DATE_MMDD           "mmdd（月日）"
+    IDS_DATE_HHMM           "HHMM（時分）"
+    IDS_DATE_HHMMSS         "HHMMSS（時分秒）"
+    IDS_DATE_1SERIAL        "1桁の連番"
+    IDS_DATE_2SERIAL        "2桁の連番"
+    IDS_DATE_3SERIAL        "3桁の連番"
+    IDS_DATE_4SERIAL        "4桁の連番"
+    IDS_DATE_DOCUMENT       "ドキュメントの名前"
+    IDS_HEADER_OLDNAME      "変更前の名前"
+    IDS_HEADER_DATE         "撮影日時"
+    IDS_HEADER_NEWNAME      "変更後の名前"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_HTML_IMAGETYPE      "Jpeg;Png;GIF;"
+    IDS_HTML_LINK           "リンクしない;相対パスでリンクする;絶対パスでリンクする;"
+    IDS_QUANTIZE_METHOD     "近似色;誤差拡散(通常）;誤差拡散（色にじみ抑制）;パターン;"
+    IDS_QUANTIZE_COLOR      "2;4;8;16;32;64;128;256;"
+    IDS_ZOOM_ZVAL           "200;180;160;140;120;100;90;80;70;60;50;40;30;20;"
+    IDS_ZOOM_SAMPLE         "最近傍法;線形補完法;３次補完法;"
+    IDS_QUERY_DELETE_FILE   "現在表示している '%1' ファイルを削除しますか？"
+    IDS_MULTI_RESET         "何もしない;日が変わればリセット;月が変わればリセット;年が変わればリセット;"
+    IDS_NO_JPEGFILE         "処理するJpegファイルがありません"
+    IDS_TITLE_JPEG2PDF      "JpegからPDF"
+    IDS_PROGRESS_JPEG2PDF   "PDFに変換しています..."
+    IDS_MAX_JPEGFILE        "PDFファイルに格納できるイメージの上限は256枚です。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROCESSING_READ     "読み込んでいます..."
+    IDS_PROCESSING_WRITE    "保存しています..."
+    IDS_PROCESSING_CONVERT  "変換しています..."
+    IDS_TITLE_SPLITIMAGE    "イメージの分割"
+    IDS_VERTICAL_RECTANGLE  "%s は縦長（%d x %d pixel）のイメージです。\n左右に分割しますか？"
+    IDS_YESTOALL            "以降も同様に処理する"
+    IDS_WEB_HOMEPAGE        "http://lightship.co.jp/"
+    IDS_WEB_HELP_VIEW       "http://lightship.co.jp/FileVisor7/help/built-in/imageview.htm"
+    IDS_WEB_HELP_EDIT       "http://lightship.co.jp/FileVisor7/help/built-in/imageedit.htm"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_CURSOR     "X:9999 Y:9999 W:9999 H:9999"
+    ID_INDICATOR_SCALE      "倍率 99.99%"
+    ID_INDICATOR_SELECT     "選択 9999 x 9999"
+    ID_INDICATOR_SQUARE     "サイズ 9999 x 9999"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_COLOR      "色数 99bpp"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_MAIN_VIEWER     "MainViewer"
+    IDS_SEC_MAIN_EDITOR     "MainEditor"
+    IDS_SEC_EFFECT          "Effect"
+    IDS_SEC_EDIT            "Edit"
+    IDS_SEC_SAVE            "Save"
+    IDS_SEC_CONVERTER       "Converter"
+    IDS_SEC_EXIF            "Exif"
+    IDS_SEC_WEBALBUM        "WebAlbum"
+    IDS_SEC_SELECTFOLDER    "SelectFolder"
+    IDS_SEC_CROPIMAGE       "CropImage"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_WNDPOS          "WndPos"
+    IDS_KEY_DISPSTAT        "DisplayStatus"
+    IDS_KEY_ZOOMVIEWINFO    "ZoomViewInfo"
+    IDS_KEY_REBARSTAT       "RebarStatus"
+    IDS_KEY_PRINTINFO       "PrintInfo"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_PASTE           "Paste"
+    IDS_KEY_NEWIMAGE        "NewImage"
+    IDS_KEY_IMAGEINFO       "ImageInfo"
+    IDS_KEY_STATUS          "Status"
+    IDS_KEY_FOLDERHISTORY   "FolderHistory"
+    IDS_KEY_JPEGOPTION      "JpegOption"
+    IDS_KEY_GDIPLUS         "Gdi+"
+    IDS_KEY_RENAME          "Rename"
+    IDS_KEY_PICKOUTPATH     "PickoutPath"
+    IDS_KEY_NAVIPOS         "NaviPos"
+    IDS_KEY_HISTORY         "History"
+    IDS_KEY_INFOVIEWSTATUS  "InfoviewStatus"
+    IDS_KEY_SIZECLIP        "SizeClip"
+    IDS_KEY_LASTSAVEPATH    "LastSavePath"
+    IDS_KEY_WEBPOPTION      "WebpOption"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_AVIFOPTION      "AvifOption"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_CLOSE          "表示しているファイルを閉じて終了します。\n閉じる(Esc)"
+    IDM_FILE_SAVEAS         "画像を名前を付けて保存します。\n名前を付けて保存"
+    IDM_FILE_WALLPAPER      "壁紙として保存します。\n壁紙として保存"
+    IDM_FILE_RENAME         "ファイルの名前を変更\n名前の変更"
+    IDM_FILE_PRINT          "画像を印刷します。\n印刷"
+    IDM_FILE_OPEN           "画像ファイルを開きます。\n開く(Ctrl+O)"
+    IDM_FILE_SAVE           "画像を保存します。\n保存(Ctrl+S)"
+    IDM_FILE_DELETE         "現在表示している画像ファイルを削除します。\n削除(Del)"
+    IDM_FILE_NEW            "画像ドキュメントを新規に作成します。\n新規作成"
+    IDM_FILE_OPENCLIPBOARD  "クリップボードにある画像を開きます。\nクリップボードを開く"
+    IDM_FILE_PREV           "前の画像を表示します。\n前の画像(Alt+←)"
+    IDM_FILE_NEXT           "次の画像を表示\n次の画像(Alt+→)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_FILE_TWAIN          "スキャナまたはカメラから画像を読み込みます。\nスキャナまたはカメラから"
+    IDM_EDIT_COPY           "クリップボードへ画像をコピーします。\nコピー"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_EDIT_PASTE          "クリップボードの画像を貼付けます。\n貼付け"
+    IDM_EDIT_SELALL         "すべてを選択します。\nすべて選択"
+    IDM_EDIT_SELCANCEL      "選択を解除します。\n選択を解除"
+    IDM_EDIT_SIZECLIP       "サイズを指定して選択します。\n指定サイズで選択"
+    IDM_EDIT_UNDO           "直前の操作をやり直します。\nやり直し"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_COLOR_FULLCOLOR     "画像のモードをRGBフルカラーにします。\nRGBカラー"
+    IDM_COLOR_QUANTIZE      "色数を指定して減色し、インデクスカラーモードにします。\n減色"
+    IDM_COLOR_PALETTE       "パレットカラーテーブルを編集します。\nパレットの編集"
+    IDM_COLOR_COUNT         "画像が使用している色数を計算します。\n使用色数の計算"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_MODE_GRAB           "手のひらツール\n手のひら"
+    IDM_MODE_SEL            "矩形選択ツール\n矩形選択"
+    IDM_RESIZE_ZOOM         "イメージサイズを変更し、拡大・縮小します。\nイメージサイズ"
+    IDM_RESIZE_TRIM         "トリミングして選択されている範囲を切り出します。\nトリミング"
+    IDM_RESIZE_CANVAS       "カンバスサイズを変更しします。\nカンバスサイズ"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_ROTATE_LEFT         "左へ90度回転します。\n左へ90度(Ctrl+L)"
+    IDM_ROTATE_RIGHT        "右へ90度回転します。\n右へ90度(Ctrl+R)"
+    IDM_ROTATE_MIRROR       "画像を左右反転します。\nミラー"
+    IDM_ROTATE_FLIP         "画像を上下反転します。\nフリップ"
+    IDM_TOOL_ZOOM           "表示倍率を設定します。\n表示倍率"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TOOL_NAVIGATOR      "ナビゲータを表示します。\nナビゲータ(F12)"
+    IDM_TOOL_THUMBLIST      "サムネイルリストを表示します。\nサムネイルリスト(F12)"
+    IDM_TOOL_THUMBLIST_LAYOUT "サムネイルリストの配置を変更します。\nサムネイルリストの配置"
+    IDM_EXEC_SLIDESHOW      "スライドショウを開始します。\nスライドショウ(F5,Ctrl+G)"
+    IDM_EXEC_EDITOR         "編集用に画像を開きます。\n編集(Ctrl+E)"
+    IDM_OPTION_SETUP        "動作環境を設定します。\n動作環境の設定"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_TOOL_EXIFINFO       "Exifイメージ情報を表示します。\nイメージ情報(F11,Ctrl+I)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_OPTION_GRID         "グリッドの表示・非表示を切り替えます。\nグリッドの表示"
+    IDM_TOOL_GPS            "緯度経度情報からこの場所をマップで表示します\nこの場所をマップで表示"
+    IDM_ZOOM                "表示倍率を設定します。\n表示倍率"
+    IDM_ZOOM_NONE           "画像を原寸サイズで表示します。\n原寸(*)"
+    IDM_ZOOM_FIT            "画像全体を拡大または縮小表示します。\n全体を表示(/)"
+    IDM_ZOOM_IN             "画像を拡大して表示します。\n拡大(+)"
+    IDM_ZOOM_OUT            "画像を縮小して表示します。\n縮小(-)"
+    IDM_ZOOM_FITHORZ        "画像幅に合わせて拡大または縮小表示します。\n幅に合わせる"
+    IDM_ZOOM_FITVERT        "画像高さに合わせて拡大または縮小表示します。\n高さに合わせる"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PLUGIN_ARTISTIC     "アーティスティック(&A)"
+    IDS_PLUGIN_COLOR        "色調(&V)"
+    IDS_PLUGIN_SHAPEN       "シャープ(&S)"
+    IDS_PLUGIN_SHADING      "ぼかし(&H)"
+    IDS_PLUGIN_BLUR         "ぶれ(&B)"
+    IDS_PLUGIN_STROKE       "ストローク(&K)"
+    IDS_PLUGIN_MOSAIC       "モザイク(&M)"
+    IDS_PLUGIN_TEXTURE      "テクスチャ(&T)"
+    IDS_PLUGIN_TRANSFORM    "変形(&X)"
+    IDS_PLUGIN_EXPRESSION   "表現手法(&I)"
+    IDS_PLUGIN_FRAME        "フレーム(&F)"
+    IDS_PLUGIN_EDGEDETECT   "エッジ(&E)"
+    IDS_PLUGIN_NOISE        "ノイズ(&N)"
+    IDS_PLUGIN_PAINT        "描画(&P)"
+    IDS_PLUGIN_STRING       "文字加工(&S)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PLUGIN_ROTATE       "回転(&R)"
+    IDS_PLUGIN_WRITEOUT     "形式を指定して書き出し(&W)"
+    IDS_PLUGIN_MONTAGE      "合成(&O)"
+    IDS_PLUGIN_GLASS        "ガラス(&G)"
+    IDS_PLUGIN_TONE         "色調の変更(&V)"
+    IDS_PLUGIN_OTHER        "その他(&O)"
+    IDS_WEBP_ENCODE_PRESETS "Default|Picture(Portrait/Indoor)|Photo(Landscape/Outdoor)|Drawing(Hand/Line)|Icon|Text"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_FRAME               "フォト レタッチ"
+    IDR_VIEW                "フォト イメージ"
+    IDR_SLIDESHOW           "スライド ショウ"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "バージョン情報"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\vwimager.rc2"
+//123                     RT_MANIFEST             "res\\dll.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

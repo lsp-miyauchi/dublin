@@ -1,0 +1,140 @@
+; lsfop.def : モジュール パラメータを宣言します。
+
+LIBRARY      "lsfop.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall		PRIVATE
+				FolderSyncRunW				@10
+				FolderSyncRun				@11
+				FolderSyncScriptRunW		@12
+				FolderSyncScriptRun			@13
+
+				FolderSyncManagerW			@18
+				FolderSyncManager			@19
+				FolderSyncShowReportW		@20
+				FolderSyncShowReport		@21
+
+;@CpeDecryptRun		@22
+;@CpeDecryptRunW	@27
+				RunAcceptW					@34
+				RunAccept					@35
+;@36
+;@37
+
+;@100
+				fopBrowseForFolder			@101
+				fopEnumFileSize				@102
+				fopEnumPathSize				@103
+;@104
+				fopExpandSyncPath			@105
+				fopSubstSyncPath			@106
+				fopDeleteFile				@107
+;@108
+;@109
+				fopRemoveFile				@110
+				fopTrashFile				@111
+				fopRemoveFileNoConfirm		@112
+				fopRemoveTreeNoConfirm		@113
+;@114
+				fopFormatDrive				@115
+;@116
+;@117
+				fopQueryDivide				@118
+				fopDivideFile				@119
+				fopMergeFile				@120
+;@121 - 124
+				fopFileAttributes			@125
+				fopDriveInfo				@126
+				fopRename					@127
+				fopGetNewName				@128
+;@129
+				fopCreateNewFolder			@130
+				fopMakeTree					@131
+				fopFilterDelete				@132
+				fopRenameFiles				@133
+				fopDropFileOperation		@134
+				fopShellRename				@135
+				fopShellRenameItems			@136
+				fopCalcFileHash				@137
+				fopFilterDeleteEx			@138
+				fopScriptSyncNew			@139
+;@140
+				fopValidateDir				@141
+;@142
+				fopRenameExtension			@143
+;@144
+				fopSeriesName				@145
+;@146
+				fopAssociateExtension		@147
+;@148
+;@149
+				fopMakeBriefcase			@150
+				fopEmptyRecentFiles			@151
+;@152 - 155
+				fopEraseFile				@156
+				fopFileShredder				@157
+				fopGetIconPath				@158
+				fopEncryptFile				@159
+				fopDecryptFile				@160
+				fopCryptFiles				@161
+				fopDecryptFilesTo			@162
+				fopGetCryptFileInfo			@163
+				fopEncryptFilesTo			@164
+				fopFlushDrive				@165
+;@166 - 170
+				fopRunDecrypt				@171
+				fopChangeFileCaps			@172
+				fopRunDecryptW				@173
+				fopShowFileInfo				@174
+				fopShowFileInfoEx			@175
+				fopShowFileInformation		@176
+;@177 - 179
+				fopCreateJunctionUI			@180
+				fopCreateJunction			@181
+				fopRemoveJunction			@182
+				fopGetJunctionPointInfo		@183
+				fopGetReparsePointInfo		@184
+				fopCreateSymbolicLinkUI		@185
+				fopCreateSystemLinkUI		@186
+;@187- 189
+				fopDragInitBlock			@190
+;@191
+;@192
+				fopDragAppendFile			@193
+;@194-196
+				fopRepStrNames				@197
+;@198
+				fopParseLinkInfo			@199
+;@200
+				fopGetIconFromInstance		@201
+				fopExportIconFromFile		@202
+				fopGetTaskFolder			@203
+				fopGpsAccess				@204
+				fopHasGpsData				@205
+				fopShowIconDetail			@206
+				fopExportSingleIcon			@207
+				fopExportMultipleIcons		@208
+;@209
+				shnEnumExtension			@210
+;@211
+				shnCreateShellNew			@212
+				shnCreateNewFile			@213
+;@214 - 216
+				fopEnumMapServices			@217
+				fopGetMapServiceUrl			@218
+;@219
+				fopIcmOpen					@220
+				fopIcmClose					@221
+				fopIcmGetImageList			@222
+				fopIcmGetIconCount			@223
+				fopIcmGetIconPath			@224
+				fopIcmCreateDataObject		@225
+;@226 - 318
+				fopGetDirRemind				@319
+				fopSetDirRemind				@320
+;@322
+				fopGetSyncDataFolder		@323

@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56D6A4CC-1E79-3EF4-A0D6-A50B84E7860C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>tiff</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tiff.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tiffd</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tiff.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tiff</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tiff.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tiff</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tiff.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tiff</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Debug";tiff_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";tiff_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/github/cairns/gnu_libs/tiff/libtiff/Debug/tiffd.lib</ImportLibrary>
+      <ModuleDefinitionFile>E:/github/cairns/gnu_libs/tiff/libtiff/libtiff.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>E:/github/cairns/gnu_libs/tiff/libtiff/Debug/tiffd.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="Release";tiff_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"Release\";tiff_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/github/cairns/gnu_libs/tiff/libtiff/Release/tiff.lib</ImportLibrary>
+      <ModuleDefinitionFile>E:/github/cairns/gnu_libs/tiff/libtiff/libtiff.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>E:/github/cairns/gnu_libs/tiff/libtiff/Release/tiff.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel";tiff_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";tiff_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/github/cairns/gnu_libs/tiff/libtiff/MinSizeRel/tiff.lib</ImportLibrary>
+      <ModuleDefinitionFile>E:/github/cairns/gnu_libs/tiff/libtiff/libtiff.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>E:/github/cairns/gnu_libs/tiff/libtiff/MinSizeRel/tiff.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo";tiff_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";tiff_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\github\cairns\gnu_libs\tiff\libtiff;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/github/cairns/gnu_libs/tiff/libtiff/RelWithDebInfo/tiff.lib</ImportLibrary>
+      <ModuleDefinitionFile>E:/github/cairns/gnu_libs/tiff/libtiff/libtiff.def</ModuleDefinitionFile>
+      <ProgramDataBaseFile>E:/github/cairns/gnu_libs/tiff/libtiff/RelWithDebInfo/tiff.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\tiff\libtiff\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TiffConfig.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tif_config.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffconf.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffvers.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TiffConfig.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tif_config.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffconf.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffvers.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TiffConfig.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tif_config.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffconf.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffvers.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/libtiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/libtiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TiffConfig.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tif_config.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffconf.h.cmake.in;E:\github\cairns\gnu_libs\tiff\libtiff\tiffvers.h.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\tiff\libtiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\github\cairns\gnu_libs\tiff\libtiff\libtiff.def" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tiff.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tiffio.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tiffvers.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tiffconf.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\t4.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_dir.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_predict.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tiffiop.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\uvcode.h" />
+    <ClInclude Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_config.h" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_aux.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_close.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_codec.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_color.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_compress.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_dir.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_dirinfo.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_dirread.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_dirwrite.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_dumpmode.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_error.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_extension.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_fax3.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_fax3sm.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_flush.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_getimage.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_hash_set.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_jbig.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_jpeg.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_jpeg_12.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_lerc.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_luv.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_lzma.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_lzw.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_next.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_ojpeg.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_open.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_packbits.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_pixarlog.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_predict.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_print.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_read.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_strip.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_swab.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_thunder.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_tile.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_version.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_warning.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_webp.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_write.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_zip.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_zstd.c" />
+    <ClCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_win32.c" />
+    <ResourceCompile Include="E:\github\cairns\gnu_libs\tiff\libtiff\tif_win32_versioninfo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\github\cairns\gnu_libs\tiff\ZERO_CHECK.vcxproj">
+      <Project>{902A021A-77D5-3BB2-AA7F-70E851836991}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

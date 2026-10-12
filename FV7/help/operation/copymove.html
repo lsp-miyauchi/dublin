@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Shift_jis">
+<meta name="keywords" content="バックグラウンドでコピー;">
+<TITLE>ファイルのコピー・移動</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../index.html">TOP</a> &rsaquo;
+<a href="../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="index.html">操作別解説</a> &rsaquo;
+ファイルのコピー・移動
+</div>
+<!-- 本体 -->
+<h2>ファイルのコピー・移動</h2>
+<p>選択されているファイル・フォルダをコピーします。フォルダをコピーする場合には、そのフォルダ階層下のすべてのフォルダおよびファイルを階層状態のままコピーすることができます。</p>
+<p><b>ドラッグ＆ドロップでコピーでの動作の違いについて</b></p>
+<blockquote>
+	<p>コピーしたいファイルをマウスでドラッグし、</p>
+	<ul>
+		<li>ファイルペインのフォルダ</li>
+		<li>フォルダツリーのフォルダ</li>
+		<li>ドライブバーのドライブ</li>
+	</ul>
+	<p>へドロップすることでファイルのコピーや移動が可能です。</p>
+	<table border=0 width="94%" height="132" cellpadding=0>
+	<tr><td nowrap>マウスボタン</td>
+		<td nowrap><kbd>Shift</kbd></td>
+		<td nowrap><kbd>Ctrl</kbd></td>
+		<td nowrap>説明</td></tr>
+	<tr><td width=100% colspan=4><hr class="separator"></td></tr>
+	<tr><td align=center>左</td>
+		<td nowrap align=center></td>
+		<td nowrap align=center></td>
+		<td>ファイルやフォルダをコピーします。</td></tr>
+	<tr><td width=100% colspan=4><hr class="separator"></td></tr>
+	<tr><td nowrap align=center>左</td>
+		<td nowrap align=center>○</td>
+		<td nowrap align=center></td>
+		<td>ファイルやフォルダを移動します。</td></tr>
+	<tr><td width=100% colspan=4><hr class="separator"></td></tr>
+	<tr><td nowrap align=center>左</td>
+		<td nowrap align=center></td>
+		<td nowrap align=center>○</td>
+		<td>ファイルやフォルダをコピーします。</td></tr>
+	<tr><td width=100% colspan=4><hr class="separator"></td></tr>
+	<tr><td nowrap align=center>左</td>
+		<td nowrap align=center>○</td>
+		<td nowrap align=center>○</td>
+		<td>ファイルやフォルダのショートカットを作成します。</td></tr>
+	<tr><td width=100% colspan=4><hr class="separator"></td></tr>
+	<tr><td nowrap align=center>右</td>
+		<td nowrap align=center></td>
+		<td nowrap align=center></td>
+		<td>ドロップ時に選択メニューを表示します。
+			<kbd>Shift</kbd>キーや<kbd>Ctrl</kbd>キーの組み合わせで、
+			標準の動作が太字で表示されます。
+			<p><img border=0 src="../images/attn.gif">
+			マウス右ボタンをクリックしてのドラッグ＆ドロップは、ファイル操作をWindowsに処理させます。
+			このためFileVisorの持つ下記の動作ではなく、エクスプローラ上でのファイル操作と同じ処理になりますが、
+			シェルに追加されているドラッグ＆ドロップ機能をフルに活用可能です。</td></tr>
+	<tr><td width=100% colspan=4><hr class="separator"></td></tr>
+	</table>
+	<p>　</p>
+</blockquote>
+<p><b>コピー動作について</b></p>
+<blockquote>
+	<p><b>指定したコピー先パスが存在しない場合</b></p>
+	<blockquote>
+		<p>コピー先とコピー元のパスが同じ場合には、コピー先として指定された名前をファイルの新しい名前として
+		名前を変えてコピーするのか、または指定された名前をフォルダとして、その名前でフォルダを作成し、
+		その配下にコピー元と同じ名前でファイルをコピーするかを選択できます。</p>
+	</blockquote>
+	<p><b>指定したコピー先に同一ファイルがある場合</b></p>
+	<blockquote>
+		<table border=0 width=90%>
+			<tr><td bgcolor="#E0E0E0" nowrap>新しい日付時刻のみ</td>
+				<td bgcolor="#E0E0E0">相手先にあるファイルより新しい日付のものだけをコピーまたは移動します。</td></tr>
+			<tr><td bgcolor="#E0E0E0" nowrap>上書き</td>
+				<td bgcolor="#E0E0E0">相手先のファイルに上書きしてコピーまたは移動します。</td></tr>
+			<tr><td bgcolor="#E0E0E0" nowrap>新しい名前で</td>
+				<td bgcolor="#E0E0E0">元のファイルの名前を変えてコピーまたは移動します。</td></tr>
+			<tr><td bgcolor="#E0E0E0" nowrap>相手の名前を変更</td>
+				<td bgcolor="#E0E0E0">相手先ファイルの名前を変えてから元ファイルをコピーまたは移動します。</td></tr>
+			<tr><td bgcolor="#E0E0E0" nowrap>連結する</td>
+				<td bgcolor="#E0E0E0">相手先ファイルに元ファイルを連結します。</td></tr>
+			<tr><td bgcolor="#E0E0E0" nowrap>無視</td>
+				<td bgcolor="#E0E0E0">何もせずに無視します。</td></tr>
+			<tr><td bgcolor="#E0E0E0" nowrap>以前のファイルをごみ箱へ</td>
+				<td bgcolor="#E0E0E0">コピー・移動前のファイルをごみ箱に移動させてから、
+					上記の処理をおこないます。
+					<p><img border=0 src="../images/attn.gif" width=12 height=12>
+					相手先が取替え可能メディアやネットワーク先フォルダなどの場合には、
+					この指定をおこなっても相手ファイルはごみ箱に収容されませんのでご注意ください。</td></tr>
+		</table>
+	</blockquote>
+	<p><b>コピー先ドライブが取り替え可能メディアの場合</b></p>
+	<blockquote>
+		<p>コピー先ドライブが取り替え可能メディア（フロッピーディスク等）の場合で、
+		複数ファイルをコピーする場合には、コピー先ディスクがいっぱいになると「メディア交換して継続」するかどうかを問い合わせます。</p>
+	</blockquote>
+	<p>　</p>
+</blockquote>
+
+<p><a name="runcopy"><b>バックグラウンドでコピー・移動をおこなう</b></p>
+<blockquote>
+	<p>コピーや移動操作をおこなう際、コピー・移動をおこなう確認メッセージ、
+	または処理先のフォルダを選択する画面の中に、「バックグラウンドで処理する」チェック項目があります。</p>
+	<p>この設定をチェックして指定することにより、コピー・移動の処理がバックグラウンド（FileVisor本体とは異なる別プロセス）
+	として実行されますので、例えば動画ファイルやデジタルカメラで撮影した大量の写真ファイルなどを
+	コピーなどする場合にバックグラウンド処理を利用すれば、処理開始後FileVisor本体ではすぐに別の作業をおこなうことが
+	可能になります。</p>
+</blockquote>
+
+<!-- copyright -->
+<p>　</p>
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

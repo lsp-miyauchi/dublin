@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<meta name="keywords" content="コマンドプロンプト;標準のビュア;標準のエディタ;管理者権限">
+<TITLE>よく使うプログラム</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../index.html">TOP</a> &rsaquo;
+<a href="../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="index.html">各種設定</a> &rsaquo;
+<a href="index.html">オプション</a> &rsaquo;
+よく使うプログラム
+</div>
+<!-- 本体 -->
+<h2>よく使うプログラム</h2>
+<p>頻繁に利用する可能性の高いユーティリティプログラムを外部プログラムとして定義できます。</p>
+<ul>
+	<li><b>コマンドプロンプト</b>
+		<p>コマンドプロンプトを開くためのコマンドシェルを定義します。<br>
+		このフィールドが未設定の場合には、コマンドシェル（Cmd.exe）が起動します。</p></li>
+	<li><b>テキストエディタ</b>
+		<p>テキストファイルを編集するアプリケーションプログラムを定義します。<br>
+		このフィールドが未設定の場合には、Windowsに付属するメモ帳(Notepad）が起動します。</p></li>
+	<li><b>標準のテキストビュア</b>
+		<p>ファイルの内容をテキスト表示または編集するアプリケーションプログラムを定義します。<br>
+		このフィールドが未設定の場合には、FileVisorの内蔵ビュアが起動します。</p></li>
+	<li><b>標準の画像ビュア</b>
+		<p>画像を表示または編集するアプリケーションプログラムを定義します。<br>
+		このフィールドが未設定の場合には、FileVisorの内蔵ビュアが起動します。</p></li>
+	<li><b>標準のバイナリエディタ</b>
+		<p>ファイル内容をバイナリ表示または編集をおこなうためのアプリケーションプログラムを定義します。<br>
+		このフィールドが未設定の場合には、FileVisorの内蔵バイナリエディタが起動します。</p>
+		<p>上記各項目は起動プログラム名と、必要ならば引数を指定して定義します。
+		エディタやビュアでは、ファイルリストで現在反転表示されているファイル名がここで定義した引数の後に付加されて実行されます。</p></li>
+</ul>
+
+<div class="sep top1 btm1"></div>
+
+<div class="info1">
+	<p>実行プログラム名を指定する際、そのフルパス名に空白が含まれる場合には、
+	実行プログラム名を “...”（ダブルクォーテーション）で括る必要があります。
+	例えば「C:\Program Files\Notepad.exe」を引数付きで指定する場合などは</p>
+	<code style="font-weight:bold">"C:\Program Files\Notepad.exe"/p</code>
+	<p>のように記述しなければなりません。</p>
+</div>
+<div class="info1">
+	<p>Windows Vista以降のOSをご利用の場合、登録した実行プログラムを管理者として実行するオプションを指定できます。<br>
+	プログラムパス名の先頭に‘@’を追加して登録することにより、実行時に管理者権限を付加して当該プログラムを起動します。</p>
+	<code style="font-weight:bold">@"C:\Program Files\Notepad.exe" /p</code>
+</div>
+
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

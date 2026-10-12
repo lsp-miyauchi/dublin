@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GUI", "GUI.vcproj", "{7AF30CE3-7483-47DC-BF23-45205CFD22C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugU|Win32 = DebugU|Win32
+		Release|Win32 = Release|Win32
+		ReleaseU|Win32 = ReleaseU|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.Debug|Win32.Build.0 = Debug|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.DebugU|Win32.ActiveCfg = DebugU|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.DebugU|Win32.Build.0 = DebugU|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.Release|Win32.ActiveCfg = Release|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.Release|Win32.Build.0 = Release|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.ReleaseU|Win32.ActiveCfg = ReleaseU|Win32
+		{7AF30CE3-7483-47DC-BF23-45205CFD22C1}.ReleaseU|Win32.Build.0 = ReleaseU|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

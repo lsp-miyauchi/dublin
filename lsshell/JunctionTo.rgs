@@ -1,0 +1,45 @@
+HKCR
+{
+	ForceRemove lsshell.JunctionTo.1 = s 'lsshell JunctionTo'
+	{
+		CLSID = s '{4D6DA2FB-C7CD-456f-9F65-76BC785BE44E}'
+	}
+	ForceRemove lsshell.JunctionTo = s 'lsshell JunctionTo'
+	{
+		CLSID = s '{4D6DA2FB-C7CD-456f-9F65-76BC785BE44E}'
+		CurVer = s 'lsshell.JunctionTo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4D6DA2FB-C7CD-456f-9F65-76BC785BE44E} = s 'lsshell JunctionTo'
+		{
+			ProgID = s 'lsshell.JunctionTo.1'
+			VersionIndependentProgID = s 'lsshell.JunctionTo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssJunctionTo = s '{4D6DA2FB-C7CD-456f-9F65-76BC785BE44E}'
+			}
+		}
+	}
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssJunctionTo = s '{4D6DA2FB-C7CD-456f-9F65-76BC785BE44E}'
+			}
+		}
+	}
+}

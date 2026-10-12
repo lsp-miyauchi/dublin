@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\874ee40a746f2b2ed1005100c6c42df1\tjtest.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\tjtest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E9C4B422-7011-3070-8AF4-898831D783F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

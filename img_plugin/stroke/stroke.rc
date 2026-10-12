@@ -1,0 +1,201 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,14
+ PRODUCTVERSION 7,4,0,14
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "stroke plug-in"
+            VALUE "FileVersion", "7.4.0.14"
+            VALUE "InternalName", "stroke"
+            VALUE "OriginalFilename", "stroke.dll"
+            VALUE "ProductVersion", "7.4.0.14"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SINGLEWORKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_STROKE_SPEED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 305
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_STROKE_SPEED DLGINIT
+BEGIN
+    IDC_COMBO, 0x403, 11, 0
+0xb68d, 0xa982, 0xe782, 0x4589, 0xd682, "\000" 
+    IDC_COMBO, 0x403, 11, 0
+0x4589, 0xa982, 0xe782, 0xb68d, 0xd682, "\000" 
+    IDC_COMBO, 0x403, 11, 0
+0xe38f, 0xa982, 0xe782, 0xba89, 0xd682, "\000" 
+    IDC_COMBO, 0x403, 11, 0
+0xba89, 0xa982, 0xe782, 0xe38f, 0xd682, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SINGLEWORKS DIALOGEX 0, 0, 268, 243
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SINGLEWORKS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_ASLIDER,"LSCTrack",WS_TABSTOP,7,142,187,11
+    CONTROL         "",IDC_BSLIDER,"LSCTrack",WS_TABSTOP,7,154,187,11
+    CONTROL         "",IDC_CSLIDER,"LSCTrack",WS_TABSTOP,7,166,187,11
+    CONTROL         "",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,7,178,187,11
+    CONTROL         "",IDC_ESLIDER,"LSCTrack",WS_TABSTOP,7,190,187,11
+    CONTROL         "",IDC_FSLIDER,"LSCTrack",WS_TABSTOP,7,202,187,11
+    CONTROL         "",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,7,214,187,11
+    CONTROL         "",IDC_HSLIDER,"LSCTrack",WS_TABSTOP,7,226,187,11
+    DEFPUSHBUTTON   "OK",IDOK,205,7,56,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,205,27,56,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,187,129,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "リセット(&R)",IDC_RESET,205,60,56,14
+    CONTROL         "全体表示(&W)",IDC_WHOLEVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,127,60,10
+END
+
+IDD_STROKE_SPEED DIALOGEX 0, 0, 311, 158
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "スピード"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "しきい値(&T)",IDC_THRESHOLD,"LSCTrack",WS_TABSTOP,183,7,122,11
+    CONTROL         "強さ(&S)",IDC_STRENGTH,"LSCTrack",WS_TABSTOP,183,19,122,11
+    CONTROL         "きめ細かい効果(&T)",IDC_BLAST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,35,73,10
+    LTEXT           "向き(&D):",IDC_STATIC,183,53,28,8
+    COMBOBOX        IDC_COMBO,214,50,78,156,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "エッジ(&E)",IDC_STATIC,183,72,122,54,WS_GROUP | WS_TABSTOP
+    CONTROL         "エッジの先端で適用(&L)",IDC_LEADING,"Button",BS_AUTORADIOBUTTON,190,85,105,10
+    CONTROL         "エッジの降端で適用(&A)",IDC_TRAILING,"Button",BS_AUTORADIOBUTTON,190,97,105,10
+    CONTROL         "エッジの両端で適用(&B)",IDC_BOTH,"Button",BS_AUTORADIOBUTTON,190,109,105,10
+    DEFPUSHBUTTON   "OK",IDOK,209,137,44,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,261,137,44,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,167,144,WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_QUERYRESET          "設定値をすべてリセットしますか？\n\n「はい」を選択するとすべてのマジックをリセットします。\n「いいえ」を選択すると現在のマジックのみリセットします。\n「キャンセル」を選択するとリセットはおこなわれません。\n"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

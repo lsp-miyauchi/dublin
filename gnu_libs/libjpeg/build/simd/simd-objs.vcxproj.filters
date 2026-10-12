@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jccolor-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jccolor-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcgray-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcgray-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jchuff-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcphuff-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcsample-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jcsample-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdcolor-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdcolor-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdmerge-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdmerge-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdsample-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jdsample-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctflt-sse.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctfst-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctint-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jfdctint-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctflt-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctfst-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctint-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctint-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jidctred-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jquantf-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jquanti-avx2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jquanti-sse2.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\418ca3f881e08b94053beb4bff0fb565\jsimdcpu.asm.obj.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\build\CMakeFiles\73622af11ca9b75326a4fa062dfb2929\simd-objs.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\simd\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\CMakeFiles\simd-objs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E9C4B422-7011-3070-8AF4-898831D783F0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

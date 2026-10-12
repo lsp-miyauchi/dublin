@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lsimg", "lsimg.vcxproj", "{5591C724-4277-4FD5-921A-DE22AA483BFB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3E72F760-B077-450D-B5CD-DE7BD97B06D0} = {3E72F760-B077-450D-B5CD-DE7BD97B06D0}
+		{624C61B7-C493-49BD-A508-590AE4D4DBD3} = {624C61B7-C493-49BD-A508-590AE4D4DBD3}
+		{BB793F4B-E4C8-4764-995A-02456491C01C} = {BB793F4B-E4C8-4764-995A-02456491C01C}
+		{D874CECC-997E-4FE1-8FA6-9C0BBA86C67C} = {D874CECC-997E-4FE1-8FA6-9C0BBA86C67C}
+		{E34A9B78-2216-4AD7-A45B-39F0501997FA} = {E34A9B78-2216-4AD7-A45B-39F0501997FA}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lsppsd", "lsppsd\lsppsd.vcxproj", "{BB793F4B-E4C8-4764-995A-02456491C01C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspcrypt", "lspcrypt\lspcrypt.vcxproj", "{7D6A15D5-A653-41D0-9811-6231CCA18F78}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lsptwain", "lsptwain\lsptwain.vcxproj", "{521B6067-BFE5-48AE-B449-AFC574A9A434}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspjp2k", "lspjp2k\lspjp2k.vcxproj", "{624C61B7-C493-49BD-A508-590AE4D4DBD3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspmask", "lspmask\lspmask.vcxproj", "{43E6CF87-432B-40A7-A57A-E5A5289015D8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpcd", "libpcd\libpcd.vcxproj", "{3E72F760-B077-450D-B5CD-DE7BD97B06D0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lsmif", "lsmif\lsmif.vcxproj", "{E34A9B78-2216-4AD7-A45B-39F0501997FA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lspfpx", "lspfpx\lspfpx.vcxproj", "{D874CECC-997E-4FE1-8FA6-9C0BBA86C67C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5591C724-4277-4FD5-921A-DE22AA483BFB}.Release|x64.ActiveCfg = Release|x64
+		{5591C724-4277-4FD5-921A-DE22AA483BFB}.Release|x64.Build.0 = Release|x64
+		{BB793F4B-E4C8-4764-995A-02456491C01C}.Release|x64.ActiveCfg = Release|x64
+		{BB793F4B-E4C8-4764-995A-02456491C01C}.Release|x64.Build.0 = Release|x64
+		{7D6A15D5-A653-41D0-9811-6231CCA18F78}.Release|x64.ActiveCfg = Release|x64
+		{7D6A15D5-A653-41D0-9811-6231CCA18F78}.Release|x64.Build.0 = Release|x64
+		{521B6067-BFE5-48AE-B449-AFC574A9A434}.Release|x64.ActiveCfg = Release|x64
+		{521B6067-BFE5-48AE-B449-AFC574A9A434}.Release|x64.Build.0 = Release|x64
+		{624C61B7-C493-49BD-A508-590AE4D4DBD3}.Release|x64.ActiveCfg = Release|x64
+		{624C61B7-C493-49BD-A508-590AE4D4DBD3}.Release|x64.Build.0 = Release|x64
+		{43E6CF87-432B-40A7-A57A-E5A5289015D8}.Release|x64.ActiveCfg = Release|x64
+		{43E6CF87-432B-40A7-A57A-E5A5289015D8}.Release|x64.Build.0 = Release|x64
+		{3E72F760-B077-450D-B5CD-DE7BD97B06D0}.Release|x64.ActiveCfg = Release|x64
+		{3E72F760-B077-450D-B5CD-DE7BD97B06D0}.Release|x64.Build.0 = Release|x64
+		{E34A9B78-2216-4AD7-A45B-39F0501997FA}.Release|x64.ActiveCfg = Release|x64
+		{E34A9B78-2216-4AD7-A45B-39F0501997FA}.Release|x64.Build.0 = Release|x64
+		{D874CECC-997E-4FE1-8FA6-9C0BBA86C67C}.Release|x64.ActiveCfg = Release|x64
+		{D874CECC-997E-4FE1-8FA6-9C0BBA86C67C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C777F04B-8A6E-4E48-8771-501C85EB8A0F}
+	EndGlobalSection
+EndGlobal

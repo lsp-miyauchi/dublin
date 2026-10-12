@@ -1,0 +1,207 @@
+//////////////////////////////////////////////////////////////////////
+// regnum.cpp
+
+#include <windows.h>
+#include <limits.h>
+
+#define BLOWFISH_ENCRYPT
+
+#ifdef BLOWFISH_ENCRYPT
+	#include "blowfish.h"
+#endif
+
+///////////////////////////////////////////////////////////////
+// DDDDDMMMMYYYYxxx
+// 1111111111111111
+// mask d=0xf800
+//      m=0x0780
+//      y=0x0078
+//
+#define K2E_DAY(d)			(((d) & 0xf800) >> 11)
+#define K2E_MON(d)			(((d) & 0x0780) >> 7)
+#define K2E_YEAR(d)			(((d) & 0x0078) >> 3)
+#define K2C_DAY(d)			(((d) << 11) & 0xf800)
+#define K2C_MON(d)			(((d) << 7) & 0x0780)
+#define K2C_YEAR(d)			(((d) << 3) & 0x0078)
+
+///////////////////////////////////////////////////////////////
+// DDDDDYYYYMMMMxxx
+// 1111111111111111
+//
+#define L2E_DAY(d)			(((d) & 0xf800) >> 11)
+#define L2E_MON(d)			(((d) & 0x0078) >> 3)
+#define L2E_YEAR(d)			(((d) & 0x0780) >> 7)
+#define L2C_DAY(d)			(((d) << 11) & 0xf800)
+#define L2C_MON(d)			(((d) << 3) & 0x0078)
+#define L2C_YEAR(d)			(((d) << 7) & 0x0780)
+
+///////////////////////////////////////////////////////////////
+// MMMMDDDDDYYYYxxx
+// 1111111111111111
+//
+#define M2E_DAY(d)			(((d) & 0x0f80) >> 7)
+#define M2E_MON(d)			(((d) & 0xf000) >> 12)
+#define M2E_YEAR(d)			(((d) & 0x0078) >> 3)
+#define M2C_DAY(d)			(((d) << 7) & 0x0f80)
+#define M2C_MON(d)			(((d) << 12) & 0xf000)
+#define M2C_YEAR(d)			(((d) << 3) & 0x0078)
+
+///////////////////////////////////////////////////////////////
+// MMMMYYYYDDDDDxxx
+// 1111111111111111
+//
+#define N2E_DAY(d)			(((d) & 0x00f8) >> 3)
+#define N2E_MON(d)			(((d) & 0xf000) >> 12)
+#define N2E_YEAR(d)			(((d) & 0x0f00) >> 8)
+#define N2C_DAY(d)			(((d) << 3) & 0x00f8)
+#define N2C_MON(d)			(((d) << 12) & 0xf000)
+#define N2C_YEAR(d)			(((d) << 8) & 0x0f00)
+
+///////////////////////////////////////////////////////////////
+// YYYYMMMMDDDDDxxx
+// 1111111111111111
+//
+#define O2E_DAY(d)			(((d) & 0x00f8) >> 3)
+#define O2E_MON(d)			(((d) & 0x0f00) >> 8)
+#define O2E_YEAR(d)			(((d) & 0xf000) >> 12)
+#define O2C_DAY(d)			(((d) << 3) & 0x00f8)
+#define O2C_MON(d)			(((d) << 8) & 0x0f00)
+#define O2C_YEAR(d)			(((d) << 12) & 0xf000)
+
+///////////////////////////////////////////////////////////////
+// YYYYDDDDDMMMMxxx
+// 1111111111111111
+//
+#define P2E_DAY(d)			(((d) & 0x0f80) >> 7)
+#define P2E_MON(d)			(((d) & 0x0078) >> 3)
+#define P2E_YEAR(d)			(((d) & 0xf000) >> 12)
+#define P2C_DAY(d)			(((d) << 7) & 0x0f80)
+#define P2C_MON(d)			(((d) << 3) & 0x0078)
+#define P2C_YEAR(d)			(((d) << 12) & 0xf000)
+
+
+#define LODWORD(a)				(*((DWORD*)&(a)))
+#define HIDWORD(a)				(*(((DWORD*)&(a)) + 1))
+#define SETDWORDLONG(a,b,c)		(*((DWORD*)&(a))=(b),*(((DWORD*)&(a))+1)=(c))
+
+extern WORD crc16(int n, BYTE* pcb);
+
+/////////////////////////////////////////////////////////////////////
+//
+
+_inline WORD wordrot_left(WORD w, int bits)
+{
+	while (bits > 0)
+	{
+		BOOL flg = (w & 0x8000);
+		w <<= 1;
+		if (flg)
+			w |= 1;
+		bits--;
+	}
+	return w;
+}
+
+_inline WORD wordrot_right(WORD w, int bits)
+{
+	while (bits > 0)
+	{
+		BOOL flg = (w & 1);
+		w >>= 1;
+		if (flg)
+			w |= 0x8000;
+		bits--;
+	}
+	return w;
+}
+
+_inline DWORD dwordrot_left(DWORD dw, int bits)
+{
+	while (bits > 0)
+	{
+		BOOL flg = (dw & 0x80000000);
+		dw <<= 1;
+		if (flg)
+			dw |= 1;
+		bits--;
+	}
+	return dw;
+}
+
+_inline DWORD dwordrot_right(DWORD dw, int bits)
+{
+	while (bits > 0)
+	{
+		BOOL flg = (dw & 1);
+		dw >>= 1;
+		if (flg)
+			dw |= 0x80000000;
+		bits--;
+	}
+	return dw;
+}
+
+// V‚µ‚¢ƒpƒX‚Í xxxx xxxx xxxx xxxx
+//                             ---- CRC
+//                        ----      SEQ
+//                   ---?           DATE
+//              ----                PREFIX(LOBYTE=pref, HIBYTE=check)
+extern "C"
+void WINAPI KrFV5(int prx, int year, int month, int day, int seq, LPSTR pszSeq)
+{
+	int delta;
+	if (seq & 1)
+		delta = seq & 0xff;
+	else
+		delta = (seq & 0xff00) >> 8;
+	if (!delta)
+		delta++;
+	delta = ((delta & 0xf) << 4) | ((delta & 0xf0) >> 4);
+	prx |= ((delta << 8) & 0xff00);
+
+	year -= 2000;
+	WORD dates = K2C_YEAR(year) + K2C_MON(month) + K2C_DAY(day);
+	dates = (dates & 0xfff8) | ((year + month + day) & 7);
+
+	WORD arr[3];
+	arr[0] = prx;
+	arr[1] = dates;
+	arr[2] = seq;
+	WORD crc = crc16(6, (BYTE*)arr);
+	crc = (((crc & 0xff00) >> 8) | ((crc & 0x00ff) << 8));
+	crc ^= dates;
+
+	prx = wordrot_right((WORD)prx, HIBYTE(crc) & 7);
+	dates = wordrot_right(dates, HIBYTE(crc) & 7);
+	seq = wordrot_left((WORD)seq, LOBYTE(crc) & 7);
+
+	DWORD hi = MAKELONG(dates, prx);
+	DWORD lo = MAKELONG(crc, seq);
+	hi = dwordrot_right(hi, 3);
+	lo = dwordrot_left(lo, 3);
+
+#ifdef BLOWFISH_ENCRYPT
+	DWORD bfdata[2];
+	bfdata[0] = hi;
+	bfdata[1] = lo;
+
+	BF_KEY key;
+	bf_setkey(&key, 10, (BYTE*)"FileVisor5");
+	bf_encrypt(bfdata, &key);
+
+	hi = bfdata[0];
+	lo = bfdata[1];
+#endif
+
+	wsprintf(pszSeq, "%04X-%04X-%04X-%04X",
+			HIWORD(hi), LOWORD(hi), HIWORD(lo), LOWORD(lo));
+}
+
+static char sszEncBuff[128];
+
+extern "C"
+LPCSTR WINAPI KrFV5Ex(int nPrx, int nYear, int nMonth, int nDay, int nSeqNumber)
+{
+	KrFV5(nPrx, nYear, nMonth, nDay, nSeqNumber, sszEncBuff);
+	return sszEncBuff;
+}

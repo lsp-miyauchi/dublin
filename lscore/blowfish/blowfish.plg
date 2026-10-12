@@ -1,0 +1,37 @@
+<html>
+<body>
+<pre>
+<h1>ﾋﾞﾙﾄﾞのﾛｸﾞ</h1>
+<h3>
+--------------------構成: blowfish - Win32 Release--------------------
+</h3>
+<h3>ｺﾏﾝﾄﾞ ﾗｲﾝ</h3>
+一時ﾌｧｲﾙ "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP90.tmp" を作成し、次の内容を記録します
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fp"Release/blowfish.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"E:\W32\lspcul\blowfish\bf_cbc.c"
+"E:\W32\lspcul\blowfish\bf_cfb64.c"
+"E:\W32\lspcul\blowfish\bf_ecb.c"
+"E:\W32\lspcul\blowfish\bf_enc.c"
+"E:\W32\lspcul\blowfish\bf_ofb64.c"
+"E:\W32\lspcul\blowfish\bf_skey.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP90.tmp" 
+ｺﾏﾝﾄﾞ ﾗｲﾝ "link.exe -lib /nologo /out:"Release\blowfish.lib"  .\Release\bf_cbc.obj .\Release\bf_cfb64.obj .\Release\bf_ecb.obj .\Release\bf_enc.obj .\Release\bf_ofb64.obj .\Release\bf_skey.obj " の作成中
+<h3>ｱｳﾄﾌﾟｯﾄ ｳｨﾝﾄﾞｳ</h3>
+ｺﾝﾊﾟｲﾙ中...
+bf_cbc.c
+bf_cfb64.c
+bf_ecb.c
+bf_enc.c
+bf_ofb64.c
+bf_skey.c
+ﾗｲﾌﾞﾗﾘを作成中...
+
+
+
+<h3>結果</h3>
+blowfish.lib - ｴﾗｰ 0、警告 0
+</pre>
+</body>
+</html>

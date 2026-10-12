@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d85d62d8-50f3-4f8a-bb02-eb38a2062774}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Basics">
+      <UniqueIdentifier>{ae892ed4-38e4-41d0-9490-67880928bf96}</UniqueIdentifier>
+      <Extensions>*.cpp;*.cxx;*.c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ri_image">
+      <UniqueIdentifier>{be21319a-7dfc-4b37-91f6-4991f8fde28a}</UniqueIdentifier>
+      <Extensions>*.cpp;*.cxx;*.c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Fpx">
+      <UniqueIdentifier>{615a4ba7-79e2-46b0-84e4-d6e52b7c4138}</UniqueIdentifier>
+      <Extensions>*.cpp;*.cxx;*.c</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Ole">
+      <UniqueIdentifier>{6ea923c1-dee5-415d-ac65-2d292ca2d193}</UniqueIdentifier>
+      <Extensions>*.cpp;*.cxx;*.c</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{7c0a0aae-1ca4-461f-894e-5796a905b203}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Basics_h">
+      <UniqueIdentifier>{f78f6aa5-26c9-4c08-87ef-3eddd40d2dd0}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Ole_h">
+      <UniqueIdentifier>{fad4a71b-bb72-4f8a-9d48-8ecd12f5eddd}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Fpx_h">
+      <UniqueIdentifier>{823276ee-97c1-47a5-a276-7d8e609c79ea}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Ri_image_h">
+      <UniqueIdentifier>{112fa303-bb0b-475f-80aa-8be900b0eff4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f3391bba-d1ee-4b84-b474-f612edc798b1}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\basics\a_file.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\b_string.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\color.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\common_b.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\debug.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\filename.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\geometry.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\basics\graphic.cpp">
+      <Filter>Source Files\Basics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\compress.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\corr_lut.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\cp32to24.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\cp_jpeg.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\fn_srch.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\matrix.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\ph_image.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\pimgfile.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\pr_level.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\priimage.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\ptile.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\ri_page.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\ri_sys.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ri_image\viewimg.cpp">
+      <Filter>Source Files\Ri_image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\buffdesc.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\coltwist.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\f_fpxio.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\f_fpxvw.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\filter.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\fpxformt.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\fpximgvw.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\fpxlib.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\fpxlibio.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\fpxutils.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\imginfio.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\pres_fpx.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fpx\ptil_fpx.cpp">
+      <Filter>Source Files\Fpx</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\gen_guid.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\oleclink.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\olecore.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\olefiles.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\olehstrm.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\oleprop.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\oleprops.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\olestats.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\olestorg.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ole\olestrm.cpp">
+      <Filter>Source Files\Ole</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\basics\a_file.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\B_ERROR.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\b_memory.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\b_string.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\B_TYPES.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\color.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\COMMON.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\COMMON_A.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\common_b.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\debug.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\filename.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\FILEUTIL.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\geometry.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\basics\graphic.h">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\MAC_COMP.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\NPIXEL.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\NUMBERS.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\P_DEFINE.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\PASCONV.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\PIXEL.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\RESOURCE.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\BASICS\SWAPBYTE.H">
+      <Filter>Header Files\Basics_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\gen_guid.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\oleclink.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\olecore.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\olefiles.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\olehstrm.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\oleprop.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\oleprops.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\olestats.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\olestorg.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ole\olestrm.h">
+      <Filter>Header Files\Ole_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\buffdesc.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\coltwist.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\f_fpxio.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\f_fpxvw.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\fpxformt.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\fpximgvw.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\fpxlib.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\fpxlibio.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\fpxutils.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\imginfio.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\pres_fpx.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fpx\ptil_fpx.h">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FPX\THMBNAIL.H">
+      <Filter>Header Files\Fpx_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\compress.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\corr_lut.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\cp32to24.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\cp_jpeg.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\fn_srch.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\matrix.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\ph_image.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\pimgfile.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\pr_level.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\priimage.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\ptile.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\ri_page.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\ri_sys.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ri_image\viewimg.h">
+      <Filter>Header Files\Ri_image_h</Filter>
+    </ClInclude>
+    <ClInclude Include="RESOURCE.H">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libfpx.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="libfpx.def">
+      <Filter>Source Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

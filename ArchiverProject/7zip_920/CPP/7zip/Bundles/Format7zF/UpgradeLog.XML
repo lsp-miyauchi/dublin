@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Format7z">
+</Property><Property Name="ソリューション ファイル" Value="E:\VIENA7\Archiver\7zip_920\CPP\7zip\Bundles\Format7zF\Format7z.sln">
+</Property><Property Name="Date" Value="2011年2月21日">
+</Property><Property Name="Time" Value="11:19">
+</Property></Properties><Event ErrorLevel="0" Project="Format7z" Source="Format7z.vcproj" Description="Converting project file 'E:\VIENA7\Archiver\7zip_920\CPP\7zip\Bundles\Format7zF\Format7z.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Format7z" Source="Format7z.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="Format7z" Source="Format7z.vcproj" Description="Attribute 'OptimizeForWindows98' of 'VCLinkerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="Format7z" Source="Format7z.vcproj" Description="Done converting to new project file 'E:\VIENA7\Archiver\7zip_920\CPP\7zip\Bundles\Format7zF\Format7z.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Format7z" Source="Format7z.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="Format7z.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="Format7z.sln" Description="Converted">
+</Event></UpgradeLog>

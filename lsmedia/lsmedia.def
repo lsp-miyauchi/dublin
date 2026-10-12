@@ -1,0 +1,25 @@
+LIBRARY         LSMEDIA
+
+;@ DESCRIPTION     'Media Library for Win32 by K.Miyauchi'
+
+EXPORTS
+				RunCheckDisk				@10
+				RunCheckDiskW				@11
+				fmOpenVolume				@20
+				fmCloseVolume				@21
+				fmLockVolume				@22
+				fmUnlockVolume				@23
+				fmDismountVolume			@24
+				fmPreventRemovalOfVolume	@25
+				fmAutoEjectVolume			@26
+				fmEjectVolume				@27
+				fmGetDiskGeometry			@28
+				fmGetMediaTypes				@29
+				fmLowLevelFormat			@30
+				fmRestoreImage				@31
+				fmMakeImage					@32
+				fmMediaInfo					@33
+				fmRestoreImageUI			@34
+				fmMakeImageUI				@35
+				fmDiskCheck					@36
+				fmCheckDisk					@37

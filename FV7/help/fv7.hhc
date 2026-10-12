@@ -1,0 +1,768 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Window Styles" value="0x800425">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="FileVisorヘルプ">
+		<param name="Local" value="index.html">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="FileVisorとは">
+			<param name="Local" value="overview/index.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="制限事項">
+				<param name="Local" value="overview/limitation.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="改編履歴">
+				<param name="Local" value="overview/history.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="FileVisorの使い方">
+			<param name="Local" value="refer_index.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="メニュー別解説">
+				<param name="Local" value="menu/index.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ファイルメニュー">
+					<param name="Local" value="menu/file/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="新規作成">
+						<param name="Local" value="menu/file/new.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="コピー・移動">
+						<param name="Local" value="menu/file/copymove.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="属性の変更">
+						<param name="Local" value="menu/file/attrib.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="名前の変更">
+						<param name="Local" value="menu/file/rename.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="名前の置換">
+						<param name="Local" value="menu/file/namereplace.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="削除">
+						<param name="Local" value="menu/file/delete.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="一括削除">
+						<param name="Local" value="menu/file/filterdel.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="連結と分割">
+						<param name="Local" value="menu/file/mergedivide.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="圧縮書庫ファイルの操作">
+						<param name="Local" value="menu/file/arcop.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="シュレッダ">
+						<param name="Local" value="menu/file/shred.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="プロパティ">
+						<param name="Local" value="menu/file/property.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="関連付け">
+						<param name="Local" value="menu/file/assoc.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="名前を指定して実行">
+						<param name="Local" value="menu/file/exec.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="終了・すべて終了">
+						<param name="Local" value="menu/file/exit.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="編集メニュー">
+					<param name="Local" value="menu/edit/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="オブジェクトの切り取り">
+						<param name="Local" value="menu/edit/cut.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="オブジェクトのコピー">
+						<param name="Local" value="menu/edit/copy.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="オブジェクトの貼付け">
+						<param name="Local" value="menu/edit/paste.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ショートカットの貼付け">
+						<param name="Local" value="menu/edit/pastelink.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="パス名をコピー">
+						<param name="Local" value="menu/edit/pathcopy.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="すべて選択・選択を反転">
+						<param name="Local" value="menu/edit/selall.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="フィルタ">
+						<param name="Local" value="menu/edit/filter.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="一括選択">
+						<param name="Local" value="menu/edit/maskselect.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ディスクメニュー">
+					<param name="Local" value="menu/disk/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ディスクコピー">
+						<param name="Local" value="menu/disk/diskcopy.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ボリュームラベル">
+						<param name="Local" value="menu/disk/label.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ディスクフォーマット">
+						<param name="Local" value="menu/disk/format.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="チェックディスク">
+						<param name="Local" value="menu/disk/checkdisk.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ディスクイメージの作成と復元">
+						<param name="Local" value="menu/disk/diskimage.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ネットワークの接続と切断">
+						<param name="Local" value="menu/disk/network.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="フォルダメニュー">
+					<param name="Local" value="menu/folder/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ホーム">
+						<param name="Local" value="menu/folder/home.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="指定のフォルダを開く">
+						<param name="Local" value="menu/folder/open.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="検索">
+						<param name="Local" value="menu/folder/search.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="システムフォルダ">
+						<param name="Local" value="menu/folder/sysfolder.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ごみ箱を空にする">
+						<param name="Local" value="menu/folder/emptyrecyclebin.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="フォルダの同期">
+						<param name="Local" value="menu/folder/sync.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="フォルダの同期スクリプト">
+						<param name="Local" value="menu/folder/makescrypt.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="履歴">
+						<param name="Local" value="menu/folder/history.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="表示メニュー">
+					<param name="Local" value="menu/view/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="パネル・バー">
+						<param name="Local" value="menu/view/bar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="表示する種類やプロパティ">
+						<param name="Local" value="menu/view/prop.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ソート方法">
+						<param name="Local" value="menu/view/sort.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="アイコンの表示">
+						<param name="Local" value="menu/view/icon.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="サムネイルサイズ">
+						<param name="Local" value="menu/view/thumbsize.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="基本の表示スタイルを更新">
+						<param name="Local" value="menu/view/defaultstyle.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイル情報">
+						<param name="Local" value="menu/view/fileinfo.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイル容量の詳細">
+						<param name="Local" value="menu/view/dirinfo.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ドライブ情報">
+						<param name="Local" value="menu/view/driveinfo.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ホットキーメニュー">
+						<param name="Local" value="menu/view/hotkey.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ショートカットキー">
+						<param name="Local" value="menu/view/keymap.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="デスクトップをツリー表示">
+						<param name="Local" value="menu/view/desktree.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ツールメニュー">
+					<param name="Local" value="menu/tool/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイル閲覧">
+						<param name="Local" value="menu/tool/viewer.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="バイナリ編集">
+						<param name="Local" value="menu/tool/bed.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="エディタで編集">
+						<param name="Local" value="menu/tool/editor.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルから文字列を検索">
+						<param name="Local" value="menu/tool/grep.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="コマンドプロンプトを開く">
+						<param name="Local" value="menu/tool/msdos.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="形式を指定してリスト出力">
+						<param name="Local" value="menu/tool/listout.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ショートカットキー">
+						<param name="Local" value="menu/tool/keymap.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ショートカットメニュー">
+						<param name="Local" value="menu/tool/shortcut.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="オプション">
+						<param name="Local" value="menu/tool/option.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="シェル拡張機能の設定">
+						<param name="Local" value="menu/tool/shellext.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ウィンドウメニュー">
+					<param name="Local" value="menu/window/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="最新の情報に更新">
+						<param name="Local" value="menu/window/refresh.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="新しいウィンドウ">
+						<param name="Local" value="menu/window/frame_new.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="新しいタブ">
+						<param name="Local" value="menu/window/tab_new.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="最近閉じたタブ">
+						<param name="Local" value="menu/window/tab_recent.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="タブグループ">
+						<param name="Local" value="menu/window/tab_group.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="タブを分離">
+						<param name="Local" value="menu/window/tab_separate.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="前の・次のタブ">
+						<param name="Local" value="menu/window/tab_prevnext.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="他のタブを閉じる">
+						<param name="Local" value="menu/window/tab_closeother.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="並べて表示・他">
+						<param name="Local" value="menu/window/tile.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="全てのウィンドウ位置を保存・復帰">
+						<param name="Local" value="menu/window/restore.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="前の・次のウィンドウ">
+						<param name="Local" value="menu/window/prevnext.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="操作別解説">
+				<param name="Local" value="operation/index.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="基本的な操作">
+					<param name="Local" value="operation/basic/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルやフォルダを選択する">
+						<param name="Local" value="operation/basic/selobject.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="起動時のオプション">
+						<param name="Local" value="operation/basic/start.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="クリップボードを利用した操作">
+						<param name="Local" value="operation/basic/clipboard.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ディスク操作">
+					<param name="Local" value="operation/disk/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ディスクイメージの作成と復元">
+						<param name="Local" value="operation/disk/diskimage.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ディスクフラッシュ">
+						<param name="Local" value="operation/disk/diskflush.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="フォルダ操作">
+					<param name="Local" value="operation/folder/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="フォルダ間で内容の同期をとる">
+						<param name="Local" value="operation/folder/syncdir_index.html">
+						</OBJECT>
+					<UL>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="フォルダの同期">
+							<param name="Local" value="operation/folder/syncdir.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="フォルダ同期の連続実行">
+							<param name="Local" value="operation/folder/syncdir_multi.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="フォルダ同期スクリプトを作成する">
+							<param name="Local" value="operation/folder/syncdir_script.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+					</UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルやフォルダを検索する">
+						<param name="Local" value="operation/folder/search.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="フォルダ内容を印刷する">
+						<param name="Local" value="operation/folder/listprint.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="フォルダ容量を計算する">
+						<param name="Local" value="operation/folder/dirinfo.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="ファイル操作">
+					<param name="Local" value="operation/file/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルをコピーまたは移動する">
+						<param name="Local" value="operation/copymove.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイル名を置換する">
+						<param name="Local" value="operation/file/chgnames.html">
+						</OBJECT>
+					<UL>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="拡張子を一括変更する">
+							<param name="Local" value="operation/file/chgext.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="大文字小文字を置換する">
+							<param name="Local" value="operation/file/chgcase.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="名前を一括して置換する">
+							<param name="Local" value="operation/file/repname.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+						<LI> <OBJECT type="text/sitemap">
+							<param name="Name" value="連番で名前を置換する">
+							<param name="Local" value="operation/file/renban.html">
+							<param name="ImageNumber" value="11">
+							</OBJECT>
+					</UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルの日付・属性を変更する">
+						<param name="Local" value="operation/file/attrib.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルを一括して削除する">
+						<param name="Local" value="operation/file/filterdel.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="書庫ファイルの操作">
+						<param name="Local" value="operation/file/archive.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="複数ファイルを連結する">
+						<param name="Local" value="operation/file/merge.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイルを複数ファイルに分割する">
+						<param name="Local" value="operation/file/divide.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="各種パネル・バーでの操作">
+					<param name="Local" value="operation/panel/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="タブバー">
+						<param name="Local" value="operation/panel/tabbar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="オブジェクトパネル">
+						<param name="Local" value="operation/panel/appbar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="しおりトパネル">
+						<param name="Local" value="operation/panel/favorite.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ドライブバー">
+						<param name="Local" value="operation/panel/drivebar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ナビバー">
+						<param name="Local" value="operation/panel/navibar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="スマートバー">
+						<param name="Local" value="operation/panel/smartbar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="サーチファインダー">
+						<param name="Local" value="operation/panel/findbar.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="フィルタ">
+					<param name="Local" value="operation/filter.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="正規表現">
+					<param name="Local" value="operation/regexp.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="各種設定">
+				<param name="Local" value="setting/index.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="オプション">
+					<param name="Local" value="setting/index.html">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="起動と終了">
+						<param name="Local" value="setting/op_start.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="常駐">
+						<param name="Local" value="setting/op_resident.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="表示">
+						<param name="Local" value="setting/op_display.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+						<UL>
+							<LI> <OBJECT type="text/sitemap">
+								<param name="Name" value="フォントと色">
+								<param name="Local" value="setting/op_fonts.html">
+								<param name="ImageNumber" value="11">
+								</OBJECT>
+							<LI> <OBJECT type="text/sitemap">
+								<param name="Name" value="アイコンの変更">
+								<param name="Local" value="setting/op_icon.html">
+								<param name="ImageNumber" value="11">
+								</OBJECT>
+						</UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="ファイル操作に関する設定">
+						<param name="Local" value="setting/op_file.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="よく使うプログラム">
+						<param name="Local" value="setting/op_program.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="アドインツールに関する設定">
+						<param name="Local" value="setting/op_addin.html">
+						<param name="ImageNumber" value="11">
+						</OBJECT>
+				</UL>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="付属するツール類">
+				<param name="Local" value="built-in/index.html">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="テキストビュア・エディタ">
+					<param name="Local" value="built-in/textview.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="バイナリ編集">
+					<param name="Local" value="built-in/binedit.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="書庫ビュア">
+					<param name="Local" value="built-in/archiveview.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="イメージビュア">
+					<param name="Local" value="built-in/imageview.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="イメージエディタ">
+					<param name="Local" value="built-in/imageedit.html">
+					<param name="ImageNumber" value="11">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="ユーザー登録およびサポート">
+			<param name="Local" value="support/index.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ご購入方法">
+				<param name="Local" value="support/regist.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ユーザ登録情報が変更になったときには">
+				<param name="Local" value="support/userinfo.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="不具合が見つかったときには">
+				<param name="Local" value="support/feedback.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="FAQ（よくある質問と回答）">
+				<param name="Local" value="support/faq/index.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="その他">
+			<param name="Local" value="apendix/index.html">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="アンインストール">
+				<param name="Local" value="apendix/uninstall.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="使用許諾契約書">
+				<param name="Local" value="apendix/copyright.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ヘルプドキュメント内の用語に関する商標など">
+				<param name="Local" value="apendix/trademark.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="その他著作権・商標など">
+				<param name="Local" value="apendix/credits.html">
+				<param name="ImageNumber" value="11">
+				</OBJECT>
+		</UL>
+	</UL>
+</UL>
+</BODY></HTML>

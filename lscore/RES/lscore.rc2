@@ -1,0 +1,36 @@
+//
+// lscore.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_APPINFO                 RCDATA              "res\\appinfo_bkgnd.jpg"
+IDB_DOT_COLOR               RCDATA              "res\\dot_color_32bpp.png"
+IDB_TREECHECK               RCDATA              "res\\treecheck16_32bpp.png"
+IDB_TRACK                   RCDATA              "res\\track_triangle_32bpp.png"
+IDB_SLIDER_THUMB            RCDATA              "res\\slider_thumb_32bpp.png"
+IDB_SIGNAL                  RCDATA              "res\\signal_32bpp.png"
+IDB_PICKER_COLOR            RCDATA              "res\\picker_color_32bpp.png"
+IDB_PICKER_FOLDER           RCDATA              "res\\picker_folder_32bpp.png"
+IDB_PICKER_FONT             RCDATA              "res\\picker_font_32bpp.png"
+IDB_CHECK                   RCDATA              "res\\check1_32bpp.png"
+IDB_CHECK2                  RCDATA              "res\\check2_32bpp.png"
+IDB_CHECK3                  RCDATA              "res\\check3_32bpp.png"
+IDB_TABPANEL                RCDATA              "res\\tabpanel_32bpp.png"
+IDB_TABADD                  RCDATA              "res\\tabadd20_32bpp.png"
+IDB_TABBUTTONS              RCDATA              "res\\tabbuttons16_32bpp.png"
+IDB_PRGSTAT                 RCDATA              "res\\progress_stat21x21.png"
+IDB_DIGITALNUMBER           RCDATA              "res\\digital_number_32bpp.png"
+IDB_GRADITEM                RCDATA              "res\\graditem_32bpp.png"
+
+/////////////////////////////////////////////////////////////////////////////

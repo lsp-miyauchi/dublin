@@ -1,0 +1,19 @@
+//
+// VWFINDER.RC2 - このリソースは Microsoft Visual C++ で直接編集することはできません
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 独自にリソースを編集する場合はこの場所に追加してください...
+
+IDB_S_TOOLBAR         RCDATA                  "res\\toolbar20x20_32bpp.png"
+IDB_M_TOOLBAR         RCDATA                  "res\\toolbar24x24_32bpp.png"
+IDB_S_APPICON         RCDATA                  "res\\vwfinder20x20.png"
+IDB_M_APPICON         RCDATA                  "res\\vwfinder24x24.png"
+
+
+/////////////////////////////////////////////////////////////////////////////

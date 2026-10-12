@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jccoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jccolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcdctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jchuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcicc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcinit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcomapi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcparam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcphuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcprepct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jctrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdapimin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdapistd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdatadst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdatasrc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdcoefct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdcolor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jddctmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdhuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdicc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdinput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdmainct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdmarker.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdmaster.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdmerge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdphuff.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdpostct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdsample.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdtrans.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jerror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jfdctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jfdctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jfdctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jidctflt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jidctfst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jidctint.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jidctred.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jquant1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jquant2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jutils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jmemmgr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jmemnobs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jaricom.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jcarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\github\cairns\gnu_libs\libjpeg\jdarith.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\libjpeg\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\simd.dir\$(Configuration)\jsimd.obj">
+      <Filter>Object Libraries</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jsimdcpu.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctflt-sse.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jchuff-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcphuff-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctfst-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctflt-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctfst-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctred-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquantf-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-sse2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jccolor-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcgray-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jcsample-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdcolor-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdmerge-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jdsample-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jfdctint-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jidctint-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+    <Object Include="E:\github\cairns\gnu_libs\libjpeg\build\simd\$(Configuration)\jquanti-avx2.asm.obj">
+      <Filter>Object Files</Filter>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Object Files">
+      <UniqueIdentifier>{BD6F7333-D9F4-32A1-9E1A-B9D8834DD7A1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object Libraries">
+      <UniqueIdentifier>{BF751D38-A7B7-3764-A39B-3E03F37B85AE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{CBFE0C7D-E0A2-3CAD-9304-0D62F9E0AE1E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+HKCR
+{
+	ForceRemove lsshell.IconProp.1 = s 'lsshell IconProp'
+	{
+		CLSID = s '{DD03A606-C195-4229-B9CA-1613A4C5DE58}'
+	}
+	ForceRemove lsshell.IconProp = s 'lsshell IconProp'
+	{
+		CLSID = s '{DD03A606-C195-4229-B9CA-1613A4C5DE58}'
+		CurVer = s 'lsshell.IconProp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DD03A606-C195-4229-B9CA-1613A4C5DE58} = s 'lsshell IconProp'
+		{
+			ProgID = s 'lsshell.IconProp.1'
+			VersionIndependentProgID = s 'lsshell.IconProp'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove *
+	{
+		NoRemove Shellex
+		{
+			NoRemove PropertySheetHandlers
+			{
+				ForceRemove lssIconProp = s '{DD03A606-C195-4229-B9CA-1613A4C5DE58}'
+			}
+		}
+	}
+}

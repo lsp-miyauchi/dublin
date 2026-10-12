@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>アドインツール</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+<meta name="keywords" content="アドインツール;アドインビュア;アドインエディタ;管理者権限">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../index.html">TOP</a> &rsaquo;
+<a href="../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="index.html">各種設定</a> &rsaquo;
+<a href="index.html">オプション</a> &rsaquo;
+アドインツール
+</div>
+<!-- 本体 -->
+<h2>アドインビュアに関する設定</h2>
+
+<p>アドインビュアとは、任意の拡張子を持つファイルに対して、
+任意の表示プログラムを関連付け、
+FileVisorの［ツール］ - [ファイル閲覧]コマンド
+実行時に、拡張子に応じた外部のプログラムを起動するための機能です。
+テキストビュアではカバーしきれないファイルの表示をする場合に便利です。</p>
+
+<p>ここで設定されていない拡張子を持つファイルは、
+上記のコマンドを実行すると外部ツールのタブで設定された
+（未設定の場合には内蔵の）テキストビュアで開きます。</p>
+
+<p>例えば、FileVisorではサポートしていない特殊な画像イメージファイルが表示できるプログラムを、
+このアドインビュアでそれら画像ファイルの拡張子に対して登録しておきます。
+これにより、ビュアを起動するためのユーザインタフェースはそのままで、
+ビュアとして外部のプログラムを実行することが可能となります。</p>
+
+<div class="info1">
+	ビュアの実行優先順位は [アドインビュア] ＞ [外部ビュア] ＞ [内蔵ビュア] です。
+</div>
+
+<div class="info1">
+	プログラム名に‘#’で始まる文字列を設定すると、
+	その拡張子に対してアドインビュア機能を無効とすることができます。
+</div>
+
+<h2>アドインエディタに関する設定</h2>
+
+<p>アドインエディタとは、任意の拡張子を持つファイルに対して、
+任意のエディタプログラムを関連付け、
+FileVisorの[ツール］－［エディタで編集］コマンド
+実行時に、拡張子に応じた外部のプログラムを起動するための機能です。
+テキストエディタではカバーしきれないファイルの編集をする場合に便利です。</p> 
+<p>ここで設定されていない拡張子を持つファイルは、上記のコマンドを実行すると、
+外部ツールのタブで設定された（未設定の場合には内蔵の）テキストエディタで開きます。</p> 
+<p>例えば、メモ帳（Notepad）などでは、テキスト文章以外編集できませんが、
+テキスト文章以外のデータファイル（例えば画像ファイルなど）を、
+それ専用のアプリケーションに設定しておけば、エディタを起動するためのユーザインタフェースはそのままで、
+フレキシブルに各種ファイルが編集可能となります。</p> 
+
+<div class="info1">
+	エディタの実行優先順位は［アドインエディタ］＞［外部エディタ］＞［内蔵エディタ］です。
+</div>
+
+<div class="info1">
+	プログラム名に‘#’で始まる文字列を設定すると、その拡張子に対してアドインエディタ機能を無効とすることができます。
+</div>
+<div class="info1">
+	<p>Windows Vista以降のOSをご利用の場合、登録したプログラムを管理者として実行するオプションを指定できます。<br>
+	プログラムパス名の先頭に‘@’を追加して登録することにより、実行時に管理者権限を付加して当該プログラムを起動します。</p>
+</div>
+
+<h3>関連項目:<a href="../menu/tool/viewer.html">ファイル閲覧</a>|<a href="../menu/tool/editor.html">エディタで編集</a></h3>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>ファイルの分割</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 本体 -->
+<h2>ファイルの分割</h2>
+<p>指定ファイルを指定されたサイズで複数のファイルに分割します。
+分割したファイルは、元のファイル名から拡張子を除いた名前に続いて、“.001”からの連番で拡張子が付与されます。</p>
+
+<h4>結合用バッチファイル</h4>
+<p>分割の際に、結合用バッチファイルの作成を指定しておくと、
+分割したファイルを元に戻すための連結用バッチファイルが作成されます。</p>
+
+<h4>キャビネット形式で分割</h4>
+<p>キャビネット形式で分割する場合には、元ファイルはキャビネット書庫に圧縮されつつ、
+指定のサイズで分割されます。</p>
+<blockquote>
+	[Name]1.cab, [Name]2.cab, …
+</blockquote>
+<p>という名前で分割されることになります。</p>
+
+<div class="info1">
+	分割先ドライブが取り替え可能メディア（フロッピーディスク等）の場合には、
+	分割先ドライブがいっぱいになると「メディア交換して継続」するかどうかを問い合わせます。
+</div>
+<div class="info1">
+	分割サイズで指定できる最大分割サイズは32,767Kバイト（約32Mバイト）までです。
+</div>
+<div class="info1">
+	キャビネットとして分割するには、元のファイルはキャビネットファイル形式で
+	圧縮されて分割されますので、より少ない分割数で分割することができ、
+	フロッピーディスクなどで持ち運ぶ際のメディア枚数を少なく抑えることが可能です。
+	なお、この機能を利用して分割をおこなった場合には、ファイルを復元する際に、
+	ファイルの連結機能を用いるのではなく、
+	書庫ファイルの解凍機能（連続して解凍するオプションをチェックする必要があります）
+	を利用します。
+</div>
+
+<h3>関連項目:<a href="merge.htm">ファイルの連結</a></h3>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2011 <a href="http://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

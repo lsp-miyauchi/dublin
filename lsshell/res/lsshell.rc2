@@ -1,0 +1,16 @@
+//
+// lsshell.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+IDB_TOOLBAR             RCDATA                  "res\\ctx16_32bpp.png"
+
+
+/////////////////////////////////////////////////////////////////////////////

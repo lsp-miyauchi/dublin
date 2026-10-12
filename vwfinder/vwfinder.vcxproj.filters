@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="drgdrp.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="fileitem.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="pidl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="qsort_ex.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="queryfolder.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="runmanager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="selff.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="setup.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="vwfinder.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vwfinder.def">
+      <Filter>ソース ファイル</Filter>
+    </None>
+    <None Include="res\Copyp.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Copys.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ddcopy.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ddlink.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ddmove.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ddnone.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\find256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Linkp.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Links.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Movep.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Moves.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Sortdown.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\Sortup.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar16x16.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar24x24.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\toolbar256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_toolbar16x16.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_toolbar24x24.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\vwfinder.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_find.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_toolbar16x16.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_toolbar24x24.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="html\filter.htm" />
+    <None Include="res\filter.htm" />
+    <None Include="ReadMe.txt" />
+    <None Include="html\regexp.htm" />
+    <None Include="res\regexp.htm" />
+    <None Include="html\search.htm" />
+    <None Include="res\search.htm" />
+    <None Include="res\shell32_150.avi" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vwfinder.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

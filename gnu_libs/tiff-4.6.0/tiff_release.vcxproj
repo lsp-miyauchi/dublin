@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21A9D305-DB62-3C73-8480-2A75C07AF1E1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>tiff_release</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\tiff\CMakeFiles\e32ccb56b8c7ceb74bf78bc78032699e\tiff_release.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Releasing tiff 4.6.0 ...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DSOURCE_DIR:PATH=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_VERSION=4.6.0 -DLIBTIFF_BASIC_SOURCE_DIR=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_BASIC_BINARY_DIR=E:/github/cairns/gnu_libs/tiff -P E:/github/cairns/gnu_libs/tiff/cmake/ReleaseScript.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\tiff_release</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Releasing tiff 4.6.0 ...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DSOURCE_DIR:PATH=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_VERSION=4.6.0 -DLIBTIFF_BASIC_SOURCE_DIR=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_BASIC_BINARY_DIR=E:/github/cairns/gnu_libs/tiff -P E:/github/cairns/gnu_libs/tiff/cmake/ReleaseScript.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\tiff_release</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Releasing tiff 4.6.0 ...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DSOURCE_DIR:PATH=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_VERSION=4.6.0 -DLIBTIFF_BASIC_SOURCE_DIR=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_BASIC_BINARY_DIR=E:/github/cairns/gnu_libs/tiff -P E:/github/cairns/gnu_libs/tiff/cmake/ReleaseScript.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\tiff_release</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</VerifyInputsAndOutputsExist>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Releasing tiff 4.6.0 ...</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DSOURCE_DIR:PATH=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_VERSION=4.6.0 -DLIBTIFF_BASIC_SOURCE_DIR=E:/github/cairns/gnu_libs/tiff -DLIBTIFF_BASIC_BINARY_DIR=E:/github/cairns/gnu_libs/tiff -P E:/github/cairns/gnu_libs/tiff/cmake/ReleaseScript.cmake
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\tiff_release</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <VerifyInputsAndOutputsExist Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</VerifyInputsAndOutputsExist>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\github\cairns\gnu_libs\tiff\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindZLIB.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\TestBigEndian.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsCompat.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsVersion.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CXXLibrary.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CompilerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\DeflateCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindCMath.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindDeflate.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJBIG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJPEG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindLERC.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindWebP.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindZSTD.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Findliblzma.cmake;E:\github\cairns\gnu_libs\tiff\cmake\IncludeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\InternalCodecs.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JBIGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JPEGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LERCCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LZMACodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LargeFileSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LibraryFeatures.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LinkerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PixarLogCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PkgConfig.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ProcessorChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Release.cmake;E:\github\cairns\gnu_libs\tiff\cmake\SymbolChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TypeSizeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WebPCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WindowsSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ZSTDCodec.cmake;E:\github\cairns\gnu_libs\tiff\configure.ac;E:\github\cairns\gnu_libs\tiff\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindZLIB.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\TestBigEndian.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsCompat.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsVersion.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CXXLibrary.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CompilerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\DeflateCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindCMath.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindDeflate.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJBIG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJPEG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindLERC.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindWebP.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindZSTD.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Findliblzma.cmake;E:\github\cairns\gnu_libs\tiff\cmake\IncludeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\InternalCodecs.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JBIGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JPEGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LERCCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LZMACodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LargeFileSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LibraryFeatures.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LinkerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PixarLogCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PkgConfig.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ProcessorChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Release.cmake;E:\github\cairns\gnu_libs\tiff\cmake\SymbolChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TypeSizeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WebPCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WindowsSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ZSTDCodec.cmake;E:\github\cairns\gnu_libs\tiff\configure.ac;E:\github\cairns\gnu_libs\tiff\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindZLIB.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\TestBigEndian.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsCompat.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsVersion.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CXXLibrary.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CompilerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\DeflateCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindCMath.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindDeflate.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJBIG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJPEG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindLERC.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindWebP.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindZSTD.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Findliblzma.cmake;E:\github\cairns\gnu_libs\tiff\cmake\IncludeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\InternalCodecs.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JBIGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JPEGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LERCCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LZMACodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LargeFileSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LibraryFeatures.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LinkerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PixarLogCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PkgConfig.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ProcessorChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Release.cmake;E:\github\cairns\gnu_libs\tiff\cmake\SymbolChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TypeSizeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WebPCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WindowsSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ZSTDCodec.cmake;E:\github\cairns\gnu_libs\tiff\configure.ac;E:\github\cairns\gnu_libs\tiff\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/github/cairns/gnu_libs/tiff/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/github/cairns/gnu_libs/tiff -BE:/github/cairns/gnu_libs/tiff --check-stamp-file E:/github/cairns/gnu_libs/tiff/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckCSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckLibraryExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckSymbolExists.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindPackageMessage.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\FindZLIB.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\SelectLibraryConfigurations.cmake;C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.27\Modules\TestBigEndian.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeCXXCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeRCCompiler.cmake;E:\github\cairns\gnu_libs\tiff\CMakeFiles\3.27.2-msvc1\CMakeSystem.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsCompat.cmake;E:\github\cairns\gnu_libs\tiff\cmake\AutotoolsVersion.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CXXLibrary.cmake;E:\github\cairns\gnu_libs\tiff\cmake\CompilerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\DeflateCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindCMath.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindDeflate.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJBIG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindJPEG.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindLERC.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindWebP.cmake;E:\github\cairns\gnu_libs\tiff\cmake\FindZSTD.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Findliblzma.cmake;E:\github\cairns\gnu_libs\tiff\cmake\IncludeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\InternalCodecs.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JBIGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\JPEGCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LERCCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LZMACodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LargeFileSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LibraryFeatures.cmake;E:\github\cairns\gnu_libs\tiff\cmake\LinkerChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PixarLogCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\PkgConfig.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ProcessorChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\Release.cmake;E:\github\cairns\gnu_libs\tiff\cmake\SymbolChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\TypeSizeChecks.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WebPCodec.cmake;E:\github\cairns\gnu_libs\tiff\cmake\WindowsSupport.cmake;E:\github\cairns\gnu_libs\tiff\cmake\ZSTDCodec.cmake;E:\github\cairns\gnu_libs\tiff\configure.ac;E:\github\cairns\gnu_libs\tiff\libtiff-4.pc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\github\cairns\gnu_libs\tiff\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="E:\github\cairns\gnu_libs\tiff\CMakeFiles\tiff_release">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\github\cairns\gnu_libs\tiff\ZERO_CHECK.vcxproj">
+      <Project>{902A021A-77D5-3BB2-AA7F-70E851836991}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

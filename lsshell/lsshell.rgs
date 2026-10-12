@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'lsshell'
+		{
+			val DllSurrogate = s ''
+			val AuthenticationLevel = d '1'
+		}
+		'lsshell.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

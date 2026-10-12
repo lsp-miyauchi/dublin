@@ -1,0 +1,7 @@
+; vwarc.def : DLL のモジュール パラメータを宣言します。
+
+LIBRARY      "vwarchive"
+
+EXPORTS
+	RunView				@10
+	RunViewW			@11

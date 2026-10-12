@@ -1,0 +1,577 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\lsshell.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DUMMY               ICON                    "res\\dummy.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,1,51
+ PRODUCTVERSION 7,4,1,51
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "LightShip Shell Extension"
+            VALUE "FileVersion", "7.4.1.51"
+            VALUE "InternalName", "lsshell"
+            VALUE "LegalCopyright", "(C)LightShip Software Inc. 1994-2024 All rights reserved."
+            VALUE "OriginalFilename", "lsshell.dll"
+            VALUE "ProductName", "FileVisor"
+            VALUE "ProductVersion", "7.4.1.51"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_LSSHELL             REGISTRY                "lsshell.rgs"
+
+IDR_CTX                 REGISTRY                "Ctx.rgs"
+
+IDR_ADDPACK             REGISTRY                "AddPack.rgs"
+
+IDR_UNPACKTO            REGISTRY                "UnpackTo.rgs"
+
+IDR_PACKTO              REGISTRY                "PackTo.rgs"
+
+IDR_JUNCTIONTO          REGISTRY                "JunctionTo.rgs"
+
+IDR_COPYTO              REGISTRY                "CopyTo.rgs"
+
+IDR_THUMBOUTTO          REGISTRY                "ThumbOutTo.rgs"
+
+IDR_EXIFPROP            REGISTRY                "ExifProp.rgs"
+
+IDR_IMAGETOOLS          REGISTRY                "ImageTools.rgs"
+
+IDR_DECRYPT             REGISTRY                "LSDecrypt.rgs"
+
+IDR_ICONPROP            REGISTRY                "IconProp.rgs"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_TOOLBAR TOOLBAR 16, 16
+BEGIN
+    BUTTON      IDM_CTX_FOLDERSYNC
+    BUTTON      IDM_CTX_DISKFLUSH
+    BUTTON      IDM_CTX_DRIVEINFO
+    BUTTON      IDM_CTX_FILTERDEL
+    BUTTON      IDM_CTX_FILESIZEINFO
+    BUTTON      IDM_CTX_PACK
+    BUTTON      IDM_CTX_UNPACK
+    BUTTON      IDM_CTX_CHECKARC
+    BUTTON      IDM_CTX_BINDUMP
+    BUTTON      IDM_CTX_MERGEFILE
+    BUTTON      IDM_CTX_DIVIDEFILE
+    BUTTON      IDM_CTX_FILEATTRIB
+    BUTTON      IDM_CTX_ICONINFO
+    BUTTON      IDM_CTX_FILEINFO
+    BUTTON      IDM_CTX_RENAME
+    BUTTON      IDM_CTX_SERIESNAME
+    BUTTON      IDM_CTX_REPLACENAME
+    BUTTON      IDM_CTX_NAMECAP
+    BUTTON      IDM_CTX_COPYTO
+    BUTTON      IDM_CTX_MOVETO
+    BUTTON      IDM_CTX_PACKTO
+    BUTTON      IDM_CTX_UNPACKTO
+    BUTTON      IDM_CTX_MAKESFXTO
+    BUTTON      IDM_CTX_REPARSEPOINT
+    BUTTON      IDM_CTX_OPENJUNCTION
+    BUTTON      IDM_CTX_OPENLINKTARGET
+    BUTTON      IDM_CTX_ENCRYPT
+    BUTTON      IDM_CTX_DECRYPT
+    BUTTON      IDM_CTX_MKSYMLINK
+    BUTTON      IDM_CTX_CALCHASH
+    BUTTON      IDM_CTX_SHREDDER
+    BUTTON      IDM_CTX_MKSYSLINK
+    BUTTON      IDM_IMG_CROPIMAGE
+    BUTTON      IDM_IMG_IMAGECONVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_GENERIC DIALOGEX 0, 0, 346, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "　一般　"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "コンテキスト メニューに追加する項目",IDC_STATIC,7,7,332,148
+    CONTROL         "FileVisorで開く(&X)",IDC_SHELL_FILEVISOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,23,80,10
+    CONTROL         "フォルダの同期(&S)",IDC_SHELL_DIRSYNC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,40,80,10
+    CONTROL         "ファイル名の置換(&P)",IDC_SHELL_RENAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,55,80,10
+    CONTROL         "パス名をコピー(&O)",IDC_SHELL_PATHCLIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,71,80,10
+    CONTROL         "一括削除(&G)",IDC_SHELL_FILTERDEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,88,80,10
+    CONTROL         "シュレッダ(&R)",IDC_SHELL_SHREDDER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,104,80,10
+    CONTROL         "バイナリ ダンプ(&B)",IDC_SHELL_BDUMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,23,80,10
+    CONTROL         "ドライブ情報(&D)",IDC_SHELL_DRVINFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,40,80,10
+    CONTROL         "ファイル情報(&I)",IDC_SHELL_FILEINFO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,55,80,10
+    CONTROL         "ファイルの分割および連結(&M)",IDC_SHELL_DIVMRG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,72,99,10
+    CONTROL         "ファイルの属性と日付変更(&T)",IDC_SHELL_ATTRIB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,88,97,10
+    CONTROL         "ファイル容量の詳細(&E)",IDC_SHELL_FSIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,113,104,80,10
+    CONTROL         "ハッシュを計算(&H)",IDC_SHELL_CALCHASH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,23,100,10
+    CONTROL         "ディスク フラッシュ(&F)",IDC_SHELL_DFLUSH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,216,39,100,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,19,124,305,1
+    CONTROL         "これらの拡張機能をサブメニューにまとめる(&W)",IDC_SHELL_USESUBMENU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,133,136,10
+    GROUPBOX        "ドロップ ハンドラに追加する項目",IDC_STATIC,7,165,332,55
+    CONTROL         "ここにシステム リンクを作成(&L)",IDC_SHELL_DROPSYSLINK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,182,124,10
+    CONTROL         "ここにFileVisorでコピー(&C)",IDC_SHELL_DROPCOPYTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,198,110,10
+    CONTROL         "ここにファイルを暗号・復号化(&T)",IDC_SHELL_DROPCRYPTTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,174,182,110,10
+    CONTROL         "ファイルの暗号・復号化(&Y)",IDC_SHELL_CRYPT,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,216,56,100,10
+END
+
+IDD_PACK DIALOGEX 0, 0, 346, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "　書庫操作　"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "コンテキスト メニューに追加する項目",IDC_STATIC,7,7,332,42
+    CONTROL         "書庫の作成(&P)",IDC_SHELL_PACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,25,66,10
+    CONTROL         "書庫の検査(&T)",IDC_SHELL_ARCCHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,25,66,10
+    CONTROL         "書庫の解凍(&U)",IDC_SHELL_UNPACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,172,25,66,10
+    GROUPBOX        "ドロップ ハンドラに追加する項目",IDC_STATIC,7,58,332,41
+    CONTROL         "書庫の作成(&C)",IDC_SHELL_DROPPACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,75,66,10
+    CONTROL         "書庫の解凍(&E)",IDC_SHELL_DROPUNPACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,95,75,66,10
+    PUSHBUTTON      "書庫拡張子の関連付け",IDC_SHELL_PACKASSOC,20,114,90,14
+    GROUPBOX        "書庫拡張子の関連付け",IDC_SHELL_ARC_LEGACY,7,108,332,121
+    CONTROL         "Zip( zip/jar/war/xpi )",IDC_SHELL_ZIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,129,76,10
+    CONTROL         "7-Zip( 7z )",IDC_SHELL_7Z,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,145,46,10
+    CONTROL         "Cab",IDC_SHELL_CAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,161,27,10
+    CONTROL         "Tar( tar/gz/tgz/bz2/lzma/z/rpm/deb )",IDC_SHELL_TAR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,177,129,10
+    CONTROL         "Rar",IDC_SHELL_RAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,101,129,26,10
+    CONTROL         "Lzh",IDC_SHELL_LZH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,101,145,26,10
+    CONTROL         "Arj",IDC_SHELL_ARJ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,101,161,25,10
+    CONTROL         "Bga( bza/gza )",IDC_SHELL_BGA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,128,59,10
+    CONTROL         "Gca",IDC_SHELL_GCA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,145,27,10
+    CONTROL         "Yz1",IDC_SHELL_YZ1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,151,161,26,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,19,197,308,1
+    LTEXT           "チェックされた書庫は、FileVisorやエクスプローラ上でダブル クリックすると内蔵の書庫ビュアが起動されます。",IDC_STATIC,19,208,308,10
+END
+
+IDD_IMAGETOOL DIALOGEX 0, 0, 346, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "　イメージ ツール　"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "コンテキスト メニューに追加する項目",IDC_STATIC,7,7,332,106
+    CONTROL         "クリップボードヘのイメージ コピーや編集(&C)",IDC_SHELL_IMAGE_COPY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,24,130,10
+    CONTROL         "イメージの種類やサイズを変換(&X)",IDC_SHELL_IMAGE_CONVERT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,40,130,10
+    CONTROL         "JpegからPDFを作成(&P)",IDC_SHELL_IMAGE_JPEG2PDF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,56,130,10
+    CONTROL         "EXIF撮影日時でファイル名を変更(&N)",IDC_SHELL_IMAGE_RENAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,73,128,10
+    CONTROL         "EXIFオリエンテーション情報を変更(&O)",IDC_SHELL_IMAGE_ORIENTATION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,89,128,10
+    CONTROL         "四辺をクロップ(&R)",IDC_SHELL_IMAGE_CROPIMAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,23,130,10
+    CONTROL         "ファイルからサムネイル画像を抽出(&T)",IDC_SHELL_IMAGE_THUMBOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,40,164,10
+    CONTROL         "スライド ショウ(&S)",IDC_SHELL_IMAGE_SLIDESHOW,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,161,58,164,10
+    CONTROL         "WEBアルバムの作成(&W)",IDC_SHELL_IMAGE_ALBUM,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | WS_TABSTOP,161,74,130,10
+    GROUPBOX        "ドロップ ハンドラに追加する項目",IDC_STATIC,7,124,332,40
+    CONTROL         "ここにサムネイル画像を抽出(&H)",IDC_SHELL_IMAGE_DROPTHUMBOUT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,140,154,10
+    GROUPBOX        "プロパティに追加する項目",IDC_STATIC,7,172,332,42
+    CONTROL         "EXIF撮影情報ページ(&E)",IDC_SHELL_IMAGE_PROPEXIF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,189,158,10
+END
+
+IDD_ICON DIALOGEX 0, 0, 346, 243
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "　アイコン　"
+FONT 9, "MS UI Gothic", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "コンテキスト メニューに追加する項目",IDC_STATIC,7,7,332,39
+    CONTROL         "ファイルに含まれるアイコン一覧(&J)",IDC_SHELL_ICONDUMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,24,105,10
+    GROUPBOX        "ドロップ ハンドラに追加する項目",IDC_STATIC,7,58,332,41
+    CONTROL         "アイコンをここに抽出(&P)",IDC_SHELL_DROPICONPICK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,75,110,10
+    GROUPBOX        "プロパティに追加する項目",IDC_STATIC,7,110,332,42
+    CONTROL         "アイコン情報ページ(&E)",IDC_SHELL_ICON_PROPICON,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,127,158,10
+END
+
+IDD_EXIFPROP DIALOGEX 0, 0, 227, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "撮影情報"
+FONT 9, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "撮影情報:",IDC_STATIC,6,6,42,8
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,16,215,225
+END
+
+IDD_ICONPROP DIALOGEX 0, 0, 227, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "アイコン"
+FONT 9, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_ICON_LIST,"SysListView32",LVS_SHOWSELALWAYS | LVS_SHAREIMAGELISTS | WS_BORDER | WS_TABSTOP,7,7,215,208
+    RTEXT           "小",IDC_STATIC,7,229,8,8
+    CONTROL         "",IDC_ICON_SIZE,"LSCSlider",WS_TABSTOP,19,229,75,10
+    LTEXT           "大",IDC_STATIC,99,229,8,8
+    PUSHBUTTON      "エクスポート(&E)",IDC_ICON_WRITE,165,226,56,14
+    PUSHBUTTON      "詳細(&D)",IDC_ICON_DETAIL,117,226,44,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_GENERIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_PACK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_IMAGETOOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_ICON, DIALOG
+    BEGIN
+    END
+
+    IDD_EXIFPROP, DIALOG
+    BEGIN
+    END
+
+    IDD_ICONPROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_GENERIC AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_IMAGETOOL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "lsshell"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_CAPTION         "FileVisor シェル"
+    IDS_GROUP_SHELL         "FileVisor シェル"
+    IDS_GROUP_CHNAME        "名前の置換"
+    IDS_GROUP_NAMECLIP      "パス名をコピー"
+    IDS_GROUP_IMAGETOOLS    "イメージツール"
+    IDS_GROUP_EXIFORIENTATION "Exifオリエンテーション"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EXPIRED             "この機能はご利用いただけません。"
+    IDS_LIST_ICONSIZE       "小さいアイコン;大きいアイコン;さらに大きいアイコン;"
+    IDS_NOSELICONS          "アイコンが選択されていません。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_ICONPROP            "アイコンの抽出"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SHELL_DIRSYNC       "２つのフォルダ間でファイル内容の同期をとり、双方のフォルダで\nファイルの状態を同一に保つことが可能となります。"
+    IDC_SHELL_BDUMP         "ファイル内容を16進形式でバイナリダンプウィンドウを開いて表示\nします。バイナリデータの書き換えも可能です。"
+    IDC_SHELL_DIVMRG        "１つのファイルを指定のサイズで複数ファイルに分割したり、\n複数ファイルをひとつにまとめたりできます。"
+    IDC_SHELL_DFLUSH        "リムーバブルメディアなどへの書き込みで、キャッシュされたデータ\nをフラッシュして、メディアを安全に取り出せるようにします。"
+    IDC_SHELL_RENAME        "連番でファイル名を振り直したり、ファイル名内の特定の文字列を\n他の文字列に変換したり、大文字小文字の変換をしたりできます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SHELL_ATTRIB        "ファイルの日付や属性の変更をおこないます。"
+    IDC_SHELL_ICONDUMP      "ファイルに含まれるアイコンをプロパティページで\nリストアップ表示できるようにします。"
+    IDC_SHELL_IMAGETOOL     "画像ファイルを加工するツール類です。\n種別変換やリサイズ等が可能です。"
+    IDC_SHELL_FILTERDEL     "フォルダ配下にある特定のファイルを一括して\n削除できるようにします。"
+    IDC_SHELL_FSIZE         "フォルダ配下にある、全てあるいは特定のファイル\nの総容量を確認できます。"
+    IDC_SHELL_DRVINFO       "コンピュータに接続されているドライブの詳細を\n一覧形式で確認できます。"
+    IDC_SHELL_PATHCLIP      "選択されたファイルの名前をクリップボードにコピーします。"
+    IDC_SHELL_DROPREPARSE   "ドロップされたフォルダのリパース ポイントを作成します。"
+    IDC_SHELL_CRYPT         "ファイルをパスワードで暗号化・復号化します。"
+    IDC_SHELL_DROPCRYPTTO   "ドロップ メニューに「暗号化・復号化」を追加します。\nマウス右ボタンでのドラッグ＆ドロップに対応します。"
+    IDC_SHELL_FILEVISOR     "ドライブ・フォルダやスタート メニューのコンテキスト メニューに\n「FileVisorで開く」を追加します。"
+    IDC_SHELL_CALCHASH      "ファイルのMD5やSHA-1などのハッシュ値を計算します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SHELL_DROPICONPICK  "ドロップされたファイルからアイコンを抽出します。"
+    IDC_SHELL_PACK          "ファイルを圧縮して書庫に格納します。"
+    IDC_SHELL_UNPACK        "書庫ファイルを閲覧したり、書庫からファイルを\n解凍できるようにします。"
+    IDC_SHELL_DROPPACK      "ドロップ メニューに「書庫の作成」を追加します。\nマウス右ボタンでのドラッグ＆ドロップに対応します。"
+    IDC_SHELL_DROPUNPACK    "ドロップ メニューに「書庫の解凍」を追加します。\nマウス右ボタンでのドラッグ＆ドロップに対応します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SHELL_IMAGE_COPY    "選択された画像イメージをクリップボードヘコピーします。"
+    IDC_SHELL_IMAGE_CONVERT "選択されたイメージ ファイルを、その種類やサイズを\n指定のフォーマットに変換してコピーします。"
+    IDC_SHELL_IMAGE_ALBUM   "選択されたイメージ ファイルからサムネイルを抽出し、\nHTML形式の簡易WEBアルバムを作成します。"
+    IDC_SHELL_IMAGE_RENAME  "選択されたイメージ ファイルからEXIF撮影情報を参照し、\nその撮影日時でファイル名を変更します。\n対象となるファイルはJpegおよび各種RAWファイルです。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SHELL_IMAGE_THUMBOUT 
+                            "選択されたイメージ ファイルからサムネイル画像を抽出して\n別ファイルに書き出します。\n対象となるファイルはJpegおよび各種RAWファイルです。"
+    IDC_SHELL_IMAGE_DROPTHUMBOUT 
+                            "ドロップした場所にドロップされたイメージ ファイルから\nサムネイル画像を抽出して別ファイルに書き出します。\n対象となるファイルはJpegおよび各種RAWファイルです。"
+    IDC_SHELL_IMAGE_PROPEXIF 
+                            "ファイルのプロパティで表示される詳細情報に、\nEXIF撮影情報（メーカーノート含む）のページを追加します。\n対象となるファイルはJpegおよび各種RAWファイルです。"
+    IDC_SHELL_IMAGE_JPEG2PDF "複数のJpegファイルをひとつのPDFファイルに変換して出力します。"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_SHELL_ICON_PROPICON "ファイルのプロパティで表示される詳細情報に、\nファイルに含まれるアイコン情報のページを追加します。\n対象となるファイルはexeおよびdllファイルです。"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CTX_FOLDERSYNC      "フォルダの同期(&Y)"
+    IDM_CTX_DISKFLUSH       "ディスク フラッシュ(&D)"
+    IDM_CTX_DRIVEINFO       "ドライブ情報(&I)"
+    IDM_CTX_FILTERDEL       "一括削除(&G)"
+    IDM_CTX_FILESIZEINFO    "ファイル容量の詳細(&Z)"
+    IDM_CTX_PACK            "書庫の作成(&F)"
+    IDM_CTX_UNPACK          "書庫の解凍(&U)"
+    IDM_CTX_CHECKARC        "書庫の検査(&K)"
+    IDM_CTX_BINDUMP         "バイナリ ダンプ(&B)"
+    IDM_CTX_MERGEFILE       "連結(&M)"
+    IDM_CTX_DIVIDEFILE      "分割(&V)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CTX_FILEATTRIB      "日付と属性の変更(&A)"
+    IDM_CTX_ICONINFO        "アイコン情報(&O)"
+    IDM_CTX_FILEINFO        "ファイル情報(&N)"
+    IDM_CTX_RENAME          "名前の変更(&R)"
+    IDM_CTX_SERIESNAME      "連番で名前変更(&S)"
+    IDM_CTX_REPLACENAME     "名前の一括置換(&L)"
+    IDM_CTX_NAMECAP         "大文字小文字の一括変換(&C)"
+    IDM_CTX_CFNAMEONLY      "名前のみをコピー(&N)"
+    IDM_CTX_CFFULLPATH      "フルパス名をコピー(&F)"
+    IDM_CTX_CFDOSNAME       "フルパス名を短い名前でコピー(&D)"
+    IDM_CTX_REMOVEJUNCTION  "リパース ポイントの削除(&J)"
+    IDM_CTX_OPENLINKTARGET  "リンク先を開く(&F)"
+    IDM_CTX_CALCHASH        "ハッシュを計算(&H)"
+    IDM_CTX_OPENJUNCTION    "リンク先を開く(&F)"
+    IDM_CTX_SHREDDER        "シュレッダ(&E)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CTX_COPYTO          "ここにFileVisorでコピー(&F)"
+    IDM_CTX_MOVETO          "ここにFileVisorで移動(&M)"
+    IDM_CTX_PACKTO          "ここに書庫を作成(&P)"
+    IDM_CTX_UNPACKTO        "ここに解凍(&E)"
+    IDM_CTX_MAKESFXTO       "ここに自己解凍形式書庫を作成(&X)"
+    IDM_CTX_UNPACKTOFOLDER  "ここにフォルダ '%s' を作成して解凍(&F)"
+    IDM_CTX_REPARSEPOINT    "ここにリパース ポイントを作成(&J)"
+    IDM_CTX_COPYTO_FLAT     "ここにFileVisorでまとめてコピー(&H)"
+    IDM_CTX_MOVETO_FLAT     "ここにFileVisorでまとめて移動(&K)"
+    IDM_CTX_ENCRYPT         "暗号化する"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_CTX_MKSYMLINK       "ここにシンボリック リンクを作成(&M)"
+    IDM_CTX_ICONPICKER      "アイコンを抽出(&I)"
+    IDM_CTX_ICONPICKTO      "アイコンをここに抽出(&I)"
+    IDM_CTX_ENCRYPTTO       "ここへ暗号化する"
+    IDM_CTX_MKSYSLINK       "ここにシステム リンクを作成(&Y)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_IMG_IMAGECONVERT    "イメージの種類やサイズを変換(&C)"
+    IDM_IMG_WEBALBUM        "WEBアルバムの作成(&W)"
+    IDM_IMG_EXIFDATE        "Exif撮影日時でファイル名を変更(&X)"
+    IDM_IMG_COPYIMAGE       "クリップボードへイメージをコピー(&B)"
+    IDM_IMG_PICKOUTTHUMB    "ファイルからサムネイル画像を抽出(&T)"
+    IDM_IMG_OPENCLIPBOARD   "クリップボードのイメージを編集(&E)"
+    IDM_IMG_SLIDESHOW       "スライド ショウ(&S)"
+    IDM_IMG_JPEG2PDF        "JpegファイルをPDF化(&P)"
+    IDM_IMG_SPLITIMAGE      "Jpegを左右に分割"
+    IDM_IMG_CONTRASTRESIZE  "コントラスト リサイズ(&R)"
+    IDM_IMG_GPS             "この場所を確認(&G)"
+    IDM_IMG_CROPIMAGE       "四辺をクロップ(&O)"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_IMG_ORI_NONE        "行=上→下、列=左→右（回転無し）"
+    IDM_IMG_ORI_FLIPX       "行=上→下、列=右→左（左右反転）"
+    IDM_IMG_ORI_ROTATE180   "行=下→上、列=右→左（180度回転）"
+    IDM_IMG_ORI_FLIPY       "行=下→上、列=左→右（上下反転）"
+    IDM_IMG_ORI_ROTATELEFTFLIPY "行=右→左、列=下→上（左90度回転して上下反転）"
+    IDM_IMG_ORI_ROTATERIGHT "行=左→右、列=下→上（右90度回転）"
+    IDM_IMG_ORI_ROTATERIGHTFLIPY "行=左→右、列=上→下（右90度回転して上下反転）"
+    IDM_IMG_ORI_ROTATELEFT  "行=右→左、列=上→下（左90度回転）"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTX_OPENBYFILEVISOR "FileVisorで開く"
+    IDS_QUERYCOPY           "選択されたオブジェクトを '%s' へコピーします。"
+    IDS_QUERYMOVE           "選択されたオブジェクトを '%s' へ移動します。"
+    IDS_COPYCAPTION         "オブジェクトの操作"
+    IDS_QUERYCOPY_FLAT      "選択されたオブジェクトを '%s' へまとめてコピーします。\n\n※階層下のすべてのファイルはフォルダ構成を無視して、\n相手先の単一のフォルダ上にまとめてコピーされます。"
+    IDS_QUERYMOVE_FLAT      "選択されたオブジェクトを '%s' へまとめて移動します。\n\n※階層下のすべてのファイルはフォルダ構成を無視して、\n相手先の単一のフォルダ上にまとめて移動されます。"
+    IDS_THUMBOUT_NOFILE     "抽出可能なサムネイル画像がありませんでした。"
+    IDS_CAPTION_IMAGETOOL   "イメージ ツール"
+    IDS_CTX_DROPTHUMBOUT    "ここにファイルからサムネイル画像を抽出(&T)"
+    IDS_QUERY_EXIFORIENTATION "画像ファイルのオリエンテーション情報を“%1”に書き換えます。"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_CTX_ENCRYPT         "暗号化する"
+    IDS_CTX_DECRYPT         "復号化して戻す"
+    IDS_CTX_DECRYPTTO       "ここへ復号化して戻す"
+    IDS_TITLE_ICONPATH      "アイコン ファイル"
+    IDS_FILTER_ICONPATH     "アイコン(*.exe; *.dll; *.ico)|*.exe;*.dll;*.ico|全てのファイル(*.*)|*.*||"
+    IDS_FILTER_ICON         "アイコン(.ico)|*.ico|全てのファイル|*.*||"
+    IDS_ADDPACK             "書庫にファイルを追加"
+    IDS_QUERY_ADDPACK       "ドロップしたファイルをこの書庫に追加しますか？"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\lsshell.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

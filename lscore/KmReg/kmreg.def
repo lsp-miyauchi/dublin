@@ -1,0 +1,23 @@
+LIBRARY         KMREG
+
+;@	DESCRIPTION     'Regnum by K.Miyauchi'
+
+EXPORTS
+				KrEncNumber					@100
+				KrEncNumberEx				@101
+				KrEncodePass				@102
+				KrEncodePassEx				@103
+				KrFV5						@104
+				KrFV5Ex						@105
+				KrFV5_Decode				@106
+				KrPX2						@110
+				KrPX2Ex						@111
+				KrFV6						@112
+				KrFV6Ex						@113
+				KrFV6_Decode				@114
+				KrDCRP						@115
+				KrDCRPEx					@116
+				KrDCRP_Decode				@117
+				KrFV7						@124
+				KrFV7Ex						@125
+				KrFV7_Decode				@126

@@ -1,0 +1,216 @@
+// lsshell.idl : lsshell の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (lsshell.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(71372505-F383-4235-B629-CA225A803952),
+	dual,
+	nonextensible,
+	helpstring("ICtx interface"),
+	pointer_default(unique)
+]
+interface ICtx : IDispatch{
+	[id(1), helpstring("")] HRESULT Setup([in] HWND hwnd);
+};
+[
+	object,
+	uuid(77AECA58-2B8B-4785-BBA0-28895B7BA78A),
+	dual,
+	nonextensible,
+	helpstring("IAddPack interface"),
+	pointer_default(unique)
+]
+interface IAddPack : IDispatch{
+};
+[
+	object,
+	uuid(171571BA-93C0-463c-9CAF-39D6C288E6FC),
+	dual,
+	nonextensible,
+	helpstring("IUnpackTo interface"),
+	pointer_default(unique)
+]
+interface IUnpackTo : IDispatch{
+};
+[
+	object,
+	uuid(60DA54A5-DC0E-4e5e-BE6E-6DC3B869E91A),
+	dual,
+	nonextensible,
+	helpstring("IPackTo interface"),
+	pointer_default(unique)
+]
+interface IPackTo : IDispatch{
+};
+[
+	object,
+	uuid(489CF064-F875-4de0-AB60-07C578281093),
+	dual,
+	nonextensible,
+	helpstring("IJunctionTo interface"),
+	pointer_default(unique)
+]
+interface IJunctionTo : IDispatch{
+};
+[
+	object,
+	uuid(214C449A-B4E7-47b1-808C-00103ACAAD11),
+	dual,
+	nonextensible,
+	helpstring("ICopyTo interface"),
+	pointer_default(unique)
+]
+interface ICopyTo : IDispatch{
+};
+[
+	object,
+	uuid(5FD66BBD-8A60-4528-B767-34C943FB1C54),
+	dual,
+	nonextensible,
+	helpstring("IThumbOutTo interface"),
+	pointer_default(unique)
+]
+interface IThumbOutTo : IDispatch{
+};
+[
+	object,
+	uuid(10390866-B8B4-442b-AC14-7DED4F5FAAB4),
+	dual,
+	nonextensible,
+	helpstring("IExifProp interfcace"),
+	pointer_default(unique)
+]
+interface IExifProp : IDispatch{
+};
+[
+	object,
+	uuid(2D3143EC-66B4-4cf4-BFE8-CB684BDBA8D3),
+	dual,
+	nonextensible,
+	helpstring("IImageTools interface"),
+	pointer_default(unique)
+]
+interface IImageTools : IDispatch{
+};
+[
+	object,
+	uuid(034C8401-6DE8-4860-9AD3-64EA29207AD1),
+	dual,
+	nonextensible,
+	helpstring("ILSDecrypt interface"),
+	pointer_default(unique)
+]
+interface ILSDecrypt : IDispatch{
+};
+[
+	object,
+	uuid(C6E2709B-4D74-4858-A7A6-F72641175DB1),
+	dual,
+	nonextensible,
+	helpstring("IIconProp interfcace"),
+	pointer_default(unique)
+]
+interface IIconProp : IDispatch{
+};
+[
+	uuid(5FEEC475-E915-4a2f-A884-370B801BD620),
+	version(1.0),
+	helpstring("lsshell 1.0 typelibrary")
+]
+library lsshellLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(780EFFA6-4713-46af-81C5-F8175CECA7E6),
+		helpstring("lsshell Ctx")
+	]
+	coclass Ctx
+	{
+		[default] interface ICtx;
+	};
+	[
+		uuid(64ED5462-E22D-4571-A9CD-32106B3DDB0B),
+		helpstring("lsshell AddPack")
+	]
+	coclass AddPack
+	{
+		[default] interface IAddPack;
+	};
+	[
+		uuid(4E44D5AF-74F2-411b-BD6D-42FCE8FE6118),
+		helpstring("lsshell UnpackTo")
+	]
+	coclass UnpackTo
+	{
+		[default] interface IUnpackTo;
+	};
+	[
+		uuid(40B0C175-0067-483d-9CC4-84E6F0A1CBE5),
+		helpstring("lsshell PackTo")
+	]
+	coclass PackTo
+	{
+		[default] interface IPackTo;
+	};
+	[
+		uuid(4D6DA2FB-C7CD-456f-9F65-76BC785BE44E),
+		helpstring("lsshell JunctionTo")
+	]
+	coclass JunctionTo
+	{
+		[default] interface IJunctionTo;
+	};
+	[
+		uuid(08CC32C3-BC74-4a58-A12A-C5CE35F0D776),
+		helpstring("lsshell CopyTo")
+	]
+	coclass CopyTo
+	{
+		[default] interface ICopyTo;
+	};
+	[
+		uuid(223E5F3D-19A3-4115-8D7C-2B54EDF342BE),
+		helpstring("lsshell ThumbOutTo")
+	]
+	coclass ThumbOutTo
+	{
+		[default] interface IThumbOutTo;
+	};
+	[
+		uuid(9DD03945-FF1B-4cbd-A966-504F3C3B106C),
+		helpstring("lsshell ExifProp")
+	]
+	coclass ExifProp
+	{
+		[default] interface IExifProp;
+	};
+	[
+		uuid(619FF244-765F-485d-8C22-DE469C8859DD),
+		helpstring("lsshell ImageTools")
+	]
+	coclass ImageTools
+	{
+		[default] interface IImageTools;
+	};
+	[
+		uuid(E280CDF8-E836-45C2-9C54-0981E973B8DA)
+	]
+	coclass LSDecrypt
+	{
+		[default] interface ILSDecrypt;
+	};
+	[
+		uuid(DD03A606-C195-4229-B9CA-1613A4C5DE58),
+		helpstring("lsshell IconProp")
+	]
+	coclass IconProp
+	{
+		[default] interface IIconProp;
+	};
+};

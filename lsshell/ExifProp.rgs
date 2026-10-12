@@ -1,0 +1,35 @@
+HKCR
+{
+	ForceRemove lsshell.ExifProp.1 = s 'lsshell ExifProp'
+	{
+		CLSID = s '{9DD03945-FF1B-4cbd-A966-504F3C3B106C}'
+	}
+	ForceRemove lsshell.ExifProp = s 'lsshell ExifProp'
+	{
+		CLSID = s '{9DD03945-FF1B-4cbd-A966-504F3C3B106C}'
+		CurVer = s 'lsshell.ExifProp.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9DD03945-FF1B-4cbd-A966-504F3C3B106C} = s 'lsshell ExifProp'
+		{
+			ProgID = s 'lsshell.ExifProp.1'
+			VersionIndependentProgID = s 'lsshell.ExifProp'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove *
+	{
+		NoRemove Shellex
+		{
+			NoRemove PropertySheetHandlers
+			{
+				ForceRemove lssExifProp = s '{9DD03945-FF1B-4cbd-A966-504F3C3B106C}'
+			}
+		}
+	}
+}

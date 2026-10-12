@@ -1,0 +1,18 @@
+//
+// BJED.RC2 - このリソースは Microsoft Visual C++ で直接編集することはできません
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 独自にリソースを編集する場合はこの場所に追加してください...
+
+IDB_TOOLBAR_S           RCDATA                  "res\\toolbar20_32bpp.png"
+IDB_TOOLBAR_M           RCDATA                  "res\\toolbar24_32bpp.png"
+IDB_APPICON_S           RCDATA                  "res\\vwhex-binedit-20.png"
+IDB_APPICON_M           RCDATA                  "res\\vwhex-binedit-24.png"
+
+/////////////////////////////////////////////////////////////////////////////

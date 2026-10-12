@@ -1,0 +1,44 @@
+// lsfop.idl : lsfop の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (lsfop.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(8C51DB8F-392C-4FE8-A93B-B91AE9129D81),
+	dual,
+	nonextensible,
+	helpstring("ILSFileOperation interface"),
+	pointer_default(unique)
+]
+interface ILSFileOperation : IDispatch{
+	[id(1), helpstring("")] HRESULT FileCopy([in] HWND hwnd, [in] LPCWSTR pszSrc, [in] LPCWSTR pszDst, [in] BOOL bCopy);
+	[id(2), helpstring("")] HRESULT DropFileOperation([in] HWND hwnd, [in] HGLOBAL hdrop, [in] DWORD eff, [in] LPCWSTR pszDst, [in] BOOL bSaveFolderHierarchy);
+	[id(3), helpstring("")] HRESULT MakeTree([in] LPCWSTR pszDir);
+	[id(4), helpstring("")] HRESULT MakeTaskJob([in] HWND hwnd, [in] LPCWSTR pszSyncFile);
+	[id(5), helpstring("")] HRESULT MakeSymLink([in] HWND hwnd, [in] LPCWSTR lpTarget, [in] LPCWSTR lpSrc);
+	[id(6), helpstring("")] HRESULT FileCopyEx([in] LPARAM param);
+	[id(7), helpstring("")] HRESULT DropFileOperationEx([in] LPARAM param);
+	[id(8), helpstring("")] HRESULT MakeSymLinkUI([in] HWND hwnd, [in] LPCWSTR lpSymlinkBase, [in] LPCWSTR lpTargetFileName);
+};
+[
+	uuid(E827B18B-C3A7-4CBD-8F33-19F2D1321B0B),
+	version(1.0),
+	helpstring("lsfop 1.0 typelibrary")
+]
+library lsfopLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(31EB20AB-9F41-42D9-8A00-CDCB43F9A56F),
+		helpstring("LSFileOperation Class")
+	]
+	coclass LSFileOperation
+	{
+		[default] interface ILSFileOperation;
+	};
+};

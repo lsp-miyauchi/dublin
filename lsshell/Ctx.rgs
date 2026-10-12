@@ -1,0 +1,55 @@
+HKCR
+{
+	ForceRemove lsshell.Ctx.1 = s 'lsshell Ctx'
+	{
+		CLSID = s '{780EFFA6-4713-46af-81C5-F8175CECA7E6}'
+	}
+	ForceRemove lsshell.Ctx = s 'lsshell Ctx'
+	{
+		CLSID = s '{780EFFA6-4713-46af-81C5-F8175CECA7E6}'
+		CurVer = s 'lsshell.Ctx.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {780EFFA6-4713-46af-81C5-F8175CECA7E6} = s 'lsshell Ctx'
+		{
+			ProgID = s 'lsshell.Ctx.1'
+			VersionIndependentProgID = s 'lsshell.Ctx'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove *
+	{
+		NoRemove Shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove lssCtx = s '{780EFFA6-4713-46af-81C5-F8175CECA7E6}'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove lssCtx = s '{780EFFA6-4713-46af-81C5-F8175CECA7E6}'
+			}
+		}
+	}
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove lssCtx = s '{780EFFA6-4713-46af-81C5-F8175CECA7E6}'
+			}
+		}
+	}
+}

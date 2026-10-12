@@ -1,0 +1,328 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "123                     RT_MANIFEST             ""res\\\\dll.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,1
+ PRODUCTVERSION 7,4,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software"
+            VALUE "FileDescription", "Drive Media Library for Windows"
+            VALUE "FileVersion", "7.4.0.1"
+            VALUE "InternalName", "lsmedia"
+            VALUE "LegalCopyright", "(C)K.Miyauchi 1996-2022 All rights reserved."
+            VALUE "OriginalFilename", "lsmedia.dll"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAKEIMAGE DIALOGEX 0, 0, 262, 107
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ディスクイメージの作成"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            IDI_MAKEIMAGE,IDC_STATIC,6,6,20,20
+    LTEXT           "フロッピーディスクのディスクイメージを作成します。",IDC_STATIC,36,12,165,8
+    LTEXT           "対象のドライブ(&D):",IDC_STATIC,6,41,61,8
+    COMBOBOX        IDC_LIST,75,39,165,53,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "作成ファイル名(&F):",IDC_STATIC,6,58,61,8
+    EDITTEXT        IDC_EDIT,75,56,149,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_BROWSE,"LSCFlatButton",WS_TABSTOP | 0x1,227,56,14,14
+    DEFPUSHBUTTON   "OK",IDOK,73,87,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,141,86,50,14
+END
+
+IDD_MEDIAINFO DIALOGEX 0, 0, 206, 139
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "メディア情報"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "ドライブ %c: の詳細",IDC_DRIVEGROUP,6,6,194,104
+    LTEXT           "タイプ:",IDC_STATIC,12,20,70,8
+    RTEXT           "",IDC_MEDIATYPE,58,20,81,8
+    LTEXT           "シリンダ数:",IDC_STATIC,12,30,70,8
+    RTEXT           "",IDC_CYLINDER,88,30,70,8
+    LTEXT           "シリンダ",IDC_STATIC,163,30,30,8
+    LTEXT           "トラック数／シリンダ:",IDC_STATIC,12,40,70,8
+    RTEXT           "",IDC_TRACK,88,40,70,8
+    LTEXT           "トラック",IDC_STATIC,163,40,30,8
+    LTEXT           "セクタ数／トラック:",IDC_STATIC,12,50,70,8
+    RTEXT           "",IDC_SECTOR,88,50,70,8
+    LTEXT           "セクタ",IDC_STATIC,163,50,30,8
+    LTEXT           "バイト数／セクタ:",IDC_STATIC,12,60,70,8
+    RTEXT           "",IDC_BYTE,88,60,70,8
+    LTEXT           "バイト",IDC_STATIC,163,60,30,8
+    LTEXT           "サポート・ジオメトリ:",IDC_STATIC,12,76,66,8
+    LISTBOX         IDC_GEOMETRY,81,76,109,32,WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "閉じる",IDCANCEL,150,119,50,14
+END
+
+IDD_RESTOREIMAGE DIALOGEX 0, 0, 259, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ディスクイメージの復元"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            IDI_RESTORE,IDC_STATIC,6,6,20,20
+    LTEXT           "ディスクイメージをフロッピーディスクへ復元します。",IDC_STATIC,34,12,162,8
+    LTEXT           "ファイル名(&F):",IDC_STATIC,6,36,54,8
+    EDITTEXT        IDC_EDIT,75,34,159,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_BROWSE,"LSCFlatButton",WS_TABSTOP | 0x1,237,33,15,14
+    LTEXT           "復元先ドライブ(&D):",IDC_STATIC,6,54,60,8
+    COMBOBOX        IDC_LIST,75,52,178,53,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "メディアのタイプ",IDC_STATIC,6,76,247,41,WS_GROUP
+    LTEXT           "イメージのタイプ:",IDC_STATIC,15,91,64,8
+    LTEXT           "",IDC_SRCPROP,92,91,151,8
+    LTEXT           "フロッピーのタイプ:",IDC_STATIC,15,101,64,8
+    LTEXT           "",IDC_DSTPROP,92,101,151,8
+    GROUPBOX        "設定",IDC_STATIC,6,124,247,68
+    CONTROL         "イメージに合わせて再フォーマットし、復元する(&F)",IDC_DOFORMAT,"Button",BS_AUTORADIOBUTTON,14,138,181,10
+    CONTROL         "フォーマットは省略して復元する(&D)",IDC_NOTFORMAT,"Button",BS_AUTORADIOBUTTON,14,149,132,11
+    LTEXT           "作成する枚数:",IDC_STATIC,76,171,61,8
+    EDITTEXT        IDC_NUMBER,147,169,55,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,191,169,9,14
+    DEFPUSHBUTTON   "OK",IDOK,69,206,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,139,206,50,14
+END
+
+IDD_RELAY DIALOGEX 0, 0, 199, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_ANIM,"LSCAniImage",WS_TABSTOP,6,6,33,36
+    LTEXT           "",IDC_TEXT,42,6,151,35
+    CONTROL         "",IDC_METER,"msctls_progress32",0x0,6,46,187,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,74,66,50,14
+END
+
+IDD_CHKDSK DIALOGEX 0, 0, 292, 222
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "チェックディスク"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    ICON            IDI_CHKDSK,IDC_STATIC,7,7,21,20
+    LTEXT           "ディスクボリュームのエラーをチェックします。",IDC_STATIC,33,13,137,8
+    LTEXT           "対象ドライブ(&D):",IDC_STATIC,7,32,55,8
+    COMBOBOX        IDC_COMBO,66,31,150,131,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "オプション",IDC_GROUP_STATIC,7,47,278,42
+    CONTROL         "ファイルシステムエラーを自動的に修復する(&A)",IDC_FIX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,59,184,10
+    CONTROL         "不良セクタを検索し、読込み可能な情報を回復する(&R)",IDC_RECOVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,72,190,10
+    CONTROL         "",IDC_METER,"msctls_progress32",0x0,7,93,278,10
+    DEFPUSHBUTTON   "開始",IDOK,176,201,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,235,201,50,14
+    CONTROL         "",IDC_TEXT,"LSCLog",WS_TABSTOP,7,106,278,89,WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FORMAT              BITMAP                  "res\\format.bmp"
+IDB_MAKEIMAGE           BITMAP                  "res\\mkimage.bmp"
+IDB_XP_MAKEIMAGE        BITMAP                  "res\\xp_mkimage.bmp"
+IDB_RESTOREIMAGE        BITMAP                  "res\\rsimage.bmp"
+IDB_XP_RESTOREIMAGE     BITMAP                  "res\\xp_rsimage.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MAKEIMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 256
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 101
+    END
+
+    IDD_MEDIAINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 200
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_RESTOREIMAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 253
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_RELAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 193
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_CHKDSK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAKEIMAGE           ICON                    "res\\mkimg.ico"
+IDI_RESTORE             ICON                    "res\\restrimg.ico"
+IDI_CHKDSK              ICON                    "res\\chkdsk.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_UNKNOWNMEDIA        "不明"
+    IDS_F5_1PT2_512         "5.25"" 1.2MB"
+    IDS_F3_1PT44_512        "3.5"" 1.44MB"
+    IDS_F3_2PT88_512        "3.5"" 2.88MB"
+    IDS_F3_20PT8_512        "3.5"" 20.8MB"
+    IDS_F3_720_512          "3.5"" 720KB"
+    IDS_F5_360_512          "5.25"" 360KB"
+    IDS_F5_320_512          "5.25"" 320KB"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_F5_320_1024         "5.25"" 320KB"
+    IDS_F5_180_512          "5.25"" 180KB"
+    IDS_F5_160_512          "5.25"" 160KB"
+    IDS_REMOVABLEMEDIA      "取外し可能メディア"
+    IDS_FIXEDMEDIA          "ハードディスク"
+    IDS_NOREMOVABLE_DISK    "取り外し可能メディアが見つかりません。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TITLE_BROWSEFOLDER  "希望するフォルダを選択してOKボタンを押下します."
+    IDS_TITLE_MAKEIMAGE     "ディスクイメージの作成"
+    IDS_TITLE_RESTOREIMAGE  "ディスクイメージの復元"
+    IDS_TITLE_CHKDSK        "チェックディスク"
+    IDS_TITLE_FORMATFD      "フロッピーディスクのフォーマット"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TEXT_MAKEIMAGE      "イメージデータを書き出しています..\n\n  %1 から\n  %2 へ."
+    IDS_TEXT_RESTOREIMAGE   "イメージデータを復元しています...\n\n  %1 から\n  %2 へ"
+    IDS_TEXT_FORMATFD       "フォーマットしています..."
+    IDS_MEDIA_NOT_MATCHED   "メディアタイプが異なります。\nイメージの復元はできません。"
+    IDS_NEXT_MEDIA          "イメージの復元が終了しました。\n\n次のメディアを %1 にセットしてください。"
+    IDS_ERR_DRIVESHARE      "ドライブ %1 への排他アクセス権を取得できないため、操作を実行できません。"
+    IDS_ERR_VOLUMEINFO      "ドライブ %1 のボリューム情報を取得できません。"
+    IDS_ERR_CHKDSK          "ドライブ %1 のチェックディスクは完了していません。"
+    IDS_OK_CHKDSK           "ドライブ %1 のチェックディスクが完了しました。"
+    IDS_FILESYSTEM          "%c: のファイルシステムは %s です。"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+123                     RT_MANIFEST             "res\\dll.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

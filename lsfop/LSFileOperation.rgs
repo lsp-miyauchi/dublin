@@ -1,0 +1,32 @@
+HKCR
+{
+	lsfop.LSFileOperation.1 = s 'LSFileOperation Class'
+	{
+		CLSID = s '{31EB20AB-9F41-42D9-8A00-CDCB43F9A56F}'
+	}
+	lsfop.LSFileOperation = s 'LSFileOperation Class'
+	{
+		CLSID = s '{31EB20AB-9F41-42D9-8A00-CDCB43F9A56F}'
+		CurVer = s 'lsfop.LSFileOperation.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {31EB20AB-9F41-42D9-8A00-CDCB43F9A56F} = s 'LSFileOperation Class'
+		{
+			ProgID = s 'lsfop.LSFileOperation.1'
+			VersionIndependentProgID = s 'lsfop.LSFileOperation'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			val LocalizedString = s '@%MODULE%,-13'
+			Elevation
+			{
+				val IconReference = s '@%MODULE%,-462'
+				val Enabled = d '1'
+			}
+		}
+	}
+}

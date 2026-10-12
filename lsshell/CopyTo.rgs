@@ -1,0 +1,45 @@
+HKCR
+{
+	ForceRemove lsshell.CopyTo.1 = s 'lsshell CopyTo'
+	{
+		CLSID = s '{08CC32C3-BC74-4a58-A12A-C5CE35F0D776}'
+	}
+	ForceRemove lsshell.CopyTo = s 'lsshell CopyTo'
+	{
+		CLSID = s '{08CC32C3-BC74-4a58-A12A-C5CE35F0D776}'
+		CurVer = s 'lsshell.CopyTo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {08CC32C3-BC74-4a58-A12A-C5CE35F0D776} = s 'lsshell CopyTo'
+		{
+			ProgID = s 'lsshell.CopyTo.1'
+			VersionIndependentProgID = s 'lsshell.CopyTo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssCopyTo = s '{08CC32C3-BC74-4a58-A12A-C5CE35F0D776}'
+			}
+		}
+	}
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssCopyTo = s '{08CC32C3-BC74-4a58-A12A-C5CE35F0D776}'
+			}
+		}
+	}
+}

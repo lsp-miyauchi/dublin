@@ -1,0 +1,55 @@
+HKCR
+{
+	ForceRemove lsshell.UnpackTo.1 = s 'lsshell UnpackTo'
+	{
+		CLSID = s '{4E44D5AF-74F2-411b-BD6D-42FCE8FE6118}'
+	}
+	ForceRemove lsshell.UnpackTo = s 'lsshell UnpackTo'
+	{
+		CLSID = s '{4E44D5AF-74F2-411b-BD6D-42FCE8FE6118}'
+		CurVer = s 'lsshell.UnpackTo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4E44D5AF-74F2-411b-BD6D-42FCE8FE6118} = s 'lsshell UnpackTo'
+		{
+			ProgID = s 'lsshell.UnpackTo.1'
+			VersionIndependentProgID = s 'lsshell.UnpackTo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssUnpackTo = s '{4E44D5AF-74F2-411b-BD6D-42FCE8FE6118}'
+			}
+		}
+    }
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssUnpackTo = s '{4E44D5AF-74F2-411b-BD6D-42FCE8FE6118}'
+			}
+		}
+	}
+	NoRemove Folder
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssUnpackTo = s '{4E44D5AF-74F2-411b-BD6D-42FCE8FE6118}'
+			}
+		}
+	}
+}

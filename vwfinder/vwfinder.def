@@ -1,0 +1,7 @@
+; vwfinder.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "vwfinder"
+
+EXPORTS
+		finderRun					@11
+		finderRunW					@12

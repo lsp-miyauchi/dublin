@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="about.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="accel2menu.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="alphablend.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="AniImage.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="calc_md5.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="calc_sha1.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="calc_sha256.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="checkbutton.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="checktreeview.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="colored_progressbar.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="colorpick.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="colorpop.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="crc32.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="ctxwnd.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="degree.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dlview.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="drawmenu.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="droptarget.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="exeimage.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="flatbutton.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="fontpick.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="gifload.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="gradedit.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="grayedbmp.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="header_ctrl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="idlistpick.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="imagelist_sup.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="infobar.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="insertdlg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="kmbtn.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Kmnet.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="LedClock.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="listctl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="logctl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lscore.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="meter.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mfmem.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mrulist.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="pal.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="path.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Pidl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="pophint.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="prglist.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="reg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="regexp.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_loader.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="searchpath.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="shade.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="shellnotify.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="shutdown.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="slider.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="tab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="tab_ex.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="theme_sup.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="tipedit.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="trackbar.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="url.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="version.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="zoomview.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="foldertree.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="splitter.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="cdll.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="chartype.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="checktreeview.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="colortable.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="crctable.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="degree.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="dib.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="dlview.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="droptarget.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="findfile.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="folderitem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="foldertree.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="gdiplus_sup.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="gradedit.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="idlist.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_animationimagectrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_checktreeviewctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_coloredprogressctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_degreectrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_dlview.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_foldertreectrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_fontpickerctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_rectctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_searchpathctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_sliderctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_splitterctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_tabctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_trackctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lcc_include_zoomviewctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lccctrls.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lsarctype.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lscore.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="menubar.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mfmem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mrulist.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="picker.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="pidl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="range.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="rangebar.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="regapp.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="scrollwindow.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sharedmem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="shellnotify.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="slider.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="spin_sup.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="staticctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="tabctrl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="taskbarlist.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="tbb_customdraw.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="trackbar.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="zoomview.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="buttonframe.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="hue-saturation.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\check.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\check2.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\check3.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\dot_color.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\dropshadow_parts 5x5 topbottom.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\Dummy.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\fbibrows.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\fbicolor.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\fbifoldr256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\fbihelp.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\fbihint.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\Fntbrws.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\fontbrowse.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\graditem.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\hand.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\handcls.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\handopn.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\insert.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\led.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\password.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\picker_color.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\picker_color_viena.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\picker_folder.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\picker_folder_viena.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\picker_font.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\picker_font_viena.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\prgstat256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\rgb.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\signal256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\slider_back.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\slider_thumb.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\tabclose.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\trackball256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\trackbill256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\trackbtn256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\trackrect256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\tracktri256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\treecheck256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\Updir.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\viena_treecheck.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_check2.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_check3.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_color.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_folder.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_folderbrowse.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_fontbrowse.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_help2.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_help4.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_rgb.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_signal.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_slider_back.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_slider_thumb.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="RES\xp_slider_thumb02.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_trackball.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_trackbill.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_trackbtn.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_trackrect.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_tracktri.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\xp_treecheck.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\zoomin.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="Res\zoomout.cur">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="lscore.def">
+      <Filter>ソース ファイル</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="lscore.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\fbi-help_32bpp.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="res\fbi-browse_32bpp.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="res\fbi-color_32bpp.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="res\fbi-hint_32bpp.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="res\fbi-folder_32bpp.bmp">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

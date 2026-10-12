@@ -1,0 +1,34 @@
+;module-definition file for Windows UnZip32 DLL -- used by link.exe
+LIBRARY LSPUZP  ; Library module name
+
+EXPORTS
+		UnZip									@1
+		UnZipGetVersion							@2
+		UnZipGetCursorInterval					@3
+		UnZipSetCursorInterval					@4
+		UnZipGetBackGroundMode					@5
+		UnZipSetBackGroundMode					@6
+		UnZipGetCursorMode						@7
+		UnZipSetCursorMode						@8
+		UnZipGetRunning							@10
+		UnZipCheckArchive						@11
+		UnZipQueryFunctionList					@18
+		UnZipOpenArchive						@21
+		UnZipCloseArchive						@22
+		UnZipFindFirst							@23
+		UnZipFindNext							@24
+		UnZipGetOriginalSize					@41
+		UnZipGetCompressedSize					@42
+		UnZipGetRatio							@43
+		UnZipGetDate							@44
+		UnZipGetTime							@45
+		UnZipGetCRC								@46
+		UnZipGetAttribute						@47
+		UnZipGetWriteTime						@62
+		UnZipGetCreateTime						@63
+		UnZipGetAccessTime						@64
+		UnZipGetWriteTimeEx						@65
+		UnZipGetCreateTimeEx					@66
+		UnZipGetAccessTimeEx					@67
+		UnZipLocked								@100
+		DllGetFunctionPrefix					@101

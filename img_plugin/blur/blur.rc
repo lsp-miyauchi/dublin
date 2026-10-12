@@ -1,0 +1,269 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\rcdata.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,10
+ PRODUCTVERSION 7,4,0,10
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "blur plug-in"
+            VALUE "FileVersion", "7.4.0.10"
+            VALUE "InternalName", "blur"
+            VALUE "OriginalFilename", "blur.dll"
+            VALUE "ProductVersion", "7.4.0.10"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SINGLEWORKS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 261
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_BLUR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_BLURGAUSS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_BLURGAUSS_SEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_BLUR_LD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 206
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_UNSHARP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 325
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 115
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SINGLEWORKS DIALOGEX 0, 0, 268, 243
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SINGLEWORKS"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "",IDC_ASLIDER,"LSCTrack",WS_TABSTOP,7,142,187,11
+    CONTROL         "",IDC_BSLIDER,"LSCTrack",WS_TABSTOP,7,154,187,11
+    CONTROL         "",IDC_CSLIDER,"LSCTrack",WS_TABSTOP,7,166,187,11
+    CONTROL         "",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,7,178,187,11
+    CONTROL         "",IDC_ESLIDER,"LSCTrack",WS_TABSTOP,7,190,187,11
+    CONTROL         "",IDC_FSLIDER,"LSCTrack",WS_TABSTOP,7,202,187,11
+    CONTROL         "",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,7,214,187,11
+    CONTROL         "",IDC_HSLIDER,"LSCTrack",WS_TABSTOP,7,226,187,11
+    DEFPUSHBUTTON   "OK",IDOK,205,7,56,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,205,27,56,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,187,129,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "リセット(&R)",IDC_RESET,205,60,56,14
+    CONTROL         "全体表示(&W)",IDC_WHOLEVIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,127,60,10
+END
+
+IDD_BLUR DIALOGEX 0, 0, 203, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ぼかし"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "半径(&R)",IDC_SLIDER,"LSCTrack",WS_TABSTOP,7,120,132,11
+    DEFPUSHBUTTON   "OK",IDOK,147,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,147,25,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,132,110,WS_EX_CLIENTEDGE
+END
+
+IDD_BLURGAUSS DIALOGEX 0, 0, 255, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ぼかし（ガウス）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "横方向(&X)",IDC_HSLIDER,"LSCTrack",WS_TABSTOP,144,7,105,10
+    CONTROL         "縦方向(&Y)",IDC_VSLIDER,"LSCTrack",WS_TABSTOP,144,18,105,10
+    DEFPUSHBUTTON   "OK",IDOK,143,113,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,199,113,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,127,120,WS_EX_CLIENTEDGE
+END
+
+IDD_BLURGAUSS_SEL DIALOGEX 0, 0, 255, 134
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ぼかし（選択的ガウス）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "半径(&R)",IDC_RSLIDER,"LSCTrack",WS_TABSTOP,144,7,105,10
+    CONTROL         "しきい値",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,144,18,105,10
+    DEFPUSHBUTTON   "OK",IDOK,143,113,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,199,113,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,127,120,WS_EX_CLIENTEDGE
+END
+
+IDD_BLUR_LD DIALOGEX 0, 0, 212, 151
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ぼかし（明暗）"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "半径(&R)",IDC_SLIDER,"LSCTrack",WS_TABSTOP,7,135,141,11
+    GROUPBOX        "タイプ",IDC_STATIC,156,71,50,56
+    CONTROL         "明るさ(&L)",IDC_LIGHTEN,"Button",BS_AUTORADIOBUTTON,162,89,41,10
+    CONTROL         "暗さ(&D)",IDC_DARKEN,"Button",BS_AUTORADIOBUTTON,162,104,37,10
+    DEFPUSHBUTTON   "OK",IDOK,156,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,156,25,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,141,125,WS_EX_CLIENTEDGE
+END
+
+IDD_SHARPEN DIALOGEX 0, 0, 203, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "シャープに"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "レベル(&L)",IDC_SLIDER,"LSCTrack",WS_TABSTOP,7,120,132,11
+    DEFPUSHBUTTON   "OK",IDOK,147,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,147,25,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,132,110,WS_EX_CLIENTEDGE
+END
+
+IDD_UNSHARP DIALOGEX 0, 0, 332, 122
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "アンシャープマスク"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    CONTROL         "半径(&R)",IDC_RSLIDER,"LSCTrack",WS_TABSTOP,160,7,165,11
+    CONTROL         "適用度(&A)",IDC_ASLIDER,"LSCTrack",WS_TABSTOP,160,19,165,11
+    CONTROL         "しきい値(&T)",IDC_TSLIDER,"LSCTrack",WS_TABSTOP,160,31,165,11
+    DEFPUSHBUTTON   "OK",IDOK,220,101,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,275,101,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,144,108,WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_QUERYRESET          "設定値をすべてリセットしますか？\n\n「はい」を選択するとすべてのマジックをリセットします。\n「いいえ」を選択すると現在のマジックのみリセットします。\n「キャンセル」を選択するとリセットはおこなわれません。\n"
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\rcdata.rc2"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

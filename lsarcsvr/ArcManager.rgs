@@ -1,0 +1,25 @@
+HKCR
+{
+	lsarcsvr.ArcManager.1 = s 'ArcManager Class'
+	{
+		CLSID = s '{E51300C0-DF07-4ED4-B629-2F3458A38496}'
+	}
+	lsarcsvr.ArcManager = s 'ArcManager Class'
+	{
+		CLSID = s '{E51300C0-DF07-4ED4-B629-2F3458A38496}'
+		CurVer = s 'lsarcsvr.ArcManager.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E51300C0-DF07-4ED4-B629-2F3458A38496} = s 'ArcManager Class'
+		{
+			ProgID = s 'lsarcsvr.ArcManager.1'
+			VersionIndependentProgID = s 'lsarcsvr.ArcManager'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+}

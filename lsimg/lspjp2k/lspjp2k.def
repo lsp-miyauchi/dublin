@@ -1,0 +1,10 @@
+LIBRARY		LSPJP2K
+EXPORTS
+			jp2_load							@100
+			jp2_save							@101
+			jp2_save_ex							@102
+			jp2_load_mem						@103
+			jp2_save_mem_ex						@104
+			jp2_loadW							@110
+			jp2_saveW							@111
+			jp2_save_exW						@112

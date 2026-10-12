@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="vwarchive">
+</Property><Property Name="ソリューション ファイル" Value="E:\VIENA7\vwarchive\vwarchive.sln">
+</Property><Property Name="Date" Value="2010年7月15日">
+</Property><Property Name="Time" Value="13:47">
+</Property></Properties><Event ErrorLevel="0" Project="vwarchive" Source="vwarchive.vcproj" Description="Converting project file 'E:\VIENA7\vwarchive\vwarchive.vcproj'.">
+</Event><Event ErrorLevel="1" Project="vwarchive" Source="vwarchive.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="vwarchive" Source="vwarchive.vcproj" Description="Done converting to new project file 'E:\VIENA7\vwarchive\vwarchive.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="vwarchive" Source="vwarchive.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="arcman" Source="arcman\arcman.vcproj" Description="Converting project file 'E:\VIENA7\vwarchive\arcman\arcman.vcproj'.">
+</Event><Event ErrorLevel="1" Project="arcman" Source="arcman\arcman.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="arcman" Source="arcman\arcman.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="arcman" Source="arcman\arcman.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="arcman" Source="arcman\arcman.vcproj" Description="MSB8012: $(TargetPath) ('E:\VIENA7\vwarchive\arcman\Release\Win32\arcman.exe') does not match the Linker's OutputFile property value 'Release\Win32\arcman.exe' ('E:\VIENA7\vwarchive\Release\Win32\arcman.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="arcman" Source="arcman\arcman.vcproj" Description="MSB8012: $(TargetPath) ('E:\VIENA7\vwarchive\arcman\Release\x64\arcman.exe') does not match the Linker's OutputFile property value 'Release\x64\arcman.exe' ('E:\VIENA7\vwarchive\Release\x64\arcman.exe') in project configuration 'Release|x64'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="arcman" Source="arcman\arcman.vcproj" Description="Done converting to new project file 'E:\VIENA7\vwarchive\arcman\arcman.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="arcman" Source="arcman\arcman.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="vwarchive.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="vwarchive.sln" Description="Converted">
+</Event></UpgradeLog>

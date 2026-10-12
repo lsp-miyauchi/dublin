@@ -1,0 +1,137 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\empty.ico"
+IDI_SEARCH              ICON                    "..\\vwfinder\\res\\vwfinder.ico"
+IDI_IMAGE               ICON                    "..\\vwimager\\res\\vwimage-viewer.ico"
+IDI_ARCHIVE             ICON                    "..\\vwarchive\\res\\archive.ico"
+IDI_SYNC                ICON                    "..\\lsfop\\res\\syncdir.ico"
+IDI_BDUMP               ICON                    "..\\vwhexedit\\res\\vwhex-binedit.ico"
+IDI_EDIT                ICON                    "..\\vwtxtedit\\res\\vwtext-edit.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "DLL Executor"
+    IDS_NOFUNCTION          "エントリポイント %s がライブラリから見つかりません。"
+    IDS_INITFAILED          "初期化に失敗しました。"
+    IDS_CANNOTLOAD          "%s\n\nライブラリが読み込めません。"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// ニュートラル (システム標準) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(932)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,2
+ PRODUCTVERSION 7,4,0,2
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080004b0"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software"
+            VALUE "FileDescription", "DLL Executer"
+            VALUE "FileVersion", "7.4.0.2"
+            VALUE "InternalName", "execdll"
+            VALUE "LegalCopyright", "(C)LightShip Software Inc. 2006-2022 All rights reserved."
+            VALUE "OriginalFilename", "execdll.exe"
+            VALUE "ProductName", "DLL Executer"
+            VALUE "ProductVersion", "7.4.0.2"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 1200
+    END
+END
+
+#endif    // ニュートラル (システム標準) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (米国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英語 (米国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

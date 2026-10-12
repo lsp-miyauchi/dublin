@@ -1,0 +1,302 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\lscore.rc2""\r\n"
+    "//123                     RT_MANIFEST             ""res\\\\dll.manifest""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,1,262
+ PRODUCTVERSION 7,4,1,262
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "Core control library for LightShip"
+            VALUE "FileVersion", "7.4.1.262"
+            VALUE "InternalName", "lscore"
+            VALUE "LegalCopyright", "(C)K.Miyauchi 2001-2024 All rights reserved."
+            VALUE "OriginalName", "lscore.dll"
+            VALUE "ProductName", "Core control library for LightShip"
+            VALUE "ProductVersion", "7.4.1.262"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IC_HAND                 CURSOR                  "RES\\hand.cur"
+
+IC_ZOOMIN               CURSOR                  "RES\\zoomin.cur"
+
+IC_ZOOMOUT              CURSOR                  "RES\\zoomout.cur"
+
+IC_HANDOPEN             CURSOR                  "RES\\handopn.cur"
+
+IC_HANDCLOSE            CURSOR                  "RES\\handcls.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FBI_HELP            BITMAP                  "res\\fbi-help_32bpp.bmp"
+
+IDB_FBI_BROWSE          BITMAP                  "res\\fbi-browse_32bpp.bmp"
+
+IDB_FBI_COLOR           BITMAP                  "res\\fbi-color_32bpp.bmp"
+
+IDB_FBI_HINT            BITMAP                  "res\\fbi-hint_32bpp.bmp"
+
+IDB_FBI_FOLDER          BITMAP                  "res\\fbi-folder_32bpp.bmp"
+
+IDB_DROPSHADOW          BITMAP                  "res\\dropshadow_parts 5x5 topbottom.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TBSETUP DIALOGEX 0, 0, 303, 133
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ツールバーの変更"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "利用できるボタン(&V):",-1,7,7,96,8
+    LISTBOX         IDC_UNUSELIST,7,19,86,107,LBS_SORT | LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "追加(&A)->",IDC_ADD,101,55,46,14
+    PUSHBUTTON      "<-削除(&R)",IDC_DELETE,101,75,46,14
+    LTEXT           "ツールバーのボタン(&T):",-1,157,7,91,8
+    LISTBOX         IDC_USELIST,155,19,86,107,LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "閉じる(&C)",IDCANCEL,250,7,46,14
+    PUSHBUTTON      "リセット(&E)",IDC_RESET,250,24,46,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,250,42,46,14
+    PUSHBUTTON      "上へ(&U)",IDC_UP,250,84,46,14
+    PUSHBUTTON      "下へ(&D)",IDC_DOWN,250,102,46,14
+END
+
+IDD_COMM_FONT DIALOGEX 13, 54, 263, 267
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "フォント"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "フォント名(&F):",1088,7,7,58,9
+    COMBOBOX        1136,7,16,98,136,CBS_SIMPLE | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "スタイル(&Y):",1089,110,7,55,8
+    COMBOBOX        1137,110,16,62,65,CBS_SIMPLE | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "サイズ(&S):",1090,177,7,34,9
+    COMBOBOX        1138,177,16,27,65,CBS_SIMPLE | CBS_OWNERDRAWFIXED | CBS_SORT | CBS_HASSTRINGS | CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",1,210,16,45,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",2,210,32,45,14,WS_GROUP
+    PUSHBUTTON      "適用(&A)",1026,210,48,45,14,WS_GROUP
+    PUSHBUTTON      "ヘルプ(&H)",1038,210,64,45,14,WS_GROUP
+    GROUPBOX        "文字飾り",1072,110,114,94,37,WS_GROUP
+    CONTROL         "取消線(&K)",1040,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,130,44,10
+    CONTROL         "下線(&U)",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,116,130,37,10
+    LTEXT           "色(&C):",1091,229,84,30,9
+    COMBOBOX        1139,206,83,16,100,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "サンプル",1073,7,158,246,101,WS_GROUP
+    CTEXT           "AaBbYyZz",1092,10,168,239,85,SS_NOPREFIX | NOT WS_VISIBLE
+    LTEXT           "",1093,244,102,11,20,SS_NOPREFIX | NOT WS_GROUP
+    LTEXT           "書体の種類(&R):",1094,110,85,50,9
+    COMBOBOX        1140,110,95,94,76,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_AUTOHSCROLL | CBS_HASSTRINGS | WS_BORDER | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_COMM_COLOR DIALOGEX 2, 16, 262, 230
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "色の設定"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",710,"Static",SS_SIMPLE | SS_SUNKEN,7,7,226,125
+    CONTROL         "",702,"Static",SS_SIMPLE | SS_SUNKEN,240,7,8,125
+    CONTROL         "",709,"Static",SS_SIMPLE | SS_SUNKEN,7,146,40,26
+    RTEXT           "色",730,7,176,15,9
+    LTEXT           "| 純色(&O)",731,26,176,32,9
+    RTEXT           "色合い(&E):",723,99,144,38,9
+    EDITTEXT        703,141,142,36,14,WS_GROUP
+    CONTROL         "",IDC_HSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,168,142,10,14
+    RTEXT           "鮮やかさ(&S):",724,97,160,40,9
+    EDITTEXT        704,141,158,36,14,WS_GROUP
+    CONTROL         "",IDC_SSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,169,158,9,14
+    RTEXT           "明るさ(&L):",725,104,176,33,9
+    EDITTEXT        705,141,174,36,14,WS_GROUP
+    CONTROL         "",IDC_LSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,169,174,9,14
+    RTEXT           "赤(&R):",726,186,144,21,9
+    EDITTEXT        706,210,142,36,14,WS_GROUP
+    CONTROL         "",IDC_RSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,240,142,9,14
+    RTEXT           "緑(&G):",727,186,160,21,9
+    EDITTEXT        707,210,158,36,14,WS_GROUP
+    CONTROL         "",IDC_GSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,240,158,9,14
+    RTEXT           "青(&U):",728,186,176,21,9
+    EDITTEXT        708,210,174,36,14,WS_GROUP
+    CONTROL         "",IDC_BSPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,240,174,9,14
+    DEFPUSHBUTTON   "OK",1,75,210,50,14,WS_GROUP
+    PUSHBUTTON      "キャンセル",2,136,210,50,14,WS_GROUP
+    LTEXT           "基本色(&B):",IDC_STATIC,28,355,37,9
+    CONTROL         "",720,"Static",SS_SIMPLE | WS_GROUP | WS_TABSTOP,14,280,32,12
+    LTEXT           "作成した色(&C):",IDC_STATIC,28,355,46,9
+    CONTROL         "",721,"Static",SS_SIMPLE | WS_GROUP | WS_TABSTOP,28,299,18,15
+    PUSHBUTTON      "色の作成(&D) >>",719,79,355,10,14,WS_GROUP
+    PUSHBUTTON      "ヘルプ(&H)",1038,93,355,6,14,WS_GROUP
+    PUSHBUTTON      "o(&O)",713,21,430,9,6,WS_GROUP
+    PUSHBUTTON      "色の追加(&A)",712,256,338,6,14,WS_GROUP
+    EDITTEXT        IDC_RGBVALUE,200,191,46,14,ES_UPPERCASE
+    RTEXT           "#",IDC_STATIC,189,193,8,8
+END
+
+IDD_ABOUTBOX DIALOGEX 34, 22, 369, 178
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_ABOUTAPP,"Static",SS_OWNERDRAW,87,12,281,61
+    LTEXT           "This product is license to:",IDC_LICENSE_TITLE,88,81,94,8
+    LTEXT           "",IDC_USERNAME,88,91,271,8
+    LTEXT           "",IDC_LAW,88,117,271,31
+    DEFPUSHBUTTON   "OK",IDOK,299,157,56,14
+    CONTROL         "",IDC_SYSLINK,"SysLink",WS_TABSTOP,88,157,148,10
+    CONTROL         "",IDC_APPICON,"Static",SS_OWNERDRAW,12,12,71,61
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_TBSETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_COMM_COLOR, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 12
+        RIGHTMARGIN, 368
+        TOPMARGIN, 12
+        BOTTOMMARGIN, 171
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_CONNECT_NETWORK     "ネットワークの接続"
+    IDS_SELECTFOLDER        "フォルダを選択してください。"
+    IDS_UNDEFINED           "（未定義）"
+    IDS_LAWINFO             "※この製品は、日本国著作権法および国際条約により保護されています。この製品の全部またはその一部を無断で複製したり無断で複製物を頒布すると、著作権の侵害となりますので注意が必要です。"
+    IDS_FORMAT_MEMUSAGE     "%s (%d%%)使用"
+    IDS_FORMAT_MEMFREE      "残り%s"
+    IDS_LAWINFO_EN          "Unauthorized reproduction or distribution of this program, or any part thereof constitutes copyright infringement and may result in severe civil and criminal penalties."
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\lscore.rc2"
+//123                     RT_MANIFEST             "res\\dll.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

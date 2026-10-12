@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html><head><meta http-equiv="Content-Language" content="ja">
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+<meta name="keywords" content="アーカイバー;書庫の操作;">
+<TITLE>アーカイバー</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+<style>
+p { margin-left:1em; }
+table#arctable { margin-left:1em; border:1px solid #ccc;padding:3px; }
+table#arctable th { vertical-align:top; font-family:Helvetica; }
+table#arctable td { width:3em; text-align:center; }
+</style>
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../index.html">TOP</a> &rsaquo;
+<a href="../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="index.html">付属するツール類</a> &rsaquo;
+アーカイバー
+</div>
+<!-- 本体 -->
+<h2>アーカイバー</h2>
+<p>FileVisorには、zip/cab/7zip/tarといった書庫ファイルを開いて、
+格納されているファイルの内容を確認したり、書庫から解凍するアーカイバーが組み込まれています。</p>
+<center><img src="../images/addin_archiveview.jpg"></center>
+
+<h4>書庫ファイルを開いて書庫内容を一覧表示するには</h4>
+<p>ファイルペインで書庫ファイルを選択し、
+メニューから［<a href="../menu/tool/index.html">ツール</a>］－［<a href="../menu/tool/viewer.html">ファイル閲覧</a>］コマンド
+を実行すると、書庫ビュアが起動します。<br>
+初期設定では <kbd>V</kbd>キーにこのコマンドが割り当てられています。</p>
+
+<h4>高度な設定</h4>
+<p><a href="../setting/index.html">オプション</a>設定のタブ中に
+［<a href="../setting/op_addin.html">アドインツール</a>］の設定があります。
+この機能を利用すると、FileVisorで内蔵するアーカイバー以外のお気に入りのアプリケーションプログラムを、
+アーカイバーとして登録することが可能です。</p>
+
+<h4>アーカイバーライブラリ</h4>
+<p>FileVisorでは各種書庫ファイル（zip/cab等）の内容を表示したり解凍したりするには、
+それぞれの<font color=red>書庫に対応したライブラリが別途必要</font>ですが、
+標準で実行環境によって以下のような書庫操作を追加ライブラリなしでサポートしています。</p>
+<table id="arctable">
+	<tr><th>種別</th><th>ZIP</th><th>CAB</th><th>TAR</th><th>7zip</th><th>RAR</th><th>LZH</th><th>BGA</th><th>ISH</th><th>ARJ</th></tr>
+	<tr><th>拡張子</th><th>(zip, jar<br>xpi, war)</th><th>(cab)</th><th>(tar, tz, z<br>gz, tgz<br>bz2, deb<br>lzma, xz)</th><th>(7z)</th><th>(rar)</th><th>(lzh)</th><th>(bza, gza)</th><th>(ish)</th><th>(arj)</th></tr>
+	<tr><td>32bit</td><td>○</td><td>○</td><td>○</td><td>○</td><td>△</td><td>○</td><td>○</td><td>○</td><td>○</td></tr>
+	<tr><td>64bit</td><td>○</td><td>○</td><td>○</td><td>○</td><td>△</td><td>－</td><td>－</td><td>－</td><td>－</td></tr>
+</table>
+<p>△…解凍のみ</p>
+<p>ライブラリを入手するには
+<a href="http://www.csdinc.co.jp/archiver/" target="_blank">統合アーカイバプロジェクト</a>
+のホームページをご参照ください。</p>
+
+<div class="attn1">FileVisorは64bitネイティブアプリケーションのため、これらライブラリも<font color=red>64bit版のライブラリ</font>が必要です。
+32bit版ライブラリではモジュールを認識できません。</div>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

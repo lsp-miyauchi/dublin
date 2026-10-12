@@ -1,0 +1,20 @@
+//
+// rcdata.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDB_SHARPEN             RCDATA                  "res\\sharpen20x20.png"
+IDB_BLUR                RCDATA                  "res\\blur20x20.png"
+
+/////////////////////////////////////////////////////////////////////////////

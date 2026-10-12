@@ -1,0 +1,60 @@
+// lspexif.idl : lspexif の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (lspexif.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(53C45C07-F5F1-4773-9700-0FA3BA8D3499),
+	dual,
+	nonextensible,
+	helpstring("IExifParser interface"),
+	pointer_default(unique)
+]
+interface IExifParser : IDispatch{
+	[id(1), helpstring("method IsExifFile")] HRESULT IsExifFile([in] LPCWSTR pszFileName);
+	[id(2), helpstring("method GetExifInfo")] HRESULT GetExifInfo([in] LPCWSTR pszFileName, IStream* pStream, int* pnOrientation, BOOL bLargeImage, BYTE* pInfo);
+	[id(3), helpstring("method GetThumbsnail")] HRESULT GetThumbsnail([in] LPCWSTR pszFileName, IStream* pStream, int* pnOrientation, BOOL bLargeImage, LPWSTR pszTips, int cchMax);
+	[id(4), helpstring("method GetInfoTip")] HRESULT GetInfoTip([in] LPCWSTR pszFileName, LPWSTR pszTips, int cchMax);
+	[id(5), helpstring("method GetDateTimeString")] HRESULT GetDateTimeString([in] LPCWSTR pszFileName, LPWSTR pszDate, int cchMax);
+	[id(6), helpstring("method EnumExifInfo")] HRESULT EnumExifInfo([in] LPCWSTR pszFileName, UINT_PTR pfnCallback, LPARAM param);
+};
+[
+	object,
+	uuid(057A7B27-9C4D-4C48-82BF-8F40F04F1FA7),
+	dual,
+	nonextensible,
+	helpstring("IRawThmubnail interface"),
+	pointer_default(unique)
+]
+interface IRawThmubnail : IDispatch{
+};
+[
+	uuid(D7FC57C2-DC5B-4249-9F98-63D286F8709D),
+	version(1.0),
+	helpstring("lspexif 1.0 type library")
+]
+library LSExifLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E5B0C991-E0F9-4CC2-812A-BDE422935E0F),
+		helpstring("ExifParser Class")
+	]
+	coclass ExifParser
+	{
+		[default] interface IExifParser;
+	};
+	[
+		uuid(12524D4C-6E12-4615-987D-94BB7E1C1D8B),
+		helpstring("RawThmubnail Class")
+	]
+	coclass RawThmubnail
+	{
+		[default] interface IRawThmubnail;
+	};
+};

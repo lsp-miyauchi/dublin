@@ -1,0 +1,20 @@
+//
+// vwarc.RC2 - Microsoft Visual C++ で直接編集しないリソース 
+//
+
+#ifdef APSTUDIO_INVOKED
+#error このファイルは、Microsoft Visual C++ で編集できません。
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 手動で編集されたりソースをここに追加します...
+
+IDB_WAITMARKER              RCDATA              "res\\loading_black_48x48.png"
+IDB_TOOLBAR_S               RCDATA              "res\\toolbar20_32bpp.png"
+IDB_TOOLBAR_M               RCDATA              "res\\toolbar24_32bpp.png"
+IDB_APPICON_S               RCDATA              "res\\archive-view20x20.png"
+IDB_APPICON_m               RCDATA              "res\\archive-view24x24.png"
+IDB_LOCKED                  RCDATA              "res\\lock_32bpp.png"
+
+/////////////////////////////////////////////////////////////////////////////

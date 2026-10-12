@@ -1,0 +1,29 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\vwfinder.chm
+Default Window=main
+Default topic=search.htm
+Display compile progress=No
+Index file=vwfinder.hhk
+Language=0x411 日本語
+Title=ファイル操作
+
+[WINDOWS]
+main=,,"vwfinder.hhk","search.htm",,,,,,0x42000,,0x3006,[68,30,600,650],,,,1,,,0
+
+
+[FILES]
+search.htm
+dummy.htm
+filter.htm
+regexp.htm
+
+[ALIAS]
+IDH_D_SELFF=search.htm
+IDH_D_SEARCHSETTINGS=search.htm
+
+[MAP]
+#include html_vwfnd.h
+
+[INFOTYPES]
+

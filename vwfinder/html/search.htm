@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>ファイルを検索する</TITLE>
+<link rel=stylesheet type="text/css" href="help.css" title="style">
+</head>
+<body>
+<h2>ファイルを検索する</h2>
+<p>ドライブやフォルダからファイルを検索します。</p>
+<p>探す場所の指定は次の２通りがあります。</p>
+<ul>
+	<li>フォルダツリーから検索開始フォルダを指定して、その開始フォルダ配下を検索する<br>
+		→検索開始のルートは１つのみ指定できます。</li>
+	<li>ドライブリストの中から、１つ以上のドライブを指定して検索する<br>
+		→検索開始のルートは複数ドライブ指定可能です。</li>
+</ul>
+<div class="info1">
+	過去に検索したリストを表示・選択すると「<span style="color:#c00">&lt;設定したフィルタ&gt; - &lt;検索したフォルダ&gt;</span> 」の形式で
+	履歴が表示されます。
+	履歴から再度同じ検索をおこなう場合には、選択したリストを編集せずにそのまま検索実行できます。
+</div>
+<h4>検索の対象とするフィルタを指定する</h4>
+<ul>
+	<li>検索時に指定する<a href="filter.htm">フィルタ</a>は複数指定が可能です。</li>
+	<li>複数のフィルタを指定する場合には、各フィルタを “；”（セミコロン）で区切ってください。
+	例えば、“*.txt；*.doc” と指定した場合には、“*.txt” に一致するファイルおよび “*.doc” に一致するファイルが検索できます。</li>
+	<li>またフィルタの指定に<a href="regexp.htm">正規表現</a>が利用できますので、
+	より複雑な検索も可能です。</li>
+</ul>
+
+<h4>全てのファイルを検索する</h4>
+<ul>
+	<li>検索フィルタで指定されたフィルタに一致するファイルを検索します。</li>
+</ul>
+
+<h4>条件を満たすファイルを検索する</h4>
+<ul>
+	<p>以下の条件を指定できます。</p>
+	<li>作成または更新日時のどちらを対象として検索するかの指定</li>
+	<li>検索対象となる期間（何月何日~何月何日・過去何ヶ月間・過去何日間）の指定</li>
+	<li>検索するファイルの大きさの範囲指定（無指定・最大サイズ・最小サイズ）</li>
+	<li>指定された属性を持つファイル（指定がない場合は属性によるチェックをしない）</li>
+</ul>
+
+<h4>フィルタおよび検索条件に一致しないものを検索</h4>
+<ul>
+	<li>指定したファイルフィルタや検索条件に「<b>一致しない</b>」ファイルを検索対象とします。</li>
+</ul>
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2011 <a href="http://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

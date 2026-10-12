@@ -1,0 +1,61 @@
+//
+// texture.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+ID_TXR_01                   RCDATA              "res\\pxfa01.txr"
+ID_TXR_02                   RCDATA              "res\\pxfa02.txr"
+ID_TXR_03                   RCDATA              "res\\pxfa03.txr"
+ID_TXR_04                   RCDATA              "res\\pxfa04.txr"
+ID_TXR_05                   RCDATA              "res\\pxfa05.txr"
+ID_TXR_06                   RCDATA              "res\\pxfa06.txr"
+ID_TXR_07                   RCDATA              "res\\pxfa07.txr"
+ID_TXR_08                   RCDATA              "res\\pxfa08.txr"
+ID_TXR_09                   RCDATA              "res\\pxfa09.txr"
+ID_TXR_10                   RCDATA              "res\\pxfa10.txr"
+ID_TXR_11                   RCDATA              "res\\pxfa11.txr"
+ID_TXR_12                   RCDATA              "res\\pxfa12.txr"
+ID_TXR_13                   RCDATA              "res\\pxfa13.txr"
+ID_TXR_14                   RCDATA              "res\\pxfa14.txr"
+ID_TXR_15                   RCDATA              "res\\pxfa15.txr"
+ID_TXR_16                   RCDATA              "res\\pxfa16.txr"
+ID_TXR_17                   RCDATA              "res\\pxfa17.txr"
+ID_TXR_18                   RCDATA              "res\\pxfa18.txr"
+ID_TXR_19                   RCDATA              "res\\pxfa19.txr"
+ID_TXR_20                   RCDATA              "res\\pxfa20.txr"
+ID_TXR_21                   RCDATA              "res\\pxfa21.txr"
+ID_TXR_22                   RCDATA              "res\\pxfa22.txr"
+ID_TXR_23                   RCDATA              "res\\pxfa23.txr"
+ID_TXR_24                   RCDATA              "res\\pxfa24.txr"
+ID_TXR_25                   RCDATA              "res\\pxfa25.txr"
+ID_TXR_26                   RCDATA              "res\\pxfa26.txr"
+ID_TXR_27                   RCDATA              "res\\pxfa27.txr"
+ID_TXR_28                   RCDATA              "res\\pxfa28.txr"
+ID_TXR_29                   RCDATA              "res\\pxfa29.txr"
+ID_TXR_30                   RCDATA              "res\\pxfa30.txr"
+ID_TXR_31                   RCDATA              "res\\pxfa31.txr"
+ID_TXR_32                   RCDATA              "res\\pxfa32.txr"
+ID_TXR_33                   RCDATA              "res\\pxfa33.txr"
+ID_TXR_34                   RCDATA              "res\\pxfa34.txr"
+ID_TXR_35                   RCDATA              "res\\pxfa35.txr"
+ID_TXR_36                   RCDATA              "res\\pxfa36.txr"
+ID_TXR_37                   RCDATA              "res\\pxfa37.txr"
+ID_TXR_38                   RCDATA              "res\\pxfa38.txr"
+ID_TXR_39                   RCDATA              "res\\pxfa39.txr"
+ID_TXR_40                   RCDATA              "res\\pxfa40.txr"
+ID_TXR_41                   RCDATA              "res\\pxfa41.txr"
+ID_TXR_42                   RCDATA              "res\\pxfa42.txr"
+
+
+/////////////////////////////////////////////////////////////////////////////

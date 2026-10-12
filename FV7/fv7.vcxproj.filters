@@ -1,0 +1,996 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="xtab.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="addin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="appbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cmwnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="contextmenu_sup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="convert_setting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drgdrp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="exec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="execdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bookmark_view.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fileitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="folderitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="folderview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="funckeybar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fv7.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvmil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvnet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvreg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="fvshell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="history.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hotkeymenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="htmlout.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="idlbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jumplist.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="keymap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="loadimage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="logdisk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainfrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mapicon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="match.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="name.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optionsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="idl_func.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qsort_ex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="queryfolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="quick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="regcheck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="regwnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shellexec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tabgroup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="trial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WILDCARD.CPP">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shortcut-list.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shortcut-menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="show-keymap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test_function.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="about.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="addin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="appbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="assoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cdll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CmWnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="creatlnk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ctlmenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="custbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dlgtab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dragdrop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dropper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="execdlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filefind.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="finfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="folderview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fv7.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdrctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="htmlout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="icongrep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ienumfe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kaypage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mainfrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mapicon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="oeminc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pagectrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idl_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pmexec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pmgrp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="quick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="regwnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="renext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="selff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sort.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="split.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ssh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="startup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="status.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tipedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tiplabel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="trayfrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="wildcard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xicon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shortcut-list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shortcut-menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="show-keymap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gcdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shellitemsearch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shellexec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shellimagestore_sup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shellnotify.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tabbarctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="accesslock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="archive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="autocomplete.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bar_container.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bf_init.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="browsefolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="codepage_output.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="color_theme.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dpiaware.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dropshadow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="enumstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exifinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bookmark_view.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filemap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="filtersetting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="findbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="finfogrep.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="folderitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="funckeybar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gdiplus_sup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="globaldefs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hashstrmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="history.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hotkeymenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="iconstyle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idlbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="idlist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="keydata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ktl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="match.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mousewheeler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mypanecontainer_ex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="navibar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="navicore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="optionsetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pagedialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pagesheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pidl_sup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="poppack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pshpack1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rebarsetting.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="reguserinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rex_supp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="setupsheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="smartheap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sqlite_wrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stringz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strseparator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tabclose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.org.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tiphelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="trackmenuwnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="unlha32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="updir_confirm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="usermsg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_wrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="watchfolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtab.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="memmgr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="drawimage_sup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="js-array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="multiple_imagelist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shell_new_item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="view_switcher.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="statusbar_sup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lscore\menubar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jsmap.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="jsset.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RES\2K_addressbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ABC.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\2k_propbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\2k_sortbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\2k_toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\addressbar24bit.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\addinvw.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ARCHIVE.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ASSOC.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\bkframe.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\bfinit_data.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\barmeter.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\COPYS.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\COPYP.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\custmenu.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\custmenu16.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\custbar.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\customic.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\DIR.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\DOS.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\drive_unknown.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\dropshadow_parts 5x5.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\dropshadow_parts.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\dropsrc_helper_multi.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\dropsrc_helper_single.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\drvunknown.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\DUMMY.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\empty.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\favorite.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FFIND.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\key_123.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\key_abc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\key_fnc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\key_tabhead.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\KEYABC.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\keybrd.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\keymap.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\KEY123.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FV7_002.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\goto.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\graphic.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\handrect.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\hand.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\image.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\JUST.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\data1.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\data2.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ddcopy.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ddlink.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ddmove.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\ddnone.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\desktopf.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\DIR.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FFTOOLS.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\fftools256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FILE.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\find256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FNKEY.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FV7.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\keymap16.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\LINKP.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\LINKS.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mbx_question.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\mbx_warning.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\MOVEP.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\MOVES.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\PIF.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\pointer.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\PROGRAM.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\prop256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\PROPARTI.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\qkaccess.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\qkaccess16.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\QUICK.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\RECT.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\regkeymap.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\scutheader.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\runapp.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\search.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\sortbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\sortbar256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\SORTDOWN.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\SORTUP.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\splash.gif">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\SPLITH.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\SPLITV.CUR">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\star.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\star13x13.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\STARTUP5.BMP">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\startupf.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\state.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\SYSFLAG.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\tabgroup.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\toolbar24bit.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\toolbar256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_123.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_abc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_addressbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_ddcursor.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_favorite.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_fnc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_prevnext.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_propbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_sortbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\viena_toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="F:\vista_imageres(182).ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="F:\vista_imageres_152.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\vista_toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\vista_toolbar24bit.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_123.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_abc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\xp_addressbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_favorite.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_findbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_fnc.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_propbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_qkaccess.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_sortbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_state.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\xp_favorite.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\UPDIR.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FV.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="RES\FFMIL.ICO">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\copy.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\move.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\quick.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="fv.hm">
+      <Filter>Header Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{fa964811-cd9d-4dc0-b028-f1de5f83c49b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5b10f1d7-0e22-40ab-9496-0386b36bae85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7629c32e-8cf9-4b44-81a1-957a8801946b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="fv7.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\tag.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

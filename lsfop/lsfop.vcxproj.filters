@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="生成されたファイル">
+      <UniqueIdentifier>{c70d1ac0-8565-47a6-a3ba-000640222092}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="assoc.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="attrib.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="brief.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="cfile.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="chdir.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="chgcaps.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="common.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="copy.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="cpenc.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="cperelay.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="data.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="DELETE.CPP">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dirgrep.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dirinfo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="discstream.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Divide.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dlgtab.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dlldatax.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dllexports.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="dropdata.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="drvinfo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="fileitem.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="finfo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="fmtfd.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="iconpath.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="linkinfo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="LSFileOperation.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lsfop.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="match.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="mediainfo.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Merge.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="pidl.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="recent.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="reg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Rename.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="renext.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="reparse.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="replace_file.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="repnames.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="selfol.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="SeriesNm.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="shlnew.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Sync.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="syncdata.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="syncrely.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="syncres.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="taskjob.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="vw32.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="copysid.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lsfop_i.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="symboliclink.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="calc_hash.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="icondetail.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FV7\qsort_ex.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="shell_util.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="propkeys.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="gps.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="iconres.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="drgdrp.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="syslink.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lsfop.def">
+      <Filter>ソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_addbrowse.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_ar_down.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_ar_left.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_ar_right.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_ar_up.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_ar_updown.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_delete.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_edit.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_msync.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_new.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_prev.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_prgstat.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_save.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_state.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_syncres.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\2k_task.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\addbrowse256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate01.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate02.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate03.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate04.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate05.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate06.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate07.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_rotate08.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_s01.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_s02.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_s03.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_s04.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_s05.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_s06.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_sync01.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_sync02.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_sync03.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_sync04.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_sync05.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ani_sync06.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ar_down.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ar_left.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ar_right.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ar_up.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\ar_updown.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\attrib.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\changecaps.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\cpe.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\delete256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\delfile.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\dirinfo.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\divide.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\dsync.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\edit256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\fileoperation.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\findurl.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\finfo_assoc.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\finfo_generic.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\finfo_icon.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\finfo_link.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\finfo_version.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\fltdel.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\itsnew.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="LSFileOperation.rgs">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="lsfop.rgs">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\makedir.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\merge.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\msync.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\new256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\password.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\prgstat256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\rename.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\renext.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\replace.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\repname.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\save256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\scrsync.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\series.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\shellnew.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\state.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\stream.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\syncdir.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\synclog.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\syncres.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\syncscrypt.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\task256.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_ar_down.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_ar_left.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_ar_right.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_ar_up.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_ar_updown.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_edit.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_msync.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_new.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_prev.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_prgstat.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_save.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_syncres.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\viena_task.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_ar_down.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_ar_up.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_ar_updown.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_delete.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_edit.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_folderbrowse.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_msync.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_new.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_prgstat.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_save.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_state.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_syncres.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\xp_task.bmp">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="res\sh160.avi" />
+    <None Include="res\sh161.avi" />
+    <None Include="res\sh164.avi" />
+    <None Include="res\sh165.avi" />
+    <None Include="res\shell32_150.avi" />
+    <None Include="res\xp_search.avi" />
+    <None Include="res\star.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\sync.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\crypt.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\cryptdoc.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\mbx_question.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\mbx_stop.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\mbx_warning.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner01.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner02.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner03.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner04.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner05.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner06.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner07.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner08.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner09.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner10.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner11.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\whitespinner12.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner01.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner02.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner03.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner04.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner05.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner06.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner07.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner08.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner09.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner10.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner11.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\blackspinner12.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+    <None Include="res\dummy.ico">
+      <Filter>リソース ファイル</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="lsfop.idl">
+      <Filter>ソース ファイル</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dlldatax.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="dllmain.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="LSFileOperation.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lsfop_i.h">
+      <Filter>生成されたファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="copy.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="meter.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="cperelay.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="drivemedia.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="fastopt.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="filehandle.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="fileitem.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="finfo.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="fopstd.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="gdiplus_sup.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="iconres.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="itemnamelimits.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="localdd.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="lsfop.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="mapping_file.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="match.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="pidl.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="progress_sup.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="reg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="reparse.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="rexreplace.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="shell_util.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sync_refer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="syncdata.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="taskjob.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="thread.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="tiphelp.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="data.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="lsfop.rc">
+      <Filter>リソース ファイル</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\encrypt.ico">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+    <Image Include="res\decrypt.ico">
+      <Filter>リソース ファイル</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

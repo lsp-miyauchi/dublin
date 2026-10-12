@@ -1,0 +1,6 @@
+LIBRARY         WRITEOUT
+
+EXPORTS
+				ipInitialize			@10
+				ipFilterInfo			@11
+				ipFilterExecute		@12

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="vwfinder">
+</Property><Property Name="ソリューション ファイル" Value="E:\VIENA7\vwfinder\vwfinder.sln">
+</Property><Property Name="Date" Value="2010年7月15日">
+</Property><Property Name="Time" Value="9:30">
+</Property><Property Name="ログ番号" Value="3">
+</Property></Properties><Event ErrorLevel="0" Project="vwfinder" Source="vwfinder.vcproj" Description="Converting project file 'E:\VIENA7\vwfinder\vwfinder.vcproj'.">
+</Event><Event ErrorLevel="1" Project="vwfinder" Source="vwfinder.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="vwfinder" Source="vwfinder.vcproj" Description="Done converting to new project file 'E:\VIENA7\vwfinder\vwfinder.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="vwfinder" Source="vwfinder.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="vwfinder.sln" Description="ソリューションは正常に変換されました">
+</Event><Event ErrorLevel="3" Project="" Source="vwfinder.sln" Description="Converted">
+</Event></UpgradeLog>

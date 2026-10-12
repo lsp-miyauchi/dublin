@@ -1,0 +1,120 @@
+// lsarcsvr.idl : lsarcsvr の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (lsarcsvr.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(BECA4F33-DA70-489C-8AB7-C769044CAED5),
+	dual,
+	nonextensible,
+	helpstring("ICommArchiver interface"),
+	pointer_default(unique)
+]
+interface ICommArchiver : IDispatch{
+	[id(1)] HRESULT Initialize([in] HWND hwnd, [in] LPCWSTR pszPrefix, [in] LPCWSTR pszDll);
+	[id(2)] HRESULT Locked([in] DWORD dwMarker);
+	[id(3)] HRESULT Command([in] LPCWSTR pCmd, [out] CHAR* pResultBuf, [in] ULONG sizeResult);
+	[id(4)] HRESULT CommandA([in] LPCSTR pCmd, [out] CHAR* pResultBuf, [in] ULONG sizeResult);
+	[id(5)] HRESULT CommandW([in] LPCWSTR pCmd, [out] WCHAR* pResultBuf, [in] ULONG sizeResult);
+	[id(6)] HRESULT GetVersion([out,retval] WORD* pwVersion);
+	[id(7)] HRESULT OpenArchive([in] LPCWSTR pszFile, [in] DWORD dwFlags);
+	[id(8)] HRESULT CloseArchive(void);
+	[id(9)] HRESULT FindFirst([in] LPCWSTR pszFilter, [out] BYTE* piia);
+	[id(10)] HRESULT FindFirstW([in] LPCWSTR pszFilter, [out] BYTE* piiw);
+	[id(11)] HRESULT FindNext([out] BYTE* piia);
+	[id(12)] HRESULT FindNextW([out] BYTE* piiw);
+	[id(13)] HRESULT GetAttribute([out,retval] DWORD* pdwAttr);
+	[id(14)] HRESULT GetArcFileName([out] WCHAR* pszBuffer, [in] LONG cchMax);
+	[id(15)] HRESULT GetArcFileSize([out,retval] DWORD* pdwSize);
+	[id(16)] HRESULT GetArcOriginalSize([out,retval] DWORD* pdwSize);
+	[id(17)] HRESULT GetArcCompressedSize([out,retval] DWORD* pdwSize);
+	[id(18)] HRESULT GetArcRatio([out,retval] WORD* pwRatio);
+	[id(19)] HRESULT GetArcDateTime([out] FILETIME* ft);
+	[id(20)] HRESULT GetArcOSType([out,retval] LONG* plType);
+	[id(21)] HRESULT GetArcCreateTimeEx([out] FILETIME* ft);
+	[id(22)] HRESULT GetArcAccessTimeEx([out] FILETIME* ft);
+	[id(23)] HRESULT GetArcWriteTimeEx([out] FILETIME* ft);
+	[id(24)] HRESULT GetFileName([out] WCHAR* pszName, [in] LONG cchMax);
+	[id(25)] HRESULT GetMethod([out] WCHAR* pszName, [in] LONG cchMax);
+	[id(26)] HRESULT GetOriginalSize([out,retval] DWORD* pdwSize);
+	[id(27)] HRESULT GetCompressedSize([out,retval] DWORD* pdwSize);
+	[id(28)] HRESULT GetRatio([out,retval] WORD* pwRatio);
+	[id(29)] HRESULT GetDateTime([out] FILETIME* ft);
+	[id(30)] HRESULT GetWriteTime([out,retval] LONG* tm);
+	[id(31)] HRESULT GetCreateTime([out,retval] LONG* tm);
+	[id(32)] HRESULT GetAccessTime([out,retval] LONG* tm);
+	[id(33)] HRESULT GetCRC([out,retval] DWORD* pdwCRC);
+	[id(34)] HRESULT GetOSType([out,retval] ULONG* plType);
+	[id(35)] HRESULT GetWriteTimeEx([out] FILETIME* ft);
+	[id(36)] HRESULT GetCreateTimeEx([out] FILETIME* ft);
+	[id(37)] HRESULT GetAccessTimeEx([out] FILETIME* ft);
+	[id(38)] HRESULT SetBkgndMode([in] BOOL bBkgnd);
+	[id(39)] HRESULT SetCursorMode([in] BOOL bOn);
+	[id(40)] HRESULT IsSFXFile(void);
+	[id(41)] HRESULT CheckArchive([in] LPCWSTR pszFile, [in] ULONG mode);
+	[id(42)] HRESULT SetOwnerWindow([in] HWND hwnd);
+	[id(43)] HRESULT ClearOwnerWindow(void);
+	[id(44)] HRESULT SetOwnerWindowEx([in] HWND hwnd, [in] LONG_PTR pfnArcProc);
+	[id(45)] HRESULT KillOwnerWindowEx([in] HWND hwnd);
+	[id(46)] HRESULT GetLastError([out,retval] LONG* plCode);
+};
+[
+	object,
+	uuid(C5B0F895-28CE-4063-8E32-8C122B52DBCD),
+	dual,
+	nonextensible,
+	helpstring("IArcManager interface"),
+	pointer_default(unique)
+]
+interface IArcManager : IDispatch{
+	[id(1)] HRESULT Archive([in] HWND hwnd, [in] ULONG type, [in] LPCWSTR pszCmd, [out] CHAR* pszResult, [in] ULONG sizeResult, [out,retval] LONG* plArcError);
+	[id(2)] HRESULT ArchiveW([in] HWND hwnd, [in] ULONG type, [in] LPCWSTR pszCmd, [out] WCHAR* pszResult, [in] ULONG sizeResult, [out,retval] LONG* plArcError);
+	[id(3)] HRESULT AddFiles([in] HWND hwnd, [in] LPCWSTR pszArc, [in] LPCWSTR pszBase, [in] LONG_PTR hdrop_ptr);
+	[id(4)] HRESULT CheckFiles([in] HWND hwnd, [in] LONG_PTR hdrop_ptr);
+	[id(5)] HRESULT CompressFiles([in] HWND hwnd, [in] LPCWSTR pszBase, [in] LONG_PTR hdrop);
+	[id(6)] HRESULT CompressFilesExec([in] HWND hwnd, [in] LPCWSTR pszBase, [in] LONG_PTR hdrop);
+	[id(7)] HRESULT ExtractFiles([in] HWND hwnd, [in] LPCWSTR pszPath, [in] LONG_PTR hdrop_ptr);
+	[id(8)] HRESULT ExtractFilesExec(HWND hwnd, [in] LPCWSTR pszPath, [in] LONG_PTR hdrop_ptr);
+	[id(9)] HRESULT ExtractFromArchive([in] HWND hwnd, [in] ULONG type, [in] LPCWSTR pszFile, [in] LPCWSTR pszList);
+	[id(10)] HRESULT BeginFind([in] HWND hwnd, [in] ULONG type, [in] LPCWSTR pszFile, [in] LPCWSTR pszFilter, [out] BYTE* piiw, [out] IUnknown** ppInterface);
+	[id(11)] HRESULT NextFind([in] IUnknown* pInterface, [out] BYTE* piiw);
+	[id(12)] HRESULT EndFind([in]IUnknown* pInterface);
+	[id(13)] HRESULT GetArchiveType([in] LPCWSTR pszFile, [out] LONG* type, [out] BOOL* pbUnicodeSupported, [out] BOOL* pbUtf8Supported);
+	[id(14)] HRESULT GetDefaultFolder([out] WCHAR* pszFolder);
+	[id(15)] HRESULT SetDefaultFolder([in] LPCWSTR pszFolder);
+	[id(16)] HRESULT MakeSFX([in] HWND hwnd, [in] LPCWSTR pszFile, [in] LPCWSTR pszTargetPath);
+	[id(17)] HRESULT IsArchive([in] HWND hwnd, [in] ULONG type, [in] LPCWSTR pszArc);
+	[id(18)] HRESULT IsLibraryAvailable([in] ULONG type);
+	[id(19)] HRESULT ListArchive([in] HWND hwnd, [in] ULONG type, [in] LPCWSTR pszFile, [out] CHAR* pszResult, [in] ULONG size);
+
+};
+[
+	uuid(B6796ACE-D61D-41DE-ADB2-1421162B79BF),
+	version(1.0),
+	helpstring("lsarcsvr 1.0 typelibrary")
+]
+library lsarcsvrLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(26D6C970-A507-4943-B2D5-D0D1AC4EA7DF),
+		helpstring("CommArchiver Class")
+	]
+	coclass CommArchiver
+	{
+		[default] interface ICommArchiver;
+	};
+	[
+		uuid(E51300C0-DF07-4ED4-B629-2F3458A38496),
+		helpstring("ArcManager Class")
+	]
+	coclass ArcManager
+	{
+		[default] interface IArcManager;
+	};
+};

@@ -1,0 +1,44 @@
+//
+// fv7.rc2 - resources App Studio does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by App Studio
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add additional manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Data
+//
+
+IDR_SPLASH_IMAGE            RCDATA              "res\\splash_bkgnd.jpg"
+IDR_BFINIT                  RCDATA              "res\\bfinit.dat"
+IDR_REGKEYMAP               RCDATA              "res\\fv7_regkeymap.bin"
+
+IDB_PROPBAR                 RCDATA              "res\\propbar20_32bpp.png"
+IDB_SORTBAR                 RCDATA              "res\\sortbar20_32bpp.png"
+IDB_TOOLBAR                 RCDATA              "res\\toolbar20_32bpp.png"
+IDB_NAVIBAR                 RCDATA              "res\\navibar20_32bpp.png"
+IDB_M_PROPBAR               RCDATA              "res\\propbar24_32bpp.png"
+IDB_M_SORTBAR               RCDATA              "res\\sortbar24_32bpp.png"
+IDB_M_TOOLBAR               RCDATA              "res\\toolbar24_32bpp.png"
+IDB_M_NAVIBAR               RCDATA              "res\\navibar24_32bpp.png"
+IDB_KEYBOARD                RCDATA              "res\\key_123abc_20x20.png"
+IDB_KEYCTRL                 RCDATA              "res\\key_ctrlshift_24x20.png"
+IDB_CHECK                   RCDATA              "res\\state_32bpp.png"
+IDB_QUICK                   RCDATA              "res\\favorite_32bpp.png"
+IDB_DRAGDROP_CURSOR         RCDATA              "res\\ddcursor_32bpp.png"
+IDB_BKFRAME                 RCDATA              "res\\bkframe_8bpp.png"
+IDB_CUSTMENU                RCDATA              "res\\scutheader_32bpp.png"
+IDB_BARMETER                RCDATA              "res\\barmeter_solid.png"
+IDB_FINDBAR                 RCDATA              "res\\findbar_32bpp.png"
+IDB_DROPSHADOW_PARTS        RCDATA              "res\\dropshadow_parts 4x4.png"
+IDB_STATUSBAR               RCDATA              "res\\statusbar16_32bpp.png"
+
+IDB_APPICON                 RCDATA              "res\\fv-icon-20x20.png"
+IDB_M_APPICON               RCDATA              "res\\fv-icon-24x24.png"
+
+/////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<meta name="keywords" content="フォルダサイズ;">
+<TITLE>ファイル容量の詳細</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+<style>
+	td { padding:.1em 1em; }
+</style>
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 本体 -->
+<h2>ファイル容量を詳細に計算する</h2>
+<p>選択されているファイル・フォルダの総ファイル容量を詳細に計算します。
+検索対象をフィルタにより複数指定できます。なお、選択されたファイルにフォルダが含まれる
+場合には、フィルタの指定に関わらず、当該フォルダ配下のフォルダは全て検索対象
+に含まれ、そのフォルダ配下にあるファイルが実際の検索の対象となります。</p>
+
+<p>検索対象は、</p>
+<ul>
+	<li>全てのファイル</li>
+	<li>指定のフィルタに一致するファイルを対象とする</li>
+	<li>指定のフィルタに一致するファイルを除外する</li>
+</ul>
+
+<p>の３方式から指定可能で、フィルタの指定欄では、 ":"（セミコロン）でフィルタを区切ることにより、複数のフィルタを指定することができます。</p>
+<p>また、「このフィルタを正規表現として利用する」をチェックすることにより、ワイルドカードではなく、
+より柔軟な<a href="../regexp.htm">正規表現</a>を利用した検索が可能となります。</p>
+
+<h4>ファイルペインにフォーカスがある場合</h4>
+<p>選択されているファイルを容量計算の対象とします。フォルダが選択範囲に含まれている場合には、そのフォルダの階層下にあるファイルも検索して、ファイル容量を表示します。</p>
+
+<h4>フォルダツリーにフォーカスがある場合</h4>
+<p>選択されているフォルダ以下に含まれるフォルダ・ファイルを検索してファイル容量を表示します。</p>
+<table border=0 cellpadding=0 class="btm1">
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>検索したフォルダ数</td>
+		<td>検索の対象となったフォルダの総数</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>検索に一致したファイル数</td>
+		<td>検索フィルタに一致したファイルの総数</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>検索ファイルの総容量</td>
+		<td>検索フィルタに一致したファイルの容量の論理的な総和</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>総占有容量</td>
+		<td>検索フィルタに一致したファイル・フォルダが実際に占有している容量の総和</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>セクタサイズ</td>
+		<td>検索したドライブのセクタサイズ</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>クラスタサイズ</td>
+		<td>検索したドライブのクラスタサイズ</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+	<tr><td>ギャップサイズ</td>
+		<td>総占有容量と検索ファイルの総容量の差</td></tr>
+	<tr><td colspan=2><div class="sep"></div></td></tr>
+</table>
+
+<div class="info1">
+	ハードディスクなどの外部記憶装置にファイルを保存する場合には、
+	実際のファイルサイズと同等かそれ以上に占有する領域が必要になります。
+	これは、外部記憶装置にファイルが記録される際に、
+	実際のファイルサイズ分のスペースを使ってファイルが記録されるのではなく、
+	外部記憶装置ごとに決められた固定のサイズを最小ブロック単位として、
+	ファイルを保存するために必要なブロック数分が確保され、
+	そのブロック内にファイルの内容が記録されるためです。
+	ファイル容量表示では、単純なファイルサイズの総和の他にも、上記のように、
+	実際に外部記憶装置を占めている容量までみることができます。この実際の占有容量と、
+	ファイルの総容量の差のことを一般的にギャップサイズと呼びます。
+</div>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2011 <a href="http://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

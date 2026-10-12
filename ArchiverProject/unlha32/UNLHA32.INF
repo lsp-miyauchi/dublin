@@ -1,0 +1,71 @@
+;
+; Installation file for UNLHA32.DLL
+;
+; Copyright 2000-2010, Micco.
+;
+;  エクスプローラのコンテキストメニューから『インストール』を選ぶこと
+;  によりインストールが行えます。通常，オリジナル配布の自己解凍書庫を
+;  実行した場合には，自動的にこのファイルを適用してインストールが終了
+;  しています。
+;
+
+[Version]
+signature="$CHICAGO$"
+SetupClass=BASE
+
+[DefaultInstall.NT]
+CopyFiles = UnLha32.copy.Dll, UnLha32.Files.Inf
+AddReg    = UnLha32.Reg
+
+[DefaultInstall]
+CopyFiles = UnLha32.copy.Dll, UnLha32.Files.Inf
+AddReg    = UnLha32.Reg
+
+[DefaultUnInstall.NT]
+DelFiles  = UnLha32.copy.Dll, UnLha32.Files.Inf
+DelReg    = UnLha32.Reg
+
+[DefaultUnInstall]
+DelFiles  = UnLha32.copy.Dll, UnLha32.Files.Inf
+DelReg    = UnLha32.Reg
+
+[Optional Components]
+UnLha32Install
+
+[UnLha32Install]
+CopyFiles = UnLha32.copy.Dll, UnLha32.Files.Inf
+AddReg    = UnLha32.Reg
+
+OptionDesc = %UNLHA32%
+Tip = %UNLHA32TIP%
+InstallType = 10 ;Typical, Custom.
+Uninstall = DefaultUnInstall
+
+[SourceDisksNames]
+1="UNLHA32.DLL",,1
+
+[SourceDisksFiles]
+UNLHA32.INF=1
+
+[DestinationDirs]
+UnLha32.copy.Dll=11
+UnLha32.Files.Inf = 17
+
+[UnLha32.copy.Dll]
+UNLHA32.DLL
+
+[UnLha32.Files.Inf]
+UNLHA32.INF
+
+[UnLha32.Reg]
+HKLM,%DLLREG%,,,
+HKLM,%DLLREG%,"UNLHA32",,"%11%\UNLHA32.DLL"
+HKLM,%UNLHA32REG%,,,
+HKLM,%UNLHA32REG%,"Copyright",,"H.Yoshizaki & (c)1995-2010 by Micco."
+HKLM,%UNLHA32REG%,"Suffix",,"LZH|EXE|"
+
+[Strings]
+UNLHA32="UNLHA32 アーカイバ DLL"
+UNLHA32TIP="Tip of UnLha32"
+DLLREG="Software\ArchiverDll\Archiver"
+UNLHA32REG="Software\ArchiverDll\UNLHA32"

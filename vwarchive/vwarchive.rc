@@ -1,0 +1,464 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\\\vwarchive.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,48
+ PRODUCTVERSION 7,4,0,48
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104e4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "File Archiver for FileVisor"
+            VALUE "FileVersion", "7.4.0.48"
+            VALUE "InternalName", "vwarchive"
+            VALUE "LegalCopyright", "(C)LightShip Inc. 2001-2022 All rights reserved."
+            VALUE "OriginalFilename", "vwarchive.dll"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.0.48"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_ARCVIEW             ICON                    "res\\archive_view.ico"
+
+IDI_NEWARC              ICON                    "res\\archive.ico"
+
+IDI_CRYPTED             ICON                    "res\\crypted.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_ARCVIEW MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "開く(&O)\tCtrl+O",              IDM_FILE_OPEN
+        MENUITEM SEPARATOR
+//        MENUITEM "書庫の新規作成(&N)\tCtrl+N",         IDM_NEW
+        MENUITEM "自己解凍書庫の作成(&M)\tCtrl+S",       IDM_MAKESFX
+        MENUITEM SEPARATOR
+        MENUITEM "閉じる(&C)\tEsc",                IDM_CLOSE
+    END
+    POPUP "操作(&O)"
+    BEGIN
+        MENUITEM "解凍(&U)\tCtrl+Enter",          IDM_EXTRACT
+        MENUITEM "全て解凍(&A)\tAlt+Enter",         IDM_EXTRACTALL
+        MENUITEM "内容を表示(&V)\tShift+Enter",      IDM_VIEW
+        MENUITEM "内容をバイナリダンプ(&B)\tCtrl+Alt+Enter", IDM_BDUMP
+        MENUITEM "アプリケーションから開く(&O)\tEnter",     IDM_OPEN
+        MENUITEM "名前の変更(&R)",                   IDM_RENAME
+        MENUITEM SEPARATOR
+        MENUITEM "コピー(&C)\tCtrl+C",             IDM_CLIP
+        MENUITEM "削除(&D)\tDel",                 IDM_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "すべて選択(&A)\tCtrl+A",           IDM_SELALL
+        MENUITEM "選択の切り替え(&I)\tShift+Home",     IDM_SELREV
+    END
+    POPUP "設定(&S)"
+    BEGIN
+        MENUITEM "フォルダツリー(&F)\tCtrl+F",         IDM_VIEW_FOLDER
+        MENUITEM SEPARATOR
+        POPUP "アイコン(&I)"
+        BEGIN
+            MENUITEM "大きいアイコン(&G)",                 IDM_ICON_LARGE
+            MENUITEM "一覧(&L)",                      IDM_ICON_LIST
+            MENUITEM "詳細(&D)",                      IDM_ICON_REPORT
+        END
+        POPUP "ソート方法(&T)"
+        BEGIN
+            MENUITEM "昇順(&U)",                      IDM_SORT_UP
+            MENUITEM "降順(&D)",                      IDM_SORT_DOWN
+            MENUITEM SEPARATOR
+            MENUITEM "名前(&N)",                      IDM_SORT_NAME
+            MENUITEM "拡張子(&E)",                     IDM_SORT_EXT
+            MENUITEM "サイズ(&S)",                     IDM_SORT_SIZE
+            MENUITEM "更新日付(&T)",                    IDM_SORT_TIME
+            MENUITEM "属性(&A)",                      IDM_SORT_ATTR
+            MENUITEM "パス名(&P)",                     IDM_SORT_PATH
+            MENUITEM SEPARATOR
+            MENUITEM "ソートしない(&U)",                  IDM_SORT_NONE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "動作環境(&S)...",                 IDM_SETUP
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "ヘルプ(&H)",                     ID_HELP
+        MENUITEM "アーカイバーについて(&A)...",           ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP MENU
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        MENUITEM "開く(&O)",                      IDM_OPEN
+        MENUITEM "内容を表示(&V)",                   IDM_VIEW
+        MENUITEM "解凍(&U)",                      IDM_EXTRACT
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)",                      IDM_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETUP DIALOGEX 0, 0, 357, 166
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "動作環境の設定"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    GROUPBOX        "デフォルト解凍先の設定(&X)",IDC_STATIC,6,6,193,56
+    LTEXT           "フォルダ(&F):",IDC_STATIC,13,22,41,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,13,33,178,14
+    GROUPBOX        "配色(&C)",IDC_STATIC,6,73,192,87
+    LTEXT           "通常のとき：",IDC_STATIC,13,90,68,8
+    CONTROL         "ABCサンプル",IDC_COL_NORMAL,"LSCRect",WS_TABSTOP | 0x400,22,99,63,14
+    CONTROL         "テキスト(&T)",IDC_BTN_TEXT,"LSCFlatButton",WS_TABSTOP | 0x110,88,99,50,14
+    CONTROL         "背景(&B)",IDC_BTN_BACK,"LSCFlatButton",WS_TABSTOP | 0x110,139,99,50,14
+    LTEXT           "選択されたとき：",IDC_STATIC,13,120,68,8
+    CONTROL         "ABCサンプル",IDC_COL_SELECT,"LSCRect",WS_TABSTOP | 0x400,22,130,63,14
+    CONTROL         "テキスト(&S)",IDC_BTN_RTEXT,"LSCFlatButton",WS_TABSTOP | 0x110,88,130,50,14
+    CONTROL         "背景(&R)",IDC_BTN_RBACK,"LSCFlatButton",WS_TABSTOP | 0x110,139,130,50,14
+    GROUPBOX        "表示や操作(&L)",IDC_STATIC,207,6,143,97
+    CONTROL         "小文字で表示(&U)",IDC_OPLOWER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,219,23,119,10
+    CONTROL         "グリッドを表示(&G)",IDC_OPGRID,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,219,37,119,10
+    CONTROL         "サイズをKB単位で表示(&K)",IDC_OPSIZEKB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,219,51,119,10
+    CONTROL         "マウスでホットトラッキング(&H)",IDC_OPHOTTRACK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,219,80,115,10
+    CONTROL         "1行おきに背景色を変える(&Y)",IDC_OPREPCHECKER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,219,65,107,10
+    DEFPUSHBUTTON   "OK",IDOK,224,139,65,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,301,139,50,14
+END
+
+IDD_NEWARC DIALOGEX 0, 0, 243, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新規書庫の作成"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            IDI_NEWARC,IDC_STATIC,7,7,21,20
+    LTEXT           "新しい書庫ファイルを作成します。\n作成する書庫ファイル名を指定してください。",IDC_STATIC,31,9,140,23
+    LTEXT           "ファイル名(&F):",IDC_STATIC,7,43,58,8
+    CONTROL         "",IDC_EDIT,"LSCSearchPath",WS_BORDER | WS_TABSTOP,7,54,229,14
+    GROUPBOX        "書庫の種類(&T)",IDC_STATIC,7,79,143,51,WS_GROUP
+    CONTROL         "LZH書庫(&L)",IDC_LZH,"Button",BS_AUTORADIOBUTTON,24,94,50,10
+    CONTROL         "ZIP書庫(&Z)",IDC_ZIP,"Button",BS_AUTORADIOBUTTON,24,108,48,10
+    DEFPUSHBUTTON   "OK",IDOK,186,97,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,186,116,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 351
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_NEWARC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_TOOLBAR_S TOOLBAR 20, 20
+BEGIN
+    BUTTON      IDM_VIEW_FOLDER
+    SEPARATOR
+    BUTTON      IDM_SORT_RANGE
+    BUTTON      IDM_ICON_RANGE
+    SEPARATOR
+    BUTTON      IDM_EXTRACT
+    SEPARATOR
+    BUTTON      IDM_CLIP
+    SEPARATOR
+    BUTTON      IDM_VIEW
+    BUTTON      IDM_BDUMP
+    BUTTON      IDM_DELETE
+    BUTTON      IDM_RENAME
+    SEPARATOR
+    BUTTON      IDM_MAKESFX
+END
+
+IDB_TOOLBAR_M TOOLBAR 24, 24
+BEGIN
+    BUTTON      IDM_VIEW_FOLDER
+    SEPARATOR
+    BUTTON      IDM_SORT_RANGE
+    BUTTON      IDM_ICON_RANGE
+    SEPARATOR
+    BUTTON      IDM_EXTRACT
+    SEPARATOR
+    BUTTON      IDM_CLIP
+    SEPARATOR
+    BUTTON      IDM_VIEW
+    BUTTON      IDM_BDUMP
+    BUTTON      IDM_DELETE
+    BUTTON      IDM_RENAME
+    SEPARATOR
+    BUTTON      IDM_MAKESFX
+END
+
+IDB_APPICON_S TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_APPICON_M TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ARCVIEW ACCELERATORS
+BEGIN
+    "A",            IDM_SELALL,             VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_CLIP,               VIRTKEY, CONTROL, NOINVERT
+    "F",            IDM_VIEW_FOLDER,        VIRTKEY, CONTROL, NOINVERT
+    "N",            IDM_NEW,                VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_FILE_OPEN,          VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_MAKESFX,            VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      IDM_DELETE,             VIRTKEY, NOINVERT
+    VK_ESCAPE,      IDM_CLOSE,              VIRTKEY, NOINVERT
+    VK_HOME,        IDM_SELREV,             VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      IDM_CLIP,               VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      IDM_OPEN,               VIRTKEY, NOINVERT
+    VK_RETURN,      IDM_EXTRACT,            VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      IDM_EXTRACTALL,         VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDM_BDUMP,              VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_RETURN,      IDM_VIEW,               VIRTKEY, SHIFT, NOINVERT
+    "X",            IDM_DELETE,             VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SETUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_ARCVIEW             "Arcview\nArcview\nArcview Document\n\n\nArcview.Document\nArcview Document"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "書庫ファイルの操作"
+    IDS_ARC_NOTACCESS       "%1にアクセスできません。"
+    IDS_ARC_NOENTRIES       "%1\n書庫からファイルが見つかりません。"
+    IDS_MAKESFX             "%1\n自己解凍書庫を作成しました。"
+    IDS_TAB_SETUP           "リスト方法 |配色 "
+    IDS_MAKEDIR             "解凍先のフォルダﾞ'%1'が\n存在しません。新しく作成しますか?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FOLDER_DELETE       "'%1'\nこのフォルダを削除します。"
+    IDS_FILE_DELETE         "選択されたファイルを書庫から削除します。"
+    IDS_EXTRACT_NODISKSPACE "解凍先 %1 は空き容量不足です。続行しますか?\n（上書き解凍の場合はこの限りではありません）"
+    IDS_ADDFILE             "現在のリストにファイルを追加しますか?"
+    IDS_NEWARCHIVE          "書庫ファイルを開きますか?"
+    IDS_CAPTION_CREATEARCHIVE "書庫ファイルの作成"
+    IDS_FILTER_ARCHIVE      "書庫ファイル(lzh,cab,zip...) |*.lzh;*.zip;*.arj;*.cab;*.tar;*.tgz;*.gz;*.bza;*.gza;*.yz1|全ファイル(*.*)|*.*||"
+    IDS_FILE_ALREADYEXIST   "%1 は既に存在します。\n置き換えてもいいですか?"
+    IDS_CAPTION_OPEN        "書庫ファイルを開く"
+    IDS_INDICATOR_SELECT    "選択数 %d個(%s)"
+    IDS_INDICATOR_TOTAL     "全ファイル数 %d個(%s)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_USER_RISTRICTION    "試用期間終了のため、機能が制限されています。"
+    IDS_ENUMARCHIVING       "書庫を検索しています…"
+    IDS_WEB_HOMEPAGE        "http://lightship.co.jp/"
+    IDS_WEB_HELP            "http://lightship.co.jp/FileVisor7/help/built-in/archiveview.htm"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_MAIN            "Main"
+    IDS_SEC_OPERATION       "Operation"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_WNDPOS          "WndPos"
+    IDS_KEY_LISTSTATUS      "ListStatus"
+    IDS_KEY_SORTTYPE        "SortType"
+    IDS_KEY_SORTSEQUENCE    "SortSequence"
+    IDS_KEY_LISTSTYLE       "ListStyle"
+    IDS_KEY_COLORS          "Colors"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_TREEWIDTH       "TreeWidth"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_MARKER     "　　　"
+    ID_INDICATOR_SELECT     "選択数 999個(9999 バイト)"
+    ID_INDICATOR_TOTAL      "全ファイル数 9999個(99999 バイト)"
+    ID_INDICATOR_LABEL      "%s "
+END
+
+STRINGTABLE
+BEGIN
+    IDM_OPEN                "選択されたファイルを開く\n開く"
+    IDM_CLOSE               "閉じる\n閉じる"
+    IDM_CLIP                "クリップボードへコピー\nコピー"
+    IDM_VIEW                "ファイル内容を表示\n表示"
+    IDM_EXTRACT             "選択されたファイルを解凍\n解凍"
+    IDM_DELETE              "書庫からファイルを削除する\n削除"
+    IDM_SETUP               "動作環境の設定\n動作環境"
+    IDM_NEW                 "書庫の新規作成\n新規書庫"
+    IDM_SELALL              "ファイルをすべて選択\nすべて選択"
+    IDM_MAKESFX             "自己解凍書庫の作成\n自己解凍形式書庫"
+    IDM_SELREV              "選択の状態を切り替えます。\n選択の切り替え"
+    IDM_RENAME              "エントリファイルの名前を変更します。\n名前の変更"
+    IDM_SORT_UP             "昇順でファイルをソート\n昇順"
+    IDM_SORT_DOWN           "降順でファイルをソート\n降順"
+    IDM_SORT_NONE           "ソートしない"
+    IDM_SORT_NAME           "ファイル名でソートして表示\n名前でソート"
+END
+
+STRINGTABLE
+BEGIN
+    IDM_SORT_EXT            "拡張子でソートして表示\n拡張子でソート"
+    IDM_SORT_SIZE           "ファイルサイズでソートして表示\nサイズでソート"
+    IDM_SORT_TIME           "更新日付でソートして表示\n日付でソート"
+    IDM_SORT_ATTR           "属性でソートして表示\n属性でソート"
+    IDM_SORT_PATH           "パス名でソートして表示\nパス名でソート"
+    IDM_FILE_OPEN           "ファイルを開く\n開く"
+    IDM_BDUMP               "ファイル内容をバイナリダンプ\nバイナリダンプ"
+    IDM_VIEW_FOLDER         "フォルダツリーの表示を切り替えます。\nフォルダツリー"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\\vwarchive.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

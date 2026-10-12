@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "lsfop"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.rh": "cpp"
+    },
+    "files.eol": "\r\n",
+    "files.autoGuessEncoding": false,
+    "files.encoding": "shiftjis",
+    "vetur.format.options.tabSize": 4,
+    "vetur.format.options.useTabs": true,
+    "prettier.tabWidth": 4,
+		"prettier.useTabs": true,
+	"editor.detectIndentation": false,
+    "editor.tabSize": 2,
+	"editor.detectIndentation": false
+	}
+}

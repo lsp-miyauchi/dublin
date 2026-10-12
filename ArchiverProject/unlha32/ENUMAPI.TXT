@@ -1,0 +1,400 @@
+=======================================================================
+     UNLHA32.DLL Ver 3.00  EnumMembersProc 関係 API 説明ファイル
+=======================================================================
+
+					       Ｍｉｃｃｏ (May. 7,2017)
+
+
+はじめに
+
+　UNLHA32.DLL のドキュメント構成は以下のようになっています。
+
+    API.TXT	 : 基幹を成す Unlha() 系及び OpenArchive() 系 API の説明
+    NOTE2.TXT	 : API.TXT の補足説明
+    COMMAND.TXT  : Unlha() に渡すコマンド文字列についての説明
+    NOTE.TXT	 : COMMAND.TXT の補足説明
+    WINMES.TXT	 : SetOwnerWindow() 系 API の説明
+    ENUMAPI.TXT  : SetEnumMembersProc() 系 API の説明
+    STRTABLE.TXT : ストリングテーブルと言語設定用 API についての説明
+    HEADER.TXT	 : LZH 書庫ヘッダ仕様の説明
+    INFCOM.TXT	 : Win32SFXM で使用される $ ファイルコマンドの説明
+    QandA.TXT	 : 過去にあった主な質問集
+    HISTORY.TXT  : 修正履歴
+
+　このドキュメントでは， コールバック関数の設定を行う  EnumMembersProc()
+系 API について説明されています。API.TXT には API 全体に関する記述が存在
+しますので，そちらも参照したほうが良いでしょう。
+
+
+-----------------------------------------------------------------------
+%1. 各 API の説明。
+%2. UNLHA_ENUM_MEMBER_INFO の構造
+%3. UNLHA_ENUM_MEMBER_INFO64 の構造
+%4. コマンドによる処理の違い。
+-----------------------------------------------------------------------
+
+　Ver 1.20 からは， コールバック・ルーチンにより処理の有無を指定するため
+の API が用意されています。 『圧縮・展開時のパス情報変更・再構築』『アプ
+リ側による不正パス・ファイル名チェック』といった用途に使えます。
+　UNARJ.DLL の頃のまま進んでいれば， OpenArchive 系 API で，すべて実装さ
+れるはずだったのですが…。
+
+
+-----------------------------------------------------------------------
+%1. 各 API の説明。
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaSetEnumMembersProc(
+		UNLHA_WND_ENUMMEMBPROC	_lpEnumProc
+	    )
+-----------------------------------------------------------------------
+順序数	 99 : UnlhaSetEnumMembersProc
+	399 : UnlhaSetEnumMembersProcA
+	699 : UnlhaSetEnumMembersProcW
+要求版	UnlhaSetEnumMembersProc  : 1.20
+	UnlhaSetEnumMembersProcA : 2.39a
+	UnlhaSetEnumMembersProcW : 2.40
+機能
+	UNLHA32.DLL が呼び出すコールバック関数の登録を行います。
+
+引数
+	_lpEnumProc	UNLHA32.DLL が呼び出すコールバック関数へのポイン
+			タ。詳細は後述の Unlha_EnumMembers_Proc の項目を
+			参照してください。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中など登録に失敗した場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+Unicode
+	Ver 2.40 以降では Unicode 版と ANSI 版が実装されていますが，Win-
+	9X 系については， システムが Unicode  に対応していないことから，
+	最終的には ANSI へ変換されて処理が行われます。
+
+参考
+	内部的には  UnlhaSetEnumMembersProc64(_lpEnumProc, sizeof(UNLHA_
+	ENUM_MEMBER_INFO)) を呼び出しています。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaClearEnumMembersProc(
+		VOID
+	    )
+-----------------------------------------------------------------------
+順序数	100
+要求版	1.20
+機能
+	UnlhaSetEnumMembersProc() で行った関数の登録を解除します。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中など解除に失敗した場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaSetEnumMembersProc64(
+		UNLHA_WND_ENUMMEMBPROC	_lpEnumProc,
+		const DWORD		_dwStructSize
+	    )
+-----------------------------------------------------------------------
+順序数	110
+要求版	1.60
+機能
+	UNLHA32.DLL が呼び出すコールバック関数の登録を行います。
+	UnlhaSetEnumMembersProc() の拡張版で，指定したコールバック関数へ
+	渡される構造体の種別を指定可能となっている点が，その違いです。
+
+引数
+	_lpEnumProc	UNLHA32.DLL が呼び出すコールバック関数へのポイン
+			タ。詳細は後述の Unlha_EnumMembers_Proc の項目を
+			参照してください。
+	_dwStructSize	使用する構造体のモード。実際には UNLHA_ENUM_MEM-
+			BER_INFO， UNLHA_ENUM_MEMBER_INFO64 のどちらかで
+			使用するものを決定し，そのサイズを指定する必要が
+			あります。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中など登録に失敗した場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+注意
+	通常，API で使用する構造体については，仕様変更等が発生した場合に
+	は，構造体のサイズ情報等を利用してアプリ側で対応することになりま
+	すが， 使用 DLL の改版という比較的軽微な変更のために既存のアプリ
+	が一時的にしろ利用できなくなるのは不便です。
+	そのような状況を回避し，アプリ側で対応時期を決定できるようにする
+	ため， この API については，API としての見通しが悪くなるデメリッ
+	トを無視して，モード指定を行うようになっています。
+
+参考
+	_dwStructSize に sizeof(UNLHA_ENUM_MEMBER_INFO) を指定すると，Un-
+	lhaSetEnumMembersProc() 相当の動作となります。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaClearEnumMembersProc64(
+		VOID
+	    )
+-----------------------------------------------------------------------
+順序数	111
+要求版	1.60
+機能
+	UnlhaSetEnumMembersProc64() で行った関数の登録を解除します。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中など解除に失敗した場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+参考
+	見通しを良くするために別の API となっていますが， 実際には，その
+	まま UnlhaClearEnumMembersProc() を呼び出しています。
+
+-----------------------------------------------------------------------
+BOOL CALLBACK Unlha_EnumMembers_Proc(
+		  LPVOID  _lpInfo
+	      )
+-----------------------------------------------------------------------
+要求版	1.20
+機能
+	書庫の情報を受け取るための，アプリケーションで定義されたコールバッ
+	ク関数です。
+	格納ファイル名等の指定を細かく行いたい場合などでの使用を本来の目
+	的としているため，Unlha() で指定されたスイッチ等を反映して検索を
+	行った結果，マッチしたものについてのみここで指定したコールバック
+	関数が呼ばれる仕様となっています。
+
+引数
+	_lpInfo     書庫のメンバーの情報を格納した構造体へのポインタ。こ
+		    の構造体の情報を書き換えた上で TRUE を返すことで UN-
+		    LHA32.DLL に各種の処理を行わせることができます。実際
+		    には，次のどちらかになります。
+
+		LPUNLHA_ENUM_MEMBER_INFO _lpInfo
+			UnlhaSetEnumMembersProc() か  sizeof(UNLHA_ENUM_
+			MEMBER_INFO) を指定して UnlhaSetEnumMembersProc-
+			64() を使用した場合。
+		LPUNLHA_ENUM_MEMBER_INFO64 _lpInfo
+			sizeof(UNLHA_ENUM_MEMBER_INFO64)  を指定して Un-
+			lhaSetEnumMembersProc64() を使用した場合。
+
+戻り値
+	TRUE	    _lpInfo  の情報に従って UNLHA32.DLL に処理を行わせま
+		    す。
+	FALSE	    UNLHA32.DLL に当該メンバーの処理をスキップさせます。
+
+
+-----------------------------------------------------------------------
+%2. UNLHA_ENUM_MEMBER_INFO の構造
+-----------------------------------------------------------------------
+構造体定義
+    struct {
+	DWORD		dwStructSize;
+	UINT		uCommand;
+	DWORD		dwOriginalSize;
+	DWORD		dwCompressedSize;
+	DWORD		dwAttributes;
+	DWORD		dwCRC;
+	UINT		uOSType;
+	WORD		wRatio;
+	FILETIME	ftCreateTime;
+	FILETIME	ftAccessTime;
+	FILETIME	ftWriteTime;
+	TCHAR		szFileName[FNAME_MAX32 + 1];
+	TCHAR		dummy1[3];
+	TCHAR		szAddFileName[FNAME_MAX32 + 1];
+	TCHAR		dummy2[3];
+    } UNLHA_ENUM_MEMBER_INFO, *LPUNLHA_ENUM_MEMBER_INFO;
+
+メンバーの説明
+    dwStructSize	この構造体のサイズが格納されています。値を書き換
+			えないようにお願いします。
+    uCommand		Unlha() がどの命令を処理中かを示します。
+			UNLHA_LIST_COMMAND	l，v 命令
+			UNLHA_ADD_COMMAND	a，u，m 命令
+			UNLHA_FRESH_COMMAND	f 命令
+			UNLHA_DELETE_COMMAND	d 命令
+			UNLHA_EXTRACT_COMMAND	e，x 命令
+			UNLHA_PRINT_COMMAND	p 命令
+			UNLHA_TEST_COMMAND	t 命令
+			UNLHA_MAKESFX_COMMAND	s 命令
+			UNLHA_JOINT_COMMAND	j 命令
+			UNLHA_CONVERT_COMMAND	y 命令
+			UNLHA_RENAME_COMMAND	n 命令
+    dwOriginalSize	メンバーのファイルサイズ。
+    dwCompressedSize	メンバーの圧縮後のファイルサイズ。a 命令等で追加
+			されるファイルについての呼び出し時には，値は無意
+			味です。
+    dwAttributes	メンバーの属性。
+    dwCRC		メンバーのチェックサム。追加されるファイルの場合
+			は不定となります。
+    uOSType		メンバーが作成された際に使用された OS。
+				 0	MS-DOS
+				 2	UNIX
+				 4	旧 MAC-OS
+				 5	OS/2
+				10	その他
+				11	OS9 (MAC の新型ではない ^^;)
+				12	OS/68K
+				12	OS/386
+				14	HUMAN
+				15	CP/M
+				16	FLEX
+				17	Runser
+				18	Windows NT 系 OS
+				19	Windows 95 系 OS
+    wRatio		メンバーのパーミル (千分率) による圧縮率。追加さ
+			れるファイルの場合は不定となります。
+    ftCreateFile	FILETIME 形式によるファイルの作成日時 (UTC)。
+			FILETIME 形式とは，Jan.1,1601 00:00:00 からの
+			100ns 単位の経過時間を	64  ビットの数値で表した
+			ものです。 詳しくは Win32 API のヘルプ等を参照し
+			てください。
+    ftAccessTime	FILETIME 形式によるファイルの参照日時 (UTC)。
+    ftWriteTime 	FILETIME 形式によるファイルの更新日時 (UTC)。
+    szFileName		メンバーのパスを含めた名前。
+    szAddFileName	a 命令等の場合には，ここで指定されたファイルを格
+			納します。e 命令等の場合にはここで示されている
+			ディレクトリーと名前で展開が行われます。
+
+
+-----------------------------------------------------------------------
+%3. UNLHA_ENUM_MEMBER_INFO64 の構造
+-----------------------------------------------------------------------
+構造体定義
+    struct {
+	DWORD		dwStructSize;
+	UINT		uCommand;
+	ULHA_INT64	llOriginalSize;
+	ULHA_INT64	llCompressedSize;
+	DWORD		dwAttributes;
+	DWORD		dwCRC;
+	UINT		uOSType;
+	WORD		wRatio;
+	FILETIME	ftCreateTime;
+	FILETIME	ftAccessTime;
+	FILETIME	ftWriteTime;
+	TCHAR		szFileName[FNAME_MAX32 + 1];
+	TCHAR		dummy1[3];
+	TCHAR		szAddFileName[FNAME_MAX32 + 1];
+	TCHAR		dummy2[3];
+    } UNLHA_ENUM_MEMBER_INFO, *LPUNLHA_ENUM_MEMBER_INFO;
+
+メンバーの説明
+    dwStructSize	この構造体のサイズが格納されています。値を書き換
+			えないようにお願いします。
+    uCommand		Unlha() がどの命令を処理中かを示します。
+			UNLHA_LIST_COMMAND	l，v 命令
+			UNLHA_ADD_COMMAND	a，u，m 命令
+			UNLHA_FRESH_COMMAND	f 命令
+			UNLHA_DELETE_COMMAND	d 命令
+			UNLHA_EXTRACT_COMMAND	e，x 命令
+			UNLHA_PRINT_COMMAND	p 命令
+			UNLHA_TEST_COMMAND	t 命令
+			UNLHA_MAKESFX_COMMAND	s 命令
+			UNLHA_JOINT_COMMAND	j 命令
+			UNLHA_CONVERT_COMMAND	y 命令
+			UNLHA_RENAME_COMMAND	n 命令
+    llOriginalSize	メンバーのファイルサイズ。
+    llCompressedSize	メンバーの圧縮後のファイルサイズ。a 命令等で追加
+			されるファイルについての呼び出し時には，値は無意
+			味です。
+    dwAttributes	メンバーの属性。
+    dwCRC		メンバーのチェックサム。追加されるファイルの場合
+			は不定となります。
+    uOSType		メンバーが作成された際に使用された OS。
+				 0	MS-DOS
+				 2	UNIX
+				 4	旧 MAC-OS
+				 5	OS/2
+				10	その他
+				11	OS9 (MAC の新型ではない ^^;)
+				12	OS/68K
+				12	OS/386
+				14	HUMAN
+				15	CP/M
+				16	FLEX
+				17	Runser
+				18	Windows NT 系 OS
+				19	Windows 95 系 OS
+    wRatio		メンバーのパーミル (千分率) による圧縮率。追加さ
+			れるファイルの場合は不定となります。
+    ftCreateFile	FILETIME 形式によるファイルの作成日時 (UTC)。
+			FILETIME 形式とは，Jan.1,1601 00:00:00 からの
+			100ns 単位の経過時間を	64  ビットの数値で表した
+			ものです。 詳しくは Win32 API のヘルプ等を参照し
+			てください。
+    ftAccessTime	FILETIME 形式によるファイルの参照日時 (UTC)。
+    ftWriteTime 	FILETIME 形式によるファイルの更新日時 (UTC)。
+    szFileName		メンバーのパスを含めた名前。
+    szAddFileName	a 命令等の場合には実際に格納されるファイルの名前。
+			e 命令等の場合にはここで示されているディレクト
+			リーと名前で展開が行われます。
+
+
+-----------------------------------------------------------------------
+%4. コマンドによる処理の違い。
+-----------------------------------------------------------------------
+
+　現在のバージョンでは UNLHA_ENUM_MEMBER_INFO 構造体のうち，実際に利用さ
+れるのは szFileName と szAddFileName のみです。(^^;;
+
+   (1)	UNLHA_LIST_COMMAND	l，v 命令
+
+	構造体の情報は無視され，TRUE が返されたものについてリストを表示。
+
+   (2)	UNLHA_ADD_COMMAND	a，u，m 命令
+   (3)	UNLHA_FRESH_COMMAND	f 命令
+
+	次の情報を利用して書庫にファイルを格納します。
+	    szFileName		ここで指定された名前で書庫に格納。
+	    szAddFileName	ここで指定されたファイルを格納。
+
+   (4)	UNLHA_DELETE_COMMAND	d 命令
+
+	構造体の情報は無視され， TRUE が返されたものについて書庫からの削
+	除が行われます。
+
+   (5)	UNLHA_EXTRACT_COMMAND	e，x 命令
+
+	次の情報を利用してメンバーを展開。
+	    szAddFileName	ここで指定されたディレクトリーと名前で
+				ファイルを展開。
+
+   (6)	UNLHA_PRINT_COMMAND	p 命令
+
+	構造体の情報は無視され， TRUE が返されたものについてバッファへの
+	出力が行われます。
+
+   (7)	UNLHA_TEST_COMMAND	t 命令
+
+	構造体の情報は無視され， TRUE が返されたものについてテストが行わ
+	れます。
+
+   (8)	UNLHA_MAKESFX_COMMAND	s 命令
+
+	次の情報を利用して SFX に格納。
+	    szFileName		ここで指定された名前に変更してメンバーを
+				SFX に格納。
+
+
+   (9)	UNLHA_JOINT_COMMAND	j 命令
+
+	次の情報を利用して書庫にメンバーを追加。
+	    szFileName		ここで指定された名前に変更して書庫に追加。
+
+  (10)	UNLHA_CONVERT_COMMAND	y 命令
+
+	次の情報を利用してメンバーのヘッダを変換。
+	    szFileName		ここで指定された名前に変更。
+
+  (11)	UNLHA_RENAME_COMMAND	n 命令
+
+	次の情報を利用してメンバーの名前を変更。
+	    szFileName		ここで指定された名前に変更。
+=======================================================================

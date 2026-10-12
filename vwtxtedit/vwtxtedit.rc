@@ -1,0 +1,687 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 (日本) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,1,49
+ PRODUCTVERSION 7,4,1,49
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software Inc."
+            VALUE "FileDescription", "Text Editor for FileVisor"
+            VALUE "FileVersion", "7.4.1.49"
+            VALUE "InternalName", "vwtxtedit"
+            VALUE "LegalCopyright", "(C)LightShip Inc. 2000-2024 All rights reserved."
+            VALUE "OriginalFilename", "vwtxtedit.dll"
+            VALUE "ProductName", "FileVisor7"
+            VALUE "ProductVersion", "7.4.1.49"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_FRAME MENU
+BEGIN
+    POPUP "ファイル(&F)"
+    BEGIN
+        MENUITEM "新規作成(&N)\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "開く(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "クリップボードを開く(&L)",              ID_FILE_OPENCLIPBOARD
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "名前を付けて保存(&A)...",             ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        POPUP "最近開いたファイル"
+        BEGIN
+            MENUITEM "（なし）",                        ID_FILE_MRU_FILE1, GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "終了(&X)",                      ID_APP_EXIT
+    END
+    POPUP "編集(&E)"
+    BEGIN
+        MENUITEM "元に戻す(&U)\tCtrl+Z",            ID_EDIT_UNDO
+        MENUITEM "やり直す(&R)\tCtrl+Y",            ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "切り取り(&T)\tCtrl+X",            ID_EDIT_CUT
+        MENUITEM "コピー(&C)\tCtrl+C",             ID_EDIT_COPY
+        MENUITEM "追加コピー(&E)",                   ID_EDIT_COPY_APPEND
+        MENUITEM "引用付きコピー(&F)",                 ID_EDIT_COPY_FOLLOW
+        MENUITEM "貼り付け(&P)\tCtrl+V",            ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "削除(&D)\tDel",                 ID_EDIT_DELETE_CHAR
+        MENUITEM "1行削除(&Y)",                    ID_EDIT_DELETE_LINE
+        MENUITEM "行左削除(&L)",                    ID_EDIT_DELETE_LEFT
+        MENUITEM "行右削除(&R)",                    ID_EDIT_DELETE_RIGHT
+        MENUITEM SEPARATOR
+        MENUITEM "すべて選択(&A)\tCtrl+A",           ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "大文字へ変換(&U)",                  ID_EDIT_UPPERCASE
+        MENUITEM "小文字へ変換(&W)",                  ID_EDIT_LOWERCASE
+    END
+    POPUP "検索(&S)"
+    BEGIN
+        MENUITEM "検索(&F)",                      ID_FIND_SEARCH
+        MENUITEM "前を検索(&P)",                    ID_FIND_PREV
+        MENUITEM "次を検索(&N)",                    ID_FIND_NEXT
+        MENUITEM "置換(&R)",                      ID_FIND_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "文書の先頭へ(&T)",                  ID_JUMP_FILETOP
+        MENUITEM "文書の最後へ(&B)",                  ID_JUMP_FILEEND
+        MENUITEM "指定行へ移動(&J)",                  ID_JUMP_LINE
+        MENUITEM "タグジャンプ(&A)",                  ID_JUMP_TAG
+        MENUITEM "最後に編集した場所(&L)",               ID_JUMP_LASTEDITPOS
+        MENUITEM SEPARATOR
+        MENUITEM "ファイルから検索(&G)",                ID_FIND_GREP
+    END
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "現在位置の文字コード",                  ID_VIEW_CHARCODE
+        POPUP "エンコードの種類(&E)"
+        BEGIN
+            MENUITEM "自動選択",                        ID_ENCODE_AUTO
+            MENUITEM SEPARATOR
+            MENUITEM SEPARATOR
+            MENUITEM "改行(CR+LF)",                   ID_LINEBREAK_CRLF
+            MENUITEM "改行(CR)",                      ID_LINEBREAK_CR
+            MENUITEM "改行(LF)",                      ID_LINEBREAK_LF
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "参照モード(&W)",                   ID_EDIT_READONLY
+    END
+    POPUP "設定(&O)"
+    BEGIN
+        MENUITEM "ツールバーは小さいボタンで(&T)",           ID_TOOLBAR_SMALL
+        MENUITEM "キー割り当て(&K)...",               ID_OPTION_KEYMAP
+        MENUITEM "動作環境(&P)...",                 ID_OPTION_ENV
+    END
+    POPUP "ヘルプ(&H)"
+    BEGIN
+        MENUITEM "ヘルプ(&H)",                     ID_HELP
+        MENUITEM "テキストエディタについて(&A)",            ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_FRAME               ICON                    "res\\vwtext-edit.ico"
+
+IDI_READONLY            ICON                    "res\\readonly.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FILEOPEN DIALOGEX 0, 0, 250, 23
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "文字コード種別(&C):",IDC_STATIC,7,6,70,8
+    COMBOBOX        IDC_CHARSET,81,5,146,202,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_FILESAVE DIALOGEX 0, 0, 250, 39
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "文字コード種別(&C):",IDC_STATIC,7,6,70,8
+    COMBOBOX        IDC_CHARSET,81,5,146,202,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "改行コード(&R):",IDC_STATIC,7,22,70,8
+    COMBOBOX        IDC_LINEBREAK,81,21,146,202,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_KEYMAP DIALOGEX 0, 0, 323, 201
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "文字列の置換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LISTBOX         IDC_KEYLIST,6,17,169,151,LBS_OWNERDRAWFIXED | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "選択可能なコマンドの一覧(&C):",IDC_STATIC,177,6,119,8
+    LISTBOX         IDC_CMDLIST,177,17,139,151,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Shiftキーを組み合わせる(&S)",IDC_USESHIFT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,185,110,10
+    CONTROL         "Ctrlキーを組み合わせる(&T)",IDC_USECTRL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,173,110,10
+    LTEXT           "設定されているキーの一覧(&K):",IDC_STATIC,6,6,119,8
+END
+
+IDD_FIND DIALOGEX 0, 0, 301, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文字列の検索"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "文字列(&N):",IDC_STATIC,7,11,41,8
+    COMBOBOX        IDC_TEXT,48,8,184,103,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "大文字と小文字を区別する(&C)",IDC_CAPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,48,31,137,10
+    CONTROL         "正規表現(&J)",IDC_USEJRE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,48,42,59,10
+    PUSHBUTTON      "下を検索(&D)",IDC_FINDNEXT,237,24,57,14
+    PUSHBUTTON      "上を検索(&U)",IDC_FINDPREV,237,7,57,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,237,41,57,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,237,60,57,14
+END
+
+IDD_REPLACE DIALOGEX 36, 44, 306, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "置換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "検索する文字列(&N):",IDC_STATIC,4,9,70,8
+    COMBOBOX        IDC_SRC,76,6,139,100,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "置換後の文字列(&P):",IDC_STATIC,4,27,69,8
+    COMBOBOX        IDC_DST,76,24,139,97,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "大文字と小文字を区別する(&C)",IDC_CAPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,47,128,10
+    CONTROL         "正規表現(&J)",IDC_USEJRE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,58,60,10
+    DEFPUSHBUTTON   "次を検索(&F)",IDOK,238,4,64,14,WS_GROUP
+    PUSHBUTTON      "すべて置換(&A)",IDC_REPLACEALL,238,21,64,14
+    PUSHBUTTON      "ヘルプ(&H)",IDC_HELPCALL,238,39,64,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,238,67,64,14
+END
+
+IDD_REPLACEPROG DIALOGEX 0, 0, 276, 22
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文字列の置換"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "置換",IDOK,6,4,64,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,207,4,64,14
+    PUSHBUTTON      "すべて置換(&A)",IDC_REPLACEALL,73,4,64,14
+    PUSHBUTTON      "スキップ(&S)",IDC_SKIP,140,4,64,14
+END
+
+IDD_GREP DIALOGEX 0, 0, 298, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ファイルから検索"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "検索文字列(&N):",IDC_STATIC,7,11,52,8
+    COMBOBOX        IDC_TEXT,65,8,226,103,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "フィルタ(&F):",IDC_STATIC,7,28,52,8
+    COMBOBOX        IDC_FILTER,65,25,226,103,CBS_DROPDOWN | CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "探す場所(&T):",IDC_STATIC,7,45,49,8
+    LTEXT           "",IDC_PATH,65,45,199,8
+    CONTROL         "",IDC_TREE,"LSCFolderTree",WS_BORDER | WS_TABSTOP,7,57,154,135
+    CONTROL         "大文字と小文字を区別する(&C)",IDC_CAPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,169,59,117,10
+    CONTROL         "正規表現(&J)",IDC_USEJRE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,169,70,117,10
+    CONTROL         "配下のフォルダも検索する(&S)",IDC_SUBDIR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,169,92,116,10
+    DEFPUSHBUTTON   "OK",IDOK,241,160,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,241,177,50,14
+END
+
+IDD_GREPPROG DIALOGEX 0, 0, 248, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルから検索"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "検索場所:",IDC_STATIC,7,7,46,8
+    LTEXT           "",IDC_PATH,60,7,181,8
+    DEFPUSHBUTTON   "中止",IDCANCEL,92,57,63,14
+    LTEXT           "検索ファイル:",IDC_STATIC,7,19,46,8
+    LTEXT           "一致した数:",IDC_STATIC,7,31,46,8
+    LTEXT           "",IDC_FILE,60,19,181,8
+    LTEXT           "",IDC_FOUND,60,31,181,8
+END
+
+IDD_JUMP DIALOGEX 0, 0, 163, 39
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "指定行へ移動"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "行番号(&L):",IDC_STATIC,4,14,36,8
+    EDITTEXT        IDC_TEXT,42,12,44,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,109,4,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,109,20,50,14
+END
+
+IDD_SETUP DIALOGEX 0, 0, 293, 321
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "表示のプロパティ"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "体裁",IDC_STATIC,7,7,279,140
+    LTEXT           "フォント(&F):",IDC_STATIC,18,23,43,8
+    CONTROL         "",IDC_FONT,"LSCFontPick",WS_TABSTOP | 0x4,60,20,209,14,WS_EX_CLIENTEDGE
+    CONTROL         "改行を表示(&K)",IDC_SHOW_CR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,43,65,10
+    CONTROL         "行番号を表示(&N)",IDC_SHOW_LINENUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,44,78,10
+    CONTROL         "TABを表示(&B)",IDC_SHOW_TAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,44,65,10
+    CONTROL         "全角空白を表示(&Z)",IDC_SHOW_ZEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,58,82,10
+    CONTROL         "半角空白を表示(&H)",IDC_SHOW_HAN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,58,82,10
+    LTEXT           "&TABを",IDC_STATIC,18,84,20,8
+    EDITTEXT        IDC_NUMTAB,56,82,45,14,ES_AUTOHSCROLL
+    LTEXT           "文字の空白に置き換える",IDC_STATIC,107,84,104,8
+    LTEXT           "行は(&W)",IDC_STATIC,18,104,28,8
+    COMBOBOX        IDC_WRAPLINETYPE,56,102,122,98,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MAXLINECHAR,207,101,40,14
+    LTEXT           "文字",IDC_STATIC,253,103,20,8
+    COMBOBOX        IDC_LINEDENOM,56,121,69,98,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "行間を(&M)",IDC_STATIC,18,123,34,8
+    LTEXT           "行空ける",IDC_STATIC,130,123,30,8
+    GROUPBOX        "配色",IDC_STATIC,7,156,279,131
+    LTEXT           "表示項目(&L):",IDC_STATIC,18,171,44,8
+    LISTBOX         IDC_LIST,18,181,113,94,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "前景色(&T)",IDC_BTN_TEXT,"LSCFlatButton",WS_TABSTOP | 0x110,139,181,63,13
+    CONTROL         "背景色(&G)",IDC_BTN_BKGND,"LSCFlatButton",WS_TABSTOP | 0x110,211,181,63,13
+    LTEXT           "サンプル:",IDC_STATIC,139,222,47,8
+    CONTROL         "ABCサンプル123",IDC_SAMPLE,"LSCRect",0x400,139,235,135,39
+    DEFPUSHBUTTON   "OK",IDOK,81,300,56,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,154,300,56,14
+END
+
+IDD_FUNCLIST DIALOGEX 0, 0, 353, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "関数の一覧"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,272,233
+    DEFPUSHBUTTON   "OK",IDOK,287,7,59,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,287,26,59,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_S_TOOLBAR TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_FILE_NEW
+    SEPARATOR
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_FIND_SEARCH
+    BUTTON      ID_FIND_NEXT
+    BUTTON      ID_FIND_PREV
+    SEPARATOR
+    BUTTON      ID_JUMP_FILETOP
+    BUTTON      ID_JUMP_FILEEND
+END
+
+IDB_M_TOOLBAR TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_FILE_NEW
+    SEPARATOR
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDIT_UNDO
+    BUTTON      ID_EDIT_REDO
+    SEPARATOR
+    BUTTON      ID_FIND_SEARCH
+    BUTTON      ID_FIND_NEXT
+    BUTTON      ID_FIND_PREV
+    SEPARATOR
+    BUTTON      ID_JUMP_FILETOP
+    BUTTON      ID_JUMP_FILEEND
+END
+
+IDB_S_APPICON TOOLBAR 20, 20
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+IDB_M_APPICON TOOLBAR 24, 24
+BEGIN
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_FRAME ACCELERATORS
+BEGIN
+    VK_ESCAPE,      ID_APP_ESCAPE,          VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY_APPEND,    VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY_FOLLOW,    VIRTKEY, CONTROL, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_END,         ID_JUMP_FILEEND,        VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        ID_JUMP_FILETOP,        VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\\\vwtxtedit.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_FILEOPEN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 22
+    END
+
+    IDD_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 314
+    END
+
+    IDD_FUNCLIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 346
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_SETUP AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_FRAME               "EasyEditor"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_CODE       "　　　　　　　　　　　　　　　"
+    ID_INDICATOR_RDONLY     "参照中"
+    ID_INDICATOR_OVR        "上書"
+    ID_INDICATOR_INS        "挿入"
+    ID_INDICATOR_UPD        "更新"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_SEC_SETTING         "Setting"
+    IDS_SEC_GREP            "Grep"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_WNDPOS          "WndPos"
+    IDS_KEY_FINDSTRING      "FindString"
+    IDS_KEY_CONFIG          "Config"
+    IDS_KEY_FINDFILTER      "FindFilter"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_KEY_SEARCHSTRING    "SearchString"
+    IDS_KEY_FOLDER          "Folder"
+    IDS_KEY_STAT            "Stat"
+    IDS_KEY_REPLACESTRING   "ReplaceString"
+    IDS_KEY_ABCMAP          "AbcMap"
+    IDS_KEY_FNCMAP          "FncMap"
+    IDS_KEY_AUTODETECT      "AutoDetect"
+    IDS_KEY_CHARSET         "CharSet"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_QUERYSAVE           "%1 は変更されています。保存しますか?"
+    IDS_SAVEERROR           "%1 を保存できません。"
+    IDS_FILEOPEN            "ファイルを開く"
+    IDS_FILTER_ALL          "全てのファイル(*.*)|*.*||"
+    IDS_FILESAVE            "名前を付けて保存"
+    IDS_UNTITLED            "(無題)"
+    IDS_NUMREPLACE          "%1 個の文字列を置換しました。"
+    IDS_ATTR_SPECIFIED      "%1\nこのファイルは書込禁止またはシステムまたは隠し属性が設定されています。\n\n上書きしますか？"
+    IDS_FIND_NOMATCH        "一致する文字列が見つかりません。"
+    IDS_FOLDER_KEYMAP       "文字キー|機能キー"
+    IDS_QUERY_ROSAVE        "上書き禁止モードですが保存しますか？"
+    IDS_QUERY_OVERWRITE     "%1\nこのファイルは既に存在します。上書きしますか？"
+    IDS_OPENFAILED          "%1\nファイルの読み込みに失敗しました。"
+    IDS_WRAPLINES           "折り返さない;右端で折り返す;指定文字数で折り返す;"
+    IDS_COLORLIST           "標準の文字;カーソル行;行番号;改行/文末;TAB/全角空白;コメント;キーワード1;キーワード2;キーワード3;キーワード4;"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_FILTER_SAVEAS       "自動|*.*|SJISで保存|*.*|EUC-JPで保存|*.*|JISで保存|*.*|Unicodeで保存|*.*|Unicode BigEndianで保存|*.*|UTF7で保存|*.*|UTF8で保存|*.*||"
+    IDS_CHANGESDISCARD      "現在の編集中データは、再読み込みの際に破棄されます。\n続行しますか?"
+    IDS_HELP_GREPSTRING     "検索する文字列を指定します。\n正規表現での指定も可能です。"
+    IDS_HELP_GREPFILTER     "ファイル検索時のフィルタを指定します。\n複数指定の場合には；（セミコロン）で区切ってください。\n\n例） *.txt；*.lst；*.ini"
+    IDS_HELP_GREPJRE        "正規表現で検索する場合にチェックします。\n\n例） 「(検索|置換)条件」と指定すると、「検索条件」\nまたは「置換条件」の語句が検索されます。"
+    IDS_HELP_GREPCASE       "大文字小文字を区別して検索する場合にチェックします。"
+    IDS_HELP_GREPSUBDIR     "指定フォルダ配下のサブフォルダも検索する場合にチェックします。"
+    IDS_UNDEFINED           "(なし)"
+    IDS_APP_TITLE           "EasyEditor"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COMBOLIST_LINEBREAK "改行(CR+LF);改行(CR);改行(LF);"
+    IDS_WEB_HOMEPAGE        "http://lightship.co.jp/"
+    IDS_WEB_HELP            "http://lightship.co.jp/FileVisor7/help/built-in/textview.htm"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "新規作成\n新規作成"
+    ID_FILE_OPEN            "開く\n開く"
+    ID_FILE_SAVE            "保存\n保存"
+    ID_FILE_SAVE_AS         "名前を付けて保存\n名前を付けて保存"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "コピー\nコピー"
+    ID_EDIT_CUT             "切り取り\n切り取り"
+    ID_EDIT_PASTE           "貼り付け\n貼り付け"
+    ID_EDIT_SELECT_ALL      "全て選択\n全て選択"
+    ID_EDIT_UNDO            "元に戻す\n元に戻す"
+    ID_EDIT_REDO            "やり直す\nやり直す"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FIND_SEARCH          "検索\n検索"
+    ID_FIND_SEARCH_BACK     "後方検索\n後方検索"
+    ID_FIND_PREV            "前を検索\n前を検索"
+    ID_FIND_NEXT            "次を検索\n次を検索"
+    ID_FIND_REPLACE         "文字列の置換\n置換"
+    ID_FIND_GREP            "ファイルから検索\nファイルから検索"
+    ID_FIND_FUNCTION        "C/C++関数一覧\nC/C++関数一覧"
+END
+
+STRINGTABLE
+BEGIN
+    ID_JUMP_LASTEDITPOS     "最後に編集した場所\n最後に編集した場所"
+    ID_JUMP_FILETOP         "先頭へ\n先頭へ"
+    ID_JUMP_FILEEND         "最後へ\n最後へ"
+    ID_JUMP_LINE            "指定行へ移動\n行移動"
+    ID_JUMP_TAG             "タグジャンプ\nタグジャンプ"
+    ID_JUMP_LINETOP         "行頭へ移動\n行頭へ移動"
+    ID_JUMP_LINEEND         "行末へ移動\n行末へ移動"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_DELETE_CHAR     "削除\n削除"
+    ID_EDIT_DELETE_LINE     "1行削除\n1行削除"
+    ID_EDIT_DELETE_LEFT     "行左削除\n行左削除"
+    ID_EDIT_DELETE_RIGHT    "行右削除\n行右削除"
+    ID_EDIT_COPY_FOLLOW     "引用付きコピー\n引用付きコピー"
+    ID_EDIT_COPY_APPEND     "追加してコピー\n追加してコピー"
+    ID_EDIT_CUT_APPEND      "追加して切り取り\n追加して切り取り"
+    ID_EDIT_UPPERCASE       "大文字へ変換\n大文字へ変換"
+    ID_EDIT_LOWERCASE       "小文字へ変換\n小文字へ変換"
+    ID_EDIT_DUPLICATELINE   "行を複製\n行を複製"
+    ID_EDIT_READONLY        "書き換え禁止\n書き換え禁止"
+    ID_EDIT_DATETIME        "日付と時刻\n日付と時刻"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPTION_KEYMAP        "キー割り当て\nキー割り当て"
+    ID_OPTION_ENV           "プロパティ\nプロパティ"
+END
+
+STRINGTABLE
+BEGIN
+    ID_PAGE_PREV            "1ページ戻る\n1ページ戻る"
+    ID_PAGE_NEXT            "1ページ進む\n1ページ進む"
+    ID_PAGE_PREV_HALF       "半ページ戻る\n半ページ戻る"
+    ID_PAGE_NEXT_HALF       "半ページ進む\n半ページ進む"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_SELECTLINE      "行を選択\n行を選択"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_CHARCODE        "現在位置の文字コード\n現在位置の文字コード"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_OPENCLIPBOARD   "クリップボードを開く\nクリップボードを開く"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "ウィンドウのサイズを変更"
+    ATL_IDS_SCMOVE          "ウィンドウの位置を変更"
+    ATL_IDS_SCMINIMIZE      "ウィンドウをアイコン化する"
+    ATL_IDS_SCMAXIMIZE      "ウィンドウを最大表示にする"
+    ATL_IDS_SCNEXTWINDOW    "次のウィンドウに切り替える"
+    ATL_IDS_SCPREVWINDOW    "前のウィンドウに切り替える"
+    ATL_IDS_SCCLOSE         "作業中のウィンドウを閉じ、変更したファイルの保存を指示"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "ウィンドウを通常のサイズに戻す"
+    ATL_IDS_SCTASKLIST      "アプリケーションの切り替え"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     " "
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_MRU_FILE        "このファイルを開く"
+END
+
+#endif    // 日本語 (日本) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\\vwtxtedit.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,27 @@
+HKCR
+{
+	lspexif.RawThmubnail.1 = s 'RawThmubnail Class'
+	{
+		CLSID = s '{12524D4C-6E12-4615-987D-94BB7E1C1D8B}'
+	}
+	lspexif.RawThmubnail = s 'RawThmubnail Class'
+	{
+		CLSID = s '{12524D4C-6E12-4615-987D-94BB7E1C1D8B}'
+		CurVer = s 'lspexif.RawThmubnail.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {12524D4C-6E12-4615-987D-94BB7E1C1D8B} = s 'RawThmubnail Class'
+		{
+			ProgID = s 'lspexif.RawThmubnail.1'
+			VersionIndependentProgID = s 'lspexif.RawThmubnail'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{D7FC57C2-DC5B-4249-9F98-63D286F8709D}'
+		}
+	}
+}

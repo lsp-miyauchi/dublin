@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>リパースポイント</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+<style>
+.dpad {
+	background-color: #eeeeff;
+	border: #ccccff solid 1px;
+	padding: 4px;
+}
+</style>
+</head>
+<body>
+<!-- 本体 -->
+<h2>リパース ポイント</h2>
+<h4>リパース ポイントとは</h4>
+<p>リパース ポイントとは、特定のフォルダやドライブをNTFS上のフォルダとしてリンクする機能です。<br>
+（厳密にいえば、ドライブやフォルダ以外の一般のファイル本体もリパース ポイントを定義可能ですが、
+機能としてサポートしていません）</p>
+
+<p>例えば
+<blockquote>
+	D:\TopLebelFolder\SecondFolder\ApplicationProgram\DataFolder\TodaysData
+</blockquote>
+というフォルダがあったとします。このフォルダは階層が深い位置にあるので、
+ドライブルートからフォルダを辿って開くには少々面倒です。</p>
+<p>この深い階層にあるフォルダを、
+C:ドライブ(NTFS)のルート位置に “TodaysData” という名前で
+リパース ポイントとして作成しマウントすることで、
+C:\TodaysData をアクセスすることで、D:\TopLevelFolder...\TodaysData フォルダに
+アクセスしたと同じ働きを実現します。</p>
+
+<p>リパース ポイントは、そのリパース ポイントを作成する場所がNTFS上であれば、
+様々なドライブやフォルダをリパース ポイントにマウントすることが出来ます。</p>
+
+<h4>リパース ポイントを作成するには</h4>
+<ol>
+	<li>FileVisorのシェル拡張機能の設定で、「ここにリパース ポイントを作成」にチェックを入れます。</li>
+	<li>マウントしたいドライブやフォルダを選択し、
+		マウスの右ボタンをクリックしたままドラッグして、
+		リパース ポイントを作成したいNTFSフォルダへドロップします。</li>
+	<li>ドロップハンドラメニューの「ここにリパース ポイントを作成」を選択します。</li>
+	<li>リパース ポイントの名前を指定します。</li>
+</ol>
+
+<div class="attn1">
+	FileVisor上でリパース ポイントを削除した場合（ごみ箱を利用した削除の設定を<font color="#cc0033">していない場合</font>に限る）では、
+	マウント先のフォルダ内容を削除せずにリパース ポイントのみを削除しますが、
+	エクスプローラなどで削除した場合には、
+	マウントした実際のフォルダの内容まで削除されてしまいます。
+</div>
+<div class="attn1">
+	作成したリパース ポイントが指しているフォルダが、
+	リパース ポイントを作成したフォルダの祖先（親）フォルダを指している場合には、
+	フォルダツリーを展開すると無限にツリーがループしてしまいます。
+	ツリーを再帰的に検索するアプリケーションでは、無限ループに陥ってしまい、
+	正常に動作しなくなる場合もあります。
+</div>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2011 <a href="http://www.lightship.co.jp/">LightShip Software</a> All rights reserved.</div>
+</body>
+</html>

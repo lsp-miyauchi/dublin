@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtiff", "libtiff.vcxproj", "{248A10F9-C0A3-3CE2-9BBF-D99397118429}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtiff-static", "libtiff-static.vcxproj", "{341CBD33-7957-4FE8-BE59-A581D18CC6CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{248A10F9-C0A3-3CE2-9BBF-D99397118429}.Debug|x64.ActiveCfg = Debug|x64
+		{248A10F9-C0A3-3CE2-9BBF-D99397118429}.Debug|x64.Build.0 = Debug|x64
+		{248A10F9-C0A3-3CE2-9BBF-D99397118429}.Release|x64.ActiveCfg = Release|x64
+		{248A10F9-C0A3-3CE2-9BBF-D99397118429}.Release|x64.Build.0 = Release|x64
+		{341CBD33-7957-4FE8-BE59-A581D18CC6CE}.Debug|x64.ActiveCfg = Debug|x64
+		{341CBD33-7957-4FE8-BE59-A581D18CC6CE}.Debug|x64.Build.0 = Debug|x64
+		{341CBD33-7957-4FE8-BE59-A581D18CC6CE}.Release|x64.ActiveCfg = Release|x64
+		{341CBD33-7957-4FE8-BE59-A581D18CC6CE}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87A73931-F539-43F3-8CAA-715BAED5E44D}
+	EndGlobalSection
+EndGlobal

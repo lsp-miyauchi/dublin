@@ -1,0 +1,13 @@
+LIBRARY         LSPMASK
+
+EXPORTS
+			mask_meko						@10
+			mask_q0							@11
+			mask_cp							@12
+			mask_cp_ex						@13
+			mask_fl							@14
+			mask_win						@15
+			mask_win_horz					@16
+			mask_xor128						@17
+			mask_rgbloop					@18
+			mask_glass						@19

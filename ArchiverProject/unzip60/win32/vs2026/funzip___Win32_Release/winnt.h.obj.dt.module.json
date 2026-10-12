@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": ".\\funzip___Win32_Release\\winnt.obj",
+            "outputs": [
+                ".\\funzip___Win32_Release\\winnt.h.obj.dt.module.json",
+                ".\\funzip___Win32_Release\\winnt.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

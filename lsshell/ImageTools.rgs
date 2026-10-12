@@ -1,0 +1,35 @@
+HKCR
+{
+	ForceRemove lsshell.ImageTools.1 = s 'lsshell ImageTools'
+	{
+		CLSID = s '{619FF244-765F-485d-8C22-DE469C8859DD}'
+	}
+	ForceRemove lsshell.ImageTools = s 'lsshell ImageTools'
+	{
+		CLSID = s '{619FF244-765F-485d-8C22-DE469C8859DD}'
+		CurVer = s 'lsshell.ImageTools.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {619FF244-765F-485d-8C22-DE469C8859DD} = s 'lsshell ImageTools'
+		{
+			ProgID = s 'lsshell.ImageTools.1'
+			VersionIndependentProgID = s 'lsshell.ImageTools'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove *
+	{
+		NoRemove Shellex
+		{
+			NoRemove ContextMenuHandlers
+			{
+				ForceRemove lssImageTools = s '{619FF244-765F-485d-8C22-DE469C8859DD}'
+			}
+		}
+	}
+}

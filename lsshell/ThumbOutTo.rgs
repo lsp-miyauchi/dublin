@@ -1,0 +1,45 @@
+HKCR
+{
+	ForceRemove lsshell.ThumbOutTo.1 = s 'lsshell ThumbOutTo'
+	{
+		CLSID = s '{223E5F3D-19A3-4115-8D7C-2B54EDF342BE}'
+	}
+	ForceRemove lsshell.ThumbOutTo = s 'lsshell ThumbOutTo'
+	{
+		CLSID = s '{223E5F3D-19A3-4115-8D7C-2B54EDF342BE}'
+		CurVer = s 'lsshell.ThumbOutTo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {223E5F3D-19A3-4115-8D7C-2B54EDF342BE} = s 'lsshell ThumbOutTo'
+		{
+			ProgID = s 'lsshell.ThumbOutTo.1'
+			VersionIndependentProgID = s 'lsshell.ThumbOutTo'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+		}
+	}
+	NoRemove Directory
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssThumbOutTo = s '{223E5F3D-19A3-4115-8D7C-2B54EDF342BE}'
+			}
+		}
+	}
+	NoRemove Drive
+	{
+		NoRemove Shellex
+		{
+			NoRemove DragDropHandlers
+			{
+				ForceRemove lssThumbOutTo = s '{223E5F3D-19A3-4115-8D7C-2B54EDF342BE}'
+			}
+		}
+	}
+}

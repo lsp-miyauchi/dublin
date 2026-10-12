@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>名前を一括して置換する</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 本体 -->
+<h2>名前を一括して置換する</h2>
+<p>ファイルペインで現在選択されているファイルオブジェクトのファイル名の特定文字列を、
+指定の文字列に置換し、ファイル名を変更します。</p>
+<p>例えば、“ABC???.TXT”( ???は任意 ）という一連のファイルが存在し、
+これらのファイル名を “BCD???.TXT” と名前変更したい場合には、対象文字列に“ABC”を、
+置換後の文字列に “BCD” を指定すれば、個々のファイルを１つづつ名前変更する手間が大幅に省けます。</p>
+
+<h4>正規表現で対象を指定</h4>
+<p>この項目をチェックすると、置換元文字列を正規表現として利用します。<br>
+置換元で{}を用いて対処王文字列を指定し、置換先文字列に$N（N=1～9）を指定することで、マッチ文字列を引用することも可能です。</p>
+<table border=0 cellpadding=0 cellspacing=3>
+	<tr><td colspan="2">例）</td></tr>
+	<tr><td>ファイル名:</td><td nowrap>"Hello world Goodbye world.txt"</td></tr>
+	<tr><td>置換元:</td><td nowrap>"{\w}"</td></tr>
+	<tr><td>置換先:</td><td nowrap>"$1!"</td></tr>
+	<tr><td>置換後:</td><td nowrap>"Hello! world! Goodbye! world!.txt!"</td></tr>
+</table>
+
+<h4>大文字小文字を区別する</h4>
+<p>この項目をチェックすると、“Abc” と “ABc” は文字列として一致しません。</p>
+
+<h4>一致するすべてを置換する</h4>
+<p>この項目をチェックすると、置換対象となる文字列がファイル名中に複数存在する場合、それらすべてが新しい文字列に置換されます。チェックしない場合には、最初に見つかった文字列のみを置換すます。</p>
+
+<h4>拡張子は除外する</h4>
+<p>この項目をチェックすると、置換の対象から拡張子を除きます。</p>
+
+<h4>マクロ文字列を利用する</h4>
+<p >次のマクロ文字列を使うことにより、さらに柔軟な一括変更が可能です。</p>
+<table border=0 class="ccf">
+	<tr><th>マクロ</th><th>説　明</th></tr>
+	<tr><td nowrap><b>%full%</b></td><td>元のファイル名を利用します。</td></tr>
+	<tr><td nowrap><b>%name%, %body%</b></td><td>元のファイル名から拡張子を除いた名前を利用します。</td></tr>
+	<tr><td nowrap><b>%title%</b></td><td>元ファイルの持つプロパティ情報の「タイトル」を利用します。</td></tr>
+	<tr><td nowrap><b>%pdate%</b></td><td>元ファイルの持つプロパティ情報の「撮影日付」を利用します。（2001年12月31日の場合は 20011231 を付加）</td></tr>
+	<tr><td nowrap><b>%ptime%</b></td><td>元ファイルの持つプロパティ情報の「撮影時刻」を利用します。（16時32分50秒の場合は 163250 を付加）</td></tr>
+	<tr><td nowrap><b>%albam%</b></td><td>元ファイルの持つプロパティ情報の「アルバムタイトル」を利用します。</td></tr>
+	<tr><td nowrap><b>%martist%</b></td><td>元ファイルの持つプロパティ情報の「アルバムアーティスト」を利用します。</td></tr>
+	<tr><td nowrap><b>%mtrack%</b></td><td>元ファイルの持つプロパティ情報の「トラック番号」を利用します。</td></tr>
+	<tr><td nowrap><b>%cdate%</b></td><td>元ファイルの作成日付を利用します。（2001年12月31日の場合は 20011231 を付加）</td></tr>
+	<tr><td nowrap><b>%ctime%</b></td><td>元ファイルの作成時時刻を利用します。（16時32分50秒の場合は 163250 を付加）</td></tr>
+	<tr><td nowrap><b>%fdate%</b></td><td>元ファイルの更新日付を利用します。（2001年12月31日の場合は 20011231 を付加）</td></tr>
+	<tr><td nowrap><b>%ftime%</b></td><td>元ファイルの更新時時刻を利用します。（16時32分50秒の場合は 163250 を付加）</td></tr>
+</table>
+
+<p>例えば「タイトル」プロパティに「上を向いて歩こう」、「トラック」プロパティに「1」を持つ音楽ファイル ABC.mp3
+というファイルに</p>
+<ul>
+	<li>検索文字列を “%body%”</li>
+	<li>置換文字列に “%mtrack%-%title%”</li>
+</ul>
+<p>として適用すれば、以下のように名前が変更されます。</p>
+<table border=0 class="ccf">
+	<tr><th>適用前</th><th>適用後</th></tr>
+	<tr><td>ABC.mp3</td><td>01-上を向いて歩こう.mp3</td></tr>
+</table>
+
+<div class="info1 top2">
+	<b>文字列を削除するには</b><br>
+	<p>対象となる文字列を指定し、置換後の文字列を未指定のまま実行すると、ファイル名中の対象文字列を削除することができます。</p>
+</div>
+<div class="info1">
+	<b>文字列を追加するには</b><br>
+	<p>対象となる文字列を未指定とし、置換後の文字列を指定して実行すると、ファイル名の先頭に置換文字列を付加することができます。
+	また、置換文字列の先頭に半角記号の “&gt;” を指定しておけば、文字列をファイル名の末尾に追加することができます。</p>
+</div>
+<div class="info1">
+	<b>検索文字列にマクロを指定する場合</b><br>
+	<p>%full%, %body%, %name%が利用可能ですが、これらを複数組み合わせて指定することはできません。</p>
+</div>
+
+<h3>関連項目:<a href="../regexp.htm">正規表現</a></h3>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2013 <a href="http://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

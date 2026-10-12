@@ -1,0 +1,9 @@
+; vwtxtedit.def : DLL 用のモジュール パラメータ宣言
+
+LIBRARY      "vwtxtedit"
+
+EXPORTS
+		RunEdit						@11
+		RunEditW					@12
+		RunGrep						@13
+		RunGrepW					@14

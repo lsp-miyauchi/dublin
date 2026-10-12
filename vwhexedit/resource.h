@@ -1,0 +1,111 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ で生成されたインクルード ファイル。
+// vwhexedit.rc で使用
+//
+#define ID_SEPARATOR                    0
+#define IDW_PROGRESS                    100
+#define ID_INDICATOR_INST               101
+#define ID_INDICATOR_POS                102
+#define ID_INDICATOR_LEN                103
+#define ID_TTT                          106
+#define IDR_BJAIL                       120
+#define IDB_APPICON_M                   129
+#define IDB_APPICON_S                   130
+#define IDB_MARKER                      131
+#define IDB_TOOLBAR_M                   133
+#define IDB_TOOLBAR_S                   135
+#define IDD_STRFIND                     137
+#define IDD_COLOR                       138
+#define IDD_SELRANGE                    139
+#define IDD_CHECKSUM                    140
+#define IDD_JUMP                        141
+#define IDC_FINDUP                      1001
+#define IDC_FINDDOWN                    1002
+#define IDC_LINESEL                     1003
+#define IDC_LIST                        1004
+#define IDC_COMBO                       1005
+#define IDC_COPY                        1006
+#define IDC_TEXT1                       1011
+#define IDC_BACK1                       1012
+#define IDC_BACK2                       1014
+#define IDC_POINT                       1015
+#define IDC_FONT                        1017
+#define IDC_LINE                        1018
+#define IDC_FSTATIC                     1019
+#define IDC_ENDIAN                      1020
+#define IDC_BCHECK                      1021
+#define IDC_TCHECK                      1022
+#define IDC_JUMPSET                     1025
+#define IDC_JUMPCUR                     1026
+#define IDC_MARKTEXT                    1027
+#define IDC_MARKBACK                    1028
+#define IDC_SAMPLE1                     1030
+#define IDC_CAPS                        1034
+#define IDC_HELPCALL                    1035
+#define IDC_EDIT                        1036
+#define IDC_START                       1037
+#define IDC_END                         1038
+#define IDC_BYSIZE                      1039
+#define ID_EDIT_READONLY                3010
+#define ID_EDIT_BYNEWEDITOR             3011
+#define ID_EDIT_SELECTALL               3012
+#define ID_EDIT_TEXTCOPY                3013
+#define ID_EDIT_RANGESEL                3014
+#define ID_EDIT_SELSAVENEW              3015
+#define ID_EDIT_SELTO_PREVMARK          3016
+#define ID_EDIT_SELTO_NEXTMARK          3017
+#define ID_JUMP_OFFSET                  3020
+#define ID_JUMP_FILETOP                 3021
+#define ID_JUMP_FILEEND                 3022
+#define ID_JUMP_LASTEDIT                3023
+#define ID_FIND_PREV                    3024
+#define ID_FIND_NEXT                    3025
+#define ID_MARK_ADDRESS                 3026
+#define ID_MARK_CLEARALL                3027
+#define ID_MARK_PREV                    3028
+#define ID_MARK_NEXT                    3029
+#define ID_TOOL_CHECKSUM                3040
+#define ID_ENVIRON_SETUP                3051
+#define ID_TEXT_ASCII                   3052
+#define ID_TEXT_SJIS                    3053
+#define IDS_APP_TITLE                   4096
+#define IDS_SELECTLEN                   4097
+#define IDS_NOTLOAD                     4098
+#define IDS_NOTUNDOSAVE                 4099
+#define IDS_NOTUNDO                     4100
+#define IDS_NOTUNDOSAVE2                4101
+#define IDS_NOTUNDO2                    4102
+#define IDS_SEC_STATUS                  4103
+#define IDS_KEY_WNDPOS                  4104
+#define IDS_KEY_FONT                    4105
+#define IDS_KEY_COLORS                  4106
+#define IDS_KEY_TEXTTYPE                4107
+#define IDS_SEC_FIND                    4108
+#define IDS_KEY_HISTORY                 4109
+#define IDS_KEY_BINSEARCH               4110
+#define IDS_KEY_CAPS                    4111
+#define IDS_WARNINGSIZE                 4112
+#define IDS_HELP_SEARCH                 4113
+#define IDS_FILEISFOLDER                4114
+#define IDS_FILEISEXISTS                4115
+#define IDS_QUERY_UPDATESAVE            4116
+#define IDS_READONLYFILE                4117
+#define IDS_KEY_SETTING                 4118
+#define IDS_PASTE_BYSJIS                4119
+#define IDS_SAVEAS                      4120
+#define IDS_MARK_RANGELIMIT             4121
+#define IDS_FILEOPEN                    4122
+#define IDS_WEB_HOMEPAGE                57346
+#define IDS_WEB_HELP                    57347
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_3D_CONTROLS                     1
+#define _APS_NEXT_RESOURCE_VALUE        147
+#define _APS_NEXT_COMMAND_VALUE         3060
+#define _APS_NEXT_CONTROL_VALUE         1040
+#define _APS_NEXT_SYMED_VALUE           107
+#endif
+#endif

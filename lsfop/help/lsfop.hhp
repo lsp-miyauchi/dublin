@@ -1,0 +1,64 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\lsfop.chm
+Default Window=main
+Default topic=main.htm
+Display compile progress=No
+Index file=lsfop.hhk
+Language=0x411 日本語
+Title=ファイル操作
+
+[WINDOWS]
+main=,,"lsfop.hhk","main.htm",,,,,,0x42000,,0x3006,[68,30,640,720],,,,1,,,0
+
+
+[FILES]
+main.htm
+dummy.htm
+operation\file\assoc.htm
+operation\file\attrib.htm
+operation\file\chgcase.htm
+operation\file\chgext.htm
+operation\file\divide.htm
+operation\file\filterdel.htm
+operation\file\merge.htm
+operation\file\renban.htm
+operation\file\replace.htm
+operation\file\repname.htm
+operation\folder\dirinfo.htm
+operation\folder\syncdir.htm
+operation\folder\syncdir_multi.htm
+operation\folder\syncdir_script.htm
+operation\filter.htm
+operation\regexp.htm
+tips\reparse_point.htm
+tips\symbolic_link.htm
+
+[ALIAS]
+IDH_D_ASSOCIATE=operation\file\assoc.htm
+IDH_D_ATTRIB=operation\file\attrib.htm
+IDH_D_CHGCAPS=operation\file\chgcase.htm
+IDH_D_RENEXT=operation\file\chgext.htm
+IDH_D_DIVIDE=operation\file\divide.htm
+IDH_D_FILTERDEL=operation\file\filterdel.htm
+IDH_D_REPNAME=operation\file\repname.htm
+IDH_D_SERIESNAME=operation\file\renban.htm
+IDH_D_MERGE=operation\file\merge.htm
+IDH_D_REPLACE=operation\file\replace.htm
+IDH_D_DIRINFO=operation\folder\dirinfo.htm
+IDH_D_PATEDIT=operation\folder\syncdir.htm
+IDH_D_SYNCDIR=operation\folder\syncdir.htm
+IDH_D_MULTISYNC=operation\folder\syncdir_multi.htm
+IDH_D_MULTISYNC_RS=operation\folder\syncdir_multi.htm
+IDH_D_SCRIPTSYNC=operation\folder\syncdir_script.htm
+IDH_D_SCRIPTSYNC_RS=operation\folder\syncdir_script.htm
+IDH_D_LINKCHECK=operation\folder\linkcheck.htm
+IDH_D_FINDURL=operation\tool\findurl.htm
+IDH_D_MAKEJUNCTION=tips\reparse_point.htm
+IDH_D_MAKESYMLINK=tips\symbolic_link.htm
+
+[MAP]
+#include html_fop.h
+
+[INFOTYPES]
+

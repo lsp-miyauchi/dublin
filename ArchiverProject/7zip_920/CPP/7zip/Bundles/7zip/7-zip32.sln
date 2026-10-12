@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "7-zip", "7-zip32.vcxproj", "{E6305870-7EF0-4F2D-837D-C876CABBFCF8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{057F54B2-49D7-4EBE-9386-D9D74DD929E3} = {057F54B2-49D7-4EBE-9386-D9D74DD929E3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SFX", "SFX\SFX.vcxproj", "{057F54B2-49D7-4EBE-9386-D9D74DD929E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6305870-7EF0-4F2D-837D-C876CABBFCF8}.Release|Win32.ActiveCfg = Release|Win32
+		{E6305870-7EF0-4F2D-837D-C876CABBFCF8}.Release|Win32.Build.0 = Release|Win32
+		{E6305870-7EF0-4F2D-837D-C876CABBFCF8}.Release|x64.ActiveCfg = Release|x64
+		{057F54B2-49D7-4EBE-9386-D9D74DD929E3}.Release|Win32.ActiveCfg = Release|Win32
+		{057F54B2-49D7-4EBE-9386-D9D74DD929E3}.Release|Win32.Build.0 = Release|Win32
+		{057F54B2-49D7-4EBE-9386-D9D74DD929E3}.Release|x64.ActiveCfg = Release|x64
+		{057F54B2-49D7-4EBE-9386-D9D74DD929E3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

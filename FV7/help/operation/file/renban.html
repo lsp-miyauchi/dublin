@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>連番で名前を変更する</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../../index.html">TOP</a> &rsaquo;
+<a href="../../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="../index.html">操作別解説</a> &rsaquo;
+<a href="index.html">ファイル操作</a> &rsaquo;
+<a href="chgnames.html">名前の置換</a> &rsaquo;
+連番で名前を変更する
+</div>
+<!-- 本体 -->
+<h2>連番で名前を変更する</h2>
+<p>選択されたファイルオブジェクトのファイル名を、連番をふって名前を変更します。<br>
+「連番をふる」とは、Sample001.txt, Sample002.txt, Sample003.txt, 
+...　という形式でファイルの名前を変更するということを指します。</p>
+<ol>
+	<li>「連番の命名形式」を指定します。<br>
+		命名形式は、連番をふりたい位置に “##” を置くことにより実現します。
+		例えば、命名形式を “ABCD##.TXT” と指定すれば、対象のファイルは、
+		ABCD1.TXT, ABCD2.TXT,…という名前に置き換わります。<br> 
+		連番の数字を桁合わせして指定したい場合には、“#n#” のように、‘#’ と
+		‘#’ の間に桁数を示す数値を指定します。</li>
+	<li>連番の開始番号を指定します。開始番号が１であれば、１より順に数字が増加していきます。</li>
+	<li>増分値を指定します。増分値が１であり、2.で指定した開始番号が１であれば、
+		連番は1, 2, 3, ...となります。</li>
+</ol>
+
+<div class="info1">
+連番形式を “ABCD#3#.TXT”、開始番号の初期値を ‘1’、
+増分値を ‘1’ と指定すれば、対象のファイルはそれぞれ、
+ABCD001.TXT, ABCD002.TXT, …という名前に置き換わります。
+</div>
+<h4>マクロ文字列を利用する</h4>
+<p >次の７つのマクロ文字列を使うことにより、さらに柔軟に連番を振ることも可能です。</p>
+<table border=0 class="ccf">
+	<tr><th>マクロ</th><th>説　明</th></tr>
+	<tr><td nowrap><b>%full%</b></td><td>元のファイル名を利用します。</td></tr>
+	<tr><td nowrap><b>%name%</b></td><td>元のファイル名から拡張子を除いた名前を利用します。</td></tr>
+	<tr><td nowrap><b>%date%</b></td><td>現在の日付を利用します。（2001年12月31日の場合は 20011231 を付加）</td></tr>
+	<tr><td nowrap><b>%time%</b></td><td>現在の時刻を利用します。（16時32分50秒の場合は 163250 を付加）</td></tr>
+	<tr><td nowrap><b>%fdate%</b></td><td>元ファイルの更新日付を利用します。（形式は%date%と同一）</td></tr>
+	<tr><td nowrap><b>%ftime%</b></td><td>元ファイルの更新時刻を利用します。（形式は%time%と同一）</td></tr>
+	<tr><td nowrap><b>%ext%</b></td><td>元のファイル名の拡張子（“．”も含む）を利用します。</td></tr>
+</table>
+
+<p>例えば ABC.TXT, DEF.TXT, GHI.TXT という３つのファイルに、</p>
+<ul>
+	<li>命名形式を “%name%_#3#.txt”</li>
+	<li>初期値を 10</li>
+	<li>増分値を 5</li>
+</ul>
+
+<p>として適用すれば、以下のように名前が変更されます。</p>
+<table border=0 class="ccf">
+	<tr><th>適用前</th><th>適用後</th></tr>
+	<tr><td>ABC.TXT</td><td>ABC_010.TXT</td></tr>
+	<tr><td>DEF.TXT</td><td>DEF_015.TXT</td></tr>
+	<tr><td>GHI.TXT</td><td>GHI_020.TXT</td></tr>
+</table>
+<div class="info1">
+	連番を振らずに置換マクロ文字列のみを指定することで、単純な名前変更も可能です。
+	例えばファイル名をファイルの更新日時に変更したい場合には、
+	命名形式を“%fdate%_%ftime%.%ext%”のように指定することで、
+	ファイル名を更新日時に変更できます。
+</div>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

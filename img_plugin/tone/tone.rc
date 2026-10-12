@@ -1,0 +1,251 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\rcdata.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_POSTERIZE DIALOGEX 0, 0, 260, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ポスタライズ"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "段階数",IDC_SLIDER,"LSCTrack",WS_TABSTOP,7,143,180,11
+    DEFPUSHBUTTON   "OK",IDOK,203,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,203,26,50,14
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,179,133,WS_EX_CLIENTEDGE
+    CONTROL         "全体表示(&W)",IDC_WHOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,195,81,58,10
+END
+
+IDD_COLORBALANCE DIALOGEX 0, 0, 275, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "カラーバランス"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "カラーバランス",IDC_STATIC,7,151,262,60
+    RTEXT           "シアン",IDC_STATIC,10,167,29,8
+    CONTROL         "",IDC_RSLIDER,"LSCTrack",WS_TABSTOP,45,166,198,11
+    LTEXT           "赤",IDC_STATIC,249,167,10,8
+    RTEXT           "マゼンタ",IDC_STATIC,10,180,29,8
+    CONTROL         "",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,45,178,198,11
+    LTEXT           "緑",IDC_STATIC,249,180,10,8
+    RTEXT           "イエロー",IDC_STATIC,10,191,29,8
+    CONTROL         "",IDC_BSLIDER,"LSCTrack",WS_TABSTOP,45,190,198,11
+    LTEXT           "青",IDC_STATIC,249,191,10,8
+    GROUPBOX        "色調",IDC_STATIC,177,68,92,75,WS_GROUP
+    CONTROL         "シャドウ(&S)",IDC_SHADOW,"Button",BS_AUTORADIOBUTTON,187,83,46,10
+    CONTROL         "中間調(&M)",IDC_MIDTONE,"Button",BS_AUTORADIOBUTTON,187,96,46,10
+    CONTROL         "ハイライト(&H)",IDC_HILIGHT,"Button",BS_AUTORADIOBUTTON,187,109,52,10
+    CONTROL         "輝度を保護する(&L)",IDC_LUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,187,125,77,10
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,161,136,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,219,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,219,25,50,14
+    CONTROL         "全体表示",IDC_WHOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,179,49,43,10
+END
+
+IDD_MODULATE DIALOGEX 0, 0, 268, 243
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "彩度・明度・輝度の度合い"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "適用するカラーパート(&P):",IDC_STATIC,7,135,78,8
+    COMBOBOX        IDC_COLORPART,7,145,129,97,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "色相の度合い(&H):",IDC_STATIC,7,163,67,8
+    CONTROL         "",IDC_HSLIDER,"LSCDegree",WS_TABSTOP | 0x2,7,174,229,10,WS_EX_CLIENTEDGE
+    CTEXT           "",IDC_HUE,240,174,21,10,SS_SUNKEN
+    LTEXT           "彩度の度合い(&S):",IDC_STATIC,7,189,67,8
+    CONTROL         "",IDC_SSLIDER,"LSCDegree",WS_TABSTOP | 0x2,7,200,229,10,WS_EX_CLIENTEDGE
+    CTEXT           "",IDC_SAT,240,200,21,10,SS_SUNKEN
+    LTEXT           "輝度の度合い(&B):",IDC_STATIC,7,215,67,8
+    CONTROL         "",IDC_BSLIDER,"LSCDegree",WS_TABSTOP | 0x2,7,226,229,10,WS_EX_CLIENTEDGE
+    CTEXT           "",IDC_BRT,240,226,21,10,SS_SUNKEN
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,184,119,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,201,7,60,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,201,25,60,14
+    CONTROL         "全体表示(&A)",IDC_WHOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,200,115,58,10
+END
+
+IDD_TONECURVE DIALOGEX 0, 0, 353, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "トーンカーブ"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,189,7,157,136,WS_EX_CLIENTEDGE
+    GROUPBOX        "チャンネル(&C)               ",IDC_STATIC,7,9,176,134
+    COMBOBOX        IDC_COMBO,55,7,78,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_GRAPH,"mifgraph",WS_BORDER | WS_TABSTOP,14,28,103,97
+    CONTROL         "",IDC_SHADE,"LSCInfoBar",0x0,14,126,103,8,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,7,151,54,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,74,151,54,14
+    PUSHBUTTON      "リセット(&R)",IDC_RESET,125,107,50,14
+    LTEXT           "RGB :",IDC_STATIC,126,51,20,8
+    LTEXT           "赤 :",IDC_STATIC,126,63,20,8
+    LTEXT           "緑 :",IDC_STATIC,126,75,20,8
+    LTEXT           "青 :",IDC_STATIC,126,87,20,8
+    LTEXT           "",IDC_RGB,148,51,30,8
+    LTEXT           "",IDC_RED,148,63,30,8
+    LTEXT           "",IDC_GREEN,148,75,30,8
+    LTEXT           "",IDC_BLUE,148,87,30,8
+    CONTROL         "全体表示(&A)",IDC_WHOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,189,145,58,10
+END
+
+IDD_GAMMA DIALOGEX 0, 0, 341, 161
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ガンマ補正"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "チャンネル(&C)               ",IDC_STATIC,183,9,151,106
+    COMBOBOX        IDC_COMBO,237,7,65,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SLIDER,"LSCDegree",WS_TABSTOP | 0x2,192,28,134,10,WS_EX_CLIENTEDGE
+    CTEXT           "0.20",IDC_STATIC,187,40,16,8
+    CTEXT           "1.00",IDC_STATIC,250,40,16,8
+    CTEXT           "5.00",IDC_STATIC,316,40,16,8
+    LTEXT           "設定値(&V):",IDC_STATIC,208,57,35,8
+    EDITTEXT        IDC_EDIT,247,55,32,14,ES_AUTOHSCROLL
+    LTEXT           "RGB :",IDC_STATIC,209,76,18,8
+    LTEXT           "1.00",IDC_RGB,230,76,22,8
+    LTEXT           "赤 :",IDC_STATIC,263,76,16,8
+    LTEXT           "1.00",IDC_RED,284,76,22,8
+    LTEXT           "緑 :",IDC_STATIC,263,88,16,8
+    LTEXT           "1.00",IDC_GREEN,284,88,22,8
+    LTEXT           "青 :",IDC_STATIC,263,100,16,8
+    LTEXT           "1.00",IDC_BLUE,284,100,22,8
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,169,147,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,229,140,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,284,140,50,14
+    CONTROL         "全体表示",IDC_WHOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,120,43,10
+END
+
+IDD_CONTRAST DIALOGEX 0, 0, 242, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "明るさ・コントラストの設定"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_PREVIEW,"mifpreview",WS_TABSTOP | 0x1,7,7,171,132,WS_EX_CLIENTEDGE
+    CONTROL         "明るさ(&B)",IDC_BSLIDER,"LSCTrack",WS_TABSTOP,7,146,171,11
+    CONTROL         "コントラスト(&C)",IDC_CSLIDER,"LSCTrack",WS_TABSTOP,7,158,171,11
+    DEFPUSHBUTTON   "OK",IDOK,185,7,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,185,27,50,14
+    CONTROL         "全体表示",IDC_WHOLE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,185,130,43,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,4
+ PRODUCTVERSION 7,4,0,4
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "tone plug-in"
+            VALUE "FileVersion", "7.4.0.4"
+            VALUE "InternalName", "tone"
+            VALUE "OriginalFilename", "tone.dll"
+            VALUE "ProductVersion", "7.4.0.4"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MODULATE_COLORPART  "すべての色;赤色系;黄色系;緑色系;水色系;青色系;紫色系;"
+    IDS_TYPE_RGB            "RGB;赤;緑;青;"
+END
+
+
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\rcdata.rc2"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

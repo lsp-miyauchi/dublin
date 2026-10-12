@@ -1,0 +1,443 @@
+============================================================
+	変更履歴
+============================================================
+
+1999/12/17	Ver2.00
+	ソースが汚くなったためほぼ1から出直し。
+
+2000/01/06
+	VC5用のdsp,dswを追加した。
+	VC5でコンパイルできるように少し修正した。
+	存在しないファイルを指定されたときの対策をした。
+	テストプログラム(ARcToy)を追加した。
+	簡単なドキュメントを付けた。
+	by S.Noda(HZG02104@nifty.ne.jp)
+
+2000/01/07
+	TAR形式ヘッダにマジック("ustar\000")が書き込まれていなかったのを修正
+	ファイルの終了位置がわかるように、TAR形式のファイルの最後に1024の
+	NULL文字をつめるようにした。(これでいいんでしょうか?...)
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/01/09
+	VC5用のdsp,dswを削除した。
+	テストプログラム(ARcToy)を削除した。
+	TarCheckArchive()を修正した。
+	コマンドとして-tを受け付けるようにした。
+	これでLHMeltingでの不具合はなくなったと思う。
+	by S.Noda(HZG02104@nifty.ne.jp)
+
+2000/01/13
+	rundll32インターフェースの関数TarCommandLine()を追加。
+	以下のようにしてTar()関数をコマンドから呼び出せます。
+	   rundll32.exe tar32.dll,TarCommandLine  [コマンドライン]
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/01/14
+	TarCheckArchive()を修正した。
+	by S.Noda(HZG02104@nifty.ne.jp)
+
+2000/02/15
+	・100byteより長いファイル名を含んだ書庫の作成、展開に対応した。
+	(ヘッダータイプ'L', 仮ファイル名"././@LongLink" に対応)
+	・書庫作成時に、指定したファイルが存在しないと落ちるバグ対応
+	・OwnerWindow系の以下のAPIをサポートした(つもり)
+		TarSetOwnerWindow
+		TarClearOwnerWindow
+		TarSetOwnerWindowEx
+		TarKillOwnerWindowEx
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/02/22
+	・インポートライブラリ(.lib)、エクスポートライブラリ(.exp)を追加
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/02/24
+	・.gz/.Z/.bz2の展開に失敗していたバグ修正
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/03/04
+	・Tar()関数呼び出しで第一引数のウインドウハンドルがNULL以外の場合に、
+	  親ウインドウに変なメッセージが飛んで落ちるバグ修正。
+	  (Tar()関数内部のメッセージループ終了後にダイアログを閉じていたのを、
+	   メッセージループ終了前にダイアログを閉じるように変更)
+	  (ダイアログの終了を「SendMessage(hWnd,WM_DESTROY,0,0)」から
+	   「DestroyWindow(hWnd)」に変更)
+	・gzファイルの作成時も、ファイルサイズを512バイトの倍数にあわせてしまっていた
+	  バグ修正
+	・gzファイルのオリジナルファイル名を、絶対パスで返してしまうバグ修正
+	  (c:\tmp\test1.txt.gzのオリジナルファイル名をc:\tmp\test1.txtから
+	   test1.txtに変更)
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/03/12	Ver2.02
+	・圧縮時、--user-directory=0 でディレクトリ構造なしで格納するようにした。
+	・gz/z/bz2書庫でオリジナルのファイルの長さを0で返すようにした。
+	・gz/z/bz2書庫を解凍すると、ReadOnlyになっていたのを修正。
+	・gz書庫のファイル名、最終更新時刻情報を利用するようにした。
+	・展開時に最終更新時刻が反映されないバグ修正
+	・バージョンを2.02にする。
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/03/20
+	・TarConfigDialog()でメッセージボックスにDLLのタイムスタンプなどを表示するようにした。
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+	
+2000/04/10
+	・gzファイルの元ファイルサイズを取得するようにした。
+	・展開、書庫一覧時、ファイルハンドルの開放が行われていないバグ修正
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/04/11
+	・ファイル圧縮時、圧縮元ファイルのファイルハンドルを開放していないバグ修正
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/05/19	Ver2.03
+	・find_files関数内でfind_firstを呼んでいるのに、find_closeを呼ばなかったため
+	  ハンドルがリークするバグ修正
+	・バージョンを2.03にする。
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/07/10
+	・Susie32で正常に動作しないことに対するJy.さんのパッチを当てる。
+	(ありがとうございます>Jy.さん)
+	by 吉岡 恒夫(tsuneo@rr.iij4u.or.jp)
+
+2000/08/21
+	・htmlディレクトリを作成した。CVSサーバ上のhtmlディレクトリ以下
+          を更新するとWebページ(http://openlab.ring.gr.jp/tsuneo/tar32/)
+          が直ちに反映されるようにした。
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/09/14	Ver2.04
+	・展開速度が余りに遅いので高速化。約3倍になりました。(今までが遅すぎた)
+	  VC++6付属のofstreamが遅かったので、とりあえずofstreamの簡易版(fast_ofstream)
+	  を作りました。(fast_stl.h)
+	・そろそろβ版にしてもいい気がするので、説明から「α版」を削除.
+	・バージョンを2.04にする。
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/09/27
+	・libbz2.dllとzlib.dllを使用するようにした。
+	by S.Noda(HZG02104@nifty.ne.jp)
+
+2000/11/08 Ver2.05
+	・zlib/zlib.h,zlib/zconf.h,bzip2/bzlib.hを追加
+	・TarFindFirst/TarFindNext/TarCloseArchiveのHARC引数にNULLが渡された場合
+	  落ちるバグを修正
+	・Tar()のコマンドで最初の引数は"-"がなくても正しくコマンドとして受け付ける
+	  ように修正
+	・TarGetFileCount()でのハンドルの閉じ忘れと、ファイルが存在しない場合落ちる
+	  問題の修正
+	・バージョンを2.05にする
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/11/11 Ver2.06
+	・zlib,bz2libをダイナミックリンクからスタティックリンクに変更。
+	  (zlib1.13,bzip2-1.0.1を利用)
+	・書庫でないファイルに対してもTarGetFileCount()が1を返していた
+	  バグを修正.(CTar32::openで
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/11/20 Ver2.07
+	・Tar()コマンドで展開先フォルダに日本語ファイル名を指定すると
+	  展開に失敗するバグ修正(例："x -f D:\\あ\\xxx.tar D:\\あ\\");
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/11/22 Ver2.08
+	・CTar32::close()でのm_pfileの削除忘れによるメモリリーク修正
+	・メモリリークチェック用関数の追加(_CrtMemDumpAllObjectsSince()などを利用)
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/11/28
+	・英語HTML,SDK文書を少し追加
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/12/01 Ver2.10
+	・以下の形式に対応(展開のみ)
+	RPM(redhat package): .rpm (leading + signature + header + .cpio.gz)
+	deb(debian package): .deb (ar of (debian-binary + control.tar.gz + data.tar.gz))
+	cpio(new portable format, CRC format): .cpio(.cpio.gz .cpio.Z .cpio.bz2)
+	ar(COFF/a.out/b.out): .lib(.lib.gz, .lib.Z, .lib.bz2), .a(.a.gz, .a.Z, .a.bz2)
+	by tsuneo(tsuneo@rr.iij4u.or.jp)
+
+2000/12/17 Ver2.11
+	・Ver0.xxとの互換性のため-iオプションを無視するオプションに追加。
+	・.Zの展開速度があまりに遅いので高速化。
+	  原因はVC++6のSTLが遅かったため。簡易版クラスを作成して対応。
+
+2000/12/25 Ver2.12
+	・Tar() APIのコマンドで、「-f <ファイル名>」を指定できるようにした。
+	  これにより 「-fo <ファイル名> <フォルダ名>」「-of <フォルダ名> <ファイル名>」
+      が認識されるようになった。
+
+2001/05/14 Ver2.13
+	・signature付のrpmファイルを展開できないバグを修正
+	・圧縮対象ファイルの内、存在しない物があっても無視するようにした。
+	  １つも存在しない場合はエラーにした。
+	・コマンドエラー時に落ちることがあるバグを修正した(かもしれない)
+	・ver 0.xxで存在する'R'オプションを指定するとエラーが起きていたので
+	  とりあえず無視するようにした。
+	・圧縮するファイルに日本語ファイル名の文字コードに"\"又は"/"が含まれると
+	  圧縮できないバグ修正
+
+2001/05/15 Ver2.14
+	・圧縮するファイルに日本語ファイル名が含まれていると圧縮できないことがある
+	　バグ修正
+	・圧縮対象ファイルの内、"*"が含まれないファイルが存在しない場合はエラー
+	  を返すようにした。
+	by tsuneo
+
+2001/05/21 Ver2.15
+	・スレッドが完全に終了する前に関数から帰ってくる場合があるバグ修正(したつもり)
+	  # special thanks to 亀井さん
+	by tsuneo
+
+2001/08/28 Ver2.16
+	・ディレクトリエントリを含むファイルを展開できないバグ修正.
+	by tsuneo
+
+2001/09/28 Ver2.17
+	・日本語ディレクトリ作成時に他のディレクトリ名が作成されることがあるバグ修正
+	by tsuneo
+
+2001/11/09 Ver2.18
+	・ネットワークコンピュータ等、「\」で始まるディレクトリ作成時にフリーズするバグ修正
+	by tsuneo
+
+2001/11/20 Ver2.19
+	・読込み属性のファイル展開時に、日付が復元されないバグ修正.
+	  (special thanks to Mamiya)
+	・ダイアログを非表示にした時にSetOwnerWindow,SetOnwerWindowExで設定したウインドウ、
+	　コールバック関数にメッセージが送られないバグ修正.
+	by tsuneo
+
+2002/04/15 Ver2.20
+	・ファイル名が100文字(ディレクトリ含む)のファイルを圧縮すると99文字に切り詰められる
+	　バグ修正.
+	・zlibを1.1.3から1.1.4に変更。
+	by tsuneo
+
+2002/05/29 Ver2.21
+	・圧縮中に進捗ダイアログが更新されない問題を修正。
+	・圧縮中にSetOwnerWindow(Ex)で設定したウインドウにメッセージが送られない問題を修正。
+	・圧縮時の書き込みを高速化した(つもり)。
+	by tsuneo
+
+2002/07/08 Ver2.22
+	・bind9等が展開できな問題に対処。
+	  (TARヘッダのモードフィールドのディレクトリフラグがない場合、タイプフィールドの
+	  ディレクトリタイプも見るようにした。)
+	・ディレクトリを圧縮時、TARヘッダのタイプフィールドにディレクトリタイプを追加するようにした。
+	by tsuneo
+
+2003/01/17 Ver2.23
+	・Ver2.22でファイルの一覧表示等を行った際、ディレクトリ名の最後が"//"等
+	　で表示される問題を修正。これによりLHUT等でツリー表示を行った際に
+	  空のディレクトリが表示される問題に対応。
+	by tsuneo
+
+2003/11/12 Ver2.24
+	・gzip, bzipで圧縮レベルを指定しても有効にならない問題の修正。
+	・デフォルトで絶対パス, ファイル名中の":",".."をエスケープするように
+	  変更。 (Directory Traversal問題への対応)
+	・--absolute-paths(-P)オプションの追加。オプション指定時は絶対パス
+	  等のエスケープを行いません。
+	・-B[N], --bzip2=[N]の他に、-j[N], --bzip(=[N])でもbzip2の圧縮が
+	  できるように変更。
+	・-z[N]のほかに、--gzip(=[N])でもgzipの圧縮をできるように変更。
+	by tsuneo
+
+2003/12/01 Ver2.25
+	・TARヘッダ中にtypeがLNKTYPE('1')のファイルを含む場合、残りの
+	  ファイルが展開できない問題の修正。("spencer_pwb.tar.gz"等)
+	  (Special Thank to rolloさん)
+	by tsuneo
+
+2003/12/19 Ver2.26
+	・TARヘッダのファイル名部分に100文字全部格納された場合、ファイル名
+	  の最後にモード属性の数字(0000644等)が追加される問題の修正。 
+	  このようなTAR書庫はHP-UX等で作成されるようです。
+	by tsuneo
+
+2005/04/01 Ver2.27
+	・2GB以上のtar.gzファイルの展開に対応したつもり。
+	  (他の形式(bz2等)や圧縮には対応していません)
+	・TARヘッダの時刻が2^31より大きいファイルを展開した時に落ちる
+	  問題に対応。(TwinTailが作成する??)
+	  (Special thanks to 伊藤さん)
+	・TarGetOriginalSizeEx/TarGetCompressedSizeEx関数を追加。
+	by tsuneo
+
+2005/04/25 Ver2.28
+	・Z(Compress)形式のファイルを展開できないことがある問題に対応。
+	・TarGetFileCount()で正しくファイル数が取得できないことがある問題に対応。
+	  (Special thanks to 石田さん、HALさん)
+	by tsuneo
+
+2005/05/13 Ver2.29
+	・ファイルサイズが取得できない場合にTarGetOriginalSizeExのサイズ
+	  が不定なのを、サイズ0を返すように変更。
+      (Special Thanks to （び）さん)
+
+2006/08/04 Ver2.30
+	・"--"オプションを追加。"-"ではじまるファイルを指定できるように改善。
+      (Special Thanks to  新山(へろぱ) さん)
+
+2009/08/16
+	・コンパイラをVisual C++ 2005に変更。
+	  MSDNによれば、この変更により一部の古いWindowsは動作対象外となります。
+	・fopen()に指定するモードがzlib/bzip2用だったので、本来のものに修正。
+	・細かなバグをいくつか修正。
+	・進捗ダイアログにプログレスバーを実装。
+	・入出力バッファサイズを拡大。
+	・4GB以上のファイルを扱えるように改善。
+	  zlibを4GB対応とするために、zlibソース内のz_off_tを__int64に、
+	  fseekを_fseeki64に変更しました。
+	・"--confirm-overwrite"オプションを展開時の上書き確認用に導入。明示的に
+	  指定しない限りは従来と同様、確認無しでの上書きとなります。
+	・zlibを1.2.3に、bzip2を1.0.5に更新。
+	by Claybird(claybird.without.wing@gmail.com)
+
+2009/08/30
+	・--inverse_procresultスイッチを追加しました。
+	・処理ダイアログを表示していない場合、WM_ARCEXTRACTやARCHIVERPROCに
+	  ARCEXTRACT_INPROCESSが送信されない(恐らく)不具合を修正。
+	・ARCEXTRACT_ENDが誤って使用されている個所でモードを6に変更。
+	Special Thanks to Silkyさん
+
+2009/08/31 Ver.2.31
+	・ARCEXTRACT_BEGINが誤って使用されている個所でモードをARCEXTRACT_OPENに変更。
+	Special Thanks to Silkyさん
+	commit by Claybird
+
+2009/11/13 Ver.2.32
+	・compress 圧縮されたファイルの終端近くにあるデータを展開できない問題を
+	  修正 (Ver.2.31での m_strstream の実装変更が原因)
+	Special Thanks to 佐川さん
+
+2009/12/6 Ver.2.33
+	・POSIX形式のtarアーカイブ展開に対応
+	・長いファイル名を含むtarアーカイブを作成する際、ファイルヘッダと実際の
+	  記録方式が矛盾していた問題を修正
+	by Claybird(claybird.without.wing@gmail.com)
+
+2010/01/17 Ver.2.34
+	・進捗ダイアログにて、ファイル名が長くなりすぎたときは省略表示するようにした
+	・--convert-charsetスイッチをファイル名文字コード変換のために追加。
+	  デフォルトで文字コード変換を行います。
+	・TarOpenArchive2() APIを追加
+	Special Thanks to 鬼束さん
+	by Claybird(claybird.without.wing@gmail.com)
+
+2010/11/4
+	・XZ Utils 対応パッチの取り込み(oopsさん及びSilkyさんによる)
+	    -J,--lzma,--xzオプションの追加
+	    xzおよびlzmaの圧縮と展開に対応
+	・setvbuf()/gzbuffer()によりファイル入出力バッファを拡大
+	・zlibを1.2.5に更新
+	・bzip2を1.0.6に更新
+
+	Special Thanks to oopsさん、Siklyさん
+	by Claybird(claybird.without.wing@gmail.com)
+
+2010/11/6 Ver.2.35
+	・ar形式アーカイブにてファイル名取得に失敗していた問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2011/ 1/19 Ver.2.36
+	・互換性のため、一部のプログラムで生成される誤ったチェックサム
+	  (signed charで計算されたもの)を受け入れるようにした
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2011/04/02 Ver.2.37
+	・cpio.xz形式のRPMアーカイブの展開に対応
+	・XZ Utilsを5.0.2に更新
+	Special Thanks to Silkyさん
+
+	commit by Claybird
+
+2011/08/13 Ver.2.38
+	・展開後ファイルサイズが取得できない場合に異常終了することがある
+	  問題を修正
+	・展開後ファイルサイズが取得できない場合は進捗をマーキー表示する
+	  ようにした
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2011/09/26
+	・2GBを超える.gzファイルが展開できなかった問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2011/10/12 Ver.2.39
+	・オリジナルが4GBを超える.gzファイルが展開できなかった問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2011/12/02 Ver.2.40
+	・PAX Interchange Formatで作成されたtarアーカイブの展開に対応
+	・アーカイブ作成時に、拡張子およびパスによるソート(--sort-by-ext/--sort-by-path)を実装
+	・展開時、ディレクトリ作成についても上書き確認が行われていた問題を修正
+	・展開時、上書き確認ダイアログ上で長いファイル名の表示が途中で切れていた問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2012/07/03 Ver.2.41
+	・ディレクトリ構造を無視してアーカイブを作成する際ファイル名が空白になる問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2012/09/29 Ver.2.42
+	・文字コード自動検出が正しく動作しないことがあった問題を修正
+	・ドキュメントの誤表記"--inverse_procresult"を"--inverse-procresult"に訂正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2022/04/11 Ver.2.43
+	・zlibを1.2.12に更新
+	・bzip2を1.0.7(bf905ea2251191ff9911ae7ec0cfc35d41f9f7f6)に更新
+	・xzutilsをv5.2.5に更新
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2022/05/11 Ver.2.44
+	・bzip2の作成/展開に失敗していた問題を修正
+	・bzip2を1.0.8に更新
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2023/03/25 Ver.2.45
+	・アーカイブ作成時のデフォルト文字コードをUTF-8にした
+	  →"--store-in-utf8=0"で従来動作に変更可能
+	  →内部的にはCP932のままなので、限定的な機能向上
+	・フォルダを含むアーカイブの作成に失敗していた問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2023/05/20 Ver.2.46
+	・pbzip2等で生成されるマルチストリームbzip2アーカイブに対応
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2023/06/04 Ver.2.47
+	・ファイルハンドルを二重に閉じて異常終了することがある問題を修正
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2023/08/13 Ver.2.48
+	・Zstandardサポートを追加
+	・64bitサポートを追加
+	  Special Thanks to ayakawa-mさん
+	・bzip2のヘッダ判定方法を更新
+
+	by Claybird(claybird.without.wing@gmail.com)
+
+2023/11/09 Ver.2.49
+	・Zstandardで辞書を使用できるようにした(API追加)
+	  Special Thanks to ayakawa-mさん
+	・展開速度を約5倍に高速化
+
+	by Claybird(claybird.without.wing@gmail.com)

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Shift_jis">
+<TITLE>メニューをクールに表示</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+</head>
+<body><div class="rib">&nbsp;FileVisor6 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<p><h4 class="tree">
+［<a href="javascript:history.back(1)"> 戻る </a>］
+</h4></p>
+<!-- 本体 -->
+<h2><font class="ldr">■</font>メニューをクールに表示</h2>
+<table border=0 cellpadding=3 cellspacing=2>
+	<tr align=center bgcolor=lavender>
+		<td>通常</td>
+		<td>クール設定</td></tr>
+	<tr align=center>
+		<td><img src="../images/part_menu_norm.gif"></td>
+		<td><img src="../images/part_menu_cool.gif"></td></tr>
+</table>
+<!-- copyright -->
+<p>　</p>
+<h3><font style="font-size: 8pt;">Copyright &copy; 1994-2006 <a href="http://www.lightship.co.jp/" target="_blank">LightShip Software</a> All rights reserved.</font></h3>
+</body>
+</html>

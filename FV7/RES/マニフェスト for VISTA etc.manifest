@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+	<assemblyIdentity version="1.0.0.0" type="win32" name="Microsoft.VisualFoxPro" processorArchitecture="x86"/>
+	<description>Visual FoxPro</description>
+	<dependency>
+		<dependentAssembly>
+			<assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" language="*" processorArchitecture="x86" publicKeyToken="6595b64144ccf1df"/>
+		</dependentAssembly>
+	</dependency>
+
+	// ------------------------------------
+	// 実行レベルがAdministrator権限の指定
+	// ------------------------------------
+	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+		<security>
+			<requestedPrivileges>
+				<requestedExecutionLevel level="requireAdministrator" uiAccess="false"/>
+			</requestedPrivileges>
+		</security>
+	</trustInfo>
+
+	// ------------------------------------
+	// レジストリを使わないCOMサーバーを利用する指定
+	// ------------------------------------
+	<file name="regfreedll.dll">
+		<comClass description="regfreedll.adder" clsid="{99A4ADD8-5A6A-40C1-89FF-50B5E8267B69}" progid="regfreedll.adder" threadingModel="Both"/>
+	</file>
+</assembly>

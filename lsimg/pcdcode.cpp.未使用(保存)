@@ -1,0 +1,767 @@
+///////////////////////////////////////////////////////////////////////
+// pcdcode.cpp
+
+
+#include "stdafx.h"
+#include "lsimg.h"
+#include "common.h"
+#include "filemap.h"
+
+////////////////////////////////
+// Ç∆ÇËÇ†Ç¶Ç∏óòópÇµÇƒÇ¢Ç»Ç¢ÇÃÇ≈
+#if 0
+static BYTE sRGBMap[351] = {
+        0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,
+       14,  15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,  26,  27,
+       28,  29,  29,  30,  31,  32,  33,  34,  35,  36,  37,  38,  39,  40,
+       41,  42,  43,  44,  45,  46,  47,  48,  49,  50,  51,  52,  53,  54,
+       55,  56,  57,  58,  59,  60,  61,  62,  63,  65,  66,  67,  68,  69,
+       70,  71,  72,  73,  74,  75,  76,  77,  78,  79,  80,  81,  82,  83,
+       84,  85,  86,  87,  88,  89,  90,  91,  92,  93,  95,  96,  97,  98,
+       99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112,
+      114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127,
+      128, 129, 130, 131, 132, 133, 135, 136, 137, 138, 139, 140, 141, 142,
+      143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156,
+      157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170,
+      171, 172, 173, 174, 175, 175, 176, 177, 178, 179, 180, 181, 182, 183,
+      184, 185, 186, 187, 187, 188, 189, 190, 191, 192, 193, 194, 194, 195,
+      196, 197, 198, 199, 199, 200, 201, 202, 203, 203, 204, 205, 206, 207,
+      207, 208, 209, 210, 210, 211, 212, 213, 213, 214, 215, 215, 216, 217,
+      218, 218, 219, 220, 220, 221, 222, 222, 223, 223, 224, 225, 225, 226,
+      227, 227, 228, 228, 229, 229, 230, 230, 231, 232, 232, 233, 233, 234,
+      234, 235, 235, 235, 236, 236, 237, 237, 238, 238, 238, 239, 239, 240,
+      240, 240, 241, 241, 242, 242, 242, 243, 243, 243, 243, 244, 244, 244,
+      245, 245, 245, 245, 246, 246, 246, 247, 247, 247, 247, 247, 248, 248,
+      248, 248, 249, 249, 249, 249, 249, 249, 250, 250, 250, 250, 250, 250,
+      251, 251, 251, 251, 251, 251, 252, 252, 252, 252, 252, 252, 252, 252,
+      252, 253, 253, 253, 253, 253, 253, 253, 253, 253, 254, 254, 254, 254,
+      254, 254, 254, 254, 254, 254, 254, 254, 255, 255, 255, 255, 255, 255,
+      255
+};
+#endif
+//
+////////////////////////////////
+
+
+/* Photo CD information beyond 100% white, Gamma 2.2 */
+static BYTE YCCMap[351] = {
+        0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10,  11,  12,  13,
+        14, 15,  16,  17,  18,  19,  20,  21,  22,  23,  24,  25,  26,  27,
+        28, 29,  30,  32,  33,  34,  35,  36,  37,  38,  39,  40,  41,  42,
+        43, 45,  46,  47,  48,  49,  50,  51,  52,  53,  54,  56,  57,  58,
+        59, 60,  61,  62,  63,  64,  66,  67,  68,  69,  70,  71,  72,  73,
+        74, 76,  77,  78,  79,  80,  81,  82,  83,  84,  86,  87,  88,  89,
+        90, 91,  92,  93,  94,  95,  97,  98,  99, 100, 101, 102, 103, 104,
+      105, 106, 107, 108, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119,
+      120, 121, 122, 123, 124, 125, 126, 127, 129, 130, 131, 132, 133, 134,
+      135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148,
+      149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162,
+      163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176,
+      176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189,
+      190, 191, 192, 193, 193, 194, 195, 196, 197, 198, 199, 200, 201, 201,
+      202, 203, 204, 205, 206, 207, 207, 208, 209, 210, 211, 211, 212, 213,
+      214, 215, 215, 216, 217, 218, 218, 219, 220, 221, 221, 222, 223, 224,
+      224, 225, 226, 226, 227, 228, 228, 229, 230, 230, 231, 232, 232, 233,
+      234, 234, 235, 236, 236, 237, 237, 238, 238, 239, 240, 240, 241, 241,
+      242, 242, 243, 243, 244, 244, 245, 245, 245, 246, 246, 247, 247, 247,
+      248, 248, 248, 249, 249, 249, 249, 250, 250, 250, 250, 251, 251, 251,
+      251, 251, 252, 252, 252, 252, 252, 253, 253, 253, 253, 253, 253, 253,
+      253, 253, 253, 253, 253, 253, 254, 254, 254, 254, 254, 254, 254, 254,
+      254, 254, 254, 254, 254, 254, 254, 254, 254, 254, 254, 255, 255, 255,
+      255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255,
+      255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255,
+      255
+};
+
+#define B		(MAXRGB + 1) * 2
+#define G		(MAXRGB + 1)
+#define R		0
+
+enum {
+	COLSPC_RGB,
+	COLSPC_GRAY,
+	COLSPC_TRANSPARENT,
+	COLSPC_CMYK,
+	COLSPC_OHTA,
+	COLSPC_SRGB,
+	COLSPC_YCBCR,
+	COLSPC_YCC,
+	COLSPC_YIQ,
+	COLSPC_YPBPR,
+	COLSPC_YUV,
+};
+
+typedef struct tagPCDTABLE
+{
+	UINT length;
+	UINT sequence;
+	BYTE key;
+	UINT mask;
+} PCDTABLE;
+
+
+void Upsample(int width, int height, int scaled_width, BYTE* pixels)
+{
+	register int x, y;
+	register BYTE *p, *q, *r;
+
+	// Create a new image that is a integral size greater than an existing one.
+	for (y = 0; y < height; y++) {
+		p = pixels + (height - 1 - y) * scaled_width + (width - 1);
+		q = pixels + ((height - 1 - y) << 1) * scaled_width + ((width - 1) << 1);
+		*q = *p;
+		*(q + 1) = *p;
+		for (x = 1; x < width; x++) {
+			p--;
+			q -= 2;
+			*q = *p;
+			*(q + 1) = (((int)*p) + ((int)*(p + 1)) + 1) >> 1;
+		}
+	}
+
+	for (y = 0; y < height - 1; y++) {
+		p = pixels + (y << 1) * scaled_width;
+		q = p + scaled_width;
+		r = q + scaled_width;
+		for (x = 0; x < width - 1; x++) {
+			*q = (((int)*p) + ((int)*r) + 1) >> 1;
+			*(q + 1) = (((int)*p) + ((int)*(p + 2)) + ((int)*r) + ((int)*(r + 2)) + 2) >> 2;
+			q += 2;
+			p += 2;
+			r += 2;
+		}
+		*q++ = (((int)*p++) + ((int)*r++) + 1) >> 1;
+		*q++ = (((int)*p++) + ((int)*r++) + 1) >> 1;
+	}
+	p = pixels + (2 * height - 2) * scaled_width;
+	q = pixels + (2 * height - 1) * scaled_width;
+	for (x = 0; x < width; x++) {
+		*q++ = *p++;
+		*q++ = *p++;
+	}
+}
+
+BOOL PCDDecodeImage(filemap& fm, mif& image, BYTE* luma, BYTE* chroma1, BYTE* chroma2)
+{
+#define ISSYNC  ((accumulator & 0xffffff00) == 0xfffffe00)
+#define PCDGETBITS(n) \
+{ \
+	accumulator = (accumulator << n) & 0xffffffff; \
+	bits -= n; \
+	while (bits <= 24) { \
+		if (p >= (buffer + 0x800)) { \
+			fm.read(buffer, 0x800); \
+			p = buffer; \
+		} \
+		accumulator |= ((UINT)(*p) << (24 - bits)); \
+		bits += 8; \
+		p++; \
+	} \
+	if (fm.m_size <= fm.seek(0, SEEK_CUR)) \
+		break; \
+}
+
+	int count, length, row;
+	PCDTABLE* pcd_table[3];
+	register int i, j;
+	register PCDTABLE* r;
+	register BYTE* range_limit;
+	register BYTE *p, *q;
+	BYTE* buffer;
+	UINT accumulator, bits, pcd_length[3], plane;
+
+	buffer = (BYTE*)malloc(0x800 * sizeof(BYTE));
+	if (buffer == NULL)
+		return FALSE;
+
+	accumulator = 0;
+	bits = 32;
+	p = buffer + 0x800;
+	for (i = 0; i < (image.m_width > 1536 ? 3 : 1); i++) {
+		PCDGETBITS(8);
+		length = (accumulator & 0xff) + 1;
+		pcd_table[i] = (PCDTABLE*)malloc(length * sizeof(PCDTABLE));
+		if (pcd_table[i] == NULL) {
+			free(buffer);
+			return FALSE;
+		}
+
+		r = pcd_table[i];
+		for (j = 0; j < length; j++) {
+			PCDGETBITS(8);
+			r->length = (accumulator & 0xff) + 1;
+			if (r->length > 16) {
+				free(buffer);
+				return FALSE;
+			}
+			PCDGETBITS(16);
+			r->sequence = (accumulator & 0xffff) << 16;
+			PCDGETBITS(8);
+			r->key = accumulator & 0xff;
+			r->mask = (~((((UINT)1) << (32 - r->length)) - 1));
+			r++;
+		}
+		pcd_length[i] = length;
+	}
+
+	// Initialize range limits.
+	range_limit = (BYTE*)malloc(3 * (MAXRGB + 1));
+	if (range_limit == NULL) {
+		free(buffer);
+		return FALSE;
+	}
+
+	for (i = 0; i <= MAXRGB; i++) {
+		range_limit[i] = 0;
+		range_limit[i + (MAXRGB + 1)] = (BYTE)i;
+		range_limit[i + (MAXRGB + 1) * 2] = MAXRGB;
+	}
+	range_limit += (MAXRGB + 1);
+
+	// Search for Sync byte.
+	do {
+		PCDGETBITS(16)
+	} while (0);
+	do {
+		PCDGETBITS(16)
+	} while (0);
+	while ((accumulator & 0x00fff000) != 0x00fff000)
+		PCDGETBITS(8);
+	while (!ISSYNC)
+		PCDGETBITS(1);
+
+	// Recover the Huffman encoded luminance and chrominance deltas.
+	count = 0;
+	length = 0;
+	plane = 0;
+	q = luma;
+	for ( ; ; ) {
+		if (ISSYNC) {
+			// Determine plane and row number.
+			PCDGETBITS(16);
+			row = ((accumulator >> 9) & 0x1fff);
+			if (row == image.m_height)
+				break;
+
+			PCDGETBITS(8);
+			plane = accumulator >> 30;
+			PCDGETBITS(16);
+			switch (plane) {
+				case 0:
+					q = luma + row * image.m_width;
+					count = image.m_width;
+					break;
+
+				case 2:
+					q = chroma1 + (row >> 1) * image.m_width;
+					count = image.m_width >> 1;
+					plane--;
+					break;
+
+				case 3:
+					q = chroma2 + (row >> 1) * image.m_width;
+					count = image.m_width >> 1;
+					plane--;
+					break;
+
+				default:
+					return FALSE;
+			}
+			length = pcd_length[plane];
+			continue;
+		}
+
+		// Decode luminance or chrominance deltas.
+		r = pcd_table[plane];
+		for (i = 0; (i < length && (accumulator & r->mask) != r->sequence); i++)
+			r++;
+
+		if (r == NULL) {
+			while ((accumulator & 0x00fff000) != 0x00fff000)
+				PCDGETBITS(8);
+			while (!ISSYNC)
+				PCDGETBITS(1);
+			continue;
+		}
+
+		if (r->key < 128)
+			*q = range_limit[(int)*q + (int)r->key];
+		else
+			*q = range_limit[(int)*q + (int)r->key - 256];
+		q++;
+		PCDGETBITS(r->length);
+		count--;
+	}
+
+	// Free memory.
+	for (i = 0; i < (image.m_width > 1536 ? 3 : 1); i++)
+		free(pcd_table[i]);
+	range_limit -= (MAXRGB + 1);
+	free(range_limit);
+	free(buffer);
+
+	return TRUE;
+}
+
+void TransformRGBImage(mif& image, UINT cls)
+{
+	long *basetable, *btb, *gtb, *rtb;
+	BYTE* range_table;
+	register int i, x, y, z, v;
+	register BYTE* range_limit;
+	register RGBA* p;
+
+	if (cls == COLSPC_RGB || cls == COLSPC_GRAY || cls == COLSPC_TRANSPARENT)
+		return;
+
+	if (cls == COLSPC_CMYK) {
+		unsigned int black, cyan, magenta, yellow;
+
+		// Transform image from CMYK to RGB.
+		p = image.m_pixels;
+		for (i = 0; i < image.m_packets; i++) {
+			cyan = p->red;
+			magenta = p->green;
+			yellow = p->blue;
+			black = p->alpha;
+			p->red = ((cyan + black) > MAXRGB) ? 0 : MAXRGB - (cyan + black);
+			p->green = ((magenta + black) > MAXRGB) ? 0: MAXRGB - (magenta + black);
+			p->blue = ((yellow + black) > MAXRGB) ? 0 : MAXRGB - (yellow + black);
+			p->alpha = 0;
+			p++;
+		}
+		return;
+	}
+
+	// Allocate the tables.
+	basetable = (long*)malloc(9 * (MAXRGB + 1) * sizeof(long));
+	rtb = basetable;
+	gtb = &basetable[3 * (MAXRGB + 1)];
+	btb = &basetable[6 * (MAXRGB + 1)];
+
+	range_table = (BYTE*)malloc(4 * (MAXRGB + 1) * sizeof(BYTE));
+	if (!basetable || !range_table)
+		return;
+
+	// Initialize tables.
+	for (i = 0; i <= MAXRGB; i++) {
+		range_table[i] = 0;
+		range_table[i + (MAXRGB + 1)] = (BYTE)i;
+		range_table[i + (MAXRGB + 1) * 2] = MAXRGB;
+	}
+	for (i = 0; i <= MAXRGB; i++)
+		range_table[i + (MAXRGB + 1) * 3] = MAXRGB;
+
+	range_limit = range_table + (MAXRGB + 1);
+	switch (cls) {
+		case COLSPC_YCC:
+			// Initialize YCC tables:
+			//		R = Y            +1.340762*C2
+			//		G = Y-0.317038*C1-0.682243*C2
+			//		B = Y+1.632639*C1
+			// YCC is scaled by 1.3584.  C1 zero is 156 and C2 is at 137.
+			for (i = 0; i <= MAXRGB; i++) {
+				rtb[i + R] = UPSHIFTED(1.35840) * i;
+				gtb[i + R] = 0;
+				btb[i + R] = UPSHIFTED(1.82150) * (i - 137);
+				rtb[i + G] = UPSHIFTED(1.35840) * i;
+				gtb[i + G] = (-(int)(UPSHIFTED(0.19400 * 2.21790) * (i - 156)));
+				btb[i + G] = (-(int)(UPSHIFTED(0.50900 * 1.82150) * (i - 137)));
+				rtb[i + B] = UPSHIFTED(1.35840) * i;
+				gtb[i + B] = UPSHIFTED(2.21790) * (i - 156);
+				btb[i + B] = 0;
+				range_table[i + (MAXRGB + 1)] = YCCMap[i];
+			}
+			for ( ; i < 351; i++)
+				range_table[i + (MAXRGB + 1)] = YCCMap[i];
+			break;
+
+////////////////////////////////
+// Ç∆ÇËÇ†Ç¶Ç∏óòópÇµÇƒÇ¢Ç»Ç¢ÇÃÇ≈
+#if 0
+		case COLSPC_OHTA:
+			// Initialize OHTA tables:
+			//		R = I1+1.00000*I2-0.66668*I3
+			//		G = I1+0.00000*I2+1.33333*I3
+			//		B = I1-1.00000*I2-0.66668*I3
+			// I and Q, normally -0.5 through 0.5, must be normalized to
+			// the range 0 through MaxRGB.
+			for (i = 0; i <= MAXRGB; i++) {
+				v = (i << 1) - MAXRGB;
+				rtb[i + R] = UPSHIFTED(1.00000) * i;
+				gtb[i + R] = UPSHIFTED(1.0000 * 0.5) * v;
+				btb[i + R] = (-UPSHIFTED(0.66668 * 0.5)) * v;
+				rtb[i + G] = UPSHIFTED(1.00000) * i;
+				gtb[i + G] = 0;
+				btb[i + G] = UPSHIFTED(1.33333 * 0.5) * v;
+				rtb[i + B] = UPSHIFTED(1.00000) * i;
+				gtb[i + B] = (-UPSHIFTED(1.00000 * 0.5)) * v;
+				btb[i + B] = (-UPSHIFTED(0.66668*0.5)) * v;
+			}
+			break;
+
+		case COLSPC_SRGB:
+			// Initialize sRGB tables:
+			//		R = Y            +1.032096*C2
+			//		G = Y-0.326904*C1-0.704445*C2
+			//		B = Y+1.685070*C1
+			// sRGB is scaled by 1.3584.  C1 zero is 156 and C2 is at 137.
+			for (i = 0; i <= MAXRGB; i++) {
+				rtb[i + R] = UPSHIFTED(1.40200) * i;
+				gtb[i + R] = 0;
+				btb[i + R] = UPSHIFTED(1.88000) * (i - 137);
+				rtb[i + G] = UPSHIFTED(1.40200) * i;
+				gtb[i + G] = (-(int)(UPSHIFTED(0.19400 * 2.28900) * (i - 156)));
+				btb[i + G] = (-(int)(UPSHIFTED(0.50900 * 1.88000) * (i - 137)));
+				rtb[i + B] = UPSHIFTED(1.40200) * i;
+				gtb[i + B] = UPSHIFTED(2.28900) * (i - 156);
+				btb[i + B] = 0;
+				range_table[i + (MAXRGB + 1)] = sRGBMap[i];
+			}
+			for ( ; i < 351; i++)
+				range_table[i + (MAXRGB + 1)] = sRGBMap[i];
+			break;
+
+		case COLSPC_YCBCR:
+			// Initialize YCbCr tables:
+			//		R = Y            +1.402000*Cr
+			//		G = Y-0.344136*Cb-0.714136*Cr
+			//		B = Y+1.772000*Cb
+			// Cb and Cr, normally -0.5 through 0.5, must be normalized to
+			// the range 0 through MaxRGB.
+			for (i = 0; i <= MAXRGB; i++) {
+				v = (i << 1) - MAXRGB;
+				rtb[i + R] = UPSHIFTED(1.000000) * i;
+				gtb[i + R] = 0;
+				btb[i + R] = UPSHIFTED(1.402000 * 0.5) * v;
+				rtb[i + G] = UPSHIFTED(1.000000) * i;
+				gtb[i + G] = (-UPSHIFTED(0.344136 * 0.5)) * v;
+				btb[i + G] = (-UPSHIFTED(0.714136 * 0.5)) * v;
+				rtb[i + B] = UPSHIFTED(1.000000) * i;
+				gtb[i + B] = UPSHIFTED(1.772000 * 0.5) * v;
+				btb[i + B] = 0;
+			}
+			break;
+
+		case COLSPC_YIQ:
+			// Initialize YIQ tables:
+			//		R = Y+0.95620*I+0.62140*Q
+			//		G = Y-0.27270*I-0.64680*Q
+			//		B = Y-1.10370*I+1.70060*Q
+			// I and Q, normally -0.5 through 0.5, must be normalized to
+			// the range 0 through MAXRGB.
+			for (i = 0; i <= MAXRGB; i++) {
+				v = (i << 1) - MAXRGB;
+				rtb[i + R] = UPSHIFTED(1.00000) * i;
+				gtb[i + R] = UPSHIFTED(0.95620 * 0.5) * v;
+				btb[i + R] = UPSHIFTED(0.62140 * 0.5) * v;
+				rtb[i + G] = UPSHIFTED(1.00000) * i;
+				gtb[i + G] = (-UPSHIFTED(0.27270 * 0.5)) * v;
+				btb[i + G] = (-UPSHIFTED(0.64680 * 0.5)) * v;
+				rtb[i + B] = UPSHIFTED(1.00000) * i;
+				gtb[i + B] = (-UPSHIFTED(1.10370 * 0.5)) * v;
+				btb[i + B] = UPSHIFTED(1.70060 * 0.5) * v;
+			}
+			break;
+
+		case COLSPC_YPBPR:
+			// Initialize YPbPr tables:
+			//		R = Y            +1.402000*C2
+			//		G = Y-0.344136*C1+0.714136*C2
+			//		B = Y+1.772000*C1
+			// Pb and Pr, normally -0.5 through 0.5, must be normalized to
+			// the range 0 through MaxRGB.
+			for (i = 0; i <= MAXRGB; i++) {
+				v = (i << 1) - MAXRGB;
+				rtb[i + R] = UPSHIFTED(1.000000) * i;
+				gtb[i + R] = 0;
+				btb[i + R] = UPSHIFTED(1.402000 * 0.5) * v;
+				rtb[i + G] = UPSHIFTED(1.000000) * i;
+				gtb[i + G] = (-UPSHIFTED(0.344136 * 0.5)) * v;
+				btb[i + G] = UPSHIFTED(0.714136 * 0.5) * v;
+				rtb[i + B] = UPSHIFTED(1.000000) * i;
+				gtb[i + B] = UPSHIFTED(1.772000 * 0.5) * v;
+				btb[i + B] = 0;
+			}
+			break;
+
+		case COLSPC_YUV:
+			// Initialize YUV tables:
+			//		R = Y          +1.13980*V
+			//		G = Y-0.39380*U-0.58050*V
+			//		B = Y+2.02790*U
+			// U and V, normally -0.5 through 0.5, must be normalized to
+			// the range 0 through MaxRGB.
+			for (i = 0; i <= MAXRGB; i++) {
+				v = (i << 1) - MAXRGB;
+				rtb[i + R] = UPSHIFTED(1.00000) * i;
+				gtb[i + R] = 0;
+				btb[i + R] = UPSHIFTED(1.13980 * 0.5) * v;
+				rtb[i + G] = UPSHIFTED(1.00000) * i;
+				gtb[i + G] = (-UPSHIFTED(0.39380 * 0.5)) * v;
+				btb[i + G] = (-UPSHIFTED(0.58050 * 0.5)) * v;
+				rtb[i + B] = UPSHIFTED(1.00000) * i;
+				gtb[i + B] = UPSHIFTED(2.02790 * 0.5) * v;
+				btb[i + B] = 0;
+			}
+			break;
+#endif
+//
+////////////////////////////////
+
+		default:
+			break;
+	}
+
+	// Convert to RGB.
+	switch (image.m_bits) {
+		case 24:
+		default:
+			p = image.m_pixels;
+			for (i=0; i < image.m_packets; i++) {
+				x = p->red;
+				y = p->green;
+				z = p->blue;
+				v = DOWNSHIFT(rtb[x + R] + gtb[y + R] + btb[z + R]);
+				p->red = range_limit[v];
+				v = DOWNSHIFT(rtb[x + G] + gtb[y + G] + btb[z + G]);
+				p->green = range_limit[v];
+				v = DOWNSHIFT(rtb[x + B] + gtb[y + B] + btb[z + B]);
+				p->blue = range_limit[v];
+				p++;
+			}
+			break;
+
+		case 1:
+		case 4:
+		case 8:
+			for (i = 0; i < image.m_colors; i++) {
+				x = image.m_map[i].red;
+				y = image.m_map[i].green;
+				z = image.m_map[i].blue;
+				v = DOWNSHIFT(rtb[x + R] + gtb[y + R] + btb[z + R]);
+				image.m_map[i].red = range_limit[v];
+				v = DOWNSHIFT(rtb[x + G] + gtb[y + G] + btb[z + G]);
+				image.m_map[i].green = range_limit[v];
+				v = DOWNSHIFT(rtb[x + B] + gtb[y + B] + btb[z + B]);
+				image.m_map[i].blue = range_limit[v];
+			}
+			p = image.m_pixels;
+			for (i = 0; i < image.m_packets; i++) {
+				x = p->red;
+				y = p->green;
+				z = p->blue;
+				v = DOWNSHIFT(rtb[x + R] + gtb[y + R] + btb[z + R]);
+				p->red = range_limit[v];
+				v = DOWNSHIFT(rtb[x + G] + gtb[y + G] + btb[z + G]);
+				p->green = range_limit[v];
+ 				v = DOWNSHIFT(rtb[x + B] + gtb[y + B] + btb[z + B]);
+ 				p->blue = range_limit[v];
+				p++;
+			}
+			break;
+	}
+
+	free(range_table);
+	free(basetable);
+}
+
+static HDIB pcd_load_core(filemap& fm, UINT subimage)
+{
+	long offset;
+	register int i;
+	register RGBA* p;
+	register BYTE *c1, *c2, *y;
+	BYTE *chroma1, *chroma2, *luma;
+
+	// Determine if this is a PCD file.
+	BYTE* header = (BYTE*)malloc(3 * 0x800 * sizeof(BYTE));
+	if (header == NULL) {
+		return NULL;
+	}
+
+	if (fm.read(header, 3 * 0x800) != 3 * 0x800) {
+		free(header);
+		return NULL;
+	}
+
+	UINT rotate = header[0x0e02] & 0x03;
+	UINT number_images = (header[10] << 8) | header[11];
+	free(header);
+
+	int width = 192 << (subimage - 1);
+	int height = 128 << (subimage - 1);
+
+	mif image(width, height, 24);
+	chroma1 = (BYTE*)malloc(image.m_packets + 1);
+	chroma2 = (BYTE*)malloc(image.m_packets + 1);
+	luma = (BYTE*)malloc(image.m_packets + 1);
+	if (!chroma1 || !chroma2 || !luma) {
+		return NULL;
+	}
+
+	// Advance to image data.
+	offset = 93;
+	if (subimage == 2)
+		offset = 20;
+	else if (subimage <= 1)
+		offset = 1;
+	fm.seek(offset * 0x800, SEEK_CUR);
+
+	// Read interleaved image.
+	y = luma;
+	c1 = chroma1;
+	c2 = chroma2;
+	for (i = 0; i < height; i += 2) {
+		fm.read(y, width);
+		y += image.m_width;
+
+		fm.read(y, width);
+		y += image.m_width;
+
+		fm.read(c1, width >> 1);
+		c1 += image.m_width;
+
+		fm.read(c2, width >> 1);
+		c2 += image.m_width;
+	}
+
+	if (subimage >= 4) {
+		// Recover luminance deltas for 1536x1024 image.
+		Upsample(768, 512, image.m_width, luma);
+		Upsample(384, 256, image.m_width, chroma1);
+		Upsample(384, 256, image.m_width, chroma2);
+		image.m_height = 1024;
+
+		fm.seek(4 * 0x800, SEEK_CUR);
+		UINT status = PCDDecodeImage(fm, image, luma, chroma1, chroma2);
+		if (subimage >= 5 && status) {
+			// Recover luminance deltas for 3072x2048 image.
+			Upsample(1536, 1024, image.m_width, luma);
+			Upsample(768, 512, image.m_width, chroma1);
+			Upsample(768, 512, image.m_width, chroma2);
+			image.m_height = 2048;
+			offset = fm.seek(0, SEEK_CUR) / 0x800 + 12;
+			fm.seek(offset * 0x800, SEEK_SET);
+			status = PCDDecodeImage(fm, image, luma, chroma1, chroma2);
+			if (subimage >= 6 && status) {
+				// Recover luminance deltas for 6144 x 4096 image (vaporware).
+				Upsample(3072, 2048, image.m_width, luma);
+				Upsample(1536, 1024, image.m_width, chroma1);
+				Upsample(1536, 1024, image.m_width, chroma2);
+				image.m_height = 4096;
+			}
+		}
+	}
+
+	Upsample(image.m_width >> 1, image.m_height >> 1, image.m_width, chroma1);
+	Upsample(image.m_width >> 1, image.m_height >> 1, image.m_width, chroma2);
+
+	// Transfer luminance and chrominance channels.
+	p = image.m_pixels;
+	y = luma;
+	c1 = chroma1;
+	c2 = chroma2;
+	for (i = 0; i < image.m_packets; i++) {
+		p->red = *y++;
+		p->green = *c1++;
+		p->blue = *c2++;
+		p++;
+	}
+	free(chroma2);
+	free(chroma1);
+	free(luma);
+
+//@	if (Latin1Compare(image_info->magick,"PCDS") == 0)
+//@		TransformRGBImage(pImage, COLSPC_SRGB);
+//@	else
+		TransformRGBImage(image, COLSPC_YCC);
+
+	if (rotate == 1 || rotate == 3)
+		image.rotate(rotate == 1);
+	return image.createdib();
+}
+
+#if 0
+extern "C"
+HDIB WINAPI imgPcdLoadEx(LPCTSTR pszFile, UINT subimage)
+{
+	// subimage	ÉTÉCÉY			ÉsÉNÉZÉãêî		égópÉÅÉÇÉäêî 
+	// 1		1/16BASE		128Å~192		72KB
+	// 2		1/4BASE			256Å~384		288KB
+	// 3		BASE			512Å~768		1.2MB
+	// 4		4BASE			1024Å~1536		4.5MB
+	// 5		16BASE			2048Å~3072		18MB
+	// 6		64BASE			4096Å~6144		72MB
+	// Determine resolution by subimage specification.
+
+	if (subimage < 1 || subimage > 6) return NULL;
+
+	filemap fm;
+	if (!fm.open(pszFile)) return NULL;
+
+	return pcd_load_core(fm, subimage);
+}
+#endif
+
+#include "libpcd\pcd.h"
+
+extern "C"
+HDIB WINAPI imgPcdLoadEx(LPCTSTR pszFile, int subimage)
+{
+	// subimage	ÉTÉCÉY			ÉsÉNÉZÉãêî		égópÉÅÉÇÉäêî 
+	// 1		1/16BASE		128Å~192		72KB
+	// 2		1/4BASE			256Å~384		288KB
+	// 3		BASE			512Å~768		1.2MB
+	// 4		4BASE			1024Å~1536		4.5MB
+	// 5		16BASE			2048Å~3072		18MB
+	// 6		64BASE			4096Å~6144		72MB
+	// Determine resolution by subimage specification.
+
+	if (subimage < 1 || subimage > 6) return NULL;
+
+	PCD_IMAGE pcd;
+	if (pcd_open(&pcd, pszFile) != 0) return NULL;
+	int rot = pcd_get_rot(&pcd, 0);
+	subimage = min(subimage, pcd_get_maxres(&pcd));
+
+	int width = 0, height = 0;
+	if (pcd_select(&pcd, subimage, 0, rot, &width, &height) == -1) {
+		pcd_close(&pcd);
+		return NULL;
+    }
+
+	mif image(width, height, 24);
+	if (pcd_decode(&pcd ) == -1) {
+		pcd_close(&pcd);
+		return NULL;
+    }
+
+	BYTE* data = (BYTE*)malloc(width * 3);
+    for (int y = 0; y < height; y++) {
+		if (pcd_get_image_line(&pcd, y, data) == -1) {
+			pcd_close(&pcd);
+			return NULL;
+	    }
+
+		RGBA* p = image.pos(0, y);
+		BYTE* q = data;
+		for (int x = 0; x < width; x++) {
+			p->red = *q++;
+			p->green = *q++;
+			p->blue = *q++;
+			p++;
+		}
+    }
+	pcd_close(&pcd);
+	free(data);
+
+	return image.createdib();
+}
+
+extern "C"
+HDIB WINAPI imgPcdLoad(LPCTSTR pszFile)
+{
+	return imgPcdLoadEx(pszFile, 3);
+}
+

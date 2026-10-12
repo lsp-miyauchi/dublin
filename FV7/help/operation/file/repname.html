@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<TITLE>名前を一括して置換する</TITLE>
+<link rel=stylesheet type="text/css" href="../../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../../index.html">TOP</a> &rsaquo;
+<a href="../../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="../index.html">操作別解説</a> &rsaquo;
+<a href="index.html">ファイル操作</a> &rsaquo;
+<a href="chgnames.html">名前の置換</a> &rsaquo;
+名前を一括して置換する
+</div>
+<!-- 本体 -->
+<h2>名前を一括して置換する</h2>
+<p>ファイルペインで現在選択されているファイルオブジェクトのファイル名の特定文字列を、
+指定の文字列に置換し、ファイル名を変更します。</p>
+<p>例えば、“ABC???.TXT”( ???は任意 ）という一連のファイルが存在し、
+これらのファイル名を “BCD???.TXT” と名前変更したい場合には、対象文字列に“ABC”を、
+置換後の文字列に “BCD” を指定すれば、個々のファイルを１つづつ名前変更する手間が大幅に省けます。</p>
+
+<h4>正規表現で対象を指定</h4>
+<p>この項目をチェックすると、置換元文字列を正規表現として利用します。<br>
+置換元で{}を用いて対象文字列を指定し、置換先文字列に$N（N=1～9）を指定することで、マッチ文字列を引用することも可能です。</p>
+<table border=0 cellpadding=0 cellspacing=3>
+	<tr><td colspan="2">例）</td></tr>
+	<tr><td>ファイル名:</td><td nowrap>"Hello world Goodbye world.txt"</td></tr>
+	<tr><td>置換元:</td><td nowrap>"{\w}"</td></tr>
+	<tr><td>置換先:</td><td nowrap>"$1!"</td></tr>
+	<tr><td>置換後:</td><td nowrap>"Hello! world! Goodbye! world!.txt!"</td></tr>
+</table>
+
+<h4>大文字小文字を区別する</h4>
+<p>この項目をチェックすると、“Abc” と “ABc” は文字列として一致しません。</p>
+
+<h4>一致するすべてを置換する</h4>
+<p>この項目をチェックすると、置換対象となる文字列がファイル名中に複数存在する場合、それらすべてが新しい文字列に置換されます。チェックしない場合には、最初に見つかった文字列のみを置換すます。</p>
+
+<h4>拡張子は除外する</h4>
+<p>この項目をチェックすると、置換の対象から拡張子を除きます。</p>
+
+<div class="info1 top2">
+	<b>文字列を削除するには</b><br>
+	<p>対象となる文字列を指定し、置換後の文字列を未指定のまま実行すると、ファイル名中の対象文字列を削除することができます。</p>
+</div>
+<div class="info1">
+	<b>文字列を追加するには</b><br>
+	<p>対象となる文字列を未指定とし、置換後の文字列を指定して実行すると、ファイル名の先頭に置換文字列を付加することができます。
+	また、置換文字列の先頭に半角記号の “&gt;” を指定しておけば、文字列をファイル名の末尾に追加することができます。</p>
+</div>
+
+<h3>関連項目:<a href="../regexp.html">正規表現</a></h3>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

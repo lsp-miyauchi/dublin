@@ -1,0 +1,5 @@
+/* part css */
+
+ul { padding-left:1em; }
+li { color: #444444; line-height: 120%; padding-bottom: 4px; }
+.itemcontainer { background: transparent url(../images/paper_end.gif) bottom repeat-x scroll; }

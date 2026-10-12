@@ -1,0 +1,249 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""res\\rcdata.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 7,4,0,12
+ PRODUCTVERSION 7,4,0,12
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104b0"
+        BEGIN
+            VALUE "FileDescription", "txtinput plug-in"
+            VALUE "FileVersion", "7.4.0.12"
+            VALUE "InternalName", "txtinput"
+            VALUE "OriginalFilename", "txtinput.dll"
+            VALUE "ProductVersion", "7.4.0.12"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TEXTINPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 507
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_BUMPMAPSTRING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_TEXTINPUT DLGINIT
+BEGIN
+    IDC_ANTIALIAS, 0x403, 7, 0
+0x8a8a, 0xe782, 0xa982, "\000" 
+    IDC_ANTIALIAS, 0x403, 5, 0
+0x4e91, 0xbe96, "\000" 
+    IDC_ANTIALIAS, 0x403, 5, 0
+0xad8b, 0xad82, "\000" 
+    IDC_FORMAT, 0x403, 3, 0
+0xb68d, "\000" 
+    IDC_FORMAT, 0x403, 5, 0
+0x8692, 0x9b89, "\000" 
+    IDC_FORMAT, 0x403, 3, 0
+0x4589, "\000" 
+    IDC_DCOMBO, 0x403, 9, 0
+0xb68d, 0xa982, 0xe782, 0x4589, "\000" 
+    IDC_DCOMBO, 0x403, 9, 0
+0xe38f, 0xa982, 0xe782, 0xba89, "\000" 
+    IDC_DCOMBO, 0x403, 13, 0
+0xb68d, 0xe38f, 0xa982, 0xe782, 0x4589, 0xba89, "\000" 
+    0
+END
+
+IDD_BUMPMAPSTRING DLGINIT
+BEGIN
+    IDC_ANTIALIAS, 0x403, 9, 0
+0x8a8a, 0xe782, 0xa982, 0xc982, "\000" 
+    IDC_ANTIALIAS, 0x403, 5, 0
+0x4e91, 0xbe96, "\000" 
+    IDC_ANTIALIAS, 0x403, 5, 0
+0xad8b, 0xad82, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TEXTINPUT DIALOGEX 0, 0, 514, 249
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "文字入力"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "文字列(&T):",IDC_STATIC,7,174,37,8
+    EDITTEXT        IDC_EDIT,7,184,269,58,ES_MULTILINE | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    LTEXT           "フォント(&F):",IDC_STATIC,7,7,35,8
+    CONTROL         "",IDC_FONT,"LSCFontPick",WS_TABSTOP | 0x1,7,16,154,14,WS_EX_CLIENTEDGE
+    LTEXT           "アンチエリアス(&A):",IDC_STATIC,167,7,54,8
+    COMBOBOX        IDC_ANTIALIAS,168,16,57,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "配置(&P):",IDC_STATIC,230,7,29,8
+    COMBOBOX        IDC_FORMAT,229,16,48,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "文字幅(&W)",IDC_WSLIDER,"LSCTrack",WS_TABSTOP,7,34,154,10
+    CONTROL         "不透明度(&O)",IDC_OSLIDER,"LSCTrack",WS_TABSTOP,7,45,154,10
+    CONTROL         "傾斜(&S)",IDC_SSLIDER,"LSCTrack",WS_TABSTOP,168,34,109,10
+    GROUPBOX        "",IDC_STATIC,7,61,154,59
+    CONTROL         "ドロップシャドウ(&D)",IDC_DROPSHADOW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,60,72,10
+    CONTROL         "",IDC_SHADOWCOLOR,"LSCColorPick",WS_TABSTOP | 0x2,88,59,32,13,WS_EX_CLIENTEDGE
+    CONTROL         "拡散",IDC_GSLIDER,"LSCTrack",WS_TABSTOP,16,78,138,10
+    CONTROL         "距離",IDC_DSLIDER,"LSCTrack",WS_TABSTOP,16,89,138,10
+    CONTROL         "不透明度",IDC_SHADOWOPAQUE,"LSCTrack",WS_TABSTOP,16,100,138,10
+    GROUPBOX        "",IDC_STATIC,7,126,154,43
+    CONTROL         "文字を立体化(&E)",IDC_EMBOSS_EDGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,125,71,10
+    CONTROL         "照射角(&A)",IDC_AZIMUTH,"LSCTrack",WS_TABSTOP,15,139,138,10
+    CONTROL         "高さ(&E)",IDC_ELEVATION,"LSCTrack",WS_TABSTOP,15,150,138,10
+    GROUPBOX        "",IDC_STATIC,168,61,109,36
+    CONTROL         "袋文字(&O)",IDC_OUTLINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,61,49,10
+    CONTROL         "内部を塗る(&I)",IDC_DRAWINNER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,176,77,60,10
+    CONTROL         "",IDC_INNERCOLOR,"LSCColorPick",WS_TABSTOP | 0x2,237,75,32,13,WS_EX_CLIENTEDGE
+    GROUPBOX        "反転",IDC_STATIC,168,101,109,43
+    CONTROL         "左右に反転する(&H)",IDC_FLIP_HORZ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,114,77,10
+    CONTROL         "上下に反転する(&V)",IDC_FLIP_VERT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,180,126,76,10
+    CONTROL         "",IDC_COLOR,"LSCGradEdit",WS_TABSTOP,285,7,172,29
+    PUSHBUTTON      "リスト(&L)...",IDC_GRADEDIT,460,7,46,14
+    PUSHBUTTON      "リセット(&R)",IDC_RESET,460,22,46,14
+    LTEXT           "塗りの向き(&D):",IDC_STATIC,285,41,48,8
+    COMBOBOX        IDC_DCOMBO,335,39,66,86,CBS_DROPDOWNLIST | WS_TABSTOP
+    CONTROL         "",IDC_PREVIEW,"LSCZoomView",WS_TABSTOP | 0x2,285,57,222,164,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "読み込み",IDC_LOAD,285,228,50,14
+    PUSHBUTTON      "保存",IDC_SAVE,340,228,50,14
+    DEFPUSHBUTTON   "OK",IDOK,402,228,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,457,228,50,14
+END
+
+IDD_BUMPMAPSTRING DIALOGEX 0, 0, 275, 294
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "透かし文字入力"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "文字列(&T):",IDC_STATIC,7,170,40,8
+    EDITTEXT        IDC_EDIT,49,168,219,14,ES_AUTOHSCROLL
+    LTEXT           "フォント(&F):",IDC_STATIC,7,7,57,8
+    CONTROL         "",IDC_FONT,"LSCFontPick",WS_TABSTOP | 0x1,7,17,191,14,WS_EX_CLIENTEDGE
+    LTEXT           "アンチエリアス:",IDC_STATIC,204,7,56,8
+    COMBOBOX        IDC_ANTIALIAS,204,17,64,74,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "文字幅",IDC_WSLIDER,"LSCTrack",WS_TABSTOP,7,37,225,11
+    LTEXT           "%",IDC_STATIC,236,39,8,8
+    CONTROL         "傾斜角",IDC_SSLIDER,"LSCTrack",WS_TABSTOP,7,49,225,11
+    LTEXT           "度",IDC_STATIC,236,50,8,8
+    GROUPBOX        "透かし効果",IDC_STATIC,7,71,261,87
+    GROUPBOX        "マッピング手法",IDC_STATIC,16,86,59,58
+    CONTROL         "線形(&L)",IDC_LINEAR,"Button",BS_AUTORADIOBUTTON,24,100,38,10
+    CONTROL         "球形(&S)",IDC_SPHERICAL,"Button",BS_AUTORADIOBUTTON,24,113,38,10
+    CONTROL         "湾曲(&O)",IDC_SINUOSIDAL,"Button",BS_AUTORADIOBUTTON,24,126,38,10
+    CONTROL         "照射角(&A)",IDC_AZIMUTH,"LSCTrack",WS_TABSTOP,82,87,178,11
+    CONTROL         "高さ(&E)",IDC_ELEVATION,"LSCTrack",WS_TABSTOP,82,99,178,11
+    CONTROL         "深度(&D)",IDC_DEPTH,"LSCTrack",WS_TABSTOP,82,111,178,11
+    CONTROL         "光度(&L)",IDC_LIGHTNING,"LSCTrack",WS_TABSTOP,82,123,178,11
+    CONTROL         "効果を反転する(&I)",IDC_INVERT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,83,139,78,10
+    CONTROL         "",IDC_PREVIEW,"LSCZoomView",WS_TABSTOP | 0x2,7,188,261,75,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "読み込み",IDC_LOAD,7,273,50,14
+    PUSHBUTTON      "保存",IDC_SAVE,64,273,50,14
+    DEFPUSHBUTTON   "OK",IDOK,164,273,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,218,273,50,14
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "res\rcdata.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

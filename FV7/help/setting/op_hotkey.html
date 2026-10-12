@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head><meta http-equiv="Content-Language" content="ja">
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8">
+<meta name="keywords" content="ホットキー;">
+<TITLE>ホットキー</TITLE>
+<link rel=stylesheet type="text/css" href="../help.css" title="style">
+</head>
+<body><div class="rib">FileVisor7 オンラインヘルプ</div>
+<!-- 階層リンク -->
+<div class="tree">
+<a href="https://lightship.co.jp/FileVisor7/" target="_blank">Home</a> &rsaquo;
+<a href="../index.html">TOP</a> &rsaquo;
+<a href="../refer_index.html">FileVisorの使い方</a> &rsaquo;
+<a href="index.html">各種設定</a> &rsaquo;
+<a href="index.html">オプション</a> &rsaquo;
+ホットキー
+</div>
+<!-- 本体 -->
+<h2>ホットキー</h2>
+<p>ホットキー（<kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd>~<kbd>Z</kbd>）に、
+任意の実行コマンドマクロを割り当てます。</p>
+<p>コマンド設定一覧ダイアログボックスの中から、編集するキーをダブルクリックするか、
+選択して【編集】ボタンをクリックすると、編集用ダイアログボックスが表示されます。</p>
+<p>各コマンドはタイトル・実行プログラム名・引数・起動フォルダの設定が可能です。
+ホットキー・コマンド実行時にコマンドラインを編集したい場合には、「実行時にコマンドラインを編集する」をチェックします。</p>
+
+<h4>引数の記述でマクロを使う</h4>
+<p>引数にはFileVisor独自のマクロを指定できます。引数には、次のマクロが利用できます。</p>
+<table class="ccf btm1">
+	<tr><th>マクロ機能</th><th></th></tr>
+	<tr><td><b>$P</b></td>
+		<td>現在表示中のドライブ・フォルダ名を取り込みます。</td></tr>
+	<tr><td><b>$F</b></td>
+		<td>キャレット位置のファイル名を取り込みます。</td></tr>
+	<tr><td><b>$M</b></td>
+		<td>現在選択されているファイル名を列挙します。パス名は付加されません。</td></tr>
+	<tr><td><b>$N</b></td>
+		<td>キャレット位置の拡張子を除いたファイル名を取り出します。パス名は付加されません。</td></tr>
+	<tr><td><b>$E</b></td>
+		<td>キャレット位置のファイル名の拡張子を取り出します（“.”を含む）。</td></tr>
+</table>
+
+<h4>プログラム名の記述でマクロを使う</h4>
+<p>プログラム名には、実際のプログラムファイル名のほかに、FileVisorをドライブするマクロ命令も指定できます。マクロ命令には、次のものが利用できます。</p>
+<table border=0 class="ccf btm1">
+	<tr><th>マクロ命令機能</th><th></th></tr>
+	<tr><td nowrap><b>%SORT%</b></td>
+		<td>指定のソート条件で現在表示しているフォルダ内容をソートします。引数にソート種別とソート順序を指定でき、以下の組み合わせを利用できます。<br>
+		<table border=0 celspacing=0 cellpadding=0>
+			<tr><td nowrap>ソート種別：</td>
+				<td><b>NAME, EXT, TIME, ATTR, NONE</b></td></tr>
+			<tr><td nowrap>ソート順序：</td>
+				<td><b>UP, DOWN</b></td></tr>
+		</table>
+		例えば、時間で降順にソートする場合には、引数に「TIME,DOWN」と登録します。
+		種別と順序は“，”（カンマ）で区切ってください。</td></tr>
+	<tr><td nowrap><b>%FILTER%</b></td>
+		<td>フィルタ（ワイルドカード）を適用します。引数にフィルタを指定でき、
+			複数のフィルタを定義する場合には“；”（セミコロン）で区切ります。</td></tr>
+	<tr><td nowrap><b>%JUMP%</b></td>
+		<td>引数に指定されたフォルダをFileVisor7で開きます。</td></tr>
+	<tr><td nowrap><b>%SELECT%</b></td>
+		<td>一括選択を適用します。特定のファイルを選択する場合に便利です。引数にフィルタを指定でき、複数のフィルタを定義する場合には“；”（セミコロン）で区切ります。</td></tr>
+	<tr><td nowrap><b>%SELECTREGEXP%</b></td>
+		<td>上記とほぼ同様ですが、引数として指定されたフィルタを<a href="../operation/regexp.html"> 正規表現 </a>として扱います。</td></tr>
+</table>
+
+<h4>ホットキーの実行方法</h4>
+<p>ホットキーを実行するには、</p>
+<ul>
+	<li><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>A</kbd>~<kbd>Z</kbd>の押下で</li>
+	<li>［ファイル］－［ホットキー・メニュー］で一覧メニューを表示させて</li>
+</ul>
+<p>のいずれかで実行することができます。</p>
+<div class="sep" style="margin:1em"></div>
+<div class="info1">
+	実行プログラム名やコマンドライン引数を指定する際、
+	そのプログラム名や引数に空白を含むパス名に指定する場合には、
+	それらを "..."（ダブルクォーテーション）で括る必要があります。<br>
+	<p>引数でパス名マクロ（$P）やファイル名マクロ（$F/$M）を利用するときにも上記の指定は必要となります。
+	この場合には、"$P$F" のように、マクロ自体をダブルクォーテーションで括ってください。</p>
+	<p>メモ帳でキャレット位置のファイルを編集するコマンドを設定する場合は次のようになります。</p>
+	<ul>
+		<p>「c:\Windows\Notepad.exe "$P$F"」</p>
+	</ul>
+	<p>なお、空白を含むパス名をダブルクォーテーションで括る必要があるか否かについては、
+	起動するアプリケーションがどのようにコマンド引数を解析するか、
+	によっても動作が変わる可能性がありますので、コマンド定義の際には試行をおこない、
+	設定に問題ないか確認してください。</p>
+</div>
+
+<div class="info1">
+	起動フォルダを指定しない場合には、FileVisorのカレントフォルダが起動フォルダとなります。
+</div>
+
+<!-- copyright -->
+<div class="copyright">Copyright &copy; 1994-2016 <a href="https://lightship.co.jp/" target="_blank">LightShip Software</a> All rights </div>
+</body>
+</html>

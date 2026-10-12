@@ -1,0 +1,203 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "unzver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,95,0,20
+ PRODUCTVERSION 0,95,0,20
+ FILEFLAGSMASK 0x3L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041103a4"
+        BEGIN
+            VALUE "CompanyName", "LightShip Software"
+            VALUE "FileDescription", "LightShip's Unzip"
+            VALUE "FileVersion", "0.95.0.20"
+            VALUE "InternalName", "LSPUZP"
+            VALUE "LegalCopyright", "Info-ZIP 1996-1998 & K.Miyauchi 1999-2015"
+            VALUE "OriginalFilename", "LSPUZP.DLL"
+            VALUE "ProductName", "LightShip's Unzip"
+            VALUE "ProductVersion", "0.95.0.20"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 932
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""unzver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PASSWORD DIALOGEX 0, 0, 201, 79
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "パスワードの入力"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "解凍するにはパスワードが必要です。",IDC_STATIC,31,9,163,8
+    LTEXT           "",IDC_TEXT,31,20,163,8
+    LTEXT           "パスワード(&P):",IDC_STATIC,7,38,43,8
+    EDITTEXT        IDC_EDIT,53,36,141,14,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,44,59,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,107,59,50,14
+    ICON            IDI_PASSWORD,IDC_STATIC,7,7,21,20
+END
+
+IDD_RELAY DIALOGEX 0, 0, 299, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ZIP書庫の解凍"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    PUSHBUTTON      "キャンセル",IDCANCEL,242,52,50,14
+    LTEXT           "",IDC_FROM,34,12,215,8
+    LTEXT           "",IDC_FILE,74,34,208,8
+    LTEXT           "解凍中...",IDC_STATIC,34,34,34,8
+    ICON            IDI_UNZIP,IDC_STATIC,7,7,21,20
+    CONTROL         "",IDC_METER,"msctls_progress32",0x0,7,54,230,12
+END
+
+IDD_REPLACE DIALOGEX 0, 0, 238, 99
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイルの上書き確認"
+FONT 8, "MS Shell Dlg", 400, 0, 0x80
+BEGIN
+    LTEXT           "",IDC_TEXT,36,8,195,8
+    LTEXT           "このファイルは既に存在しています。",IDC_STATIC,36,18,135,8
+    CONTROL         "既存ファイルを上書きする(&O)",IDC_REPLACE,"Button",BS_AUTORADIOBUTTON,24,50,129,10
+    CONTROL         "ファイルを上書きせず無視する(&I)",IDC_IGNORE,"Button",BS_AUTORADIOBUTTON,24,63,129,10
+    DEFPUSHBUTTON   "OK",IDOK,181,37,50,14
+    PUSHBUTTON      "以降全て(&A)",IDC_OKALL,181,54,50,14
+    PUSHBUTTON      "キャンセル",IDCANCEL,181,78,50,14
+    GROUPBOX        "対処方法",IDC_STATIC,11,35,159,47,WS_GROUP
+    ICON            IDI_REPLACE,IDC_STATIC,7,7,21,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PASSWORD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 194
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_RELAY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_REPLACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UNZIP               ICON                    "archive.ico"
+IDI_PASSWORD            ICON                    "password.ico"
+IDI_REPLACE             ICON                    "replace.ico"
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

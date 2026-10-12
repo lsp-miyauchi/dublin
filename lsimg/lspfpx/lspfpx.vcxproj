@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D874CECC-997E-4FE1-8FA6-9C0BBA86C67C}</ProjectGuid>
+    <RootNamespace>lspfpx</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\ole;.\macdeps;.\jpeg;.\ri_image;.\fpx;.\basics;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;_MBCS;_UNICODE;DOS;TOOLKIT;TOOLKIT_FlashPix;TOOLKIT_FLASHPIX;USE_OLE;WIN32;WIN32_LEAN_AND_MEAN;USE_UNICODE;_CRT_SECURE_NO_WARNINGS;NO_FW=0;LP_FW=1;XVT_FW=2;FRAMEWORK=NO_FW;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <ModuleDefinitionFile>.\lspfpx.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>echo on
+copy /Y $(TargetDir)$(TargetName).lib ..\..\$(Platform)\lib_$(Platform)\
+copy /Y $(TargetPath) ..\..\$(Platform)\Redist_DLLs\
+</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>d:\wtl\buildversion.exe "$(ProjectDir)$(ProjectName).rc"</Command>
+    </PreBuildEvent>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>d:\wtl\include</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ole\gen_guid.cpp" />
+    <ClCompile Include="ole\oleclink.cpp" />
+    <ClCompile Include="ole\olecore.cpp" />
+    <ClCompile Include="ole\olefiles.cpp" />
+    <ClCompile Include="ole\olehstrm.cpp" />
+    <ClCompile Include="ole\oleprop.cpp" />
+    <ClCompile Include="ole\oleprops.cpp" />
+    <ClCompile Include="ole\olestats.cpp" />
+    <ClCompile Include="ole\olestorg.cpp" />
+    <ClCompile Include="ole\olestrm.cpp" />
+    <ClCompile Include="fpx\buffdesc.cpp" />
+    <ClCompile Include="fpx\coltwist.cpp" />
+    <ClCompile Include="fpx\f_fpxio.cpp" />
+    <ClCompile Include="fpx\f_fpxvw.cpp" />
+    <ClCompile Include="fpx\filter.cpp" />
+    <ClCompile Include="fpx\fpxformt.cpp" />
+    <ClCompile Include="fpx\fpximgvw.cpp" />
+    <ClCompile Include="fpx\fpxlib.cpp" />
+    <ClCompile Include="fpx\fpxlibio.cpp" />
+    <ClCompile Include="fpx\fpxutils.cpp" />
+    <ClCompile Include="fpx\imginfio.cpp" />
+    <ClCompile Include="fpx\pres_fpx.cpp" />
+    <ClCompile Include="fpx\ptil_fpx.cpp" />
+    <ClCompile Include="ri_image\compress.cpp" />
+    <ClCompile Include="ri_image\corr_lut.cpp" />
+    <ClCompile Include="ri_image\cp32to24.cpp" />
+    <ClCompile Include="ri_image\cp_jpeg.cpp" />
+    <ClCompile Include="ri_image\fn_srch.cpp" />
+    <ClCompile Include="ri_image\matrix.cpp" />
+    <ClCompile Include="ri_image\ph_image.cpp" />
+    <ClCompile Include="ri_image\pimgfile.cpp" />
+    <ClCompile Include="ri_image\pr_level.cpp" />
+    <ClCompile Include="ri_image\priimage.cpp" />
+    <ClCompile Include="ri_image\ptile.cpp" />
+    <ClCompile Include="ri_image\ri_page.cpp" />
+    <ClCompile Include="ri_image\ri_sys.cpp" />
+    <ClCompile Include="ri_image\viewimg.cpp" />
+    <ClCompile Include="basics\a_file.cpp" />
+    <ClCompile Include="basics\b_string.cpp" />
+    <ClCompile Include="basics\color.cpp" />
+    <ClCompile Include="basics\common_b.cpp" />
+    <ClCompile Include="basics\debug.cpp" />
+    <ClCompile Include="basics\filename.cpp" />
+    <ClCompile Include="basics\geometry.cpp" />
+    <ClCompile Include="basics\graphic.cpp" />
+    <ClCompile Include="jpeg\chen_dct.c" />
+    <ClCompile Include="jpeg\dbuffer.c" />
+    <ClCompile Include="jpeg\decoder.c" />
+    <ClCompile Include="jpeg\dectile.c" />
+    <ClCompile Include="jpeg\dhuff.c" />
+    <ClCompile Include="jpeg\djpeg.c" />
+    <ClCompile Include="jpeg\dllmain.c" />
+    <ClCompile Include="jpeg\dparser.c" />
+    <ClCompile Include="jpeg\dscan.c" />
+    <ClCompile Include="jpeg\ebuffer.c" />
+    <ClCompile Include="jpeg\ejpeg.c" />
+    <ClCompile Include="jpeg\enctile.c" />
+    <ClCompile Include="jpeg\eparser.c" />
+    <ClCompile Include="jpeg\fpxmem.c" />
+    <ClCompile Include="jpeg\huffman.c" />
+    <ClCompile Include="jpeg\mcu2rast.c" />
+    <ClCompile Include="jpeg\process.c" />
+    <ClCompile Include="jpeg\public.c" />
+    <ClCompile Include="jpeg\tables.c" />
+    <ClCompile Include="jpeg\win_dct.c" />
+    <ClCompile Include="jpeg\winograd.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="lspfpx.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

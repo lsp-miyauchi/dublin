@@ -1,0 +1,584 @@
+=======================================================================
+      UNLHA32.DLL Ver 3.00  ウィンドウズ・メッセージ説明ファイル
+=======================================================================
+
+					       Ｍｉｃｃｏ (May. 7,2017)
+
+
+はじめに
+
+　UNLHA32.DLL のドキュメント構成は以下のようになっています。
+
+    API.TXT	 : 基幹を成す Unlha() 系及び OpenArchive() 系 API の説明
+    NOTE2.TXT	 : API.TXT の補足説明
+    COMMAND.TXT  : Unlha() に渡すコマンド文字列についての説明
+    NOTE.TXT	 : COMMAND.TXT の補足説明
+    WINMES.TXT	 : SetOwnerWindow() 系 API の説明
+    ENUMAPI.TXT  : SetEnumMembersProc() 系 API の説明
+    STRTABLE.TXT : ストリングテーブルと言語設定用 API についての説明
+    HEADER.TXT	 : LZH 書庫ヘッダ仕様の説明
+    INFCOM.TXT	 : Win32SFXM で使用される $ ファイルコマンドの説明
+    QandA.TXT	 : 過去にあった主な質問集
+    HISTORY.TXT  : 修正履歴
+
+　このドキュメントでは，SetOwnerWindow() 系 API について説明されています。
+API.TXT には API 全体に関する記述が存在しますので， そちらも参照したほう
+が良いでしょう。
+
+-----------------------------------------------------------------------
+%1. 各 API の説明。
+%2. UNLHA32.DLL が出すウィンドウズメッセージ
+%3. ARCHIVERPROC の定義
+%4. EXTRACTINGINFO の構造
+%5. EXTRACTINGINFOEX の構造
+%6. EXTRACTINGINFOEX32 の構造
+%7. EXTRACTINGINFOEX64 の構造
+%8. 処理の流れ
+-----------------------------------------------------------------------
+
+　UNLHA32.DLL は， "-n" オプションで展開状況表示を抑制された場合について
+は，呼び出し元のウィンドウに対して展開状況を知らせるメッセージを送ります。
+ただし，この後で説明する  API により通知先のウィンドウを設定する必要があ
+ります。
+
+-----------------------------------------------------------------------
+%1. 各 API の説明。
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaSetOwnerWindow(
+		const HWND  _hwnd
+	    )
+-----------------------------------------------------------------------
+順序数	 90 : UnlhaSetOwnerWindow
+	390 : UnlhaSetOwnerWindowA
+	690 : UnlhaSetOwnerWindowW
+要求版	UnlhaSetOwnerWindow  : 0.01
+	UnlhaSetOwnerWindowA : 2.39a
+	UnlhaSetOwnerWindowW : 2.40
+機能
+	UNLHA32.DLL のメッセージの送信先ウィンドウを設定します。UNLHA32.
+	DLL はここで指定されたウィンドウにメッセージを送信します。
+
+引数
+	_hwnd		メッセージを受け取るウィンドウ。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中で変更できなかった場合や， 既にこの API で
+			別のウィンドウが設定されている場合には	FALSE を
+			返します。実際のエラーコードを得るには UnlhaGet-
+			LastError() API を使用してください。
+
+Unicode
+	Ver 2.40 以降では Unicode 版と ANSI 版が実装されていますが， Win
+	9x 系については， システムが Unicode  に対応していないことから，
+	最終的には ANSI へ変換されて処理が行われます。
+
+注意
+	この API は 16	ビット版との互換性のために用意されているもので，
+	今後の拡張も見込めません。従って，特に必要でない限り，後述の Un-
+	lhaSetOwnerWindowEx64() を使用するようにしてください。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaClearOwnerWindow(
+		VOID
+	    )
+-----------------------------------------------------------------------
+順序数	91
+要求版	0.01
+機能
+	UnlhaSetOwnerWindow() で設定したウィンドウの設定を解除します。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中で解除できなかった場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaSetOwnerWindowEx(
+		const HWND	_hwnd,
+		LPARCHIVERPROC	_lpArcProc
+	    )
+-----------------------------------------------------------------------
+順序数	 51 : UnlhaSetOwnerWindowEx
+	351 : UnlhaSetOwnerWindowExA
+	651 : UnlhaSetOwnerWindowExW
+要求版	UnlhaSetOwnerWindowEx  : 0.70
+	UnlhaSetOwnerWindowExA : 2.39a
+	UnlhaSetOwnerWindowExW : 2.40
+機能
+	UNLHA32.DLL の展開状況を受け取るためのコールバック関数の指定を行
+	います。_lpArcProc に NULL を指定すると _hwnd で指定したウィンド
+	ウに メッセージを送出します。
+
+引数
+	_hwnd		メッセージを受け取るウィンドウ。
+	_lpArcProc	情報を受け取るためのコールバック関数へのポインタ。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中で変更できなかった場合や， 既にこの API で
+			別のウィンドウが設定されている場合には	FALSE を
+			返します。実際のエラーコードを得るには UnlhaGet-
+			LastError() API を使用してください。
+
+Unicode
+	Ver 2.40 以降では Unicode 版と ANSI 版が実装されていますが， Win
+	9x 系については， システムが Unicode  に対応していないことから，
+	最終的には ANSI へ変換されて処理が行われます。
+
+注意
+	この API によるコールバック関数が使用する構造体については， 仕様
+	が固定されているために，今後の拡張が見込めません。なるべく後述の
+	UnlhaSetOwnerWindowEx64() を使用するようにしてください。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaKillOwnerWindowEx(
+		const HWND  _hwnd
+	    )
+-----------------------------------------------------------------------
+順序数	52
+要求版	0.70
+機能
+	UnlhaSetOwnerWindowEx() で設定したウィンドウの設定を解除します。
+
+引数
+	_hwnd		指定してあると，UnlhaSetOwnerWindowEx() 時に指定
+			したものとの整合性チェックが行われます。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中で解除できなかった場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaSetOwnerWindowEx64(
+		const HWND	_hwnd,
+		LPARCHIVERPROC	_lpArcProc,
+		const DWORD	_dwStructSize
+	    )
+-----------------------------------------------------------------------
+順序数	108
+要求版	1.60
+機能
+	UNLHA32.DLL の展開状況を受け取るためのコールバック関数の指定を行
+	います。_lpArcProc に NULL を指定すると _hwnd で指定したウィンド
+	ウに メッセージを送出します。
+
+引数
+	_hwnd		メッセージを受け取るウィンドウ。
+	_lpArcProc	情報を受け取るためのコールバック関数へのポインタ。
+	_dwStructSize	使用する構造体のモード。実際には EXTRACTINGINFO-
+			EX，EXTRACTINGINFOEX32， EXTRACTINGINFOEX64 の中
+			で使用するものを決定し，そのサイズを指定する必要
+			があります。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中で変更できなかった場合や， 既にこの API で
+			別のウィンドウが設定されている場合には	FALSE を
+			返します。実際のエラーコードを得るには UnlhaGet-
+			LastError() API を使用してください。
+
+注意
+	通常，API で使用する構造体については，仕様変更等が発生した場合に
+	は，構造体のサイズ情報等を利用してアプリ側で対応することになりま
+	すが， 使用 DLL の改版という比較的軽微な変更のために既存のアプリ
+	が一時的にしろ利用できなくなるのは不便です。
+	そのような状況を回避し，アプリ側で対応時期を決定できるようにする
+	ため， この API については，API としての見通しが悪くなるデメリッ
+	トを無視して，モード指定を行うようになっています。
+
+-----------------------------------------------------------------------
+BOOL WINAPI UnlhaKillOwnerWindowEx64(
+		const HWND  _hwnd
+	    )
+-----------------------------------------------------------------------
+順序数	109
+要求版	1.60
+機能
+	UnlhaSetOwnerWindowEx64() で設定したウィンドウの設定を解除します。
+
+引数
+	_hwnd		指定してあると，UnlhaSetOwnerWindowEx64() 時に指
+			定したものとの整合性チェックが行われます。
+
+戻り値
+	正常終了時	TRUE を返します。
+	エラー時	動作中で解除できなかった場合には FALSE を返します。
+			実際のエラーコードを得るには UnlhaGetLastError()
+			API を使用してください。
+
+
+-----------------------------------------------------------------------
+%2. UNLHA32.DLL が出すウィンドウズメッセージ
+-----------------------------------------------------------------------
+
+●wm_arcextract
+
+　wm_arcextract メッセージは，UnlhaSetOwnerWindow() で設定したウィンドウ
+に UNLHA32.DLL から送られます。このメッセージを受け取ることにより，
+UNLHA32 がこれから処理する格納ファイル名やファイルサイズ等を得ることがで
+きます。
+
+　wm_arcextract メッセージは，RegisterWindowMessage() API によりシステム
+への登録を行った上で使用するようにしてください。
+
+-----------------------------------------------------------------------
+LRESULT CALLBACK WindowProc(
+		HWND	_hwnd,
+		UINT	_uMsg,	    // wm_arcextract
+		WPARAM	_wParam,
+		LPARAM	_lParam
+	    )
+-----------------------------------------------------------------------
+
+引数
+	wParam		(int)nMode
+			通知モード。UNLHA32.DLL の処理の状態を以下の数値
+			で表します。
+
+			0 : UNLHA32.DLL が該当ファイルの処理を開始するこ
+			    とを表します。
+			1 : UNLHA32.DLL が該当ファイルの処理中であること
+			    を表します。
+			2 : UNLHA32.DLL が処理を終え，lpEis のメモリーを
+			    開放しようとしていることを表します。
+			3 : UNLHA32.DLL が該当書庫の処理を開始することを
+			    表します。 szSourceFileName に書庫名が格納さ
+			    れます。
+			4 : UNLHA32.DLL が作業ファイルの書き戻しを開始す
+			    ることを表します。szSourceFileName に作業ファ
+			    イル名が格納されます。
+			5 : UNLHA32.DLL がファイルをサーチ中であることを
+			    表します。検索にマッチしたファイルのファイル
+			    名が得られます。
+			6 : UNLHA32.DLL が該当ファイルの格納を終えたこと
+			    を表します。圧縮サイズ等はこのメッセージがき
+			    た時点で有効となります。
+			7 : UNLHA32.DLL が書庫のチェックを開始することを
+			    表します。 szSourceFileName に作業ファイル名
+			    が格納されます。
+
+	lParam		(EXTRACTINGINFO *)lpEis
+			ファイル名等が格納されている EXTRACTINGINFO 構造
+			体へのポインタです。
+
+戻り値
+	0		UNLHA32.DLL に処理の継続を指示します。
+	0 以外		UNLHA32.DLL に処理を中止させます。 ただし，nMode
+			が 4  の場合 (作業書庫の書き戻し時) は中止させる
+			ことができません。
+
+
+-----------------------------------------------------------------------
+%3. ARCHIVERPROC の定義
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+BOOL CALLBACK ARCHIVERPROC(
+			  HWND	  _hwnd,
+			  UINT	  _uMsg,
+			  UINT	  _nState,
+			  LPVOID  _lpEis
+		      );
+-----------------------------------------------------------------------
+
+引数
+	_hwnd		UnlhaSetOwnerWindowEx で指定したウィンドウハンド
+			ルが渡されます。
+	_uMsg		現在のところは wm_arcextract となります。
+	_nState 	wm_arcextract の wParam，つまり nMode が格納され
+			ます。
+	_lpEis		構造体へのポインタです。格納ファイルに関する情報
+			が得られます。実際には，次のどれかとなります。
+
+	    LPEXTRACTINGINFOEX _lpEis
+		    UnlhaSetOwnerWindowEx() か	sizeof(EXTRACTINGINFOEX)
+		    を指定して UnlhaSetOwnerWindowEx64() を使用した場合。
+	    LPEXTRACTINGINFOEX32 _lpEis
+		    sizeof(EXTRACTINGINFOEX32) を指定して UnlhaSetOwner-
+		    WindowEx64() を使用した場合。
+	    LPEXTRACTINGINFOEX64 _lpEis
+		    sizeof(EXTRACTINGINFOEX64) を指定して UnlhaSetOwner-
+		    WindowEx64() を使用した場合。
+
+戻り値
+	TRUE		UNLHA32.DLL に処理の継続を指示します。
+	FALSE		UNLHA32.DLL に処理を中止させます。 ただし，
+			_nState が 4  の場合 (作業書庫の書き戻し時) は中
+			止させることができません。
+
+
+-----------------------------------------------------------------------
+%4. EXTRACTINGINFO の構造
+-----------------------------------------------------------------------
+構造体定義
+		typedef struct {
+			DWORD	dwFileSize;
+			DWORD	dwWriteSize;
+			TCHAR	szSourceFileName[FNAME32_MAX + 1];
+			TCHAR	dummy1[3];
+			TCHAR	szDestFileName[FNAME32_MAX + 1];
+			TCHAR	dummy[3];
+		}  EXTRACTINGINFO
+
+メンバーの説明
+	dwFileSize		格納ファイルのサイズ。
+	dwWriteSize		展開処理で書き込んだサイズ。
+	szSourceFileName	処理を行う格納ファイル名。
+	szDestFileName		実際に書き込まれるパス名。
+
+
+-----------------------------------------------------------------------
+%5. EXTRACTINGINFOEX の構造
+-----------------------------------------------------------------------
+構造体定義
+		typedef struct {
+			EXTRACTINGINFO	exinfo;
+			DWORD		dwCompressedSize;
+			DWORD		dwCRC;
+			UINT		uOSType;
+			WORD		wRatio;
+			WORD		wDate;
+			WORD		wTime;
+			TCHAR		szAttribute[8];
+			TCHAR		szMode[8];
+		} EXTRACTINGINFOEX;
+
+	exinfo			EXTRACTINGINFO 構造体が格納されます。
+	dwCompressedSize	格納ファイルの圧縮サイズ。
+	dwCRC			格納ファイルのチェックサム。
+	uOSType 		ファイルを格納した際に使われた OS。
+					 0	MS-DOS
+					 2	UNIX
+					 4	MAC-OS
+					 5	OS/2
+					10	その他
+					11	OS9
+					12	OS/68K
+					12	OS/386
+					14	HUMAN
+					15	CP/M
+					16	FLEX
+					17	Runser
+					18	Windows NT 系 OS
+					19	Windows 95 系 OS
+	wRatio			パーミル (千分率) による格納ファイルの圧
+				縮率。
+	wDate			ftime の上位ワードと同じ次の構造で現された
+				格納ファイルの日付 (ローカルタイム)。
+				    struct {
+					unsigned ft_day   : 5;
+					unsigned ft_month : 4;
+					unsigned ft_year  : 7;
+				    } _DosDate;
+				ft_year に格納される値は 1980 年からの経過
+				年数です。したがって，理論的には 2107 年ま
+				で表現できることになります。
+	wTime			ftime の下位ワードと同じ次の構造で現された
+				格納ファイルの時刻 (ローカルタイム)。
+				    struct {
+					unsigned ft_tsec : 5;
+					unsigned ft_min  : 6;
+					unsigned ft_hour : 5;
+				    } _DosTime;
+				ft_tsec  に格納される値が秒を 2 で割ったも
+				のである点に注意してください。
+
+				<<重要>>
+				NTFS 上のファイルや  UNIX 等が起源のファイ
+				ルの場合， 00:00:01 等秒が奇数である場合が
+				当然ありますが，そのようなデータの扱いがプ
+				ラットフォームにより異なっていることに注意
+				してください。 Win32s，Windows 95 では丸め
+				の際に切り捨てが行われますが，その他では切
+				り上げが行われます。  特に注意が必要なのは
+				Windows 98 であり，API のバグから，SetFile-
+				Time()	等では切り上げが行われるにもかかわ
+				らず FileTimeToDosDateTime()  では切り捨て
+				られてしまいます。
+				UNLHA32.DLL では，Win32 API を使用しないこ
+				とにより， Windows 98 においても切り上げた
+				数値が返されるようになっています。
+				(Ver 1.32 以降)
+	szAttribute		格納ファイルの属性。
+	szMode			UNLHA32.DLL では圧縮メソッドの文字列が格
+				納されています。
+
+
+-----------------------------------------------------------------------
+%6. EXTRACTINGINFOEX32 の構造
+-----------------------------------------------------------------------
+構造体定義
+		typedef struct {
+			DWORD		dwStructSize;
+			EXTRACTINGINFO	exinfo;
+			DWORD		dwFileSize;
+			DWORD		dwCompressedSize;
+			DWORD		dwWriteSize;
+			DWORD		dwAttributes;
+			DWORD		dwCRC;
+			UINT		uOSType;
+			WORD		wRatio;
+			FILETIME	ftCreateTime;
+			FILETIME	ftAccessTime;
+			FILETIME	ftWriteTime;
+			TCHAR		szMode[8];
+			TCHAR		szSourceFileName[FNAME_MAX32 + 1];
+			TCHAR		dummy1[3];
+			TCHAR		szDestFileName[FNAME_MAX32 + 1];
+			TCHAR		dummy2[3];
+		} EXTRACTINGINFOEX;
+
+	dwStructSize		構造体のサイズ。
+	exinfo			EXTRACTINGINFO 構造体が格納されます。
+				互換性のために残してあるだけです。
+	dwFileSize		格納ファイルのサイズ。
+	dwCompressedSize	格納ファイルの圧縮サイズ。
+	dwWriteSize		展開処理で書き込んだサイズ。
+	dwAttributes		格納ファイルの属性。
+	dwCRC			格納ファイルのチェックサム。
+	uOSType 		ファイルを格納した際に使われた OS。
+					 0	MS-DOS
+					 2	UNIX
+					 4	MAC-OS
+					 5	OS/2
+					10	その他
+					11	OS9
+					12	OS/68K
+					12	OS/386
+					14	HUMAN
+					15	CP/M
+					16	FLEX
+					17	Runser
+					18	Windows NT 系 OS
+					19	Windows 95 系 OS
+	wRatio			パーミル (千分率) による格納ファイルの圧
+				縮率。
+	ftCreateFile		FILETIME 形式によるファイルの作成日時。
+				UTC で記録されます。
+				FILETIME 形式とは Jan.1,1601 00:00:00 か
+				らの 100ns 単位の経過時間を 64bit の数値
+				で表したものです。 詳しくは Win32 API の
+				ヘルプ等を参照してください。
+	ftAccessTime		FILETIME 形式によるファイルの参照日時。
+				UTC で記録されます。
+	ftWriteTime		FILETIME 形式によるファイルの更新日時。
+				UTC で記録されます。
+	szMode			UNLHA32.DLL では圧縮メソッドの文字列が格
+				納されています。
+	szSourceFileName	処理を行う格納ファイル名。
+	szDestFileName		実際に書き込まれるパス名。
+
+
+-----------------------------------------------------------------------
+%7. EXTRACTINGINFOEX64 の構造
+-----------------------------------------------------------------------
+構造体定義
+		typedef struct {
+			DWORD		dwStructSize;
+			EXTRACTINGINFO	exinfo;
+			ULHA_INT64	llFileSize;
+			ULHA_INT64	llCompressedSize;
+			ULHA_INT64	llWriteSize;
+			DWORD		dwAttributes;
+			DWORD		dwCRC;
+			UINT		uOSType;
+			WORD		wRatio;
+			FILETIME	ftCreateTime;
+			FILETIME	ftAccessTime;
+			FILETIME	ftWriteTime;
+			TCHAR		szMode[8];
+			TCHAR		szSourceFileName[FNAME_MAX32 + 1];
+			TCHAR		dummy1[3];
+			TCHAR		szDestFileName[FNAME_MAX32 + 1];
+			TCHAR		dummy2[3];
+		} EXTRACTINGINFOEX;
+
+	dwStructSize		構造体のサイズ。
+	exinfo			EXTRACTINGINFO 構造体が格納されます。
+				互換性のために残してあるだけです。
+	llFileSize		格納ファイルのサイズ。
+	llCompressedSize	格納ファイルの圧縮サイズ。
+	llWriteSize		展開処理で書き込んだサイズ。
+	dwAttributes		格納ファイルの属性。
+	dwCRC			格納ファイルのチェックサム。
+	uOSType 		ファイルを格納した際に使われた OS。
+					 0	MS-DOS
+					 2	UNIX
+					 4	MAC-OS
+					 5	OS/2
+					10	その他
+					11	OS9
+					12	OS/68K
+					12	OS/386
+					14	HUMAN
+					15	CP/M
+					16	FLEX
+					17	Runser
+					18	Windows NT 系 OS
+					19	Windows 95 系 OS
+	wRatio			パーミル (千分率) による格納ファイルの圧
+				縮率。
+	ftCreateFile		FILETIME 形式によるファイルの作成日時。
+				UTC で記録されます。
+				FILETIME 形式とは Jan.1,1601 00:00:00 か
+				らの 100ns 単位の経過時間を 64bit の数値
+				で表したものです。 詳しくは Win32 API の
+				ヘルプ等を参照してください。
+	ftAccessTime		FILETIME 形式によるファイルの参照日時。
+				UTC で記録されます。
+	ftWriteTime		FILETIME 形式によるファイルの更新日時。
+				UTC で記録されます。
+	szMode			UNLHA32.DLL では圧縮メソッドの文字列が格
+				納されています。
+	szSourceFileName	処理を行う格納ファイル名。
+	szDestFileName		実際に書き込まれるパス名。
+
+
+------------------------------------------------------------------------
+%8. 処理の流れ
+------------------------------------------------------------------------
+１．nMode 3 でメッセージを送出。書庫名を得られます。
+
+　前処理が行われる場合（格納時の圧縮ファイルのサーチや，展開時の合計チェッ
+  ク等）には以下のメッセージを送出。
+
+２．nMode 5 でメッセージを送出。格納ファイル名と格納時にはサーチされたファ
+    イル名が得られます。処理が終了するまで，検索にマッチしたファイルごと
+    にメッセージを送出。
+
+３．格納ファイル毎に nMode 0 でメッセージを送出。 格納ファイル名を得られ
+    ます。
+
+　格納・展開などの処理が行われた場合，は以下のメッセージをさらに送出。
+
+４．nMode 0 でメッセージを送出。格納ファイル名等を得られます。
+５．nMode 1 でメッセージを送出。書き込みサイズが得られます。そのファイル
+    についての展開処理が終了するまで，このメッセージを送出し続けます。
+
+　格納の場合は圧縮結果を報告するため以下のメッセージを送出
+
+６．nMode 6 でメッセージを送出。格納の場合は，このメッセージで始めて全て
+    のメンバーが有効となります。
+
+  書庫操作の場合は，以下の 7～10 のメッセージを送出。
+
+７．"-jsv" スイッチが指定された場合には， nMode 7 でメッセージを送出する
+    ことにより，ワークファイルのチェックの開始を表します。
+８．nMode 1 でメッセージを送出。ワークファイルのチェックが終了するまでこ
+    のメッセージを送出し続けます。
+９．nMode 4 でメッセージを送出することで，ワークファイル書き戻しの開始を
+    表します。ワークファイル名を得られます。
+10．nMode 1 でメッセージを送出。ワークファイルの書き戻しが終了するまでこ
+    のメッセージを送出し続けます。
+
+　すべての処理が終了した時点で（展開状況表示を消すタイミング），
+
+11．nMode 2 でメッセージを送出。
+
+=======================================================================

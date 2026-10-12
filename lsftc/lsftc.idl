@@ -1,0 +1,39 @@
+// lsftc.idl : lsftc の IDL ソース
+//
+
+// このファイルは、タイプ ライブラリ (lsftc.tlb) およびマーシャリング コードを
+// 作成するために MIDL ツールによって処理されます。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(C39D1965-E74C-45B0-9FBA-F886AD854FDB),
+	dual,
+	nonextensible,
+	helpstring("IFileXferComponent interface"),
+	pointer_default(unique)
+]
+interface IFileXferComponent : IDispatch{
+	[id(1)] HRESULT GetInstance([out,retval] LONG* val);
+	[id(2)] HRESULT ResetInstance(void);
+	[id(3)] HRESULT InitInstance(void);
+};
+[
+	uuid(437F261E-C194-43FD-9A0C-94C59939D0F1),
+	version(1.0),
+	helpstring("lsftc 1.0 typelibrary")
+]
+library lsftcLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(49477A47-1CBD-40FC-B62A-AE8220F10B09),
+		helpstring("FileXferComponent Class")
+	]
+	coclass FileXferComponent
+	{
+		[default] interface IFileXferComponent;
+	};
+};

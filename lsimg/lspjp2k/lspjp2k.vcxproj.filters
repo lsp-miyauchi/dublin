@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ソース ファイル\libjasper">
+      <UniqueIdentifier>{0e759c67-7720-401c-b267-97c3752fa4f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\libjasper\jpc">
+      <UniqueIdentifier>{63b8f8bb-e03a-4a24-aa75-9198ff646722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\libjasper\base">
+      <UniqueIdentifier>{3c042fc5-6006-4488-b8a9-525eb3a42db8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\libjasper\jp2">
+      <UniqueIdentifier>{081dead5-ff0d-4c33-9638-fc820e6fb919}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\libjasper\lsp">
+      <UniqueIdentifier>{e4714b23-767b-46ba-8995-c3b0bf93c20f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="lspjp2k.c">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_bs.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_cs.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_dec.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_enc.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_math.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_mct.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_mqcod.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_mqdec.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_mqenc.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_qmfb.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_t1cod.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_t1dec.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_t1enc.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_t2cod.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_t2dec.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_t2enc.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_tagtree.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_tsfb.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jpc\jpc_util.c">
+      <Filter>ソース ファイル\libjasper\jpc</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_cm.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_debug.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_getopt.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_icc.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_iccdata.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_image.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_init.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_malloc.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_seq.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_stream.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_string.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_tmr.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_tvp.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\base\jas_version.c">
+      <Filter>ソース ファイル\libjasper\base</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jp2\jp2_cod.c">
+      <Filter>ソース ファイル\libjasper\jp2</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jp2\jp2_dec.c">
+      <Filter>ソース ファイル\libjasper\jp2</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\jp2\jp2_enc.c">
+      <Filter>ソース ファイル\libjasper\jp2</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\lsp\lsp_cod.c">
+      <Filter>ソース ファイル\libjasper\lsp</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\lsp\lsp_dec.c">
+      <Filter>ソース ファイル\libjasper\lsp</Filter>
+    </ClCompile>
+    <ClCompile Include="libjasper\lsp\lsp_enc.c">
+      <Filter>ソース ファイル\libjasper\lsp</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
