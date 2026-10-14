@@ -22,11 +22,11 @@ int QueryMakeDir(HWND hwnd, LPCTSTR pszText, BOOL bSingle);
 
 static const WCHAR szUNZIP[]  = L"lspuzp.dll";
 static const WCHAR szZIP[]    = L"lspzip.dll";
-static const WCHAR szTAR[]    = L"tar.dll";
 static const WCHAR szCAB[]    = L"lspcab.dll";
 static const WCHAR szUNRAR[]  = L"lspunr.dll";
 static const WCHAR sz7Zip[]   = L"7-zip.dll";
 #ifdef _WIN64
+static const WCHAR szTAR[]		= L"tar64.dll";
 static const TCHAR szUNLHA[]	= L"unlha64.dll";
 static const WCHAR szUNARJ[]	= L"unarj32j.dll";
 static const WCHAR szISH[]		= L"ish32.dll";
@@ -35,6 +35,7 @@ static const WCHAR szBGA[]		= L"bga32.dll";
 static const WCHAR szYZ1[]		= L"yz1.dll";
 static const WCHAR szGCA[]		= L"lspgca.dll";
 #else
+static const WCHAR szTAR[]		= L"tar32.dll";
 static const WCHAR szUNLHA[]	= L"unlha32.dll";
 static const WCHAR szUNARJ[]	= L"unarj32j.dll";
 static const WCHAR szISH[]		= L"ish32.dll";

@@ -2836,37 +2836,72 @@ namespace {
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag340_t;
+
+#ifdef __clang__
+static const __midl_frag340_t __midl_frag340;
+#else
 extern const __midl_frag340_t __midl_frag340;
+#endif
 
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag338_t;
+
+#ifdef __clang__
+static const __midl_frag338_t __midl_frag338;
+#else
 extern const __midl_frag338_t __midl_frag338;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag337_t;
+
+#ifdef __clang__
+static const __midl_frag337_t __midl_frag337;
+#else
 extern const __midl_frag337_t __midl_frag337;
+#endif
 
 typedef 
 struct _NDR64_CONFORMANT_STRING_FORMAT
 __midl_frag336_t;
+
+#ifdef __clang__
+static const __midl_frag336_t __midl_frag336;
+#else
 extern const __midl_frag336_t __midl_frag336;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag335_t;
+
+#ifdef __clang__
+static const __midl_frag335_t __midl_frag335;
+#else
 extern const __midl_frag335_t __midl_frag335;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag333_t;
+
+#ifdef __clang__
+static const __midl_frag333_t __midl_frag333;
+#else
 extern const __midl_frag333_t __midl_frag333;
+#endif
 
 typedef 
 struct _NDR64_USER_MARSHAL_FORMAT
 __midl_frag332_t;
+
+#ifdef __clang__
+static const __midl_frag332_t __midl_frag332;
+#else
 extern const __midl_frag332_t __midl_frag332;
+#endif
 
 typedef 
 struct 
@@ -2880,7 +2915,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag7;
 }
 __midl_frag331_t;
+
+#ifdef __clang__
+static const __midl_frag331_t __midl_frag331;
+#else
 extern const __midl_frag331_t __midl_frag331;
+#endif
 
 typedef 
 struct 
@@ -2890,7 +2930,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag328_t;
+
+#ifdef __clang__
+static const __midl_frag328_t __midl_frag328;
+#else
 extern const __midl_frag328_t __midl_frag328;
+#endif
 
 typedef 
 struct 
@@ -2902,7 +2947,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag5;
 }
 __midl_frag321_t;
+
+#ifdef __clang__
+static const __midl_frag321_t __midl_frag321;
+#else
 extern const __midl_frag321_t __midl_frag321;
+#endif
 
 typedef 
 struct 
@@ -2914,7 +2964,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag5;
 }
 __midl_frag313_t;
+
+#ifdef __clang__
+static const __midl_frag313_t __midl_frag313;
+#else
 extern const __midl_frag313_t __midl_frag313;
+#endif
 
 typedef 
 struct 
@@ -2924,17 +2979,32 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag309_t;
+
+#ifdef __clang__
+static const __midl_frag309_t __midl_frag309;
+#else
 extern const __midl_frag309_t __midl_frag309;
+#endif
 
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag307_t;
+
+#ifdef __clang__
+static const __midl_frag307_t __midl_frag307;
+#else
 extern const __midl_frag307_t __midl_frag307;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag306_t;
+
+#ifdef __clang__
+static const __midl_frag306_t __midl_frag306;
+#else
 extern const __midl_frag306_t __midl_frag306;
+#endif
 
 typedef 
 struct 
@@ -2944,12 +3014,22 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag305_t;
+
+#ifdef __clang__
+static const __midl_frag305_t __midl_frag305;
+#else
 extern const __midl_frag305_t __midl_frag305;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag302_t;
+
+#ifdef __clang__
+static const __midl_frag302_t __midl_frag302;
+#else
 extern const __midl_frag302_t __midl_frag302;
+#endif
 
 typedef 
 struct 
@@ -2962,17 +3042,32 @@ struct
     struct _NDR64_PARAM_FORMAT frag6;
 }
 __midl_frag295_t;
+
+#ifdef __clang__
+static const __midl_frag295_t __midl_frag295;
+#else
 extern const __midl_frag295_t __midl_frag295;
+#endif
 
 typedef 
 struct _NDR64_CONSTANT_IID_FORMAT
 __midl_frag293_t;
+
+#ifdef __clang__
+static const __midl_frag293_t __midl_frag293;
+#else
 extern const __midl_frag293_t __midl_frag293;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag292_t;
+
+#ifdef __clang__
+static const __midl_frag292_t __midl_frag292;
+#else
 extern const __midl_frag292_t __midl_frag292;
+#endif
 
 typedef 
 struct 
@@ -2982,17 +3077,32 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag291_t;
+
+#ifdef __clang__
+static const __midl_frag291_t __midl_frag291;
+#else
 extern const __midl_frag291_t __midl_frag291;
+#endif
 
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag289_t;
+
+#ifdef __clang__
+static const __midl_frag289_t __midl_frag289;
+#else
 extern const __midl_frag289_t __midl_frag289;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag288_t;
+
+#ifdef __clang__
+static const __midl_frag288_t __midl_frag288;
+#else
 extern const __midl_frag288_t __midl_frag288;
+#endif
 
 typedef 
 struct 
@@ -3003,12 +3113,22 @@ struct
     struct _NDR64_PARAM_FORMAT frag4;
 }
 __midl_frag285_t;
+
+#ifdef __clang__
+static const __midl_frag285_t __midl_frag285;
+#else
 extern const __midl_frag285_t __midl_frag285;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag281_t;
+
+#ifdef __clang__
+static const __midl_frag281_t __midl_frag281;
+#else
 extern const __midl_frag281_t __midl_frag281;
+#endif
 
 typedef 
 struct 
@@ -3023,7 +3143,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag8;
 }
 __midl_frag271_t;
+
+#ifdef __clang__
+static const __midl_frag271_t __midl_frag271;
+#else
 extern const __midl_frag271_t __midl_frag271;
+#endif
 
 typedef 
 struct 
@@ -3036,12 +3161,22 @@ struct
     struct _NDR64_PARAM_FORMAT frag6;
 }
 __midl_frag262_t;
+
+#ifdef __clang__
+static const __midl_frag262_t __midl_frag262;
+#else
 extern const __midl_frag262_t __midl_frag262;
+#endif
 
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag260_t;
+
+#ifdef __clang__
+static const __midl_frag260_t __midl_frag260;
+#else
 extern const __midl_frag260_t __midl_frag260;
+#endif
 
 typedef 
 struct 
@@ -3053,7 +3188,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag5;
 }
 __midl_frag255_t;
+
+#ifdef __clang__
+static const __midl_frag255_t __midl_frag255;
+#else
 extern const __midl_frag255_t __midl_frag255;
+#endif
 
 typedef 
 struct 
@@ -3064,7 +3204,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag4;
 }
 __midl_frag229_t;
+
+#ifdef __clang__
+static const __midl_frag229_t __midl_frag229;
+#else
 extern const __midl_frag229_t __midl_frag229;
+#endif
 
 typedef 
 struct 
@@ -3077,7 +3222,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag6;
 }
 __midl_frag220_t;
+
+#ifdef __clang__
+static const __midl_frag220_t __midl_frag220;
+#else
 extern const __midl_frag220_t __midl_frag220;
+#endif
 
 typedef 
 struct 
@@ -3092,7 +3242,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag8;
 }
 __midl_frag208_t;
+
+#ifdef __clang__
+static const __midl_frag208_t __midl_frag208;
+#else
 extern const __midl_frag208_t __midl_frag208;
+#endif
 
 typedef 
 struct 
@@ -3107,7 +3262,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag8;
 }
 __midl_frag196_t;
+
+#ifdef __clang__
+static const __midl_frag196_t __midl_frag196;
+#else
 extern const __midl_frag196_t __midl_frag196;
+#endif
 
 typedef 
 struct 
@@ -3117,7 +3277,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag192_t;
+
+#ifdef __clang__
+static const __midl_frag192_t __midl_frag192;
+#else
 extern const __midl_frag192_t __midl_frag192;
+#endif
 
 typedef 
 struct 
@@ -3127,7 +3292,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag188_t;
+
+#ifdef __clang__
+static const __midl_frag188_t __midl_frag188;
+#else
 extern const __midl_frag188_t __midl_frag188;
+#endif
 
 typedef 
 struct 
@@ -3136,7 +3306,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag2;
 }
 __midl_frag181_t;
+
+#ifdef __clang__
+static const __midl_frag181_t __midl_frag181;
+#else
 extern const __midl_frag181_t __midl_frag181;
+#endif
 
 typedef 
 struct 
@@ -3147,12 +3322,22 @@ struct
     struct _NDR64_PARAM_FORMAT frag4;
 }
 __midl_frag172_t;
+
+#ifdef __clang__
+static const __midl_frag172_t __midl_frag172;
+#else
 extern const __midl_frag172_t __midl_frag172;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag162_t;
+
+#ifdef __clang__
+static const __midl_frag162_t __midl_frag162;
+#else
 extern const __midl_frag162_t __midl_frag162;
+#endif
 
 typedef 
 struct 
@@ -3162,17 +3347,32 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag161_t;
+
+#ifdef __clang__
+static const __midl_frag161_t __midl_frag161;
+#else
 extern const __midl_frag161_t __midl_frag161;
+#endif
 
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag130_t;
+
+#ifdef __clang__
+static const __midl_frag130_t __midl_frag130;
+#else
 extern const __midl_frag130_t __midl_frag130;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag129_t;
+
+#ifdef __clang__
+static const __midl_frag129_t __midl_frag129;
+#else
 extern const __midl_frag129_t __midl_frag129;
+#endif
 
 typedef 
 struct 
@@ -3182,7 +3382,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag128_t;
+
+#ifdef __clang__
+static const __midl_frag128_t __midl_frag128;
+#else
 extern const __midl_frag128_t __midl_frag128;
+#endif
 
 typedef 
 struct 
@@ -3193,7 +3398,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag4;
 }
 __midl_frag115_t;
+
+#ifdef __clang__
+static const __midl_frag115_t __midl_frag115;
+#else
 extern const __midl_frag115_t __midl_frag115;
+#endif
 
 typedef 
 struct 
@@ -3201,7 +3411,12 @@ struct
     struct _NDR64_STRUCTURE_HEADER_FORMAT frag1;
 }
 __midl_frag95_t;
+
+#ifdef __clang__
+static const __midl_frag95_t __midl_frag95;
+#else
 extern const __midl_frag95_t __midl_frag95;
+#endif
 
 typedef 
 struct 
@@ -3211,7 +3426,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag64_t;
+
+#ifdef __clang__
+static const __midl_frag64_t __midl_frag64;
+#else
 extern const __midl_frag64_t __midl_frag64;
+#endif
 
 typedef 
 struct 
@@ -3222,7 +3442,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag4;
 }
 __midl_frag54_t;
+
+#ifdef __clang__
+static const __midl_frag54_t __midl_frag54;
+#else
 extern const __midl_frag54_t __midl_frag54;
+#endif
 
 typedef 
 struct 
@@ -3234,17 +3459,32 @@ struct
     struct _NDR64_PARAM_FORMAT frag5;
 }
 __midl_frag30_t;
+
+#ifdef __clang__
+static const __midl_frag30_t __midl_frag30;
+#else
 extern const __midl_frag30_t __midl_frag30;
+#endif
 
 typedef 
 struct _NDR64_CONFORMANT_STRING_FORMAT
 __midl_frag25_t;
+
+#ifdef __clang__
+static const __midl_frag25_t __midl_frag25;
+#else
 extern const __midl_frag25_t __midl_frag25;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag24_t;
+
+#ifdef __clang__
+static const __midl_frag24_t __midl_frag24;
+#else
 extern const __midl_frag24_t __midl_frag24;
+#endif
 
 typedef 
 struct 
@@ -3256,7 +3496,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag5;
 }
 __midl_frag23_t;
+
+#ifdef __clang__
+static const __midl_frag23_t __midl_frag23;
+#else
 extern const __midl_frag23_t __midl_frag23;
+#endif
 
 typedef 
 struct 
@@ -3268,7 +3513,12 @@ struct
     struct _NDR64_PARAM_FORMAT frag5;
 }
 __midl_frag16_t;
+
+#ifdef __clang__
+static const __midl_frag16_t __midl_frag16;
+#else
 extern const __midl_frag16_t __midl_frag16;
+#endif
 
 typedef 
 struct 
@@ -3280,12 +3530,22 @@ struct
     NDR64_UINT32 frag5;
 }
 __midl_frag5_t;
+
+#ifdef __clang__
+static const __midl_frag5_t __midl_frag5;
+#else
 extern const __midl_frag5_t __midl_frag5;
+#endif
 
 typedef 
 NDR64_FORMAT_UINT32
 __midl_frag1_t;
+
+#ifdef __clang__
+static const __midl_frag1_t __midl_frag1;
+#else
 extern const __midl_frag1_t __midl_frag1;
+#endif
 
 static const __midl_frag340_t __midl_frag340 =
 0x5    /* FC64_INT32 */;

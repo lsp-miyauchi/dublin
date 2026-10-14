@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1B7B4D3A9E8E40839C37A0C1AEC7E92F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_1FDF82AD3D474B64B9B3669246E50DA1"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -220,12 +226,6 @@
         "Entry"
         {
         "MsmKey" = "8:_73FF19077A854D75B32FEAEB56043ED6"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7C15A8044AF04351BD349315EC6DD48B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -618,6 +618,26 @@
             {
             "SourcePath" = "8:..\\..\\x64\\Redist_DLLs\\lsftc.dll"
             "TargetName" = "8:lsftc.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_B1E846E895FE4574B49624FB9F0234F4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1B7B4D3A9E8E40839C37A0C1AEC7E92F"
+            {
+            "SourcePath" = "8:..\\..\\x64\\Redist_Archiver\\tar64.dll"
+            "TargetName" = "8:tar64.dll"
             "Tag" = "8:"
             "Folder" = "8:_B1E846E895FE4574B49624FB9F0234F4"
             "Condition" = "8:"
@@ -1200,26 +1220,6 @@
             "TargetName" = "8:Fvlch7.exe"
             "Tag" = "8:"
             "Folder" = "8:_6AB1196BF8E241C89FB782CBC05C266D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C15A8044AF04351BD349315EC6DD48B"
-            {
-            "SourcePath" = "8:..\\..\\x64\\Redist_Archiver\\tar.dll"
-            "TargetName" = "8:tar.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_B1E846E895FE4574B49624FB9F0234F4"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"

@@ -1,6 +1,7 @@
 **/.vs
 **/release
 **/debug
+**/intdir
 **/妥当性検査
 **/project_assistant
 **/*.dir

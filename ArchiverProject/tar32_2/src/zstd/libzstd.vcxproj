@@ -39,6 +39,7 @@
     <ClCompile Include="$(ProjectDir)\source\lib\compress\zstd_lazy.c" />
     <ClCompile Include="$(ProjectDir)\source\lib\compress\zstd_opt.c" />
     <ClCompile Include="$(ProjectDir)\source\lib\compress\zstd_ldm.c" />
+    <ClCompile Include="$(ProjectDir)\source\lib\compress\zstd_presplit.c" />
     <ClCompile Include="$(ProjectDir)\source\lib\compress\zstdmt_compress.c" />
     <ClCompile Include="$(ProjectDir)\source\lib\decompress\huf_decompress.c" />
     <ClCompile Include="$(ProjectDir)\source\lib\decompress\zstd_decompress.c" />
@@ -105,21 +106,21 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -141,29 +142,29 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);$(ProjectDir)source\lib;$(ProjectDir)source\programs\legacy;$(ProjectDir)source\lib\legacy;$(ProjectDir)source\lib\common;$(ProjectDir)source\lib\dictBuilder;$(UniversalCRT_IncludePath);</IncludePath>
     <RunCodeAnalysis>false</RunCodeAnalysis>
-    <OutDir>$(ProjectDir)$(PlatformTarget)\$(Configuration)\lib\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(RootNamespace)_$(Platform)_$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)intdir\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);$(ProjectDir)source\lib;$(ProjectDir)source\programs\legacy;$(ProjectDir)source\lib\legacy;$(ProjectDir)source\lib\common;$(ProjectDir)source\lib\dictBuilder;$(UniversalCRT_IncludePath);</IncludePath>
     <RunCodeAnalysis>false</RunCodeAnalysis>
-    <OutDir>$(ProjectDir)$(PlatformTarget)\$(Configuration)\lib\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(RootNamespace)_$(Platform)_$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)intdir\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(IncludePath);$(ProjectDir)source\lib;$(ProjectDir)source\programs\legacy;$(ProjectDir)source\lib\legacy;$(ProjectDir)source\lib\common;$(ProjectDir)source\lib\dictBuilder;$(UniversalCRT_IncludePath);</IncludePath>
     <RunCodeAnalysis>false</RunCodeAnalysis>
-    <OutDir>$(ProjectDir)$(PlatformTarget)\$(Configuration)\lib\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(RootNamespace)_$(Platform)_$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)intdir\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(IncludePath);$(ProjectDir)source\lib;$(ProjectDir)source\programs\legacy;$(ProjectDir)source\lib\legacy;$(ProjectDir)source\lib\common;$(ProjectDir)source\lib\dictBuilder;$(UniversalCRT_IncludePath);</IncludePath>
     <RunCodeAnalysis>false</RunCodeAnalysis>
-    <OutDir>$(ProjectDir)$(PlatformTarget)\$(Configuration)\lib\</OutDir>
-    <IntDir>$(ProjectDir)\obj\$(RootNamespace)_$(Platform)_$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)intdir\$(Configuration)\$(Platform)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup>
     <ClCompile>
@@ -220,6 +221,7 @@
       <EnablePREfast>false</EnablePREfast>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -228,6 +230,9 @@
       <OptimizeReferences>true</OptimizeReferences>
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y $(TargetPath) $(SolutionDir)lib\$(Platform)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -242,7 +247,7 @@
       <EnablePREfast>false</EnablePREfast>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <WholeProgramOptimization>true</WholeProgramOptimization>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
       <OmitFramePointers>true</OmitFramePointers>
     </ClCompile>
     <Link>
@@ -251,6 +256,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <PostBuildEvent>
+      <Command>copy /Y $(TargetPath) $(SolutionDir)lib\$(Platform)\</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

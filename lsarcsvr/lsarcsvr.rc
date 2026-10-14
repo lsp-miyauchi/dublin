@@ -57,8 +57,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,0,95
- PRODUCTVERSION 7,4,0,95
+ FILEVERSION 7,4,0,96
+ PRODUCTVERSION 7,4,0,96
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -75,12 +75,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Common Archiver Wrapper"
-            VALUE "FileVersion", "7.4.0.95"
+            VALUE "FileVersion", "7.4.0.96"
             VALUE "InternalName", "lsarcsvr.dll"
             VALUE "LegalCopyright", "(C)LightShip Software Inc. 2003-2022 All rights reserved."
             VALUE "OriginalFilename", "lsarcsvr.dll"
             VALUE "ProductName", "Archive Manager"
-            VALUE "ProductVersion", "7.4.0.95"
+            VALUE "ProductVersion", "7.4.0.96"
         END
     END
     BLOCK "VarFileInfo"
