@@ -76,10 +76,10 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\$(Platform)\obj\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Configuration)\$(Platform)\obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">intdir\$(Configuration)\$(Platform)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\$(Platform)\obj\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">intdir\$(Configuration)\$(Platform)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\WTL\Include;$(IncludePath)</IncludePath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">D:\WTL\Include;$(IncludePath)</IncludePath>
@@ -175,8 +175,7 @@
       <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>echo on
-copy /Y $(TargetPath) ..\..\$(Platform)\Redist_Archiver\
+      <Command>copy /Y $(TargetPath) ..\..\$(Platform)\Redist_Archiver\
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -209,8 +208,7 @@ copy /Y $(TargetPath) ..\..\$(Platform)\Redist_Archiver\
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
     <PostBuildEvent>
-      <Command>echo on
-copy /Y $(TargetPath) ..\..\$(Platform)\Redist_Archiver\
+      <Command>copy /Y $(TargetPath) ..\..\$(Platform)\Redist_Archiver\
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

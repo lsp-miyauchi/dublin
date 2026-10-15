@@ -145,20 +145,20 @@ BOOL __GetArchiverTypeInfo(ULONG type, LPWSTR pszPrefix, LPWSTR pszDll, BOOL& bU
 	*pszDll = 0;
 	LPCTSTR psz = NULL;
 	switch (type) {
-		case ARC_LZH:		psz = szUNLHA;	lstrcpy(pszPrefix, _T("Unlha"));	break;
-		case ARC_ZIP:		psz = szUNZIP;	lstrcpy(pszPrefix, _T("UnZip"));	break;
+		case ARC_LZH:	  psz = szUNLHA;	lstrcpy(pszPrefix, _T("Unlha"));	break;
+		case ARC_ZIP:	  psz = szUNZIP;	lstrcpy(pszPrefix, _T("UnZip"));	break;
 		case ARC_ZIPPACK:	psz = szZIP;	lstrcpy(pszPrefix, _T("Zip"));		break;
-		case ARC_CAB:		psz = szCAB;	lstrcpy(pszPrefix, _T("Cab"));		break;
-		case ARC_ARJ:		psz = szUNARJ;	lstrcpy(pszPrefix, _T("Unarj"));	break;
-		case ARC_ISH:		psz = szISH;	lstrcpy(pszPrefix, _T("Ish"));		break;
-		case ARC_TAR:		psz = szTAR;	lstrcpy(pszPrefix, _T("Tar"));		break;
-		case ARC_RAR:		psz = szUNRAR;	lstrcpy(pszPrefix, _T("Unrar"));	break;
-		case ARC_BGA:		psz = szBGA;	lstrcpy(pszPrefix, _T("Bga"));		break;
-		case ARC_YZ1:		psz = szYZ1;	lstrcpy(pszPrefix, _T("Yz1"));		break;
-		case ARC_GCA:		psz = szGCA;	lstrcpy(pszPrefix, _T("Gca"));		break;
+		case ARC_CAB:	  psz = szCAB;		lstrcpy(pszPrefix, _T("Cab"));		break;
+		case ARC_ARJ:	  psz = szUNARJ;	lstrcpy(pszPrefix, _T("Unarj"));	break;
+		case ARC_ISH:	  psz = szISH;		lstrcpy(pszPrefix, _T("Ish"));		break;
+		case ARC_TAR:	  psz = szTAR;		lstrcpy(pszPrefix, _T("Tar"));		break;
+		case ARC_RAR:	  psz = szUNRAR;	lstrcpy(pszPrefix, _T("Unrar"));	break;
+		case ARC_BGA:	  psz = szBGA;		lstrcpy(pszPrefix, _T("Bga"));		break;
+		case ARC_YZ1:	  psz = szYZ1;		lstrcpy(pszPrefix, _T("Yz1"));		break;
+		case ARC_GCA:	  psz = szGCA;		lstrcpy(pszPrefix, _T("Gca"));		break;
 		case ARC_ISO:
 		case ARC_RPM:
-		case ARC_7ZIP:		psz = sz7Zip;	lstrcpy(pszPrefix, _T("SevenZip"));	break;
+		case ARC_7ZIP:  psz = sz7Zip;		lstrcpy(pszPrefix, _T("SevenZip"));	break;
 		default: SetLastError(ERROR_INVALID_PARAMETER); return FALSE;
 	}
 

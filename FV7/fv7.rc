@@ -52,8 +52,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,3,162
- PRODUCTVERSION 7,4,3,162
+ FILEVERSION 7,4,3,163
+ PRODUCTVERSION 7,4,3,163
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -71,12 +71,12 @@ BEGIN
             VALUE "Comments", "for Windows 10 or later"
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "FileVisor"
-            VALUE "FileVersion", "7.4.3.162"
+            VALUE "FileVersion", "7.4.3.163"
             VALUE "InternalName", "FV7"
             VALUE "LegalCopyright", "(C)LightShip Inc. 1994-2026 All rights reserved."
             VALUE "OriginalFilename", "fv7.exe"
             VALUE "ProductName", "FileVisor7"
-            VALUE "ProductVersion", "7.4.3.162"
+            VALUE "ProductVersion", "7.4.3.163"
         END
     END
     BLOCK "VarFileInfo"
@@ -578,14 +578,14 @@ BEGIN
     END
     POPUP "ツール(&T)"
     BEGIN
-        MENUITEM "ファイル内容を閲覧(&V)...",            IDM_TOOL_VIEWER
-        MENUITEM "バイナリ編集(&D)...",               IDM_TOOL_BDUMP
+        MENUITEM "ファイルを表示(&V)...",              IDM_TOOL_VIEWER
+        MENUITEM "バイナリで編集(&D)...",              IDM_TOOL_BDUMP
         MENUITEM SEPARATOR
         MENUITEM "エディタで編集(&E)...",              IDM_TOOL_EDITOR
         MENUITEM "ファイルから文字列を検索(&G)",            IDM_TOOL_GREP
         MENUITEM SEPARATOR
-        MENUITEM "形式を指定してファイル リストを出力(&L)...",   IDM_EDIT_LISTOUTPUT
-        MENUITEM "ハッシュを計算(&H)...",              IDM_TOOL_CALCHASH
+        MENUITEM "ファイル リストを出力(&L)...",          IDM_EDIT_LISTOUTPUT
+        MENUITEM "ファイル ハッシュを計算(&H)...",         IDM_TOOL_CALCHASH
         MENUITEM SEPARATOR
         MENUITEM "ファイルを連結(&G)",                 IDM_FILE_MERGE
         MENUITEM "ファイルを分割(&V)",                 IDM_FILE_DIVIDE
@@ -2112,7 +2112,7 @@ END
 STRINGTABLE
 BEGIN
     IDM_TOOL_BDUMP          "ファイルをバイナリ編集します。\nバイナリ編集"
-    IDM_TOOL_VIEWER         "ファイル内容を閲覧します。\nファイル閲覧"
+    IDM_TOOL_VIEWER         "ファイル内容を表示します。\nファイル表示"
     IDM_TOOL_GREP           "複数ファイルから指定文字列を検索します。\n文字列検索"
     IDM_TOOL_SLIDESHOW      "このフォルダにある画像をスライド ショウで表示します。\nスライド ショウ"
     IDM_TOOL_CALCHASH       "ファイルのハッシュ値を計算します。\nハッシュを計算"

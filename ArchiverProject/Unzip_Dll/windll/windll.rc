@@ -30,8 +30,8 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,95,0,20
- PRODUCTVERSION 0,95,0,20
+ FILEVERSION 0,95,0,21
+ PRODUCTVERSION 0,95,0,21
  FILEFLAGSMASK 0x3L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -48,12 +48,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software"
             VALUE "FileDescription", "LightShip's Unzip"
-            VALUE "FileVersion", "0.95.0.20"
+            VALUE "FileVersion", "0.95.0.21"
             VALUE "InternalName", "LSPUZP"
             VALUE "LegalCopyright", "Info-ZIP 1996-1998 & K.Miyauchi 1999-2015"
             VALUE "OriginalFilename", "LSPUZP.DLL"
             VALUE "ProductName", "LightShip's Unzip"
-            VALUE "ProductVersion", "0.95.0.20"
+            VALUE "ProductVersion", "0.95.0.21"
         END
     END
     BLOCK "VarFileInfo"

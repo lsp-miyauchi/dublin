@@ -78,8 +78,7 @@ BOOL WINAPI DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID plvReserved)
 {
 	char *p, buf[MAX_PATH * 2];
 
-	switch (dwReason)
-	{
+	switch (dwReason) {
 		case DLL_PROCESS_ATTACH:
 			hInst = hInstance;
 
@@ -150,15 +149,13 @@ BOOL WINAPI LuzSetOpts(zvoid* pG, LPDCL pDcl)
 	uO.X_flag = pDcl->fPrivilege;
 	uO.overwrite_none = !uO.overwrite_all;
 	uO.sflag = pDcl->fSpc2Undscr;			// Translate spaces to underscores?
-	if (pDcl->fInfo)
-	{
+	if (pDcl->fInfo) {
 		uO.zipinfo_mode = TRUE;
 		uO.hflag = TRUE;
 		uO.lflag = 10;
 		uO.qflag = 2;
 	}
-	else
-	{
+	else {
 		uO.zipinfo_mode = FALSE;
 	}
 
@@ -173,8 +170,7 @@ BOOL WINAPI LuzSetOpts(zvoid* pG, LPDCL pDcl)
 #endif
                      );
 
-	if (pDcl->lpszExtractDir != NULL && G.extract_flag)
-	{
+	if (pDcl->lpszExtractDir != NULL && G.extract_flag) {
 #ifndef CRTL_CP_IS_ISO
        char *pExDirRoot = (char *)malloc(lstrlen(pDcl->lpszExtractDir)+1);
 
@@ -186,8 +182,7 @@ BOOL WINAPI LuzSetOpts(zvoid* pG, LPDCL pDcl)
 #endif
        uO.exdir = pExDirRoot;
 	}
-	else
-	{
+	else {
 		uO.exdir = NULL;
 	}
 
@@ -221,15 +216,13 @@ int WINAPI LuzSingleEntryUnzip(int ifnc, char **ifnv, int xfnc, char **xfnv, LPD
 	int retcode;
 	CONSTRUCTGLOBALS();
 
-	if (!LuzInit((zvoid*)&G, lpUserFunc))
-	{
+	if (!LuzInit((zvoid*)&G, lpUserFunc)) {
 		DESTROYGLOBALS();
 		return PK_BADERR;
 	}
 
 	// Something has screwed up, we don't have a filename
-	if (pDcl->lpszZipFN == NULL)
-	{
+	if (pDcl->lpszZipFN == NULL) {
 		DESTROYGLOBALS();
 		return PK_NOZIP;
 	}
@@ -266,12 +259,9 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 
 	if (ifnv == NULL && ifnc != 0)
 		ifnc = 0;
-	else
-	{
-		for (f_cnt = 0; f_cnt < ifnc; f_cnt++)
-		{
-			if (ifnv[f_cnt] == NULL)
-			{
+	else {
+		for (f_cnt = 0; f_cnt < ifnc; f_cnt++) {
+			if (ifnv[f_cnt] == NULL) {
 				ifnc = f_cnt;
 				break;
 			}
@@ -280,12 +270,9 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 
 	if (xfnv == NULL && xfnc != 0)
 		xfnc = 0;
-	else
-	{
-		for (f_cnt = 0; f_cnt < xfnc; f_cnt++)
-		{
-			if (xfnv[f_cnt] == NULL)
-			{
+	else {
+		for (f_cnt = 0; f_cnt < xfnc; f_cnt++) {
+			if (xfnv[f_cnt] == NULL) {
 				xfnc = f_cnt;
 				break;
 			}
@@ -296,16 +283,14 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 	G.filespecs = ifnc;
 	G.xfilespecs = xfnc;
 
-	if (ifnc > 0)
-	{
+	if (ifnc > 0) {
 #ifdef CRTL_CP_IS_ISO
 		G.pfnames = ifnv;
 #else /* !CRTL_CP_IS_ISO */
 		unsigned bufsize = 0;
 
 		intern_ifv = (char**)malloc((ifnc + 1) * sizeof(char**));
-		if (intern_ifv == NULL)
-		{
+		if (intern_ifv == NULL) {
 			FreeDllMem(__G);
 			return PK_BADERR;
 		}
@@ -314,20 +299,17 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 			bufsize += lstrlen(ifnv[f_cnt]) + 1;
 
 		intern_ifv[0] = (char*)malloc(bufsize);
-		if (intern_ifv[0] == NULL)
-		{
+		if (intern_ifv[0] == NULL) {
 			free(intern_ifv);
 			FreeDllMem(__G);
 			return PK_BADERR;
 		}
 
-		for (f_cnt = 0; ; f_cnt++)
-		{
+		for (f_cnt = 0; ; f_cnt++) {
 			ISO_TO_INTERN(ifnv[f_cnt], intern_ifv[f_cnt]);
 			if ((f_cnt+1) >= ifnc)
 				break;
-			intern_ifv[f_cnt+1] = intern_ifv[f_cnt] +
-                              (lstrlen(intern_ifv[f_cnt]) + 1);
+			intern_ifv[f_cnt+1] = intern_ifv[f_cnt] + (lstrlen(intern_ifv[f_cnt]) + 1);
 		}
 		intern_ifv[ifnc] = (char *)NULL;
 		G.pfnames = intern_ifv;
@@ -342,10 +324,8 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 		unsigned bufsize = 0;
 
 		intern_xfv = (char**)malloc((xfnc + 1) * sizeof(char**));
-		if (intern_xfv == NULL)
-		{
-			if (ifnc > 0)
-			{
+		if (intern_xfv == NULL) {
+			if (ifnc > 0) {
 				free(intern_ifv[0]);
 				free(intern_ifv);
 			}
@@ -356,11 +336,9 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 		for (f_cnt = xfnc; --f_cnt >= 0;)
 			bufsize += lstrlen(xfnv[f_cnt]) + 1;
 		intern_xfv[0] = (char*)malloc(bufsize);
-		if (intern_xfv[0] == NULL)
-		{
+		if (intern_xfv[0] == NULL) {
 			free(intern_xfv);
-			if (ifnc > 0)
-			{
+			if (ifnc > 0) {
 				free(intern_ifv[0]);
 				free(intern_ifv);
 			}
@@ -368,8 +346,7 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 			return PK_BADERR;
 		}
 
-		for (f_cnt = 0; ; f_cnt++)
-		{
+		for (f_cnt = 0; ; f_cnt++) {
 			ISO_TO_INTERN(xfnv[f_cnt], intern_xfv[f_cnt]);
 			if ((f_cnt+1) >= xfnc)
 				break;
@@ -387,16 +364,13 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
   ---------------------------------------------------------------------------*/
 
 	retcode = setjmp(dll_error_return);
-	if (retcode)
-	{
+	if (retcode) {
 #ifndef CRTL_CP_IS_ISO
-		if (xfnc > 0)
-		{
+		if (xfnc > 0) {
 			free(intern_xfv[0]);
 			free(intern_xfv);
 		}
-		if (ifnc > 0)
-		{
+		if (ifnc > 0) {
 			free(intern_ifv[0]);
 			free(intern_ifv);
 		}
@@ -407,13 +381,11 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 
 	retcode = process_zipfiles(__G);
 #ifndef CRTL_CP_IS_ISO
-	if (xfnc > 0)
-	{
+	if (xfnc > 0) {
 		free(intern_xfv[0]);
 		free(intern_xfv);
 	}
-	if (ifnc > 0)
-	{
+	if (ifnc > 0) {
 		free(intern_ifv[0]);
 		free(intern_ifv);
 	}
@@ -424,8 +396,7 @@ int WINAPI LuzUnzip(zvoid* pG, int ifnc, char** ifnv, int xfnc, char** xfnv)
 
 int win_fprintf(zvoid *pG, FILE *file, unsigned int size, char far *buffer)
 {
-	if ((file != stderr) && (file != stdout))
-	{
+	if ((file != stderr) && (file != stdout)) {
 		return write(fileno(file), (char*)(buffer),size);
 	}
 	return DllMessagePrint(pG, buffer, size, 0);
@@ -537,26 +508,21 @@ int UZ_EXP UzpPassword(pG, rcnt, pwbuf, size, zfn, efn)
 		if (*rcnt == 0)
 		{
 			// コマンドラインパスワード
-			if (uO.pwdarg && *uO.pwdarg)
-			{
+			if (uO.pwdarg && *uO.pwdarg) {
 				lstrcpy(pwbuf, uO.pwdarg);
 				*rcnt = 3;
 				return IZ_PW_ENTERED;
 			}
-			else if (gbTryLastPassword &&
-					 rgGetString(sszStat, sszPass, pwbuf, 80) > 0)
-			{
+			else if (gbTryLastPassword && rgGetString(sszStat, sszPass, pwbuf, 80) > 0) {
 				// レジストリをチェックし、過去のパスワードを試みる
 				*rcnt = 3;
 			}
-			else
-			{
+			else {
 				*rcnt = 2;
 				pwbuf[0] = '\0';
 			}
 		}
-		else
-		{
+		else {
 			(*rcnt)--;
 		}
 		res = (*G.pUserFn->password)((LPSTR)pwbuf, size, (LPSTR)efn);
@@ -569,8 +535,7 @@ void UZ_EXP UzpAcceptPassword(pG, pwbuf)
     zvoid *pG;          /* globals struct: always passed */
     char *pwbuf;        /* buffer for password */
 {
-	if (gbTryLastPassword)
-	{
+	if (gbTryLastPassword) {
 		FILE* fp;
 		char *p, buf[MAX_PATH * 2];
 		int len;
@@ -578,14 +543,12 @@ void UZ_EXP UzpAcceptPassword(pG, pwbuf)
 		// パスワードが記録されていないか、過去のパスワードと同じでないなら
 		// 記録する
 		len = rgGetString(sszStat, sszPass, buf, 80);
-		if (len < 1 || lstrcmp(pwbuf, buf))
-		{
+		if (len < 1 || lstrcmp(pwbuf, buf)) {
 			GetModuleFileName(hInst, buf, MAX_PATH * 2);
 			p = (char*)_mbsrchr(buf, '.');
 			lstrcpy(++p, "pwd");
 			fp = fopen(buf, "a+");
-			if (fp)
-			{
+			if (fp) {
 				fprintf(fp, "%s\n", pwbuf);
 				fclose(fp);
 			}
@@ -611,8 +574,7 @@ static int WINAPI LuzStatReportCB(zvoid *pG, int fnflag, ZCONST char *zfn,
                     ZCONST char *efn, ZCONST zvoid *details)
 {
 	int rval = UZ_ST_CONTINUE;
-	if (G.pUserFn->report)
-	{
+	if (G.pUserFn->report) {
 		if ((*G.pUserFn->report)(G.pUserFn, fnflag, zfn, efn, (ULONG)details))
 			rval = UZ_ST_BREAK;
 	}
@@ -631,15 +593,13 @@ int WINAPI LuzUnzipToMemory(LPSTR zip, LPSTR file,
     CONSTRUCTGLOBALS();
 #ifndef CRTL_CP_IS_ISO
     intern_zip = (char *)malloc(lstrlen(zip)+1);
-    if (intern_zip == NULL)
-	{
+    if (intern_zip == NULL) {
        DESTROYGLOBALS()
        return PK_MEM;
     }
 
     intern_file = (char*)malloc(lstrlen(file)+1);
-    if (intern_file == NULL)
-	{
+    if (intern_file == NULL) {
        DESTROYGLOBALS()
        free(intern_zip);
        return PK_MEM;
@@ -649,8 +609,7 @@ int WINAPI LuzUnzipToMemory(LPSTR zip, LPSTR file,
 #   define zip intern_zip
 #   define file intern_file
 #endif
-	if (!LuzInit((zvoid*)&G, pUserFn))
-	{
+	if (!LuzInit((zvoid*)&G, pUserFn)) {
        DESTROYGLOBALS();
        return PK_BADERR;
     }
@@ -665,12 +624,11 @@ int WINAPI LuzUnzipToMemory(LPSTR zip, LPSTR file,
     free(intern_file);
     free(intern_zip);
 #endif
-	if (!r && retstr->strlength)
-	{
+	if (!r && retstr->strlength) {
        free(retstr->strptr);
        retstr->strptr = NULL;
-    }
-    return r;
+  }
+  return r;
 }
 
 
@@ -711,82 +669,70 @@ int WINAPI LuzGrep(LPSTR archive, LPSTR file, LPSTR pattern, int cmd,
      * dll with printing stuff for this. */
     LuzNoPrinting(TRUE);
 
-    if (!LuzUnzipToMemory(archive, file, pUserFn, &retstr))
-	{
-		LuzNoPrinting(FALSE);
-		return -1;   /* not enough memory, file not found, or other error */
+    if (!LuzUnzipToMemory(archive, file, pUserFn, &retstr)) {
+			LuzNoPrinting(FALSE);
+			return -1;   /* not enough memory, file not found, or other error */
     }
 
-    if (SkipBin)
-	{
-        if (retstr.strlength < 100)
-            buflen = retstr.strlength;
-        else
-            buflen = 100;
-        for (i = 0; i < buflen; i++)
-		{
-            if (iscntrl(retstr.strptr[i]))
-			{
-                if ((retstr.strptr[i] != 0x0A) &&
-                    (retstr.strptr[i] != 0x0D) &&
-                    (retstr.strptr[i] != 0x09))
-                {
-                    /* OK, we now think we have a binary file of some sort */
-                    free(retstr.strptr);
-                    LuzNoPrinting(FALSE);
-                    return FALSE;
-                }
-            }
+    if (SkipBin) {
+      if (retstr.strlength < 100)
+				buflen = retstr.strlength;
+      else
+        buflen = 100;
+      for (i = 0; i < buflen; i++) {
+        if (iscntrl(retstr.strptr[i])) {
+          if ((retstr.strptr[i] != 0x0A) &&
+            (retstr.strptr[i] != 0x0D) &&
+            (retstr.strptr[i] != 0x09)) {
+            /* OK, we now think we have a binary file of some sort */
+            free(retstr.strptr);
+            LuzNoPrinting(FALSE);
+            return FALSE;
+          }
         }
+      }
     }
 
     patternLen = lstrlen(pattern);
 
-    if (retstr.strlength < patternLen)
-	{
-        free(retstr.strptr);
-        LuzNoPrinting(FALSE);
-        return FALSE;
+    if (retstr.strlength < patternLen) {
+      free(retstr.strptr);
+      LuzNoPrinting(FALSE);
+      return FALSE;
     }
 
     sz = malloc(patternLen + 3); /* add two in case doing whole words only */
-	if (cmd > 1)
-	{
-        lstrcpy(sz, " ");
-        strcat(sz, pattern);
-        strcat(sz, " ");
-	}
-	else
-		lstrcpy(sz, pattern);
+		if (cmd > 1) {
+      lstrcpy(sz, " ");
+      strcat(sz, pattern);
+      strcat(sz, " ");
+		}
+		else
+			lstrcpy(sz, pattern);
 
-    if ((cmd == 0) || (cmd == 2))
-	{
-        for (i = 0; i < strlen(sz); i++)
-            sz[i] = toupper(sz[i]);
-        for (i = 0; i < retstr.strlength; i++)
-            retstr.strptr[i] = toupper(retstr.strptr[i]);
-	}
+    if ((cmd == 0) || (cmd == 2)) {
+      for (i = 0; i < strlen(sz); i++)
+        sz[i] = toupper(sz[i]);
+      for (i = 0; i < retstr.strlength; i++)
+        retstr.strptr[i] = toupper(retstr.strptr[i]);
+		}
 
-	for (i = 0; i < (retstr.strlength - patternLen); i++)
-	{
-        p = &retstr.strptr[i];
-        compare = TRUE;
-        for (j = 0; j < patternLen; j++)
-		{
-            /* We cannot do strncmp here, as we may be dealing with a
-             * "binary" file, such as a word processing file, or perhaps
-             * even a true executable of some sort. */
-            if (p[j] != sz[j])
-			{
-                compare = FALSE;
-                break;
-            }
-        }
-        if (compare == TRUE)
-		{
-            retcode = TRUE;
+		for (i = 0; i < (retstr.strlength - patternLen); i++) {
+      p = &retstr.strptr[i];
+      compare = TRUE;
+      for (j = 0; j < patternLen; j++) {
+        /* We cannot do strncmp here, as we may be dealing with a
+          * "binary" file, such as a word processing file, or perhaps
+          * even a true executable of some sort. */
+        if (p[j] != sz[j]) {
+            compare = FALSE;
             break;
         }
+      }
+      if (compare == TRUE) {
+        retcode = TRUE;
+        break;
+      }
     }
 
     free(sz);

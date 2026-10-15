@@ -218,8 +218,7 @@ static struct zdirent *Readdir(d)
 
     if ( d->d_first )
         d->d_first = 0;
-    else
-    {
+    else {
         WIN32_FIND_DATA fd;
 
         if ( !FindNextFile(d->d_hFindFile, &fd) )
@@ -308,8 +307,6 @@ void process_defer_NT(__G)
     }
 }
 
-
-
 /**********************/
 /*  Function SetSD()  */   /* return almost-PK errors */
 /**********************/
@@ -358,9 +355,6 @@ static int SetSD(__G__ path, VolumeCaps, eb_ptr, eb_len)
     return error;
 }
 
-
-
-
 /********************************/   /* scan extra fields for something */
 /*  Function EvalExtraFields()  */   /*  we happen to know */
 /********************************/
@@ -377,8 +371,7 @@ static int EvalExtraFields(__G__ path, ef_ptr, ef_len)
         return PK_OK;  /* user said don't process ACLs; for now, no other
                           extra block types are handled here */
 
-    while (ef_len >= EB_HEADSIZE)
-    {
+    while (ef_len >= EB_HEADSIZE) {
         unsigned eb_id = makeword(EB_ID + ef_ptr);
         unsigned eb_len = makeword(EB_LEN + ef_ptr);
 
@@ -390,8 +383,7 @@ static int EvalExtraFields(__G__ path, ef_ptr, ef_len)
             break;
         }
 
-        switch (eb_id)
-        {
+        switch (eb_id) {
             /* process security descriptor extra data if:
                  Caller is WinNT AND
                  Target local/remote drive supports acls AND
@@ -1496,12 +1488,12 @@ int mapname(__G__ renamed)   /*  truncated), 2 if warning (skip file because */
     *pathcomp = '\0';           /* initialize translation buffer */
     pp = pathcomp;              /* point to translation buffer */
     if (!renamed) {             /* cp already set if renamed */
-        if (uO.jflag)           /* junking directories */
-            cp = (char*)_mbsrchr((BYTE*)G.filename, '/');
-        if (cp == NULL)         /* no '/' or not junking dirs */
-            cp = G.filename;    /* point to internal zipfile-member pathname */
-        else
-            ++cp;               /* point to start of last component of path */
+      if (uO.jflag)             /* junking directories */
+        cp = (char*)_mbsrchr((BYTE*)G.filename, '/');
+      if (cp == NULL)           /* no '/' or not junking dirs */
+        cp = G.filename;        /* point to internal zipfile-member pathname */
+      else
+        ++cp;                   /* point to start of last component of path */
     }
 
 /*---------------------------------------------------------------------------
@@ -1509,19 +1501,19 @@ int mapname(__G__ renamed)   /*  truncated), 2 if warning (skip file because */
   ---------------------------------------------------------------------------*/
 
     while ((workch = (uch)*cp++) != 0) {
-		if (IsDBCSLeadByte((BYTE)workch)) {
-			*pp++ = (char)workch;
-			*pp++ = *cp++;
-		}
-		else {
+		  if (IsDBCSLeadByte((BYTE)workch)) {
+			  *pp++ = (char)workch;
+			  *pp++ = *cp++;
+		  }
+		  else {
         switch (workch) {
         case '/':             /* can assume -j flag not given */
-            *pp = '\0';
-            if ((error = checkdir(__G__ pathcomp, APPEND_DIR)) > 1)
-                return error;
-            pp = pathcomp;    /* reset conversion buffer for next piece */
-            lastsemi = NULL;  /* leave directory semi-colons alone */
-            break;
+          *pp = '\0';
+          if ((error = checkdir(__G__ pathcomp, APPEND_DIR)) > 1)
+              return error;
+          pp = pathcomp;    /* reset conversion buffer for next piece */
+          lastsemi = NULL;  /* leave directory semi-colons alone */
+          break;
 
         case ':':             /* drive names not stored in zipfile, */
         case '<':             /*  so no colons allowed */
@@ -1530,27 +1522,27 @@ int mapname(__G__ renamed)   /*  truncated), 2 if warning (skip file because */
         case '"':             /* no double quotes allowed */
         case '?':             /* no wildcards allowed */
         case '*':
-            *pp++ = '_';      /* these rules apply equally to FAT and NTFS */
-            break;
+          *pp++ = '_';      /* these rules apply equally to FAT and NTFS */
+          break;
         case ';':             /* start of VMS version? */
-            lastsemi = pp;    /* remove VMS version later... */
-            *pp++ = ';';      /*  but keep semicolon for now */
-            break;
+          lastsemi = pp;    /* remove VMS version later... */
+          *pp++ = ';';      /*  but keep semicolon for now */
+          break;
 
         case ' ':             /* keep spaces unless specifically */
-            /* NT cannot create filenames with spaces on FAT volumes */
-            if (uO.sflag || IsVolumeOldFAT(__G__ G.filename))
-                *pp++ = '_';
-            else
-                *pp++ = ' ';
-            break;
+          /* NT cannot create filenames with spaces on FAT volumes */
+          if (uO.sflag || IsVolumeOldFAT(__G__ G.filename))
+              *pp++ = '_';
+          else
+              *pp++ = ' ';
+          break;
 
         default:
-            /* allow European characters in filenames: */
-            if (isprint(workch) || workch >= 127)
-                *pp++ = (char)workch;
+          /* allow European characters in filenames: */
+          if (isprint(workch) || workch >= 127)
+              *pp++ = (char)workch;
         } /* end switch */
-		} /* end not DBCS */
+		  } /* end not DBCS */
     } /* end while loop */
 
     *pp = '\0';                   /* done with pathcomp:  terminate it */
