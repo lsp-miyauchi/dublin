@@ -241,8 +241,16 @@ public:
 	// 文字幅(pixel)
 	int W(TCHAR ch) const
 	{
-		if (m_widthTable[ch] == -1)
-			m_dc.GetCharWidth(ch, ch, m_widthTable + ch);
+		if (m_widthTable[ch] == -1) {
+/*
+			ABC abc;
+			m_dc.GetCharABCWidths(ch, ch, &abc);
+			m_widthTable[ch] = abc.abcA + abc.abcB + abc.abcC;
+*/
+      SIZE sz;
+      m_dc.GetTextExtent(&ch, 1, &sz);
+      m_widthTable[ch] = sz.cx;
+		}
 		return m_widthTable[ch];
 	}
 

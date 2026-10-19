@@ -1,4 +1,6 @@
 #include "stdafx.h"
+// Windows SDK内のICUヘッダーをインクルード
+#include <icu.h>
 #include "textfile.h"
 
 

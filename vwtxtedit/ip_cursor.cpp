@@ -696,15 +696,13 @@ void CPadCursor::Copy(bool bFollow, bool bAppend)
 	if (!strBase.IsEmpty())
 		len += strBase.GetLength();
 
-	HGLOBAL hmem = GlobalAlloc(GMEM_MOVEABLE, (len + 1) * 2);
-	WCHAR* p = (WCHAR*)GlobalLock(hmem);
+	WCHAR* p = (WCHAR*)malloc((len + 1) * sizeof(WCHAR));
 	if (!strBase.IsEmpty()) {
-		lstrcpy(p, strBase);
-		p += lstrlen(p);
+		lstrcpyW(p, strBase);
+		p += lstrlenW(p);
 	}
 	m_doc->GetText(p, s, e, pszFollow);
-	::GlobalUnlock(hmem);
-	clp.SetData(CF_UNICODETEXT, hmem);
+	clp.SetData(CF_UNICODETEXT, p);
 }
 
 bool CPadCursor::CanPaste()

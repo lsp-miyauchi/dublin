@@ -25,8 +25,8 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,1,49
- PRODUCTVERSION 7,4,1,49
+ FILEVERSION 7,4,1,82
+ PRODUCTVERSION 7,4,1,82
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -43,12 +43,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Text Editor for FileVisor"
-            VALUE "FileVersion", "7.4.1.49"
+            VALUE "FileVersion", "7.4.1.82"
             VALUE "InternalName", "vwtxtedit"
             VALUE "LegalCopyright", "(C)LightShip Inc. 2000-2024 All rights reserved."
             VALUE "OriginalFilename", "vwtxtedit.dll"
             VALUE "ProductName", "FileVisor7"
-            VALUE "ProductVersion", "7.4.1.49"
+            VALUE "ProductVersion", "7.4.1.82"
         END
     END
     BLOCK "VarFileInfo"

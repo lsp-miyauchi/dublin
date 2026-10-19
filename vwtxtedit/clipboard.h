@@ -36,7 +36,7 @@ public:
 	}
 
 	// データ読み込み
-	inline HANDLE GetData( UINT uFormat ) const { return ::GetClipboardData(uFormat); }
+	inline void* GetData( UINT uFormat ) const { return ::GetClipboardData(uFormat); }
 
 	// 指定フォーマットのデータがクリップボード上にあるか？
 	inline bool IsAvail(UINT uFormat) const { return false != ::IsClipboardFormatAvailable(uFormat); }
@@ -51,19 +51,15 @@ public:
 	int GetUnicodeText(CString& str)
 	{
 		str.Empty();
-		HANDLE h = GetData(CF_UNICODETEXT);
-		if (h != NULL) {
-			WCHAR* p = (WCHAR*)::GlobalLock(h);
-			if (p) {
-				str = p;;
-				::GlobalUnlock(h);
-			}
+		void* p = GetData(CF_UNICODETEXT);
+		if (p != NULL) {
+			str = (LPCTSTR)p;
 		}
 		return str.GetLength();
 	}
 
 	// データ書き込み
-	inline bool SetData( UINT uFormat, HANDLE hData ) { return NULL != ::SetClipboardData( uFormat, hData ); }
+	inline bool SetData( UINT uFormat, void* dataptr ) { return NULL != ::SetClipboardData( uFormat, dataptr ); }
 
 	// 独自フォーマットの登録
 	inline UINT RegisterFormat( const TCHAR* name ) { return ::RegisterClipboardFormat(name); }

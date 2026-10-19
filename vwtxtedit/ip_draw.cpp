@@ -364,9 +364,18 @@ CPainter::CPainter( HDC hdc, const VConfig& vc )
 	m_dc.SetMapMode(MM_TEXT);
 
 	// 文字幅テーブル初期化（ASCII範囲の文字以外は遅延処理）
-	memset(m_widthTable, 0xff, 65536 * sizeof(int));
-	m_dc.GetCharWidth(L' ', L'~', m_widthTable + L' ');
+	memset(m_widthTable, -1, 65536 * sizeof(int));
+	int firstChar = L' ';
+	int lastChar = L'~';
+	int count = lastChar - firstChar + 1;
+	ABC* abcs = new ABC[count];
+
+	m_dc.GetCharABCWidths(firstChar, lastChar, abcs);
+	for (int i = 0; i < count; ++i) {
+		m_widthTable[firstChar++] = abcs[i].abcA + abcs[i].abcB + abcs[i].abcC;
+	}
 	m_widthTable[L'\t'] = W() * Max(1, vc.m_tabstep);
+  delete[] abcs;
 
 	// 数字の最大幅を計算
 	m_figWidth = 0;
@@ -436,14 +445,12 @@ void CPainter::CreateSymbolBitmaps()
 	int i, j;
 	int dx = W();
 	int dy = H();			// 行の高さ
-	int ty;					// 文字のみの高さ
-	{
-		TEXTMETRIC tm;
-		HFONT hfont = m_dc.SelectFont(m_hfont);
-		m_dc.GetTextMetrics(&tm);
-		ty = tm.tmAscent;		// 文字のみの高さ（ベースラインより上）
-		m_dc.SelectFont(hfont);
-	}
+	TEXTMETRIC tm;
+	HFONT hfont = m_dc.SelectFont(m_hfont);
+	m_dc.GetTextMetrics(&tm);
+	int ty = tm.tmAscent;		// 文字のみの高さ（ベースラインより上）
+	m_dc.SelectFont(hfont);
+
 	m_hbmCR = CreateBitmap(dx,       dy, 1, 1, NULL);
 	m_hbmTB = CreateBitmap(dx,       dy, 1, 1, NULL);
 	m_hbmZS = CreateBitmap(W(L'　'), dy, 1, 1, NULL);
@@ -471,7 +478,7 @@ void CPainter::CreateSymbolBitmaps()
 	HBITMAP hbm1 = dc1.SelectBitmap(m_hbmCR);
 	HBITMAP hbm2 = dc2.SelectBitmap(hbm);
 	dc1.PatBlt(0, 0, dx, dy, WHITENESS);
-	dc1.BitBlt((dx - 8) / 2, (ty - cy) / 2, 8, cy, dc2, 0, 0, SRCCOPY);
+	dc1.BitBlt((dx - 8) / 2, (dy - tm.tmHeight) / 2, 8, cy, dc2, 0, 0, SRCCOPY);
 	dc1.SelectBitmap(hbm1);
 	::DeleteObject(dc2.SelectBitmap(hbm2));
 
@@ -487,7 +494,7 @@ void CPainter::CreateSymbolBitmaps()
 	hbm1 = dc1.SelectBitmap(m_hbmTB);
 	hbm2 = dc2.SelectBitmap(hbm);
 	dc1.PatBlt(0, 0, dx, dy, WHITENESS);
-	dc1.BitBlt((dx - 8) / 2, (ty - cy) / 2, 8, cy, dc2, 0, 0, SRCCOPY);
+	dc1.BitBlt((dx - 8) / 2, (dy - cy) / 2, 8, cy, dc2, 0, 0, SRCCOPY);
 	dc1.SelectBitmap(hbm1);
 	::DeleteObject(dc2.SelectBitmap(hbm2));
 
@@ -657,8 +664,17 @@ void CPadView::DrawTXT( const VDrawInfo vdi)
 			bCurLine = !m_cursor->isSelected() && (tl2vl(tl) + rl == m_cursor->GetCurPos().vl);
 			rc.left   = 0;
 			rc.right  = vdi.xBase + vdi.xMax;
+#ifndef CURSOR_UNDERLINE
 			painter->Fill(rc, bCurLine ? CLR_CUR : CLR_BG);
-
+#else
+			painter->Fill(rc, CLR_BG);
+      if (bCurLine) {
+        CRect rc2(rc);
+        rc2.top = rc.bottom - 1;
+        rc2.right = vdi.xBase + vdi.xMax;
+				painter->Fill(rc2, CLR_CUR);
+			}
+#endif
 			// 行番号表示
 			if (vdi.rc.left < lna()) {
 				// 境界線表示
@@ -713,20 +729,34 @@ void CPadView::DrawTXT( const VDrawInfo vdi)
 					// TAB
 					if (painter->sc(scTAB)) {
 						for (; i < i2; i++) {
+#ifndef CURSOR_UNDERLINE
 							painter->DrawTAB(x + vdi.xBase, rc.top + yPad, CLR_CTL, bCurLine ? CLR_CUR : CLR_BG);
+#else
+							painter->DrawTAB(x + vdi.xBase, rc.top + yPad, CLR_CTL, CLR_BG);
+#endif
 							x = painter->nextTab(x);
 						}
 					}
 					break;
 				case L' ':
 					// 半角空白 L'　':
-					if (painter->sc(scHSP))
+					if (painter->sc(scHSP)) {
+#ifndef CURSOR_UNDERLINE
 						painter->DrawHSP(x + vdi.xBase, rc.top + yPad, i2 - i, CLR_CTL, bCurLine ? CLR_CUR : CLR_BG);
+#else
+						painter->DrawHSP(x + vdi.xBase, rc.top + yPad, i2 - i, CLR_CTL, CLR_BG);
+#endif
+					}
 					break;
 				case 0x3000:
 					// 全角空白 L'　':
-					if (painter->sc(scZSP))
+					if (painter->sc(scZSP)) {
+#ifndef CURSOR_UNDERLINE
 						painter->DrawZSP(x + vdi.xBase, rc.top + yPad, i2 - i, CLR_CTL, bCurLine ? CLR_CUR : CLR_BG);
+#else
+						painter->DrawZSP(x + vdi.xBase, rc.top + yPad, i2 - i, CLR_CTL, CLR_BG);
+#endif
+					}
 					break;
 				default:
 					{
@@ -770,7 +800,11 @@ void CPadView::DrawTXT( const VDrawInfo vdi)
 				if (sc == scEOL) {
 					bool bInvert = (vdi.ySelBegin < rc.top && rc.top <= vdi.ySelEnd);
 					int indexFore = bInvert ? CLR_CUR : CLR_EOL;
+#ifndef CURSOR_UNDERLINE
 					int indexBack = bInvert ? CLR_EOL : (bCurLine ? CLR_CUR : CLR_BG);
+#else
+					int indexBack = bInvert ? CLR_EOL : CLR_BG;
+#endif
 					painter->DrawEOL(x + vdi.xBase, rc.top - yChar, indexFore, indexBack);
 				}
 				else

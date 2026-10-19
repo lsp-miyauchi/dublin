@@ -3,6 +3,9 @@
 
 #pragma once
 
+// #define CURSOR_UNDERLINE
+
+
 #ifndef _PAD_COMMON_H_
 #define _PAD_COMMON_H_
 
@@ -224,29 +227,33 @@ public:
 		m_tabstep = 4;
 		m_widescroll = 3;
 		m_wraptype = WRAP_WINDOWEDGE;
-		m_color[CLR_TXT]	= RGB(0,0,0);					// 文字色
-		m_color[CLR_BG ]	= RGB(255,255,255);				// 背景色
-		m_color[CLR_NUM]	= RGB(67,149,209);				// 行番号
-		m_color[CLR_EOL]	= RGB(0,128,128);				// 改行・EOF
-		m_color[CLR_CTL]	= RGB(192,192,192);				// TAB/全角空白
-		m_color[CLR_CUR]	= RGB(204,221,255);				// カーソル行
-		m_color[CLR_RTXT]	= RGB(255,255,255);				// 選択時文字色
-		m_color[CLR_RBG]	= RGB(0,0,0);					// 選択時背景色
-		m_color[CLR_DUM1]	= RGB(255,255,255);				// ダミー1
-		m_color[CLR_DUM2]	= RGB(255,255,255);				// ダミー2
-		m_color[CLR_CMT]	= RGB(0,128,0);					// コメント行
-		m_color[CLR_KWD1]	= RGB(0,0,255);					// キーワード1
-		m_color[CLR_KWD2]	= RGB(0,128,192);				// キーワード2
-		m_color[CLR_KWD3]	= RGB(255,0,0);					// キーワード3
-		m_color[CLR_KWD4]	= RGB(0,128,255);				// キーワード4
-		m_sc[scEOF]			= true;
-		m_sc[scEOL]			= true;
-		m_sc[scTAB]			= true;
-		m_sc[scHSP]			= false;
-		m_sc[scZSP]			= true;
-		m_sc[scNUM]			= true;
-		m_linedenom			= 10;							// 行間 1/10行
-		m_blockcursor		= true;							// true = block
+		m_color[CLR_TXT]	= RGB(0xdf,0xdf,0xdf);		// 文字色
+		m_color[CLR_BG ]	= RGB(0x1e,0x1e,0x1e);		// 背景色
+		m_color[CLR_NUM]	= RGB(0x88,0x88,0x88);		// 行番号
+		m_color[CLR_EOL]	= RGB(0x33,0xcc,0x33);		// 改行・EOF
+		m_color[CLR_CTL]	= RGB(0x66,0x66,0x66);		// TAB/全角空白
+#ifndef CURSOR_UNDERLINE
+		m_color[CLR_CUR]  = RGB(0x33, 0x33, 0x33);	// カーソル行
+#else
+		m_color[CLR_CUR]	= RGB(0xee,0xee,0x33);		// カーソル行
+#endif
+		m_color[CLR_RTXT]	= RGB(0xff,0xff,0xff);		// 選択時文字色
+		m_color[CLR_RBG]	= RGB(0x33,0x66,0x99);		// 選択時背景色
+		m_color[CLR_DUM1]	= RGB(0xff,0xff,0xff);		// ダミー1
+		m_color[CLR_DUM2]	= RGB(0xff,0xff,0xff);		// ダミー2
+		m_color[CLR_CMT]	= RGB(0x56,0x98,0x1b);		// コメント行
+		m_color[CLR_KWD1]	= RGB(0x71,0xb8,0xff);		// キーワード1
+		m_color[CLR_KWD2]	= RGB(0xf5,0xe6,0x5a);		// キーワード2
+		m_color[CLR_KWD3]	= RGB(0x33,0xcc,0xcc);		// キーワード3
+		m_color[CLR_KWD4]	= RGB(0xcc,0x33,0xcc);		// キーワード4
+		m_sc[scEOF]		= true;
+		m_sc[scEOL]		= true;
+		m_sc[scTAB]		= true;
+		m_sc[scHSP]		= false;
+		m_sc[scZSP]		= true;
+		m_sc[scNUM]		= true;
+		m_linedenom		= 3;								// 行間 1/3行
+		m_blockcursor	= true;							// true = block
 	}
 
 	void CopyFrom(const VIEWCONFIG& src)
