@@ -89,7 +89,7 @@ __inline bool OsVISTA() { return gosp.OsVISTA(); }
 //////////////////////////////////////////////////
 //
 
-int AppMessage(UINT nID, LPCTSTR pszInsert = NULL, UINT nType = MB_STOP);
+int AppMessage(UINT nID, LPCTSTR pszInsert = nullptr, UINT nType = MB_STOP);
 int LastError(LPCTSTR pszTitle, UINT nType = MB_STOP);
 TCHAR* __fastcall SkipTabSpace(TCHAR* p);
 int SeparateString(LPCTSTR pszText, int delim, CSimpleArray<CString>& arr);

@@ -289,7 +289,7 @@ private:
 
 	void JumpToLine(ULONG line_number);		// 指定行へ移動
 
-	void ChangeTitle(LPCTSTR pszTitle = NULL);
+	void ChangeTitle(LPCTSTR pszTitle = nullptr);
 	void UpdateTitleNames();
 	inline bool IsUntitled() const { return (m_strFileName.IsEmpty() != FALSE); }
 

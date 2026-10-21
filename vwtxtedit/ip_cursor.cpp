@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <vector>
 #include "ip_view.h"
 #include "dataobject.h"
 
@@ -504,10 +505,9 @@ void CPadCursor::Input( const char* str, ULONG len )
 {
 	if (isROMode()) return;
 
-	WCHAR* ustr = new WCHAR[ len*4 ];
-	len = ::MultiByteToWideChar( CP_ACP, 0, str, len, ustr, len*4 );
-	Input( ustr, len );
-	delete [] ustr;
+	std::vector<TCHAR> ustr(len * 4);
+	len = ::MultiByteToWideChar( CP_ACP, 0, str, len, ustr.data(), len * 4);
+	Input( ustr.data(), len);
 }
 
 void CPadCursor::DupLine()

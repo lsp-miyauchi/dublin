@@ -620,7 +620,7 @@ public:
 
 CPadDocument::CPadDocument()
 	: m_arrDocEvHandler(2)
-	, m_parser(NULL)
+	, m_parser(nullptr)
 	, m_busy(false)
 {
 	m_text.Add(new CTextLine(L"", 0));		// 最初は一行だけ
@@ -629,8 +629,6 @@ CPadDocument::CPadDocument()
 
 CPadDocument::~CPadDocument()
 {
-	if (m_parser)
-		delete m_parser;
 }
 
 void CPadDocument::SetKeyword(const WCHAR* textptr, ULONG siz)
@@ -643,9 +641,9 @@ void CPadDocument::SetKeyword(const WCHAR* textptr, ULONG siz)
 
 	// 読み込み準備
 	CUnicodeReader r(textptr, siz);
-	bool flags[] = { false,false,false,false };
-	const WCHAR* tags[] = { NULL, NULL, NULL };
-	ULONG taglen[] = { 0, 0, 0 };
+	bool flags[4] = { false,false,false,false };
+	const WCHAR* tags[3] = { nullptr, nullptr, nullptr };
+	ULONG taglen[3] = { 0, 0, 0 };
 
 	const WCHAR* str;
 	int len;
@@ -669,11 +667,7 @@ void CPadDocument::SetKeyword(const WCHAR* textptr, ULONG siz)
 	}
 
 	// パーサー作成
-	if (m_parser) {
-		delete m_parser;
-		m_parser = NULL;
-	}
-	m_parser = new CParser(
+	m_parser = std::make_unique<CParser>(
 						tags[0], taglen[0], tags[1], taglen[1], tags[2], taglen[2],
 						flags[1], flags[2], flags[3], flags[0] );
 

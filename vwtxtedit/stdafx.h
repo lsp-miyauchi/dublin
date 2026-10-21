@@ -10,6 +10,8 @@
 #define _WTL_NO_CSTRING
 #define _WTL_NO_UNION_CLASSES
 
+#include <memory>
+#include <vector>
 #include <atlbase.h>
 #include <atlwin.h>
 #include <atlstr.h>

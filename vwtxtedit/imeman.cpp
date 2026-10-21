@@ -9,7 +9,7 @@
 // IMEに関するあれこれ
 //=========================================================================
 
-IMEManager* gpIme = NULL;
+IMEManager* gpIme = nullptr;
 
 
 
@@ -22,7 +22,7 @@ void TerminateImeManager()
 {
 	if (gpIme) {
 		delete gpIme;
-		gpIme = NULL;
+		gpIme = nullptr;
 	}
 }
 

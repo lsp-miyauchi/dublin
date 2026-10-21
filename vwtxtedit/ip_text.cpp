@@ -120,10 +120,10 @@ CUnReDoChain::~CUnReDoChain()
 
 ULONG CUnReDoChain::Node::ChainDelete(Node*& m_savedPosref)
 {
-	if (m_cmd == NULL)
+	if (m_cmd == nullptr)
 		return 0;
 	if (m_savedPosref == this)
-		m_savedPosref = NULL;
+		m_savedPosref = nullptr;
 
 	Node* d = new Node(*this);
 	ULONG res = 1 + m_next->ChainDelete(m_savedPosref);

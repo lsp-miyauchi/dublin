@@ -412,8 +412,10 @@ struct VDrawInfo {
 	int yMin;				// テキスト再描画範囲上端
 	int yMax;				// テキスト再描画範囲下端
 	ULONG tlMin;			// テキスト再描画範囲上端論理行番号
-	int xSelBegin, xSelEnd;	// 選択範囲のx座標
-	int ySelBegin, ySelEnd;	// 選択範囲のy座標
+	int xSelBegin;
+	int xSelEnd;	// 選択範囲のx座標
+	int ySelBegin;
+	int ySelEnd;	// 選択範囲のy座標
 
 	explicit VDrawInfo( const RECT& r ) : rc(r) {}
 };

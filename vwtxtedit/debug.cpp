@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include <vector>
 
 #ifndef ARRAYSIZE
 #define ARRAYSIZE(a)		(sizeof(a)/sizeof(a[0]))
@@ -72,37 +73,33 @@ void CConsole::putsA(LPCSTR pszOutput)
 
 void __cdecl CConsole::printf(LPCTSTR lpszFormat, ...)
 {
-	TCHAR* pOutput = new TCHAR[1024];
+	std::vector<TCHAR> pOutput(1024);
 	va_list argList;
 	va_start(argList, lpszFormat);
-	int len = wvsprintf(pOutput, lpszFormat, argList);
+	int len = wvsprintf(pOutput.data(), lpszFormat, argList);
 	va_end(argList);
-
-	putstr(pOutput, len);
-	delete [] pOutput;
+	putstr(pOutput.data(), len);
 }
 
 void __cdecl CConsole::msgboxf(HWND hwnd, LPCTSTR lpszFormat, ...)
 {
-	TCHAR* pOutput = new TCHAR[1024];
+	std::vector<TCHAR> pOutput(1024);
 	va_list argList;
 	va_start(argList, lpszFormat);
-	int len = wvsprintf(pOutput, lpszFormat, argList);
+	wvsprintf(pOutput.data(), lpszFormat, argList);
 	va_end(argList);
-	::MessageBox(hwnd, pOutput, _T("debug"), MB_OK);
-	delete [] pOutput;
+	::MessageBox(hwnd, pOutput.data(), _T("debug"), MB_OK);
 }
 
 void __cdecl CConsole::printfA(LPCSTR lpszFormat, ...)
 {
-	char* pOutput = new char[1024];
+	std::vector<char> pOutput(1024);
 	va_list argList;
 	va_start(argList, lpszFormat);
-	int len = wvsprintfA(pOutput, lpszFormat, argList);
+	int len = wvsprintfA(pOutput.data(), lpszFormat, argList);
 	va_end(argList);
 
-	putstrA(pOutput, len);
-	delete [] pOutput;
+	putstrA(pOutput.data(), len);
 }
 
 void CConsole::dump(BYTE* data, int len)

@@ -1387,15 +1387,16 @@ void CMainFrame::UpdateTitleNames()
 #include "keyword_php.h"
 #include "keyword_vue.h"
 
-typedef struct _tagEXTENTIONTYPE {
+struct EXTENTIONTYPE {
 	const WCHAR* kwd;
 	LPCTSTR ext;
-} EXTENTIONTYPE;
-static EXTENTIONTYPE stExts[] = {
+};
+
+static EXTENTIONTYPE stExts[12] = {
 	kwd_C,						_T("c;cc;cpp;cxx;h;hpp"),
 	kwd_CS,						_T("cs"),
 	kwd_HTML,					_T("htm;html;shtml;css"),
-	kwd_XML,					_T("xml;mxml"),
+	kwd_XML,					_T("xml;mxml;vcproj;vcxproj;filters"),
 	kwd_JAVA,					_T("java;kt"),
 	kwd_JavaScript,		_T("js;jsp"),
 	kwd_TypeScript,   _T("ts"),
@@ -1404,30 +1405,25 @@ static EXTENTIONTYPE stExts[] = {
 	kwd_PHP,          _T("php"),
 	kwd_VB,           _T("vb"),
   kwd_RC,           _T("rc;rc2"),
-	0, NULL
 };
 
-void CMainFrame::ReloadConfig(bool noSetDocType)
+void CMainFrame::ReloadConfig(bool /*noSetDocType*/)
 {
 	// コンフィグ
 	m_view.SetConfig(m_config);
 
 	// 拡張子マップ作成
 	CSimpleMap<CString, CString> map;
-	EXTENTIONTYPE* arr = stExts;
-
-	while (arr->kwd) {
-		CString tmp = arr->ext;
-		tmp.MakeLower();
-
-		int pos = 0;
-		CString token = tmp.Tokenize(_T(";"), pos);
-		while (token != _T("")) {
-			map.Add(token, arr->kwd);
-			token = tmp.Tokenize(_T(";"), pos);
-		}
-		arr++;
-	}
+  for (const auto& et : stExts) {
+    CString tmp = et.ext;
+    tmp.MakeLower();
+    int pos = 0;
+    CString token = tmp.Tokenize(_T(";"), pos);
+    while (token != _T("")) {
+      map.Add(token, et.kwd);
+      token = tmp.Tokenize(_T(";"), pos);
+    }
+  }
 
 	CString strKeywords;
 	int len = 0;
@@ -1454,7 +1450,8 @@ bool CMainFrame::SaveAs()
 	else
 		name.LoadString(IDS_UNTITLED);
 
-	int cs, lb;
+	int cs;
+	int lb;
 	CFileOpenSaveDialog dlg(FALSE, m_CharSetList[m_csi].ID, m_lb, name);
 	if (dlg.DoModal() == IDOK) {
 		dlg.GetSelectSaveFileName(name, cs, lb);

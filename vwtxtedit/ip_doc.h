@@ -437,7 +437,7 @@ public:
 	bool isBusy() const { return m_busy; }
 
 private:
-	CParser* m_parser;									// 文字列解析役
+	std::unique_ptr<CParser> m_parser;			// 文字列解析役
 	CGapBufObj<CTextLine> m_text;						// テキストデータ
 	mutable CStorage<CDocumentEventHandler*> m_arrDocEvHandler; // イベント通知先
 	CUnReDoChain m_urdo;								// アンドゥリドゥ

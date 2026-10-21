@@ -33,7 +33,7 @@ static const WCHAR kwd_C[] =
   L"friend\n"			\
   L"goto\n"			\
   L"HANDLE\n"			\
-  L"if\n"				\
+  L"2,if\n"				\
   L"inline\n"			\
   L"int\n"			\
   L"long\n"			\
@@ -41,6 +41,7 @@ static const WCHAR kwd_C[] =
   L"LONG_PTR\n"		\
   L"mutable\n"    \
   L"namespace\n"  \
+  L"nullptr\n"  \
   L"operator\n"   \
   L"private\n"    \
   L"protected\n"  \
@@ -56,7 +57,7 @@ static const WCHAR kwd_C[] =
   L"struct\n"     \
   L"template\n"   \
   L"this\n"       \
-  L"throw\n"      \
+  L"2,throw\n"      \
   L"true\n"       \
   L"try\n"			\
   L"typedef\n"		\
