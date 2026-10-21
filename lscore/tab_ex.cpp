@@ -205,7 +205,7 @@ public:
 		, m_pFontBold(NULL)
 	{
 //@		SetThemeClassList(L"Status");
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		m_cyChar = 9.0F * dc.GetDeviceCaps(LOGPIXELSY) / 72.0F;
 	}
 
@@ -412,7 +412,7 @@ int CLccTabExCtrl::OnCreate(CREATESTRUCT* pcs)
 	m_owner = pcs->hwndParent;
 
 	// backpanel bitmap
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HBITMAP hbm = CreateCompatibleBitmap(dc, 8, 8);
 	if (hbm) {
 		CDC dcw;
@@ -1101,7 +1101,7 @@ Font* CLccTabExCtrl::GetFont(bool bBold)
 	NONCLIENTMETRICS ncm = { sizeof(ncm) };
 	SystemParametersInfo(SPI_GETNONCLIENTMETRICS, sizeof(ncm), &ncm, FALSE);
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	if (bBold) {
 		if (!m_pFontBold) {
 			ncm.lfMenuFont.lfWeight = FW_BOLD;
@@ -1795,7 +1795,7 @@ HBITMAP CLccTabExCtrl::CreateDragImage(int index, POINT* ppt)
 	HBITMAP hbm = NULL;
 	int numItems = (int)m_array.GetCount();
 	if (0 <= index && index < numItems) {
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		CDC dcw;
 		dcw.CreateCompatibleDC(dc);
 
@@ -1833,7 +1833,7 @@ LRESULT CLccTabExCtrl::OnTcmSetBackgroundImage(WPARAM wParam, LPARAM lParam)
 		BITMAP bm;
 		m_bmBkgnd.GetBitmap(bm);
 
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		int width = GetSystemMetrics(SM_CXSCREEN);
 		int height = m_tabHeight;
 

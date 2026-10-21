@@ -302,7 +302,7 @@ int CLccTabCtrl::OnCreate(CREATESTRUCT* pcs)
 	m_owner = pcs->hwndParent;
 
 	// backpanel bitmap
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HBITMAP hbm = CreateCompatibleBitmap(dc, 8, 8);
 	if (hbm) {
 		CDC dcw;

@@ -503,7 +503,7 @@ static HBITMAP __fastcall gif_load(HGLOBAL hmem, COLORREF* pcrMask)
 					   pbi->bmiColors[pgi->xparent].rgbBlue);
 	}
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HBITMAP hbm = CreateDIBitmap(dc, pbh, CBM_INIT, pBits, pbi, DIB_RGB_COLORS);
 	free(pbi);
 	FreeImageStruct(pgi);

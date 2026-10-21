@@ -25,8 +25,8 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,1,82
- PRODUCTVERSION 7,4,1,82
+ FILEVERSION 7,4,1,87
+ PRODUCTVERSION 7,4,1,87
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -43,12 +43,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Text Editor for FileVisor"
-            VALUE "FileVersion", "7.4.1.82"
+            VALUE "FileVersion", "7.4.1.87"
             VALUE "InternalName", "vwtxtedit"
             VALUE "LegalCopyright", "(C)LightShip Inc. 2000-2024 All rights reserved."
             VALUE "OriginalFilename", "vwtxtedit.dll"
             VALUE "ProductName", "FileVisor7"
-            VALUE "ProductVersion", "7.4.1.82"
+            VALUE "ProductVersion", "7.4.1.87"
         END
     END
     BLOCK "VarFileInfo"
@@ -288,7 +288,7 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x0
 BEGIN
     GROUPBOX        "体裁",IDC_STATIC,7,7,279,140
     LTEXT           "フォント(&F):",IDC_STATIC,18,23,43,8
-    CONTROL         "",IDC_FONT,"LSCFontPick",WS_TABSTOP | 0x4,60,20,209,14,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_FONT,"LSCFontPick",WS_TABSTOP | 0x10,60,20,209,14,WS_EX_CLIENTEDGE
     CONTROL         "改行を表示(&K)",IDC_SHOW_CR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,43,65,10
     CONTROL         "行番号を表示(&N)",IDC_SHOW_LINENUM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,44,78,10
     CONTROL         "TABを表示(&B)",IDC_SHOW_TAB,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,197,44,65,10

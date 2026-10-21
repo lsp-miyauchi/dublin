@@ -102,9 +102,9 @@ HBITMAP WINAPI lccLoadGrayedBitmap(HINSTANCE hInst, UINT id, COLORREF crMask)
 
 	int nWidth = (int)pbhNew->biWidth;
 	int nHeight = (int)pbhNew->biHeight;
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HBITMAP hbm = CreateCompatibleBitmap(dc, nWidth, nHeight);
-	if (hbm != NULL) {
+	if (hbm != nullptr) {
 		CDC dcw;
 		dcw.CreateCompatibleDC(dc);
 		HBITMAP hbmOld = dcw.SelectBitmap(hbm);

@@ -85,9 +85,9 @@ void CCheckTreeViewCtrl::OnSetFont(HFONT hFont, BOOL bRedraw)
 void CCheckTreeViewCtrl::ResetItemHeight(HFONT hFont)
 {
 	// 行間を設定
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	TEXTMETRIC tm;
-	if (hFont == NULL) {
+	if (hFont == nullptr) {
 		hFont = m_tree.GetFont();
 	}
 	dc.SelectFont(hFont);
@@ -96,7 +96,8 @@ void CCheckTreeViewCtrl::ResetItemHeight(HFONT hFont)
 
 	int height = tm.tmHeight + tm.tmExternalLeading;
 	if (!m_image.IsNull()) {
-		int cx, cy;
+		int cx;
+		int cy;
 		m_image.GetIconSize(cx, cy);
 		height = max(height, cy);
 	}

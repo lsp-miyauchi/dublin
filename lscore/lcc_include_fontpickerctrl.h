@@ -11,7 +11,7 @@ class CFontPickerCtrlT : public TBase
 {
 public:
 // Constructors
-	CFontPickerCtrlT(HWND hWnd = NULL) : TBase(hWnd) { }
+	CFontPickerCtrlT(HWND hWnd = nullptr) : TBase(hWnd) { }
 
 	CFontPickerCtrlT< TBase >& operator=(HWND hWnd)
 	{
@@ -19,9 +19,9 @@ public:
 		return *this;
 	}
 
-	HWND Create(HWND hWndParent, _U_RECT rect = NULL, LPCTSTR szWindowName = NULL,
+	HWND Create(HWND hWndParent, _U_RECT rect = nullptr, LPCTSTR szWindowName = nullptr,
 			DWORD dwStyle = 0, DWORD dwExStyle = 0,
-			_U_MENUorID MenuOrID = 0U, LPVOID lpCreateParam = NULL)
+			_U_MENUorID MenuOrID = 0U, void* lpCreateParam = nullptr)
 	{
 		return CWindow::Create(GetWndClassName(), hWndParent, rect.m_lpRect, szWindowName, dwStyle, dwExStyle, MenuOrID.m_hMenu, lpCreateParam);
 	}

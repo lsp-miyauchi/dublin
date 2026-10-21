@@ -2230,7 +2230,7 @@ void CDrawListView::OnSetHeaderCtrl(WPARAM, LPARAM lParam)
 		m_fontHeader.CreateFontIndirect(&lf);
 		m_header.SetFont(m_fontHeader, FALSE);
 
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		HFONT hfont = dc.SelectFont(m_fontHeader);
 		TEXTMETRIC tm;
 		dc.GetTextMetrics(&tm);

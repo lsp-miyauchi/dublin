@@ -26,7 +26,7 @@ static HIMAGELIST CreateDummyImageList(int cx, int cy)
 	// ダミービットマップ作成
 	HIMAGELIST him = ImageList_Create(cx, cy, ILC_COLOR24 | ILC_MASK, 1, 0);
 	if (him) {
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		CBitmap bmp;
 		bmp.CreateCompatibleBitmap(dc, cx, cy);
 		CDC dcw;

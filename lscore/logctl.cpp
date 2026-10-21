@@ -102,7 +102,7 @@ CLogCtrl::CLogCtrl()
 	lf.lfPitchAndFamily = FIXED_PITCH | FF_DONTCARE;
 	m_hFont = CreateFontIndirect(&lf);
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HFONT hfOld = dc.SelectFont(m_hFont);
 	TEXTMETRIC tm;
 	dc.GetTextMetrics(&tm);

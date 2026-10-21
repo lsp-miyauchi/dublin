@@ -302,7 +302,7 @@ END_MSG_MAP()
 		CRect rcc;
 		GetDlgItem(IDC_ABOUTAPP).GetClientRect(&rcc);
 
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		m_bmp.CreateCompatibleBitmap(dc, rcc.Width(), rcc.Height());
 		m_bmx = rcc.Width();
 		m_bmy = rcc.Height();

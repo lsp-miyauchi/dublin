@@ -52,8 +52,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,1,262
- PRODUCTVERSION 7,4,1,262
+ FILEVERSION 7,4,1,276
+ PRODUCTVERSION 7,4,1,276
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -70,12 +70,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Core control library for LightShip"
-            VALUE "FileVersion", "7.4.1.262"
+            VALUE "FileVersion", "7.4.1.276"
             VALUE "InternalName", "lscore"
             VALUE "LegalCopyright", "(C)K.Miyauchi 2001-2024 All rights reserved."
             VALUE "OriginalName", "lscore.dll"
             VALUE "ProductName", "Core control library for LightShip"
-            VALUE "ProductVersion", "7.4.1.262"
+            VALUE "ProductVersion", "7.4.1.276"
         END
     END
     BLOCK "VarFileInfo"

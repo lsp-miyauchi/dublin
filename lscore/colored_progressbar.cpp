@@ -68,7 +68,7 @@ CColoredProgressBarCtrl::CColoredProgressBarCtrl()
 	m_curpos = 0;
 	m_curper = 0;
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	m_numbits = dc.GetDeviceCaps(BITSPIXEL);
 	m_crFrom = RGB(0, 192, 255);
 	m_crTo = RGB(64, 0, 128);

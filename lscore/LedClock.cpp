@@ -103,7 +103,7 @@ CLedClock::CLedClock()
 
 	m_hdc = NULL;
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	m_bmLed.CreateCompatibleBitmap(dc, m_cx * 8, m_cy);
 
 	InitializeCriticalSection(&m_crit);

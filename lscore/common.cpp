@@ -297,7 +297,7 @@ HGLOBAL __fastcall dupmemhandle(HGLOBAL hsrc)
 
 HWND __fastcall gettopparent(HWND hwnd)
 {
-	HWND hpar = NULL;
+	HWND hpar = nullptr;
 	while (hwnd) {
 		hwnd = GetParent(hwnd);
 		if (hwnd) hpar = hwnd;
@@ -307,11 +307,12 @@ HWND __fastcall gettopparent(HWND hwnd)
 
 HBITMAP CreateBitmapFromImageList(HIMAGELIST him, int iImage)
 {
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	CDC dcw;
 	dcw.CreateCompatibleDC(dc);
 
-	int cx, cy;
+	int cx;
+	int cy;
 	ImageList_GetIconSize(him, &cx, &cy);
 
 	// Create 32-bit bitmap

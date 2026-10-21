@@ -522,7 +522,7 @@ END_MSG_MAP()
 		m_edit.SetFont(m_hFont);
 		m_bar.SetFont(m_hFont);
 
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		HFONT htmp = dc.SelectFont(m_hFont);
 		dc.GetTextMetrics(&m_TextMetric);
 		dc.SelectFont(htmp);

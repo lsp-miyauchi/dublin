@@ -107,7 +107,7 @@ void CAniImage::SetImage(HIMAGELIST him, int interval)
 {
 	if (m_hbm) DeleteObject(m_hbm);
 
-	m_hbm = NULL;
+	m_hbm = nullptr;
 	m_him = 0;
 	m_numcell = 0;
 	m_cx = 0;
@@ -120,7 +120,7 @@ void CAniImage::SetImage(HIMAGELIST him, int interval)
 		ImageList_GetIconSize(m_him, &m_cx, &m_cy);
 		m_interval = interval;
 
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 		m_hbm = CreateCompatibleBitmap(dc, m_cx, m_cy);
 	}
 }

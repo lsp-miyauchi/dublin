@@ -778,16 +778,16 @@ int CFlatButtonCtrl::GetDropDownWidth()
 
 	// otherwise calculate it...
 	if (m_hFontDropDown == NULL) {
-		CClientDC dc(NULL);
+		CClientDC dc(nullptr);
 
 //@		int check_height = GetSystemMetrics(SM_CYMENUCHECK);
 		int check_height = 11;
 		HFONT hFont = CreateFont(check_height, 0, 0, 0, FW_NORMAL, 0, 0, 0, SYMBOL_CHARSET, 0, 0, 0, 0, _T("Marlett"));
-		HFONT hFontOld = NULL;
-		if (hFont != NULL)
+		HFONT hFontOld = nullptr;
+		if (hFont != nullptr)
 			hFontOld = dc.SelectFont(hFont);
 		dc.GetCharWidth(CHAR_DOWNARROW, CHAR_DOWNARROW, &m_nDropDownWidth);
-		if (hFont != NULL) {
+		if (hFont != nullptr) {
 			dc.SelectFont(hFontOld);
 			m_hFontDropDown = hFont;
 		}

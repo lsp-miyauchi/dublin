@@ -188,12 +188,12 @@ void CSetupDlg::OnSelChangeColorList()
 
 void CSetupDlg::UpdateSample()
 {
-	int f, b = CLR_BG;
+	int b = CLR_BG;
 	int sel = m_list.GetCurSel();
+	int f = CLR_TXT;
 	switch (sel) {
-	case  0: f = CLR_TXT; break;				// テキスト
-	case  1: f = CLR_TXT;						// カーソル行
-			 b = CLR_CUR; break;				//
+	case  1: f = CLR_TXT;								// カーソル行
+           b = CLR_CUR; break;				//
 	case  2: f = CLR_NUM; break;				// 行番号
 	case  3: f = CLR_EOL; break;				// 改行
 	case  4: f = CLR_CTL; break;				// TAB/全角空白
@@ -202,6 +202,8 @@ void CSetupDlg::UpdateSample()
 	case  7: f = CLR_KWD2; break;				// キーワード2
 	case  8: f = CLR_KWD3; break;				// キーワード3
 	case  9: f = CLR_KWD4; break;				// キーワード4
+	case  0:
+	default: f = CLR_TXT; break;				// テキスト
 	}
 
 	// 配色を適用

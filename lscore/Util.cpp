@@ -945,7 +945,7 @@ HICON WINAPI lccCreateUpdirIcon()
 	BITMAP bm;
 	GetObject(icf.hbmColor, sizeof(bm), &bm);
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	CDC dcw = CreateCompatibleDC(dc);
 	HBITMAP hbm = dcw.SelectBitmap(icf.hbmColor);
 

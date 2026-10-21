@@ -929,7 +929,7 @@ static LRESULT HEADER_Create(HWND hwnd, WPARAM wParam, LPARAM lParam)
 	Ip->iMargin = 3 * GetSystemMetrics(SM_CXEDGE);
 	Ip->sizeImage.cx = Ip->sizeImage.cy = 0;
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HFONT hOldFont = dc.SelectFont((HFONT)GetStockObject(SYSTEM_FONT));
 	TEXTMETRIC tm;
 	dc.GetTextMetrics(&tm);
@@ -1260,7 +1260,7 @@ static LRESULT HEADER_SetFont(HWND hwnd, WPARAM wParam, LPARAM lParam)
 	Ip->hFont = (HFONT)wParam;
 	HFONT hFont = Ip->hFont ? Ip->hFont : (HFONT)GetStockObject(SYSTEM_FONT);
 
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	HFONT hOldFont = dc.SelectFont(hFont);
 
 	TEXTMETRIC tm;

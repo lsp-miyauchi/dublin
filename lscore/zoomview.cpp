@@ -172,7 +172,7 @@ HANDLE CZoomView::UpdateImage(HANDLE hdib, BOOL bRedraw)
 				break;
 			case ZVDM_BITMAP:
 			{
-				CClientDC dc(NULL);
+				CClientDC dc(nullptr);
 				m_hbm = m_dib.GetHBitmap(dc);
 				break;
 			}
@@ -215,7 +215,7 @@ HANDLE CZoomView::SetImage(HANDLE hdib, BOOL bRedraw)
 			break;
 		case ZVDM_BITMAP:
 		{
-			CClientDC dc(NULL);
+			CClientDC dc(nullptr);
 			m_hbm = m_dib.GetHBitmap(dc);
 			break;
 		}
@@ -274,16 +274,6 @@ void CZoomView::DoPaint(CDCHandle dc)
 	}
 
 	switch (m_nDrawingMode) {
-		case ZVDM_GDIPLUS:
-		{
-			Graphics g((HDC)dc);
-			InterpolationMode im = (m_zoomScale >= 1.0) ? InterpolationModeNearestNeighbor : InterpolationModeDefault;
-			g.SetInterpolationMode(im);
-			g.SetPixelOffsetMode(PixelOffsetModeHalf);
-			g.DrawImage(m_gdipBitmap, rc);
-			break;
-		}
-
 		case ZVDM_DIB:
 			dc.SetStretchBltMode((GetZoomScale() < 1.0) ? HALFTONE : COLORONCOLOR);
 			dc.StretchDIBits(rc.X, rc.Y, rc.Width, rc.Height, 0, 0, m_sizeImage.cx, m_sizeImage.cy,
@@ -304,28 +294,38 @@ void CZoomView::DoPaint(CDCHandle dc)
 			dcw.SelectBitmap(ho);
 			break;
 		}
+
+		case ZVDM_GDIPLUS:
+		default:
+		{
+			Graphics g((HDC)dc);
+			InterpolationMode im = (m_zoomScale >= 1.0) ? InterpolationModeNearestNeighbor : InterpolationModeDefault;
+			g.SetInterpolationMode(im);
+			g.SetPixelOffsetMode(PixelOffsetModeHalf);
+			g.DrawImage(m_gdipBitmap, rc);
+			break;
+		}
 	}
 
 	// グリッド
 	if ((GetStyle() & ZMVS_GRID) && m_grid.cx > 0 && m_grid.cy > 0) {
-		LOGBRUSH lb;
+		LOGBRUSH lb = { 0 };
 		lb.lbStyle = BS_SOLID;
 		lb.lbColor = m_crGrid;
-		lb.lbHatch = 0;
 		HPEN hpen = ExtCreatePen(PS_COSMETIC | PS_ALTERNATE, 1, &lb, 0, NULL);
 		hpen = dc.SelectPen(hpen);
 
-		int width = m_sizeImage.cx;
-		int height = m_sizeImage.cy;
+		const auto width = m_sizeImage.cx;
+		const auto height = m_sizeImage.cy;
 		CRect rcl;
 		for (int x = 0; x < width; x += m_grid.cx) {
-			int dx = ROUND_INT(x * m_zoomScale);
+			const auto dx = ROUND_INT(x * m_zoomScale);
 			dc.MoveTo(rc.X + dx, rc.Y);
 			dc.LineTo(rc.X + dx, rc.Y + rc.Height);
 		}
 
 		for (int y = 0; y < height; y += m_grid.cy) {
-			int dy = ROUND_INT(y * m_zoomScale);
+			const auto dy = ROUND_INT(y * m_zoomScale);
 			dc.MoveTo(rc.X, rc.Y + dy);
 			dc.LineTo(rc.X + rc.Width, rc.Y + dy);
 		}
@@ -1164,7 +1164,7 @@ LRESULT CZoomView::OnHandlerSetDrawMode(WPARAM wParam, LPARAM lParam)
 	if (!m_dib.isNull()) {
 		BITMAPINFO* pbi = m_dib.BitmapInfo();
 		if (!wParam) {
-			CClientDC dc(NULL);
+			CClientDC dc(nullptr);
 			m_hbm = m_dib.GetHBitmap(dc);
 		}
 		else
