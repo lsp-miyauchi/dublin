@@ -73,14 +73,13 @@ int SeparateString(LPCTSTR pszText, int delim, CSimpleArray<CString>& arr)
 void __fastcall FormatText(LPCTSTR lpszSrc, LPTSTR lpszDst, int nTabConv, int nMax)
 {
 	int len = lstrlen(lpszSrc);
-	register int i, j;
-	for (i = j = 0; i < len; i++)
-	{
+	int i;
+	int j;
+	for (i = j = 0; i < len; i++)	{ 
 		if (j >= nMax - 1)
 			break;
 
-		if (lpszSrc[i] == '\t')
-		{
+		if (lpszSrc[i] == '\t') {
 			for (int k = j % nTabConv; k < nTabConv; k++)
 				lpszDst[j++] = ' ';
 		}

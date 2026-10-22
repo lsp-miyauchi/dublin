@@ -3,336 +3,336 @@
 
 #pragma once
 
-static const WCHAR kwd_PHP[] = 
-	L"1111\n"			\
-	L"/*\n"				\
-	L"*/\n"				\
-	L"//\n"				\
-	L"and\n"		\
-	L"or\n"		\
-	L"xor\n"		\
-	L"__FILE__\n"		\
-	L"__LINE__\n"		\
-	L"array\n"		\
-	L"as\n"		\
-	L"break\n"		\
-	L"case\n"		\
-	L"cfunction\n"		\
-	L"class\n"		\
-	L"const\n"		\
-	L"continue\n"		\
-	L"declare\n"		\
-	L"default\n"		\
-	L"die\n"		\
-	L"do\n"		\
-	L"else\n"		\
-	L"elseif\n"		\
-	L"empty\n"		\
-	L"enddeclare\n"		\
-	L"endfor\n"		\
-	L"endforeach\n"		\
-	L"endif\n"		\
-	L"endswitch\n"		\
-	L"endwhile\n"		\
-	L"extends\n"		\
-	L"for\n"		\
-	L"foreach\n"		\
-	L"function\n"		\
-	L"include\n"		\
-	L"include_once\n"		\
-	L"global\n"		\
-	L"if\n"		\
-	L"new\n"		\
-	L"old_function\n"		\
-	L"return\n"		\
-	L"static\n"		\
-	L"switch\n"		\
-	L"use\n"		\
-	L"require\n"		\
-	L"require_once\n"		\
-	L"var\n"		\
-	L"while\n"		\
-	L"__FUNCTION__\n"		\
-	L"__CLASS__\n"		\
-	L"__METHOD__\n"		\
-	L"abstract\n"		\
-	L"interface\n"		\
-	L"public\n"		\
-	L"implements\n"		\
-	L"extends\n"		\
-	L"private\n"		\
-	L"protected\n"		\
-	L"throw\n"		\
-	L"3,abs\n"		\
-	L"3,acos\n"		\
-	L"3,acosh\n"		\
-	L"3,addcslashes\n"		\
-	L"3,addslashes\n"		\
-	L"3,array_change_key_case\n"		\
-	L"3,array_chunk\n"		\
-	L"3,array_combine\n"		\
-	L"3,array_count_values\n"		\
-	L"3,array_diff\n"		\
-	L"3,array_diff_assoc\n"		\
-	L"3,array_diff_key\n"		\
-	L"3,array_diff_uassoc\n"		\
-	L"3,array_diff_ukey\n"		\
-	L"3,array_fill\n"		\
-	L"3,array_filter\n"		\
-	L"3,array_flip\n"		\
-	L"3,array_intersect\n"		\
-	L"3,array_intersect_assoc\n"		\
-	L"3,array_intersect_key\n"		\
-	L"3,array_intersect_uassoc\n"		\
-	L"3,array_intersect_ukey\n"		\
-	L"3,array_key_exists\n"		\
-	L"3,array_keys\n"		\
-	L"3,array_map\n"		\
-	L"3,array_merge\n"		\
-	L"3,array_merge_recursive\n"		\
-	L"3,array_multisort\n"		\
-	L"3,array_pad\n"		\
-	L"3,array_pop\n"		\
-	L"3,array_product\n"		\
-	L"3,array_push\n"		\
-	L"3,array_rand\n"		\
-	L"3,array_reduce\n"		\
-	L"3,array_reverse\n"		\
-	L"3,array_search\n"		\
-	L"3,array_shift\n"		\
-	L"3,array_slice\n"		\
-	L"3,array_splice\n"		\
-	L"3,array_sum\n"		\
-	L"3,array_udiff\n"		\
-	L"3,array_udiff_assoc\n"		\
-	L"3,array_udiff_uassoc\n"		\
-	L"3,array_uintersect\n"		\
-	L"3,array_uintersect_assoc\n"		\
-	L"3,array_uintersect_uassoc\n"		\
-	L"3,array_unique\n"		\
-	L"3,array_unshift\n"		\
-	L"3,array_values\n"		\
-	L"3,array_walk\n"		\
-	L"3,array_walk_recursive\n"		\
-	L"3,atan\n"		\
-	L"3,atan2\n"		\
-	L"3,atanh\n"		\
-	L"3,base64_decode\n"		\
-	L"3,base64_encode\n"		\
-	L"3,base_convert\n"		\
-	L"3,basename\n"		\
-	L"3,bcadd\n"		\
-	L"3,bccomp\n"		\
-	L"3,bcdiv\n"		\
-	L"3,bcmod\n"		\
-	L"3,bcmul\n"		\
-	L"3,bindec\n"		\
-	L"3,bindtextdomain\n"		\
-	L"3,bzclose\n"		\
-	L"3,bzcompress\n"		\
-	L"3,bzdecompress\n"		\
-	L"3,bzerrno\n"		\
-	L"3,bzerror\n"		\
-	L"3,bzerrstr\n"		\
-	L"3,bzflush\n"		\
-	L"3,bzopen\n"		\
-	L"3,bzread\n"		\
-	L"3,bzwrite\n"		\
-	L"3,ceil\n"		\
-	L"3,chdir\n"		\
-	L"3,checkdate\n"		\
-	L"3,checkdnsrr\n"		\
-	L"3,chgrp\n"		\
-	L"3,chmod\n"		\
-	L"3,chop\n"		\
-	L"3,chown\n"		\
-	L"3,chr\n"		\
-	L"3,chroot\n"		\
-	L"3,chunk_split\n"		\
-	L"3,class_exists\n"		\
-	L"3,closedir\n"		\
-	L"3,closelog\n"		\
-	L"3,copy\n"		\
-	L"3,cos\n"		\
-	L"3,cosh\n"		\
-	L"3,count\n"		\
-	L"3,count_chars\n"		\
-	L"3,date\n"		\
-	L"3,decbin\n"		\
-	L"3,dechex\n"		\
-	L"3,decoct\n"		\
-	L"3,deg2rad\n"		\
-	L"3,delete\n"		\
-	L"3,ebcdic2ascii\n"		\
-	L"3,echo\n"		\
-	L"3,empty\n"		\
-	L"3,end\n"		\
-	L"3,ereg\n"		\
-	L"3,ereg_replace\n"		\
-	L"3,eregi\n"		\
-	L"3,eregi_replace\n"		\
-	L"3,error_log\n"		\
-	L"3,error_reporting\n"		\
-	L"3,escapeshellarg\n"		\
-	L"3,escapeshellcmd\n"		\
-	L"3,eval\n"		\
-	L"3,exec\n"		\
-	L"3,exit\n"		\
-	L"3,exp\n"		\
-	L"3,explode\n"		\
-	L"3,extension_loaded\n"		\
-	L"3,feof\n"		\
-	L"3,fflush\n"		\
-	L"3,fgetc\n"		\
-	L"3,fgetcsv\n"		\
-	L"3,fgets\n"		\
-	L"3,fgetss\n"		\
-	L"3,file_exists\n"		\
-	L"3,file_get_contents\n"		\
-	L"3,file_put_contents\n"		\
-	L"3,fileatime\n"		\
-	L"3,filectime\n"		\
-	L"3,filegroup\n"		\
-	L"3,fileinode\n"		\
-	L"3,filemtime\n"		\
-	L"3,fileowner\n"		\
-	L"3,fileperms\n"		\
-	L"3,filesize\n"		\
-	L"3,filetype\n"		\
-	L"3,floatval\n"		\
-	L"3,flock\n"		\
-	L"3,floor\n"		\
-	L"3,flush\n"		\
-	L"3,fmod\n"		\
-	L"3,fnmatch\n"		\
-	L"3,fopen\n"		\
-	L"3,fpassthru\n"		\
-	L"3,fprintf\n"		\
-	L"3,fputcsv\n"		\
-	L"3,fputs\n"		\
-	L"3,fread\n"		\
-	L"3,fscanf\n"		\
-	L"3,fseek\n"		\
-	L"3,fsockopen\n"		\
-	L"3,fstat\n"		\
-	L"3,ftell\n"		\
-	L"3,ftok\n"		\
-	L"3,getallheaders\n"		\
-	L"3,getcwd\n"		\
-	L"3,getdate\n"		\
-	L"3,getenv\n"		\
-	L"3,gethostbyaddr\n"		\
-	L"3,gethostbyname\n"		\
-	L"3,gethostbynamel\n"		\
-	L"3,getimagesize\n"		\
-	L"3,getlastmod\n"		\
-	L"3,getmxrr\n"		\
-	L"3,getmygid\n"		\
-	L"3,getmyinode\n"		\
-	L"3,getmypid\n"		\
-	L"3,getmyuid\n"		\
-	L"3,getopt\n"		\
-	L"3,getprotobyname\n"		\
-	L"3,getprotobynumber\n"		\
-	L"3,getrandmax\n"		\
-	L"3,getrusage\n"		\
-	L"3,getservbyname\n"		\
-	L"3,getservbyport\n"		\
-	L"3,gettext\n"		\
-	L"3,gettimeofday\n"		\
-	L"3,gettype\n"		\
-	L"3,glob\n"		\
-	L"3,gmdate\n"		\
-	L"3,gmmktime\n"		\
-	L"3,ini_alter\n"		\
-	L"3,ini_get\n"		\
-	L"3,ini_get_all\n"		\
-	L"3,ini_restore\n"		\
-	L"3,ini_set\n"		\
-	L"3,interface_exists\n"		\
-	L"3,intval\n"		\
-	L"3,ip2long\n"		\
-	L"3,is_a\n"		\
-	L"3,is_array\n"		\
-	L"3,is_bool\n"		\
-	L"3,is_callable\n"		\
-	L"3,is_dir\n"		\
-	L"3,is_double\n"		\
-	L"3,is_executable\n"		\
-	L"3,is_file\n"		\
-	L"3,is_finite\n"		\
-	L"3,is_float\n"		\
-	L"3,is_infinite\n"		\
-	L"3,is_int\n"		\
-	L"3,is_integer\n"		\
-	L"3,is_link\n"		\
-	L"3,is_long\n"		\
-	L"3,is_nan\n"		\
-	L"3,is_null\n"		\
-	L"3,is_numeric\n"		\
-	L"3,is_object\n"		\
-	L"3,is_readable\n"		\
-	L"3,is_real\n"		\
-	L"3,is_resource\n"		\
-	L"3,is_scalar\n"		\
-	L"3,is_soap_fault\n"		\
-	L"3,is_string\n"		\
-	L"3,is_subclass_of\n"		\
-	L"3,is_uploaded_file\n"		\
-	L"3,is_writable\n"		\
-	L"3,is_writeable\n"		\
-	L"3,mkdir\n"		\
-	L"3,mktime\n"		\
-	L"3,nl2br\n"		\
-	L"3,parse_ini_file\n"		\
-	L"3,parse_str\n"		\
-	L"3,parse_url\n"		\
-	L"3,passthru\n"		\
-	L"3,pathinfo\n"		\
-	L"3,readlink\n"		\
-	L"3,realpath\n"		\
-	L"3,rewind\n"		\
-	L"3,rewinddir\n"		\
-	L"3,rmdir\n"		\
-	L"3,round\n"		\
-	L"3,str_ireplace\n"		\
-	L"3,str_pad\n"		\
-	L"3,str_repeat\n"		\
-	L"3,str_replace\n"		\
-	L"3,str_rot13\n"		\
-	L"3,str_shuffle\n"		\
-	L"3,str_split\n"		\
-	L"3,str_word_count\n"		\
-	L"3,strcasecmp\n"		\
-	L"3,strchr\n"		\
-	L"3,strcmp\n"		\
-	L"3,strcoll\n"		\
-	L"3,strcspn\n"		\
-	L"3,strftime\n"		\
-	L"3,strip_tags\n"		\
-	L"3,stripcslashes\n"		\
-	L"3,stripos\n"		\
-	L"3,stripslashes\n"		\
-	L"3,stristr\n"		\
-	L"3,strlen\n"		\
-	L"3,strnatcasecmp\n"		\
-	L"3,strnatcmp\n"		\
-	L"3,strncasecmp\n"		\
-	L"3,strncmp\n"		\
-	L"3,strpbrk\n"		\
-	L"3,strpos\n"		\
-	L"3,strptime\n"		\
-	L"3,strrchr\n"		\
-	L"3,strrev\n"		\
-	L"3,strripos\n"		\
-	L"3,strrpos\n"		\
-	L"3,strspn\n"		\
-	L"3,strstr\n"		\
-	L"3,strtok\n"		\
-	L"3,strtolower\n"		\
-	L"3,strtotime\n"		\
-	L"3,strtoupper\n"		\
-	L"3,strtr\n"		\
-	L"3,strval\n"		\
-	L"3,substr\n"		\
-	L"3,substr_compare\n";
+const KEYWORD_DICT kwd_PHP {
+	L"1111", { L"/*", L"*/", L"//" },
+	{
+		L"and",
+		L"or",
+		L"xor",
+		L"__FILE__",
+		L"__LINE__",
+		L"array",
+		L"as",
+		L"break",
+		L"case",
+		L"cfunction",
+		L"class",
+		L"const",
+		L"continue",
+		L"declare",
+		L"default",
+		L"die",
+		L"do",
+		L"else",
+		L"elseif",
+		L"empty",
+		L"enddeclare",
+		L"endfor",
+		L"endforeach",
+		L"endif",
+		L"endswitch",
+		L"endwhile",
+		L"extends",
+		L"for",
+		L"foreach",
+		L"function",
+		L"include",
+		L"include_once",
+		L"global",
+		L"if",
+		L"new",
+		L"old_function",
+		L"return",
+		L"static",
+		L"switch",
+		L"use",
+		L"require",
+		L"require_once",
+		L"var",
+		L"while",
+		L"__FUNCTION__",
+		L"__CLASS__",
+		L"__METHOD__",
+		L"abstract",
+		L"interface",
+		L"public",
+		L"implements",
+		L"extends",
+		L"private",
+		L"protected",
+		L"throw",
+		L"3,abs",
+		L"3,acos",
+		L"3,acosh",
+		L"3,addcslashes",
+		L"3,addslashes",
+		L"3,array_change_key_case",
+		L"3,array_chunk",
+		L"3,array_combine",
+		L"3,array_count_values",
+		L"3,array_diff",
+		L"3,array_diff_assoc",
+		L"3,array_diff_key",
+		L"3,array_diff_uassoc",
+		L"3,array_diff_ukey",
+		L"3,array_fill",
+		L"3,array_filter",
+		L"3,array_flip",
+		L"3,array_intersect",
+		L"3,array_intersect_assoc",
+		L"3,array_intersect_key",
+		L"3,array_intersect_uassoc",
+		L"3,array_intersect_ukey",
+		L"3,array_key_exists",
+		L"3,array_keys",
+		L"3,array_map",
+		L"3,array_merge",
+		L"3,array_merge_recursive",
+		L"3,array_multisort",
+		L"3,array_pad",
+		L"3,array_pop",
+		L"3,array_product",
+		L"3,array_push",
+		L"3,array_rand",
+		L"3,array_reduce",
+		L"3,array_reverse",
+		L"3,array_search",
+		L"3,array_shift",
+		L"3,array_slice",
+		L"3,array_splice",
+		L"3,array_sum",
+		L"3,array_udiff",
+		L"3,array_udiff_assoc",
+		L"3,array_udiff_uassoc",
+		L"3,array_uintersect",
+		L"3,array_uintersect_assoc",
+		L"3,array_uintersect_uassoc",
+		L"3,array_unique",
+		L"3,array_unshift",
+		L"3,array_values",
+		L"3,array_walk",
+		L"3,array_walk_recursive",
+		L"3,atan",
+		L"3,atan2",
+		L"3,atanh",
+		L"3,base64_decode",
+		L"3,base64_encode",
+		L"3,base_convert",
+		L"3,basename",
+		L"3,bcadd",
+		L"3,bccomp",
+		L"3,bcdiv",
+		L"3,bcmod",
+		L"3,bcmul",
+		L"3,bindec",
+		L"3,bindtextdomain",
+		L"3,bzclose",
+		L"3,bzcompress",
+		L"3,bzdecompress",
+		L"3,bzerrno",
+		L"3,bzerror",
+		L"3,bzerrstr",
+		L"3,bzflush",
+		L"3,bzopen",
+		L"3,bzread",
+		L"3,bzwrite",
+		L"3,ceil",
+		L"3,chdir",
+		L"3,checkdate",
+		L"3,checkdnsrr",
+		L"3,chgrp",
+		L"3,chmod",
+		L"3,chop",
+		L"3,chown",
+		L"3,chr",
+		L"3,chroot",
+		L"3,chunk_split",
+		L"3,class_exists",
+		L"3,closedir",
+		L"3,closelog",
+		L"3,copy",
+		L"3,cos",
+		L"3,cosh",
+		L"3,count",
+		L"3,count_chars",
+		L"3,date",
+		L"3,decbin",
+		L"3,dechex",
+		L"3,decoct",
+		L"3,deg2rad",
+		L"3,delete",
+		L"3,ebcdic2ascii",
+		L"3,echo",
+		L"3,empty",
+		L"3,end",
+		L"3,ereg",
+		L"3,ereg_replace",
+		L"3,eregi",
+		L"3,eregi_replace",
+		L"3,error_log",
+		L"3,error_reporting",
+		L"3,escapeshellarg",
+		L"3,escapeshellcmd",
+		L"3,eval",
+		L"3,exec",
+		L"3,exit",
+		L"3,exp",
+		L"3,explode",
+		L"3,extension_loaded",
+		L"3,feof",
+		L"3,fflush",
+		L"3,fgetc",
+		L"3,fgetcsv",
+		L"3,fgets",
+		L"3,fgetss",
+		L"3,file_exists",
+		L"3,file_get_contents",
+		L"3,file_put_contents",
+		L"3,fileatime",
+		L"3,filectime",
+		L"3,filegroup",
+		L"3,fileinode",
+		L"3,filemtime",
+		L"3,fileowner",
+		L"3,fileperms",
+		L"3,filesize",
+		L"3,filetype",
+		L"3,floatval",
+		L"3,flock",
+		L"3,floor",
+		L"3,flush",
+		L"3,fmod",
+		L"3,fnmatch",
+		L"3,fopen",
+		L"3,fpassthru",
+		L"3,fprintf",
+		L"3,fputcsv",
+		L"3,fputs",
+		L"3,fread",
+		L"3,fscanf",
+		L"3,fseek",
+		L"3,fsockopen",
+		L"3,fstat",
+		L"3,ftell",
+		L"3,ftok",
+		L"3,getallheaders",
+		L"3,getcwd",
+		L"3,getdate",
+		L"3,getenv",
+		L"3,gethostbyaddr",
+		L"3,gethostbyname",
+		L"3,gethostbynamel",
+		L"3,getimagesize",
+		L"3,getlastmod",
+		L"3,getmxrr",
+		L"3,getmygid",
+		L"3,getmyinode",
+		L"3,getmypid",
+		L"3,getmyuid",
+		L"3,getopt",
+		L"3,getprotobyname",
+		L"3,getprotobynumber",
+		L"3,getrandmax",
+		L"3,getrusage",
+		L"3,getservbyname",
+		L"3,getservbyport",
+		L"3,gettext",
+		L"3,gettimeofday",
+		L"3,gettype",
+		L"3,glob",
+		L"3,gmdate",
+		L"3,gmmktime",
+		L"3,ini_alter",
+		L"3,ini_get",
+		L"3,ini_get_all",
+		L"3,ini_restore",
+		L"3,ini_set",
+		L"3,interface_exists",
+		L"3,intval",
+		L"3,ip2long",
+		L"3,is_a",
+		L"3,is_array",
+		L"3,is_bool",
+		L"3,is_callable",
+		L"3,is_dir",
+		L"3,is_double",
+		L"3,is_executable",
+		L"3,is_file",
+		L"3,is_finite",
+		L"3,is_float",
+		L"3,is_infinite",
+		L"3,is_int",
+		L"3,is_integer",
+		L"3,is_link",
+		L"3,is_long",
+		L"3,is_nan",
+		L"3,is_null",
+		L"3,is_numeric",
+		L"3,is_object",
+		L"3,is_readable",
+		L"3,is_real",
+		L"3,is_resource",
+		L"3,is_scalar",
+		L"3,is_soap_fault",
+		L"3,is_string",
+		L"3,is_subclass_of",
+		L"3,is_uploaded_file",
+		L"3,is_writable",
+		L"3,is_writeable",
+		L"3,mkdir",
+		L"3,mktime",
+		L"3,nl2br",
+		L"3,parse_ini_file",
+		L"3,parse_str",
+		L"3,parse_url",
+		L"3,passthru",
+		L"3,pathinfo",
+		L"3,readlink",
+		L"3,realpath",
+		L"3,rewind",
+		L"3,rewinddir",
+		L"3,rmdir",
+		L"3,round",
+		L"3,str_ireplace",
+		L"3,str_pad",
+		L"3,str_repeat",
+		L"3,str_replace",
+		L"3,str_rot13",
+		L"3,str_shuffle",
+		L"3,str_split",
+		L"3,str_word_count",
+		L"3,strcasecmp",
+		L"3,strchr",
+		L"3,strcmp",
+		L"3,strcoll",
+		L"3,strcspn",
+		L"3,strftime",
+		L"3,strip_tags",
+		L"3,stripcslashes",
+		L"3,stripos",
+		L"3,stripslashes",
+		L"3,stristr",
+		L"3,strlen",
+		L"3,strnatcasecmp",
+		L"3,strnatcmp",
+		L"3,strncasecmp",
+		L"3,strncmp",
+		L"3,strpbrk",
+		L"3,strpos",
+		L"3,strptime",
+		L"3,strrchr",
+		L"3,strrev",
+		L"3,strripos",
+		L"3,strrpos",
+		L"3,strspn",
+		L"3,strstr",
+		L"3,strtok",
+		L"3,strtolower",
+		L"3,strtotime",
+		L"3,strtoupper",
+		L"3,strtr",
+		L"3,strval",
+		L"3,substr",
+		L"3,substr_compare",
+	}
+};

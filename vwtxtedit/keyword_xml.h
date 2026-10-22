@@ -3,10 +3,10 @@
 
 #pragma once
 
-static const WCHAR kwd_XML[] = 
-	L"0111\n"					\
-	L"<!--\n"					\
-	L"-->\n"					\
-	L"\n"					\
-	L"1,keyword1\n"			\
-	L"2,keyword2\n";
+const KEYWORD_DICT kwd_XML {
+	L"0111", { L"<!--", L"-->", L"" },
+	{
+		L"1,keyword1",
+		L"2,keyword2",
+	}
+};

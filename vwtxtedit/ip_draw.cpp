@@ -638,8 +638,10 @@ void CPadView::DrawTXT( const VDrawInfo vdi)
 	// 作業用変数１
 	CRect rc(0, vdi.yMin, 0, vdi.yMin + painter->H());
 	int clrIndex = -1;
-	register int x = 0, x2;
-	register ULONG i = 0, i2;
+	int x = 0;
+	int x2;
+	ULONG i = 0;
+	ULONG i2;
 
 	// 論理行単位のLoop
 	for (ULONG tl = vdi.tlMin; rc.top < vdi.yMax; tl++) {

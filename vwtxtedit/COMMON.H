@@ -89,6 +89,18 @@ __inline bool OsVISTA() { return gosp.OsVISTA(); }
 //////////////////////////////////////////////////
 //
 
+using WString = std::wstring;
+using KeywordList = std::vector<WString>;
+
+struct KEYWORD_DICT {
+	WString flags;
+	KeywordList comments;
+	KeywordList keywords;
+};
+
+//////////////////////////////////////////////////
+//
+
 int AppMessage(UINT nID, LPCTSTR pszInsert = nullptr, UINT nType = MB_STOP);
 int LastError(LPCTSTR pszTitle, UINT nType = MB_STOP);
 TCHAR* __fastcall SkipTabSpace(TCHAR* p);

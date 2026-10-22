@@ -3,243 +3,237 @@
 
 #pragma once
 
-static const WCHAR kwd_vue[] = 
-	L"1111\n"			\
-	L"/*\n"				\
-	L"*/\n"				\
-	L"//\n"				\
-	L"<!--\n"					\
-	L"-->\n"					\
-	L"3,activated\n"		\
-	L"abstract\n"		\
-	L"2,any\n"		\
-	L"Array\n"		\
-	L"array\n"		\
-	L"Awaited\n"		\
-	L"2,await\n"		\
-	L"as\n"		\
-	L"2,async\n"		\
-	L"3,beforeCreate\n"		\
-	L"3,beforeMount\n"		\
-	L"3,beforeUpdate\n"		\
-	L"3,beforeUnmount\n"		\
-	L"2,boolean\n"		\
-	L"break\n"		\
-	L"byte\n"		\
-	L"case\n"		\
-	L"3,catch\n"		\
-	L"char\n"		\
-	L"class\n"		\
-	L"3,computed\n"		\
-	L"3,created\n"		\
-	L"const\n"		\
-    L"3,constructor\n"		\
-    L"ConstructorParameters\n"		\
-	L"continue\n"		\
-	L"3,deactivated\n"		\
-	L"debugger\n"		\
-	L"declare\n"		\
-	L"default\n"		\
-	L"3,defineComponent\n"		\
-	L"2,defer\n"		\
-	L"delete\n"		\
-	L"do\n"		\
-	L"double\n"		\
-	L"else\n"		\
-	L"enum\n"		\
-	L"3,errorCaptured\n"		\
-	L"Exclude\n"		\
-	L"export\n"		\
-	L"extends\n"		\
-	L"Extract\n"		\
-	L"false\n"		\
-	L"final\n"		\
-	L"3,finally\n"		\
-	L"float\n"		\
-	L"for\n"		\
-	L"from\n"		\
-	L"2,function\n"		\
-	L"2,get\n"		\
-	L"global\n"		\
-	L"goto\n"		\
-	L"if\n"		\
-	L"interface\n"		\
-	L"implements\n"		\
-	L"import\n"		\
-	L"in\n"		\
-	L"instanceof\n"		\
-	L"InstanceType\n"		\
-	L"int\n"		\
-	L"interface\n"		\
-	L"long\n"		\
-	L"Map\n"		\
-	L"3,methods\n"		\
-	L"module\n"		\
-	L"3,mounted\n"		\
-	L"namespace\n"		\
-	L"native\n"		\
-	L"new\n"		\
-	L"2,never\n"		\
-	L"NonNullable\n"		\
-	L"NoInfer\n"		\
-	L"Number\n"		\
-	L"2,number\n"		\
-	L"2,null\n"		\
-	L"Object\n"		\
-	L"Omit\n"		\
-	L"OmitThisParameter\n"		\
-	L"package\n"		\
-	L"Partial\n"		\
-	L"Pick\n"		\
-	L"private\n"		\
-	L"Parameters\n"		\
-	L"Promise\n"		\
-	L"protected\n"		\
-	L"public\n"		\
-	L"Readonly\n"		\
-	L"3,PropType\n"		\
-	L"2,readonly\n"		\
-	L"Record\n"		\
-	L"ReturnType\n"		\
-	L"require\n"		\
-	L"Required\n"		\
-	L"render\n"		\
-	L"return\n"		\
-	L"Set\n"		\
-	L"2,set\n"		\
-	L"3,setup\n"		\
-	L"short\n"		\
-	L"slots\n"		\
-	L"static\n"		\
-	L"String\n"		\
-	L"2,string\n"		\
-	L"super\n"		\
-	L"switch\n"		\
-	L"synchronized\n"		\
-	L"2,symbol\n"		\
-	L"template\n"		\
-	L"3,then\n"		\
-	L"2,this\n"		\
-	L"ThisParameterType\n"		\
-	L"ThisType\n"		\
-	L"throw\n"		\
-	L"throws\n"		\
-	L"transient\n"		\
-	L"true\n"		\
-	L"3,try\n"		\
-	L"typeof\n"		\
-	L"type\n"		\
-	L"2,undefined\n"		\
-	L"2,unknown\n"		\
-	L"3,unmounted\n"		\
-	L"3,updated\n"		\
-	L"2,var\n"		\
-	L"2,void\n"		\
-	L"void\n"		\
-	L"volatile\n"		\
-	L"while\n"		\
-	L"3,watch\n"		\
-	L"with\n"       \
-
-	L"applet\n"					\
-	L"area\n"					\
-	L"b\n"					\
-	L"base\n"					\
-	L"basefont\n"					\
-	L"bgsound\n"					\
-	L"big\n"					\
-	L"blockquote\n"					\
-	L"body\n"					\
-	L"br\n"					\
-	L"button\n"					\
-	L"caption\n"					\
-	L"center\n"					\
-	L"cite\n"					\
-	L"code\n"					\
-	L"col\n"					\
-	L"colgroup\n"					\
-	L"comment\n"					\
-	L"dd\n"					\
-	L"dfn\n"					\
-	L"dir\n"					\
-	L"div\n"					\
-	L"dl\n"					\
-	L"dt\n"					\
-	L"em\n"					\
-	L"embed\n"					\
-	L"fieldset\n"					\
-	L"font\n"					\
-	L"form\n"					\
-	L"frameset\n"					\
-	L"h1\n"					\
-	L"h2\n"					\
-	L"h3\n"					\
-	L"h4\n"					\
-	L"h5\n"					\
-	L"h6\n"					\
-	L"head\n"					\
-	L"hr\n"					\
-	L"html\n"					\
-	L"i\n"					\
-	L"iframe\n"					\
-	L"img\n"					\
-	L"input\n"					\
-	L"kbd\n"					\
-	L"label\n"					\
-	L"legend\n"					\
-	L"li\n"					\
-	L"link\n"					\
-	L"listing\n"					\
-	L"map\n"					\
-	L"marqee\n"					\
-	L"menu\n"					\
-	L"meta\n"					\
-	L"nobr\n"					\
-	L"noframes\n"					\
-	L"noscript\n"					\
-	L"object\n"					\
-	L"ol\n"					\
-	L"option\n"					\
-	L"p\n"					\
-	L"param\n"					\
-	L"plaintext\n"					\
-	L"pre\n"					\
-	L"s\n"					\
-	L"samp\n"					\
-	L"script\n"					\
-	L"select\n"					\
-	L"small\n"					\
-	L"span\n"					\
-	L"strike\n"					\
-	L"strong\n"					\
-	L"style\n"					\
-	L"sub\n"					\
-	L"sup\n"					\
-	L"table\n"					\
-	L"tbody\n"					\
-	L"td\n"					\
-	L"textarea\n"					\
-	L"tfoot\n"					\
-	L"td\n"					\
-	L"th\n"					\
-	L"thead\n"					\
-	L"title\n"					\
-	L"tr\n"					\
-	L"tt\n"					\
-	L"u\n"					\
-	L"ul\n"					\
-	L"var\n"					\
-	L"wbr\n"					\
-	L"xmp\n"					\
-
-	L"2,v-for\n"					\
-	L"2,v-show\n"					\
-	L"2,v-if\n"					\
-	L"2,v-else\n"					\
-	L"2,v-elseif\n"					\
-	L"2,v-for\n"					\
-	L"2,v-for\n"					\
-	L"2,v-for\n"					\
-	L"2,v-model\n";					\
-
-
+const KEYWORD_DICT kwd_vue {
+	L"1111", { L"/*", L"*/", L"//", L"<!--", L"-->" },
+	{
+		L"3,activated",
+		L"abstract",
+		L"2,any",
+		L"Array",
+		L"array",
+		L"Awaited",
+		L"2,await",
+		L"as",
+		L"2,async",
+		L"3,beforeCreate",
+		L"3,beforeMount",
+		L"3,beforeUpdate",
+		L"3,beforeUnmount",
+		L"2,boolean",
+		L"break",
+		L"byte",
+		L"case",
+		L"3,catch",
+		L"char",
+		L"class",
+		L"3,computed",
+		L"3,created",
+		L"const",
+		L"3,constructor",
+		L"ConstructorParameters",
+		L"continue",
+		L"3,deactivated",
+		L"debugger",
+		L"declare",
+		L"default",
+		L"3,defineComponent",
+		L"2,defer",
+		L"delete",
+		L"do",
+		L"double",
+		L"else",
+		L"enum",
+		L"3,errorCaptured",
+		L"Exclude",
+		L"export",
+		L"extends",
+		L"Extract",
+		L"false",
+		L"final",
+		L"3,finally",
+		L"float",
+		L"for",
+		L"from",
+		L"2,function",
+		L"2,get",
+		L"global",
+		L"goto",
+		L"if",
+		L"interface",
+		L"implements",
+		L"import",
+		L"in",
+		L"instanceof",
+		L"InstanceType",
+		L"int",
+		L"interface",
+		L"long",
+		L"Map",
+		L"3,methods",
+		L"module",
+		L"3,mounted",
+		L"namespace",
+		L"native",
+		L"new",
+		L"2,never",
+		L"NonNullable",
+		L"NoInfer",
+		L"Number",
+		L"2,number",
+		L"2,null",
+		L"Object",
+		L"Omit",
+		L"OmitThisParameter",
+		L"package",
+		L"Partial",
+		L"Pick",
+		L"private",
+		L"Parameters",
+		L"Promise",
+		L"protected",
+		L"public",
+		L"Readonly",
+		L"3,PropType",
+		L"2,readonly",
+		L"Record",
+		L"ReturnType",
+		L"require",
+		L"Required",
+		L"render",
+		L"return",
+		L"Set",
+		L"2,set",
+		L"3,setup",
+		L"short",
+		L"slots",
+		L"static",
+		L"String",
+		L"2,string",
+		L"super",
+		L"switch",
+		L"synchronized",
+		L"2,symbol",
+		L"template",
+		L"3,then",
+		L"2,this",
+		L"ThisParameterType",
+		L"ThisType",
+		L"throw",
+		L"throws",
+		L"transient",
+		L"true",
+		L"3,try",
+		L"typeof",
+		L"type",
+		L"2,undefined",
+		L"2,unknown",
+		L"3,unmounted",
+		L"3,updated",
+		L"2,var",
+		L"2,void",
+		L"void",
+		L"volatile",
+		L"while",
+		L"3,watch",
+		L"with",
+		L"applet",
+		L"area",
+		L"b",
+		L"base",
+		L"basefont",
+		L"bgsound",
+		L"big",
+		L"blockquote",
+		L"body",
+		L"br",
+		L"button",
+		L"caption",
+		L"center",
+		L"cite",
+		L"code",
+		L"col",
+		L"colgroup",
+		L"comment",
+		L"dd",
+		L"dfn",
+		L"dir",
+		L"div",
+		L"dl",
+		L"dt",
+		L"em",
+		L"embed",
+		L"fieldset",
+		L"font",
+		L"form",
+		L"frameset",
+		L"h1",
+		L"h2",
+		L"h3",
+		L"h4",
+		L"h5",
+		L"h6",
+		L"head",
+		L"hr",
+		L"html",
+		L"i",
+		L"iframe",
+		L"img",
+		L"input",
+		L"kbd",
+		L"label",
+		L"legend",
+		L"li",
+		L"link",
+		L"listing",
+		L"map",
+		L"marqee",
+		L"menu",
+		L"meta",
+		L"nobr",
+		L"noframes",
+		L"noscript",
+		L"object",
+		L"ol",
+		L"option",
+		L"p",
+		L"param",
+		L"plaintext",
+		L"pre",
+		L"s",
+		L"samp",
+		L"script",
+		L"select",
+		L"small",
+		L"span",
+		L"strike",
+		L"strong",
+		L"style",
+		L"sub",
+		L"sup",
+		L"table",
+		L"tbody",
+		L"td",
+		L"textarea",
+		L"tfoot",
+		L"td",
+		L"th",
+		L"thead",
+		L"title",
+		L"tr",
+		L"tt",
+		L"u",
+		L"ul",
+		L"var",
+		L"wbr",
+		L"xmp",
+		L"2,v-for",
+		L"2,v-show",
+		L"2,v-if",
+		L"2,v-else",
+		L"2,v-elseif",
+		L"2,v-for",
+		L"2,v-for",
+		L"2,v-for",
+		L"2,v-model",
+	}
+};

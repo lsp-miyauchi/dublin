@@ -9,21 +9,33 @@
 #include "jump.h"
 #include "setup.h"
 
+#include "keyword_c.h"
+#include "keyword_cs.h"
+#include "keyword_vb.h"
+#include "keyword_html.h"
+#include "keyword_xml.h"
+#include "keyword_java.h"
+#include "keyword_perl.h"
+#include "keyword_rc.h"
+#include "keyword_actionscript.h"
+#include "keyword_javascript.h"
+#include "keyword_typescript.h"
+#include "keyword_php.h"
+#include "keyword_vue.h"
+
 /////////////////////////////////////////////////////////////////////////////
 //
 
-static int indicators[] =
-{
+static int indicators[4] = {
 	ID_DEFAULT_PANE,
 	ID_INDICATOR_CODE,
 	ID_INDICATOR_RDONLY,
 	ID_INDICATOR_OVR,
 };
 
-#define FRD_ID_SRCSTRING		0x480
-#define FRD_ID_DSTSTRING		0x481
-#define COPYDATA_PATH			0x98654411
-
+const UINT FRD_ID_SRCSTRING = 0x480;
+const UINT FRD_ID_DSTSTRING = 0x481;
+const UINT COPYDATA_PATH = 0x98654411;
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1272,13 +1284,14 @@ void CMainFrame::OnCursorEventMode(int modeType, bool mode)
 {
 	CString str;
 	switch (modeType) {
-	case CEM_READONLYMODE:
-		m_statusbar.SetPaneIcon(ID_INDICATOR_RDONLY, mode ? m_hicRO : NULL);
-		UpdateTitleNames();
-		break;
 	case CEM_INSERTMODE:
 		str.LoadString(mode ? ID_INDICATOR_INS : ID_INDICATOR_OVR);
 		m_statusbar.SetPaneText(ID_INDICATOR_OVR, str);
+		break;
+	case CEM_READONLYMODE:
+	default:
+		m_statusbar.SetPaneIcon(ID_INDICATOR_RDONLY, mode ? m_hicRO : NULL);
+		UpdateTitleNames();
 		break;
 	}
 }
@@ -1348,19 +1361,19 @@ void CMainFrame::UpdateTitleNames()
 		CString s;
 		if (m_bDocumentUpdated) {
 			// 更新済み
-			s.LoadString(ID_INDICATOR_UPD);
+			(void)s.LoadString(ID_INDICATOR_UPD);
 			str.AppendFormat(_T("(%s)"), (LPCTSTR)s);
 		}
 		if (m_view.cursor()->isROMode()) {
 			// 参照中
-			s.LoadString(ID_INDICATOR_RDONLY);
+			(void)s.LoadString(ID_INDICATOR_RDONLY);
 			str.AppendFormat(_T("(%s)"), (LPCTSTR)s);
 		}
-		s.LoadString(IDR_FRAME);
+		(void)s.LoadString(IDR_FRAME);
 		str.AppendFormat(_T(" - %s"), (LPCTSTR)s);
 	}
 	else
-		str.LoadString(IDR_FRAME);
+		(void)str.LoadString(IDR_FRAME);
 	SetWindowText(str);
 
 	// 文字セット種別
@@ -1373,26 +1386,12 @@ void CMainFrame::UpdateTitleNames()
 // 設定更新処理
 //-------------------------------------------------------------------------
 
-#include "keyword_c.h"
-#include "keyword_cs.h"
-#include "keyword_vb.h"
-#include "keyword_html.h"
-#include "keyword_xml.h"
-#include "keyword_java.h"
-#include "keyword_perl.h"
-#include "keyword_rc.h"
-#include "keyword_actionscript.h"
-#include "keyword_javascript.h"
-#include "keyword_typescript.h"
-#include "keyword_php.h"
-#include "keyword_vue.h"
-
 struct EXTENTIONTYPE {
-	const WCHAR* kwd;
+	KEYWORD_DICT kwd;
 	LPCTSTR ext;
 };
 
-static EXTENTIONTYPE stExts[12] = {
+static const EXTENTIONTYPE stExts[11] {
 	kwd_C,						_T("c;cc;cpp;cxx;h;hpp"),
 	kwd_CS,						_T("cs"),
 	kwd_HTML,					_T("htm;html;shtml;css"),
@@ -1401,7 +1400,6 @@ static EXTENTIONTYPE stExts[12] = {
 	kwd_JavaScript,		_T("js;jsp"),
 	kwd_TypeScript,   _T("ts"),
 	kwd_vue,          _T("vue"),
-	kwd_ActionScript, _T("as"),
 	kwd_PHP,          _T("php"),
 	kwd_VB,           _T("vb"),
   kwd_RC,           _T("rc;rc2"),
@@ -1413,7 +1411,7 @@ void CMainFrame::ReloadConfig(bool /*noSetDocType*/)
 	m_view.SetConfig(m_config);
 
 	// 拡張子マップ作成
-	CSimpleMap<CString, CString> map;
+	CSimpleMap<CString, KEYWORD_DICT> map;
   for (const auto& et : stExts) {
     CString tmp = et.ext;
     tmp.MakeLower();
@@ -1425,8 +1423,6 @@ void CMainFrame::ReloadConfig(bool /*noSetDocType*/)
     }
   }
 
-	CString strKeywords;
-	int len = 0;
 	if (PathFileExists(m_strFileName)) {
 		LPCTSTR ext = PathFindExtension(m_strFileName);
 		if (*ext == '.') {
@@ -1434,12 +1430,11 @@ void CMainFrame::ReloadConfig(bool /*noSetDocType*/)
 			str.MakeLower();
 			int pos = map.FindKey(str);
 			if (pos >= 0) {
-				strKeywords = map.GetValueAt(pos);
-				len = strKeywords.GetLength();
+				KEYWORD_DICT keywords = map.GetValueAt(pos);
+				m_view.document()->SetKeyword(keywords);
 			}
 		}
 	}
-	m_view.document()->SetKeyword(strKeywords, len);
 }
 
 bool CMainFrame::SaveAs()

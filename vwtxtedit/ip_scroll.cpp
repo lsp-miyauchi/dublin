@@ -371,26 +371,25 @@ void CPadView::ScrollView(int dx, int dy, bool update)
 
 void CPadView::OnHScroll(UINT code, UINT nPos, HWND hwndScrollBar)
 {
-	CPainter* painter = m_canvas->GetPainter();
+	const CPainter* painter = m_canvas->GetPainter();
 	ATLASSERT(painter != NULL);
 
 	// 変化量を計算
 	int dx;
 	switch (code) {
-	default:           return;
-	case SB_LINELEFT:  dx= -painter->W(); break;
-	case SB_LINERIGHT: dx= +painter->W(); break;
-	case SB_PAGELEFT:  dx= -(cx() >> 1); break;
-	case SB_PAGERIGHT: dx= +(cx() >> 1); break;
-	case SB_THUMBTRACK:
-		{
-			SCROLLINFO si = { sizeof(SCROLLINFO), SIF_TRACKPOS };
-			GetScrollInfo(SB_HORZ, &si);
-			dx = si.nTrackPos - m_scrHorz.nPos;
-			break;
-		}
-	case SB_LEFT:    dx = -m_scrHorz.nPos; break;
-	case SB_RIGHT:   dx = m_scrHorz.nMax+1-(signed)m_scrHorz.nPage-m_scrHorz.nPos; break;
+	case SB_LINELEFT:		dx = -painter->W(); break;
+	case SB_LINERIGHT:	dx = +painter->W(); break;
+	case SB_PAGELEFT:		dx = -(cx() >> 1); break;
+	case SB_PAGERIGHT:	dx = +(cx() >> 1); break;
+	case SB_THUMBTRACK: {
+		SCROLLINFO si = { sizeof(SCROLLINFO), SIF_TRACKPOS };
+		GetScrollInfo(SB_HORZ, &si);
+		dx = si.nTrackPos - m_scrHorz.nPos;
+		break;
+	}
+	case SB_LEFT:				dx = -m_scrHorz.nPos; break;
+	case SB_RIGHT:			dx = m_scrHorz.nMax+1-(signed)m_scrHorz.nPage-m_scrHorz.nPos; break;
+	default:						return;
 	}
 
 	// スクロール
@@ -399,13 +398,12 @@ void CPadView::OnHScroll(UINT code, UINT nPos, HWND hwndScrollBar)
 
 void CPadView::OnVScroll(UINT code, UINT nPos, HWND hwndScrollBar)
 {
-	CPainter* painter = m_canvas->GetPainter();
+	const CPainter* painter = m_canvas->GetPainter();
 	ATLASSERT(painter != NULL);
 
 	// 変化量を計算
 	int dy;
 	switch (code) {
-	default:          return;
 	case SB_LINEUP:   dy= -1; break;
 	case SB_LINEDOWN: dy= +1; break;
 	case SB_PAGEUP:   dy= -(cy() / painter->H()); break;
@@ -419,6 +417,7 @@ void CPadView::OnVScroll(UINT code, UINT nPos, HWND hwndScrollBar)
 		}
 	case SB_TOP:      dy = -m_scrVert.nPos; break;
 	case SB_BOTTOM:   dy = m_scrVert.nMax+1-(signed)m_scrVert.nPage-m_scrVert.nPos; break;
+	default:          return;
 	}
 
 	// スクロール

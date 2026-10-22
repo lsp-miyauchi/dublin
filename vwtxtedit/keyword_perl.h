@@ -3,245 +3,245 @@
 
 #pragma once
 
-static const WCHAR kwd_PERL[] = 
-	L"1111\n"					\
-	L"\n"					\
-	L"\n"					\
-	L"#\n"					\
-	L"break\n"					\
-	L"continue\n"					\
-	L"do\n"					\
-	L"elsif\n"					\
-	L"else\n"					\
-	L"for\n"					\
-	L"foreach\n"					\
-	L"goto\n"					\
-	L"if\n"					\
-	L"last\n"					\
-	L"next\n"					\
-	L"unless\n"					\
-	L"until\n"					\
-	L"while\n"					\
-	L"\n"					\
-	L"abs\n"					\
-	L"accept\n"					\
-	L"alarm\n"					\
-	L"and\n"					\
-	L"atan2\n"					\
-	L"bind\n"					\
-	L"binmode\n"					\
-	L"bless\n"					\
-	L"caller\n"					\
-	L"chdir\n"					\
-	L"chmod\n"					\
-	L"chomp\n"					\
-	L"chop\n"					\
-	L"chown\n"					\
-	L"chr\n"					\
-	L"chroot\n"					\
-	L"close\n"					\
-	L"closedir\n"					\
-	L"cmp\n"					\
-	L"connect\n"					\
-	L"continue\n"					\
-	L"cos\n"					\
-	L"crypt\n"					\
-	L"dbmclose\n"					\
-	L"dbmopen\n"					\
-	L"defined\n"					\
-	L"delete\n"					\
-	L"die\n"					\
-	L"do\n"					\
-	L"dump\n"					\
-	L"each\n"					\
-	L"endgrent\n"					\
-	L"endhostent\n"					\
-	L"endnetent\n"					\
-	L"endprotoent\n"					\
-	L"endpwent\n"					\
-	L"endservent\n"					\
-	L"eof\n"					\
-	L"eq\n"					\
-	L"eval\n"					\
-	L"exec\n"					\
-	L"exists\n"					\
-	L"exit\n"					\
-	L"exp\n"					\
-	L"fcntl\n"					\
-	L"fileno\n"					\
-	L"flock\n"					\
-	L"fork\n"					\
-	L"format\n"					\
-	L"formline\n"					\
-	L"ge\n"					\
-	L"getc\n"					\
-	L"getgrent\n"					\
-	L"getgrgid\n"					\
-	L"getrname\n"					\
-	L"gethostbyaddr\n"					\
-	L"gethostbyname\n"					\
-	L"gethostent\n"					\
-	L"getlogin\n"					\
-	L"getnetbyaddr\n"					\
-	L"getnetbyname\n"					\
-	L"getnetent\n"					\
-	L"getpeername\n"					\
-	L"getpgrp\n"					\
-	L"getppid\n"					\
-	L"getpriority\n"					\
-	L"getprotobyname\n"					\
-	L"getprotobynumber\n"					\
-	L"getprotoent\n"					\
-	L"getpwent\n"					\
-	L"getpwnam\n"					\
-	L"getpwuid\n"					\
-	L"getservbyname\n"					\
-	L"getservbyport\n"					\
-	L"getservent\n"					\
-	L"getsockname\n"					\
-	L"getsockopt\n"					\
-	L"glob\n"					\
-	L"gmtime\n"					\
-	L"grep\n"					\
-	L"gt\n"					\
-	L"hex\n"					\
-	L"import\n"					\
-	L"index\n"					\
-	L"int\n"					\
-	L"ioctl\n"					\
-	L"join\n"					\
-	L"keys\n"					\
-	L"kill\n"					\
-	L"l\n"					\
-	L"last\n"					\
-	L"lc\n"					\
-	L"lcfirst\n"					\
-	L"le\n"					\
-	L"length\n"					\
-	L"link\n"					\
-	L"listen\n"					\
-	L"local\n"					\
-	L"localtime\n"					\
-	L"log\n"					\
-	L"lstat\n"					\
-	L"lt\n"					\
-	L"m\n"					\
-	L"map\n"					\
-	L"mkdir\n"					\
-	L"msgctl\n"					\
-	L"msgget\n"					\
-	L"msgrcv\n"					\
-	L"msgsnd\n"					\
-	L"my\n"					\
-	L"ne\n"					\
-	L"next\n"					\
-	L"no\n"					\
-	L"not\n"					\
-	L"oct\n"					\
-	L"open\n"					\
-	L"opendir\n"					\
-	L"or\n"					\
-	L"ord\n"					\
-	L"pack\n"					\
-	L"package\n"					\
-	L"pipe\n"					\
-	L"pop\n"					\
-	L"pos\n"					\
-	L"print\n"					\
-	L"printf\n"					\
-	L"prototype\n"					\
-	L"push\n"					\
-	L"q\n"					\
-	L"qq\n"					\
-	L"qr\n"					\
-	L"quotemeta\n"					\
-	L"qw\n"					\
-	L"qx\n"					\
-	L"rand\n"					\
-	L"read\n"					\
-	L"readdir\n"					\
-	L"readline\n"					\
-	L"readlink\n"					\
-	L"readpipe\n"					\
-	L"recv\n"					\
-	L"redo\n"					\
-	L"ref\n"					\
-	L"rename\n"					\
-	L"require\n"					\
-	L"reset\n"					\
-	L"return\n"					\
-	L"reverse\n"					\
-	L"rewinddir\n"					\
-	L"rindex\n"					\
-	L"rmdir\n"					\
-	L"s\n"					\
-	L"scalar\n"					\
-	L"seek\n"					\
-	L"seekdir\n"					\
-	L"select\n"					\
-	L"semctl\n"					\
-	L"semget\n"					\
-	L"semop\n"					\
-	L"send\n"					\
-	L"setgrent\n"					\
-	L"sethostent\n"					\
-	L"setnetent\n"					\
-	L"setpgrp\n"					\
-	L"setpriority\n"					\
-	L"setprotoent\n"					\
-	L"setpwent\n"					\
-	L"setservent\n"					\
-	L"setsockopt\n"					\
-	L"shift\n"					\
-	L"shmctl\n"					\
-	L"shmget\n"					\
-	L"shmread\n"					\
-	L"shmwrite\n"					\
-	L"shutdown\n"					\
-	L"sin\n"					\
-	L"sleep\n"					\
-	L"socket\n"					\
-	L"socketpair\n"					\
-	L"sort\n"					\
-	L"splice\n"					\
-	L"split\n"					\
-	L"sprintf\n"					\
-	L"sqrt\n"					\
-	L"srand\n"					\
-	L"stat\n"					\
-	L"study\n"					\
-	L"sub\n"					\
-	L"substr\n"					\
-	L"symlink\n"					\
-	L"syscall\n"					\
-	L"sysopen\n"					\
-	L"sysread\n"					\
-	L"sysseek\n"					\
-	L"system\n"					\
-	L"syswrite\n"					\
-	L"tell\n"					\
-	L"telldir\n"					\
-	L"tie\n"					\
-	L"tied\n"					\
-	L"time\n"					\
-	L"times\n"					\
-	L"tr\n"					\
-	L"truncate\n"					\
-	L"uc\n"					\
-	L"ucfirst\n"					\
-	L"umask\n"					\
-	L"undef\n"					\
-	L"unlink\n"					\
-	L"unpack\n"					\
-	L"unshift\n"					\
-	L"untie\n"					\
-	L"use\n"					\
-	L"utime\n"					\
-	L"values\n"					\
-	L"vec\n"					\
-	L"wait\n"					\
-	L"waitpid\n"					\
-	L"wantarray\n"					\
-	L"warn\n"					\
-	L"write\n"					\
-	L"xor\n";
+const KEYWORD_DICT kwd_PERL {
+	L"1111", { L"", L"", L"#"},
+	{
+		L"break",
+		L"continue",
+		L"do",
+		L"elsif",
+		L"else",
+		L"for",
+		L"foreach",
+		L"goto",
+		L"if",
+		L"last",
+		L"next",
+		L"unless",
+		L"until",
+		L"while",
+		L"",
+		L"abs",
+		L"accept",
+		L"alarm",
+		L"and",
+		L"atan2",
+		L"bind",
+		L"binmode",
+		L"bless",
+		L"caller",
+		L"chdir",
+		L"chmod",
+		L"chomp",
+		L"chop",
+		L"chown",
+		L"chr",
+		L"chroot",
+		L"close",
+		L"closedir",
+		L"cmp",
+		L"connect",
+		L"continue",
+		L"cos",
+		L"crypt",
+		L"dbmclose",
+		L"dbmopen",
+		L"defined",
+		L"delete",
+		L"die",
+		L"do",
+		L"dump",
+		L"each",
+		L"endgrent",
+		L"endhostent",
+		L"endnetent",
+		L"endprotoent",
+		L"endpwent",
+		L"endservent",
+		L"eof",
+		L"eq",
+		L"eval",
+		L"exec",
+		L"exists",
+		L"exit",
+		L"exp",
+		L"fcntl",
+		L"fileno",
+		L"flock",
+		L"fork",
+		L"format",
+		L"formline",
+		L"ge",
+		L"getc",
+		L"getgrent",
+		L"getgrgid",
+		L"getrname",
+		L"gethostbyaddr",
+		L"gethostbyname",
+		L"gethostent",
+		L"getlogin",
+		L"getnetbyaddr",
+		L"getnetbyname",
+		L"getnetent",
+		L"getpeername",
+		L"getpgrp",
+		L"getppid",
+		L"getpriority",
+		L"getprotobyname",
+		L"getprotobynumber",
+		L"getprotoent",
+		L"getpwent",
+		L"getpwnam",
+		L"getpwuid",
+		L"getservbyname",
+		L"getservbyport",
+		L"getservent",
+		L"getsockname",
+		L"getsockopt",
+		L"glob",
+		L"gmtime",
+		L"grep",
+		L"gt",
+		L"hex",
+		L"import",
+		L"index",
+		L"int",
+		L"ioctl",
+		L"join",
+		L"keys",
+		L"kill",
+		L"l",
+		L"last",
+		L"lc",
+		L"lcfirst",
+		L"le",
+		L"length",
+		L"link",
+		L"listen",
+		L"local",
+		L"localtime",
+		L"log",
+		L"lstat",
+		L"lt",
+		L"m",
+		L"map",
+		L"mkdir",
+		L"msgctl",
+		L"msgget",
+		L"msgrcv",
+		L"msgsnd",
+		L"my",
+		L"ne",
+		L"next",
+		L"no",
+		L"not",
+		L"oct",
+		L"open",
+		L"opendir",
+		L"or",
+		L"ord",
+		L"pack",
+		L"package",
+		L"pipe",
+		L"pop",
+		L"pos",
+		L"print",
+		L"printf",
+		L"prototype",
+		L"push",
+		L"q",
+		L"qq",
+		L"qr",
+		L"quotemeta",
+		L"qw",
+		L"qx",
+		L"rand",
+		L"read",
+		L"readdir",
+		L"readline",
+		L"readlink",
+		L"readpipe",
+		L"recv",
+		L"redo",
+		L"ref",
+		L"rename",
+		L"require",
+		L"reset",
+		L"return",
+		L"reverse",
+		L"rewinddir",
+		L"rindex",
+		L"rmdir",
+		L"s",
+		L"scalar",
+		L"seek",
+		L"seekdir",
+		L"select",
+		L"semctl",
+		L"semget",
+		L"semop",
+		L"send",
+		L"setgrent",
+		L"sethostent",
+		L"setnetent",
+		L"setpgrp",
+		L"setpriority",
+		L"setprotoent",
+		L"setpwent",
+		L"setservent",
+		L"setsockopt",
+		L"shift",
+		L"shmctl",
+		L"shmget",
+		L"shmread",
+		L"shmwrite",
+		L"shutdown",
+		L"sin",
+		L"sleep",
+		L"socket",
+		L"socketpair",
+		L"sort",
+		L"splice",
+		L"split",
+		L"sprintf",
+		L"sqrt",
+		L"srand",
+		L"stat",
+		L"study",
+		L"sub",
+		L"substr",
+		L"symlink",
+		L"syscall",
+		L"sysopen",
+		L"sysread",
+		L"sysseek",
+		L"system",
+		L"syswrite",
+		L"tell",
+		L"telldir",
+		L"tie",
+		L"tied",
+		L"time",
+		L"times",
+		L"tr",
+		L"truncate",
+		L"uc",
+		L"ucfirst",
+		L"umask",
+		L"undef",
+		L"unlink",
+		L"unpack",
+		L"unshift",
+		L"untie",
+		L"use",
+		L"utime",
+		L"values",
+		L"vec",
+		L"wait",
+		L"waitpid",
+		L"wantarray",
+		L"warn",
+		L"write",
+		L"xor",
+	}
+};

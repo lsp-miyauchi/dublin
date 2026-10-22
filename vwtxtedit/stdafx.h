@@ -12,6 +12,11 @@
 
 #include <memory>
 #include <vector>
+#include <string>
+#include <string_view>
+#include <array>
+#include <map>
+
 #include <atlbase.h>
 #include <atlwin.h>
 #include <atlstr.h>

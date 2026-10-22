@@ -3,69 +3,67 @@
 
 #pragma once
 
-static const WCHAR kwd_JavaScript[] = 
-	L"1111\n"			\
-	L"/*\n"				\
-	L"*/\n"				\
-	L"//\n"				\
-	L"abstract\n"		\
-	L"boolean\n"		\
-	L"break\n"		\
-	L"byte\n"		\
-	L"case\n"		\
-	L"3,catch\n"		\
-	L"char\n"		\
-	L"class\n"		\
-	L"const\n"		\
-	L"continue\n"		\
-	L"debugger\n"		\
-	L"default\n"		\
-	L"delete\n"		\
-	L"do\n"		\
-	L"double\n"		\
-	L"else\n"		\
-	L"enum\n"		\
-	L"export\n"		\
-	L"extends\n"		\
-	L"false\n"		\
-	L"final\n"		\
-	L"finally\n"		\
-	L"float\n"		\
-	L"for\n"		\
-	L"2,function\n"		\
-	L"goto\n"		\
-	L"if\n"		\
-	L"implements\n"		\
-	L"import\n"		\
-	L"in\n"		\
-	L"instanceof\n"		\
-	L"int\n"		\
-	L"interface\n"		\
-	L"long\n"		\
-	L"native\n"		\
-	L"new\n"		\
-	L"2,null\n"		\
-	L"package\n"		\
-	L"private\n"		\
-	L"protected\n"		\
-	L"public\n"		\
-	L"return\n"		\
-	L"short\n"		\
-	L"static\n"		\
-	L"super\n"		\
-	L"switch\n"		\
-	L"synchronized\n"		\
-	L"2,this\n"		\
-	L"throw\n"		\
-	L"throws\n"		\
-	L"transient\n"		\
-	L"true\n"		\
-	L"3,try\n"		\
-	L"typeof\n"		\
-	L"2,var\n"		\
-	L"void\n"		\
-	L"volatile\n"		\
-	L"while\n"		\
-	L"with\n";
-
-
+const KEYWORD_DICT kwd_JavaScript {
+	L"1111", { L"/*", L"*/", L"//" },
+	{
+		L"abstract",
+		L"boolean",
+		L"break",
+		L"byte",
+		L"case",
+		L"3,catch",
+		L"char",
+		L"class",
+		L"const",
+		L"continue",
+		L"debugger",
+		L"default",
+		L"delete",
+		L"do",
+		L"double",
+		L"else",
+		L"enum",
+		L"export",
+		L"extends",
+		L"false",
+		L"final",
+		L"finally",
+		L"float",
+		L"for",
+		L"2,function",
+		L"goto",
+		L"if",
+		L"implements",
+		L"import",
+		L"in",
+		L"instanceof",
+		L"int",
+		L"interface",
+		L"long",
+		L"native",
+		L"new",
+		L"2,null",
+		L"package",
+		L"private",
+		L"protected",
+		L"public",
+		L"return",
+		L"short",
+		L"static",
+		L"super",
+		L"switch",
+		L"synchronized",
+		L"2,this",
+		L"throw",
+		L"throws",
+		L"transient",
+		L"true",
+		L"3,try",
+		L"typeof",
+		L"2,var",
+		L"void",
+		L"volatile",
+		L"while",
+		L"with"
+	}
+};

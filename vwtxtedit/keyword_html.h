@@ -3,227 +3,227 @@
 
 #pragma once
 
-static const WCHAR kwd_HTML[] = 
-	L"0111\n"					\
-	L"<!--\n"					\
-	L"-->\n"					\
-	L"\n"					\
-	L"a\n"					\
-	L"address\n"					\
-	L"applet\n"					\
-	L"area\n"					\
-	L"b\n"					\
-	L"base\n"					\
-	L"basefont\n"					\
-	L"bgsound\n"					\
-	L"big\n"					\
-	L"blockquote\n"					\
-	L"body\n"					\
-	L"br\n"					\
-	L"button\n"					\
-	L"caption\n"					\
-	L"center\n"					\
-	L"cite\n"					\
-	L"code\n"					\
-	L"col\n"					\
-	L"colgroup\n"					\
-	L"comment\n"					\
-	L"dd\n"					\
-	L"dfn\n"					\
-	L"dir\n"					\
-	L"div\n"					\
-	L"dl\n"					\
-	L"dt\n"					\
-	L"em\n"					\
-	L"embed\n"					\
-	L"fieldset\n"					\
-	L"font\n"					\
-	L"form\n"					\
-	L"frameset\n"					\
-	L"h1\n"					\
-	L"h2\n"					\
-	L"h3\n"					\
-	L"h4\n"					\
-	L"h5\n"					\
-	L"h6\n"					\
-	L"head\n"					\
-	L"hr\n"					\
-	L"html\n"					\
-	L"i\n"					\
-	L"iframe\n"					\
-	L"img\n"					\
-	L"input\n"					\
-	L"kbd\n"					\
-	L"label\n"					\
-	L"legend\n"					\
-	L"li\n"					\
-	L"link\n"					\
-	L"listing\n"					\
-	L"map\n"					\
-	L"marqee\n"					\
-	L"menu\n"					\
-	L"meta\n"					\
-	L"nobr\n"					\
-	L"noframes\n"					\
-	L"noscript\n"					\
-	L"object\n"					\
-	L"ol\n"					\
-	L"option\n"					\
-	L"p\n"					\
-	L"param\n"					\
-	L"plaintext\n"					\
-	L"pre\n"					\
-	L"s\n"					\
-	L"samp\n"					\
-	L"script\n"					\
-	L"select\n"					\
-	L"small\n"					\
-	L"span\n"					\
-	L"strike\n"					\
-	L"strong\n"					\
-	L"style\n"					\
-	L"sub\n"					\
-	L"sup\n"					\
-	L"table\n"					\
-	L"tbody\n"					\
-	L"td\n"					\
-	L"textarea\n"					\
-	L"tfoot\n"					\
-	L"td\n"					\
-	L"th\n"					\
-	L"thead\n"					\
-	L"title\n"					\
-	L"tr\n"					\
-	L"tt\n"					\
-	L"u\n"					\
-	L"ul\n"					\
-	L"var\n"					\
-	L"wbr\n"					\
-	L"xmp\n"					\
-	L"2,accesskey\n"			\
-	L"2,action\n"			\
-	L"2,align\n"			\
-	L"2,alink\n"			\
-	L"2,alt\n"			\
-	L"2,balance\n"			\
-	L"2,behavior\n"			\
-	L"2,bgcolor\n"			\
-	L"2,bgproperties\n"			\
-	L"2,border\n"			\
-	L"2,bordercolor\n"			\
-	L"2,bordercolordark\n"			\
-	L"2,bordercolorlight\n"			\
-	L"2,bottommargin\n"			\
-	L"2,cellpadding\n"			\
-	L"2,cellspacing\n"			\
-	L"2,checked\n"			\
-	L"2,class\n"			\
-	L"2,classid\n"			\
-	L"2,code\n"			\
-	L"2,codebase\n"			\
-	L"2,codetype\n"			\
-	L"2,cols\n"			\
-	L"2,colspan\n"			\
-	L"2,compact\n"			\
-	L"2,content\n"			\
-	L"2,controls\n"			\
-	L"2,coords\n"			\
-	L"2,data\n"			\
-	L"2,datafld\n"			\
-	L"2,dataformatas\n"			\
-	L"2,datasrc\n"			\
-	L"2,direction\n"			\
-	L"2,disabled\n"			\
-	L"2,dynsrc\n"			\
-	L"2,enctype\n"			\
-	L"2,event\n"			\
-	L"2,face\n"			\
-	L"2,for\n"			\
-	L"2,frame\n"			\
-	L"2,frameborder\n"			\
-	L"2,framespacing\n"			\
-	L"2,height\n"			\
-	L"2,hidden\n"			\
-	L"2,href\n"			\
-	L"2,hspace\n"			\
-	L"2,http-eqiuv\n"			\
-	L"2,id\n"			\
-	L"2,ismap\n"			\
-	L"2,lang\n"			\
-	L"2,language\n"			\
-	L"2,leftmargin\n"			\
-	L"2,link\n"			\
-	L"2,loop\n"			\
-	L"2,lowsrc\n"			\
-	L"2,marginheight\n"			\
-	L"2,marginwidth\n"			\
-	L"2,maxlength\n"			\
-	L"2,mayscript\n"			\
-	L"2,method\n"			\
-	L"2,methods\n"			\
-	L"2,multiple\n"			\
-	L"2,name\n"			\
-	L"2,nohref\n"			\
-	L"2,noresize\n"			\
-	L"2,noshade\n"			\
-	L"2,nowrap\n"			\
-	L"2,palette\n"			\
-	L"2,pluginspage\n"			\
-	L"2,readonly\n"			\
-	L"2,rel\n"			\
-	L"2,rev\n"			\
-	L"2,rightmargin\n"			\
-	L"2,rows\n"			\
-	L"2,rowspan\n"			\
-	L"2,rules\n"			\
-	L"2,scroll\n"			\
-	L"2,scrollamount\n"			\
-	L"2,scrolldelay\n"			\
-	L"2,scrolling\n"			\
-	L"2,selected\n"			\
-	L"2,shape\n"			\
-	L"2,size\n"			\
-	L"2,src\n"			\
-	L"2,start\n"			\
-	L"2,style\n"			\
-	L"2,tabindex\n"			\
-	L"2,target\n"			\
-	L"2,text\n"			\
-	L"2,title\n"			\
-	L"2,topmargin\n"			\
-	L"2,truespeed\n"			\
-	L"2,type\n"			\
-	L"2,url\n"			\
-	L"2,urn\n"			\
-	L"2,usemap\n"			\
-	L"2,valign\n"			\
-	L"2,value\n"			\
-	L"2,vlink\n"			\
-	L"2,volume\n"			\
-	L"2,vrml\n"			\
-	L"2,vspace\n"			\
-	L"2,width\n"			\
-	L"2,wrap\n"				\
-	L"3,backgorund-color\n"					\
-	L"3,backgorund-image\n"					\
-	L"3,backgorund-position\n"					\
-	L"3,backgorund-repeat\n"					\
-	L"3,clear\n"					\
-	L"3,color\n"					\
-	L"3,float\n"					\
-	L"3,font-family\n"					\
-	L"3,font-size\n"					\
-	L"3,font-weight\n"					\
-	L"3,line-height\n"					\
-	L"3,margin-left\n"					\
-	L"3,margin-top\n"					\
-	L"3,margin-right\n"					\
-	L"3,margin-bottom\n"					\
-	L"3,padding-left\n"					\
-	L"3,padding-top\n"					\
-	L"3,padding-right\n"					\
-	L"3,padding-bottom\n"					\
-	L"3,padding\n"					\
-	L"3,vertical-align\n"					\
-	L"3,text-align\n"				\
-	L"3,text-decolation\n";
+const KEYWORD_DICT kwd_HTML {
+	L"0111", { L"<!--", L"-->", L"" },
+	{
+		L"a",
+		L"address",
+		L"applet",
+		L"area",
+		L"b",
+		L"base",
+		L"basefont",
+		L"bgsound",
+		L"big",
+		L"blockquote",
+		L"body",
+		L"br",
+		L"button",
+		L"caption",
+		L"center",
+		L"cite",
+		L"code",
+		L"col",
+		L"colgroup",
+		L"comment",
+		L"dd",
+		L"dfn",
+		L"dir",
+		L"div",
+		L"dl",
+		L"dt",
+		L"em",
+		L"embed",
+		L"fieldset",
+		L"font",
+		L"form",
+		L"frameset",
+		L"h1",
+		L"h2",
+		L"h3",
+		L"h4",
+		L"h5",
+		L"h6",
+		L"head",
+		L"hr",
+		L"html",
+		L"i",
+		L"iframe",
+		L"img",
+		L"input",
+		L"kbd",
+		L"label",
+		L"legend",
+		L"li",
+		L"link",
+		L"listing",
+		L"map",
+		L"marqee",
+		L"menu",
+		L"meta",
+		L"nobr",
+		L"noframes",
+		L"noscript",
+		L"object",
+		L"ol",
+		L"option",
+		L"p",
+		L"param",
+		L"plaintext",
+		L"pre",
+		L"s",
+		L"samp",
+		L"script",
+		L"select",
+		L"small",
+		L"span",
+		L"strike",
+		L"strong",
+		L"style",
+		L"sub",
+		L"sup",
+		L"table",
+		L"tbody",
+		L"td",
+		L"textarea",
+		L"tfoot",
+		L"td",
+		L"th",
+		L"thead",
+		L"title",
+		L"tr",
+		L"tt",
+		L"u",
+		L"ul",
+		L"var",
+		L"wbr",
+		L"xmp",
+		L"2,accesskey",
+		L"2,action",
+		L"2,align",
+		L"2,alink",
+		L"2,alt",
+		L"2,balance",
+		L"2,behavior",
+		L"2,bgcolor",
+		L"2,bgproperties",
+		L"2,border",
+		L"2,bordercolor",
+		L"2,bordercolordark",
+		L"2,bordercolorlight",
+		L"2,bottommargin",
+		L"2,cellpadding",
+		L"2,cellspacing",
+		L"2,checked",
+		L"2,class",
+		L"2,classid",
+		L"2,code",
+		L"2,codebase",
+		L"2,codetype",
+		L"2,cols",
+		L"2,colspan",
+		L"2,compact",
+		L"2,content",
+		L"2,controls",
+		L"2,coords",
+		L"2,data",
+		L"2,datafld",
+		L"2,dataformatas",
+		L"2,datasrc",
+		L"2,direction",
+		L"2,disabled",
+		L"2,dynsrc",
+		L"2,enctype",
+		L"2,event",
+		L"2,face",
+		L"2,for",
+		L"2,frame",
+		L"2,frameborder",
+		L"2,framespacing",
+		L"2,height",
+		L"2,hidden",
+		L"2,href",
+		L"2,hspace",
+		L"2,http-eqiuv",
+		L"2,id",
+		L"2,ismap",
+		L"2,lang",
+		L"2,language",
+		L"2,leftmargin",
+		L"2,link",
+		L"2,loop",
+		L"2,lowsrc",
+		L"2,marginheight",
+		L"2,marginwidth",
+		L"2,maxlength",
+		L"2,mayscript",
+		L"2,method",
+		L"2,methods",
+		L"2,multiple",
+		L"2,name",
+		L"2,nohref",
+		L"2,noresize",
+		L"2,noshade",
+		L"2,nowrap",
+		L"2,palette",
+		L"2,pluginspage",
+		L"2,readonly",
+		L"2,rel",
+		L"2,rev",
+		L"2,rightmargin",
+		L"2,rows",
+		L"2,rowspan",
+		L"2,rules",
+		L"2,scroll",
+		L"2,scrollamount",
+		L"2,scrolldelay",
+		L"2,scrolling",
+		L"2,selected",
+		L"2,shape",
+		L"2,size",
+		L"2,src",
+		L"2,start",
+		L"2,style",
+		L"2,tabindex",
+		L"2,target",
+		L"2,text",
+		L"2,title",
+		L"2,topmargin",
+		L"2,truespeed",
+		L"2,type",
+		L"2,url",
+		L"2,urn",
+		L"2,usemap",
+		L"2,valign",
+		L"2,value",
+		L"2,vlink",
+		L"2,volume",
+		L"2,vrml",
+		L"2,vspace",
+		L"2,width",
+		L"2,wrap",
+		L"3,backgorund-color",
+		L"3,backgorund-image",
+		L"3,backgorund-position",
+		L"3,backgorund-repeat",
+		L"3,clear",
+		L"3,color",
+		L"3,float",
+		L"3,font-family",
+		L"3,font-size",
+		L"3,font-weight",
+		L"3,line-height",
+		L"3,margin-left",
+		L"3,margin-top",
+		L"3,margin-right",
+		L"3,margin-bottom",
+		L"3,padding-left",
+		L"3,padding-top",
+		L"3,padding-right",
+		L"3,padding-bottom",
+		L"3,padding",
+		L"3,vertical-align",
+		L"3,text-align",
+		L"3,text-decolation",
+	}
+};

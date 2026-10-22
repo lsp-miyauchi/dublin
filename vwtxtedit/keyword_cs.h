@@ -3,91 +3,91 @@
 
 #pragma once
 
-static const WCHAR kwd_CS[] = 
-	L"1111\n"					\
-	L"/*\n"					\
-	L"*/\n"					\
-	L"//\n"					\
-	L"abstract\n"				\
-	L"as\n"					\
-	L"base\n"					\
-	L"bool\n"					\
-	L"break\n"				\
-	L"byte\n"					\
-	L"case\n"					\
-	L"catch\n"				\
-	L"char\n"					\
-	L"checked\n"				\
-	L"class\n"				\
-	L"const\n"				\
-	L"continue\n"				\
-	L"decimal\n"				\
-	L"default\n"				\
-	L"delegate\n"				\
-	L"do\n"					\
-	L"double\n"				\
-	L"else\n"					\
-	L"enum\n"					\
-	L"event\n"				\
-	L"explicit\n"				\
-	L"extern\n"				\
-	L"false\n"				\
-	L"finally\n"				\
-	L"fixed\n"				\
-	L"float\n"				\
-	L"for\n"					\
-	L"foreach\n"				\
-	L"goto\n"					\
-	L"if\n"					\
-	L"implicit\n"				\
-	L"in\n"					\
-	L"int\n"					\
-	L"interface\n"			\
-	L"internal\n"				\
-	L"is\n"					\
-	L"lock\n"					\
-	L"long\n"					\
-	L"namespace\n"			\
-	L"new\n"					\
-	L"null\n"					\
-	L"object\n"				\
-	L"operator\n"				\
-	L"out\n"					\
-	L"override\n"				\
-	L"params\n"				\
-	L"private\n"				\
-	L"protected\n"			\
-	L"public\n"				\
-	L"readonly\n"				\
-	L"ref\n"					\
-	L"return\n"				\
-	L"sbyte\n"				\
-	L"sealed\n"				\
-	L"short\n"				\
-	L"sizeof\n"				\
-	L"stackalloc\n"			\
-	L"static\n"				\
-	L"string\n"				\
-	L"struct\n"				\
-	L"switch\n"				\
-	L"this\n"					\
-	L"throw\n"				\
-	L"true\n"					\
-	L"try\n"					\
-	L"typeof\n"				\
-	L"uint\n"					\
-	L"ulong\n"				\
-	L"unchecked\n"			\
-	L"unsafe\n"				\
-	L"ushort\n"				\
-	L"using\n"				\
-	L"virtual\n"				\
-	L"volatile\n"				\
-	L"void\n"					\
-	L"while\n"				\
-	L"get\n"					\
-	L"partial\n"				\
-	L"set\n"					\
-	L"value\n"				\
-	L"where\n"				\
-	L"yield\n";
+const KEYWORD_DICT kwd_CS {
+  L"1111", { L"/*", L"*/", L"//" },
+  {
+    L"abstract",
+    L"as",
+    L"base",
+    L"bool",
+    L"break",
+    L"byte",
+    L"case",
+    L"catch",
+    L"char",
+    L"checked",
+    L"class",
+    L"const",
+    L"continue",
+    L"decimal",
+    L"default",
+    L"delegate",
+    L"do",
+    L"double",
+    L"else",
+    L"enum",
+    L"event",
+    L"explicit",
+    L"extern",
+    L"false",
+    L"finally",
+    L"fixed",
+    L"float",
+    L"for",
+    L"foreach",
+    L"goto",
+    L"if",
+    L"implicit",
+    L"in",
+    L"int",
+    L"interface",
+    L"internal",
+    L"is",
+    L"lock",
+    L"long",
+    L"namespace",
+    L"new",
+    L"null",
+    L"object",
+    L"operator",
+    L"out",
+    L"override",
+    L"params",
+    L"private",
+    L"protected",
+    L"public",
+    L"readonly",
+    L"ref",
+    L"return",
+    L"sbyte",
+    L"sealed",
+    L"short",
+    L"sizeof",
+    L"stackalloc",
+    L"static",
+    L"string",
+    L"struct",
+    L"switch",
+    L"this",
+    L"throw",
+    L"true",
+    L"try",
+    L"typeof",
+    L"uint",
+    L"ulong",
+    L"unchecked",
+    L"unsafe",
+    L"ushort",
+    L"using",
+    L"virtual",
+    L"volatile",
+    L"void",
+    L"while",
+    L"get",
+    L"partial",
+    L"set",
+    L"value",
+    L"where",
+    L"yield"
+  }
+};

@@ -161,20 +161,18 @@ const int CommentDFA::tr_table[5][5] = {
 //-------------------------------------------------------------------------
 
 struct Keyword {
-	WCHAR* str;
+	std::wstring str;
 	const ULONG len;
 	Keyword* next;
 
-	Keyword( const WCHAR* s, ULONG l )
-		: str( new WCHAR[l + 1] )
-		, len( l )
-		, next( NULL )
+	Keyword(const wchar_t* s)
+    : str(s)
+		, len(static_cast<ULONG>(str.size()))
+		, next(nullptr)
 	{
-		memcpy(str, s, l * sizeof(WCHAR));
-		str[l] = 0;
 	}
 
-	~Keyword() { delete [] str; }
+	~Keyword() {}
 };
 
 
@@ -182,25 +180,22 @@ struct Keyword {
 // サポート関数。Unicodeテキスト同士の比較
 //-------------------------------------------------------------------------
 
-static bool compare_s(const WCHAR* a,const WCHAR* b,ULONG l)
+static bool compare_s(const wchar_t* a, const wchar_t* b, unsigned long l)
 {
 	// 大文字小文字を区別
-	while( l-- )
-		if( *a++ != *b++ )
-			return false;
-	return true;
+	// 先頭から5文字の string_view を作って比較
+	std::wstring_view sv1(a, l);
+	std::wstring_view sv2(b, l);
+	return (sv1 == sv2);
 }
 
-static bool compare_i(const WCHAR* a,const WCHAR* b,ULONG l)
+static bool compare_i(const wchar_t* a, const wchar_t* b, unsigned long l)
 {
 	// 大文字小文字を区別しない（雑）
-	while( l-- )
-		if( ((*a++) ^ (*b++)) & 0xdf )
-			return false;
-	return true;
+	std::wstring_view sv1(a, l);
+	std::wstring_view sv2(b, l);
+	return (_wcsnicmp(sv1.data(), sv2.data(), l) == 0);
 }
-
-
 
 //-------------------------------------------------------------------------
 // 与えられた記号文字列から、コメント開始等の意味のあるトークンを
@@ -209,53 +204,46 @@ static bool compare_i(const WCHAR* a,const WCHAR* b,ULONG l)
 
 class CTagMap
 {
-	Keyword* m_tag[3]; // 0:CE 1:CB 2:LB
-	bool m_esc, m_q1, m_q2, m_map[128];
+	std::array<std::unique_ptr<Keyword>, 3> m_tag; // 0:CE 1:CB 2:LB
+	bool m_esc;
+	bool m_q1;
+	bool m_q2;
+	std::array<BYTE, 128> m_map;
 
 public:
 
-	CTagMap(const WCHAR* cb, ULONG cblen,
-		    const WCHAR* ce, ULONG celen,
-		    const WCHAR* lb, ULONG lblen,
+	CTagMap(const wchar_t* cb,
+		    const wchar_t* ce,
+		    const wchar_t* lb,
 		    bool q1, bool q2, bool esc )
-		: m_q1 ( q1 )
-		, m_q2 ( q2 )
-		, m_esc( esc )
+		: m_esc(esc)
+		, m_q1(q1)
+		, m_q2(q2)
 	{
 		// '/' で始まる記号は使われているか…？
 		// みたいな、１文字目のみのチェックに使う表を作成
-		m_tag[0] = m_tag[1] = m_tag[2] = NULL;
-		memset(m_map, 0, sizeof(m_map));
+		m_map.fill(0);
 		m_map[L'\''] = q1;
 		m_map[L'\"'] = q2;
 		m_map[L'\\'] = esc;
-		if (celen) {
+		if (ce && *ce) {
 			m_map[*ce] = true;
-			m_tag[0] = new Keyword(ce, celen);
+			m_tag[0] = std::make_unique<Keyword>(ce);
 		}
-		if (cblen) {
+		if (cb && *cb) {
 			m_map[*cb] = true;
-			m_tag[1] = new Keyword(cb, cblen);
+			m_tag[1] = std::make_unique<Keyword>(cb);
 		}
-		if (lblen) {
+		if (lb && *lb) {
 			m_map[*lb] = true;
-			m_tag[2] = new Keyword(lb, lblen);
+			m_tag[2] = std::make_unique<Keyword>(lb);
 		}
 	}
 
-	~CTagMap()
-	{
-		// キーワード解放
-		delete m_tag[0];
-		delete m_tag[1];
-		delete m_tag[2];
-	}
+	~CTagMap() = default;
 
-	bool does_esc()
-	{
-		// \ によるエスケープをするかどうか
-		return m_esc;
-	}
+	// \ によるエスケープをするかどうか
+	inline bool does_esc() const { return m_esc; }
 
 	ULONG SymbolLoop(const WCHAR* str, ULONG len, ULONG& mlen, int& sym )
 	{
@@ -268,34 +256,28 @@ public:
 		for (sym = sXXX, mlen = 1; ans < len; ++ans) {
 			if (m_map[str[ans]]) {
 				for (i = 2; i >= 0; --i) {
-					if (m_tag[i] != NULL &&
+					if (m_tag[i] != nullptr &&
 						m_tag[i]->len <= len - ans &&
-						compare_s(m_tag[i]->str, str + ans, m_tag[i]->len )) {
+						compare_s(m_tag[i]->str.c_str(), str + ans, m_tag[i]->len )) {
 						sym  = i;
 						mlen = m_tag[i]->len;
-						goto symbolfound;
+						return ans;
 					}
 				}
 
-				if (str[ans] == L'\'') {		// 一重引用符
-					if (m_q1) {
-						sym  = sQTS;
-						goto symbolfound;
-					}
+				if (str[ans] == L'\'' && m_q1) {			// 一重引用符
+					sym  = sQTS;
+					return ans;
 				}
-				else if (str[ans] == L'\"') {	// 二重引用符
-					if (m_q2) {
-						sym  = sQTD;
-						goto symbolfound;
-					}
+				else if (str[ans] == L'\"' && m_q2) {	// 二重引用符
+					sym  = sQTD;
+					return ans;
 				}
-				else if (str[ans] == L'\\') {	// \ の後の文字はSkip
-					if (m_esc && ans + 1 < len)
-						++ans;
+				else if (str[ans] == L'\\' && (m_esc && ans + 1 < len)) {	// \ の後の文字はSkip
+					++ans;
 				}
 			}
 		}
-	symbolfound:
 		return ans;
 	}
 };
@@ -306,20 +288,18 @@ public:
 // 与えられた文字列がキーワードかどうか高速判定するためのハッシュ表
 //-------------------------------------------------------------------------
 
-class CKeywordMap : public CSimpleArray<Keyword*>
+class CKeywordMap : public std::array<Keyword*, 4096>
 {
-	CSimpleMap<Keyword*, ULONG> m_kwdmap;
-	bool (*m_compare)(const WCHAR*,const WCHAR*,ULONG);
+	std::map<Keyword*, ULONG> m_kwdmap;
+	bool (*m_compare)(const wchar_t*,const wchar_t*, ULONG);
 
 public:
 
 	CKeywordMap( bool bCaseSensitive )
 	{
 		m_compare = bCaseSensitive ? compare_s : compare_i;
-
 		// ハッシュ表初期化
-		for (int i = 0; i < 4096; i++)
-			Add(NULL);
+		fill(nullptr);
 	}
 
 	~CKeywordMap()
@@ -330,44 +310,47 @@ public:
 	void DeleteAll()
 	{
 		// 解放
-		int cnt = GetSize();
-		for (int i = 0; i < cnt; i++)
-			delete (*this)[i];
-		RemoveAll();
-		m_kwdmap.RemoveAll();
+		for (auto& kwptr : *this) {
+			if (kwptr != nullptr)
+				delete kwptr;
+		}
+		fill(nullptr);
+		m_kwdmap.clear();
 	}
 
-	void AddKeyword( const WCHAR* str, ULONG len, ULONG keywordtype)
+	void AddKeyword(const wchar_t* str, ULONG keywordtype)
 	{
 		// データ登録
-		Keyword* x = new Keyword(str,len);
-		int h = hash(str,len);
+		auto x = new Keyword(str);
+		int h = hash(str, wcslen(str));
 
-		Keyword* q = (*this)[h];
-		if (!q) {
+		Keyword* q = at(h);
+		if (q == nullptr) {
 			// ハッシュテーブルが空の場合
-			SetAtIndex(h, x);
+			at(h) = x;
 		}
 		else {
 			// チェイン末尾に繋ぐ場合
 			Keyword* p = q->next;
 
-			while (p != NULL) {
+			while (p != nullptr) {
 				q = p;
 				p = p->next;
 			}
 			q->next = x;
 		}
-		m_kwdmap.Add(x, keywordtype);
+		m_kwdmap.insert(std::make_pair(x, keywordtype));
 	}
 
 	ULONG isKeyword( const WCHAR* str, ULONG len )
 	{
 		// 登録されているキーワードと一致するか？
-		Keyword* p = (*this)[hash(str, len)];
+		Keyword* p = at(hash(str, len));
 		while (p) {
-			if (p->len == len && m_compare(p->str, str, len))
-				return m_kwdmap.Lookup(p);
+			if (p->len == len && m_compare(p->str.c_str(), str, len)) {
+				auto it = m_kwdmap.find(p);
+        return (it != m_kwdmap.end()) ? it->second : 0;
+			}
 			p = p->next;
 		}
 		return 0;
@@ -375,11 +358,12 @@ public:
 
 private:
 
-	static int hash( const WCHAR* a, ULONG al )
+	static int hash( const WCHAR* a, size_t al )
 	{
 		// 12bitに潰すめっちゃ雑なハッシュ関数
 		// ルーチン分けるの面倒なので、大文字小文字は常に区別されない。(^^;
-		int h = 0, i = 0;
+		int h = 0;
+		int i = 0;
 		while (al--) {
 			h ^= ((*(a++) & 0xdf) << i);
 			i = (i + 5) & 7;
@@ -390,9 +374,9 @@ private:
 
 
 
-//-------------------------------------------------------------------------
-// 以上の道具立てでもって、テキストの解析を行うParser
-//-------------------------------------------------------------------------
+/*-------------------------------------------------------------------------
+ * 以上の道具立てでもって、テキストの解析を行うParser
+ *-----------------------------------------------------------------------*/
 
 class CParser
 {
@@ -402,21 +386,21 @@ class CParser
 public:
 	// 初期化１
 	CParser(
-		const WCHAR* cb, ULONG cblen,
-		const WCHAR* ce, ULONG celen,
-		const WCHAR* lb, ULONG lblen,
+		const wchar_t* cb,
+		const wchar_t* ce,
+		const wchar_t* lb,
 		bool q1, bool q2, bool esc,
 		bool casesensitive
 	)
-		: m_tag(cb, cblen, ce, celen, lb, lblen, q1, q2, esc)
+		: m_tag(cb, ce, lb, q1, q2, esc)
 		, m_kwd(casesensitive)
 	{
 	}
 
 	// 初期化２：キーワード追加
-	void AddKeyword( const WCHAR* str, ULONG len, ULONG keywordtype )
+	void AddKeyword( const WCHAR* str, ULONG keywordtype )
 	{
-		m_kwd.AddKeyword( str, len, keywordtype );
+		m_kwd.AddKeyword( str, keywordtype );
 	}
 
 	// 全角タイプ判定
@@ -440,10 +424,10 @@ public:
 		line.TransitCmt( cmst );
 
 		// ASCII振り分けテーブル。
-		// シフト無しでTokenTypeに流用出来るようにするため、
-		// 値が４飛びになってます
+		// シフト無しでTokenTypeに流用出来るようにするため、値が４飛び
+    // T: タブ文字, W: 半角空白, A: アルファベット, S: 記号, O: その他
 		enum { T=0, W=4, A=8, S=12, O=0 };
-		static const BYTE letter_type[128] = {
+		static const std::array<BYTE, 128> letter_type {
 			O,O,O,O,O,O,O,O,O,T,O,O,O,O,O,O,
 			O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,O,
 			W,S,S,S,S,S,S,S,S,S,S,S,S,S,S,S,
@@ -459,9 +443,12 @@ public:
 		#define tkenc(_d) ( (_d)>7 ? 0xe0 : (_d)<<5 )
 
 		// コメント状態遷移追跡用オートマトン
-		CommentDFA dfa[2] = { CommentDFA(false), CommentDFA(true) };
+		std::array<CommentDFA, 2> dfa {
+			CommentDFA(false),
+			CommentDFA(true)
+		};
 		int& cmtState  = dfa[line.isLineHeadCmt()].state;
-		int commentbit = cmtState & 1;
+		BYTE commentbit = cmtState & 1;
 
 		// 作業領域
 		int sym;
@@ -469,7 +456,7 @@ public:
 		BYTE t, f;
 
 		// ループ～
-		const WCHAR* str = line.str();
+		const wchar_t* str = line.str();
 		BYTE* flg_ptr = line.flg();
 		BYTE* ktp_ptr = line.ktp();
 		ULONG end = line.size();
@@ -511,11 +498,8 @@ public:
 					f |= (kwd_index > 0) ? 2 : 0;
 					// fall...
 
-				// タブ・制御文字
+				// タブ・制御文字 + 半角空白
 				case T:
-					// fall...
-
-				// 半角空白
 				case W:
 					for (k = i + 1; k < j; k++) {
 						flg_ptr[k] = f;
@@ -575,12 +559,10 @@ public:
 	void SetCommentBit( CTextLine& line )
 	{
 		CommentDFA dfa( line.isLineHeadCmt()==1 );
-		ULONG commentbit = dfa.state & 1;
+		BYTE commentbit = dfa.state & 1;
 
 		// ループ～
-		const WCHAR* str = line.str();
 		BYTE* flg_ptr = line.flg();
-		BYTE* ktp_ptr = line.ktp();
 		ULONG j, k, end = line.size();
 		for (ULONG i = 0; i < end; i = j) {
 			// Tokenの終端を得る
@@ -624,64 +606,47 @@ CPadDocument::CPadDocument()
 	, m_busy(false)
 {
 	m_text.Add(new CTextLine(L"", 0));		// 最初は一行だけ
-	SetKeyword(NULL, 0);					// キーワード無し
+	KEYWORD_DICT dummy{ L"",{L"",L"",L""},{L""} };
+	SetKeyword(dummy);										// キーワード無し
 }
 
 CPadDocument::~CPadDocument()
 {
 }
 
-void CPadDocument::SetKeyword(const WCHAR* textptr, ULONG siz)
+void CPadDocument::SetKeyword(const KEYWORD_DICT& keywords)
 {
-	// BOMがあったらスキップ
-	if (siz != 0 && *textptr == 0xfeff) {
-		textptr++;
-		siz--;
+	// フラグ case q1 q2 esc
+	//
+
+	std::array<bool, 4> flags = { 0,0,0,0 };
+	int i = 0;
+	for (const auto& ch : keywords.flags) {
+		flags[i++] = (ch == L'1');
 	}
 
-	// 読み込み準備
-	CUnicodeReader r(textptr, siz);
-	bool flags[4] = { false,false,false,false };
-	const WCHAR* tags[3] = { nullptr, nullptr, nullptr };
-	ULONG taglen[3] = { 0, 0, 0 };
-
-	const WCHAR* str;
-	int len;
-	if (siz != 0) {
-		// １行目:フラグ
-		//   case? q1? q2? esc?
-		len = r.GetLine(&str);
-		len = Min<int>(len, 4);
-		for (int i = 0; i < len; i++)
-			flags[i] = (str[i] == L'1');
-
-		// ２～４行目
-		//   ブロコメ開始記号、ブロコメ終了記号、行コメ記号
-		for (int j = 0; j < 3; j++) {
-			len = r.GetLine(&str);
-			if (len > 0) {
-				tags[j] = str;
-				taglen[j] = len;
-			}
-		}
+	// ブロコメ開始記号、ブロコメ終了記号、行コメ記号
+	std::array<const wchar_t*, 4> tags;
+	i = 0;
+	for (const auto& str : keywords.comments) {
+    tags[i++] = (str.size() > 0) ? str.c_str() : nullptr;
 	}
 
 	// パーサー作成
 	m_parser = std::make_unique<CParser>(
-						tags[0], taglen[0], tags[1], taglen[1], tags[2], taglen[2],
+						tags[0], tags[1], tags[2],
 						flags[1], flags[2], flags[3], flags[0] );
 
 	// ５行目以降：キーワードリスト
-	while (!r.Eof()) {
-		len = r.GetLine(&str);
-		if (len != 0) {
+	for (const auto& word : keywords.keywords) {
+		if (word.size() > 0) {
+      const wchar_t* s = word.c_str();
 			ULONG type = 0;
-			if ('1' <= *str && *str <= '9' && *(str + 1) == ',') {
-				type = *str - '1';
-				len -= 2;
-				str += 2;
+			if ('1' <= *s && *s <= '9' && *(s + 1) == ',') {
+				type = *s - '1';
+				s += 2;
 			}
-			m_parser->AddKeyword(str, len, type + CLR_KWD1);
+			m_parser->AddKeyword(s, type + CLR_KWD1);
 		}
 	}
 

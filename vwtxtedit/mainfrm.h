@@ -37,30 +37,31 @@ typedef struct tagFINDREPLACEINFO {
 class CEnterFolder
 {
 public:
-	CEnterFolder(LPCTSTR lpNewPath)
+	explicit CEnterFolder(LPCTSTR lpNewPath)
 	{
-		m_szOldPath[0] = '\0';
 		m_dwLastError = 0;
-
-		GetCurrentDirectory(MAX_PATH * 2, m_szOldPath);
-		if (!SetCurrentDirectory(lpNewPath)) m_dwLastError = GetLastError();
+		int len = MAX_PATH * 2;
+		GetCurrentDirectory(len, m_oldPath.GetBuffer(len));
+		if (!SetCurrentDirectory(lpNewPath))
+			m_dwLastError = GetLastError();
 	}
 	~CEnterFolder()
 	{
 		Exit();
 	}
 
-	BOOL IsFolderChanged()
+	BOOL IsFolderChanged() const
 	{
 		return (m_dwLastError == 0) ? TRUE : FALSE;
 	}
 
-	void Exit()
+	void Exit() const
 	{
-		if (!m_dwLastError) SetCurrentDirectory(m_szOldPath);
+		if (!m_dwLastError)
+			SetCurrentDirectory(m_oldPath);
 	}
 
-	TCHAR m_szOldPath[MAX_PATH * 2];
+	CString m_oldPath;
 	DWORD m_dwLastError;
 };
 
@@ -120,9 +121,9 @@ public:
 	void InitialUpdate();
 	bool StartEdit(LPCTSTR pszFile, int cs = CS_AUTODETECT, int line_number = -1, bool rom = false);
 
-	virtual BOOL PreTranslateMessage(MSG* pMsg);
-	virtual BOOL OnIdle();
-	virtual void TaskbarButtonCreated(ITaskbarList3* pTaskbarList);
+	BOOL PreTranslateMessage(MSG* pMsg) override;
+	BOOL OnIdle() override;
+	void TaskbarButtonCreated(ITaskbarList3* pTaskbarList) override;
 
 	void UpdateUIAll();
 
@@ -283,9 +284,9 @@ private:
 	HWND CreateToolbar();
 
 	// 継承イベントハンドラ
-	void OnDocumentEventDirtyFlagChanged(bool dirty);
-	void OnCursorEventMove( const DPos& c, const DPos& s );
-	void OnCursorEventMode( int modeType, bool mode);
+	void OnDocumentEventDirtyFlagChanged(bool dirty) override;
+	void OnCursorEventMove( const DPos& c, const DPos& s ) override;
+	void OnCursorEventMode( int modeType, bool mode) override;
 
 	void JumpToLine(ULONG line_number);		// 指定行へ移動
 

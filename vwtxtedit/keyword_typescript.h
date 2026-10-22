@@ -3,120 +3,118 @@
 
 #pragma once
 
-static const WCHAR kwd_TypeScript[] = 
-	L"1111\n"			\
-	L"/*\n"				\
-	L"*/\n"				\
-	L"//\n"				\
-	L"abstract\n"		\
-	L"2,any\n"		\
-	L"Array\n"		\
-	L"array\n"		\
-	L"Awaited\n"		\
-	L"2,await\n"		\
-	L"as\n"		\
-	L"2,async\n"		\
-	L"2,boolean\n"		\
-	L"break\n"		\
-	L"byte\n"		\
-	L"case\n"		\
-	L"3,catch\n"		\
-	L"char\n"		\
-	L"class\n"		\
-	L"const\n"		\
-    L"3,constructor\n"		\
-    L"ConstructorParameters\n"		\
-	L"continue\n"		\
-	L"debugger\n"		\
-	L"3,declare\n"		\
-	L"default\n"		\
-	L"2,defer\n"		\
-	L"delete\n"		\
-	L"do\n"		\
-	L"double\n"		\
-	L"else\n"		\
-	L"enum\n"		\
-	L"Exclude\n"		\
-	L"export\n"		\
-	L"extends\n"		\
-	L"Extract\n"		\
-	L"false\n"		\
-	L"final\n"		\
-	L"3,finally\n"		\
-	L"float\n"		\
-	L"for\n"		\
-	L"from\n"		\
-	L"2,function\n"		\
-	L"2,get\n"		\
-	L"global\n"		\
-	L"goto\n"		\
-	L"if\n"		\
-	L"interface\n"		\
-	L"implements\n"		\
-	L"import\n"		\
-	L"in\n"		\
-	L"instanceof\n"		\
-	L"InstanceType\n"		\
-	L"int\n"		\
-	L"interface\n"		\
-	L"long\n"		\
-	L"Map\n"		\
-	L"module\n"		\
-	L"namespace\n"		\
-	L"native\n"		\
-	L"new\n"		\
-	L"2,never\n"		\
-	L"NonNullable\n"		\
-	L"NoInfer\n"		\
-	L"Number\n"		\
-	L"2,number\n"		\
-	L"2,null\n"		\
-	L"Object\n"		\
-	L"Omit\n"		\
-	L"OmitThisParameter\n"		\
-	L"package\n"		\
-	L"Partial\n"		\
-	L"Pick\n"		\
-	L"2,private\n"		\
-	L"Parameters\n"		\
-	L"Promise\n"		\
-	L"protected\n"		\
-	L"2,public\n"		\
-	L"Readonly\n"		\
-	L"2,readonly\n"		\
-	L"Record\n"		\
-	L"ReturnType\n"		\
-	L"require\n"		\
-	L"Required\n"		\
-	L"return\n"		\
-	L"Set\n"		\
-	L"2,set\n"		\
-	L"short\n"		\
-	L"static\n"		\
-	L"String\n"		\
-	L"2,string\n"		\
-	L"super\n"		\
-	L"switch\n"		\
-	L"synchronized\n"		\
-	L"2,symbol\n"		\
-	L"3,then\n"		\
-	L"2,this\n"		\
-	L"ThisParameterType\n"		\
-	L"ThisType\n"		\
-	L"throw\n"		\
-	L"throws\n"		\
-	L"transient\n"		\
-	L"true\n"		\
-	L"3,try\n"		\
-	L"typeof\n"		\
-	L"type\n"		\
-	L"2,undefined\n"		\
-	L"2,unknown\n"		\
-	L"2,var\n"		\
-	L"2,void\n"		\
-	L"void\n"		\
-	L"volatile\n"		\
-	L"while\n"		\
-	L"with\n";
-
-
+const KEYWORD_DICT kwd_TypeScript {
+	L"1111", { L"/*", L"*/", L"//" },
+	{
+		L"abstract",
+		L"2,any",
+		L"Array",
+		L"array",
+		L"Awaited",
+		L"2,await",
+		L"as",
+		L"2,async",
+		L"2,boolean",
+		L"break",
+		L"byte",
+		L"case",
+		L"3,catch",
+		L"char",
+		L"class",
+		L"const",
+		L"3,constructor",
+		L"ConstructorParameters",
+		L"continue",
+		L"debugger",
+		L"3,declare",
+		L"default",
+		L"2,defer",
+		L"delete",
+		L"do",
+		L"double",
+		L"else",
+		L"enum",
+		L"Exclude",
+		L"export",
+		L"extends",
+		L"Extract",
+		L"false",
+		L"final",
+		L"3,finally",
+		L"float",
+		L"for",
+		L"from",
+		L"2,function",
+		L"2,get",
+		L"global",
+		L"goto",
+		L"if",
+		L"interface",
+		L"implements",
+		L"import",
+		L"in",
+		L"instanceof",
+		L"InstanceType",
+		L"int",
+		L"interface",
+		L"long",
+		L"Map",
+		L"module",
+		L"namespace",
+		L"native",
+		L"new",
+		L"2,never",
+		L"NonNullable",
+		L"NoInfer",
+		L"Number",
+		L"2,number",
+		L"2,null",
+		L"Object",
+		L"Omit",
+		L"OmitThisParameter",
+		L"package",
+		L"Partial",
+		L"Pick",
+		L"2,private",
+		L"Parameters",
+		L"Promise",
+		L"protected",
+		L"2,public",
+		L"Readonly",
+		L"2,readonly",
+		L"Record",
+		L"ReturnType",
+		L"require",
+		L"Required",
+		L"return",
+		L"Set",
+		L"2,set",
+		L"short",
+		L"static",
+		L"String",
+		L"2,string",
+		L"super",
+		L"switch",
+		L"synchronized",
+		L"2,symbol",
+		L"3,then",
+		L"2,this",
+		L"ThisParameterType",
+		L"ThisType",
+		L"throw",
+		L"throws",
+		L"transient",
+		L"true",
+		L"3,try",
+		L"typeof",
+		L"type",
+		L"2,undefined",
+		L"2,unknown",
+		L"2,var",
+		L"2,void",
+		L"void",
+		L"volatile",
+		L"while",
+		L"with",
+	}
+};

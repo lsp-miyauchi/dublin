@@ -5,6 +5,7 @@
 
 #ifndef _IP_DOC_H_
 #define _IP_DOC_H_
+#include "common.h"
 #include "ip_common.h"
 
 class CParser;
@@ -341,7 +342,7 @@ public:
 	void Execute( const CPadCommand& cmd );
 
 	// キーワード定義切り替え
-	void SetKeyword( const WCHAR* defbuf, ULONG siz );
+	void SetKeyword( const KEYWORD_DICT& keywords );
 
 	// イベントハンドラ登録
 	void AddHandler( CDocumentEventHandler* eh );

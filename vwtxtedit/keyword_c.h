@@ -3,96 +3,113 @@
 
 #pragma once
 
-static const WCHAR kwd_C[] = 
-  L"1111\n"			\
-  L"/*\n"				\
-  L"*/\n"				\
-  L"//\n"				\
-  L"asm\n"			\
-  L"auto\n"			\
-  L"bool\n"			\
-  L"BOOL\n"			\
-  L"catch\n"			\
-  L"char\n"			\
-  L"class\n"			\
-  L"const\n"			\
-  L"const_cast\n"		\
-  L"continue\n"		\
-  L"default\n"		\
-  L"do\n"				\
-  L"double\n"			\
-  L"dynamic_cast\n"	\
-  L"else\n"			\
-  L"enum\n"			\
-  L"explicit\n"		\
-  L"export\n"			\
-  L"extern\n"			\
-  L"false\n"			\
-  L"fastcall\n"		\
-  L"float\n"			\
-  L"friend\n"			\
-  L"goto\n"			\
-  L"HANDLE\n"			\
-  L"2,if\n"				\
-  L"inline\n"			\
-  L"int\n"			\
-  L"long\n"			\
-  L"LONG\n"			\
-  L"LONG_PTR\n"		\
-  L"mutable\n"    \
-  L"namespace\n"  \
-  L"nullptr\n"  \
-  L"operator\n"   \
-  L"private\n"    \
-  L"protected\n"  \
-  L"public\n"     \
-  L"register\n"		\
-  L"reinterpret_cast\n"	\
-  L"restrict\n"   \
-  L"short\n"      \
-  L"signed\n"     \
-  L"sizeof\n"     \
-  L"static\n"			\
-  L"static_cast\n"	\
-  L"struct\n"     \
-  L"template\n"   \
-  L"this\n"       \
-  L"2,throw\n"      \
-  L"true\n"       \
-  L"try\n"			\
-  L"typedef\n"		\
-  L"typename\n"		\
-  L"ULONG\n"			\
-  L"ULONG_PTR\n"		\
-  L"union\n"			\
-  L"unsigned\n"		\
-  L"using\n"			\
-  L"virtual\n"    \
-  L"void\n"       \
-  L"VOIDF\n"      \
-  L"VOID_PTR\n"   \
-  L"volatile\n"   \
-  L"wchar_t\n"    \
-  L"2,case\n"     \
-  L"2,switch\n"   \
-  L"2,return\n"   \
-  L"2,break\n"    \
-  L"2,delete\n"   \
-  L"2,for\n"      \
-  L"2,new\n"			\
-  L"2,while\n"		\
-  L"2,until\n"		\
-  L"2,do\n"			\
-  L"2,include\n"		\
-  L"2,pragma\n"		\
-  L"2,define\n"		\
-  L"2,defined\n"		\
-  L"2,ifdef\n"		\
-  L"2,ifndef\n"		\
-  L"2,undef\n"		\
-  L"2,error\n"		\
-  L"2,elif\n"			\
-  L"2,endif\n"		\
-  L"3,BEGIN_MSG_MAP\n"\
-  L"3,END_MSG_MAP\n"\
-;
+ 
+const KEYWORD_DICT kwd_C {
+  L"1111", { L"/*", L"*/", L"//" },
+  {
+    L"4,::",
+    L"asm",
+    L"alignas",
+    L"alignof",
+    L"audit",
+    L"auto",
+    L"axiom",
+    L"bool",
+    L"3,BEGIN_MSG_MAP",
+    L"BOOL",
+    L"2,break",
+    L"2,case",
+    L"2,catch",
+    L"char",
+    L"char16_t",
+    L"char32_t",
+    L"class",
+    L"constexpr",
+    L"consteval",
+    L"const",
+    L"const_cast",
+    L"2,continue",
+    L"decltype",
+    L"2,default",
+    L"4,define",
+    L"4,defined",
+    L"2,delete",
+    L"2,do",
+    L"double",
+    L"3,dynamic_cast",
+    L"4,elif",
+    L"2,else",
+    L"3,END_MSG_MAP",
+    L"4,endif",
+    L"enum",
+    L"2,error",
+    L"explicit",
+    L"export",
+    L"extern",
+    L"false",
+    L"fastcall",
+    L"2,final",
+    L"float",
+    L"2,for",
+    L"friend",
+    L"goto",
+    L"HANDLE",
+    L"2,if",
+    L"2,ifdef",
+    L"4,ifndef",
+    L"2,include",
+    L"inline",
+    L"int",
+    L"long",
+    L"LONG",
+    L"LONG_PTR",
+    L"mutable",
+    L"namespace",
+    L"2,new",
+    L"2,noexcept",
+    L"nullptr",
+    L"operator",
+    L"2,override",
+    L"2,pragma",
+    L"private",
+    L"protected",
+    L"public",
+    L"register",
+    L"3,reinterpret_cast",
+    L"requires",
+    L"restrict",
+    L"2,return",
+    L"short",
+    L"signed",
+    L"sizeof",
+    L"static",
+    L"3,static_assert",
+    L"3,static_cast",
+    L"struct",
+    L"2,switch",
+    L"template",
+    L"this",
+    L"3,thread_local",
+    L"2,throw",
+    L"true",
+    L"2,try",
+    L"3,typedef",
+    L"typeid",
+    L"typename",
+    L"ULONG",
+    L"ULONG_PTR",
+    L"2,undef",
+    L"union",
+    L"unsigned",
+    L"2,until",
+    L"2,using",
+    L"3,virtual",
+    L"void",
+    L"VOIDF",
+    L"VOID_PTR",
+    L"volatile",
+    L"wchar_t",
+    L"2,while",
+  }
+};
+

@@ -44,7 +44,7 @@ void CConsole::putstr(LPCTSTR pszOutput, int cch)
 	if (!m_bInit) Init();
 
 	if (cch < 0)
-		cch = lstrlen(pszOutput);
+		cch = static_cast<int>(_tcslen(pszOutput));
 	DWORD dw;
 	WriteConsole(m_stdout, pszOutput, cch, &dw, NULL);
 }
@@ -54,7 +54,7 @@ void CConsole::putstrA(LPCSTR pszOutput, int cch)
 	if (!m_bInit) Init();
 
 	if (cch < 0)
-		cch = lstrlenA(pszOutput);
+		cch = static_cast<int>(_mbstrlen(pszOutput));
 	DWORD dw;
 	WriteConsoleA(m_stdout, pszOutput, cch, &dw, NULL);
 }
@@ -73,33 +73,33 @@ void CConsole::putsA(LPCSTR pszOutput)
 
 void __cdecl CConsole::printf(LPCTSTR lpszFormat, ...)
 {
-	std::vector<TCHAR> pOutput(1024);
+	std::array<TCHAR, 1024> buf;
 	va_list argList;
 	va_start(argList, lpszFormat);
-	int len = wvsprintf(pOutput.data(), lpszFormat, argList);
+	int len = std::vswprintf(buf.data(), buf.size(), lpszFormat, argList);
 	va_end(argList);
-	putstr(pOutput.data(), len);
+	putstr(buf.data(), len);
 }
 
 void __cdecl CConsole::msgboxf(HWND hwnd, LPCTSTR lpszFormat, ...)
 {
-	std::vector<TCHAR> pOutput(1024);
+	std::array<TCHAR, 1024> buf;
 	va_list argList;
 	va_start(argList, lpszFormat);
-	wvsprintf(pOutput.data(), lpszFormat, argList);
+	std::vswprintf(buf.data(), buf.size(), lpszFormat, argList);
 	va_end(argList);
-	::MessageBox(hwnd, pOutput.data(), _T("debug"), MB_OK);
+	::MessageBox(hwnd, buf.data(), _T("debug"), MB_OK);
 }
 
 void __cdecl CConsole::printfA(LPCSTR lpszFormat, ...)
 {
-	std::vector<char> pOutput(1024);
+	std::array<char, 1024> buf;
 	va_list argList;
 	va_start(argList, lpszFormat);
-	int len = wvsprintfA(pOutput.data(), lpszFormat, argList);
+	int len = std::vsnprintf(buf.data(), buf.size(), lpszFormat, argList);
 	va_end(argList);
 
-	putstrA(pOutput.data(), len);
+	putstrA(buf.data(), len);
 }
 
 void CConsole::dump(BYTE* data, int len)
