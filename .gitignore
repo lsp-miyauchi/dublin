@@ -10,6 +10,5 @@
 lspexif/ExifTool
 
 *.bak
-*.exe
 *.mp4
 *.cmake
