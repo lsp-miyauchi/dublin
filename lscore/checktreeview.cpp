@@ -9,14 +9,14 @@
 #include "resource.h"
 #include "checktreeview.h"
 
-#define XIC				16
-#define YIC				16
+constexpr int XIC = 16;
+constexpr int YIC = 16;
 
 CCheckTreeViewCtrl::CCheckTreeViewCtrl()
-	: m_hCurrentRootItem(NULL)
+	: m_hCurrentRootItem(nullptr)
 	, m_iSpacing(4)
 {
-	m_image = lccLoadImageList(RESINST, RT_RCDATA, MAKEINTRESOURCE(IDB_TREECHECK), XIC, CLR_NONE);
+	m_image = lccLoadImageList(RESINST, RT_RCDATA, MAKEINTRESOURCE(IDB_TREECHECK), XIC, CLR_DEFAULT);
 	// Theme
 	SetThemeClassList(L"Button");
 }
@@ -28,23 +28,23 @@ CCheckTreeViewCtrl::~CCheckTreeViewCtrl()
 
 int CCheckTreeViewCtrl::OnCreate(CREATESTRUCT* pcs)
 {
-	m_tree.Create(m_hWnd, NULL, NULL,
+	m_tree.Create(m_hWnd, nullptr, nullptr,
 				WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN |
 				TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS,
 				(pcs->style & CTS_NOCLIENTEDGE) ? 0 : WS_EX_CLIENTEDGE,
-				IDC_TREE, NULL);
+				IDC_TREE, nullptr);
 	if (OsVISTA()) {
 		DWORD exStyle = TVS_EX_DOUBLEBUFFER;
 		TreeView_SetExtendedStyle(m_tree, exStyle, exStyle);
 	}
 	m_tree.SetImageList(m_image, TVSIL_NORMAL);
 
-	ImmAssociateContext(m_hWnd, NULL);
-	ImmAssociateContext(m_tree, NULL);
+	ImmAssociateContext(m_hWnd, nullptr);
+	ImmAssociateContext(m_tree, nullptr);
 	return 0;
 }
 
-void CCheckTreeViewCtrl::OnDraw(HDC hdc)
+void CCheckTreeViewCtrl::OnDraw(HDC /*hdc*/)
 {
 	// 何もしない
 }
@@ -113,8 +113,8 @@ LRESULT CCheckTreeViewCtrl::OnPrePaint(LPNMTVCUSTOMDRAW ptvcd)
 
 LRESULT CCheckTreeViewCtrl::OnItemPrePaint(LPNMTVCUSTOMDRAW ptvcd)
 {
-	HTREEITEM hItem = (HTREEITEM)ptvcd->nmcd.dwItemSpec;
-	CCheckItem* pi = (CCheckItem*)m_tree.GetItemData(hItem);
+	auto hItem = (HTREEITEM)ptvcd->nmcd.dwItemSpec;
+	auto pi = (CCheckItem*)m_tree.GetItemData(hItem);
 	if (!pi) return CDRF_DODEFAULT;
 
 	if (pi->isDisabled()) {
@@ -133,8 +133,8 @@ LRESULT CCheckTreeViewCtrl::OnItemPrePaint(LPNMTVCUSTOMDRAW ptvcd)
 
 LRESULT CCheckTreeViewCtrl::OnItemPostPaint(LPNMTVCUSTOMDRAW ptvcd)
 {
-	HTREEITEM hItem = (HTREEITEM)ptvcd->nmcd.dwItemSpec;
-	CCheckItem* pi = (CCheckItem*)m_tree.GetItemData(hItem);
+	auto hItem = (HTREEITEM)ptvcd->nmcd.dwItemSpec;
+	auto pi = (CCheckItem*)m_tree.GetItemData(hItem);
 	if (!pi) return CDRF_DODEFAULT;
 
 //	bool bHot = (hItem == m_tree.GetHotItem());
@@ -146,6 +146,8 @@ LRESULT CCheckTreeViewCtrl::OnItemPostPaint(LPNMTVCUSTOMDRAW ptvcd)
 	rc.left -= (XIC + 3);
 	rc.right = rc.left + XIC;
 	CDCHandle dc = ptvcd->nmcd.hdc;
+
+  dc.FillRect(&rc, (HBRUSH)(COLOR_WINDOW + 1));
 
 	int iImage;
 	if (IsThemeNull()) {
@@ -167,7 +169,8 @@ LRESULT CCheckTreeViewCtrl::OnItemPostPaint(LPNMTVCUSTOMDRAW ptvcd)
 			m_image.Draw(dc, iImage, rc.left, (rc.top + rc.bottom - YIC) / 2, ILD_TRANSPARENT);
 		}
 		else {
-			int part, state;
+			int part;
+			int state;
 			if (pi->isRadio()) {
 				part = BP_RADIOBUTTON;
 				if (pi->isDisabled())
@@ -186,7 +189,7 @@ LRESULT CCheckTreeViewCtrl::OnItemPostPaint(LPNMTVCUSTOMDRAW ptvcd)
 				else
 					state = pi->isChecked() ? CBS_CHECKEDNORMAL : CBS_UNCHECKEDNORMAL;
 			}
-			DrawThemeBackground(dc, part, state, &rc, NULL);
+			DrawThemeBackground(dc, part, state, &rc, nullptr);
 		}
 	}
 
@@ -206,12 +209,11 @@ LRESULT CCheckTreeViewCtrl::OnItemPostPaint(LPNMTVCUSTOMDRAW ptvcd)
 		rc.top = rcItem.top;
 		rc.bottom = rcItem.bottom;
 
-		LOGBRUSH lb;
+		LOGBRUSH lb {};
 		lb.lbStyle = BS_SOLID;
 		lb.lbColor = GetSysColor(COLOR_GRAYTEXT);
-		lb.lbHatch = 0;
-		HPEN hpen = dc.SelectPen(ExtCreatePen(PS_GEOMETRIC | PS_DASH, 1, &lb, 0, NULL));
-		dc.MoveTo(rc.left, rc.top + rc.Height() / 2);
+		HPEN hpen = dc.SelectPen(ExtCreatePen(PS_GEOMETRIC | PS_DASH, 1, &lb, 0, nullptr));
+		dc.MoveTo(rc.left + 4, rc.top + rc.Height() / 2);
 		dc.LineTo(rc.right, rc.top + rc.Height() / 2);
 		DeleteObject(dc.SelectPen(hpen));
 	}
@@ -221,7 +223,7 @@ LRESULT CCheckTreeViewCtrl::OnItemPostPaint(LPNMTVCUSTOMDRAW ptvcd)
 
 void CCheckTreeViewCtrl::OnNotifyCustomDraw(NMHDR* pNMHDR, LRESULT* pResult) 
 {
-	LPNMTVCUSTOMDRAW ptvcd = (LPNMTVCUSTOMDRAW)pNMHDR;
+	auto ptvcd = (LPNMTVCUSTOMDRAW)pNMHDR;
 	switch (ptvcd->nmcd.dwDrawStage) {
 	case CDDS_PREPAINT:
 		*pResult = OnPrePaint(ptvcd);
@@ -244,8 +246,7 @@ int CCheckTreeViewCtrl::GetEditItemTitle(CCheckItem* pi, CString& str)
 	if (!pi->isEdit()) return 0;
 
 	if (pi->m_tsTitle.istextcallback()) {
-		NMCTITEM nc;
-		memset(&nc, 0, sizeof(nc));
+		NMCTITEM nc{};
 		nc.hdr.hwndFrom = m_hWnd;
 		nc.hdr.idFrom = GetDlgCtrlID();
 		nc.hdr.code = CTN_GETDISPINFO;
@@ -280,17 +281,16 @@ void CCheckTreeViewCtrl::EditItemText(CCheckItem* pi)
 	}
 
 	m_tree.ClientToScreen(&rc);
-	TCHAR buf[MAX_PATH * 2];
+	std::array<TCHAR, MAX_PATH * 2> buf;
 	if (!pi->m_tsEdit.isempty())
-		lstrcpy(buf, pi->m_tsEdit);
+		lstrcpy(buf.data(), pi->m_tsEdit);
 	else
-		buf[0] = '\0';
-	if (lccTipEdit(m_tree, &rc, buf)) {
-		pi->SetText(buf);
+		buf[0] = 0;
+	if (lccTipEdit(m_tree, &rc, buf.data())) {
+		pi->SetText(buf.data());
 		RedrawItem(pi->m_hItem);
 
-		NMCTITEM nc;
-		memset(&nc, 0, sizeof(nc));
+		NMCTITEM nc{};
 		nc.hdr.hwndFrom = m_hWnd;
 		nc.hdr.idFrom = GetDlgCtrlID();
 		nc.hdr.code = CTN_EDITCHANGED;
@@ -338,8 +338,7 @@ bool CCheckTreeViewCtrl::RadioCheck(CCheckItem* pi)
 		piw = m_array.GetRadioGroupNextItem(piw->m_id);
 	}
 
-	NMCTITEM nc;
-	memset(&nc, 0, sizeof(nc));
+	NMCTITEM nc{};
 	nc.hdr.hwndFrom = m_hWnd;
 	nc.hdr.idFrom = GetDlgCtrlID();
 	nc.hdr.code = CTN_CHECKCHANGED;
@@ -364,7 +363,7 @@ void CCheckTreeViewCtrl::OnNotifyClick(NMHDR* pNMHDR, LRESULT* pResult)
 	ScreenToClient(&ht.pt);
 	HTREEITEM hItem = m_tree.HitTest(&ht);
 	if (hItem) {
-		CCheckItem* pi = (CCheckItem*)m_tree.GetItemData(hItem);
+		auto pi = (CCheckItem*)m_tree.GetItemData(hItem);
 		if (!pi) return;
 
 		if (pi->isButton() && (TVHT_ONITEM & ht.flags)) {
@@ -380,12 +379,12 @@ void CCheckTreeViewCtrl::OnNotifyClick(NMHDR* pNMHDR, LRESULT* pResult)
 
 void CCheckTreeViewCtrl::OnNotifyKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 {
-	TV_KEYDOWN* ptvkd = (TV_KEYDOWN*)pNMHDR;
+	auto ptvkd = (TV_KEYDOWN*)pNMHDR;
 	*pResult = FALSE;
 
 	HTREEITEM hItem = m_tree.GetSelectedItem();
 	if (hItem) {
-		CCheckItem* pi = (CCheckItem*)m_tree.GetItemData(hItem);
+		auto pi = (CCheckItem*)m_tree.GetItemData(hItem);
 		if (!pi || pi->isGroup()) return;
 
 		if (pi->isEdit()) {
@@ -406,8 +405,8 @@ void CCheckTreeViewCtrl::OnNotifyKeyDown(NMHDR* pNMHDR, LRESULT* pResult)
 
 void CCheckTreeViewCtrl::OnNotifyItemExpanded(NMHDR* pNMHDR, LRESULT* pResult)
 {
-	NM_TREEVIEW* pnmtv = (NM_TREEVIEW*)pNMHDR;
-	CCheckItem* pi = (CCheckItem*)m_tree.GetItemData(pnmtv->itemNew.hItem);
+	auto pnmtv = (NM_TREEVIEW*)pNMHDR;
+	auto pi = (CCheckItem*)m_tree.GetItemData(pnmtv->itemNew.hItem);
 	if (pi) {
 		pi->m_state = (pi->m_state & ~CTIS_EXPANDED) | ((pnmtv->action == TVE_COLLAPSE) ? CTIS_EXPANDED : 0);
 		RedrawItem(pnmtv->itemNew.hItem);
@@ -417,9 +416,9 @@ void CCheckTreeViewCtrl::OnNotifyItemExpanded(NMHDR* pNMHDR, LRESULT* pResult)
 
 void CCheckTreeViewCtrl::OnNotifyGetDispInfo(NMHDR* pNMHDR, LRESULT* pResult)
 {
-	NMTVDISPINFO* pd = (NMTVDISPINFO*)pNMHDR;
+	auto pd = (NMTVDISPINFO*)pNMHDR;
 	if (pd->item.mask & TVIF_TEXT) {
-		CCheckItem* pi = (CCheckItem*)m_tree.GetItemData(pd->item.hItem);
+		auto pi = (CCheckItem*)m_tree.GetItemData(pd->item.hItem);
 		if (pi) {
 			if (pi->isEdit()) {
 				CString str;
@@ -429,8 +428,7 @@ void CCheckTreeViewCtrl::OnNotifyGetDispInfo(NMHDR* pNMHDR, LRESULT* pResult)
 				lstrcpyn(pd->item.pszText, str, pd->item.cchTextMax);
 			}
 			else {
-				NMCTITEM nc;
-				memset(&nc, 0, sizeof(nc));
+				NMCTITEM nc{};
 				nc.hdr.hwndFrom = m_hWnd;
 				nc.hdr.idFrom = GetDlgCtrlID();
 				nc.hdr.code = CTN_GETDISPINFO;
@@ -449,14 +447,13 @@ void CCheckTreeViewCtrl::OnNotifyGetDispInfo(NMHDR* pNMHDR, LRESULT* pResult)
 
 LRESULT CCheckTreeViewCtrl::OnAddItem(WPARAM wParam, LPARAM lParam)
 {
-	CTITEM* pc = (CTITEM*)lParam;
+	auto pc = (CTITEM*)lParam;
 	if (!pc) return (LRESULT)-1;
 
 	if (!m_hCurrentRootItem)
 		m_hCurrentRootItem = TVI_ROOT;
 
-	TVINSERTSTRUCT is;
-	memset(&is, 0, sizeof(is));
+	TVINSERTSTRUCT is{};
 	is.item.mask = TVIF_TEXT | TVIF_IMAGE | TVIF_SELECTEDIMAGE;
 	is.item.iImage = is.item.iSelectedImage = 0;
 	is.item.pszText = pc->pszText;
@@ -476,7 +473,7 @@ LRESULT CCheckTreeViewCtrl::OnAddItem(WPARAM wParam, LPARAM lParam)
 		is.hParent = piParent ? piParent->m_hItem : m_tree.GetRootItem();
 	}
 
-	HTREEITEM hItem = NULL;
+	HTREEITEM hItem = nullptr;
 	if (pc->state & CTIS_GROUP) {
 		is.item.mask |= TVIF_STATE;
 		is.item.state = TVIS_BOLD;
@@ -491,7 +488,7 @@ LRESULT CCheckTreeViewCtrl::OnAddItem(WPARAM wParam, LPARAM lParam)
 		m_hCurrentRootItem = is.hParent;
 	}
 
-	CCheckItem* pi = new CCheckItem(hItem, pc->id, pc->state, pc->pszText);
+	auto pi = new CCheckItem(hItem, pc->id, pc->state, pc->pszText);
 	if (pi->m_tsFollow)
 		m_tree.SetItemText(hItem, pi->m_tsTitle);
 	m_array.Add(pi);
@@ -504,16 +501,16 @@ LRESULT CCheckTreeViewCtrl::OnGetItemState(WPARAM wParam, LPARAM lParam)
 {
 	UINT id = (UINT)wParam;
 	UINT mask = (UINT)lParam;
-	CCheckItem* pi = m_array.Lookup(id);
-	return ((pi != NULL) ? (LRESULT)(mask & pi->m_state) : 0);
+	auto pi = m_array.Lookup(id);
+	return ((pi != nullptr) ? (LRESULT)(mask & pi->m_state) : 0);
 }
 
 LRESULT CCheckTreeViewCtrl::OnSetItemState(WPARAM wParam, LPARAM lParam)
 {
-	CTITEM* pc = (CTITEM*)lParam;
+	auto pc = (CTITEM*)lParam;
 	if (!pc) return FALSE;
 
-	CCheckItem* pi = m_array.Lookup(pc->id);
+	auto pi = m_array.Lookup(pc->id);
 	if (pi) {
 		UINT newState = (pi->m_state & ~pc->stateMask) | pc->state;
 		UINT chgState = newState ^ pi->m_state;
@@ -531,9 +528,9 @@ LRESULT CCheckTreeViewCtrl::OnSetItemState(WPARAM wParam, LPARAM lParam)
 LRESULT CCheckTreeViewCtrl::OnGetItemText(WPARAM wParam, LPARAM lParam)
 {
 	int len = -1;
-	UINT id = (UINT)wParam;
-	LPTSTR psz = (LPTSTR)lParam;
-	CCheckItem* pi = m_array.Lookup(id);
+	auto id = (UINT)wParam;
+	auto psz = (LPTSTR)lParam;
+	auto pi = m_array.Lookup(id);
 	if (pi && pi->isEdit()) {
 		len = (!pi->m_tsEdit.isempty()) ? lstrlen(pi->m_tsEdit) : 0;
 		if (len && psz)
@@ -544,9 +541,9 @@ LRESULT CCheckTreeViewCtrl::OnGetItemText(WPARAM wParam, LPARAM lParam)
 
 LRESULT CCheckTreeViewCtrl::OnSetItemText(WPARAM wParam, LPARAM lParam)
 {
-	UINT id = (UINT)wParam;
-	LPTSTR psz = (LPTSTR)lParam;
-	CCheckItem* pi = m_array.Lookup(id);
+	auto id = (UINT)wParam;
+	auto psz = (LPTSTR)lParam;
+	auto pi = m_array.Lookup(id);
 	if (pi && pi->isEdit()) {
 		pi->SetText(psz);
 		RedrawItem(pi->m_hItem);
@@ -557,8 +554,8 @@ LRESULT CCheckTreeViewCtrl::OnSetItemText(WPARAM wParam, LPARAM lParam)
 
 LRESULT CCheckTreeViewCtrl::OnSelectItem(WPARAM wParam, LPARAM lParam)
 {
-	UINT id = (UINT)wParam;
-	CCheckItem* pi = m_array.Lookup(id);
+	auto id = (UINT)wParam;
+	auto pi = m_array.Lookup(id);
 	return (pi ? m_tree.SelectItem(pi->m_hItem) : FALSE);
 }
 
@@ -586,7 +583,7 @@ LRESULT CALLBACK CheckTreeViewWndFn(HWND hwnd, UINT msg, WPARAM wParam, LPARAM l
 {
 	LRESULT lr = DefWindowProc(hwnd, msg, wParam, lParam);
 	if (msg == WM_NCCREATE) {
-		CCheckTreeViewCtrl* pWnd = new CCheckTreeViewCtrl();
+		auto pWnd = new CCheckTreeViewCtrl();
 		pWnd->SubclassWindow(hwnd);
 	}
 	return lr;
