@@ -10,13 +10,6 @@
 lspexif/ExifTool
 
 *.bak
-*.zip
-*.lzh
-*.gz
-*.tgz
-*.cab
-*.rar
-*.7z
 *.exe
 *.mp4
 *.cmake
