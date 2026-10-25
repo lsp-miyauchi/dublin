@@ -61,8 +61,8 @@ IDI_DUMMY               ICON                    "res\\dummy.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,1,51
- PRODUCTVERSION 7,4,1,51
+ FILEVERSION 7,4,1,53
+ PRODUCTVERSION 7,4,1,53
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -79,12 +79,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "LightShip Shell Extension"
-            VALUE "FileVersion", "7.4.1.51"
+            VALUE "FileVersion", "7.4.1.53"
             VALUE "InternalName", "lsshell"
             VALUE "LegalCopyright", "(C)LightShip Software Inc. 1994-2024 All rights reserved."
             VALUE "OriginalFilename", "lsshell.dll"
             VALUE "ProductName", "FileVisor"
-            VALUE "ProductVersion", "7.4.1.51"
+            VALUE "ProductVersion", "7.4.1.53"
         END
     END
     BLOCK "VarFileInfo"
@@ -456,9 +456,9 @@ BEGIN
     IDM_CTX_DRIVEINFO       "ドライブ情報(&I)"
     IDM_CTX_FILTERDEL       "一括削除(&G)"
     IDM_CTX_FILESIZEINFO    "ファイル容量の詳細(&Z)"
-    IDM_CTX_PACK            "書庫の作成(&F)"
-    IDM_CTX_UNPACK          "書庫の解凍(&U)"
-    IDM_CTX_CHECKARC        "書庫の検査(&K)"
+    IDM_CTX_PACK            "圧縮して書庫の作成(&F)..."
+    IDM_CTX_UNPACK          "書庫を解凍して展開(&U)..."
+    IDM_CTX_CHECKARC        "書庫の内容を検査(&K)..."
     IDM_CTX_BINDUMP         "バイナリ ダンプ(&B)"
     IDM_CTX_MERGEFILE       "連結(&M)"
     IDM_CTX_DIVIDEFILE      "分割(&V)"
@@ -487,8 +487,8 @@ STRINGTABLE
 BEGIN
     IDM_CTX_COPYTO          "ここにFileVisorでコピー(&F)"
     IDM_CTX_MOVETO          "ここにFileVisorで移動(&M)"
-    IDM_CTX_PACKTO          "ここに書庫を作成(&P)"
-    IDM_CTX_UNPACKTO        "ここに解凍(&E)"
+    IDM_CTX_PACKTO          "ここに書庫を作成して格納(&P)"
+    IDM_CTX_UNPACKTO        "ここに解凍して展開(&E)"
     IDM_CTX_MAKESFXTO       "ここに自己解凍形式書庫を作成(&X)"
     IDM_CTX_UNPACKTOFOLDER  "ここにフォルダ '%s' を作成して解凍(&F)"
     IDM_CTX_REPARSEPOINT    "ここにリパース ポイントを作成(&J)"

@@ -135,16 +135,16 @@ void CMainFrame::Construct()
 	DWORD def = BST_AUTOSCALE | BST_NAVIGATOR;
 	if (GetSystemMetrics(SM_CYFULLSCREEN) < 800) def |= BST_TBSMALL;
 	m_dwStat = reg.GetValue(IDS_SEC_MAIN_EDITOR, IDS_KEY_DISPSTAT, def);
-	m_hicScale = NULL;
-	m_hicSizeGrip = NULL;
-	m_hicRgbGrip = NULL;
+	m_hicScale = nullptr;
+	m_hicSizeGrip = nullptr;
+	m_hicRgbGrip = nullptr;
 
-	m_hdlgPrintReady = NULL;
+	m_hdlgPrintReady = nullptr;
 }
 
 void CMainFrame::SetDIBInformation(HDIB hdib)
 {
-	LPBITMAPINFOHEADER pbh = (LPBITMAPINFOHEADER)GlobalLock(hdib);
+	auto pbh = (LPBITMAPINFOHEADER)GlobalLock(hdib);
 	m_sizeDib = CSize(pbh->biWidth, pbh->biHeight);
 	m_nBitCount = pbh->biBitCount;
 	GlobalUnlock(hdib);
@@ -211,7 +211,7 @@ HDIB CMainFrame::PopUndo(CRect& rrc)
 void CMainFrame::PushUndo(UINT idCommand, HDIB hdib)
 {
 	if (hdib) {
-		CUndo* pUndo = new CUndo(idCommand, hdib);
+		auto pUndo = new CUndo(idCommand, hdib);
 		m_pane.GetClipRect(&pUndo->m_rc);
 		m_Undo.AddHead(pUndo);
 		while (m_Undo.GetCount() > MAXUNDO) {
@@ -249,7 +249,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT /*pcs*/)
 	m_menubar.SetImageMaskColor(RGB(255, 0, 255));
 	m_menubar.LoadMultipleImages(IDB_S_TOOLBAR);
 	m_menubar.LoadMultipleImages(IDB_S_EDIT_APPICON);
-	SetMenu(NULL);
+	SetMenu(nullptr);
 #ifdef CUSTOM_REBER_USING
 	m_rebar.SetMenuBar(m_menubar);						// メニューバーを明示的に登録
 #endif
@@ -263,7 +263,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT /*pcs*/)
 
 	CreateSimpleStatusBar();
 	m_statusbar.SubclassWindow(m_hWndStatusBar);
-	m_statusbar.SetPanes(indicators, sizeof(indicators) / sizeof(int), false);
+	m_statusbar.SetPanes(indicators, ARRAYSIZE(indicators), false);
 
 	m_hicScale = (HICON)LoadImage(RESINST, _MKIR(IDI_SCALE), IMAGE_ICON, 16, 16, LR_DEFAULTCOLOR);
 	m_statusbar.SetPaneIcon(ID_INDICATOR_SCALE, m_hicScale);
@@ -354,14 +354,14 @@ HWND CMainFrame::CreateToolbar()
 	return hWndToolBar;
 }
 
-typedef struct _meueItemImage {
+struct meueItemImage {
 	UINT id;
 	int type;
 	union {
 		HBITMAP hbm;
 		HICON hic;
 	} image;
-} menuItemImage;
+};
 
 void CMainFrame::InitializePluginFilters()
 {
@@ -377,7 +377,8 @@ void CMainFrame::InitializePluginFilters()
 	// 新規メニュー追加用マップ
 	CSimpleMap<UINT, CFilterGroupMenu*> arrNewMenu;
 
-	TCHAR buf[MAX_PATH], path[MAX_PATH];
+	TCHAR buf[MAX_PATH];
+	TCHAR path[MAX_PATH];
 	GetModuleFileName(MODINST, path, ARRAYSIZE(path));
 	PathRemoveFileSpec(path);
 	PathAppend(path, PLUGIN_SECTION);
@@ -433,15 +434,13 @@ void CMainFrame::EnumPluginFilters(LPCTSTR pszDll, UINT& idStart, CSimpleMap<UIN
 	(FARPROC&)pfnInfo = GetProcAddress(hdll, PLUGIN_FILTER_INFO);
 	(FARPROC&)pfnFilter = GetProcAddress(hdll, PLUGIN_FILTER_EXEC);
 	if (pfnInit && pfnInfo && pfnFilter) {
-		PLUGIN_INIT pi;
-		memset(&pi, 0, sizeof(pi));
+		PLUGIN_INIT pi{};
 		if (pfnInit(&pi)) {
 			for (int i = 0; i < pi.numFilters; i++) {
-				FILTER_INFO info;
-				memset(&info, 0, sizeof(info));
+				FILTER_INFO info{};
 				info.magic = sizeof(FILTER_INFO);
 				if (pfnInfo(i, &info)) {
-					CFilter* filter = new CFilter();
+					auto filter = new CFilter();
 					filter->m_strDllName = pszDll;
 					filter->m_iFilterNumber = i;
 					filter->m_nFlags = info.flags;
@@ -486,7 +485,7 @@ void CMainFrame::EnumPluginFilters(LPCTSTR pszDll, UINT& idStart, CSimpleMap<UIN
 						hpop = ::CreatePopupMenu();
 						m_mapPluginMenu.Add(filter->m_menugroup, hpop);
 
-						CFilterGroupMenu* pgm = new CFilterGroupMenu(str, hpop);
+						auto pgm = new CFilterGroupMenu(str, hpop);
 						arrNewMenu.Add(filter->m_menugroup, pgm);
 					}
 
@@ -521,7 +520,7 @@ HMENU CMainFrame::GetSubMenuByPosition(int n1stPos, int n2ndPos)
 			return hmenu;
 		}
 	}
-	return NULL;
+	return nullptr;
 }
 
 #if 0
@@ -687,7 +686,7 @@ void CMainFrame::OnFileSave()
 		OnFileSaveAs();
 	else if (!m_Undo.IsEmpty()) {
 		HDIB hdib = m_pane.GetImage();
-		if (hdib == NULL) return;
+		if (hdib == nullptr) return;
 
 		if (SaveGraphic(hdib, (LPTSTR)(LPCTSTR)m_strName, m_nFileType))
 			EmptyUndo();
@@ -699,7 +698,7 @@ void CMainFrame::OnFileSave()
 void CMainFrame::OnFileSaveAs()
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	int type;
 	TCHAR buf[MAX_PATH * 2];
@@ -722,7 +721,7 @@ void CMainFrame::OnFileSaveAs()
 void CMainFrame::OnFileWallPaper()
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	BOOL bActiveDesktop = FALSE;
 	IActiveDesktop* pad = GetActiveDesktop();
@@ -792,7 +791,7 @@ BOOL CMainFrame::LoadFile(LPCTSTR pszName)
 	SetCaptionTitle(pszName);
 
 	// 減色が必要ならおこなう
-	CClientDC dc(NULL);
+	CClientDC dc(nullptr);
 	int nBitsPixel = dc.GetDeviceCaps(BITSPIXEL);
 	if (nBitsPixel <= 8 && nBitsPixel < (int)m_nBitCount) {
 		SetWindowText(_T("減色中(256色)..."));
@@ -810,7 +809,7 @@ BOOL CMainFrame::LoadFile(LPCTSTR pszName)
 		UpdateWindow();
 	}
 
-	SetDIB(NULL, FALSE);
+	SetDIB(nullptr, FALSE);
 	m_pane.SetScale(1000);
 	SetDIB(hdib, FALSE);
 	if (m_dwStat & BST_SCALE_MASK) {
@@ -913,7 +912,7 @@ void CMainFrame::OnEditCopy()
 	if (!user_ristriction()) return;
 
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	CRect rc;
 	m_pane.GetClipRect(&rc);
@@ -945,7 +944,7 @@ void CMainFrame::OnEditPaste()
 		if (hf = GetClipboardData(CF_DIB))
 			hdibClip = (HDIB)copyhandle(hf);
 		else if (hf = GetClipboardData(CF_BITMAP)) {
-			HPALETTE hpal = (HPALETTE)GetClipboardData(CF_PALETTE);
+			auto hpal = (HPALETTE)GetClipboardData(CF_PALETTE);
 			hdibClip = imgCreateDIBFromBitmap((HBITMAP)hf, hpal);
 		}
 		CloseClipboard();
@@ -1043,7 +1042,7 @@ void CMainFrame::OnEditSizeClip()
 void CMainFrame::OnResizeZoom() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	CZoomDlg dlg;
 	dlg.m_sizeSrc = m_sizeDib;
@@ -1064,7 +1063,7 @@ void CMainFrame::OnResizeZoom()
 		SetCursor(hcur);
 	}
 	else
-		hdib = NULL;
+		hdib = nullptr;
 
 	if (hdib)
 		UpdateDIB(hdib, IDM_RESIZE_ZOOM, FALSE, FALSE);
@@ -1115,7 +1114,6 @@ void CMainFrame::OnEditUndo()
 	CRect rc;
 	HDIB hdib = PopUndo(rc);
 	if (hdib) {
-		CSize sizeOld = m_sizeDib;
 		UpdateDIB(hdib, 0, TRUE, FALSE);
 		m_pane.SetClipRect(&rc);
 	}
@@ -1125,7 +1123,7 @@ void CMainFrame::OnEditUndo()
 void CMainFrame::OnColorPalette() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	hdib = edit_palette(m_hWnd, hdib);
 	if (hdib)
@@ -1135,7 +1133,7 @@ void CMainFrame::OnColorPalette()
 void CMainFrame::OnResizeTrim() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	CRect rc;
 	m_pane.GetClipRect(&rc);
@@ -1150,7 +1148,7 @@ void CMainFrame::OnResizeTrim()
 void CMainFrame::OnColorCount() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	mif image(hdib);
 	HCURSOR hcur = SetCursor(LoadCursor(NULL, IDC_WAIT));
@@ -1163,7 +1161,7 @@ void CMainFrame::OnColorCount()
 void CMainFrame::OnRotateLeft() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	mif image(hdib);
 	image.rotate(TRUE);
@@ -1175,7 +1173,7 @@ void CMainFrame::OnRotateLeft()
 void CMainFrame::OnRotateRight() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	mif image(hdib);
 	image.rotate(FALSE);
@@ -1187,7 +1185,7 @@ void CMainFrame::OnRotateRight()
 void CMainFrame::OnRotateFlip() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	CRect rc;
 	m_pane.GetClipRect(&rc);
@@ -1202,7 +1200,7 @@ void CMainFrame::OnRotateFlip()
 void CMainFrame::OnRotateMirror() 
 {
 	HDIB hdib = m_pane.GetImage();
-	if (hdib == NULL) return;
+	if (hdib == nullptr) return;
 
 	CRect rc;
 	m_pane.GetClipRect(&rc);
@@ -1227,7 +1225,7 @@ void CMainFrame::OnSetZoomMode()
 
 void CMainFrame::OnNotifyKeyDown(UINT id, NMHDR* pNmhdr, LRESULT* pResult)
 {
-	NMKEY* pk = (NMKEY*)pNmhdr;
+	auto pk = (NMKEY*)pNmhdr;
 	if (m_hAccel) {
 		MSG msg;
 		msg.hwnd = m_hWnd;
@@ -1246,7 +1244,7 @@ void CMainFrame::OnNotifyKeyDown(UINT id, NMHDR* pNmhdr, LRESULT* pResult)
 
 void CMainFrame::OnNotifyMousePoint(NMHDR* pNmhdr, LRESULT* pResult)
 {
-	ZOOM_MOUSEPOINT* pzm = (ZOOM_MOUSEPOINT*)pNmhdr;
+	auto pzm = (ZOOM_MOUSEPOINT*)pNmhdr;
 	TCHAR buf[MAX_PATH];
 	buf[0] = '\0';
 	if (pzm->bInDrag)
@@ -1262,20 +1260,20 @@ void CMainFrame::OnNotifyMousePoint(NMHDR* pNmhdr, LRESULT* pResult)
 
 void CMainFrame::OnNotifyVisibleChanged(NMHDR* pNmhdr, LRESULT* /*pResult*/)
 {
-	ZOOM_VISIBLEINFO* pzv = (ZOOM_VISIBLEINFO*)pNmhdr;
+	auto pzv = (ZOOM_VISIBLEINFO*)pNmhdr;
 	m_navi.OnUpdate(NFV_VISIBLEPOSITION_CHANGED, (LPARAM)&pzv->rectVisible);
 }
 
 void CMainFrame::OnNotifyScaleChanged(NMHDR* pNmhdr, LRESULT* /*pResult*/)
 {
-	ZOOM_SCALE* pzs = (ZOOM_SCALE*)pNmhdr;
+	auto pzs = (ZOOM_SCALE*)pNmhdr;
 	double scale = pzs->scale;
 	m_navi.OnUpdate(NFV_SCALE_CHANGED, (LPARAM)&scale);
 }
 
 void CMainFrame::OnNotifyNavigator(NMHDR* pNmhdr, LRESULT* pResult)
 {
-	NAVICLICK* pnc = (NAVICLICK*)pNmhdr;
+	auto pnc = (NAVICLICK*)pNmhdr;
 	if (pNmhdr->code == NVN_CLICK) {
 		ZOOMVIEWINFO zvi;
 		zvi.cbSize = sizeof(zvi);
@@ -1290,7 +1288,7 @@ void CMainFrame::OnNotifyNavigator(NMHDR* pNmhdr, LRESULT* pResult)
 void CMainFrame::OnNotifyClip(NMHDR* pNmhdr, LRESULT* pResult)
 {
 	TCHAR buf[MAX_PATH];
-	ZOOM_CLIP* pbc = (ZOOM_CLIP*)pNmhdr;
+	auto pbc = (ZOOM_CLIP*)pNmhdr;
 
 	if (!pbc->rcClip.left && !pbc->rcClip.top &&
 		!pbc->rcClip.right && !pbc->rcClip.bottom)
@@ -1438,7 +1436,7 @@ bool CMainFrame::PrintPage(UINT nPage, HDC hdc)
 	rectDraw.SetRect(0, 0, ::GetDeviceCaps(hdc, HORZRES), ::GetDeviceCaps(hdc, VERTRES));
 
 	// イメージ情報
-	BITMAPINFO* pbi = (BITMAPINFO*)GlobalLock(hdib);
+	auto pbi = (BITMAPINFO*)GlobalLock(hdib);
 	BYTE* pbits = dib_findbits(pbi);
 	int width = pbi->bmiHeader.biWidth;
 	int height = pbi->bmiHeader.biHeight;
@@ -1457,7 +1455,7 @@ bool CMainFrame::PrintPage(UINT nPage, HDC hdc)
 	if (rectDraw.Height() > scale_height)
 		pt.y = (rectDraw.Height() - scale_height) / 2;
 
-	Bitmap* b = new Bitmap(pbi, pbits);
+	auto b = new Bitmap(pbi, pbits);
 	g.DrawImage(b, pt.x, pt.y, scale_width, scale_height);
 	delete b;
 	GlobalUnlock(hdib);

@@ -110,14 +110,14 @@ typedef BOOL (WINAPI *PLUGINITPROC)(PLUGIN_INIT*);
 //////////////////////////////////////////////////
 // フィルタ情報
 
-typedef struct tagFILTER_INFO_V1 {
+struct FILTER_INFO_V1 {
 	TCHAR strFilterName[80];
 	UINT flags;
 	LPCTSTR groupName;
 	UINT idIcon;				// icon id
-} FILTER_INFO_V1;
+};
 
-typedef struct tagFILTER_INFO {
+struct FILTER_INFO {
 	DWORD magic;
 	TCHAR strFilterName[80];
 	UINT flags;
@@ -125,9 +125,9 @@ typedef struct tagFILTER_INFO {
 	UINT idIcon;				// image id
 	SIZE sizeIcon;				// image dimension
 	int style;					// image type 0=icon, 1=png
-} FILTER_INFO;
+};
 
-typedef BOOL(WINAPI* FILTERINFOPROC)(int, FILTER_INFO*);
+using FILTERINFOPROC = BOOL(WINAPI*)(int, FILTER_INFO*);
 
 _inline int FilterInfoVersion(const FILTER_INFO* info)
 {
@@ -146,7 +146,7 @@ _inline void ConvertFilterInfoStruct(FILTER_INFO_V1& v1, FILTER_INFO& v2)
 //////////////////////////////////////////////////
 // フィルタ実行
 
-typedef struct tagFILTER_EXEC {
+struct FILTER_EXEC {
 	PROGRESSCALLBACK progress;
 	HKEY hkey;
 	HWND hparent;
@@ -156,20 +156,19 @@ typedef struct tagFILTER_EXEC {
 	POSTRACKPROC tracker;			// ポジショントラッカー
 	GRADEDITPROC gradeditor;		// グラデーション
 	LPCTSTR userdir;				// ユーザデータフォルダ
-} FILTER_EXEC;
+};
 
-typedef HANDLE (WINAPI *FILTERPROC)(int, HANDLE, LPRECT, FILTER_EXEC*);
+using FILTERPROC = HANDLE (WINAPI *)(int, HANDLE, LPRECT, FILTER_EXEC*);
+using FILTERCALLBACK = HANDLE (*)(HDIB, LPRECT, FILTER_EXEC*);
 
-typedef HANDLE (*FILTERCALLBACK)(HDIB, LPRECT, FILTER_EXEC*);
-
-typedef struct tagFILTER_ENTRY_EX {
+struct FILTER_ENTRY_EX {
 	LPCTSTR title;
 	LPCTSTR group;
 	UINT icon;
 	SIZE dim;
 	int style;
 	FILTERCALLBACK filter;
-} FILTER_ENTRY_EX;
+};
 
 
 #endif		// __PIXEF_PLUGIN_INCLUDE

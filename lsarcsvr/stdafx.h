@@ -15,6 +15,11 @@
 
 #define _ATL_CSTRING_EXPLICIT_CONSTRUCTORS	// 一部の CString コンストラクタは明示的です。
 
+#include <memory>
+#include <string>
+#include <array>
+#include <vector>
+
 #include "resource.h"
 #include <atlbase.h>
 #include <atlcom.h>

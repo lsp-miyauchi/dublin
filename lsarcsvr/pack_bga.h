@@ -14,6 +14,7 @@ public:
 	{
 		InitDlgCtrl(GetDlgItem(IDC_BGA_PATHTREAT), IDS_PATHTREAT);
 		CComboBox combo = GetDlgItem(IDC_BGA_PATHTREAT);
+		RelaxComboboxDropsownList(combo);
 		combo.SetCurSel(m_pd->m_incdir ? 1 : 0);
 
 		CLccSliderCtrl slider = GetDlgItem(IDC_BGA_SLIDE);

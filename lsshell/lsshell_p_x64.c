@@ -588,7 +588,12 @@ namespace {
 typedef 
 NDR64_FORMAT_CHAR
 __midl_frag8_t;
+
+#ifdef __clang__
+static const __midl_frag8_t __midl_frag8;
+#else
 extern const __midl_frag8_t __midl_frag8;
+#endif
 
 typedef 
 struct 
@@ -600,17 +605,32 @@ struct
     NDR64_UINT32 frag5;
 }
 __midl_frag5_t;
+
+#ifdef __clang__
+static const __midl_frag5_t __midl_frag5;
+#else
 extern const __midl_frag5_t __midl_frag5;
+#endif
 
 typedef 
 struct _NDR64_POINTER_FORMAT
 __midl_frag4_t;
+
+#ifdef __clang__
+static const __midl_frag4_t __midl_frag4;
+#else
 extern const __midl_frag4_t __midl_frag4;
+#endif
 
 typedef 
 struct _NDR64_USER_MARSHAL_FORMAT
 __midl_frag3_t;
+
+#ifdef __clang__
+static const __midl_frag3_t __midl_frag3;
+#else
 extern const __midl_frag3_t __midl_frag3;
+#endif
 
 typedef 
 struct 
@@ -620,12 +640,22 @@ struct
     struct _NDR64_PARAM_FORMAT frag3;
 }
 __midl_frag2_t;
+
+#ifdef __clang__
+static const __midl_frag2_t __midl_frag2;
+#else
 extern const __midl_frag2_t __midl_frag2;
+#endif
 
 typedef 
 NDR64_FORMAT_UINT32
 __midl_frag1_t;
+
+#ifdef __clang__
+static const __midl_frag1_t __midl_frag1;
+#else
 extern const __midl_frag1_t __midl_frag1;
+#endif
 
 static const __midl_frag8_t __midl_frag8 =
 0x5    /* FC64_INT32 */;

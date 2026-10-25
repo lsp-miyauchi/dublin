@@ -25,15 +25,17 @@ public:
 	{
 		InitDlgCtrl(GetDlgItem(IDC_CAB_PATHTREAT), IDS_PATHTREAT);
 		m_cbPath = GetDlgItem(IDC_CAB_PATHTREAT);
+		RelaxComboboxDropsownList(m_cbPath);
 		m_cbPath.SetCurSel(m_pd->m_incdir ? 1 : 0);
 
 		// 圧縮方式
 		m_cbMethod = GetDlgItem(IDC_CAB_METHOD);
+		RelaxComboboxDropsownList(m_cbMethod);
 		CSimpleArray<CString> result = Split(m_methodNames, _T("|"));
 		for (int i = 0; i < result.GetSize(); i++) {
 			m_cbMethod.AddString(result[i]);
 		}
-		int val = GetRegValue(IDS_SEC_ARCHIVES, IDS_KEY_CABPACKMODE, -1);
+		int val = GetRegValue(IDS_SEC_ARCHIVES, IDS_KEY_CABPACKMODE, 0);
 		m_cbMethod.SetCurSel(val);
 
 		// 圧縮レベル
@@ -118,19 +120,19 @@ public:
 		}
 		SetRegValue(IDS_SEC_ARCHIVES, IDS_KEY_CABPACKMODE, n - IDC_CAB_MSZIP);
 
-		TCHAR buf[MAX_PATH * 2];
-		lstrcpy(buf, m_pd->m_arcname);
-		PathQuoteSpaces(buf);
-		cmd += buf;
+		std::array<TCHAR, MAX_PATH * 2> buf;
+		lstrcpy(buf.data(), m_pd->m_arcname);
+		PathQuoteSpaces(buf.data());
+		cmd += buf.data();
 
 		// 作業ファイル
-		MakeTempFile(m_pd->m_hdrop, &buf[2], m_pd->m_pathmode, false, ARC_CAB, (m_pd->m_unicode != false));
+		MakeTempFile(m_pd->m_hdrop, buf.data() + 2, m_pd->m_pathmode, false, ARC_CAB, (m_pd->m_unicode != false));
 		m_pd->m_temp = &buf[1];
 		buf[0] = '@';
 		buf[1] = '@';
-		PathQuoteSpaces(buf);
+		PathQuoteSpaces(buf.data());
 		cmd += _T(' ');
-		cmd += buf;
+		cmd += buf.data();
 
 		m_pd->m_cmd = cmd;
 		return TRUE;

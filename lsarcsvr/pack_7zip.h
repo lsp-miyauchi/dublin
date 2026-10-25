@@ -47,6 +47,7 @@ public:
     GetRegBinary(IDS_SEC_ARCHIVES, IDS_KEY_7ZIP, &m_param, sizeof(m_param));
 
 		m_cbPath = GetDlgItem(IDC_7Z_PATHTREAT);
+		RelaxComboboxDropsownList(m_cbPath);
 		m_cbPath.DeleteString(0);		// 「パス名無し」のオプションは無い
 		m_cbPath.SetCurSel(0);
 
@@ -57,6 +58,7 @@ public:
 
 		// 圧縮方式
 		m_cbMethod = GetDlgItem(IDC_7Z_METHOD);
+		RelaxComboboxDropsownList(m_cbMethod);
 		CSimpleArray<CString> result = Split(m_methodNames, _T("|"));
 		for (int i = 0; i < result.GetSize(); i++) {
 			m_cbMethod.AddString(result[i]);

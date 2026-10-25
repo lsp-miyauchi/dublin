@@ -22,11 +22,13 @@ public:
 	{
 		InitDlgCtrl(GetDlgItem(IDC_TAR_PATHTREAT), IDS_PATHTREAT);
 		m_cbPath = GetDlgItem(IDC_TAR_PATHTREAT);
+		RelaxComboboxDropsownList(m_cbPath);
 		m_cbPath.SetCurSel(m_pd->m_incdir ? 1 : 0);
 
 		// 圧縮方式
     // bzip2(1-9), gzip(1-9), lzma(0-9), xz(0-9), zstd(1-19 20-22 は --zstd-ultraオプション)
 		m_cbMethod = GetDlgItem(IDC_TAR_METHOD);
+		RelaxComboboxDropsownList(m_cbMethod);
 		CSimpleArray<CString> result = Split(m_methodNames, _T("|"));
 		for (int i = 0; i < result.GetSize(); i++) {
 			m_cbMethod.AddString(result[i]);

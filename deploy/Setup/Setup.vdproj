@@ -291,6 +291,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_AA6546A59A94454394686C277DD0B8E6"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_AB7A1017F1764721A9FB592D9C57EE81"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1434,6 +1440,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AA6546A59A94454394686C277DD0B8E6"
+            {
+            "SourcePath" = "8:..\\..\\x64\\Redist_FileVisor\\fv7.chm"
+            "TargetName" = "8:fv7.chm"
+            "Tag" = "8:"
+            "Folder" = "8:_6AB1196BF8E241C89FB782CBC05C266D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AB7A1017F1764721A9FB592D9C57EE81"
             {
             "SourcePath" = "8:..\\..\\x64\\Redist_Archiver\\lspuzp.dll"
@@ -1976,7 +2002,7 @@
                         {
                             "{9EF0B969-E518-4E46-987F-47570745A589}:_7C30DC146FB146399EB011D592C7DFDF"
                             {
-                            "Name" = "8:img_plugin"
+                            "Name" = "8:plugins"
                             "AlwaysCreate" = "11:FALSE"
                             "Condition" = "8:"
                             "Transitive" = "11:FALSE"

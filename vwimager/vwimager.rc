@@ -52,8 +52,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,1,151
- PRODUCTVERSION 7,4,1,151
+ FILEVERSION 7,4,1,154
+ PRODUCTVERSION 7,4,1,154
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -70,12 +70,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Image Viewer/Editor for FileVisor"
-            VALUE "FileVersion", "7.4.1.151"
+            VALUE "FileVersion", "7.4.1.154"
             VALUE "InternalName", "vwimager"
             VALUE "LegalCopyright", "(C)LightShip Inc. 1998-2024 All rights reserved."
             VALUE "OriginalFilename", "vwimager.dll"
             VALUE "ProductName", "FileVisor7"
-            VALUE "ProductVersion", "7.4.1.151"
+            VALUE "ProductVersion", "7.4.1.154"
         END
     END
     BLOCK "VarFileInfo"

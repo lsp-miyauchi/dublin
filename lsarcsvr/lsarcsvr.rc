@@ -57,8 +57,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,0,99
- PRODUCTVERSION 7,4,0,99
+ FILEVERSION 7,4,0,109
+ PRODUCTVERSION 7,4,0,109
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -75,12 +75,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Common Archiver Wrapper"
-            VALUE "FileVersion", "7.4.0.99"
+            VALUE "FileVersion", "7.4.0.109"
             VALUE "InternalName", "lsarcsvr.dll"
             VALUE "LegalCopyright", "(C)LightShip Software Inc. 2003-2022 All rights reserved."
             VALUE "OriginalFilename", "lsarcsvr.dll"
             VALUE "ProductName", "Archive Manager"
-            VALUE "ProductVersion", "7.4.0.99"
+            VALUE "ProductVersion", "7.4.0.109"
         END
     END
     BLOCK "VarFileInfo"
@@ -148,7 +148,7 @@ BEGIN
     RTEXT           "低",IDC_STATIC,64,119,8,8
     CONTROL         "",IDC_BGA_SLIDE,"LSCSlider",WS_TABSTOP,75,118,111,10
     LTEXT           "高",IDC_STATIC,189,119,8,8
-    CONTROL         "自己自動解凍形式の書庫を作成する(&X)",IDC_BGA_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,150,148,10
+    CONTROL         "自己展開書庫(exe)を作成する(&X)",IDC_BGA_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,150,148,10
 END
 
 IDD_PACK_CAB DIALOGEX 0, 0, 240, 184
@@ -169,7 +169,7 @@ BEGIN
     PUSHBUTTON      "MB",IDC_CAB_VOLUME_UNIT,190,62,24,16
     LTEXT           "除外フィルタ(&F):",IDC_STATIC,11,85,51,8
     EDITTEXT        IDC_CAB_EXCLUDE,67,83,161,14,ES_AUTOHSCROLL
-    CONTROL         "自己解凍書庫を作成する(&X)",IDC_CAB_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,115,180,10
+    CONTROL         "自己展開書庫(exe)を作成する(&X)",IDC_CAB_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,115,180,10
 END
 
 IDD_PACK_ISH DIALOGEX 0, 0, 220, 180
@@ -223,7 +223,7 @@ BEGIN
     CONTROL         "",IDC_LZH_DTSTART,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_SHOWNONE | WS_TABSTOP,11,98,81,15
     LTEXT           "～",IDC_LZH_DATESEPARATOR,104,101,9,8
     CONTROL         "",IDC_LZH_DTEND,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | DTS_SHOWNONE | WS_TABSTOP,126,98,81,15
-    CONTROL         "自己解凍書庫を作成する(&X)",IDC_LZH_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,128,180,10
+    CONTROL         "自己展開書庫(exe)を作成する(&X)",IDC_LZH_MAKESFX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,128,180,10
 END
 
 IDD_PACK_TAR DIALOGEX 0, 0, 240, 180

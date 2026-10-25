@@ -19,6 +19,7 @@ public:
 	{
 		InitDlgCtrl(GetDlgItem(IDC_ZIP_PATHTREAT), IDS_PATHTREAT);
 		m_cbPath = GetDlgItem(IDC_ZIP_PATHTREAT);
+		RelaxComboboxDropsownList(m_cbPath);
 		m_cbPath.SetCurSel(m_pd->m_incdir ? 1 : 0);
 
 		m_slider = GetDlgItem(IDC_ZIP_SLIDE);

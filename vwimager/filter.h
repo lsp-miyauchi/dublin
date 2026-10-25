@@ -31,7 +31,9 @@ public:
 		, m_nFlags(0)
 		, m_menugroup(0)
 		, m_iImage(-1)
-	{}
+		, m_imageStyle(-1)
+	{
+	}
 
 	~CFilter()
 	{}

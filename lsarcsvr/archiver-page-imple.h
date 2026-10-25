@@ -43,5 +43,11 @@ public:
 	{
 		return TRUE;
 	}
+
+	void RelaxComboboxDropsownList(CComboBox& cbctrl, int extraHeight = 2)
+	{
+    int height = cbctrl.GetItemHeight(0);
+		cbctrl.SetItemHeight(0, height + extraHeight);
+	}
 };
 

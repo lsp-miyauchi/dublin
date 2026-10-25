@@ -37,6 +37,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <ProjectGuid>{80CD1B7E-762B-4C1F-99E9-DCED59936BEE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ASM Release|Win32'" Label="Configuration">
@@ -119,21 +120,36 @@
     <_ProjectFileVersion>18.0.12106.202</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ASM Debug|Win32'">
-    <OutDir>.\bz2lib__Win32_Debug\</OutDir>
-    <IntDir>.\bz2lib__Win32_Debug\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ASM Debug|x64'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ASM Debug|x64'">
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>.\bz2lib__Win32_Release\</OutDir>
-    <IntDir>.\bz2lib__Win32_Release\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>.\bz2lib__Win32_Debug\</OutDir>
-    <IntDir>.\bz2lib__Win32_Debug\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ASM Release|Win32'">
-    <OutDir>.\bz2lib__Win32_Release\</OutDir>
-    <IntDir>.\bz2lib__Win32_Release\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ASM Release|x64'">
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(ProjectName)\intdir\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ASM Debug|Win32'">
     <ClCompile>
@@ -142,10 +158,10 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Debug/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -155,7 +171,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Debug\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -168,10 +184,10 @@
       <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;BZ_NO_STDIO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Debug/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -181,7 +197,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Debug\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -196,10 +212,10 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Release/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -208,7 +224,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Release\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -223,10 +239,10 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Release/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -235,7 +251,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Release\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -249,10 +265,10 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Debug/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
@@ -262,7 +278,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Debug\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -275,10 +291,10 @@
       <PreprocessorDefinitions>_DEBUG;WIN32;_LIB;BZ_NO_STDIO;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Debug/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Debug/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Debug/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Debug/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -288,7 +304,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Debug\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -303,10 +319,10 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Release/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -315,7 +331,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Release\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
@@ -330,10 +346,10 @@
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeaderOutputFile>.\bz2lib__Win32_Release/bz2lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\bz2lib__Win32_Release/</AssemblerListingLocation>
-      <ObjectFileName>.\bz2lib__Win32_Release/</ObjectFileName>
-      <ProgramDataBaseFileName>.\bz2lib__Win32_Release/</ProgramDataBaseFileName>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)</ProgramDataBaseFileName>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </ClCompile>
@@ -342,7 +358,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Lib>
-      <OutputFile>bz2lib__Win32_Release\bz2.lib</OutputFile>
+      <OutputFile>$(Outdir)$(ProjectName).lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
     </Lib>
     <Bscmake>
