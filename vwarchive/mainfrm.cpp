@@ -62,7 +62,7 @@ void CMainFrame::TaskbarButtonCreated(ITaskbarList3* pTaskbarList)
 	if (pTaskbarList != NULL) {
 		HICON hIcon = LoadIcon(RESINST, MAKEINTRESOURCE(IDR_ARCVIEW));
 		if (hIcon) {
-			pTaskbarList->SetOverlayIcon(m_hWnd, hIcon, NULL);
+			pTaskbarList->SetOverlayIcon(m_hWnd, hIcon, nullptr);
 			DestroyIcon(hIcon);
 		}
 	}
@@ -122,13 +122,13 @@ void CMainFrame::Construct()
 {
 	m_bMouseWheelProcessing = false;
 
-	m_hicCrypted = NULL;
+	m_hicCrypted = nullptr;
 
 	// リストビュー
-	m_dwSelect = 0;
-	m_himLocked = NULL;
-	m_hbmUp = NULL;
-	m_hbmDown = NULL;
+	m_dlSelect = 0;
+	m_himLocked = nullptr;
+	m_hbmUp = nullptr;
+	m_hbmDown = nullptr;
 	m_curkey = 0xFFFFFFFF;
 
 	CAppReg reg;
@@ -139,11 +139,11 @@ void CMainFrame::Construct()
 	m_nSortType = reg.GetValue(IDS_SEC_OPERATION, IDS_KEY_SORTTYPE, SORT_NAME);
 	m_nSortSeq = reg.GetValue(IDS_SEC_OPERATION, IDS_KEY_SORTSEQUENCE, SORT_UP);
 	m_bRowHighlighted = FALSE;
-	m_himl = m_hims = NULL;
+	m_himl = m_hims = nullptr;
 
 	// ツリービュー
 	m_timerid = 0;
-	m_himTree = NULL;
+	m_himTree = nullptr;
 }
 
 void CMainFrame::Destruct()
@@ -309,11 +309,11 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	TCHAR buf[MAX_PATH * 2];
 	GetTempPath(_COUNTOF(buf), buf);
 	lccGetTempFileName(buf, _T("~am"), m_szTempFolder);
-	CreateDirectory(m_szTempFolder, NULL);
+	CreateDirectory(m_szTempFolder, nullptr);
 
-	ImmAssociateContext(m_hWnd, NULL);
-	ImmAssociateContext(m_tree, NULL);
-	ImmAssociateContext(m_list, NULL);
+	ImmAssociateContext(m_hWnd, nullptr);
+	ImmAssociateContext(m_tree, nullptr);
+	ImmAssociateContext(m_list, nullptr);
 
 	// 初期更新処理
 	OnInitialUpdate();

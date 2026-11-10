@@ -20,7 +20,8 @@ int QueryMakeDir(HWND hwnd, LPCTSTR pszText, BOOL bSingle);
 ////////////////////////////////////////////////////////////////////////
 //
 
-static const WCHAR szUNZIP[]  = L"lspuzp.dll";
+// static const WCHAR szUNZIP[] = L"lspuzp.dll";
+static const WCHAR szUNZIP[]  = L"unzip64.dll";
 static const WCHAR szZIP[]    = L"lspzip.dll";
 static const WCHAR szCAB[]    = L"lspcab.dll";
 static const WCHAR szUNRAR[]  = L"lspunr.dll";
@@ -146,7 +147,7 @@ BOOL __GetArchiverTypeInfo(ULONG type, LPWSTR pszPrefix, LPWSTR pszDll, BOOL& bU
 	LPCTSTR psz = NULL;
 	switch (type) {
 		case ARC_LZH:	  psz = szUNLHA;	lstrcpy(pszPrefix, _T("Unlha"));	break;
-		case ARC_ZIP:	  psz = szUNZIP;	lstrcpy(pszPrefix, _T("UnZip"));	break;
+		case ARC_ZIP:	  psz = szUNZIP;	lstrcpy(pszPrefix, _T("Unzip"));	break;
 		case ARC_ZIPPACK:	psz = szZIP;	lstrcpy(pszPrefix, _T("Zip"));		break;
 		case ARC_CAB:	  psz = szCAB;		lstrcpy(pszPrefix, _T("Cab"));		break;
 		case ARC_ARJ:	  psz = szUNARJ;	lstrcpy(pszPrefix, _T("Unarj"));	break;

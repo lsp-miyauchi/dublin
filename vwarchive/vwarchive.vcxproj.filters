@@ -39,9 +39,6 @@
     <ClCompile Include="mainfrm_view.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="match.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="newarc.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>

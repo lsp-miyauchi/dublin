@@ -5,7 +5,7 @@
 
 HBITMAP LoadBitmapFromResourceData(HINSTANCE hInst, LPCTSTR typeResource, UINT idResource)
 {
-	HBITMAP hbm = NULL;
+	HBITMAP hbm = nullptr;
 	HRSRC hrsrc = FindResource(hInst, MAKEINTRESOURCE(idResource), typeResource);
 	if (hrsrc) {
 		DWORD sizeResource = SizeofResource(hInst, hrsrc);
@@ -25,7 +25,7 @@ HBITMAP LoadBitmapFromResourceData(HINSTANCE hInst, LPCTSTR typeResource, UINT i
 							Bitmap bitmap(pstrm);
 							Color color;
 							if (bitmap.GetHBITMAP(color, &hbm) != Ok)
-								hbm = NULL;
+								hbm = nullptr;
 							pstrm->Release();
 						}
 						GlobalFree(hmem);
@@ -39,7 +39,7 @@ HBITMAP LoadBitmapFromResourceData(HINSTANCE hInst, LPCTSTR typeResource, UINT i
 
 HIMAGELIST ImageList_LoadFromResourceData(UINT idResource, int itemWidth, COLORREF clrMask)
 {
-	HIMAGELIST him = NULL;
+	HIMAGELIST him = nullptr;
 	HBITMAP hbm = LoadBitmapFromResourceData(RESINST, RT_RCDATA, idResource);
 	if (hbm) {
 		BITMAP bm;
@@ -58,7 +58,7 @@ HIMAGELIST ImageList_LoadFromResourceData(UINT idResource, int itemWidth, COLORR
 			if (bm.bmBitsPixel != 32)
 				ImageList_AddMasked(him, hbm, clrMask);
 			else
-				ImageList_Add(him, hbm, NULL);
+				ImageList_Add(him, hbm, nullptr);
 		}
 		DeleteObject(hbm);
 	}

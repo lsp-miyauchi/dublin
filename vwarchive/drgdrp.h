@@ -10,7 +10,7 @@
 
 inline HGLOBAL GetDataFromDataObject(IDataObject* pdo, CLIPFORMAT cf)
 {
-	HGLOBAL hmem = NULL;
+	HGLOBAL hmem = nullptr;
 	FORMATETC fe = { cf, nullptr, DVASPECT_CONTENT, -1, TYMED_HGLOBAL };
 
 	if (pdo->QueryGetData(&fe) == S_OK) {
@@ -56,7 +56,7 @@ public:
 
 		m_nArchiveType = nType;
 		m_pArray = pArray;
-		m_hdrop = NULL;
+		m_hdrop = nullptr;
 	}
 
 	~CDataObject()
@@ -72,7 +72,7 @@ public:
 			AddRef();
 			return NOERROR;
 		}
-		*ppv = NULL;
+		*ppv = nullptr;
 		return ResultFromScode(E_NOINTERFACE);
 	}
 	STDMETHODIMP_(ULONG) AddRef()
@@ -99,7 +99,7 @@ public:
 	STDMETHODIMP QueryGetData(FORMATETC* pFmtc);
 	__inline STDMETHODIMP GetCanonicalFormatEtc(FORMATETC* pFmtcIn, FORMATETC* pFmtcOut)
 	{
-		pFmtcOut->ptd = NULL;
+		pFmtcOut->ptd = nullptr;
 		return ResultFromScode(E_NOTIMPL);
 	}
 	__inline STDMETHODIMP SetData(FORMATETC* pFmtc, STGMEDIUM* pStdm, BOOL fRelease)
@@ -176,7 +176,7 @@ public:
 			AddRef();
 			return NOERROR;
 		}
-		*ppvObj = NULL;
+		*ppvObj = nullptr;
 		return ResultFromScode(E_NOINTERFACE);
 	}
 
@@ -275,7 +275,7 @@ public:
 	{
 		m_refs = 1;
 		m_hWnd = hwnd;
-		m_pSourceHelper = NULL;
+		m_pSourceHelper = nullptr;
 
 		// データオブジェクトの参照カウント増
 		m_pDataObject = pdo;
@@ -307,7 +307,7 @@ public:
 			AddRef();
 			return NOERROR;
 		}
-		*ppvObj = NULL;
+		*ppvObj = nullptr;
 		return ResultFromScode(E_NOINTERFACE);
 	}
 

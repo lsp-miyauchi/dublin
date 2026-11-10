@@ -140,7 +140,7 @@ void CMainFrame::ListupAgain(bool bAdjustColumnWidth)
 		if (pai->m_attr & FILE_ATTRIBUTE_ENCRYPTED)
 			m_list.SetItemState(index, INDEXTOSTATEIMAGEMASK(1), LVIS_STATEIMAGEMASK);
 
-		size = max(pai->m_dwSize, size);
+		size = max(pai->m_dlSize, size);
 	}
 
 	// カラム幅自動調整
@@ -217,13 +217,13 @@ BOOL CMainFrame::MakeRespFile(CString& resp)
 	resp.ReleaseBuffer();
 
 	if (arr.GetSize() > 0) {
-		HANDLE hf = CreateFile(resp, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+		HANDLE hf = CreateFile(resp, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
 		if (hf != INVALID_HANDLE_VALUE) {
 			SortArcItemArray(arr);
 
 			if (m_parse.m_bUnicodeSupported) {
 				WORD bom = 0xfeff;
-				WriteFile(hf, &bom, sizeof(bom), &dw, NULL);
+				WriteFile(hf, &bom, sizeof(bom), &dw, nullptr);
 			}
 
 			CString str;
@@ -238,11 +238,11 @@ BOOL CMainFrame::MakeRespFile(CString& resp)
 				str += _T("\x0d\x0a");
 
 				if (m_parse.m_bUnicodeSupported)
-					WriteFile(hf, str, str.GetLength() * sizeof(WCHAR), &dw, NULL);
+					WriteFile(hf, str, str.GetLength() * sizeof(WCHAR), &dw, nullptr);
 				else {
 					char sz[MAX_PATH * 2];
-					WideCharToMultiByte(m_parse.m_bUtf8Supported ? CP_UTF8 : CP_ACP, 0, str, -1, sz, ARRAYSIZE(sz), NULL, NULL);
-					WriteFile(hf, sz, lstrlenA(sz) * sizeof(char), &dw, NULL);
+					WideCharToMultiByte(m_parse.m_bUtf8Supported ? CP_UTF8 : CP_ACP, 0, str, -1, sz, ARRAYSIZE(sz), NULL, nullptr);
+					WriteFile(hf, sz, lstrlenA(sz) * sizeof(char), &dw, nullptr);
 				}
 			}
 			CloseHandle(hf);
@@ -252,46 +252,45 @@ BOOL CMainFrame::MakeRespFile(CString& resp)
 	return FALSE;
 }
 
-DWORD CMainFrame::MakeRespFileByFilter(CString& resp, LPCTSTR pszFilter)
+DWORDLONG CMainFrame::MakeRespFileByFilter(CString& resp, LPCTSTR pszFilter)
 {
 	CSimpleArray<CArcItem*> arr;
 	if (m_parse.PackByFilter(arr, pszFilter) < 1)
 		return (DWORD)-1;
 
-	DWORD total = (DWORD)-1;
-	LPTSTR pszResponse = resp.GetBuffer(MAX_PATH * 2);
-	PathCombine(pszResponse, m_szTempFolder, _T("~gsfsd.tmp"));
-	GetShortPathName(pszResponse, pszResponse, MAX_PATH * 2);
-	HANDLE hf = CreateFile(pszResponse, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	auto total = (DWORDLONG)-1;
+	auto result = resp.GetBuffer(MAX_PATH * 2);
+	PathCombine(result, m_szTempFolder, _T("~gsfsd.tmp"));
+	GetShortPathName(result, result, MAX_PATH * 2);
+	HANDLE hf = CreateFile(result, GENERIC_WRITE, 0, nullptr, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, nullptr);
 	if (hf != INVALID_HANDLE_VALUE) {
-		DWORD dw;
+		DWORD written;
 		if (m_parse.m_bUnicodeSupported) {
 			WORD bom = 0xfeff;
-			WriteFile(hf, &bom, sizeof(bom), &dw, NULL);
+			WriteFile(hf, &bom, sizeof(bom), &written, nullptr);
 		}
 
 		total = 0;
-		CArcItem* pai;
-		CString str;
 		int cnt = arr.GetSize();
 		for (int i = 0; i < cnt; i++) {
-			pai = arr[i];
-			total += pai->m_dwSize;
+			auto pai = arr[i];
+			total += pai->m_dlSize;
 
+			CString str;
 			if (m_parse.m_nType == ARC_LZH) {
 				if (!pai->IsFolder()) continue;
 
-				str.Format(_T("\"%s*.*\"\x0d\x0a"), (LPCTSTR)pai->m_strRealName);
+				str.Format(_T("\"%s*.*\"\x0d\x0a"), pai->m_strRealName.GetString());
 			}
 			else
-				str.Format(_T("\"%s\"\x0d\x0a"), (LPCTSTR)pai->m_strRealName);
+				str.Format(_T("\"%s\"\x0d\x0a"), pai->m_strRealName.GetString());
 
 			if (m_parse.m_bUnicodeSupported)
-				WriteFile(hf, str, str.GetLength() * sizeof(TCHAR), &dw, NULL);
+				WriteFile(hf, str, str.GetLength() * sizeof(TCHAR), &written, nullptr);
 			else {
 				char sz[MAX_PATH * 2];
-				WideCharToMultiByte(m_parse.m_bUtf8Supported ? CP_UTF8 : CP_ACP, 0, str, -1, sz, ARRAYSIZE(sz), NULL, NULL);
-				WriteFile(hf, sz, lstrlenA(sz) * sizeof(char), &dw, NULL);
+				WideCharToMultiByte(m_parse.m_bUtf8Supported ? CP_UTF8 : CP_ACP, 0, str, -1, sz, ARRAYSIZE(sz), nullptr, nullptr);
+				WriteFile(hf, sz, lstrlenA(sz) * sizeof(char), &written, nullptr);
 			}
 		}
 		CloseHandle(hf);
@@ -440,7 +439,7 @@ void CMainFrame::OnLVNotifyBeginDrag(NMHDR* /*pNmhdr*/, LRESULT* /*pResult*/)
 
 void CMainFrame::OnLVNotifyItemChanged(NMHDR* /*pNmhdr*/, LRESULT* /*pResult*/)
 {
-	m_dwSelect = GetSelectedFileSize();
+	m_dlSelect = GetSelectedFileSize();
 }
 
 void CMainFrame::OnLVNotifyKeyDown(NMHDR* pNmhdr, LRESULT* pResult)
@@ -528,7 +527,7 @@ void CMainFrame::OnLVNotifyGetInfoTip(NMHDR* pNmhdr, LRESULT* /*pResult*/)
 				pai->m_strTips = str;
 			}
 
-			StrFormatByteSize(pai->m_dwSize, buf, ARRAYSIZE(buf));
+			StrFormatByteSize(pai->m_dlSize, buf, ARRAYSIZE(buf));
 			CString ratio;
 			pai->FormatRatio(ratio);
 			if (!pai->m_strTips.IsEmpty())
@@ -635,9 +634,9 @@ void CMainFrame::OnLVCustomDraw(NMHDR *pHdr, LRESULT *pResult)
 	}
 }
 
-DWORD CMainFrame::GetSelectedFileSize()
+DWORDLONG CMainFrame::GetSelectedFileSize()
 {
-	DWORD dwSelect = 0;
+	DWORDLONG dlSelect = 0;
 	int cnt = m_list.GetSelectedCount();
 	if (cnt > 0) {
 		CArcItem *pai;
@@ -647,10 +646,10 @@ DWORD CMainFrame::GetSelectedFileSize()
 			if (index < 0)
 				break;
 			pai = (CArcItem*)m_list.GetItemData(index);
-			dwSelect += pai->m_dwSize;
+			dlSelect += pai->m_dlSize;
 		}
 	}
-	return dwSelect;
+	return dlSelect;
 }
 
 void CMainFrame::ShowTotalInfo()
@@ -668,7 +667,7 @@ void CMainFrame::ShowTotalInfo()
 void CMainFrame::ShowSelInfo()
 {
 	TCHAR txt[MAX_PATH], fmt[MAX_PATH], tot[MAX_PATH];
-	StrFormatByteSize(m_dwSelect, tot, ARRAYSIZE(tot));
+	StrFormatByteSize(m_dlSelect, tot, ARRAYSIZE(tot));
 	LoadString(RESINST, IDS_INDICATOR_SELECT, fmt, ARRAYSIZE(fmt));
 	wsprintf(txt, fmt, m_list.GetSelectedCount(), tot);
 
@@ -794,7 +793,7 @@ BOOL CMainFrame::TemporaryExtract(LPTSTR pszFile, LPTSTR pszDir)
 	}
 
 	CWaitCursor wc;
-	hr = pam->ArchiveW(m_hWnd, m_parse.m_nType, cmd, NULL, 0, NULL);
+	hr = pam->ArchiveW(m_hWnd, m_parse.m_nType, cmd, NULL, 0, nullptr);
 	if (SUCCEEDED(hr)) {
 		lstrcpy(pszFile, pai->m_strName);
 		PathCombine(name, pszDir, pszFile);
@@ -960,7 +959,7 @@ void CMainFrame::OnSelectAll()
 	m_list.SetRedraw(TRUE);
 	m_list.Invalidate(FALSE);
 
-	m_dwSelect = GetSelectedFileSize();
+	m_dlSelect = GetSelectedFileSize();
 }
 
 void CMainFrame::OnSelectRev()
@@ -979,7 +978,7 @@ void CMainFrame::OnSelectRev()
 	m_list.SetRedraw(TRUE);
 	m_list.Invalidate(FALSE);
 
-	m_dwSelect = GetSelectedFileSize();
+	m_dlSelect = GetSelectedFileSize();
 }
 
 void CMainFrame::ShowBoundary(int index, BOOL bShow)
@@ -1047,7 +1046,7 @@ INT_PTR CALLBACK CMainFrame::EnumCallback(LPCTSTR pszName, LPARAM param)
 	static int counter = 0;
 
 	CMainFrame* me = (CMainFrame*)param;
-	LPCTSTR p = NULL;
+	LPCTSTR p = nullptr;
 	if (pszName && *pszName) {
 		p = StrRChr(pszName, NULL, _T('/'));
 		if (!p)
@@ -1083,7 +1082,7 @@ BOOL CMainFrame::PerseArchive(LPCTSTR pszName)
 
 	m_array.RemoveAll();
 	m_list.DeleteAllItems();
-	m_dwSelect = 0;
+	m_dlSelect = 0;
 
 	InitFolder(PathFindFileName(pszName));
 

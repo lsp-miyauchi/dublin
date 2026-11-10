@@ -135,9 +135,9 @@ static int sort_size(const void* arg1, const void* arg2, const void* plm)
 		return 1;
 
 	int r;
-	if (p1->m_dwSize < p2->m_dwSize)
+	if (p1->m_dlSize < p2->m_dlSize)
 		r = -1;
-	else if (p1->m_dwSize == p2->m_dwSize)
+	else if (p1->m_dlSize == p2->m_dlSize)
 		r = STRCOMP(p1->m_strName, p2->m_strName);
 	else
 		r = 1;
@@ -160,11 +160,9 @@ static int sort_time(const void* arg1, const void* arg2, const void* plm)
 	else if (p2->IsFolder())
 		return 1;
 
-	int r = p1->m_wDate - p2->m_wDate;
+	int r = (int)CompareFileTime(&p1->m_filetime, &p2->m_filetime);
 	if (!r) {
-		r = p1->m_wTime - p2->m_wTime;
-		if (!r)
-			r = STRCOMP(p1->m_strName, p2->m_strName);
+		r = STRCOMP(p1->m_strName, p2->m_strName);
 	}
 
 	if (pci->seq == SORT_DOWN)
@@ -321,10 +319,9 @@ BOOL CArcParse::EnumArchive(HWND hwnd, LPCTSTR pszName, ENUMARCPROC callback, LP
 			pai->m_key = m_folder.Lookup(pai->m_strPath);
 		}
 
-		pai->m_dwSize = ii.dwOriginalSize;
-		pai->m_dwCompressedSize = ii.dwCompressedSize;
-		pai->m_wDate = ii.wDate;
-		pai->m_wTime = ii.wTime;
+		pai->m_dlSize = ii.dwOriginalSize;
+		pai->m_dlCompressedSize = ii.dwCompressedSize;
+    DosDateTimeToFileTime(ii.wDate, ii.wTime, &pai->m_filetime);
 		pai->m_wRatio = ii.wRatio;
 		pai->SetModeName(ii.szMode);
 		pai->SetAttribString(ii.szAttribute);
@@ -341,7 +338,7 @@ BOOL CArcParse::EnumArchive(HWND hwnd, LPCTSTR pszName, ENUMARCPROC callback, LP
 		pai->SetTypeName(sfi.szTypeName);
 
 		// 総合サイズへの加算
-		m_dlTotal += pai->m_dwSize;
+		m_dlTotal += pai->m_dlSize;
 
 		pai->m_serial = serial++;
 		m_array.Add(pai);
@@ -471,7 +468,7 @@ BOOL CArcParse::DeleteItems(HWND hwnd, LPCTSTR pszItemList)
 			cmd.Format(_T("d %s -ms=off "), name);
 
 		cmd += pszItemList;
-		hr = pam->ArchiveW(hwnd, typeArc, cmd, NULL, 0, NULL);
+		hr = pam->ArchiveW(hwnd, typeArc, cmd, NULL, 0, nullptr);
 	}
 	return (SUCCEEDED(hr) ? TRUE : FALSE);
 }
@@ -491,7 +488,7 @@ BOOL CArcParse::RenameItems(HWND hwnd, LPCTSTR pszItemList)
 		else if (m_nType == ARC_BGA)
 			cmd.Format(_T("n \"%s\" "), (LPCTSTR)m_strFile);
 		cmd += pszItemList;
-		hr = pam->ArchiveW(hwnd, m_nType, cmd, NULL, 0, NULL);
+		hr = pam->ArchiveW(hwnd, m_nType, cmd, NULL, 0, nullptr);
 	}
 	return (SUCCEEDED(hr) ? TRUE : FALSE);
 }

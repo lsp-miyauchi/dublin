@@ -9,6 +9,16 @@
 #define _WTL_NO_UNION_CLASSES
 #define _WTL_NO_CSTRING
 
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <vector>
+#include <array>
+#include <memory>
+#include <locale>
+#include <cstdint>
+#include <stdexcept>
+#include <algorithm>
 
 #include <atlbase.h>
 #include <atlwin.h>

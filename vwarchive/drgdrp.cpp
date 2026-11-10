@@ -23,7 +23,7 @@ CDataObject::GetData(FORMATETC* pFmtc, STGMEDIUM* pStdm)
 
 		pStdm->tymed = TYMED_HGLOBAL;
 		pStdm->hGlobal = hmem;
-		pStdm->pUnkForRelease = NULL;
+		pStdm->pUnkForRelease = nullptr;
 		return S_OK;
 	}
 	return DATA_E_FORMATETC;
@@ -32,7 +32,7 @@ CDataObject::GetData(FORMATETC* pFmtc, STGMEDIUM* pStdm)
 STDMETHODIMP_(HGLOBAL)
 CDataObject::CreateDropFiles()
 {
-	HDROP hDrop = NULL;
+	HDROP hDrop = nullptr;
 	if (!m_hdrop) {
 		int cnt = m_pArray->GetSize();
 		if (m_pArray && cnt > 0) {
@@ -84,7 +84,7 @@ CDataObject::Extract()
 {
 	// コマンドラインの設定
 	bool bReplaceSlash = true;
-	LPCTSTR pszFormat = NULL;
+	LPCTSTR pszFormat = nullptr;
 	switch (m_nArchiveType) {
 	case ARC_LZH:
 		// 解凍状況を抑止する "-n"
@@ -149,7 +149,7 @@ CDataObject::Extract()
 		CComPtr<IArcManager> pam;
 		HRESULT hr = pam.CoCreateInstance(__uuidof(ArcManager));
 		if (SUCCEEDED(hr))
-			hr = pam->ArchiveW(NULL, m_nArchiveType, cmd, NULL, 0, NULL);
+			hr = pam->ArchiveW(NULL, m_nArchiveType, cmd, NULL, 0, nullptr);
 		bOK = (SUCCEEDED(hr) ? TRUE : FALSE);
 	}
 	return bOK;

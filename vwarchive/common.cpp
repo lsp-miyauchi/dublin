@@ -511,3 +511,43 @@ BOOL user_ristriction()
 	}
 	return TRUE;
 }
+
+/**
+ * @brief DWORDLONGを3桁カンマ区切りの文字列に変換する
+ * @param value 変換するDWORDLONG値
+ * @return 3桁カンマ区切りの文字列
+*/
+std::string dltoa_comma(DWORDLONG value) {
+	std::stringstream ss;
+	// 3桁カンマ区切りのフォーマットを持つロケールを設定
+	try {
+		ss.imbue(std::locale("en_US.UTF-8"));
+	}
+	catch (const std::runtime_error&) {}
+
+	ss << value;
+	return ss.str();
+}
+
+/**
+ * @brief DWORDLONGをKB単位で3桁カンマ区切りの文字列に変換する
+ * @param value 変換するDWORDLONG値
+ * @return KB単位で3桁カンマ区切りの文字列
+*/
+std::string formatFileSize64(DWORDLONG value) {
+	if (value < 1024)
+		value = (value == 0) ? 0 : 1;
+	else
+		value >>= 10;
+
+	std::stringstream ss;
+	ss << dltoa_comma(value) << " KB";
+	return ss.str();
+}
+
+int match(LPCTSTR string, LPCTSTR pattern)
+{
+	if (!StrCmp(pattern, gszAst))
+		return 1;
+	return PathMatchSpec(string, pattern) ? 1 : 0;
+}

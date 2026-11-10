@@ -29,13 +29,13 @@ void CConsole::Init()
 void CConsole::putchar(TCHAR ch)
 {
 	DWORD dw;
-	WriteConsole(m_stdout, &ch, 1, &dw, NULL);
+	WriteConsole(m_stdout, &ch, 1, &dw, nullptr);
 }
 
 void CConsole::putcharA(char ch)
 {
 	DWORD dw;
-	WriteConsoleA(m_stdout, &ch, 1, &dw, NULL);
+	WriteConsoleA(m_stdout, &ch, 1, &dw, nullptr);
 }
 
 void CConsole::putstr(LPCTSTR pszOutput, int cch)
@@ -45,7 +45,7 @@ void CConsole::putstr(LPCTSTR pszOutput, int cch)
 	if (cch < 0)
 		cch = lstrlen(pszOutput);
 	DWORD dw;
-	WriteConsole(m_stdout, pszOutput, cch, &dw, NULL);
+	WriteConsole(m_stdout, pszOutput, cch, &dw, nullptr);
 }
 
 void CConsole::putstrA(LPCSTR pszOutput, int cch)
@@ -55,7 +55,7 @@ void CConsole::putstrA(LPCSTR pszOutput, int cch)
 	if (cch < 0)
 		cch = lstrlenA(pszOutput);
 	DWORD dw;
-	WriteConsoleA(m_stdout, pszOutput, cch, &dw, NULL);
+	WriteConsoleA(m_stdout, pszOutput, cch, &dw, nullptr);
 }
 
 void CConsole::puts(LPCTSTR pszOutput)

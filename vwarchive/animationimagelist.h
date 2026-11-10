@@ -28,7 +28,7 @@ protected:
 public:
 	AnimationImageList(LPCTSTR sResourceName, int iconWidth)
 	{
-		m_hImageList = NULL;
+		m_hImageList = nullptr;
 		ResetParams();
 		Load(sResourceName, iconWidth);
 	}
@@ -71,9 +71,9 @@ public:
 		CloseHandle(m_exit);
 		CloseHandle(m_pause);
 
-		m_thread = NULL;
-		m_exit = NULL;
-		m_pause = NULL;
+		m_thread = nullptr;
+		m_exit = nullptr;
+		m_pause = nullptr;
 	}
 
 	long GetWidth()
@@ -155,7 +155,7 @@ protected:
 		m_sizeIcon = CSize(0, 0);
 		m_bmBkgnd.DeleteObject();
 		m_bmWorker.DeleteObject();
-		m_thread = NULL;
+		m_thread = nullptr;
 		m_bInitCompleted = false;
 		m_hInst = ATL::_AtlBaseModule.GetResourceInstance();
 		m_bPause = false;

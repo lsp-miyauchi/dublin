@@ -64,8 +64,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 7,4,0,12
- PRODUCTVERSION 7,4,0,12
+ FILEVERSION 7,4,0,14
+ PRODUCTVERSION 7,4,0,14
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -82,12 +82,12 @@ BEGIN
         BEGIN
             VALUE "CompanyName", "LightShip Software Inc."
             VALUE "FileDescription", "Archiever"
-            VALUE "FileVersion", "7.4.0.12"
+            VALUE "FileVersion", "7.4.0.14"
             VALUE "InternalName", "arcman"
             VALUE "LegalCopyright", "(C)LightShip Software Inc. 2004-2022 All rights reserved."
             VALUE "OriginalFilename", "arcman.exe"
             VALUE "ProductName", "FileVisor7"
-            VALUE "ProductVersion", "7.4.0.12"
+            VALUE "ProductVersion", "7.4.0.14"
         END
     END
     BLOCK "VarFileInfo"

@@ -5,6 +5,10 @@
 #ifndef __ARCITEM_H__
 #define __ARCITEM_H__
 
+#include <string>
+extern std::string dltoa_comma(DWORDLONG value);
+extern std::string formatFileSize64(DWORDLONG value);
+
 typedef INT_PTR (CALLBACK* ENUMARCPROC)(LPCTSTR, LPARAM);
 
 
@@ -62,11 +66,10 @@ class CArcItem
 {
 public:
 	int m_serial;
-	DWORD m_dwSize;
-	DWORD m_dwCompressedSize;
+	DWORD m_dlSize;
+	DWORD m_dlCompressedSize;
 	WORD m_wRatio;
-	WORD m_wDate;
-	WORD m_wTime;
+	FILETIME m_filetime;
 	WORD m_wOsType;
 	WORD m_wFlags;
 	CString m_strRealName;
@@ -81,17 +84,17 @@ public:
 	DWORD_PTR m_key;
 public:
 	CArcItem()
-		: m_dwSize(0)
-		, m_dwCompressedSize(0)
+		: m_dlSize(0)
+		, m_dlCompressedSize(0)
 		, m_wRatio(0)
-		, m_wDate(0)
-		, m_wTime(0)
 		, m_wOsType(0)
 		, m_wFlags(0)
 		, m_iImage(-1)
 		, m_attr(0)
 		, m_key(0)
-	{ }
+	{
+		m_filetime = { 0 };
+	}
 	~CArcItem()
 	{ }
 
@@ -125,22 +128,25 @@ public:
 	{
 		fmt.Empty();
 		if (!IsFolder()) {
-			LPTSTR p = fmt.GetBuffer(128);
+			std::string str;
 			if (bKB)
-				lccFormatFileSize(m_dwSize, p);
+				str = formatFileSize64(m_dlSize);
 			else
-				lccNumForm(m_dwSize, p);
-			fmt.ReleaseBuffer();
+				str = dltoa_comma(m_dlSize);
+			fmt = str.c_str();
 		}
 	}
 
 	void FormatDate(CString& fmt)
 	{
 		fmt.Empty();
-		if (m_wDate)
-			fmt.Format(_T("%4u/%02u/%02u  %02u:%02u:%02u"),
-				DTE_YEAR(m_wDate) + 1980, DTE_MON(m_wDate), DTE_DAY(m_wDate),
-				DTE_HOUR(m_wTime), DTE_MIN(m_wTime), DTE_SEC(m_wTime));
+    if (((ULARGE_INTEGER*)&m_filetime)->QuadPart) {
+			SYSTEMTIME st;
+      FileTimeToSystemTime(&m_filetime, &st);
+			fmt.Format(_T("%4u/%02u/%02u %02u:%02u:%02u"),
+				st.wYear, st.wMonth, st.wDay,
+				st.wHour, st.wMinute, st.wSecond);
+		}
 		else
 			fmt = _T("N/A");
 	}
@@ -149,9 +155,9 @@ public:
 	{
 		if (IsFolder())
 			fmt.Empty();
-		else if (m_dwSize && m_wRatio)
+		else if (m_dlSize && m_wRatio)
 			fmt.Format(_T("%u%%"), m_wRatio / 10);
-		else if (!m_dwSize)
+		else if (!m_dlSize)
 			fmt = _T("100%");
 		else
 			fmt = _T("N/A");

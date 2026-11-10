@@ -215,7 +215,7 @@ public:
 	DWORD OnDrop(IDataObject* pdo, DWORD keyState, DWORD dropEffect, POINT point);
 private:
 	void ListupAgain(bool bAdjustColumnWidth = false);
-	DWORD GetSelectedFileSize();
+	DWORDLONG GetSelectedFileSize();
 	void ShowTotalInfo();
 	void ShowSelInfo();
 	void SortList(int nSortType, int nSortSeq);
@@ -236,7 +236,7 @@ private:
 
 	void CalcFields();
 	BOOL MakeRespFile(CString& resp);
-	DWORD MakeRespFileByFilter(CString& resp, LPCTSTR pszFilter);
+	DWORDLONG MakeRespFileByFilter(CString& resp, LPCTSTR pszFilter);
 	BOOL ExtractItem(LPCTSTR pszExtractList);
 	void SelectGroup(DWORD_PTR folderid);
 	void ExtractFolder(LPCTSTR pszFolder);
@@ -282,7 +282,7 @@ protected:
 	// リストビュー関連
 	UINT m_nRM_GETDRAGIMAGE;
 	CArcParse m_parse;
-	DWORD m_dwSelect;
+	DWORDLONG m_dlSelect;
 	DWORD m_nStat;
 	CSimpleArray<CArcItem*> m_array;
 	CSimpleArray<CString> m_tempfile;

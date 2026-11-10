@@ -93,3 +93,7 @@ int CheckFileType(LPCTSTR pszFileName);
 BOOL user_ristriction();
 __inline bool OsVISTA() { return gosp.OsVISTA(); }
 
+std::string dltoa_comma(DWORDLONG value);
+std::string formatFileSize64(DWORDLONG value);
+
+int match(LPCTSTR string, LPCTSTR pattern);

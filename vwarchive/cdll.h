@@ -34,7 +34,7 @@ public:
 	HMODULE Detach()
 	{
 		HMODULE hmod = m_hmod;
-		m_hmod = NULL;
+		m_hmod = nullptr;
 		return hmod;
 	}
 	HMODULE LoadLibrary(LPCTSTR pszDll)
@@ -48,7 +48,7 @@ public:
 		ATLASSERT(m_hmod != NULL);
 		BOOL bRet = ::FreeLibrary(m_hmod);
 		if (bRet)
-			m_hmod = NULL;
+			m_hmod = nullptr;
 		return bRet;
 	}
 	inline FARPROC FindFunction(LPCSTR pszFunc)

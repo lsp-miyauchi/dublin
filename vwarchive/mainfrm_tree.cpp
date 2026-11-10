@@ -284,7 +284,7 @@ void CMainFrame::OnTVSelChanged(NMHDR* pNMHDR, LRESULT* pResult)
 	m_tree.SetItemState(pnmtv->itemNew.hItem, TVIS_BOLD, TVIS_BOLD);
 
 	if (pnmtv->action == TVC_BYKEYBOARD)		// キー入力によって選択が変わった
-		m_timerid = SetTimer(TIMERID_DELAY, TIMER_SELDELAY, NULL);
+		m_timerid = SetTimer(TIMERID_DELAY, TIMER_SELDELAY, nullptr);
 	else {
 		CFolderItem* pt = (CFolderItem*)m_tree.GetItemData(pnmtv->itemNew.hItem);
 		SelectGroup(pt ? pt->m_key : 0xFFFFFFFF);

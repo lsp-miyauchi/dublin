@@ -68,6 +68,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>D:\WTL80\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -112,6 +113,7 @@ copy /Y $(TargetPath) ..\$(Platform)\Redist_DLLs\</Command>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>D:\WTL80\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -150,7 +152,6 @@ copy /Y $(TargetPath) ..\$(Platform)\Redist_DLLs\</Command>
     <ClCompile Include="mainfrm.cpp" />
     <ClCompile Include="mainfrm_tree.cpp" />
     <ClCompile Include="mainfrm_view.cpp" />
-    <ClCompile Include="match.cpp" />
     <ClCompile Include="newarc.cpp" />
     <ClCompile Include="qsort_ex.cpp" />
     <ClCompile Include="runmanager.cpp" />
