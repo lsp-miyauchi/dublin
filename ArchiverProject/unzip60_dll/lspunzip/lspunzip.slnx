@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Win32" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="lspunzip.vcxproj" Type="783268c4-aa68-4b5c-8c7e-41cbc46974ee" Id="d7ce4dd5-8fd2-4413-9e42-360c9da12166" />
+  <Project Path="testdll/testdll.vcxproj" Id="89e82930-9bd9-4168-b0ac-f6dcee6560f8" />
+</Solution>

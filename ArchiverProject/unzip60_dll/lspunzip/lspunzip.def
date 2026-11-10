@@ -1,0 +1,19 @@
+LIBRARY LSPUNZIP  ; Library module name
+
+;CODE  PRELOAD FIXED
+
+;DATA  PRELOAD MOVEABLE
+
+EXPORTS
+     LuzpSingleEntryUnzip
+     LuzpSingleEntryUnzpList
+     UzpVersion
+     LuzpInit
+     LuzpSetOpts
+     LuzpUnzip
+     LuzpValidate
+     LuzpNoPrinting
+     UzpVersion2
+     LuzpUnzipToMemory
+     LuzpGrep
+     UzpFreeMemBuffer

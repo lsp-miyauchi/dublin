@@ -1,0 +1,55 @@
+;module-definition file for Windows UnZip64 DLL -- used by link.exe
+LIBRARY UNZIP64  ; Library module name
+
+;DESCRIPTION 'Windows Info-ZIP UnZip64 DLL by Mike White'
+
+;CODE  PRELOAD FIXED
+
+;DATA  PRELOAD MOVEABLE
+
+EXPORTS
+		Unzip									@1
+		UnzipGetVersion							@2
+		UnzipGetCursorInterval					@3
+		UnzipSetCursorInterval					@4
+		UnzipGetBackGroundMode					@5
+		UnzipSetBackGroundMode					@6
+		UnzipGetCursorMode						@7
+		UnzipSetCursorMode						@8
+		UnzipGetRunning							@10
+		UnzipCheckArchive						@11
+		UnzipQueryFunctionList					@18
+		UnzipOpenArchive						@21
+		UnzipCloseArchive						@22
+		UnzipFindFirst							@23
+		UnzipFindNext							@24
+		UnzipGetOriginalSize					@41
+		UnzipGetCompressedSize					@42
+		UnzipGetRatio							@43
+		UnzipGetDate							@44
+		UnzipGetTime							@45
+		UnzipGetCRC								@46
+		UnzipGetAttribute						@47
+		UnzipGetWriteTime						@62
+		UnzipGetCreateTime						@63
+		UnzipGetAccessTime						@64
+		UnzipGetWriteTimeEx						@65
+		UnzipGetCreateTimeEx					@66
+		UnzipGetAccessTimeEx					@67
+		UnzipFindFirst64						@68
+		UnzipFindNext64							@69
+		UnzipGetOriginalSize64					@90
+		UnzipGetCompressedSize64				@91
+		UnzipGetPackedFileData					@92
+		DllGetFunctionPrefix					@101
+     LuzpSingleEntryUnzip
+     LuzpSingleEntryUnzpList
+     UzpVersion
+     LuzpInit
+     LuzpSetOpts
+     LuzpUnzip
+     LuzpValidate
+     UzpVersion2
+     LuzpUnzipToMemory
+     LuzpGrep
+     UzpFreeMemBuffer
